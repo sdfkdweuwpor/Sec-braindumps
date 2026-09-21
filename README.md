@@ -1,13 +1,19 @@
 # Sec-braindumps
 
-Security notes, braindumps, and working material.
+CompTIA Security+ **SY0-701** practice exam app — a self-hosted, offline study
+tool built from my own question bank.
 
-## Dropping a PDF for Claude to read
+Vanilla HTML/CSS/JS, no build step, no backend. Progress lives in `localStorage`.
 
-1. Put the PDF in [`inbox/`](inbox/) — drag-and-drop in the GitHub web UI works
-   (**Add file → Upload files**), or `git add`/`push` it from a clone.
-2. Tell Claude what you want done with it. Naming the file helps if there is
-   more than one in `inbox/`.
+## Layout
 
-Write-ups and extracted notes land in [`notes/`](notes/) unless you ask for
-somewhere else.
+| Path | What's in it |
+|---|---|
+| `source/` | Original question-bank PDF(s) |
+| `tools/` | One-time Python extraction + validation scripts (build-time only) |
+| `data/` | Generated question data the app actually loads |
+| `js/`, `css/` | The app |
+
+## Status
+
+Phase 1 — question extraction. See `tools/` for the pipeline.
