@@ -2686,12 +2686,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Master Service Agreement (MSA) establishes the general terms and conditions governing the relationship between a company and a service provider. It is designed for long-term use, allowing individual engagements (e.g., statements of work) to reference the MSA instead of redefining the terms repeatedly. Revisiting the MSA every three years simplifies the process while maintaining flexibility for yearly engagements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A master service agreement sets the general terms once and lets each individual engagement reference it rather than renegotiating from scratch. Revisiting it every three years while yearly work proceeds underneath is exactly the pattern an MSA is designed for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An NDA covers confidentiality only. It is usually one clause or annex within a broader agreement.",
+      "C": "An MOU is a non-binding statement of intent. It cannot govern commercial engagements.",
+      "D": "An SLA defines measurable service levels for a particular service. It is specific rather than general, and typically sits beneath an MSA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p159",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2724,12 +2728,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compromised vendor email accounts can be used to send phishing emails or fraudulent requests that appear legitimate. Employees should be trained to recognize and scrutinize unexpected requests even when they come from familiar email addresses, as this is a common tactic in phishing and business email compromise (BEC) attacks. This recommendation directly addresses the risk posed by compromised vendor accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When a vendor's mailbox is compromised the attacker sends from a genuinely legitimate address, so every technical check passes. The only remaining defence is the recipient noticing that the request itself is out of pattern — which is why the training message must be about unexpected requests, not unfamiliar senders.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Refraining from clicking images in emails from new vendors addresses unknown senders. The danger here comes from a known, trusted one.",
+      "B": "Deleting emails from unknown partners again filters on familiarity, which is the wrong signal.",
+      "C": "Requiring invoices as attachments changes the format, not the legitimacy. A compromised account can attach a fraudulent invoice just as easily."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p159",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2762,13 +2770,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Improving security awareness training helps employees better understand and identify legitimate phishing attempts, reducing the number of false-positive reports. Enhanced training can teach staff to recognize key indicators of phishing emails and report only those that warrant investigation, decreasing the workload for the help desk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A flood of false positives means people are reporting ordinary mail because they cannot tell the difference. Better training sharpens that judgement — teaching the actual indicators of phishing so reports become accurate rather than merely numerous.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "More simulation campaigns increase reporting volume, which makes the problem worse before the underlying judgement improves.",
+      "C": "Hiring more help desk staff absorbs the workload without addressing why it exists.",
+      "D": "An incident reporting web page changes how reports arrive. The reports would still be wrong, just better routed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0367",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A company is concerned about employees unintentionally introducing malware into the network.\nThe company identified fifty employees who clicked on a link embedded in an email sent by the internal IT department.\nWhich of the following should the company implement to best improve its security posture?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Social engineering training"
+      },
+      {
+        "key": "B",
+        "text": "SPF configuration"
+      },
+      {
+        "key": "C",
+        "text": "Simulated phishing campaign"
+      },
+      {
+        "key": "D",
+        "text": "Insider threat awareness"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Fifty people clicked a link without questioning it, which is a judgement problem rather than a technical one. Social engineering training teaches staff to evaluate requests and links before acting, which addresses the behaviour that created the exposure.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "SPF configuration helps stop others spoofing your domain. The email here came from the internal IT department legitimately.",
+      "C": "A simulated phishing campaign measures susceptibility. That test has effectively already been run — the result is fifty clicks, and now they need teaching.",
+      "D": "Insider threat awareness covers recognising malicious colleagues. These employees were careless, not malicious."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p162",
+    "needsReview": false,
+    "inferenceConfidence": 0.312,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2800,13 +2854,59 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The first step in increasing security awareness should be to update policies and handbooks to ensure that all employees are aware of the new procedures and security expectations. Clear, documented policies provide a foundation for employees to understand their roles and responsibilities regarding security. Once the policies are in place, the company can implement additional strategies like training, newsletters, or phishing campaigns to reinforce these practices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A security programme starts with written expectations. Until policies and handbooks state what is required, training has nothing to teach against and staff cannot be held to a standard — so documenting the procedures comes before campaigns or tooling.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Evaluating tools to identify risky behaviour is monitoring. It measures conduct against expectations that do not exist yet.",
+      "B": "Quarterly newsletters are an awareness tactic. They reinforce a message once the message is defined.",
+      "C": "Phishing campaigns test susceptibility. Testing people against undocumented expectations is unfair and yields little."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p165",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0377",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "Which of the following analysis methods allows an organization to measure the exposure factor associated with organizational assets?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Heuristic"
+      },
+      {
+        "key": "B",
+        "text": "Quantitative"
+      },
+      {
+        "key": "C",
+        "text": "User-driven"
+      },
+      {
+        "key": "D",
+        "text": "Trend-based"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Exposure factor is a percentage of asset value lost when a threat is realised, and it feeds directly into SLE and ALE. Working in numeric values like that is quantitative risk analysis.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Heuristic analysis uses rules of thumb and behavioural patterns. It is common in malware detection, not risk measurement.",
+      "C": "User-driven is not a recognised risk analysis method.",
+      "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p166",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2838,12 +2938,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legal contract that restricts parties from disclosing proprietary or confidential information to unauthorized individuals or organizations, making it the most suitable option for protecting sensitive company data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement legally binds the signing party not to share confidential or proprietary information with anyone outside the agreement. Preventing exactly that disclosure is the whole function of an NDA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOA is a formal statement of cooperation between organisations. It establishes intent rather than restricting disclosure.",
+      "B": "An SLA commits a provider to measurable service levels. It concerns performance.",
+      "C": "An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a clause within or alongside it rather than its purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

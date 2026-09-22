@@ -2405,12 +2405,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption (FDE) encrypts the entire disk, including the operating system, applications, and user data. This ensures that all data on the laptop is encrypted, providing strong security against data theft or unauthorized access if the laptop is lost or stolen. It's the most comprehensive method for securing all information stored on the device.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption covers the entire drive — operating system, applications, swap, temporary files and user data. Since the requirement is all data on the laptop, only the whole-disk level guarantees nothing is left in the clear.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Volume encryption covers a logical volume. Data written outside it, including some system areas, remains unprotected.",
+      "B": "Partition encryption protects one partition. Other partitions on the same disk stay readable.",
+      "D": "File encryption protects individual files chosen by the user. Temporary copies, swap and anything not selected remain exposed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2443,12 +2447,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization is a reversible technology that replaces sensitive information (such as credit card numbers or personal data) with a non-sensitive placeholder (a token). The original data can be retrieved from the token through a secure process, making tokenization ideal for situations where sensitive data needs to be protected but still be recoverable in a controlled manner.\nUnlike hashing, which is irreversible, tokenization provides a way to securely protect and retrieve sensitive information when necessary.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenisation substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hardware security module protects and manages keys. It is a device rather than a technique for protecting the information itself.",
+      "B": "A hashing algorithm is one-way by design. Nothing can be recovered from the digest.",
+      "D": "Steganography hides the existence of data inside other content. It conceals rather than protects, and offers no access control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2481,12 +2489,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A security guard actively monitors and enforces access control policies in an access control vestibule (mantrap), ensuring that only authorized individuals enter. Unlike PINs, access cards, or CCTV (which only record events), a security guard can physically intervene to prevent tailgating - where an unauthorized person follows an authorized individual into a restricted area.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vestibule holds one person between two interlocking doors, but it cannot judge whether two people entered together. A guard observes and physically intervenes, which is the only control here capable of stopping a second person following through.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A PIN authenticates the person who enters it. It says nothing about who walks in behind them.",
+      "B": "An access card likewise authenticates one holder and cannot detect a second body.",
+      "D": "CCTV records the tailgating for review afterwards. It is detective, not preventive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p168",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2519,12 +2531,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Tokenization replaces sensitive data, such as credit card numbers, with non-sensitive equivalents (tokens) that have no exploitable value outside the system. It is widely used in the financial industry to protect data while maintaining functionality for processing and analysis.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenisation swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hashing is irreversible, so the original number could never be recovered to settle a transaction.",
+      "C": "Salting adds random data before hashing to defeat precomputed tables. It strengthens hashing rather than being a masking technique.",
+      "D": "Steganography hides the existence of data inside other content. It has no place in transaction processing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

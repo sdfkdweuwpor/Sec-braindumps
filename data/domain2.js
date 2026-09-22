@@ -2612,12 +2612,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Side loading involves installing software or applications from sources outside official or trusted repositories. This process can potentially introduce malicious software, such as a rootkit, which embeds itself deeply into a system to maintain privileged access and evade detection. Rootkits are often a significant threat when using unverified or non-trusted installation sources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading installs software that has bypassed the app store's review and signing checks, so nothing has verified what the package actually does. A rootkit is the classic payload: it embeds itself with privileged access and hides from normal detection, which is exactly what an unvetted installer can plant.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "User impersonation is pretending to be someone else to gain access. It is a social engineering technique, not something an installer introduces.",
+      "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than installed software.",
+      "D": "A buffer overflow is a coding defect in a program. Side loading delivers software; it does not create memory-handling bugs."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2650,12 +2654,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The malicious activity involving ARP poisoning in a school district during state testing suggests deliberate and targeted action, likely from someone with internal access and knowledge of the network. This aligns with an insider threat, where an individual within the organization, such as a student or staff member, intentionally disrupts network operations. Insiders often have the access and opportunity required to carry out such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ARP poisoning tools are freely downloadable and need no real understanding to run, and knocking out internet access during state testing is disruption for its own sake. That combination — commodity tooling, chaos as the goal — is the unskilled attacker, typically a student. Note the PDF's own explanation argues for insider threat and contradicts its key; the duplicate copy of this question keys A, and outside sources agree.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT is unsanctioned technology adopted by staff for convenience. It causes risk through neglect, not deliberate disruption.",
+      "C": "An insider threat implies someone using legitimate privileged access maliciously. ARP poisoning needs no special access — anyone on the network segment can do it.",
+      "D": "A nation-state pursues espionage or strategic disruption with sophisticated tooling. A school district's testing day is not a strategic target."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": true
@@ -2663,8 +2671,8 @@ export const domain2Questions = [
   {
     "id": "q0358",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A user needs to complete training at https://comptiatraining.com. After manually entering the URL, the user sees that the accessed website is noticeably different from the standard company website.\nWhich of the following is the most likely explanation for the difference?",
     "choices": [
@@ -2688,12 +2696,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Typosquatting occurs when an attacker registers a domain name that is very similar to a legitimate website, often exploiting common typographical errors (e.g., \"comptiatrainning.com\" instead of \"comptiatraining.com\"). If a user manually enters an incorrect URL and lands on a fraudulent website, it is most likely a typosquatting attempt. This is commonly used for phishing or distributing malware.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The user typed the address by hand and landed somewhere that looks wrong, which points at the address itself being slightly off. Typosquatting registers domains one character away from the real one precisely to catch that mistake and serve a convincing imitation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script into a legitimate page. The page would still be the real site, not a noticeably different one.",
+      "B": "Pretexting is inventing a story to manipulate someone. It is a social engineering technique, not an explanation for a wrong website.",
+      "D": "Vishing is phishing over a phone call. No call is involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2726,12 +2738,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack conducted over the phone. In this scenario, the attacker impersonates the CEO to manipulate the help desk employee into resetting a password, which is a classic example of a vishing attempt.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A phone call in which the attacker impersonates an executive to pressure a help desk into resetting a password is voice phishing — vishing. The channel is the phone and the goal is to manipulate a person into granting access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hacktivism is attacking to advance a political or social cause. Nothing ideological is at stake here.",
+      "C": "Blackmail coerces a victim by threatening exposure. The caller is using assumed authority, not a threat.",
+      "D": "Misinformation is false information spread to mislead a population. This is a targeted fraud against one employee."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p160",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2764,59 +2780,25 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Patching involves applying updates or fixes to software to address known vulnerabilities. If a vulnerability is found on a web server, applying a patch is the most effective and direct way to resolve the issue and protect the system from exploitation. This action fixes the security holes in the software, making it secure against known threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for the specific defect, so applying it removes the vulnerability rather than working around it. For a known flaw on a web server that is the direct and complete remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Segmentation limits who can reach the server. It reduces exposure while leaving the flaw fully present.",
+      "C": "Decommissioning removes the server entirely. That solves the vulnerability by eliminating a service the business presumably needs.",
+      "D": "Monitoring tells you when someone attacks it. Detection is not remediation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0367",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company is concerned about employees unintentionally introducing malware into the network.\nThe company identified fifty employees who clicked on a link embedded in an email sent by the internal IT department.\nWhich of the following should the company implement to best improve its security posture?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Social engineering training"
-      },
-      {
-        "key": "B",
-        "text": "SPF configuration"
-      },
-      {
-        "key": "C",
-        "text": "Simulated phishing campaign"
-      },
-      {
-        "key": "D",
-        "text": "Insider threat awareness"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
-    "inferenceConfidence": 0.312,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
     "id": "q0368",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "A penetration test identifies that an SMBv1 is enabled on multiple servers across an organization. The organization wants to remediate this vulnerability in the most efficient way possible.\nWhich of the following should the organization use for this purpose?",
     "choices": [
@@ -2840,12 +2822,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Group Policy Object (GPO) can be used to efficiently disable SMBv1 across multiple servers within an organization. By configuring a GPO to disable the outdated and vulnerable SMBv1 protocol, the organization can ensure that the change is applied consistently across all affected systems. This is a centralized and efficient method for remediation, reducing the potential attack surface related to SMBv1.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Group Policy pushes a configuration change to every joined machine from one place, so SMBv1 can be disabled across all affected servers in a single defined policy rather than server by server. Efficiency across many hosts is exactly what makes it the right tool.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An ACL controls who may reach a resource. It could restrict access to the port without removing the vulnerable protocol.",
+      "C": "SFTP is a secure file transfer protocol. It is an alternative for moving files, not a way to disable SMBv1.",
+      "D": "DLP watches for sensitive data leaving the organisation. It has no configuration management role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.2,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2853,8 +2839,8 @@ export const domain2Questions = [
   {
     "id": "q0379",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A security team receives reports about high latency and complete network unavailability throughout most of the office building. Flow logs from the campus switches show high traffic on TCP 445.\nWhich of the following is most likely the root cause of this incident?",
     "choices": [
@@ -2878,12 +2864,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "TCP port 445 is commonly used for Microsoft SMB (Server Message Block) protocol, which is often targeted by worms like WannaCry and NotPetya to spread rapidly across a network. The symptoms described - high traffic on TCP 445, high latency, and network unavailability - suggest a self-replicating worm is propagating, overwhelming network resources and disrupting normal operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Heavy traffic concentrated on TCP 445 is SMB, the protocol worms such as WannaCry use to spread machine to machine. Self-replication across the campus explains both the volume and the fact that the whole building is affected rather than one target.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow is the memory defect a worm might exploit to gain execution. It is the mechanism, not the network-wide event.",
+      "B": "An NTP amplification attack uses UDP 123 to reflect traffic at a victim. Neither the protocol nor the port matches.",
+      "D": "A DoS attack floods a target to make it unavailable. It usually concentrates on one destination, whereas this traffic is spreading across the campus."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2916,12 +2906,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cryptographic vulnerabilities occur when outdated algorithms or weak encryption keys are used, making systems susceptible to attacks such as brute force or cryptanalysis. These issues undermine the confidentiality and integrity of encrypted data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys is precisely what that class describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hash collision is one specific consequence of a weak hashing algorithm. It is an example within the category rather than the category itself.",
+      "C": "A buffer overflow is a memory handling defect. It has nothing to do with algorithm choice.",
+      "D": "Input validation failures allow injection attacks. Again unrelated to cryptography."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2929,8 +2923,8 @@ export const domain2Questions = [
   {
     "id": "q0388",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "A security administrator needs to reduce the attack surface in the company's data centers.\nWhich of the following should the security administrator do to complete this task?",
     "choices": [
@@ -2954,12 +2948,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Upgrading end-of-support operating systems ensures that the servers receive security patches and updates, significantly reducing vulnerabilities and thereby the overall attack surface.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An unsupported operating system accumulates unpatchable vulnerabilities indefinitely, and every one of them is part of the attack surface. Upgrading brings those systems back into a patched state, which removes a large and permanently growing set of entry points.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeynet is a decoy environment for observing attackers. It adds systems rather than reducing exposure.",
+      "B": "Group Policy enforces configuration, which helps harden systems — but it cannot patch flaws in an operating system the vendor no longer supports.",
+      "C": "High availability keeps services running through failure. It is an availability measure with no effect on attack surface."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p171",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false

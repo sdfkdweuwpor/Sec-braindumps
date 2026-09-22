@@ -2610,12 +2610,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption ensures that sensitive data is protected while it is being transmitted across networks, especially over long distances or between geographically dispersed infrastructures. By encrypting data, it becomes unreadable to unauthorized parties, even if intercepted, ensuring confidentiality and integrity during transmission. Encryption is the most effective method for protecting data in transit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data crossing between geographically separated sites travels over links you do not control. Encryption makes it unreadable to anyone who intercepts it along the way, which is the only one of these that protects data while it is actually moving.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking hides parts of a value for display. It reduces what is shown rather than protecting a transmission.",
+      "C": "Tokenisation substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
+      "D": "Obfuscation makes data harder to interpret without real cryptographic strength. An interceptor can reverse it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p163",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2648,14 +2652,18 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The requirement is that segmented servers be reachable only from authorised internal systems. A jump server provides that single authorised path — administrators connect to it and work from there, so the segmented servers accept connections from one controlled, logged host rather than from the internal network at large.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Blocking external access is necessary but insufficient. It leaves every internal system able to reach the servers, which is what the audit requirement restricts.",
+      "B": "A wireless access point allowing access from public networks does the opposite — it widens exposure.",
+      "C": "An IPSec tunnel encrypts traffic between endpoints. It protects the link without restricting which internal systems may connect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p163",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2686,12 +2694,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "IP geolocation allows you to identify the geographical location of an IP address, enabling you to block or limit access from high-risk regions. By using IP geolocation, you can restrict or monitor traffic coming from certain geographic areas that are known to be sources of frequent cyberattacks. This is an effective way to mitigate risks associated with unwanted or malicious traffic from those regions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IP geolocation maps an address to a country or region, so traffic from areas the organisation has no business with can be blocked or challenged at the boundary. It is the mechanism behind geographic restrictions.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to interpret. It protects content and cannot filter by origin.",
+      "B": "Data sovereignty is the legal principle that data remains subject to its origin country's laws. It is a compliance concept, not a control.",
+      "D": "Encryption protects data in transit or at rest. It does nothing to determine where traffic comes from."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2724,12 +2736,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A generator provides backup power in the event of a power outage, ensuring that critical systems remain operational. Since the company's only data center was halted due to the outage, installing a generator would help prevent downtime in the future by supplying power when the main power source fails. Other options, such as snapshots and load balancing, do not directly address power failure issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The failure was loss of utility power, so the control has to supply power independently. A generator runs for as long as it has fuel, keeping the data centre operating through an outage rather than merely surviving the first few minutes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Platform diversity avoids depending on a single vendor's technology. It does nothing about electricity.",
+      "C": "Snapshots preserve data state for recovery. They help restore afterwards but prevent no downtime.",
+      "D": "Load balancing distributes traffic across servers. With the whole data centre dark there is nothing to distribute to."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p166",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2762,12 +2778,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Privacy data classification includes Personally Identifiable Information (PII), which consists of an employee's personal details such as name, address, Social Security number, or other sensitive information. Organizational policies and standards concerning the storage and protection of such data fall under privacy regulations (e.g., GDPR, CCPA, or HIPAA). Ensuring compliance with these policies helps prevent unauthorized access and data breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An employee's personal details are personally identifiable information, which falls under the privacy data category. Privacy is the classification that determines which regulations and internal standards govern how it must be stored and protected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Legal data covers contracts, litigation material and legal holds. Employee personal details are not legal documents.",
+      "B": "Financial data covers accounts, transactions and reporting. Payroll touches both, but the defining characteristic here is that the data identifies a person.",
+      "D": "Intellectual property covers trade secrets, designs and proprietary work. An employee's personal information is not company IP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p168",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2800,12 +2820,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is a fully operational, identical backup site that can take over immediately in case the primary facility goes down. It includes up-to-date data, active servers, and network configurations, allowing for quick failover with minimal downtime. This makes it the best choice for high availability and business continuity requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is the definition of a hot site.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery site is the umbrella term for any of these. It does not specify a readiness level.",
+      "C": "A cold site has space and power but no equipment or data. Bringing it up takes days or weeks.",
+      "D": "A warm site has hardware and connectivity but data must be restored at failover time, so recovery takes hours rather than minutes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p169",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2838,12 +2862,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Snapshots capture the state of a file server at a specific point in time, allowing for quick recovery of lost or corrupted data. They provide an efficient way to restore files without relying solely on full backups, minimizing data loss and downtime. This makes snapshots an ideal solution for data recovery and protection on a file server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Snapshots capture the file server's state at intervals, so a restore returns everything as it stood at the most recent snapshot. Taking them frequently keeps the amount of work lost small and makes recovery fast.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Journaling records every transaction and gives an even smaller loss window, but it is a database and filesystem transaction technique rather than the standard file server restore mechanism.",
+      "C": "Obfuscation makes data harder to interpret. It protects nothing against loss.",
+      "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p169",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2876,12 +2904,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data classification is essential for a Data Loss Prevention (DLP) solution to function effectively.\nIt identifies and labels data based on sensitivity and importance, enabling the DLP system to apply appropriate policies to protect it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "DLP can only protect data it can recognise as sensitive. Classification is what labels data by sensitivity in the first place, so without it the DLP system has no basis for deciding what to block, alert on or allow.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data destruction removes data at end of life. It is a disposal activity that happens long after DLP would act.",
+      "B": "Data sanitisation renders data unrecoverable from media. Again a disposal control.",
+      "D": "Data masking obscures values for display. It is a protection technique DLP policy might invoke, not a prerequisite for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p171",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false

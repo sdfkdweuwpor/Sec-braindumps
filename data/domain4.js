@@ -4806,12 +4806,17 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": "Authentication tokens: Tokens, such as hardware or software-based one-time password (OTP) generators, are commonly used as one factor in multifactor authentication (MFA). They provide an additional layer of security beyond just a password.\nBiometrics: Biometric factors, such as fingerprint scans or facial recognition, are another common component of MFA, providing a \"something you are\" factor for identity verification.\nThese factors, when combined with something the user knows (e.g., a password), fulfill the requirements for MFA by incorporating multiple layers of authentication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multifactor means factors from different categories. An authentication token supplies something you have, and biometrics supplies something you are, so adding either to the existing password produces genuine multifactor authentication.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Least privilege limits what an account may do after authentication. It is an authorisation principle.",
+      "D": "LDAP is a directory protocol for storing and querying identities. It authenticates but adds no second factor.",
+      "E": "Password vaulting stores credentials securely. It manages one factor rather than adding another.",
+      "F": "SAML federates authentication between an identity provider and applications. It carries the assertion; the factors are established before it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p160",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.838,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4844,14 +4849,18 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "COBO — corporate-owned, business-only — gives the organisation a company-owned device with no personal use permitted, so it can be locked down completely. That produces the tightest hardening and the lowest risk of the four models, at the cost of user convenience.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "BYOD uses employee-owned hardware. The company neither owns nor fully controls it, which fails the first two requirements.",
+      "B": "CYOD lets employees pick from an approved list, and the device is usually still personally enabled, so hardening is constrained.",
+      "C": "COPE is company-owned but personally enabled. Permitting personal use means personal apps and accounts, which is more risk than COBO."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -4886,12 +4895,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Automated scanning is the first step in identifying vulnerabilities in an environment. Tools that perform automated vulnerability scanning scan systems and networks for known vulnerabilities, missing patches, misconfigurations, and other security weaknesses. This helps create an initial list of vulnerabilities that can then be prioritized and addressed, often serving as the foundation for further in-depth activities like penetration testing or threat hunting.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Compiling a list means breadth first. An automated scanner sweeps the whole environment and enumerates known vulnerabilities across every reachable host, producing the initial inventory that the deeper, slower techniques then work from.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Penetration testing goes deep on selected targets to prove exploitability. It is thorough but far too slow to enumerate an environment.",
+      "C": "Threat hunting searches for adversaries already present. It looks for compromise, not for vulnerabilities.",
+      "D": "Log aggregation collects event data for monitoring. It reveals activity rather than weaknesses.",
+      "E": "Adversarial emulation replays a specific threat actor's techniques. Again it tests defences rather than inventorying flaws."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4924,51 +4938,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Group Policy Objects (GPOs) in a Windows environment allow administrators to enforce access control policies, including restricting user logins based on time-of-day. By applying a GPO to contract employees and configuring logon hours from Monday through Friday, 9 a.m. to 5 p.m., the organization can ensure that these users cannot log in outside of the specified hours. This is the most effective way to enforce access control based on time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Group Policy applies centrally to a group of accounts, and logon-hours restrictions are a native setting within it. Applying one GPO to contract employees enforces the Monday-to-Friday window at authentication time for every one of them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Discretionary access control lets resource owners set permissions individually. It is inconsistent and does not express time windows centrally.",
+      "C": "OAuth handles delegated authorisation between applications. Least privilege limits scope of access, not hours.",
+      "D": "SAML with federation to the contractors' own authentication server hands control of the login decision to a third party you do not manage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p165",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.647,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0377",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "Which of the following analysis methods allows an organization to measure the exposure factor associated with organizational assets?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Heuristic"
-      },
-      {
-        "key": "B",
-        "text": "Quantitative"
-      },
-      {
-        "key": "C",
-        "text": "User-driven"
-      },
-      {
-        "key": "D",
-        "text": "Trend-based"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Quantitative analysis is a risk assessment method that assigns numerical values to risk factors, including the Exposure Factor (EF) - which represents the percentage of an asset's value that would be lost if a specific threat were realized. This approach helps organizations calculate the Single Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE), providing a data-driven method for risk management.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p166",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5000,12 +4980,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A firewall log records inbound and outbound network traffic, including source and destination IP addresses, port numbers, and connection attempts. Since port scans involve probing various ports on a network, the firewall logs will provide visibility into the attacker's source IP address and help the analyst assess the nature of the scanning activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A port scan is inbound connection attempts across many ports, and every one of them hits the firewall first. Firewall logs record the source address for each attempt, which is precisely the attacker detail the analyst needs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "OS security logs record authentication and privilege events on a host. A scan that never authenticates leaves little trace there.",
+      "C": "Application logs record activity inside an application. Port scanning probes below the application layer.",
+      "D": "Endpoint logs cover activity on managed devices. Scans at the network edge may never reach a managed endpoint at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.853,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5038,12 +5022,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The penetration tester was able to pivot using the same local user ID and password, indicating that systems were using local authentication rather than a centralized authentication mechanism. Implementing centralized authentication (such as Active Directory, LDAP, or RADIUS) with strong password policies would ensure that credentials are managed centrally, reducing the risk of credential reuse and lateral movement across systems. This approach also enables better monitoring and enforcement of security policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester moved laterally because the same local credential worked everywhere. Centralised authentication removes the shared local account as a reusable key — each system validates against the directory, so one compromised credential no longer unlocks the rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Complexity rules and password history make the credential harder to guess. The tester did not guess it; they reused a valid one.",
+      "C": "Connecting to an external authentication server is close, but 'external' points outside the organisation. Centralised internal authentication with proper policy is the accurate description.",
+      "D": "Preventing users from changing passwords makes credential rotation harder, which worsens the problem."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false

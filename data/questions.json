@@ -14987,12 +14987,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Side loading involves installing software or applications from sources outside official or trusted repositories. This process can potentially introduce malicious software, such as a rootkit, which embeds itself deeply into a system to maintain privileged access and evade detection. Rootkits are often a significant threat when using unverified or non-trusted installation sources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading installs software that has bypassed the app store's review and signing checks, so nothing has verified what the package actually does. A rootkit is the classic payload: it embeds itself with privileged access and hides from normal detection, which is exactly what an unvetted installer can plant.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "User impersonation is pretending to be someone else to gain access. It is a social engineering technique, not something an installer introduces.",
+      "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than installed software.",
+      "D": "A buffer overflow is a coding defect in a program. Side loading delivers software; it does not create memory-handling bugs."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15025,12 +15029,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The malicious activity involving ARP poisoning in a school district during state testing suggests deliberate and targeted action, likely from someone with internal access and knowledge of the network. This aligns with an insider threat, where an individual within the organization, such as a student or staff member, intentionally disrupts network operations. Insiders often have the access and opportunity required to carry out such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ARP poisoning tools are freely downloadable and need no real understanding to run, and knocking out internet access during state testing is disruption for its own sake. That combination — commodity tooling, chaos as the goal — is the unskilled attacker, typically a student. Note the PDF's own explanation argues for insider threat and contradicts its key; the duplicate copy of this question keys A, and outside sources agree.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT is unsanctioned technology adopted by staff for convenience. It causes risk through neglect, not deliberate disruption.",
+      "C": "An insider threat implies someone using legitimate privileged access maliciously. ARP poisoning needs no special access — anyone on the network segment can do it.",
+      "D": "A nation-state pursues espionage or strategic disruption with sophisticated tooling. A school district's testing day is not a strategic target."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": true
@@ -15038,8 +15046,8 @@
   {
     "id": "q0358",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A user needs to complete training at https://comptiatraining.com. After manually entering the URL, the user sees that the accessed website is noticeably different from the standard company website.\nWhich of the following is the most likely explanation for the difference?",
     "choices": [
@@ -15063,12 +15071,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Typosquatting occurs when an attacker registers a domain name that is very similar to a legitimate website, often exploiting common typographical errors (e.g., \"comptiatrainning.com\" instead of \"comptiatraining.com\"). If a user manually enters an incorrect URL and lands on a fraudulent website, it is most likely a typosquatting attempt. This is commonly used for phishing or distributing malware.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The user typed the address by hand and landed somewhere that looks wrong, which points at the address itself being slightly off. Typosquatting registers domains one character away from the real one precisely to catch that mistake and serve a convincing imitation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script into a legitimate page. The page would still be the real site, not a noticeably different one.",
+      "B": "Pretexting is inventing a story to manipulate someone. It is a social engineering technique, not an explanation for a wrong website.",
+      "D": "Vishing is phishing over a phone call. No call is involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p158",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15101,12 +15113,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A Master Service Agreement (MSA) establishes the general terms and conditions governing the relationship between a company and a service provider. It is designed for long-term use, allowing individual engagements (e.g., statements of work) to reference the MSA instead of redefining the terms repeatedly. Revisiting the MSA every three years simplifies the process while maintaining flexibility for yearly engagements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A master service agreement sets the general terms once and lets each individual engagement reference it rather than renegotiating from scratch. Revisiting it every three years while yearly work proceeds underneath is exactly the pattern an MSA is designed for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An NDA covers confidentiality only. It is usually one clause or annex within a broader agreement.",
+      "C": "An MOU is a non-binding statement of intent. It cannot govern commercial engagements.",
+      "D": "An SLA defines measurable service levels for a particular service. It is specific rather than general, and typically sits beneath an MSA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p159",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15139,12 +15155,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Compromised vendor email accounts can be used to send phishing emails or fraudulent requests that appear legitimate. Employees should be trained to recognize and scrutinize unexpected requests even when they come from familiar email addresses, as this is a common tactic in phishing and business email compromise (BEC) attacks. This recommendation directly addresses the risk posed by compromised vendor accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When a vendor's mailbox is compromised the attacker sends from a genuinely legitimate address, so every technical check passes. The only remaining defence is the recipient noticing that the request itself is out of pattern — which is why the training message must be about unexpected requests, not unfamiliar senders.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Refraining from clicking images in emails from new vendors addresses unknown senders. The danger here comes from a known, trusted one.",
+      "B": "Deleting emails from unknown partners again filters on familiarity, which is the wrong signal.",
+      "C": "Requiring invoices as attachments changes the format, not the legitimacy. A compromised account can attach a fraudulent invoice just as easily."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p159",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15186,12 +15206,17 @@
       "A",
       "C"
     ],
-    "explanation": "Authentication tokens: Tokens, such as hardware or software-based one-time password (OTP) generators, are commonly used as one factor in multifactor authentication (MFA). They provide an additional layer of security beyond just a password.\nBiometrics: Biometric factors, such as fingerprint scans or facial recognition, are another common component of MFA, providing a \"something you are\" factor for identity verification.\nThese factors, when combined with something the user knows (e.g., a password), fulfill the requirements for MFA by incorporating multiple layers of authentication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multifactor means factors from different categories. An authentication token supplies something you have, and biometrics supplies something you are, so adding either to the existing password produces genuine multifactor authentication.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Least privilege limits what an account may do after authentication. It is an authorisation principle.",
+      "D": "LDAP is a directory protocol for storing and querying identities. It authenticates but adds no second factor.",
+      "E": "Password vaulting stores credentials securely. It manages one factor rather than adding another.",
+      "F": "SAML federates authentication between an identity provider and applications. It carries the assertion; the factors are established before it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p160",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.838,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15224,12 +15249,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack conducted over the phone. In this scenario, the attacker impersonates the CEO to manipulate the help desk employee into resetting a password, which is a classic example of a vishing attempt.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A phone call in which the attacker impersonates an executive to pressure a help desk into resetting a password is voice phishing — vishing. The channel is the phone and the goal is to manipulate a person into granting access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hacktivism is attacking to advance a political or social cause. Nothing ideological is at stake here.",
+      "C": "Blackmail coerces a victim by threatening exposure. The caller is using assumed authority, not a threat.",
+      "D": "Misinformation is false information spread to mislead a population. This is a targeted fraud against one employee."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p160",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15262,12 +15291,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Improving security awareness training helps employees better understand and identify legitimate phishing attempts, reducing the number of false-positive reports. Enhanced training can teach staff to recognize key indicators of phishing emails and report only those that warrant investigation, decreasing the workload for the help desk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A flood of false positives means people are reporting ordinary mail because they cannot tell the difference. Better training sharpens that judgement — teaching the actual indicators of phishing so reports become accurate rather than merely numerous.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "More simulation campaigns increase reporting volume, which makes the problem worse before the underlying judgement improves.",
+      "C": "Hiring more help desk staff absorbs the workload without addressing why it exists.",
+      "D": "An incident reporting web page changes how reports arrive. The reports would still be wrong, just better routed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15300,12 +15333,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption (FDE) encrypts the entire disk, including the operating system, applications, and user data. This ensures that all data on the laptop is encrypted, providing strong security against data theft or unauthorized access if the laptop is lost or stolen. It's the most comprehensive method for securing all information stored on the device.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption covers the entire drive — operating system, applications, swap, temporary files and user data. Since the requirement is all data on the laptop, only the whole-disk level guarantees nothing is left in the clear.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Volume encryption covers a logical volume. Data written outside it, including some system areas, remains unprotected.",
+      "B": "Partition encryption protects one partition. Other partitions on the same disk stay readable.",
+      "D": "File encryption protects individual files chosen by the user. Temporary copies, swap and anything not selected remain exposed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15338,12 +15375,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Patching involves applying updates or fixes to software to address known vulnerabilities. If a vulnerability is found on a web server, applying a patch is the most effective and direct way to resolve the issue and protect the system from exploitation. This action fixes the security holes in the software, making it secure against known threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for the specific defect, so applying it removes the vulnerability rather than working around it. For a known flaw on a web server that is the direct and complete remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Segmentation limits who can reach the server. It reduces exposure while leaving the flaw fully present.",
+      "C": "Decommissioning removes the server entirely. That solves the vulnerability by eliminating a service the business presumably needs.",
+      "D": "Monitoring tells you when someone attacks it. Detection is not remediation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p161",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15376,21 +15417,25 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "COBO — corporate-owned, business-only — gives the organisation a company-owned device with no personal use permitted, so it can be locked down completely. That produces the tightest hardening and the lowest risk of the four models, at the cost of user convenience.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "BYOD uses employee-owned hardware. The company neither owns nor fully controls it, which fails the first two requirements.",
+      "B": "CYOD lets employees pick from an approved list, and the device is usually still personally enabled, so hardening is constrained.",
+      "C": "COPE is company-owned but personally enabled. Permitting personal use means personal apps and accounts, which is more risk than COBO."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0367",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "A company is concerned about employees unintentionally introducing malware into the network.\nThe company identified fifty employees who clicked on a link embedded in an email sent by the internal IT department.\nWhich of the following should the company implement to best improve its security posture?",
     "choices": [
@@ -15414,21 +15459,25 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Fifty people clicked a link without questioning it, which is a judgement problem rather than a technical one. Social engineering training teaches staff to evaluate requests and links before acting, which addresses the behaviour that created the exposure.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "SPF configuration helps stop others spoofing your domain. The email here came from the internal IT department legitimately.",
+      "C": "A simulated phishing campaign measures susceptibility. That test has effectively already been run — the result is fifty clicks, and now they need teaching.",
+      "D": "Insider threat awareness covers recognising malicious colleagues. These employees were careless, not malicious."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.312,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0368",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "A penetration test identifies that an SMBv1 is enabled on multiple servers across an organization. The organization wants to remediate this vulnerability in the most efficient way possible.\nWhich of the following should the organization use for this purpose?",
     "choices": [
@@ -15452,12 +15501,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A Group Policy Object (GPO) can be used to efficiently disable SMBv1 across multiple servers within an organization. By configuring a GPO to disable the outdated and vulnerable SMBv1 protocol, the organization can ensure that the change is applied consistently across all affected systems. This is a centralized and efficient method for remediation, reducing the potential attack surface related to SMBv1.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Group Policy pushes a configuration change to every joined machine from one place, so SMBv1 can be disabled across all affected servers in a single defined policy rather than server by server. Efficiency across many hosts is exactly what makes it the right tool.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An ACL controls who may reach a resource. It could restrict access to the port without removing the vulnerable protocol.",
+      "C": "SFTP is a secure file transfer protocol. It is an alternative for moving files, not a way to disable SMBv1.",
+      "D": "DLP watches for sensitive data leaving the organisation. It has no configuration management role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p162",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.2,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15490,12 +15543,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Encryption ensures that sensitive data is protected while it is being transmitted across networks, especially over long distances or between geographically dispersed infrastructures. By encrypting data, it becomes unreadable to unauthorized parties, even if intercepted, ensuring confidentiality and integrity during transmission. Encryption is the most effective method for protecting data in transit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data crossing between geographically separated sites travels over links you do not control. Encryption makes it unreadable to anyone who intercepts it along the way, which is the only one of these that protects data while it is actually moving.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking hides parts of a value for display. It reduces what is shown rather than protecting a transmission.",
+      "C": "Tokenisation substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
+      "D": "Obfuscation makes data harder to interpret without real cryptographic strength. An interceptor can reverse it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p163",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15528,14 +15585,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The requirement is that segmented servers be reachable only from authorised internal systems. A jump server provides that single authorised path — administrators connect to it and work from there, so the segmented servers accept connections from one controlled, logged host rather than from the internal network at large.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Blocking external access is necessary but insufficient. It leaves every internal system able to reach the servers, which is what the audit requirement restricts.",
+      "B": "A wireless access point allowing access from public networks does the opposite — it widens exposure.",
+      "C": "An IPSec tunnel encrypts traffic between endpoints. It protects the link without restricting which internal systems may connect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p163",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -15570,12 +15631,17 @@
     "correct": [
       "A"
     ],
-    "explanation": "Automated scanning is the first step in identifying vulnerabilities in an environment. Tools that perform automated vulnerability scanning scan systems and networks for known vulnerabilities, missing patches, misconfigurations, and other security weaknesses. This helps create an initial list of vulnerabilities that can then be prioritized and addressed, often serving as the foundation for further in-depth activities like penetration testing or threat hunting.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Compiling a list means breadth first. An automated scanner sweeps the whole environment and enumerates known vulnerabilities across every reachable host, producing the initial inventory that the deeper, slower techniques then work from.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Penetration testing goes deep on selected targets to prove exploitability. It is thorough but far too slow to enumerate an environment.",
+      "C": "Threat hunting searches for adversaries already present. It looks for compromise, not for vulnerabilities.",
+      "D": "Log aggregation collects event data for monitoring. It reveals activity rather than weaknesses.",
+      "E": "Adversarial emulation replays a specific threat actor's techniques. Again it tests defences rather than inventorying flaws."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15608,12 +15674,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "IP geolocation allows you to identify the geographical location of an IP address, enabling you to block or limit access from high-risk regions. By using IP geolocation, you can restrict or monitor traffic coming from certain geographic areas that are known to be sources of frequent cyberattacks. This is an effective way to mitigate risks associated with unwanted or malicious traffic from those regions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IP geolocation maps an address to a country or region, so traffic from areas the organisation has no business with can be blocked or challenged at the boundary. It is the mechanism behind geographic restrictions.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to interpret. It protects content and cannot filter by origin.",
+      "B": "Data sovereignty is the legal principle that data remains subject to its origin country's laws. It is a compliance concept, not a control.",
+      "D": "Encryption protects data in transit or at rest. It does nothing to determine where traffic comes from."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15646,12 +15716,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization is a reversible technology that replaces sensitive information (such as credit card numbers or personal data) with a non-sensitive placeholder (a token). The original data can be retrieved from the token through a secure process, making tokenization ideal for situations where sensitive data needs to be protected but still be recoverable in a controlled manner.\nUnlike hashing, which is irreversible, tokenization provides a way to securely protect and retrieve sensitive information when necessary.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenisation substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hardware security module protects and manages keys. It is a device rather than a technique for protecting the information itself.",
+      "B": "A hashing algorithm is one-way by design. Nothing can be recovered from the digest.",
+      "D": "Steganography hides the existence of data inside other content. It conceals rather than protects, and offers no access control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p164",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15684,12 +15758,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "The first step in increasing security awareness should be to update policies and handbooks to ensure that all employees are aware of the new procedures and security expectations. Clear, documented policies provide a foundation for employees to understand their roles and responsibilities regarding security. Once the policies are in place, the company can implement additional strategies like training, newsletters, or phishing campaigns to reinforce these practices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A security programme starts with written expectations. Until policies and handbooks state what is required, training has nothing to teach against and staff cannot be held to a standard — so documenting the procedures comes before campaigns or tooling.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Evaluating tools to identify risky behaviour is monitoring. It measures conduct against expectations that do not exist yet.",
+      "B": "Quarterly newsletters are an awareness tactic. They reinforce a message once the message is defined.",
+      "C": "Phishing campaigns test susceptibility. Testing people against undocumented expectations is unfair and yields little."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p165",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15722,12 +15800,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Group Policy Objects (GPOs) in a Windows environment allow administrators to enforce access control policies, including restricting user logins based on time-of-day. By applying a GPO to contract employees and configuring logon hours from Monday through Friday, 9 a.m. to 5 p.m., the organization can ensure that these users cannot log in outside of the specified hours. This is the most effective way to enforce access control based on time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Group Policy applies centrally to a group of accounts, and logon-hours restrictions are a native setting within it. Applying one GPO to contract employees enforces the Monday-to-Friday window at authentication time for every one of them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Discretionary access control lets resource owners set permissions individually. It is inconsistent and does not express time windows centrally.",
+      "C": "OAuth handles delegated authorisation between applications. Least privilege limits scope of access, not hours.",
+      "D": "SAML with federation to the contractors' own authentication server hands control of the login decision to a third party you do not manage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p165",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.647,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15760,21 +15842,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A generator provides backup power in the event of a power outage, ensuring that critical systems remain operational. Since the company's only data center was halted due to the outage, installing a generator would help prevent downtime in the future by supplying power when the main power source fails. Other options, such as snapshots and load balancing, do not directly address power failure issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The failure was loss of utility power, so the control has to supply power independently. A generator runs for as long as it has fuel, keeping the data centre operating through an outage rather than merely surviving the first few minutes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Platform diversity avoids depending on a single vendor's technology. It does nothing about electricity.",
+      "C": "Snapshots preserve data state for recovery. They help restore afterwards but prevent no downtime.",
+      "D": "Load balancing distributes traffic across servers. With the whole data centre dark there is nothing to distribute to."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p166",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0377",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
     "question": "Which of the following analysis methods allows an organization to measure the exposure factor associated with organizational assets?",
     "choices": [
@@ -15798,12 +15884,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Quantitative analysis is a risk assessment method that assigns numerical values to risk factors, including the Exposure Factor (EF) - which represents the percentage of an asset's value that would be lost if a specific threat were realized. This approach helps organizations calculate the Single Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE), providing a data-driven method for risk management.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Exposure factor is a percentage of asset value lost when a threat is realised, and it feeds directly into SLE and ALE. Working in numeric values like that is quantitative risk analysis.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Heuristic analysis uses rules of thumb and behavioural patterns. It is common in malware detection, not risk measurement.",
+      "C": "User-driven is not a recognised risk analysis method.",
+      "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p166",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15836,12 +15926,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A firewall log records inbound and outbound network traffic, including source and destination IP addresses, port numbers, and connection attempts. Since port scans involve probing various ports on a network, the firewall logs will provide visibility into the attacker's source IP address and help the analyst assess the nature of the scanning activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A port scan is inbound connection attempts across many ports, and every one of them hits the firewall first. Firewall logs record the source address for each attempt, which is precisely the attacker detail the analyst needs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "OS security logs record authentication and privilege events on a host. A scan that never authenticates leaves little trace there.",
+      "C": "Application logs record activity inside an application. Port scanning probes below the application layer.",
+      "D": "Endpoint logs cover activity on managed devices. Scans at the network edge may never reach a managed endpoint at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.853,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15849,8 +15943,8 @@
   {
     "id": "q0379",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A security team receives reports about high latency and complete network unavailability throughout most of the office building. Flow logs from the campus switches show high traffic on TCP 445.\nWhich of the following is most likely the root cause of this incident?",
     "choices": [
@@ -15874,12 +15968,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "TCP port 445 is commonly used for Microsoft SMB (Server Message Block) protocol, which is often targeted by worms like WannaCry and NotPetya to spread rapidly across a network. The symptoms described - high traffic on TCP 445, high latency, and network unavailability - suggest a self-replicating worm is propagating, overwhelming network resources and disrupting normal operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Heavy traffic concentrated on TCP 445 is SMB, the protocol worms such as WannaCry use to spread machine to machine. Self-replication across the campus explains both the volume and the fact that the whole building is affected rather than one target.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow is the memory defect a worm might exploit to gain execution. It is the mechanism, not the network-wide event.",
+      "B": "An NTP amplification attack uses UDP 123 to reflect traffic at a victim. Neither the protocol nor the port matches.",
+      "D": "A DoS attack floods a target to make it unavailable. It usually concentrates on one destination, whereas this traffic is spreading across the campus."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15912,12 +16010,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The penetration tester was able to pivot using the same local user ID and password, indicating that systems were using local authentication rather than a centralized authentication mechanism. Implementing centralized authentication (such as Active Directory, LDAP, or RADIUS) with strong password policies would ensure that credentials are managed centrally, reducing the risk of credential reuse and lateral movement across systems. This approach also enables better monitoring and enforcement of security policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester moved laterally because the same local credential worked everywhere. Centralised authentication removes the shared local account as a reusable key — each system validates against the directory, so one compromised credential no longer unlocks the rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Complexity rules and password history make the credential harder to guess. The tester did not guess it; they reused a valid one.",
+      "C": "Connecting to an external authentication server is close, but 'external' points outside the organisation. Centralised internal authentication with proper policy is the accurate description.",
+      "D": "Preventing users from changing passwords makes credential rotation harder, which worsens the problem."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p167",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15950,12 +16052,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A security guard actively monitors and enforces access control policies in an access control vestibule (mantrap), ensuring that only authorized individuals enter. Unlike PINs, access cards, or CCTV (which only record events), a security guard can physically intervene to prevent tailgating - where an unauthorized person follows an authorized individual into a restricted area.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vestibule holds one person between two interlocking doors, but it cannot judge whether two people entered together. A guard observes and physically intervenes, which is the only control here capable of stopping a second person following through.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A PIN authenticates the person who enters it. It says nothing about who walks in behind them.",
+      "B": "An access card likewise authenticates one holder and cannot detect a second body.",
+      "D": "CCTV records the tailgating for review afterwards. It is detective, not preventive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p168",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -15988,12 +16094,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Privacy data classification includes Personally Identifiable Information (PII), which consists of an employee's personal details such as name, address, Social Security number, or other sensitive information. Organizational policies and standards concerning the storage and protection of such data fall under privacy regulations (e.g., GDPR, CCPA, or HIPAA). Ensuring compliance with these policies helps prevent unauthorized access and data breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An employee's personal details are personally identifiable information, which falls under the privacy data category. Privacy is the classification that determines which regulations and internal standards govern how it must be stored and protected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Legal data covers contracts, litigation material and legal holds. Employee personal details are not legal documents.",
+      "B": "Financial data covers accounts, transactions and reporting. Payroll touches both, but the defining characteristic here is that the data identifies a person.",
+      "D": "Intellectual property covers trade secrets, designs and proprietary work. An employee's personal information is not company IP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p168",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16026,12 +16136,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is a fully operational, identical backup site that can take over immediately in case the primary facility goes down. It includes up-to-date data, active servers, and network configurations, allowing for quick failover with minimal downtime. This makes it the best choice for high availability and business continuity requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is the definition of a hot site.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery site is the umbrella term for any of these. It does not specify a readiness level.",
+      "C": "A cold site has space and power but no equipment or data. Bringing it up takes days or weeks.",
+      "D": "A warm site has hardware and connectivity but data must be restored at failover time, so recovery takes hours rather than minutes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p169",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16064,12 +16178,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Snapshots capture the state of a file server at a specific point in time, allowing for quick recovery of lost or corrupted data. They provide an efficient way to restore files without relying solely on full backups, minimizing data loss and downtime. This makes snapshots an ideal solution for data recovery and protection on a file server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Snapshots capture the file server's state at intervals, so a restore returns everything as it stood at the most recent snapshot. Taking them frequently keeps the amount of work lost small and makes recovery fast.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Journaling records every transaction and gives an even smaller loss window, but it is a database and filesystem transaction technique rather than the standard file server restore mechanism.",
+      "C": "Obfuscation makes data harder to interpret. It protects nothing against loss.",
+      "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p169",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16102,12 +16220,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Tokenization replaces sensitive data, such as credit card numbers, with non-sensitive equivalents (tokens) that have no exploitable value outside the system. It is widely used in the financial industry to protect data while maintaining functionality for processing and analysis.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenisation swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hashing is irreversible, so the original number could never be recovered to settle a transaction.",
+      "C": "Salting adds random data before hashing to defeat precomputed tables. It strengthens hashing rather than being a masking technique.",
+      "D": "Steganography hides the existence of data inside other content. It has no place in transaction processing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16140,12 +16262,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Cryptographic vulnerabilities occur when outdated algorithms or weak encryption keys are used, making systems susceptible to attacks such as brute force or cryptanalysis. These issues undermine the confidentiality and integrity of encrypted data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys is precisely what that class describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hash collision is one specific consequence of a weak hashing algorithm. It is an example within the category rather than the category itself.",
+      "C": "A buffer overflow is a memory handling defect. It has nothing to do with algorithm choice.",
+      "D": "Input validation failures allow injection attacks. Again unrelated to cryptography."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16178,12 +16304,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legal contract that restricts parties from disclosing proprietary or confidential information to unauthorized individuals or organizations, making it the most suitable option for protecting sensitive company data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement legally binds the signing party not to share confidential or proprietary information with anyone outside the agreement. Preventing exactly that disclosure is the whole function of an NDA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOA is a formal statement of cooperation between organisations. It establishes intent rather than restricting disclosure.",
+      "B": "An SLA commits a provider to measurable service levels. It concerns performance.",
+      "C": "An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a clause within or alongside it rather than its purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p170",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16191,8 +16321,8 @@
   {
     "id": "q0388",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "A security administrator needs to reduce the attack surface in the company's data centers.\nWhich of the following should the security administrator do to complete this task?",
     "choices": [
@@ -16216,12 +16346,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Upgrading end-of-support operating systems ensures that the servers receive security patches and updates, significantly reducing vulnerabilities and thereby the overall attack surface.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An unsupported operating system accumulates unpatchable vulnerabilities indefinitely, and every one of them is part of the attack surface. Upgrading brings those systems back into a patched state, which removes a large and permanently growing set of entry points.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeynet is a decoy environment for observing attackers. It adds systems rather than reducing exposure.",
+      "B": "Group Policy enforces configuration, which helps harden systems — but it cannot patch flaws in an operating system the vendor no longer supports.",
+      "C": "High availability keeps services running through failure. It is an availability measure with no effect on attack surface."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p171",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
@@ -16254,12 +16388,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data classification is essential for a Data Loss Prevention (DLP) solution to function effectively.\nIt identifies and labels data based on sensitivity and importance, enabling the DLP system to apply appropriate policies to protect it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "DLP can only protect data it can recognise as sensitive. Classification is what labels data by sensitivity in the first place, so without it the DLP system has no basis for deciding what to block, alert on or allow.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data destruction removes data at end of life. It is a disposal activity that happens long after DLP would act.",
+      "B": "Data sanitisation renders data unrecoverable from media. Again a disposal control.",
+      "D": "Data masking obscures values for display. It is a protection technique DLP policy might invoke, not a prerequisite for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p171",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
