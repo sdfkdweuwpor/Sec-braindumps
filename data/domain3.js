@@ -6964,12 +6964,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Serverless architecture shifts more responsibility for the underlying infrastructure to the cloud provider. The customer generally focuses on securing application code, permissions, data, and configurations, while the provider handles host maintenance, infrastructure management, and much of the system patching.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "With serverless, the provider owns the operating system, runtime and underlying host, so patching those layers is no longer the customer's job. The customer's accountability narrows to their code, permissions, configuration and data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Host-level firewalls and network hardware belong to the provider in serverless. That description fits on-premises.",
+      "C": "Serverless functions are ephemeral by design; persistence across sessions is exactly what they do not provide.",
+      "D": "Customers never get administrative access to physical infrastructure in any cloud model."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p381",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7002,12 +7006,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data classification identifies the type and sensitivity of information involved, such as public, internal, confidential, or regulated customer data. This helps determine the severity and impact of the breach.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "How bad the breach is depends on what kind of data was taken. Classification records the sensitivity of each data set in advance, so when a compromise happens the organisation can immediately establish severity, notification obligations and impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Permission restrictions control who may access data. They limit exposure without describing sensitivity.",
+      "B": "A tabletop exercise rehearses response in discussion. It prepares the team rather than assessing a real breach.",
+      "D": "An asset inventory records systems and devices. It tells you which system was hit, not how sensitive its contents were."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7040,51 +7048,101 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An intrusion prevention system actively detects and blocks malicious network traffic. Since the organization already has a firewall but is still being attacked, adding prevention capability provides stronger protection against repeated network-based attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A firewall decides what is allowed through by address and port; it does not inspect whether permitted traffic is an attack. An intrusion prevention system sits inline, examines content against attack patterns and drops malicious traffic — which is the missing capability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs and alerts. It improves visibility but blocks nothing.",
+      "B": "A load balancer distributes traffic for capacity and availability.",
+      "C": "A UTM bundles several functions including IPS, but the specific capability being added is prevention, and the organisation already has a firewall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p387",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0929",
+    "id": "q0924",
     "domain": 3,
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A small business initially plans to open common communications ports (21, 22, 25, 80, 443) on its firewall to allow broad access to its screened subnet. However, their security consultant advises against this action.\nWhich of the following security principles is the consultant addressing?",
+    "question": "A company wants to use new Wi-Fi-enabled environmental sensors in order to automatically collect metrics.\nWhich of the following will the security team most likely do?",
     "choices": [
       {
         "key": "A",
-        "text": "Secure access service edge"
+        "text": "Add the sensor software to the risk register."
       },
       {
         "key": "B",
-        "text": "Attack surface"
+        "text": "Create a VLAN for the sensors."
       },
       {
         "key": "C",
-        "text": "Least privilege"
+        "text": "Physically air gap the sensors."
       },
       {
         "key": "D",
-        "text": "Separation of duties"
+        "text": "Configure TLS 1.2 on all sensors."
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": "Opening many common ports increases the number of exposed services that attackers can target. The consultant is addressing attack surface reduction by limiting unnecessary externally accessible ports.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IoT sensors are built to a price, rarely patched and often cannot run security agents. Placing them in their own VLAN limits what they can reach and what can reach them, so a compromised sensor cannot become a route into the corporate network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Adding the software to the risk register documents the risk without reducing it.",
+      "C": "Air gapping the sensors would prevent them sending the metrics they exist to collect.",
+      "D": "Configuring TLS protects the data in transit, which is worth doing, but it does nothing about the sensors themselves being compromised."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "source": "SY0-701_en.pdf#p388",
+    "needsReview": false,
     "inferenceConfidence": 0.625,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0935",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following requirements best describes a business concern within operational technology (OT) systems versus information technology (IT) systems?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Environmental"
+      },
+      {
+        "key": "B",
+        "text": "Performance"
+      },
+      {
+        "key": "C",
+        "text": "Scalability"
+      },
+      {
+        "key": "D",
+        "text": "Availability"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Operational technology controls physical processes in plants, substations and factory floors, so heat, dust, vibration, humidity and safety conditions are first-order business concerns. IT systems live in controlled rooms where those factors barely register.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Performance matters in both, and OT workloads are often modest compared with IT systems.",
+      "C": "Scalability is far more an IT concern; OT installations are fixed to the physical process they control.",
+      "D": "Availability is critical in OT, but it is critical in IT too, so it does not distinguish the two."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p392",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7116,12 +7174,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A multicloud architecture uses services from multiple cloud providers, reducing dependency on a single vendor. This helps the organization avoid vendor lock-in and gives the SOC more flexibility in choosing, integrating, or replacing security services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multicloud spreads workloads across more than one provider, so the SOC is never dependent on a single vendor's platform, pricing or availability. Retaining the ability to move or replace services is precisely how lock-in is mitigated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Zero Trust is a security model about never assuming trust. It says nothing about vendor dependence.",
+      "C": "Serverless ties you closely to one provider's runtime and event model, which increases lock-in.",
+      "D": "Microservices is an application architecture pattern. It can help portability but does not itself address provider dependence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7154,12 +7216,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Availability is the most important consideration because the hospital must ensure critical systems and services remain accessible during or after natural disasters. Cloud infrastructure should be designed with redundancy, fault tolerance, and resilient connectivity to support continuous healthcare operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hospital's systems support clinical care, so they must remain reachable during and after a disaster. Availability — redundancy, fault tolerance and resilient connectivity — is the consideration that everything else in the design serves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Shared responsibility defines who secures what in the cloud. It is important but is a governance matter rather than the driving technical requirement.",
+      "C": "Ease of recovery matters, but the goal is for services never to stop in the first place rather than to restore them quickly.",
+      "D": "Scalability handles growth in demand. It is not what a natural disaster threatens."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p394",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7192,12 +7258,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A hot site with high availability provides a ready-to-use alternate environment that can quickly take over operations if the primary site is disrupted. This offers the strongest resiliency for an organization in a hurricane-prone area because services can continue with minimal downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hurricane threatens the entire site, so resilience requires a second location that is already running and can take over. A hot site with high availability provides exactly that — an operational alternate environment with minimal switchover time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Geographic dispersion is the underlying principle and a genuinely strong answer, but on its own it describes placement rather than a ready-to-run capability.",
+      "B": "On-site backups are destroyed along with the site they sit in.",
+      "C": "Uninterruptible power supplies cover minutes of power loss. A hurricane causes far more than a brief outage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p396",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

@@ -5435,12 +5435,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A major system migration should follow the organization's formal change management process.\nSubmitting the configuration to the change advisory board ensures the change is reviewed, assessed for risk, approved, and scheduled before implementation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A major system migration is the most significant class of change, and the company has standardised processes. Submitting it to the change advisory board gets the risk assessed, the impact analysed and the work approved and scheduled before anything is touched.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Implementing immediately bypasses every control the process exists to provide.",
+      "C": "Going straight to an executive skips the technical review the board performs and is not the defined path.",
+      "D": "Scheduling for the next update cycle presumes approval that has not been granted."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p381",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5473,12 +5477,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A change management process documents and tracks approved changes, including asset updates. This creates measurable data that can be used to build KPIs for monitoring change activity, compliance, and operational effectiveness.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Because every change is requested, approved and recorded, the process produces a consistent dataset about what was changed, when, by whom and whether it succeeded. That record is what makes it possible to build key performance indicators around asset updates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Administrative workload increases with change management, not decreases — the discipline costs effort.",
+      "B": "Project timelines typically lengthen because of review and approval gates.",
+      "D": "Increased return on investment is too indirect to be the benefit; the process reduces failed changes rather than generating return."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5511,51 +5519,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Change management controls how updates are reviewed, approved, and introduced into a code base or production environment. Requiring supervisor approval before merging code helps maintain stability by ensuring changes are authorized before implementation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Requiring approval before code enters the shared code base is a change control gate. The change is reviewed and authorised before implementation, which is exactly what change management exists to enforce.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Separation of duties splits a task so no one person can complete it alone, typically to prevent fraud. Here the aim is stability through review.",
+      "C": "Vulnerability remediation fixes identified security weaknesses. This control applies to all changes, not just security fixes.",
+      "D": "Collusion prevention addresses two or more people conspiring. That is a fraud control concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0921",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "Following a security review, an organization must ensure users verify their identities against the company's identity services with individual credentials leveraging WPA2-enterprise for wireless access.\nWhich of the following configuration steps correctly applies RADIUS in this environment?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Enabling 802.1X authentication and integrating it with the corporate directory"
-      },
-      {
-        "key": "B",
-        "text": "Installing self-signed certificates on all user devices"
-      },
-      {
-        "key": "C",
-        "text": "Enabling MAC filters for all wireless clients"
-      },
-      {
-        "key": "D",
-        "text": "Configuring the wireless controller to require multifactor authentication"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "WPA2-Enterprise uses 802.1X authentication with a RADIUS server to validate each user's individual credentials. Integrating RADIUS with the corporate directory allows users to authenticate against centralized identity services for wireless access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p387",
-    "needsReview": true,
-    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5587,12 +5561,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Confidentiality ensures that data is protected from unauthorized access and is only available to users, systems, or processes that are permitted to view it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality is the principle that information is available only to those authorised to see it. Restricting access to authorised users is its definition within the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered without authorisation.",
+      "C": "Non-repudiation prevents someone denying an action they performed.",
+      "D": "Availability means data and systems are accessible when needed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5625,51 +5603,17 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An on-path attack occurs when an attacker intercepts and potentially alters communications between users and a service. The changed appearance of the web portal and replacement of the expected certificate indicate that traffic may be redirected or intercepted by an attacker presenting a different site or certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The expected certificate has been replaced and the site looks different, which means users are no longer reaching the real service. An attacker positioned between the users and the portal is presenting their own certificate and their own page, which is an on-path attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Phishing lures users to a fraudulent site through a message. Here employees navigated to the genuine address and still landed somewhere else.",
+      "C": "Credential replay reuses captured authentication material. The visible symptom is a substituted site and certificate.",
+      "D": "Cache poisoning is one mechanism that could redirect users, but the question asks what activity is occurring, and interception with a substituted certificate is the on-path attack itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0935",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "Which of the following requirements best describes a business concern within operational technology (OT) systems versus information technology (IT) systems?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Environmental"
-      },
-      {
-        "key": "B",
-        "text": "Performance"
-      },
-      {
-        "key": "C",
-        "text": "Scalability"
-      },
-      {
-        "key": "D",
-        "text": "Availability"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Operational technology systems often control physical processes and equipment, so environmental requirements such as temperature, humidity, dust, vibration, and safety conditions are major business concerns. These concerns are typically more critical in OT environments than in traditional IT systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5701,12 +5645,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Digital signatures verify the sender's identity and prove that the message was not altered after signing. This supports non-repudiation because the sender cannot reasonably deny having sent the signed email.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital signature is produced with the sender's private key, which only they hold. Anyone can verify it, so the sender cannot credibly deny having sent the message — which is non-repudiation, and it also proves the content is unaltered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Zero Trust is an architectural model based on never assuming trust from network position.",
+      "C": "Defence in depth means layering controls. It describes strategy rather than what a signature achieves.",
+      "D": "Confidentiality requires encryption. A signed email remains readable by anyone who receives it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5739,12 +5687,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Key escrow stores a copy of decryption keys with a trusted party or secure recovery system.\nThis helps ensure encrypted data can still be recovered if the original keys are lost, damaged, or unavailable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Key escrow places a copy of the decryption key with a trusted custodian who releases it under controlled conditions. If the working key is lost, corrupted or deleted, that copy is what stands between the organisation and permanently unreadable data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key exchange establishes a shared key between parties. It does not preserve one against loss.",
+      "B": "Encryption is the operation being protected, not a safeguard for the key.",
+      "C": "Rotation replaces keys periodically to limit exposure. It is good hygiene but does not recover a lost key."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

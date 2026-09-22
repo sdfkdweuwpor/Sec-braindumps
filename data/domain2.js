@@ -7250,44 +7250,6 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0905",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Security analysts perform a network discovery scan on the production environment and find 2,000 desktops and laptops are present on the network. The company previously documented only 1,500 devices in use.\nWhich of the following presents the most critical risk to the company?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Use of the company's guest Wi-Fi"
-      },
-      {
-        "key": "B",
-        "text": "Loss of sensitive company information"
-      },
-      {
-        "key": "C",
-        "text": "Stolen hardware"
-      },
-      {
-        "key": "D",
-        "text": "Decreased network throughput"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A large number of undocumented devices indicates weak asset inventory and possible unauthorized endpoints on the network. These unmanaged devices may lack required security controls, increasing the risk that sensitive company information could be exposed, accessed, or exfiltrated.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p380",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0909",
     "domain": 2,
     "objective": "2.3",
@@ -7315,12 +7277,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sideloading is the installation of an application from outside the authorized or official application store, often by manually installing a binary package.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Installing an application by hand from a binary rather than through the platform's official store is sideloading. The package bypasses the store's review, signing and scanning, which is what makes it a risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables sideloading but is a deeper change to the operating system.",
+      "C": "Memory injection writes code into a running process's address space.",
+      "D": "VM escape breaks out of a virtual machine into the hypervisor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p382",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7353,12 +7319,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A DDoS attack is intended to overwhelm services and make them unavailable to legitimate users. Since no data was stolen and no ransom was demanded, the primary motivation is disrupting the institution's services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Nothing was stolen and no payment was demanded, so the outcome the attackers achieved was simply that the services stopped working. When making a target unavailable is the entire point, the motivation is service disruption.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain would involve ransom, fraud or theft. None occurred.",
+      "C": "Data exfiltration would mean information was taken, which the scenario rules out.",
+      "D": "Corporate espionage is covert collection of commercial information. A DDoS is loud and collects nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7366,8 +7336,8 @@ export const domain2Questions = [
   {
     "id": "q0918",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "Which of the following explains how regular patching helps mitigate risks when securing an enterprise environment?",
     "choices": [
@@ -7391,51 +7361,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Regular patching reduces risk by fixing known software vulnerabilities before attackers can exploit them in the enterprise environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for a specific, published defect. Applying patches promptly closes those known holes before attackers — who read the same advisories — can use them, which is where most real-world compromise begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Improved performance from fewer bugs is a functional benefit rather than the risk mitigation.",
+      "C": "Patching does not eliminate the need for firewalls or intrusion detection; defence in depth still applies.",
+      "D": "Antivirus remains necessary, since patching does nothing about malware arriving through legitimate channels."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.167,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0923",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "A company performs a vulnerability assessment and gets the following results:\nWhich of the following vulnerabilities should the company patch first?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "1"
-      },
-      {
-        "key": "B",
-        "text": "2"
-      },
-      {
-        "key": "C",
-        "text": "3"
-      },
-      {
-        "key": "D",
-        "text": "4"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The highest priority is the vulnerability with the highest severity score on an internet-facing server. This combination creates the greatest exposure and risk, so it should be patched first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7467,12 +7403,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Insecure protocols enabled on a network device represent a configuration weakness. Turning them off is a hardening action that remediates device misconfigurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Insecure protocols left enabled on a device are settings that should have been turned off, so the weakness is in how the device was configured rather than in any software defect. Disabling them remediates a misconfiguration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Sideloading installs software from outside an official store. It applies to applications, not device protocols.",
+      "C": "Memory injection writes code into a running process's address space.",
+      "D": "A malicious update delivers hostile code through an update channel. Nothing was updated here."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p391",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7515,51 +7455,17 @@ export const domain2Questions = [
       "D",
       "E"
     ],
-    "explanation": "The attacker used SIP spoofing by faking internal VoIP extensions, vishing by tricking users over phone calls into sharing sensitive information, and a denial-of-service attack by flooding the VoIP system with requests that caused legitimate calls to fail.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Three distinct techniques are present. Faking internal extensions is SIP spoofing, using those calls to extract sensitive information is vishing, and flooding the system so legitimate calls fail is a denial of service.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An on-path attack intercepts traffic between two parties. The attacker here is originating calls, not sitting between others.",
+      "C": "Packet sniffing captures traffic passively. Nothing described involves passive capture.",
+      "F": "A supply chain attack compromises a vendor or component to reach you. The VoIP system was attacked directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p391",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0937",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following describes the purpose of a Common Vulnerabilities and Exposure (CVE) database?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To compile a database of vulnerabilities known to have occurred in the past"
-      },
-      {
-        "key": "B",
-        "text": "To store a record of vulnerabilities that have patches available"
-      },
-      {
-        "key": "C",
-        "text": "To track vulnerabilities by assessing their threat actors"
-      },
-      {
-        "key": "D",
-        "text": "To provide a public list of identified and suspected cyber vulnerabilities"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "The CVE database provides a standardized public catalog of identified cybersecurity vulnerabilities, giving each vulnerability a unique identifier so organizations, vendors, and security tools can consistently reference and track it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7591,12 +7497,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is significant because it breaks the isolation between the virtual machine and the underlying host. This can allow malicious code inside a guest VM to access or affect the host system or other guest machines.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Bypassing the guest's own firewall is a local configuration issue within one VM.",
+      "C": "Resource starvation from simultaneous memory requests is a capacity and scheduling problem.",
+      "D": "Direct control of physical network interfaces is not what escape grants; the concern is reaching the host and other guests."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p394",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

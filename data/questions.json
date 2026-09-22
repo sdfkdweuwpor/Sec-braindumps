@@ -38154,9 +38154,9 @@
   },
   {
     "id": "q0905",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "Security analysts perform a network discovery scan on the production environment and find 2,000 desktops and laptops are present on the network. The company previously documented only 1,500 devices in use.\nWhich of the following presents the most critical risk to the company?",
     "choices": [
@@ -38180,12 +38180,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A large number of undocumented devices indicates weak asset inventory and possible unauthorized endpoints on the network. These unmanaged devices may lack required security controls, increasing the risk that sensitive company information could be exposed, accessed, or exfiltrated.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Five hundred devices are on the network that nobody has recorded. None of them is patched, monitored or hardened by the organisation, and any of them could be holding or leaking company data — which makes exposure of sensitive information the gravest consequence of the inventory gap.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Guest Wi-Fi use is expected and is normally segmented away from production. It does not explain unmanaged devices on the production network.",
+      "C": "Stolen hardware would reduce the device count rather than increase it.",
+      "D": "Decreased throughput is a performance nuisance, not a critical security risk."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p380",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38218,12 +38222,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A major system migration should follow the organization's formal change management process.\nSubmitting the configuration to the change advisory board ensures the change is reviewed, assessed for risk, approved, and scheduled before implementation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A major system migration is the most significant class of change, and the company has standardised processes. Submitting it to the change advisory board gets the risk assessed, the impact analysed and the work approved and scheduled before anything is touched.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Implementing immediately bypasses every control the process exists to provide.",
+      "C": "Going straight to an executive skips the technical review the board performs and is not the defined path.",
+      "D": "Scheduling for the next update cycle presumes approval that has not been granted."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p381",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38256,12 +38264,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Serverless architecture shifts more responsibility for the underlying infrastructure to the cloud provider. The customer generally focuses on securing application code, permissions, data, and configurations, while the provider handles host maintenance, infrastructure management, and much of the system patching.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "With serverless, the provider owns the operating system, runtime and underlying host, so patching those layers is no longer the customer's job. The customer's accountability narrows to their code, permissions, configuration and data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Host-level firewalls and network hardware belong to the provider in serverless. That description fits on-premises.",
+      "C": "Serverless functions are ephemeral by design; persistence across sessions is exactly what they do not provide.",
+      "D": "Customers never get administrative access to physical infrastructure in any cloud model."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p381",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38269,8 +38281,8 @@
   {
     "id": "q0908",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "multi",
     "question": "A security analyst receives a report of unusual outbound traffic from a development server at 2:30 a.m. The server should have had no internet communication outside of business hours based on normal usage.\nWhich of the following data sources will most effectively help validate whether this behavior is part of a potential security incident? (Choose two.)",
     "choices": [
@@ -38303,12 +38315,17 @@
       "A",
       "E"
     ],
-    "explanation": "Packet captures provide detailed evidence of the actual network communication, including destination, protocol, payload metadata, and timing. Firewall traffic logs help validate whether the development server made outbound connections at 2:30 a.m., where the traffic went, and whether it violated expected network behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two sources answer the question directly. Firewall logs confirm whether outbound connections actually occurred at that hour and where they went, and packet captures show what was in them — protocol behaviour, volume and timing — which is what separates a scheduled job from exfiltration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Active Directory group policy objects describe configuration applied to systems. They say nothing about network activity.",
+      "C": "Endpoint antivirus logs report detections of known malware. Traffic from a legitimate-looking process would not appear.",
+      "D": "System performance logs show resource use. They might show activity without revealing what it was.",
+      "F": "Vulnerability scan reports list weaknesses that exist. They describe potential, not events."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p382",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38341,12 +38358,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Sideloading is the installation of an application from outside the authorized or official application store, often by manually installing a binary package.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Installing an application by hand from a binary rather than through the platform's official store is sideloading. The package bypasses the store's review, signing and scanning, which is what makes it a risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables sideloading but is a deeper change to the operating system.",
+      "C": "Memory injection writes code into a running process's address space.",
+      "D": "VM escape breaks out of a virtual machine into the hypervisor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p382",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38379,12 +38400,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A change management process documents and tracks approved changes, including asset updates. This creates measurable data that can be used to build KPIs for monitoring change activity, compliance, and operational effectiveness.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Because every change is requested, approved and recorded, the process produces a consistent dataset about what was changed, when, by whom and whether it succeeded. That record is what makes it possible to build key performance indicators around asset updates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Administrative workload increases with change management, not decreases — the discipline costs effort.",
+      "B": "Project timelines typically lengthen because of review and approval gates.",
+      "D": "Increased return on investment is too indirect to be the benefit; the process reduces failed changes rather than generating return."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38417,12 +38442,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A DDoS attack is intended to overwhelm services and make them unavailable to legitimate users. Since no data was stolen and no ransom was demanded, the primary motivation is disrupting the institution's services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Nothing was stolen and no payment was demanded, so the outcome the attackers achieved was simply that the services stopped working. When making a target unavailable is the entire point, the motivation is service disruption.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain would involve ransom, fraud or theft. None occurred.",
+      "C": "Data exfiltration would mean information was taken, which the scenario rules out.",
+      "D": "Corporate espionage is covert collection of commercial information. A DDoS is loud and collects nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38455,12 +38484,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Risk tolerance defines the acceptable level of risk an organization is willing to allow before approving an activity. Authorizing deployment only after Category 1 vulnerabilities are reduced to zero shows the organization's defined threshold for acceptable risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The organisation defined a condition under which it will accept the remaining risk — zero Category 1 vulnerabilities — and authorised deployment once it was met. Setting that acceptable level before proceeding is risk tolerance in practice.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Risk avoidance means declining the activity altogether. The system is being deployed.",
+      "C": "Risk transference shifts financial consequence to a third party, typically through insurance.",
+      "D": "Risk reporting communicates risk status to stakeholders. It informs rather than setting a threshold."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38493,12 +38526,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The log entry shows a database query embedded in the web request, which indicates a likely SQL injection attempt. This activity is associated with the IP address shown for that request.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One request contains database syntax embedded in the URL, which is a SQL injection attempt rather than ordinary traffic. The source address on that request is the one behaving maliciously; the others are making normal requests.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "This address appears in normal request traffic with no injected query content.",
+      "C": "This address likewise shows ordinary requests.",
+      "D": "This address also shows legitimate traffic and no attack payload."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38531,21 +38568,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "An acceptable use policy defines how users are permitted to use organizational systems, networks, applications, and data. It establishes acceptable and prohibited actions to guide proper system use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy tells users what they may and may not do with organisational systems, networks and data. Setting out permitted operations is its whole purpose, and it is the document users sign at onboarding.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A framework for performing a security assessment is an assessment methodology, not an AUP.",
+      "C": "Procedures for restoring a resource after an incident belong in the disaster recovery or incident response plan.",
+      "D": "An agreement between a vendor and service provider is a commercial contract such as an MSA or SLA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0915",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "Staff members at a company historically click on dangerous links. The leadership team wants to reduce that risk.\nWhich of the following should a security engineer do to help reduce future incidents?",
     "choices": [
@@ -38569,12 +38610,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A realistic phishing email test combined with refresher training helps employees recognize dangerous links and reinforces safer behavior. This directly addresses the historical pattern of users clicking malicious links.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A realistic simulated phishing email measures who actually clicks, and the refresher immediately afterwards lands while the mistake is fresh. That combination of measurement and targeted teaching is what changes the behaviour the leadership team is worried about.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Plaintext email removes clickable formatting but users still copy URLs, and it degrades legitimate communication.",
+      "C": "Blocking all unsigned attachments addresses attachments, not links, and would block a large share of normal business mail.",
+      "D": "Header analysis for sender reputation is a filtering technique. It helps, but the stated problem is user behaviour."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38582,8 +38627,8 @@
   {
     "id": "q0916",
     "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A wireless administrator sets up a new network in a small office using a password. The network must reduce the impact of brute-force attacks if the password is subjected to over-the-air interception.\nWhich of the following security settings will help achieve this goal?",
     "choices": [
@@ -38607,12 +38652,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Simultaneous Authentication of Equals strengthens WPA3-Personal authentication by making intercepted wireless handshakes resistant to offline brute-force password attacks. This reduces the impact if authentication traffic is captured over the air.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "WPA2 handshakes can be captured and attacked offline at unlimited speed. SAE, the WPA3-Personal handshake, uses a key exchange where each guess requires a fresh interaction, so intercepting the exchange gives an attacker nothing to brute-force offline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wireless intrusion prevention system detects and blocks rogue devices and attacks. It does not change how the handshake resists cracking.",
+      "B": "Single sign-on lets one identity access many applications. It is unrelated to wireless key exchange.",
+      "C": "WPS simplifies joining a network and is itself notoriously vulnerable to brute force."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p385",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38645,12 +38694,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Data leaks are most likely to cause reputational damage because they expose sensitive information and can reduce customer, partner, and public trust in the company.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A data leak becomes public, affects customers directly, and tells the market the organisation could not protect what it was trusted with. That breach of trust is what erodes reputation in a way technical shortcomings never do on their own.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Open ports are an internal technical weakness. Customers never see them.",
+      "B": "Low availability irritates users and can breach an SLA, but outages are common and forgiven far more readily than data loss.",
+      "C": "Unpatched vulnerabilities are a risk, not an event. They damage reputation only if they lead to a breach."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p385",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38658,8 +38711,8 @@
   {
     "id": "q0918",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "Which of the following explains how regular patching helps mitigate risks when securing an enterprise environment?",
     "choices": [
@@ -38683,12 +38736,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Regular patching reduces risk by fixing known software vulnerabilities before attackers can exploit them in the enterprise environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for a specific, published defect. Applying patches promptly closes those known holes before attackers — who read the same advisories — can use them, which is where most real-world compromise begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Improved performance from fewer bugs is a functional benefit rather than the risk mitigation.",
+      "C": "Patching does not eliminate the need for firewalls or intrusion detection; defence in depth still applies.",
+      "D": "Antivirus remains necessary, since patching does nothing about malware arriving through legitimate channels."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.167,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38721,12 +38778,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data classification identifies the type and sensitivity of information involved, such as public, internal, confidential, or regulated customer data. This helps determine the severity and impact of the breach.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "How bad the breach is depends on what kind of data was taken. Classification records the sensitivity of each data set in advance, so when a compromise happens the organisation can immediately establish severity, notification obligations and impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Permission restrictions control who may access data. They limit exposure without describing sensitivity.",
+      "B": "A tabletop exercise rehearses response in discussion. It prepares the team rather than assessing a real breach.",
+      "D": "An asset inventory records systems and devices. It tells you which system was hit, not how sensitive its contents were."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38759,21 +38820,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Change management controls how updates are reviewed, approved, and introduced into a code base or production environment. Requiring supervisor approval before merging code helps maintain stability by ensuring changes are authorized before implementation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Requiring approval before code enters the shared code base is a change control gate. The change is reviewed and authorised before implementation, which is exactly what change management exists to enforce.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Separation of duties splits a task so no one person can complete it alone, typically to prevent fraud. Here the aim is stability through review.",
+      "C": "Vulnerability remediation fixes identified security weaknesses. This control applies to all changes, not just security fixes.",
+      "D": "Collusion prevention addresses two or more people conspiring. That is a fraud control concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p386",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0921",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "Following a security review, an organization must ensure users verify their identities against the company's identity services with individual credentials leveraging WPA2-enterprise for wireless access.\nWhich of the following configuration steps correctly applies RADIUS in this environment?",
     "choices": [
@@ -38797,12 +38862,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "WPA2-Enterprise uses 802.1X authentication with a RADIUS server to validate each user's individual credentials. Integrating RADIUS with the corporate directory allows users to authenticate against centralized identity services for wireless access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "WPA2-Enterprise authenticates each user individually rather than with a shared key, and it does so using 802.1X with a RADIUS server. Pointing that RADIUS service at the corporate directory is what lets users authenticate with their own credentials.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Self-signed certificates on user devices would not be trusted and do not implement enterprise authentication.",
+      "C": "MAC filters identify devices by hardware address, which is easily spoofed and authenticates no user.",
+      "D": "Multifactor authentication on the wireless controller adds a factor but is not the RADIUS configuration step being asked about."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p387",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38835,21 +38904,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "An intrusion prevention system actively detects and blocks malicious network traffic. Since the organization already has a firewall but is still being attacked, adding prevention capability provides stronger protection against repeated network-based attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A firewall decides what is allowed through by address and port; it does not inspect whether permitted traffic is an attack. An intrusion prevention system sits inline, examines content against attack patterns and drops malicious traffic — which is the missing capability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs and alerts. It improves visibility but blocks nothing.",
+      "B": "A load balancer distributes traffic for capacity and availability.",
+      "C": "A UTM bundles several functions including IPS, but the specific capability being added is prevention, and the organisation already has a firewall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p387",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0923",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "A company performs a vulnerability assessment and gets the following results:\nWhich of the following vulnerabilities should the company patch first?",
     "choices": [
@@ -38873,21 +38946,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "The highest priority is the vulnerability with the highest severity score on an internet-facing server. This combination creates the greatest exposure and risk, so it should be patched first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Prioritisation combines severity with exposure. The vulnerability carrying the highest severity score on a server reachable from the internet has both the greatest potential impact and the widest attacker access, so it is remediated first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Lower severity or a less exposed host means less urgency, even if the finding is real.",
+      "C": "Internal-only systems are reachable by far fewer attackers, which lowers the practical risk.",
+      "D": "A low-severity finding on any host is the last of these to warrant attention."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0924",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
     "question": "A company wants to use new Wi-Fi-enabled environmental sensors in order to automatically collect metrics.\nWhich of the following will the security team most likely do?",
     "choices": [
@@ -38911,12 +38988,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Creating a VLAN for the Wi-Fi-enabled sensors segments them from the rest of the network.\nThis limits exposure and helps contain risk if an IoT sensor is compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IoT sensors are built to a price, rarely patched and often cannot run security agents. Placing them in their own VLAN limits what they can reach and what can reach them, so a compromised sensor cannot become a route into the corporate network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Adding the software to the risk register documents the risk without reducing it.",
+      "C": "Air gapping the sensors would prevent them sending the metrics they exist to collect.",
+      "D": "Configuring TLS protects the data in transit, which is worth doing, but it does nothing about the sensors themselves being compromised."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38949,12 +39030,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Confidentiality ensures that data is protected from unauthorized access and is only available to users, systems, or processes that are permitted to view it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality is the principle that information is available only to those authorised to see it. Restricting access to authorised users is its definition within the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered without authorisation.",
+      "C": "Non-repudiation prevents someone denying an action they performed.",
+      "D": "Availability means data and systems are accessible when needed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -38987,12 +39072,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A risk register documents known risks, including vulnerabilities that cannot be remediated immediately. It allows the organization to track ownership, severity, impact, mitigation plans, and the accepted timeline until remediation is possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability that cannot be fixed for six months becomes an accepted risk with a treatment plan and a review date. The risk register is where that is recorded — owner, severity, compensating controls and the agreed remediation timeline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A patching schedule lists planned patch work. The point here is that no patch is available.",
+      "C": "A vulnerability matrix is not a standard artefact for tracking accepted risk over time.",
+      "D": "Change management procedures govern how modifications are approved and applied."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p389",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39029,12 +39118,17 @@
     "correct": [
       "C"
     ],
-    "explanation": "Content categorization groups websites by type, such as gambling, sports, games, or fantasy sports-related content. This allows filtering policies to adapt as new sites appear without requiring the CISO to manually maintain a static list of every site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Content categorisation assigns every site to a class, and the vendor updates those classifications continuously as new sites appear. Blocking the category rather than individual sites means new fantasy sports sites are caught automatically with no ongoing effort.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS blocks traffic matching attack signatures. A fantasy sports site is not an attack.",
+      "B": "URL scanning judges whether a specific destination is malicious. It assesses safety, not topic.",
+      "D": "A static denial list is precisely the manual maintenance burden the CISO wants to avoid.",
+      "E": "DLP inspects data leaving the organisation for sensitive content."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p389",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39067,21 +39161,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Threat hunting uses known indicators of compromise to proactively search the environment for signs of malicious activity. This helps determine whether systems have already been affected by the threat described in the bulletin.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Indicators of compromise are only useful if you look for them. Threat hunting takes those indicators and searches logs, endpoints and network telemetry for matches, which is how you establish whether the environment is already affected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Root cause analysis determines why a confirmed incident happened. Nothing is confirmed yet.",
+      "C": "A tabletop exercise rehearses response in discussion. It examines no real data.",
+      "D": "A penetration test assesses whether systems can be breached. It looks for weaknesses, not for an adversary already present."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0929",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A small business initially plans to open common communications ports (21, 22, 25, 80, 443) on its firewall to allow broad access to its screened subnet. However, their security consultant advises against this action.\nWhich of the following security principles is the consultant addressing?",
     "choices": [
@@ -39105,12 +39203,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Opening many common ports increases the number of exposed services that attackers can target. The consultant is addressing attack surface reduction by limiting unnecessary externally accessible ports.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Each opened port exposes a running service that an attacker can reach, probe and attempt to exploit. Opening five common ports broadly multiplies those entry points, and the consultant is objecting on attack surface grounds.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure access service edge is a cloud-delivered networking and security model. It is not the principle at issue.",
+      "C": "Least privilege concerns the permissions granted to identities. Ports are network exposure rather than user rights.",
+      "D": "Separation of duties splits tasks between people to prevent fraud."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39143,12 +39245,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "15 000 × 2 ÷ 3 = 10 000 Annualized loss expectancy is calculated by multiplying the single-loss expectancy by the annualized rate of occurrence. A $15,000 impact occurring twice in three years equals an annual expected loss of $10,000.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ALE is single loss expectancy multiplied by annualised rate of occurrence. The single loss is $15,000 and twice in three years gives an ARO of 0.67, so 15,000 multiplied by 0.67 is approximately $10,000.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "$7,500 corresponds to an ARO of 0.5 — once every two years rather than twice every three.",
+      "C": "$15,000 is the single loss expectancy itself, before annualising.",
+      "D": "$30,000 is two full losses, the total across three years rather than the annual figure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39181,12 +39287,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Insecure protocols enabled on a network device represent a configuration weakness. Turning them off is a hardening action that remediates device misconfigurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Insecure protocols left enabled on a device are settings that should have been turned off, so the weakness is in how the device was configured rather than in any software defect. Disabling them remediates a misconfiguration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Sideloading installs software from outside an official store. It applies to applications, not device protocols.",
+      "C": "Memory injection writes code into a running process's address space.",
+      "D": "A malicious update delivers hostile code through an update channel. Nothing was updated here."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p391",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39229,12 +39339,16 @@
       "D",
       "E"
     ],
-    "explanation": "The attacker used SIP spoofing by faking internal VoIP extensions, vishing by tricking users over phone calls into sharing sensitive information, and a denial-of-service attack by flooding the VoIP system with requests that caused legitimate calls to fail.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Three distinct techniques are present. Faking internal extensions is SIP spoofing, using those calls to extract sensitive information is vishing, and flooding the system so legitimate calls fail is a denial of service.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An on-path attack intercepts traffic between two parties. The attacker here is originating calls, not sitting between others.",
+      "C": "Packet sniffing captures traffic passively. Nothing described involves passive capture.",
+      "F": "A supply chain attack compromises a vendor or component to reach you. The VoIP system was attacked directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p391",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39267,12 +39381,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Procedures provide step-by-step instructions for performing specific tasks, such as configuring, managing, and maintaining network systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A procedure is the step-by-step instruction set for carrying out a specific task the same way each time. Documenting how to configure, manage and maintain the network is exactly that.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Guidelines are recommended practice. They advise rather than prescribe and are not binding.",
+      "C": "Policies state the organisation's high-level intent and rules, deliberately without implementation detail.",
+      "D": "Standards state mandatory requirements — the minimum key length, the approved product — rather than the steps to achieve them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39305,21 +39423,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "An on-path attack occurs when an attacker intercepts and potentially alters communications between users and a service. The changed appearance of the web portal and replacement of the expected certificate indicate that traffic may be redirected or intercepted by an attacker presenting a different site or certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The expected certificate has been replaced and the site looks different, which means users are no longer reaching the real service. An attacker positioned between the users and the portal is presenting their own certificate and their own page, which is an on-path attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Phishing lures users to a fraudulent site through a message. Here employees navigated to the genuine address and still landed somewhere else.",
+      "C": "Credential replay reuses captured authentication material. The visible symptom is a substituted site and certificate.",
+      "D": "Cache poisoning is one mechanism that could redirect users, but the question asks what activity is occurring, and interception with a substituted certificate is the on-path attack itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0935",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following requirements best describes a business concern within operational technology (OT) systems versus information technology (IT) systems?",
     "choices": [
@@ -39343,12 +39465,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Operational technology systems often control physical processes and equipment, so environmental requirements such as temperature, humidity, dust, vibration, and safety conditions are major business concerns. These concerns are typically more critical in OT environments than in traditional IT systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Operational technology controls physical processes in plants, substations and factory floors, so heat, dust, vibration, humidity and safety conditions are first-order business concerns. IT systems live in controlled rooms where those factors barely register.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Performance matters in both, and OT workloads are often modest compared with IT systems.",
+      "C": "Scalability is far more an IT concern; OT installations are fixed to the physical process they control.",
+      "D": "Availability is critical in OT, but it is critical in IT too, so it does not distinguish the two."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39381,21 +39507,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Digital signatures verify the sender's identity and prove that the message was not altered after signing. This supports non-repudiation because the sender cannot reasonably deny having sent the signed email.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital signature is produced with the sender's private key, which only they hold. Anyone can verify it, so the sender cannot credibly deny having sent the message — which is non-repudiation, and it also proves the content is unaltered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Zero Trust is an architectural model based on never assuming trust from network position.",
+      "C": "Defence in depth means layering controls. It describes strategy rather than what a signature achieves.",
+      "D": "Confidentiality requires encryption. A signed email remains readable by anyone who receives it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0937",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "Which of the following describes the purpose of a Common Vulnerabilities and Exposure (CVE) database?",
     "choices": [
@@ -39419,12 +39549,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "The CVE database provides a standardized public catalog of identified cybersecurity vulnerabilities, giving each vulnerability a unique identifier so organizations, vendors, and security tools can consistently reference and track it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVE assigns a unique public identifier to each known vulnerability so that vendors, scanners and defenders all refer to the same flaw by the same name. Providing that shared public catalogue is its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CVE lists current and newly discovered vulnerabilities, not merely historical ones.",
+      "B": "Entries exist regardless of whether a patch is available; many are published before a fix.",
+      "C": "CVE does not track threat actors. Attribution is a separate intelligence discipline."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39457,12 +39591,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A multicloud architecture uses services from multiple cloud providers, reducing dependency on a single vendor. This helps the organization avoid vendor lock-in and gives the SOC more flexibility in choosing, integrating, or replacing security services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multicloud spreads workloads across more than one provider, so the SOC is never dependent on a single vendor's platform, pricing or availability. Retaining the ability to move or replace services is precisely how lock-in is mitigated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Zero Trust is a security model about never assuming trust. It says nothing about vendor dependence.",
+      "C": "Serverless ties you closely to one provider's runtime and event model, which increases lock-in.",
+      "D": "Microservices is an application architecture pattern. It can help portability but does not itself address provider dependence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p393",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39495,12 +39633,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Availability is the most important consideration because the hospital must ensure critical systems and services remain accessible during or after natural disasters. Cloud infrastructure should be designed with redundancy, fault tolerance, and resilient connectivity to support continuous healthcare operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hospital's systems support clinical care, so they must remain reachable during and after a disaster. Availability — redundancy, fault tolerance and resilient connectivity — is the consideration that everything else in the design serves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Shared responsibility defines who secures what in the cloud. It is important but is a governance matter rather than the driving technical requirement.",
+      "C": "Ease of recovery matters, but the goal is for services never to stop in the first place rather than to restore them quickly.",
+      "D": "Scalability handles growth in demand. It is not what a natural disaster threatens."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p394",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39533,12 +39675,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is significant because it breaks the isolation between the virtual machine and the underlying host. This can allow malicious code inside a guest VM to access or affect the host system or other guest machines.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Bypassing the guest's own firewall is a local configuration issue within one VM.",
+      "C": "Resource starvation from simultaneous memory requests is a capacity and scheduling problem.",
+      "D": "Direct control of physical network interfaces is not what escape grants; the concern is reaching the host and other guests."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p394",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39571,12 +39717,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Compliance attestation uses assessment results to confirm whether a third party meets required security, regulatory, or contractual controls. It provides formal evidence that the vendor's risk posture and compliance status have been reviewed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A third-party risk assessment produces findings about a vendor's controls. Compliance attestation consumes those findings and turns them into a formal statement of whether the vendor meets the required security, regulatory or contractual obligations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A statement of work defines deliverables and scope for an engagement. It precedes the work rather than consuming its results.",
+      "B": "A service-level agreement sets measurable performance commitments.",
+      "C": "A vendor registry lists suppliers. It records who they are rather than evaluating assessment outcomes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.652,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39609,12 +39759,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Key escrow stores a copy of decryption keys with a trusted party or secure recovery system.\nThis helps ensure encrypted data can still be recovered if the original keys are lost, damaged, or unavailable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Key escrow places a copy of the decryption key with a trusted custodian who releases it under controlled conditions. If the working key is lost, corrupted or deleted, that copy is what stands between the organisation and permanently unreadable data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key exchange establishes a shared key between parties. It does not preserve one against loss.",
+      "B": "Encryption is the operation being protected, not a safeguard for the key.",
+      "C": "Rotation replaces keys periodically to limit exposure. It is good hygiene but does not recover a lost key."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39647,12 +39801,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A dashboard is the best way to consolidate security metrics from multiple areas and present them in a clear, ongoing view for executive review. It promotes awareness by showing trends, operational status, and key performance indicators in one centralized location.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The data points span budget, operations, resolution times and staffing, and executives need to see them together and repeatedly. A dashboard consolidates those metrics into one live view, which is what sustains ongoing awareness rather than a periodic snapshot.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Managerial reports deliver detail periodically. They are point-in-time and slower to produce.",
+      "C": "A self-service portal lets users perform tasks themselves. It is a service delivery tool, not an executive metrics view.",
+      "D": "A yearly stakeholder meeting is far too infrequent to promote ongoing awareness."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
@@ -39685,12 +39843,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A hot site with high availability provides a ready-to-use alternate environment that can quickly take over operations if the primary site is disrupted. This offers the strongest resiliency for an organization in a hurricane-prone area because services can continue with minimal downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hurricane threatens the entire site, so resilience requires a second location that is already running and can take over. A hot site with high availability provides exactly that — an operational alternate environment with minimal switchover time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Geographic dispersion is the underlying principle and a genuinely strong answer, but on its own it describes placement rather than a ready-to-run capability.",
+      "B": "On-site backups are destroyed along with the site they sit in.",
+      "C": "Uninterruptible power supplies cover minutes of power loss. A hurricane causes far more than a brief outage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p396",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

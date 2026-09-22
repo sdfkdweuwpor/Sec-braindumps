@@ -12015,10 +12015,52 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0905",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Security analysts perform a network discovery scan on the production environment and find 2,000 desktops and laptops are present on the network. The company previously documented only 1,500 devices in use.\nWhich of the following presents the most critical risk to the company?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Use of the company's guest Wi-Fi"
+      },
+      {
+        "key": "B",
+        "text": "Loss of sensitive company information"
+      },
+      {
+        "key": "C",
+        "text": "Stolen hardware"
+      },
+      {
+        "key": "D",
+        "text": "Decreased network throughput"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Five hundred devices are on the network that nobody has recorded. None of them is patched, monitored or hardened by the organisation, and any of them could be holding or leaking company data — which makes exposure of sensitive information the gravest consequence of the inventory gap.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Guest Wi-Fi use is expected and is normally segmented away from production. It does not explain unmanaged devices on the production network.",
+      "C": "Stolen hardware would reduce the device count rather than increase it.",
+      "D": "Decreased throughput is a performance nuisance, not a critical security risk."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p380",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0908",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "multi",
     "question": "A security analyst receives a report of unusual outbound traffic from a development server at 2:30 a.m. The server should have had no internet communication outside of business hours based on normal usage.\nWhich of the following data sources will most effectively help validate whether this behavior is part of a potential security incident? (Choose two.)",
     "choices": [
@@ -12051,12 +12093,17 @@ export const domain4Questions = [
       "A",
       "E"
     ],
-    "explanation": "Packet captures provide detailed evidence of the actual network communication, including destination, protocol, payload metadata, and timing. Firewall traffic logs help validate whether the development server made outbound connections at 2:30 a.m., where the traffic went, and whether it violated expected network behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two sources answer the question directly. Firewall logs confirm whether outbound connections actually occurred at that hour and where they went, and packet captures show what was in them — protocol behaviour, volume and timing — which is what separates a scheduled job from exfiltration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Active Directory group policy objects describe configuration applied to systems. They say nothing about network activity.",
+      "C": "Endpoint antivirus logs report detections of known malware. Traffic from a legitimate-looking process would not appear.",
+      "D": "System performance logs show resource use. They might show activity without revealing what it was.",
+      "F": "Vulnerability scan reports list weaknesses that exist. They describe potential, not events."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p382",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12089,50 +12136,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The log entry shows a database query embedded in the web request, which indicates a likely SQL injection attempt. This activity is associated with the IP address shown for that request.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One request contains database syntax embedded in the URL, which is a SQL injection attempt rather than ordinary traffic. The source address on that request is the one behaving maliciously; the others are making normal requests.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "This address appears in normal request traffic with no injected query content.",
+      "C": "This address likewise shows ordinary requests.",
+      "D": "This address also shows legitimate traffic and no attack payload."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0915",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
-    "type": "single",
-    "question": "Staff members at a company historically click on dangerous links. The leadership team wants to reduce that risk.\nWhich of the following should a security engineer do to help reduce future incidents?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Create and run a realistic email test and provide a refresher."
-      },
-      {
-        "key": "B",
-        "text": "Leverage plaintext emails to remove clickable links."
-      },
-      {
-        "key": "C",
-        "text": "Block all unsigned email attachments for all employees."
-      },
-      {
-        "key": "D",
-        "text": "Perform header analysis for sender reputation."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A realistic phishing email test combined with refresher training helps employees recognize dangerous links and reinforces safer behavior. This directly addresses the historical pattern of users clicking malicious links.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12140,8 +12153,8 @@ export const domain4Questions = [
   {
     "id": "q0916",
     "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A wireless administrator sets up a new network in a small office using a password. The network must reduce the impact of brute-force attacks if the password is subjected to over-the-air interception.\nWhich of the following security settings will help achieve this goal?",
     "choices": [
@@ -12165,13 +12178,101 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Simultaneous Authentication of Equals strengthens WPA3-Personal authentication by making intercepted wireless handshakes resistant to offline brute-force password attacks. This reduces the impact if authentication traffic is captured over the air.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "WPA2 handshakes can be captured and attacked offline at unlimited speed. SAE, the WPA3-Personal handshake, uses a key exchange where each guess requires a fresh interaction, so intercepting the exchange gives an attacker nothing to brute-force offline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wireless intrusion prevention system detects and blocks rogue devices and attacks. It does not change how the handshake resists cracking.",
+      "B": "Single sign-on lets one identity access many applications. It is unrelated to wireless key exchange.",
+      "C": "WPS simplifies joining a network and is itself notoriously vulnerable to brute force."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p385",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0921",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Following a security review, an organization must ensure users verify their identities against the company's identity services with individual credentials leveraging WPA2-enterprise for wireless access.\nWhich of the following configuration steps correctly applies RADIUS in this environment?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Enabling 802.1X authentication and integrating it with the corporate directory"
+      },
+      {
+        "key": "B",
+        "text": "Installing self-signed certificates on all user devices"
+      },
+      {
+        "key": "C",
+        "text": "Enabling MAC filters for all wireless clients"
+      },
+      {
+        "key": "D",
+        "text": "Configuring the wireless controller to require multifactor authentication"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "WPA2-Enterprise authenticates each user individually rather than with a shared key, and it does so using 802.1X with a RADIUS server. Pointing that RADIUS service at the corporate directory is what lets users authenticate with their own credentials.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Self-signed certificates on user devices would not be trusted and do not implement enterprise authentication.",
+      "C": "MAC filters identify devices by hardware address, which is easily spoofed and authenticates no user.",
+      "D": "Multifactor authentication on the wireless controller adds a factor but is not the RADIUS configuration step being asked about."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p387",
+    "needsReview": false,
+    "inferenceConfidence": 0.417,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0923",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "A company performs a vulnerability assessment and gets the following results:\nWhich of the following vulnerabilities should the company patch first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "1"
+      },
+      {
+        "key": "B",
+        "text": "2"
+      },
+      {
+        "key": "C",
+        "text": "3"
+      },
+      {
+        "key": "D",
+        "text": "4"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Prioritisation combines severity with exposure. The vulnerability carrying the highest severity score on a server reachable from the internet has both the greatest potential impact and the widest attacker access, so it is remediated first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Lower severity or a less exposed host means less urgency, even if the finding is real.",
+      "C": "Internal-only systems are reachable by far fewer attackers, which lowers the practical risk.",
+      "D": "A low-severity finding on any host is the last of these to warrant attention."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p388",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12207,12 +12308,17 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Content categorization groups websites by type, such as gambling, sports, games, or fantasy sports-related content. This allows filtering policies to adapt as new sites appear without requiring the CISO to manually maintain a static list of every site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Content categorisation assigns every site to a class, and the vendor updates those classifications continuously as new sites appear. Blocking the category rather than individual sites means new fantasy sports sites are caught automatically with no ongoing effort.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS blocks traffic matching attack signatures. A fantasy sports site is not an attack.",
+      "B": "URL scanning judges whether a specific destination is malicious. It assesses safety, not topic.",
+      "D": "A static denial list is precisely the manual maintenance burden the CISO wants to avoid.",
+      "E": "DLP inspects data leaving the organisation for sensitive content."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p389",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12245,13 +12351,101 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Threat hunting uses known indicators of compromise to proactively search the environment for signs of malicious activity. This helps determine whether systems have already been affected by the threat described in the bulletin.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Indicators of compromise are only useful if you look for them. Threat hunting takes those indicators and searches logs, endpoints and network telemetry for matches, which is how you establish whether the environment is already affected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Root cause analysis determines why a confirmed incident happened. Nothing is confirmed yet.",
+      "C": "A tabletop exercise rehearses response in discussion. It examines no real data.",
+      "D": "A penetration test assesses whether systems can be breached. It looks for weaknesses, not for an adversary already present."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0929",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A small business initially plans to open common communications ports (21, 22, 25, 80, 443) on its firewall to allow broad access to its screened subnet. However, their security consultant advises against this action.\nWhich of the following security principles is the consultant addressing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Secure access service edge"
+      },
+      {
+        "key": "B",
+        "text": "Attack surface"
+      },
+      {
+        "key": "C",
+        "text": "Least privilege"
+      },
+      {
+        "key": "D",
+        "text": "Separation of duties"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Each opened port exposes a running service that an attacker can reach, probe and attempt to exploit. Opening five common ports broadly multiplies those entry points, and the consultant is objecting on attack surface grounds.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure access service edge is a cloud-delivered networking and security model. It is not the principle at issue.",
+      "C": "Least privilege concerns the permissions granted to identities. Ports are network exposure rather than user rights.",
+      "D": "Separation of duties splits tasks between people to prevent fraud."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p390",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0937",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "Which of the following describes the purpose of a Common Vulnerabilities and Exposure (CVE) database?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To compile a database of vulnerabilities known to have occurred in the past"
+      },
+      {
+        "key": "B",
+        "text": "To store a record of vulnerabilities that have patches available"
+      },
+      {
+        "key": "C",
+        "text": "To track vulnerabilities by assessing their threat actors"
+      },
+      {
+        "key": "D",
+        "text": "To provide a public list of identified and suspected cyber vulnerabilities"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "CVE assigns a unique public identifier to each known vulnerability so that vendors, scanners and defenders all refer to the same flaw by the same name. Providing that shared public catalogue is its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CVE lists current and newly discovered vulnerabilities, not merely historical ones.",
+      "B": "Entries exist regardless of whether a patch is available; many are published before a fix.",
+      "C": "CVE does not track threat actors. Attribution is a separate intelligence discipline."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p393",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },

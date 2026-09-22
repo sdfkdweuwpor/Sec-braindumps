@@ -6585,12 +6585,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk tolerance defines the acceptable level of risk an organization is willing to allow before approving an activity. Authorizing deployment only after Category 1 vulnerabilities are reduced to zero shows the organization's defined threshold for acceptable risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The organisation defined a condition under which it will accept the remaining risk — zero Category 1 vulnerabilities — and authorised deployment once it was met. Setting that acceptable level before proceeding is risk tolerance in practice.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Risk avoidance means declining the activity altogether. The system is being deployed.",
+      "C": "Risk transference shifts financial consequence to a third party, typically through insurance.",
+      "D": "Risk reporting communicates risk status to stakeholders. It informs rather than setting a threshold."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p383",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6623,13 +6627,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An acceptable use policy defines how users are permitted to use organizational systems, networks, applications, and data. It establishes acceptable and prohibited actions to guide proper system use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy tells users what they may and may not do with organisational systems, networks and data. Setting out permitted operations is its whole purpose, and it is the document users sign at onboarding.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A framework for performing a security assessment is an assessment methodology, not an AUP.",
+      "C": "Procedures for restoring a resource after an incident belong in the disaster recovery or incident response plan.",
+      "D": "An agreement between a vendor and service provider is a commercial contract such as an MSA or SLA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p384",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0915",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "Staff members at a company historically click on dangerous links. The leadership team wants to reduce that risk.\nWhich of the following should a security engineer do to help reduce future incidents?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Create and run a realistic email test and provide a refresher."
+      },
+      {
+        "key": "B",
+        "text": "Leverage plaintext emails to remove clickable links."
+      },
+      {
+        "key": "C",
+        "text": "Block all unsigned email attachments for all employees."
+      },
+      {
+        "key": "D",
+        "text": "Perform header analysis for sender reputation."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A realistic simulated phishing email measures who actually clicks, and the refresher immediately afterwards lands while the mistake is fresh. That combination of measurement and targeted teaching is what changes the behaviour the leadership team is worried about.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Plaintext email removes clickable formatting but users still copy URLs, and it degrades legitimate communication.",
+      "C": "Blocking all unsigned attachments addresses attachments, not links, and would block a large share of normal business mail.",
+      "D": "Header analysis for sender reputation is a filtering technique. It helps, but the stated problem is user behaviour."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p384",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6661,51 +6711,17 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data leaks are most likely to cause reputational damage because they expose sensitive information and can reduce customer, partner, and public trust in the company.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A data leak becomes public, affects customers directly, and tells the market the organisation could not protect what it was trusted with. That breach of trust is what erodes reputation in a way technical shortcomings never do on their own.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Open ports are an internal technical weakness. Customers never see them.",
+      "B": "Low availability irritates users and can breach an SLA, but outages are common and forgiven far more readily than data loss.",
+      "C": "Unpatched vulnerabilities are a risk, not an event. They damage reputation only if they lead to a breach."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p385",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0924",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "A company wants to use new Wi-Fi-enabled environmental sensors in order to automatically collect metrics.\nWhich of the following will the security team most likely do?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Add the sensor software to the risk register."
-      },
-      {
-        "key": "B",
-        "text": "Create a VLAN for the sensors."
-      },
-      {
-        "key": "C",
-        "text": "Physically air gap the sensors."
-      },
-      {
-        "key": "D",
-        "text": "Configure TLS 1.2 on all sensors."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Creating a VLAN for the Wi-Fi-enabled sensors segments them from the rest of the network.\nThis limits exposure and helps contain risk if an IoT sensor is compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p388",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6737,12 +6753,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register documents known risks, including vulnerabilities that cannot be remediated immediately. It allows the organization to track ownership, severity, impact, mitigation plans, and the accepted timeline until remediation is possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability that cannot be fixed for six months becomes an accepted risk with a treatment plan and a review date. The risk register is where that is recorded — owner, severity, compensating controls and the agreed remediation timeline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A patching schedule lists planned patch work. The point here is that no patch is available.",
+      "C": "A vulnerability matrix is not a standard artefact for tracking accepted risk over time.",
+      "D": "Change management procedures govern how modifications are approved and applied."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p389",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6775,12 +6795,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "15 000 × 2 ÷ 3 = 10 000 Annualized loss expectancy is calculated by multiplying the single-loss expectancy by the annualized rate of occurrence. A $15,000 impact occurring twice in three years equals an annual expected loss of $10,000.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ALE is single loss expectancy multiplied by annualised rate of occurrence. The single loss is $15,000 and twice in three years gives an ARO of 0.67, so 15,000 multiplied by 0.67 is approximately $10,000.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "$7,500 corresponds to an ARO of 0.5 — once every two years rather than twice every three.",
+      "C": "$15,000 is the single loss expectancy itself, before annualising.",
+      "D": "$30,000 is two full losses, the total across three years rather than the annual figure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p390",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6813,12 +6837,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Procedures provide step-by-step instructions for performing specific tasks, such as configuring, managing, and maintaining network systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A procedure is the step-by-step instruction set for carrying out a specific task the same way each time. Documenting how to configure, manage and maintain the network is exactly that.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Guidelines are recommended practice. They advise rather than prescribe and are not binding.",
+      "C": "Policies state the organisation's high-level intent and rules, deliberately without implementation detail.",
+      "D": "Standards state mandatory requirements — the minimum key length, the approved product — rather than the steps to achieve them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p392",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6851,12 +6879,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compliance attestation uses assessment results to confirm whether a third party meets required security, regulatory, or contractual controls. It provides formal evidence that the vendor's risk posture and compliance status have been reviewed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A third-party risk assessment produces findings about a vendor's controls. Compliance attestation consumes those findings and turns them into a formal statement of whether the vendor meets the required security, regulatory or contractual obligations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A statement of work defines deliverables and scope for an engagement. It precedes the work rather than consuming its results.",
+      "B": "A service-level agreement sets measurable performance commitments.",
+      "C": "A vendor registry lists suppliers. It records who they are rather than evaluating assessment outcomes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.652,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6889,12 +6921,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A dashboard is the best way to consolidate security metrics from multiple areas and present them in a clear, ongoing view for executive review. It promotes awareness by showing trends, operational status, and key performance indicators in one centralized location.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The data points span budget, operations, resolution times and staffing, and executives need to see them together and repeatedly. A dashboard consolidates those metrics into one live view, which is what sustains ongoing awareness rather than a periodic snapshot.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Managerial reports deliver detail periodically. They are point-in-time and slower to produce.",
+      "C": "A self-service portal lets users perform tasks themselves. It is a service delivery tool, not an executive metrics view.",
+      "D": "A yearly stakeholder meeting is far too infrequent to promote ongoing awareness."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p395",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
