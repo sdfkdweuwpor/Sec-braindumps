@@ -1090,8 +1090,8 @@ export const domain4Questions = [
   {
     "id": "q0081",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "A security analyst recently read a report about a flaw in several of the organization's printer models that causes credentials to be sent over the network in cleartext, regardless of the encryption settings.\nWhich of the following would be best to use to validate this finding?",
     "choices": [
@@ -1115,14 +1115,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The claim is that credentials cross the network in cleartext. Proving that requires actually looking at the packets, and Wireshark captures and dissects live traffic so the analyst can see the credentials in the payload for themselves.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "netcat opens raw connections for testing reachability or banner-grabbing. It can talk to a port but will not capture an authentication exchange between a printer and a client.",
+      "C": "Nessus would report that the flaw exists based on version fingerprinting or a plugin check. That repeats the report rather than validating it against observed traffic.",
+      "D": "Nmap discovers hosts, ports and service versions. It tells you the printer is there and what it runs, not what its traffic contains."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p33",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1153,14 +1157,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Fuzzing floods an application with malformed, unexpected and random input to see what makes it crash or behave incorrectly. That is precisely the attack the CISO described, so fuzzing during development finds those inputs before an attacker does.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Continuous deployment automates releasing code to production. It changes delivery speed and does nothing to test input handling.",
+      "C": "Static code analysis inspects source without running it. It catches many defect classes but cannot observe how the running system reacts to malformed input.",
+      "D": "Manual peer review has humans read the code. It is valuable but will not systematically discover the specific inputs that destabilise a system."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1191,14 +1199,18 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "CVSS is the Common Vulnerability Scoring System, which produces a 0 to 10 severity score from exploitability and impact metrics. It exists specifically to express how severe a vulnerability is and to let findings be compared and prioritised.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "CVE is the identifier catalogue — it gives each vulnerability a unique name so everyone means the same flaw. The identifier carries no severity.",
+      "B": "OSINT is intelligence gathered from public sources. It can inform whether a flaw is being exploited but does not score it.",
+      "C": "SOAR automates and orchestrates response actions. It acts on prioritised findings rather than establishing the priority."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1233,14 +1245,19 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "OWASP publishes the definitive community resources on how web applications are attacked, most notably the OWASP Top 10, with detailed descriptions of each exploitation method and its defences. For the most common application exploitation techniques it is the reference to reach for.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "STIX is a structured format for expressing and exchanging threat intelligence. It is a data language, not a body of knowledge about exploitation.",
+      "C": "OVAL is a language for describing system state and configuration checks. It supports automated assessment rather than explaining attack methods.",
+      "D": "A threat intelligence feed delivers current indicators such as malicious addresses and hashes. It reports live activity rather than teaching exploitation classes.",
+      "E": "CVE catalogues individual vulnerabilities in specific products. It lists instances rather than the general methods used to exploit applications."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p35",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1275,90 +1292,239 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A run of DNS lookups against internal hostnames is reconnaissance: the attacker is using the organisation's own name service to map what exists inside the network without touching the hosts themselves. Building that picture of internal systems is footprinting.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Determining ISP-assigned address space is external reconnaissance, done through public registries such as WHOIS. Internal hostname queries reveal nothing about public allocations.",
+      "B": "Bypassing DNS sinkholing would mean evading a control that redirects malicious domains. The queries here are for internal names, which a sinkhole does not cover.",
+      "D": "Achieving initial access to the DNS server would involve exploiting the service itself. These are ordinary, well-formed queries the server is designed to answer.",
+      "E": "Exfiltrating data over DNS shows up as long, high-entropy labels encoding payload. Normal internal hostname lookups carry no data out."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p35",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0097",
+    "id": "q0088",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "An organization requests a third-party full-spectrum analysis of its supply chain.\nWhich of the following would the analysis team use to meet this requirement?",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "multi",
+    "question": "A security analyst at an organization observed several user logins from outside the organization's network. The analyst determined that these logins were not performed by individuals within the organization.\nWhich of the following recommendations would reduce the likelihood of future attacks? (Choose two.)",
     "choices": [
       {
         "key": "A",
-        "text": "Vulnerability scanner"
+        "text": "Disciplinary actions for users"
       },
       {
         "key": "B",
-        "text": "Penetration test"
+        "text": "Conditional access policies"
       },
       {
         "key": "C",
-        "text": "SCAP"
+        "text": "More regular account audits"
       },
       {
         "key": "D",
-        "text": "Illumination tool"
+        "text": "Implementation of additional authentication factors"
+      },
+      {
+        "key": "E",
+        "text": "Enforcement of content filtering policies"
+      },
+      {
+        "key": "F",
+        "text": "A review of user account permissions"
+      }
+    ],
+    "correct": [
+      "B",
+      "D"
+    ],
+    "explanation": "External logins with valid credentials mean the credentials are compromised, so the fix must make a stolen password insufficient. Additional authentication factors stop a password alone from working, and conditional access policies evaluate context — location, device, risk — and block or challenge logins that do not fit the expected pattern.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Disciplinary action punishes users after the fact. It does not stop an attacker who already holds working credentials.",
+      "C": "More regular account audits improve how quickly you notice a problem. Detection is valuable but does not reduce the likelihood of the attack succeeding.",
+      "E": "Content filtering controls which sites users may reach. It might block a phishing page but does nothing about logins arriving from outside.",
+      "F": "Reviewing account permissions limits the damage once an account is misused. It reduces impact rather than likelihood."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p36",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0092",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following is a common data removal option for companies that want to wipe sensitive data from hard drives in a repeatable manner but allow the hard drives to be reused?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Sanitization"
+      },
+      {
+        "key": "B",
+        "text": "Formatting"
+      },
+      {
+        "key": "C",
+        "text": "Degaussing"
+      },
+      {
+        "key": "D",
+        "text": "Defragmentation"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Sanitisation removes data so it cannot be reconstructed while leaving the medium serviceable. That is exactly the requirement — a repeatable process that renders sensitive data unrecoverable but allows the drive to be reused.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Formatting rebuilds the file system structure but usually leaves the underlying data blocks intact and recoverable with ordinary tools.",
+      "C": "Degaussing destroys the magnetic structure of the platters. It is thorough but permanently ruins the drive, so it cannot be reused.",
+      "D": "Defragmentation reorganises data for performance. It removes nothing and is not a data-removal technique at all."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p37",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0093",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements:\n• Must work across SaaS and internal network applications\n• Must be device manufacturer agnostic\n• Must have offline capabilities Which of the following would be the most appropriate authentication method?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Username and password"
+      },
+      {
+        "key": "B",
+        "text": "Biometrics"
+      },
+      {
+        "key": "C",
+        "text": "SMS verification"
+      },
+      {
+        "key": "D",
+        "text": "Time-based tokens"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A time-based token generates a one-time code from a shared secret and the current time, so it works with any application, runs on any manufacturer's hardware or an app, and needs no connectivity to produce a code. That satisfies all three requirements at once.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Username and password is the method being improved on. It is neither an additional factor nor any stronger than what is already failing.",
+      "B": "Biometrics ties authentication to specific sensor hardware, which breaks the manufacturer-agnostic requirement and does not extend cleanly to SaaS applications.",
+      "C": "SMS verification requires cellular connectivity to receive the code, so it fails the offline requirement outright — and it is vulnerable to SIM swapping."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p38",
-    "needsReview": true,
-    "inferenceConfidence": 0.455,
-    "needsExplanation": true,
+    "source": "SY0-701_en.pdf#p37",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0102",
+    "id": "q0098",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Which of the following is used to conceal credit card information in a database log file?",
+    "question": "A systems administrator deployed a monitoring solution that does not require installation on the endpoints that the solution is monitoring.\nWhich of the following is described in this scenario?",
     "choices": [
       {
         "key": "A",
-        "text": "Tokenization"
+        "text": "Agentless solution"
       },
       {
         "key": "B",
-        "text": "Masking"
+        "text": "Client-based soon"
       },
       {
         "key": "C",
-        "text": "Hashing"
+        "text": "Open port"
       },
       {
         "key": "D",
-        "text": "Obfuscation"
+        "text": "File-based solution"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "An agentless solution monitors endpoints without installing software on them, typically by querying them over the network with existing credentials and protocols. Monitoring without anything installed on the target is the defining characteristic.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A client-based solution is the opposite — it depends on software running on each endpoint, which is what the administrator avoided.",
+      "C": "An open port is a listening network service. Agentless monitoring uses ports, but a port is not a type of monitoring solution.",
+      "D": "File-based is not a monitoring architecture. It describes how something is stored or delivered rather than how endpoints are observed."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p39",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0099",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "A security analyst is reviewing the source code of an application in order to identify misconfigurations and vulnerabilities.\nWhich of the following kinds of analysis best describes this review?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Dynamic"
+      },
+      {
+        "key": "B",
+        "text": "Static"
+      },
+      {
+        "key": "C",
+        "text": "Gap"
+      },
+      {
+        "key": "D",
+        "text": "Impact"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Static analysis examines source code without executing it, which is what reading the code for misconfigurations and vulnerabilities means. It can reach every path in the code, including ones that would be hard to trigger at runtime.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Dynamic analysis tests the application while it runs, observing real behaviour against real input. The analyst here is reading code, not running it.",
+      "C": "Gap analysis compares a current state against a desired state or standard. It is a programme-level assessment rather than a code review.",
+      "D": "Impact analysis estimates the consequences of a change or an incident. It evaluates effect, not code quality."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p40",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
-    "needsExplanation": true,
+    "source": "SY0-701_en.pdf#p39",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1389,52 +1555,70 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterwards.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Enabling SAML is how each application is then connected to the IdP. You cannot configure the trust before deciding who the identity provider is.",
+      "B": "Creating OAuth tokens is an implementation detail of authorising access once federation exists. It is several steps downstream.",
+      "C": "Password vaulting stores the separate credentials more safely. It manages the problem rather than reducing the number of credentials."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0111",
+    "id": "q0118",
     "domain": 4,
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "Which of the following is a common, passive reconnaissance technique employed by penetration testers in the early phases of an engagement?",
+    "type": "multi",
+    "question": "Which of the following activities are associated with vulnerability management? (Choose two.)",
     "choices": [
       {
         "key": "A",
-        "text": "Open-source intelligence"
+        "text": "Reporting"
       },
       {
         "key": "B",
-        "text": "Port scanning"
+        "text": "Prioritization"
       },
       {
         "key": "C",
-        "text": "Pivoting"
+        "text": "Exploiting"
       },
       {
         "key": "D",
-        "text": "Exploit validation"
+        "text": "Correlation"
+      },
+      {
+        "key": "E",
+        "text": "Containment"
+      },
+      {
+        "key": "F",
+        "text": "Tabletop exercise"
       }
     ],
     "correct": [
-      "A"
+      "A",
+      "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Vulnerability management is a cycle of identify, analyse, prioritise, remediate, validate and report. Prioritisation ranks findings by severity and exposure so limited effort goes where it matters, and reporting communicates status and tracks remediation — both are core stages of the process.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponising them.",
+      "D": "Correlation combines events from different sources to spot patterns. It belongs to monitoring and SIEM work, not to managing vulnerabilities.",
+      "E": "Containment limits damage during a live incident. It is an incident response activity that happens after something has already gone wrong.",
+      "F": "A tabletop exercise rehearses a response plan in discussion. It tests preparedness rather than managing the vulnerability backlog."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p51",
-    "needsReview": true,
-    "inferenceConfidence": 0.615,
-    "needsExplanation": true,
+    "source": "SY0-701_en.pdf#p56",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1465,12 +1649,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Open-source intelligence (OSINT) involves collecting information from publicly available sources, such as websites, social media, news articles, and other publicly accessible databases. OSINT allows an administrator to gather valuable information about potential risks without using any proprietary or internal company information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Open-source intelligence collects information from publicly available sources — registries, certificate logs, job adverts, social media, news. Because everything comes from outside the organisation, the administrator can build a risk picture without touching proprietary internal information.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Network scanning probes the organisation's own systems and produces internal technical data. That is exactly the proprietary information being avoided.",
+      "B": "Penetration testing actively attacks internal systems and generates highly sensitive internal findings.",
+      "D": "Configuration auditing compares internal system settings against a baseline. Both the baseline and the results are internal company information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p57",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.533,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1503,55 +1691,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Application logs will contain records of activities within the billing system, including transactions, actions taken by users, and any anomalies. This is the most direct source of evidence for tracing fraudulent activity within the specific application, such as issuing unauthorized checks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The fraud happened inside the billing application using legitimate access, so the evidence is in what that application recorded — who issued which cheque, when and from which account. Application logs are the only source that captures actions at that level of business detail.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Vulnerability scanner logs record what weaknesses were found on hosts. No vulnerability was exploited; a trusted user abused normal functionality.",
+      "C": "IDS/IPS logs flag suspicious network traffic patterns. An employee using the billing system as intended generates entirely normal traffic.",
+      "D": "Firewall logs show which connections were permitted or denied. They confirm someone reached the system but say nothing about what they did inside it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p58",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0125",
-    "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
-    "type": "single",
-    "question": "Which of the following tasks is typically included in the BIA process?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Estimating the recovery time of systems"
-      },
-      {
-        "key": "B",
-        "text": "Identifying the communication strategy"
-      },
-      {
-        "key": "C",
-        "text": "Evaluating the risk management plan"
-      },
-      {
-        "key": "D",
-        "text": "Establishing the backup and recovery procedures"
-      },
-      {
-        "key": "E",
-        "text": "Developing the incident response plan"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "In a BIA, estimating the recovery time of systems, also known as the Recovery Time Objective (RTO), is crucial. The BIA process focuses on identifying critical systems, understanding the impact of their unavailability, and determining acceptable downtime. This helps in planning for recovery times, resource allocation, and continuity strategies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p59",
-    "needsReview": true,
-    "inferenceConfidence": 0.542,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1583,13 +1733,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "During a vulnerability assessment, scanning or testing can sometimes interfere with normal system operations, potentially leading to slowdowns, unresponsiveness, or even outages. This can disrupt business operations, especially if the assessment is run on production systems without adequate precautions or scheduling during low-impact times.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Scanning sends real traffic to live systems, and fragile services, legacy devices and industrial equipment can slow, hang or crash under it. Disruption to business operations is the genuine risk of running an assessment, which is why scans are scheduled and tuned carefully.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Unauthorised access is a risk of a penetration test, where exploitation is the point. A vulnerability assessment identifies flaws without exploiting them.",
+      "C": "False positives are an inconvenience that wastes analyst time. They are an accuracy problem, not a risk to the organisation.",
+      "D": "Finding security gaps is the purpose of the assessment. It is the benefit, not the risk."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p59",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0139",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A security manager created new documentation to use in response to various types of security incidents.\nWhich of the following is the next step the manager should take?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Set the maximum data retention policy."
+      },
+      {
+        "key": "B",
+        "text": "Securely store the documents on an air-gapped network."
+      },
+      {
+        "key": "C",
+        "text": "Review the documents' data classification policy."
+      },
+      {
+        "key": "D",
+        "text": "Conduct a tabletop exercise with the team."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "New incident response documentation is untested until people try to use it. A tabletop exercise walks the team through realistic scenarios against the new procedures, which surfaces gaps, ambiguities and missing contacts while there is no real incident underway.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Setting a data retention policy governs how long records are kept. It is unrelated to validating response procedures.",
+      "B": "Storing the documents on an air-gapped network would make them unreachable during exactly the incident they are written for. Offline copies are sensible; air-gapping is not.",
+      "C": "Reviewing the classification policy determines how the documents should be labelled and handled. That is administrative housekeeping, not validation."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p64",
+    "needsReview": false,
+    "inferenceConfidence": 0.312,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1621,12 +1817,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "During the post-incident review, the team analyzes the incident to understand its root cause.\nThis phase is focused on learning from the incident, identifying vulnerabilities, and implementing improvements to prevent similar future incidents.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The post-incident review, or lessons learned phase, asks why the incident was possible at all. Determining root cause is what turns a single response into an improvement, because it identifies the underlying weakness rather than the symptom that was cleaned up.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Developing mitigation steps follows from the root cause. You cannot sensibly design fixes before you know what actually allowed the incident.",
+      "C": "Validating evidence accuracy happens during the investigation and analysis phase, while the evidence is being collected and handled.",
+      "D": "Reestablishing configuration and settings is recovery work, completed before the review begins."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p66",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1634,8 +1834,8 @@ export const domain4Questions = [
   {
     "id": "q0147",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "Executives at a company are concerned about employees accessing systems and information about sensitive company projects unrelated to the employees' normal job duties.\nWhich of the following enterprise security capabilities will the security team most likely deploy to detect that activity?",
     "choices": [
@@ -1659,13 +1859,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "UBA helps detect unusual or unauthorized access patterns by analyzing user behavior and identifying deviations from typical access patterns. It can alert the security team when employees attempt to access systems or data unrelated to their job duties, which addresses the executives' concern about potential insider threats or policy violations related to sensitive projects.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "User behaviour analytics builds a baseline of what normal access looks like for each person and flags deviations. An employee reaching into systems unrelated to their role is a behavioural anomaly rather than a policy violation any static rule would catch, which is exactly what UBA is designed to surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "EDR detects malicious activity on an endpoint — malware, suspicious processes, persistence. The employee is using ordinary tools with valid credentials.",
+      "C": "NAC decides whether a device may join the network at all. Once these employees are on, it has no view of what they access.",
+      "D": "DLP watches for sensitive data leaving the organisation. It would catch exfiltration but not mere unauthorised viewing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p68",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0149",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "type": "single",
+    "question": "A university employee logged on to the academic server and attempted to guess the system administrators' log-in credentials.\nWhich of the following security measures should the university have implemented to detect the employee's attempts to gain access to the administrators' accounts?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Two-factor authentication"
+      },
+      {
+        "key": "B",
+        "text": "Firewall"
+      },
+      {
+        "key": "C",
+        "text": "Intrusion prevention system"
+      },
+      {
+        "key": "D",
+        "text": "User activity logs"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The question asks specifically about detecting the attempts. User activity logs record authentication events including repeated failures against administrator accounts, which is the evidence trail that reveals someone guessing credentials from inside.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Two-factor authentication would prevent the attempts from succeeding. Prevention is valuable, but it is not detection.",
+      "B": "A firewall controls traffic between networks. The employee is already on the academic server, so no boundary is crossed.",
+      "C": "An intrusion prevention system blocks recognised attack traffic. It might stop a fast brute force but is not the record used to detect and investigate the behaviour."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p68",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },

@@ -549,91 +549,6 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0080",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "A third-party vendor is moving a particular application to the end-of-life stage at the end of the current year.\nWhich of the following is the most critical risk if the company chooses to continue running the application?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Lack of security updates"
-      },
-      {
-        "key": "B",
-        "text": "Lack of new features"
-      },
-      {
-        "key": "C",
-        "text": "Lack of support"
-      },
-      {
-        "key": "D",
-        "text": "Lack of source code access"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p33",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0088",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "multi",
-    "question": "A security analyst at an organization observed several user logins from outside the organization's network. The analyst determined that these logins were not performed by individuals within the organization.\nWhich of the following recommendations would reduce the likelihood of future attacks? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Disciplinary actions for users"
-      },
-      {
-        "key": "B",
-        "text": "Conditional access policies"
-      },
-      {
-        "key": "C",
-        "text": "More regular account audits"
-      },
-      {
-        "key": "D",
-        "text": "Implementation of additional authentication factors"
-      },
-      {
-        "key": "E",
-        "text": "Enforcement of content filtering policies"
-      },
-      {
-        "key": "F",
-        "text": "A review of user account permissions"
-      }
-    ],
-    "correct": [
-      "B",
-      "D"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p36",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
     "id": "q0094",
     "domain": 5,
     "objective": "5.4",
@@ -661,13 +576,59 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The General Data Protection Regulation governs how organizations collect, process, store, and protect personal data of individuals in the European Union. Any global company doing business in the EU must comply with its privacy and data protection requirements to avoid legal and regulatory penalties.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "GDPR governs how personal data belonging to people in the European Union is collected, processed, stored and transferred, and it applies to any organisation doing business there regardless of where it is based. Its penalties are what make it the privacy concern for a global company.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "ISO 27001 is a certifiable standard for an information security management system. It is voluntary and is about security governance, not privacy law.",
+      "B": "PCI DSS is a contractual standard for handling payment card data. It is enforced by the card brands, not by privacy regulators.",
+      "D": "SOC 2 is an auditing framework producing a report on service organisation controls. It demonstrates control effectiveness to customers rather than satisfying privacy legislation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p37",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0097",
+    "domain": 5,
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "type": "single",
+    "question": "An organization requests a third-party full-spectrum analysis of its supply chain.\nWhich of the following would the analysis team use to meet this requirement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Vulnerability scanner"
+      },
+      {
+        "key": "B",
+        "text": "Penetration test"
+      },
+      {
+        "key": "C",
+        "text": "SCAP"
+      },
+      {
+        "key": "D",
+        "text": "Illumination tool"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Supply chain illumination tools map an organisation's suppliers and, crucially, their suppliers in turn, exposing the multi-tier dependencies and concentration risk that a full-spectrum analysis is meant to reveal. Nothing else listed looks beyond your own perimeter.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability scanner finds technical weaknesses on hosts you control. It cannot see into a vendor's estate, let alone their vendors'.",
+      "B": "A penetration test assesses whether your own systems can be breached. It is depth against one target, not breadth across a supply chain.",
+      "C": "SCAP automates configuration and compliance checking against defined benchmarks. It measures system state, not supplier relationships."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p38",
+    "needsReview": false,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -699,21 +660,25 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A business partners agreement sets out how two organisations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
+      "C": "A service-level agreement commits a provider to measurable performance levels. It governs service quality, not disclosure.",
+      "D": "A master service agreement establishes the general terms under which future work will be done. Individual engagements are then scoped beneath it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p39",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0101",
     "domain": 5,
-    "objective": "5.5",
-    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "A security analyst is evaluating a SaaS application that the human resources department would like to implement. The analyst requests a SOC 2 report from the SaaS vendor.\nWhich of the following processes is the analyst most likely conducting?",
     "choices": [
@@ -737,14 +702,18 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Requesting evidence about a prospective vendor's controls before adopting their product is due diligence — the investigation an organisation performs to understand the risk it is about to take on. The SOC 2 report is one of the artefacts gathered during it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "An internal audit examines your own organisation's controls using your own staff. This is an assessment of a third party.",
+      "B": "Penetration testing actively attempts to breach a system. The analyst is reviewing documentation, not attacking anything.",
+      "C": "Attestation is what the SOC 2 report itself is — an independent auditor's formal opinion. The vendor's auditor performed the attestation; the analyst is consuming it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p39",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.353,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -775,14 +744,60 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Branch protection requirements — mandatory review, status checks and restrictions on who can merge — govern how code moves through the repository. They are a software development lifecycle control, which is why they sit in the SDLC rather than in a general policy.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Service-level agreements commit a provider to performance levels for a running service. They belong to vendor management and operations.",
+      "B": "An information security policy is the organisation-wide statement of security intent. The SDLC sits under it rather than containing it.",
+      "C": "Penetration testing methodology defines how assessments are conducted. It is part of the assessment programme, and testing may be scheduled against software without living inside the SDLC."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.579,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0111",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "Which of the following is a common, passive reconnaissance technique employed by penetration testers in the early phases of an engagement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Open-source intelligence"
+      },
+      {
+        "key": "B",
+        "text": "Port scanning"
+      },
+      {
+        "key": "C",
+        "text": "Pivoting"
+      },
+      {
+        "key": "D",
+        "text": "Exploit validation"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Passive reconnaissance gathers information without sending anything to the target. Open-source intelligence — public registries, certificate transparency logs, social media, job adverts — builds a picture of the organisation while leaving no trace in its logs.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Port scanning sends packets to the target and appears in its logs. That makes it active reconnaissance.",
+      "C": "Pivoting moves laterally through an already-compromised network. It happens well after the early phases and requires a foothold.",
+      "D": "Exploit validation confirms a vulnerability can actually be exploited. It is active, intrusive and comes late in the engagement."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p51",
+    "needsReview": false,
+    "inferenceConfidence": 0.615,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -813,13 +828,64 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Policies and procedures form the foundation of an organization's risk management program.\nThey establish the framework and guidelines for managing risks across the organization, including roles, responsibilities, and the approach for identifying, assessing, and mitigating risks.\nWithout well-defined policies and procedures, it would be challenging to assess other areas of risk management effectively, as they are all built upon these foundational documents.\nAsset management, vulnerability assessment, and business impact analysis are critical components of a risk management program, but they should follow a review of policies and procedures. These documents set the standards and processes that the organization uses to manage assets, assess vulnerabilities, and conduct impact analyses.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Policies and procedures define what the risk management programme is supposed to do — who owns risk, how it is identified, scored and treated, and what thresholds apply. An auditor has to read those first, because every other area is judged against what the documents say should be happening.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Asset management records what the organisation owns. It is an input to risk management, but auditing it first gives no standard to measure against.",
+      "C": "A vulnerability assessment finds technical weaknesses at a point in time. It is one activity within the programme rather than the framework governing it.",
+      "D": "A business impact analysis determines how badly the organisation is hurt when something fails. It is a product of the programme, produced under the policies the auditor should read first."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p56",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.36,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0125",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "Which of the following tasks is typically included in the BIA process?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Estimating the recovery time of systems"
+      },
+      {
+        "key": "B",
+        "text": "Identifying the communication strategy"
+      },
+      {
+        "key": "C",
+        "text": "Evaluating the risk management plan"
+      },
+      {
+        "key": "D",
+        "text": "Establishing the backup and recovery procedures"
+      },
+      {
+        "key": "E",
+        "text": "Developing the incident response plan"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A business impact analysis determines which processes are critical, how much disruption is tolerable, and therefore how quickly each system must be restored. Estimating that recovery time — the RTO — is a defining output of the BIA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identifying the communication strategy belongs to the continuity and incident plans. The BIA supplies the priorities those plans then act on.",
+      "C": "Evaluating the risk management plan is a governance review activity. The BIA measures impact of loss rather than assessing the programme.",
+      "D": "Establishing backup and recovery procedures is how the RTO is met. The BIA sets the target; the procedures are built afterwards to hit it.",
+      "E": "Developing the incident response plan addresses security incidents. It is informed by the BIA but is a separate deliverable."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p59",
+    "needsReview": false,
+    "inferenceConfidence": 0.542,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -851,12 +917,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Insider threats pose a significant risk to intellectual property, as insiders often have access to sensitive information and may attempt to misuse it. Training employees to recognize signs of insider threats, along with implementing monitoring and reporting protocols, helps protect intellectual property from theft or unauthorized disclosure by employees or other trusted individuals within the organization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Intellectual property is most often lost to people who already have legitimate access to it. Training staff to recognise and report insider-threat indicators addresses that specific exposure, which perimeter-focused awareness topics do not.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Simulated threats are a delivery method for training rather than a concept to teach. They exercise whatever topic you have chosen.",
+      "C": "Phishing awareness protects against external attackers harvesting credentials. It is essential baseline training but does not address misuse by trusted insiders.",
+      "D": "Business continuity planning keeps operations running through disruption. It concerns availability, not the theft of proprietary information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p60",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
@@ -889,59 +959,25 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A data inventory provides a comprehensive overview of what data the organization holds, where it is stored, and its sensitivity. This information is crucial for assessing the potential impact of a data breach, as it allows the DPO to identify which data would be affected and the associated risks. Additionally, it aids in compliance with data protection regulations by ensuring that sensitive data is adequately managed and protected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A data inventory records what personal data is held, where it lives and how sensitive it is. Without it a data protection officer cannot say who was affected or how badly when a breach occurs, which is the assessment regulators and notification deadlines demand.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Managing storage requirements is an operational benefit of knowing your data. It is useful but not a data protection officer's primary concern.",
+      "C": "An inventory does not extend retention periods. If anything it exposes data being kept longer than policy allows, shortening retention.",
+      "D": "Deduplication is a storage efficiency measure. Automating it is an IT optimisation, unrelated to privacy obligations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p61",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0136",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "For which of the following reasons would a systems administrator leverage a 3DES hash from an installer file that is posted on a vendor's website?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To test the integrity of the file"
-      },
-      {
-        "key": "B",
-        "text": "To validate the authenticity of the file"
-      },
-      {
-        "key": "C",
-        "text": "To activate the license for the file"
-      },
-      {
-        "key": "D",
-        "text": "To calculate the checksum of the file"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A hash (such as one generated using 3DES) is used to verify that the file has not been altered or corrupted during download. By comparing the hash of the downloaded file with the one provided by the vendor, the administrator can confirm the file's integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p63",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0140",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "After failing an audit twice, an organization has been ordered by a government regulatory agency to pay fines.\nWhich of the following causes this action?",
     "choices": [
@@ -965,13 +1001,101 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failure to meet regulatory standards or requirements (non-compliance) can result in fines and penalties imposed by a government regulatory agency.\nWhen an organization does not comply with mandated regulations or fails audits, it may face financial repercussions to enforce adherence to required standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Failing audits against a regulatory standard means the organisation is not meeting requirements it is legally obliged to meet. Non-compliance is what regulators fine, and repeated failure is why the penalty escalated to a financial one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Contract violations are breaches of agreements between private parties, enforced through the contract or the courts, not by a government regulator.",
+      "C": "Government sanctions are restrictions imposed for policy reasons such as trade or foreign relations. The fine here is the consequence, and non-compliance is its cause.",
+      "D": "Rules of engagement define the scope and limits of a security test. They have no bearing on regulatory audits."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p65",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0145",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Which of the following is most likely to be used as a just-in-time reference document within a security operations center?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Change management policy"
+      },
+      {
+        "key": "B",
+        "text": "Risk profile"
+      },
+      {
+        "key": "C",
+        "text": "Playbook"
+      },
+      {
+        "key": "D",
+        "text": "SIEM profile"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A playbook is a short, prescriptive set of steps for handling one specific situation. Analysts open it mid-incident and follow it, which is what just-in-time reference means — guidance consulted at the moment of need rather than studied in advance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A change management policy governs how changes are approved and implemented. It is a governance document, not something read during a live alert.",
+      "B": "A risk profile summarises the organisation's risk exposure. It informs strategy rather than telling an analyst what to do next.",
+      "D": "A SIEM profile is configuration within the tool. It shapes what the SIEM reports but is not reference material for a responder."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p67",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0148",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "Several customers want an organization to verify its security controls are operating effectively and have requested an independent opinion.\nWhich of the following is the most efficient way to address these requests?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Hire a vendor to perform a penetration test"
+      },
+      {
+        "key": "B",
+        "text": "Perform an annual self-assessment."
+      },
+      {
+        "key": "C",
+        "text": "Allow each client the right to audit"
+      },
+      {
+        "key": "D",
+        "text": "Provide a third-party attestation report"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A third-party attestation report is produced once by an independent auditor and shared with every customer who asks. That satisfies the demand for an independent opinion without the organisation absorbing separate audits from each client, which is where the efficiency comes from.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A penetration test assesses whether systems can be breached at a moment in time. It is not an opinion on whether controls operate effectively.",
+      "B": "A self-assessment is performed by the organisation on itself. Customers asked for independence, which a self-assessment cannot provide.",
+      "C": "Allowing each client a right to audit gives independence but is the least efficient option possible, multiplying the burden by the number of customers."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p68",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1003,12 +1127,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "While fines, sanctions, and contractual impacts are possible outcomes from regulatory bodies or payment processors, reputational damage is the primary consequence directly impacting customers. If customers learn that the retailer failed to protect their payment information, their trust in the brand may erode, potentially leading to a loss of business and harm to the retailer's reputation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The question asks what the retailer faces from customers specifically. Fines, sanctions and contractual penalties come from regulators, card brands and acquiring banks. What customers impose is loss of trust — reputational damage that drives them to shop elsewhere.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Contractual impacts come from the acquiring bank or card brands under the merchant agreement, not from customers.",
+      "B": "Sanctions such as losing the ability to process cards are imposed by the payment industry, again not by customers.",
+      "C": "Fines are levied by the card brands through the acquirer. Customers have no mechanism to fine anyone."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p69",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false

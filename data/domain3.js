@@ -512,10 +512,62 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0089",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "multi",
+    "question": "A security team is addressing a risk associated with the attack surface of the organization's web application over port 443. Currently, no advanced network security capabilities are in place.\nWhich of the following would be best to set up? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "NIDS"
+      },
+      {
+        "key": "B",
+        "text": "Honeypot"
+      },
+      {
+        "key": "C",
+        "text": "Certificate revocation list"
+      },
+      {
+        "key": "D",
+        "text": "HIPS"
+      },
+      {
+        "key": "E",
+        "text": "WAF"
+      },
+      {
+        "key": "F",
+        "text": "SIEM"
+      }
+    ],
+    "correct": [
+      "A",
+      "E"
+    ],
+    "explanation": "Port 443 is the web application itself, so the two layers worth adding are one that understands the application and one that watches the network. A WAF inspects HTTP requests and blocks application attacks such as injection and cross-site scripting; a NIDS monitors network traffic and alerts on suspicious patterns the WAF does not cover.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A honeypot is a decoy that detects attackers who interact with it. It adds no protection to the real application handling live customer traffic.",
+      "C": "A certificate revocation list records certificates that are no longer valid. It is PKI hygiene and provides no attack surface reduction.",
+      "D": "HIPS protects an individual host from malicious activity on that machine. It is useful but is host-level rather than the network security capability the team lacks.",
+      "F": "A SIEM aggregates and correlates logs to support detection and investigation. It analyses what other controls report and blocks nothing itself."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p36",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0090",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A systems administrator would like to create a point-in-time backup of a virtual machine.\nWhich of the following should the administrator use?",
     "choices": [
@@ -539,90 +591,60 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A snapshot captures the exact state of a virtual machine — disk, and optionally memory — at one instant, so it can be rolled back to that point later. Point-in-time capture of a VM is the definition of a snapshot.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Replication continuously copies data to another system to keep it current. It maintains an ongoing mirror rather than preserving a single moment.",
+      "B": "Simulation models a scenario to test how something would behave. It is an exercise technique and produces no backup.",
+      "D": "Containerisation packages an application and its dependencies to run on a shared kernel. It is a deployment model, not a backup method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p36",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0092",
+    "id": "q0102",
     "domain": 3,
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following is a common data removal option for companies that want to wipe sensitive data from hard drives in a repeatable manner but allow the hard drives to be reused?",
+    "question": "Which of the following is used to conceal credit card information in a database log file?",
     "choices": [
       {
         "key": "A",
-        "text": "Sanitization"
+        "text": "Tokenization"
       },
       {
         "key": "B",
-        "text": "Formatting"
+        "text": "Masking"
       },
       {
         "key": "C",
-        "text": "Degaussing"
+        "text": "Hashing"
       },
       {
         "key": "D",
-        "text": "Defragmentation"
+        "text": "Obfuscation"
       }
     ],
     "correct": [
-      "A"
+      "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Masking replaces part of a value with a placeholder so the record stays useful without exposing the sensitive data — showing only the last four digits of a card number in a log, for example. That is the standard treatment for card data written to logs.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
+      "C": "Hashing produces an irreversible digest. Card numbers have a small enough keyspace to be recovered from a hash by brute force, so it is not the recommended treatment.",
+      "D": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique, and the question asks for the precise one."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p37",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0093",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
-    "type": "single",
-    "question": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements:\n• Must work across SaaS and internal network applications\n• Must be device manufacturer agnostic\n• Must have offline capabilities Which of the following would be the most appropriate authentication method?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Username and password"
-      },
-      {
-        "key": "B",
-        "text": "Biometrics"
-      },
-      {
-        "key": "C",
-        "text": "SMS verification"
-      },
-      {
-        "key": "D",
-        "text": "Time-based tokens"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p37",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "source": "SY0-701_en.pdf#p40",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -653,14 +675,18 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The new exposure is a web portal, so the control has to understand HTTP. A web application firewall inspects requests and responses at the application layer and blocks injection, cross-site scripting and similar attacks that a general-purpose firewall cannot see.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A layer 4 firewall filters on addresses and ports. It can permit traffic to 443 but has no visibility into the requests inside that session.",
+      "B": "An NGFW adds application and identity awareness to boundary filtering. It is broader but not specialised in protecting a single web application.",
+      "D": "A UTM bundles several security functions into one appliance. It is a general-purpose device rather than the targeted control for a web portal."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p49",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -691,14 +717,18 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A production failover actually cuts primary power and proves the systems carry on. Only a real failover exercises the generators, transfer switches, batteries and the procedures together under genuine load — which is why it is the strongest test of resilience.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Parallel processing runs a secondary system alongside the primary to compare results. It validates a replacement system rather than testing power resilience.",
+      "B": "A tabletop exercise walks through the plan in a meeting. It finds gaps in thinking but touches no equipment.",
+      "C": "Simulation testing models the failure without genuinely losing power. It is safer and more realistic than a tabletop, but it still does not prove the hardware behaves."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p51",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -729,21 +759,25 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "TLS 1.3 is the current standard for encrypting data as it crosses a network, and it removes the legacy cipher suites and handshake weaknesses of earlier versions. Protecting data in transit is exactly what it exists for.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "SHA-256 is a hashing algorithm. It verifies integrity but provides no confidentiality, so anyone on the path still reads the data.",
+      "B": "SSL 3.0 is a deprecated predecessor to TLS with known breaks such as POODLE. It must not be used.",
+      "D": "AES-256 is a symmetric cipher. It is the encryption TLS uses internally, but on its own it is not a protocol for securing a connection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p51",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0116",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
     "question": "A systems administrator needs to ensure the secure communication of sensitive data within the organization's private cloud.\nWhich of the following is the best choice for the administrator to implement?",
     "choices": [
@@ -767,68 +801,25 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "IPSec (Internet Protocol Security) is a suite of protocols designed to secure IP communications by authenticating and encrypting each IP packet in a communication session. It is widely used for securing data transfer in networks, including private clouds, by providing confidentiality, integrity, and authenticity of data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IPSec authenticates and encrypts each IP packet, so it protects any traffic between systems regardless of the application generating it. For securing sensitive data moving inside a private cloud that is the right layer to work at.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SHA-1 is a hashing algorithm, and a deprecated one with practical collision attacks. It offers no confidentiality even where it is still used.",
+      "C": "RSA is an asymmetric algorithm used for key exchange and signatures. It is a building block that protocols such as IPSec use, not a way to secure communications on its own.",
+      "D": "A TGT is a Kerberos ticket-granting ticket used during authentication. It proves identity but does not encrypt the data that flows afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p55",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0118",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "multi",
-    "question": "Which of the following activities are associated with vulnerability management? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Reporting"
-      },
-      {
-        "key": "B",
-        "text": "Prioritization"
-      },
-      {
-        "key": "C",
-        "text": "Exploiting"
-      },
-      {
-        "key": "D",
-        "text": "Correlation"
-      },
-      {
-        "key": "E",
-        "text": "Containment"
-      },
-      {
-        "key": "F",
-        "text": "Tabletop exercise"
-      }
-    ],
-    "correct": [
-      "A",
-      "B"
-    ],
-    "explanation": "Reporting involves documenting and communicating the findings of vulnerability scans and assessments. This allows stakeholders to be informed about existing vulnerabilities and track remediation efforts.\nPrioritization is the process of ranking vulnerabilities based on their severity, impact, and exploitability, helping the organization address the most critical vulnerabilities first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p56",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0122",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following is a benefit of vendor diversity?",
     "choices": [
@@ -852,12 +843,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Vendor diversity can help mitigate the impact of zero-day vulnerabilities. By using multiple vendors for similar services or components, organizations reduce the likelihood that a single vulnerability affecting one vendor's products will compromise the entire system. This diversity creates resilience against attacks exploiting unknown vulnerabilities in any single vendor's software.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Vendor diversity means not every system depends on the same supplier's code. When a zero-day appears in one vendor's product, only the portion of the estate running it is exposed, so the organisation keeps functioning while that vendor is patched.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patch availability depends on each vendor's own release practices. Using more vendors means tracking more patch streams, which makes this harder, not better.",
+      "C": "Secure configuration guides are vendor-specific. Diversity means needing several different guides, so applicability decreases.",
+      "D": "Load balancing distributes traffic for capacity and availability. It is a technique you deploy, not a benefit that follows from using multiple vendors."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p58",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -890,12 +885,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Containers package applications with only the necessary components and dependencies, which reduces the footprint of the operating system components in each instance. This approach minimizes the number of OS patches required, as each container runs only essential services instead of a full OS environment, making it easier to isolate and update application dependencies without affecting the host or requiring frequent OS-level patches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containers share the host's kernel and bundle only the libraries an application actually needs, so there is no full guest operating system per workload. Fewer operating systems in the estate means fewer OS patches to test and apply.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Microservices is an application design pattern that splits a system into small services. It affects how software is structured, and typically increases the number of deployed instances.",
+      "B": "Virtualisation gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
+      "C": "A real-time operating system is used where timing guarantees matter, in embedded and industrial systems. It is not a consolidation strategy for general workloads."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p59",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -928,12 +927,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An on-premises architecture provides the highest level of control over data security, as the organization manages its own hardware, software, and network infrastructure directly. This setup enables the organization to implement strict access controls, customize security measures according to regulatory requirements, and avoid some of the risks associated with data transmission and storage in cloud environments, particularly for sensitive or proprietary information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "On-premises keeps hardware, software, network and data entirely under the organisation's control, so it can enforce its own access, physical and regulatory controls without depending on anyone else. Where maximum control is the goal, that is the model that offers it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cloud-based means accepting a shared responsibility model and trusting the provider with parts of the stack. It can be very secure, but control is divided.",
+      "B": "Peer-to-peer distributes data across participating nodes with no central authority. That is the weakest of these for protecting sensitive data.",
+      "D": "Hybrid combines on-premises and cloud, which means inheriting both sets of risks plus the complexity of the connection between them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p61",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -966,12 +969,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Network Intrusion Prevention System (NIPS) actively monitors network traffic and can detect and block malicious activities in real-time, helping to prevent external attacks. Unlike IDS, which only detects intrusions, NIPS can take immediate action to stop threats, making it a strong defensive measure against unauthorized external attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A network intrusion prevention system sits inline on the traffic path, inspects packets against attack signatures and behaviour, and drops malicious traffic before it reaches the target. Against external attackers, blocking rather than merely observing is what protects the environment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An ACL permits or denies based on addresses, ports and protocols. It is a coarse filter that cannot recognise an attack inside otherwise-allowed traffic.",
+      "B": "An IDS detects and alerts but does not block. The attack still reaches its target while somebody reads the alert.",
+      "C": "HIDS monitors a single host from the inside. It protects that machine only and is not an environment-wide defence against external attack."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p62",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.7,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1004,51 +1011,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A generator can provide continuous power for extended periods during a power outage, as long as it has sufficient fuel. Unlike an Uninterruptible Power Supply (UPS), which is typically used to bridge short power interruptions, a generator is designed to sustain operations over longer durations, making it ideal for keeping a data center functional during a multiday outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A generator produces power continuously for as long as it has fuel, so it can carry a data centre through days without utility supply. That is a different job from bridging the seconds between an outage and the generator starting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A UPS runs on batteries and is sized in minutes, not days. Its role is to keep systems alive until the generator comes online or shutdown completes.",
+      "C": "Replication copies data to another location. It supports recovery elsewhere but does nothing to keep this data centre powered.",
+      "D": "Parallel processing runs work on more than one system concurrently. It is a processing model, not a power strategy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p62",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.938,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0139",
+    "id": "q0137",
     "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A security manager created new documentation to use in response to various types of security incidents.\nWhich of the following is the next step the manager should take?",
+    "question": "A company is redesigning its infrastructure and wants to reduce the number of physical servers in use.\nWhich of the following architectures is best suited for this goal?",
     "choices": [
       {
         "key": "A",
-        "text": "Set the maximum data retention policy."
+        "text": "Isolation"
       },
       {
         "key": "B",
-        "text": "Securely store the documents on an air-gapped network."
+        "text": "Segmentation"
       },
       {
         "key": "C",
-        "text": "Review the documents' data classification policy."
+        "text": "Virtualization"
       },
       {
         "key": "D",
-        "text": "Conduct a tabletop exercise with the team."
+        "text": "Redundancy"
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": "A tabletop exercise allows the team to walk through various incident response scenarios using the new documentation, helping to ensure everyone understands their roles and the procedures. This step verifies the effectiveness of the documentation, identifies any gaps, and provides practical experience for the team, which is essential for effective incident response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation runs many virtual machines on one physical host, consolidating workloads that previously needed separate hardware. Reducing the physical server count is precisely what it was created to do.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Isolation separates systems so they cannot affect one another. It is a security property, and strict isolation often means more separation, not less hardware.",
+      "B": "Segmentation divides a network into zones. It changes network design without affecting how many servers exist.",
+      "D": "Redundancy adds duplicate components so failures are survivable. By definition it increases the amount of hardware."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p64",
-    "needsReview": true,
-    "inferenceConfidence": 0.312,
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1089,12 +1104,17 @@ export const domain3Questions = [
       "B",
       "F"
     ],
-    "explanation": "Since the company is developing a critical system for the government, project information would likely be classified as Confidential to prevent unauthorized access and maintain secrecy, and Restricted to limit access strictly to authorized personnel only, given the sensitivity and importance of government-related work.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Government project information needs both a sensitivity level and an access limitation. Confidential marks the harm that disclosure would cause, and Restricted signals that access is limited to a specifically authorised group rather than to staff generally.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Private typically covers personal information about individuals, such as employee records. This is project material, not personal data.",
+      "C": "Public means disclosure causes no harm. Critical government project information is the opposite of that.",
+      "D": "Operational is not a standard classification level. It describes a type of data or control rather than its sensitivity.",
+      "E": "Urgent describes priority or timeliness, not how sensitive something is."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p65",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1127,50 +1147,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "IPSec is commonly used in remote access VPNs to establish secure, encrypted tunnels between the endpoint and the network. This ensures that data transmitted over the VPN is protected from interception, providing confidentiality, integrity, and authentication. IPSec is a widely used protocol for secure remote access VPNs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A client agent establishing an encrypted tunnel to the corporate network is the classic IPSec remote access VPN. IPSec authenticates and encrypts the IP traffic itself, protecting everything carried inside the tunnel.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "GRE encapsulates traffic to build a tunnel but provides no encryption at all. It is often paired with IPSec precisely because it lacks that protection.",
+      "C": "SD-WAN manages and optimises traffic across multiple WAN links between sites. It is a site-to-site technology, not an endpoint remote access client.",
+      "D": "EAP is an authentication framework used within protocols such as 802.1X. It authenticates users but does not itself create the encrypted tunnel."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p67",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0149",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "A university employee logged on to the academic server and attempted to guess the system administrators' log-in credentials.\nWhich of the following security measures should the university have implemented to detect the employee's attempts to gain access to the administrators' accounts?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Two-factor authentication"
-      },
-      {
-        "key": "B",
-        "text": "Firewall"
-      },
-      {
-        "key": "C",
-        "text": "Intrusion prevention system"
-      },
-      {
-        "key": "D",
-        "text": "User activity logs"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "User activity logs record user actions, including failed login attempts, account access patterns, and unusual behaviors. By reviewing these logs, security teams can detect unauthorized access attempts, such as an employee attempting to guess administrator credentials.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p68",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

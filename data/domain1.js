@@ -663,61 +663,18 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The design is already released, so altering it is a change to a live system. Best practice routes that through the change control process, which brings approval, impact analysis, testing and a backout plan before anything is modified.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "The risk management process evaluates and treats risk. It might justify making the change but is not the mechanism for implementing one safely.",
+      "B": "The product design process creates the design in the first place. That stage has already been completed and released.",
+      "C": "The design review process is what just happened — the annual review that found the issues. The next step is acting on them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0089",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "multi",
-    "question": "A security team is addressing a risk associated with the attack surface of the organization's web application over port 443. Currently, no advanced network security capabilities are in place.\nWhich of the following would be best to set up? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "NIDS"
-      },
-      {
-        "key": "B",
-        "text": "Honeypot"
-      },
-      {
-        "key": "C",
-        "text": "Certificate revocation list"
-      },
-      {
-        "key": "D",
-        "text": "HIPS"
-      },
-      {
-        "key": "E",
-        "text": "WAF"
-      },
-      {
-        "key": "F",
-        "text": "SIEM"
-      }
-    ],
-    "correct": [
-      "A",
-      "E"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p36",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -748,21 +705,25 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy governs how people behave day to day — what they may do with company systems. Controls implemented and enforced through people and process are operational, as distinct from managerial controls, which direct the security programme itself.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Physical controls act on the physical environment: locks, fences, guards, cameras. A written policy is not one of them.",
+      "B": "Managerial controls are the planning and oversight layer — risk assessments, security planning, control selection. An AUP directs user conduct rather than managing the programme.",
+      "C": "Technical controls are implemented in hardware or software, such as firewalls and encryption. A policy is enforced by people."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0113",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
     "question": "Which of the following would a systems administrator follow when upgrading the firmware of an organization's router?",
     "choices": [
@@ -786,12 +747,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A maintenance window is a pre-scheduled period when system or network changes, updates, or repairs are performed. By using a designated maintenance window, a systems administrator can minimize disruption to the organization's operations, as this window is typically chosen during a time when network usage is lower, reducing the impact on users.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Upgrading router firmware means the device reboots and the network drops. A maintenance window is the pre-agreed period for exactly that kind of disruptive change, scheduled when usage is lowest and communicated in advance so the outage is expected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The software development life cycle governs how software is designed, built and released. An administrator applying a vendor's firmware is not developing anything.",
+      "B": "Risk tolerance expresses how much risk the organisation will accept. It may inform whether the upgrade is approved but is not a procedure to follow.",
+      "C": "A certificate signing request asks a CA to issue a certificate. It has no role in a firmware upgrade."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p52",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.37,
     "needsExplanation": false,
     "keyCorrected": false
@@ -824,12 +789,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization replaces sensitive data, like credit card information, with a unique identifier (token) that has no exploitable value outside of a specific context. This approach is widely used to secure payment card information and reduces the risk of exposure in case of a breach, as the actual credit card data is not stored in the database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tokenisation replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenisation system, and the format is preserved so pending purchases still work.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hashing is one-way, so the original card number could never be retrieved to complete the purchase. Card numbers are also short enough to be brute-forced from a hash.",
+      "B": "Obfuscation makes data harder to read but is reversible by design and offers no real cryptographic protection against a determined attacker.",
+      "D": "Masking hides part of the value for display, such as showing only the last four digits. It suits logs and screens, but the system still needs the full number to process the payment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p57",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -862,12 +831,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A file with a name like \"salaries\" suggests sensitive information, which would likely draw the attention of an insider threat looking for valuable or confidential data. This technique is often used as part of a honeypot strategy to monitor and detect suspicious activity by insiders attempting unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "This is a honeyfile — a decoy with an enticing name and no legitimate purpose. Nobody has a business reason to open /docs/salaries, so any access to it is a strong signal that someone is looking where they should not be.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Setting weak passwords in /etc/shadow genuinely weakens the system. It creates a real way in rather than a monitored trap.",
+      "C": "Scheduling vulnerable cron jobs introduces an actual privilege escalation path. That endangers the host instead of detecting curiosity.",
+      "D": "A fake account in /etc/passwd is closer to the idea, but an account entry is passive — it does not attract attention or record who looked at it the way an enticingly named file does."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p60",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -900,12 +873,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Full disk encryption (FDE) secures data at rest by encrypting the entire storage drive, ensuring that data is protected when the system is powered off or if the drive is accessed without authorization. This approach is commonly used to protect sensitive data stored on devices like laptops, servers, and storage media.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data at rest is data sitting on storage rather than moving or in use. Full disk encryption encrypts the whole volume so the contents are unreadable when the system is off or the drive is removed, which is exactly that state.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Digital signatures prove origin and integrity. They demonstrate a file has not been altered but leave its contents readable.",
+      "C": "A private key is a component used by cryptographic systems, not a solution in itself. It is the secret that makes an algorithm work.",
+      "D": "Steganography hides data inside another file so its existence is not obvious. It is concealment rather than encryption, and it fails once the carrier is identified."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p61",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.609,
     "needsExplanation": false,
     "keyCorrected": false
@@ -947,14 +924,19 @@ export const domain1Questions = [
       "B",
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The signs deter — a visitor who knows they are being recorded is less likely to misbehave. The cameras detect — they capture and identify what actually happens. Neither physically stops anyone, which is what separates these from preventive controls.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges towards this, but its purpose here is to discourage.",
+      "C": "Preventive controls physically stop an act before it occurs. A camera records but blocks nothing.",
+      "E": "Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
+      "F": "Technical describes how a control is implemented, not what it does. The question is asking about control function."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p63",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -985,12 +967,58 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Key escrow involves storing the encryption key with a trusted third party or system that securely retains the key and grants access to authorized entities as needed. This approach ensures that multiple authorized parties can access the key in a controlled and secure manner, making it a reliable solution for shared access requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Key escrow deposits a copy of the key with a trusted custodian who releases it to authorised parties under defined conditions. That is the recognised way to let more than one entity obtain a key when needed without simply handing it around.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Public key infrastructure issues, distributes and revokes certificates. It manages trust in public keys rather than safeguarding a shared secret key.",
+      "B": "An open public ledger records transactions transparently for anyone to read. Publishing a key defeats the purpose entirely.",
+      "C": "Public key encryption protects data in transit between parties. It secures the exchange but does not store a key for later authorised retrieval."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p63",
-    "needsReview": true,
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0136",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "For which of the following reasons would a systems administrator leverage a 3DES hash from an installer file that is posted on a vendor's website?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To test the integrity of the file"
+      },
+      {
+        "key": "B",
+        "text": "To validate the authenticity of the file"
+      },
+      {
+        "key": "C",
+        "text": "To activate the license for the file"
+      },
+      {
+        "key": "D",
+        "text": "To calculate the checksum of the file"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Comparing a downloaded file against the hash the vendor published proves the bytes you received match the bytes they released, so the file was not corrupted or tampered with in transit. That is integrity verification. Note the question is loosely worded: 3DES is an encryption algorithm, not a hash — the intended answer is the integrity check a published hash provides.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Authenticity means proving who published the file, which requires a digital signature. A bare hash on the same website could be replaced by anyone who altered the file there.",
+      "C": "Activating a licence is a commercial step handled by a key or an account. It has no relationship to hashing.",
+      "D": "Calculating the checksum is the mechanism, not the reason. The administrator computes it in order to test integrity."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p63",
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1023,12 +1051,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "DDoS (Distributed Denial of Service) attacks aim to overwhelm resources and make services unavailable to legitimate users. By implementing protection against DDoS attacks, the organization is focusing on maintaining the availability of its services, ensuring that they remain accessible even in the face of such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A distributed denial of service attack works by making a service unreachable to legitimate users. Defending against it protects availability — the third leg of the CIA triad, concerned with systems being usable when needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Non-repudiation prevents someone denying an action they took, achieved through signatures and logging. A DDoS attack does not involve disputed actions.",
+      "C": "Integrity means data has not been altered. A DDoS floods a service without changing any data.",
+      "D": "Confidentiality keeps data from unauthorised eyes. Nothing is disclosed by a denial of service attack."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p64",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1061,12 +1093,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Weak cryptographic algorithms make it easier for attackers to crack passwords by using techniques such as brute-force or dictionary attacks.\nWhen encryption algorithms are weak, they produce predictable patterns or can be processed faster, allowing attackers to break the encryption and recover sensitive information, such as passwords, more easily.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When passwords are protected by a weak or fast algorithm — MD5, unsalted SHA-1, short key lengths — an attacker can compute enormous numbers of candidate hashes cheaply. The weakness of the algorithm is exactly what makes cracking feasible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An on-path attack intercepts traffic between two parties. It exploits the network position, which is available whether the cryptography is strong or weak.",
+      "C": "Digital signing is a protective mechanism, not an attack.",
+      "D": "A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets the implementation, and works even against algorithms that are cryptographically strong."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p66",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1074,8 +1110,8 @@ export const domain1Questions = [
   {
     "id": "q0144",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
     "question": "Which of the following is a preventive physical security control?",
     "choices": [
@@ -1099,89 +1135,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Bollards are physical barriers that prevent unauthorized vehicle access to certain areas, helping to protect a facility by physically blocking entry. Unlike detection-focused controls like video surveillance, alarms, and motion sensors, bollards serve as a proactive, preventive measure by stopping threats before they can reach the facility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A bollard is a physical barrier that stops a vehicle reaching a building. It prevents the act rather than recording it, which makes it the preventive control among these options.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A video surveillance system records what happens. Recording is detective, and deterrent where the cameras are visible.",
+      "C": "An alarm system announces that something has occurred. Notification after the event is detective.",
+      "D": "Motion sensors detect movement and trigger an alert. Like the alarm, they observe rather than obstruct."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p66",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0145",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "Which of the following is most likely to be used as a just-in-time reference document within a security operations center?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Change management policy"
-      },
-      {
-        "key": "B",
-        "text": "Risk profile"
-      },
-      {
-        "key": "C",
-        "text": "Playbook"
-      },
-      {
-        "key": "D",
-        "text": "SIEM profile"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A playbook provides step-by-step procedures for responding to specific types of security incidents, making it an essential just-in-time reference during active incidents. SOC analysts rely on playbooks to quickly access instructions and guidance for consistent and effective response actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p67",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0148",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "Several customers want an organization to verify its security controls are operating effectively and have requested an independent opinion.\nWhich of the following is the most efficient way to address these requests?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hire a vendor to perform a penetration test"
-      },
-      {
-        "key": "B",
-        "text": "Perform an annual self-assessment."
-      },
-      {
-        "key": "C",
-        "text": "Allow each client the right to audit"
-      },
-      {
-        "key": "D",
-        "text": "Provide a third-party attestation report"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "A third-party attestation report, such as a SOC 2 report, is an independent assessment of the organization's security controls conducted by an external auditor. This report provides clients with the assurance they need without requiring each client to conduct their own audit or the organization to perform separate assessments, making it both efficient and credible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p68",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },

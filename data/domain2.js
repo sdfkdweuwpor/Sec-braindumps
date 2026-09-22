@@ -596,10 +596,52 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0080",
+    "domain": 2,
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
+    "type": "single",
+    "question": "A third-party vendor is moving a particular application to the end-of-life stage at the end of the current year.\nWhich of the following is the most critical risk if the company chooses to continue running the application?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Lack of security updates"
+      },
+      {
+        "key": "B",
+        "text": "Lack of new features"
+      },
+      {
+        "key": "C",
+        "text": "Lack of support"
+      },
+      {
+        "key": "D",
+        "text": "Lack of source code access"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Once an application passes end of life the vendor stops issuing security updates, so every vulnerability discovered from that day forward stays exploitable forever. That is the critical risk, because unlike the others it cannot be worked around and its severity only grows with time.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Lack of new features is a functional limitation. The application keeps doing what it already did, which is an inconvenience rather than a security risk.",
+      "C": "Lack of support means no help when something breaks. It is a genuine operational problem, but a broken feature is far less dangerous than an unpatchable flaw.",
+      "D": "Lack of source code access limits what the company could fix itself. Most commercial software never provides it, so nothing changes at end of life."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p33",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0085",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst finds the following:\nPS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com / ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327 Which of the following best describes how the attacker gained access to the hardened PC?",
     "choices": [
@@ -623,14 +665,18 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The command is mimikatz invoking sekurlsa::pth with an NTLM hash — a pass-the-hash attack. The attacker never needed the plaintext password: they took the hash for a local administrator account from the compromised PC and authenticated to the hardened PC with it, which works whenever that account is shared across machines.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Fileless malware hosted by the banking platform would mean the bank's own site delivered the attack. The evidence is a tool run locally on an internal PC.",
+      "C": "Living off the land means abusing built-in system binaries to avoid dropping tools. mimikatz is an external tool written to disk, which is the opposite.",
+      "D": "Social engineering the accountant would show a person being manipulated into acting. The command history shows a technical credential attack instead."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -661,21 +707,25 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The desktops are both unused and non-compliant, so there is no business reason to keep them and every reason to remove the risk. Decommissioning takes them off the network entirely, eliminating an unpatched, unmonitored attack surface rather than managing it indefinitely.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Monitoring watches the systems for trouble. It maintains visibility into machines that should not be there at all.",
+      "C": "Patching brings them into compliance, which is effort spent on systems nobody uses. It fixes the wrong problem.",
+      "D": "Isolating confines them to a restricted segment. That is the right approach when a non-compliant system is still needed, which these are not."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p36",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0095",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A malicious update was distributed to a common software platform and disabled services at many organizations.\nWhich of the following best describes this type of vulnerability?",
     "choices": [
@@ -699,14 +749,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The attacker compromised something upstream — a trusted software platform — and let its normal update mechanism deliver the damage to every downstream organisation. Turning a trusted supplier into the delivery path is a supply chain attack.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A DDoS attack floods a target with traffic to exhaust it. Services failed here because of a bad update, not because of traffic volume.",
+      "B": "A rogue employee acts maliciously from inside one organisation. The damage here spread across many organisations through a shared vendor.",
+      "C": "An insider threat likewise originates within the affected organisation. Every victim here was harmed by an external supplier's product."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p38",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -737,90 +791,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "An unauthenticated page that accepts uploads is the classic route for a web shell: the attacker uploads a script disguised as an image, requests it, and gains command execution as the web server. That explains both the unfamiliar process and the outbound connection to a low-reputation address.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A worm spreads itself automatically to other hosts. The evidence shows one compromised server beaconing out, with no sign of propagation.",
+      "C": "Cryptomining is driven by CPU consumption and connects to mining pools. Traffic to a single low-reputation host on a non-standard port looks like command and control, not mining.",
+      "D": "A rootkit over exposed RDP requires RDP to be reachable. The described exposure is an unauthenticated upload page on a web server."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p38",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0098",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A systems administrator deployed a monitoring solution that does not require installation on the endpoints that the solution is monitoring.\nWhich of the following is described in this scenario?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Agentless solution"
-      },
-      {
-        "key": "B",
-        "text": "Client-based soon"
-      },
-      {
-        "key": "C",
-        "text": "Open port"
-      },
-      {
-        "key": "D",
-        "text": "File-based solution"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p39",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0099",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "A security analyst is reviewing the source code of an application in order to identify misconfigurations and vulnerabilities.\nWhich of the following kinds of analysis best describes this review?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Dynamic"
-      },
-      {
-        "key": "B",
-        "text": "Static"
-      },
-      {
-        "key": "C",
-        "text": "Gap"
-      },
-      {
-        "key": "D",
-        "text": "Impact"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p39",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -851,14 +833,18 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Malicious code appearing in what should be a routine backup job, triggering on a date, points to an attacker having injected it through the application. Reviewing the WAF logs shows whether a command injection request reached the server and when, which establishes how the code got there.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Checking terminated DBAs investigates an insider with legitimate database access. That is worth ruling out but is speculation until the injection path is checked.",
+      "C": "Scanning for malware looks for known malicious files. The problem is attacker-supplied code inside a legitimate database job, which a scanner will not flag.",
+      "D": "Searching for ransomware notes assumes an extortion attack. The site is unusable because of destructive code, and no ransom demand has been reported."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -889,12 +875,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Organized crime groups are primarily motivated by financial gain. Ransomware attacks are a popular tool for these groups because they can encrypt a victim's data and demand a ransom payment (often in cryptocurrency) to restore access. This form of attack can yield a high financial return if victims choose to pay.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Organised crime is motivated by profit above all else, and ransomware is the most direct way to convert access into payment. These groups are well resourced enough to run ransomware as a business, complete with affiliates and negotiation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An insider threat acts from within, usually driven by grievance or personal gain through data theft. Deploying ransomware across the organisation that employs them is an unusual route.",
+      "C": "Nation-states pursue espionage, disruption or strategic advantage. They occasionally use ransomware as cover, but revenue is not their purpose.",
+      "D": "Hacktivists act for ideological reasons — publicity, protest, embarrassment. Extorting money would undercut the cause they are advancing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p52",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.95,
     "needsExplanation": false,
     "keyCorrected": false
@@ -931,51 +921,18 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In cloud computing, virtual machines (VMs) share physical resources. VM escape is a critical vulnerability where an attacker could break out of a virtualized environment and access the host system or other VMs running on the same physical hardware. This would pose a significant security risk, as it could allow attackers to compromise the entire cloud infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cloud instances share physical hardware with other tenants. VM escape is the vulnerability where an attacker breaks out of their guest and reaches the hypervisor or neighbouring virtual machines, which is uniquely serious in cloud because it crosses the boundary between customers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SQL injection attacks an application's database layer. It is a serious flaw but it exists identically whether the application runs in cloud or on a physical server.",
+      "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualised infrastructure.",
+      "D": "Tokenisation is a data-protection technique, not a vulnerability at all.",
+      "E": "Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p57",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0137",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A company is redesigning its infrastructure and wants to reduce the number of physical servers in use.\nWhich of the following architectures is best suited for this goal?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Isolation"
-      },
-      {
-        "key": "B",
-        "text": "Segmentation"
-      },
-      {
-        "key": "C",
-        "text": "Virtualization"
-      },
-      {
-        "key": "D",
-        "text": "Redundancy"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Virtualization allows multiple virtual machines (VMs) to run on a single physical server, reducing the need for multiple physical servers. This approach consolidates workloads, optimizes hardware usage, and lowers operational costs by enabling multiple isolated environments on fewer physical devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p64",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
