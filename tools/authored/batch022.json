@@ -1,0 +1,243 @@
+{
+"q0699": {"objective":"3.1",
+ "explanation":"Infrastructure as code expresses servers, networks and configuration as version-controlled definitions that a pipeline applies. Deployment becomes a repeatable, automated operation rather than a manual build, which is what automating infrastructure requires.",
+ "incorrect":{
+  "B":"IaaS is a cloud service model supplying compute and storage. It provides the resources; something still has to automate how they are configured.",
+  "C":"IoC means indicator of compromise — an artefact showing a system was attacked.",
+  "D":"IoT refers to networked embedded devices."}},
+
+"q0700": {"objective":"4.8",
+ "explanation":"Chain of custody is the documented record of who collected each item, when, and every hand it passed through afterwards. External investigators depend on it because without that unbroken trail the evidence can be challenged as altered.",
+ "incorrect":{
+  "A":"Recovery restores systems to normal operation. It happens after the investigation's evidence needs are met.",
+  "C":"A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling of collected evidence.",
+  "D":"Preparation is the work done before any incident — building plans, tooling and training."}},
+
+"q0701": {"objective":"1.4",
+ "explanation":"A CRL is downloaded and checked locally, so the client consults a cached list rather than contacting the CA at validation time. That offline check is what makes it passive.",
+ "incorrect":{
+  "A":"OCSP queries an online responder in real time for each certificate. Making a live request is active, not passive.",
+  "C":"A TPM is a hardware chip storing keys and measuring boot integrity. It performs no certificate status checking.",
+  "D":"A CSR is the request submitted to obtain a certificate. It belongs at issuance, not validation."}},
+
+"q0702": {"objective":"1.4",
+ "explanation":"Securing a public web server means obtaining a TLS certificate, and that process begins with generating a key pair and a certificate signing request containing the public key and subject details. Everything else follows from submitting that CSR.",
+ "incorrect":{
+  "A":"Domain validation is the check the CA performs after receiving the request. It is their step, not the technician's first one.",
+  "B":"DNS filtering blocks resolution of malicious domains. It protects users browsing out, not a server being published.",
+  "C":"Wildcard creation is a choice about what the certificate covers. It is a detail of the request rather than the step that starts it."}},
+
+"q0703": {"objective":"4.5",
+ "explanation":"Content categorisation assigns every site to a class such as adult, gambling or social media, so entire categories can be blocked in one rule. That is how a school restricts material by nature rather than maintaining a list of individual sites.",
+ "incorrect":{
+  "A":"Reputation filters block sites known to be malicious. Age-inappropriate content is often on perfectly reputable sites.",
+  "B":"Network access control decides which devices may join the network. It has no view of what they browse.",
+  "C":"User behaviour analytics flags anomalous activity. It reports after the fact rather than blocking access."}},
+
+"q0704": {"objective":"5.5",
+ "explanation":"Internal audit exists to test whether the organisation actually does what its policies say, using its own staff and reporting to management. Assessing compliance with established policy is the function, and independence from those operating the controls is what makes it credible.",
+ "incorrect":{
+  "A":"Defining exposure posture is a risk management responsibility. Audit measures against decisions rather than making them.",
+  "B":"Implementing regulatory requirements is operational work. Audit must stay independent of what it examines.",
+  "D":"Defining and updating control monitoring is a management activity. Audit evaluates that monitoring rather than designing it."}},
+
+"q0705": {"objective":"4.1",
+ "explanation":"The engineer wants to find problems before compiling, which rules out anything requiring a running program. Static code analysis reads the source itself and reports errors and security weaknesses at exactly that point in the workflow.",
+ "incorrect":{
+  "A":"A vulnerability scanner probes a running system for known flaws. There is no deployed system yet.",
+  "C":"Input validation is a defensive technique written into the code. It is something the engineer implements, not a way to check for flaws.",
+  "D":"Sandbox testing runs the software in isolation to observe behaviour. That requires a compiled build."}},
+
+"q0706": {"objective":"2.5",
+ "explanation":"File integrity monitoring hashes protected system files and alerts the moment one changes. For system-level data, where any modification outside a controlled process is suspicious, that is the control that surfaces it.",
+ "incorrect":{
+  "A":"A NIDS detects suspicious traffic on the network. It never sees changes to files on a host.",
+  "B":"DLP inspects data leaving the organisation. Changing a local system file crosses no boundary.",
+  "C":"NAC decides which devices may join the network. It governs admission, not file state."}},
+
+"q0707": {"objective":"4.1",
+ "explanation":"A new device ships with vendor utilities, trial software and services nobody in the organisation needs, each of which must be patched and each of which could be exploited. Wiping and applying a controlled corporate image removes all of it, which shrinks the attack surface.",
+ "incorrect":{
+  "A":"Installing an operating system does not constitute a hardware test. Burn-in testing is a separate activity.",
+  "C":"Reimaging applies an existing baseline rather than creating an updated one. The baseline is defined beforehand.",
+  "D":"Performance evaluation is a procurement concern, and wiping the device is not how it would be measured."}},
+
+"q0708": {"objective":"4.3",
+ "explanation":"Everything else depends on the answer to this. If the vendor still provides a patch the remediation is straightforward; if it does not, the administrator must pivot to migration, isolation or compensating controls. Patch availability is the branch point.",
+ "incorrect":{
+  "B":"Cost matters, but you cannot cost an option before establishing which options exist.",
+  "C":"Ease of rollback matters once a change is planned. It presumes there is something to roll back.",
+  "D":"Responsiveness describes how quickly a system reacts. It is a performance characteristic, not a remediation factor."}},
+
+"q0709": {"objective":"5.2",
+ "explanation":"A risk matrix plots two axes: how likely an event is and how badly it would hurt. Likelihood and impact combine to produce the rating, which is what makes the matrix a qualitative tool rather than a monetary calculation.",
+ "incorrect":{
+  "B":"Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
+  "C":"SLE is the monetary loss from one incident, used in quantitative analysis.",
+  "E":"ALE is the annualised monetary loss, again quantitative.",
+  "F":"ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."}},
+
+"q0710": {"objective":"3.3",
+ "explanation":"A UAT environment needs data that behaves like production without being production. Masking replaces the sensitive fields with realistic but fictitious values, so testing is meaningful while no real customer data exists outside production.",
+ "incorrect":{
+  "B":"Tokenisation substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
+  "C":"Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique for this use case.",
+  "D":"Encryption protects data but the testers would need the key to use it, at which point the real data is exposed anyway."}},
+
+"q0711": {"objective":"3.2",
+ "explanation":"Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
+ "incorrect":{
+  "A":"An IDS detects and alerts. It blocks nothing.",
+  "B":"An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
+  "C":"A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."}},
+
+"q0712": {"objective":"1.4",
+ "explanation":"A digital certificate binds a public key to an identity, which supports both goals at once: the key enables encryption for confidentiality, and signing with the corresponding private key provides integrity and proof of origin.",
+ "incorrect":{
+  "A":"Obfuscation makes data harder to read without genuine cryptographic strength, and it verifies nothing.",
+  "B":"Tokenisation substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
+  "D":"Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."}},
+
+"q0713": {"objective":"4.8",
+ "explanation":"No alerts have fired, so the detection tooling has nothing to show. Threat hunting is the proactive search through telemetry for evidence of an adversary that automated detection missed, driven by hypotheses rather than alerts.",
+ "incorrect":{
+  "B":"Digital forensics analyses evidence from a known incident. There is no confirmed incident yet.",
+  "C":"Vulnerability scanning finds weaknesses that could be exploited. It says nothing about whether anyone is currently inside.",
+  "D":"E-discovery is the legal process of producing electronically stored information for litigation."}},
+
+"q0714": {"objective":"4.1",
+ "explanation":"Code signing attaches a signature created with the publisher's private key. Verifying it proves both who released the software and that not a byte has changed since, so a maliciously altered copy fails verification before it is ever run.",
+ "incorrect":{
+  "A":"Dynamic analysis runs the application to observe behaviour. That means executing untrusted code, which is exactly what you are trying to avoid.",
+  "C":"Encryption in transit protects the download from interception. It does nothing if the file on the repository was already altered.",
+  "D":"Static analysis reads the code for defects. It could find a problem but is impractical for a third-party binary and does not establish authenticity."}},
+
+"q0715": {"objective":"5.2",
+ "explanation":"Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+ "incorrect":{
+  "A":"Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
+  "C":"Avoidance means ceasing the activity entirely. The device stays in service.",
+  "D":"Transference shifts the financial consequence to a third party, typically through insurance."}},
+
+"q0716": {"objective":"1.4",
+ "explanation":"Two layers apply. Passwords should be stored as salted hashes, so a breach of the database yields digests rather than credentials. The server itself should sit in an isolated network segment, so far fewer systems can reach it in the first place.",
+ "incorrect":{
+  "A":"Signing proves origin and integrity of data. It does not protect stored passwords from disclosure.",
+  "B":"Sanitisation removes data from media at end of life. It is a disposal control.",
+  "C":"Tokenisation substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
+  "D":"Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."}},
+
+"q0717": {"objective":"2.4",
+ "explanation":"Credentials, permissions and connectivity all check out, yet every remote user fails identically. That points at the VPN gateway itself being unable to service requests, which is what a distributed denial of service produces by exhausting its capacity.",
+ "incorrect":{
+  "A":"A collision is when two different inputs produce the same hash. It is a cryptographic weakness, not a login failure.",
+  "B":"Password spraying tries common passwords across many accounts. It causes failed authentications for targeted accounts, not identical errors for everyone with valid credentials.",
+  "C":"An on-path attack intercepts traffic. It typically aims to stay invisible rather than break the service for every user."}},
+
+"q0718": {"objective":"3.4",
+ "explanation":"Splitting traffic between two identical sites so both serve users, with either able to carry the load if the other fails, is load balancing. Sharing traffic rather than holding one site idle is what the question describes.",
+ "incorrect":{
+  "B":"Geographic disruption is not a recognised term. Geographic dispersion means placing sites apart, which is a related but different concept.",
+  "C":"Failover switches to a standby when the primary fails. The standby is idle until then rather than sharing traffic.",
+  "D":"Parallel processing runs work concurrently for performance, typically within a computation rather than across sites."}},
+
+"q0719": {"objective":"1.1",
+ "explanation":"Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
+ "incorrect":{
+  "A":"Key escrow is a technical control for recovering encryption keys.",
+  "B":"Tokenisation is a technical data protection technique.",
+  "E":"Access badge readers are physical controls.",
+  "F":"Biometrics is likewise a physical or technical access control rather than a process people follow."}},
+
+"q0720": {"objective":"5.5",
+ "explanation":"The tester defeated physical access controls by impersonating a trusted vendor and walking into a secure area. Testing whether physical barriers, procedures and staff vigilance can be bypassed is a physical penetration test.",
+ "incorrect":{
+  "B":"Integrated testing combines offensive and defensive teams working together during an exercise.",
+  "C":"Partially known environment describes how much information the tester was given, not what was tested.",
+  "D":"Known environment likewise describes the information provided rather than the test type."}},
+
+"q0721": {"objective":"2.5",
+ "explanation":"Virus alerts on machines already out of compliance means infections are present and may be spreading. Isolation immediately stops those hosts reaching anything else, containing the problem while patching and clean-up are planned — containment comes before remediation.",
+ "incorrect":{
+  "A":"Patching is the right remediation and must follow, but applying updates to machines that are already infected does not remove the malware or stop it spreading meanwhile.",
+  "B":"Segmentation is an architectural change that takes time to design and implement. It does not address the live infections now.",
+  "C":"Monitoring adds visibility. It observes the spread rather than stopping it."}},
+
+"q0722": {"objective":"3.3",
+ "explanation":"Obfuscation transforms information so it cannot be read or understood by someone who should not see it, while the system can still work with it. Blocking information from view is precisely what it achieves.",
+ "incorrect":{
+  "B":"A classification policy defines sensitivity levels and handling rules. It says what must be protected without hiding anything itself.",
+  "C":"Verification confirms something is accurate or genuine.",
+  "D":"Block rules stop traffic reaching a destination. They control access to a resource rather than concealing information within it."}},
+
+"q0723": {"objective":"4.1",
+ "explanation":"Mobile device management enrols company devices under central control, and remote wipe is one of its core functions. With the handset stolen, issuing a wipe from the MDM console is what removes the proprietary data from it.",
+ "incorrect":{
+  "B":"MFD means multifunction device — a printer, scanner and copier combined. It is unrelated.",
+  "C":"NAC decides which devices may join the network. A stolen phone off the network is beyond its reach.",
+  "D":"DLP inspects data leaving the organisation through monitored channels. A device physically taken never passes through it."}},
+
+"q0724": {"objective":"3.2",
+ "explanation":"Visitors are reaching the corporate network because nothing checks who or what is connecting. Network access control authenticates and posture-checks every device at the point of connection — wired port or wireless — and refuses or quarantines anything unauthorised.",
+ "incorrect":{
+  "A":"A VPN encrypts remote access into the network. These visitors are physically on site.",
+  "B":"WPA3 strengthens wireless encryption and authentication, which helps with the Wi-Fi half but does nothing about open network ports.",
+  "D":"HIDS monitors activity on an individual host. It protects that machine and has no say over who joins the network."}},
+
+"q0725": {"objective":"5.2",
+ "explanation":"The figure is a defined trigger: below it the organisation carries the risk, above it a specific response is initiated. A level at which action becomes required is a risk threshold.",
+ "incorrect":{
+  "A":"A risk indicator is a signal that a risk may be materialising, such as a rising metric. It warns rather than triggering a decision.",
+  "B":"Risk tolerance is the broader acceptable variation around the organisation's appetite. The threshold is the specific number derived from it.",
+  "D":"Risk exposure is the amount of risk actually faced. It is what gets measured against the threshold."}},
+
+"q0726": {"objective":"2.3",
+ "explanation":"Nation-states have the resources to discover or purchase vulnerabilities nobody else knows about. A zero-day has no patch and no signature, which gives them stealth and reliability that commodity attackers cannot match.",
+ "incorrect":{
+  "B":"SQL injection is a well-known web application flaw. It is widely exploited by low-skill attackers and defended against routinely.",
+  "C":"A buffer overflow is a classic memory defect, largely mitigated in modern software by compiler and OS protections.",
+  "D":"Cross-site scripting is a common web vulnerability that requires no special resources to exploit."}},
+
+"q0727": {"objective":"1.2",
+ "explanation":"Deterrence works by making an offender believe they will be seen or caught. A guard provides an active presence that can observe and intervene, and lighting removes the concealment vandals rely on — both discourage the act rather than physically blocking it.",
+ "incorrect":{
+  "C":"Bollards physically stop vehicles from entering an area. They are preventive and do not address vandalism to parked cars.",
+  "D":"An access control vestibule controls people entering a building. The problem is outdoors in an ungated area.",
+  "E":"Door locks prevent entry to a building. They are preventive and irrelevant to a car park.",
+  "F":"An access badge authenticates someone at a controlled door."}},
+
+"q0728": {"objective":"2.3",
+ "explanation":"Security response headers such as Content-Security-Policy constrain what scripts a browser will execute and from where. That directly limits the ability of injected script to run, which is the mechanism cross-site scripting depends on.",
+ "incorrect":{
+  "A":"SQL injection happens server side when input is interpreted as a query. Headers sent to the browser have no effect on it.",
+  "C":"Denial of service exhausts capacity. Headers do not change how much traffic a server can absorb.",
+  "D":"SSL is a protocol, and a deprecated one. It is not a risk that headers mitigate, though HSTS enforces the use of TLS."}},
+
+"q0729": {"objective":"3.2",
+ "explanation":"Several link types at each site, and a need to use each according to policy and performance, is exactly the problem SD-WAN solves. It manages the circuits centrally and steers traffic dynamically based on cost, latency and application requirements.",
+ "incorrect":{
+  "B":"A UTM bundles security functions into one boundary appliance. It filters traffic rather than selecting paths.",
+  "C":"A VPN encrypts a tunnel between endpoints. It secures one path without managing a choice between several.",
+  "D":"SASE combines networking and security from the cloud and is related, but the requirement described is specifically about leveraging multiple existing circuits by criteria, which is SD-WAN's defining capability."}},
+
+"q0730": {"objective":"4.6",
+ "explanation":"Least privilege grants only the permissions a role genuinely needs. An analyst whose job is to review rather than change simply would not hold the rights to save a configuration, so the unauthorised change becomes impossible rather than merely prohibited.",
+ "incorrect":{
+  "A":"A network administrator shutting down a critical interface is acting within legitimate privileges. Least privilege does not prevent authorised people doing authorised things.",
+  "C":"A threat actor discovering shared service account credentials is a credential management failure. Least privilege limits the damage afterwards but does not prevent the discovery.",
+  "D":"A change outside the approved window is a change management violation, addressed by process rather than permissions."}},
+
+"q0732": {"objective":"3.2",
+ "explanation":"Confidentiality of a remote connection means nobody on the path can read it. A VPN encrypts the traffic end to end across untrusted networks, which is the direct answer to that requirement.",
+ "incorrect":{
+  "A":"Firewalls control which traffic is permitted. They filter rather than encrypt, so permitted traffic still crosses in whatever form it was sent.",
+  "C":"Extensive logging supports detection and investigation. It records rather than protects.",
+  "D":"Intrusion detection systems alert on suspicious traffic. Again detection, not confidentiality."}},
+
+"q0733": {"objective":"2.4",
+ "explanation":"The affected device's traffic passes through an extra first hop with high latency that does not appear from a healthy device on the same port. An unexpected intermediary inserted into one host's path is the signature of an on-path attack, and the added latency is the interception cost.",
+ "incorrect":{
+  "A":"ARP cache poisoning is often how an attacker achieves this position, but the question asks what is occurring — the observable behaviour is traffic being routed through an intermediary.",
+  "C":"Resource exhaustion would slow the device or service regardless of path, and would not add a hop to the traceroute.",
+  "D":"DNS spoofing returns a wrong address for a name. The traceroute shows the correct destination reached via an extra hop, not a different destination."}}
+}

@@ -5259,51 +5259,17 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Infrastructure as Code (IaC) expresses infrastructure configurations in executable code, enabling automated, repeatable deployment and management of servers, networks, and other resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code expresses servers, networks and configuration as version-controlled definitions that a pipeline applies. Deployment becomes a repeatable, automated operation rather than a manual build, which is what automating infrastructure requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IaaS is a cloud service model supplying compute and storage. It provides the resources; something still has to automate how they are configured.",
+      "C": "IoC means indicator of compromise — an artefact showing a system was attacked.",
+      "D": "IoT refers to networked embedded devices."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0708",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
-    "type": "single",
-    "question": "Which of the following factors must a systems administrator take into consideration first when reviewing options to remediate a vulnerability on an end-of-life software system in production?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Patch availability"
-      },
-      {
-        "key": "B",
-        "text": "Cost"
-      },
-      {
-        "key": "C",
-        "text": "Ease of rollback"
-      },
-      {
-        "key": "D",
-        "text": "Responsiveness"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The first consideration is whether a patch is available for the end-of-life system. If no patch exists, the administrator must pursue alternative remediation options such as migration, isolation, or compensating controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5335,12 +5301,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data masking protects sensitive production data when moving it into non-production environments by replacing sensitive fields with realistic but fictitious values, allowing safe testing without exposing real data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A UAT environment needs data that behaves like production without being production. Masking replaces the sensitive fields with realistic but fictitious values, so testing is meaningful while no real customer data exists outside production.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Tokenisation substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
+      "C": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique for this use case.",
+      "D": "Encryption protects data but the testers would need the key to use it, at which point the real data is exposed anyway."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5373,12 +5343,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) can enforce granular, application-level rules such as allowing downloads while blocking uploads to a specific file-sharing site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IDS detects and alerts. It blocks nothing.",
+      "B": "An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
+      "C": "A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5411,51 +5385,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Load balancing distributes incoming traffic across multiple identical sites, increasing application resilience and ensuring continued availability even if one site experiences performance issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Splitting traffic between two identical sites so both serve users, with either able to carry the load if the other fails, is load balancing. Sharing traffic rather than holding one site idle is what the question describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Geographic disruption is not a recognised term. Geographic dispersion means placing sites apart, which is a related but different concept.",
+      "C": "Failover switches to a standby when the primary fails. The standby is idle until then rather than sharing traffic.",
+      "D": "Parallel processing runs work concurrently for performance, typically within a computation rather than across sites."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0723",
+    "id": "q0722",
     "domain": 3,
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A company phone with proprietary data used by an employee has been stolen.\nWhich of the following can be used to remotely wipe the device?",
+    "question": "An organization needs to block certain information from view.\nWhich of the following should the organization use to accomplish this task?",
     "choices": [
       {
         "key": "A",
-        "text": "MDM"
+        "text": "Obfuscation"
       },
       {
         "key": "B",
-        "text": "MFD"
+        "text": "Classification policy"
       },
       {
         "key": "C",
-        "text": "NAC"
+        "text": "Verification"
       },
       {
         "key": "D",
-        "text": "DLP"
+        "text": "Block rules"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Mobile device management enables administrators to remotely manage, secure, and wipe mobile devices, ensuring that sensitive data can be erased if a device is lost or stolen.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Obfuscation transforms information so it cannot be read or understood by someone who should not see it, while the system can still work with it. Blocking information from view is precisely what it achieves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A classification policy defines sensitivity levels and handling rules. It says what must be protected without hiding anything itself.",
+      "C": "Verification confirms something is accurate or genuine.",
+      "D": "Block rules stop traffic reaching a destination. They control access to a resource rather than concealing information within it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5487,12 +5469,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Network access control enforces authentication and authorization policies before allowing devices to connect to the corporate network, preventing unauthorized or noncompliant visitor devices from accessing internal Wi-Fi networks and network resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Visitors are reaching the corporate network because nothing checks who or what is connecting. Network access control authenticates and posture-checks every device at the point of connection — wired port or wireless — and refuses or quarantines anything unauthorised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A VPN encrypts remote access into the network. These visitors are physically on site.",
+      "B": "WPA3 strengthens wireless encryption and authentication, which helps with the Wi-Fi half but does nothing about open network ports.",
+      "D": "HIDS monitors activity on an individual host. It protects that machine and has no say over who joins the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5525,12 +5511,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Software-defined wide area networking centrally manages multiple types of WAN links and dynamically selects paths based on performance, cost, and policy criteria, ensuring consistent connectivity and optimized use of all available circuits across geographically distributed locations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Several link types at each site, and a need to use each according to policy and performance, is exactly the problem SD-WAN solves. It manages the circuits centrally and steers traffic dynamically based on cost, latency and application requirements.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A UTM bundles security functions into one boundary appliance. It filters traffic rather than selecting paths.",
+      "C": "A VPN encrypts a tunnel between endpoints. It secures one path without managing a choice between several.",
+      "D": "SASE combines networking and security from the cloud and is related, but the requirement described is specifically about leveraging multiple existing circuits by criteria, which is SD-WAN's defining capability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p309",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5563,12 +5553,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Virtual private networks encrypt remote connections, protecting data in transit from interception and eavesdropping, which directly improves the confidentiality of remote access to enterprise infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality of a remote connection means nobody on the path can read it. A VPN encrypts the traffic end to end across untrusted networks, which is the direct answer to that requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Firewalls control which traffic is permitted. They filter rather than encrypt, so permitted traffic still crosses in whatever form it was sent.",
+      "C": "Extensive logging supports detection and investigation. It records rather than protects.",
+      "D": "Intrusion detection systems alert on suspicious traffic. Again detection, not confidentiality."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p312",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false

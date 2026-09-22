@@ -9309,51 +9309,17 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Chain of custody ensures evidence is properly collected, preserved, documented, and handled so it remains admissible and unaltered during an investigation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the documented record of who collected each item, when, and every hand it passed through afterwards. External investigators depend on it because without that unbroken trail the evidence can be challenged as altered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores systems to normal operation. It happens after the investigation's evidence needs are met.",
+      "C": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling of collected evidence.",
+      "D": "Preparation is the work done before any incident — building plans, tooling and training."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.947,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0702",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
-    "type": "single",
-    "question": "A technician is setting up a public-facing web server and needs to ensure traffic is secure.\nWhich of the following steps should the technician take to begin this process?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Domain validation"
-      },
-      {
-        "key": "B",
-        "text": "DNS filtering"
-      },
-      {
-        "key": "C",
-        "text": "Wildcard creation"
-      },
-      {
-        "key": "D",
-        "text": "CSR generation"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Generating a Certificate Signing Request (CSR) is the first step when securing a public-facing server, as it provides the information needed for the certificate authority to issue an SSL/TLS certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9385,12 +9351,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Content categorization classifies websites into predefined categories (such as adult content), allowing administrators to block entire categories and ensure only age-appropriate material is accessible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Content categorisation assigns every site to a class such as adult, gambling or social media, so entire categories can be blocked in one rule. That is how a school restricts material by nature rather than maintaining a list of individual sites.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reputation filters block sites known to be malicious. Age-inappropriate content is often on perfectly reputable sites.",
+      "B": "Network access control decides which devices may join the network. It has no view of what they browse.",
+      "C": "User behaviour analytics flags anomalous activity. It reports after the fact rather than blocking access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9423,13 +9393,101 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Static code analysis examines source code before compilation to identify errors and security weaknesses early in the development process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The engineer wants to find problems before compiling, which rules out anything requiring a running program. Static code analysis reads the source itself and reports errors and security weaknesses at exactly that point in the workflow.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability scanner probes a running system for known flaws. There is no deployed system yet.",
+      "C": "Input validation is a defensive technique written into the code. It is something the engineer implements, not a way to check for flaws.",
+      "D": "Sandbox testing runs the software in isolation to observe behaviour. That requires a compiled build."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p300",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.565,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0707",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an operating system and applications?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Installing a new operating system thoroughly tests the equipment"
+      },
+      {
+        "key": "B",
+        "text": "Removing unneeded applications reduces the system's attack surface"
+      },
+      {
+        "key": "C",
+        "text": "Reimaging a system creates an updated baseline of the computer image"
+      },
+      {
+        "key": "D",
+        "text": "Wiping the device allows the company to evaluate its performance"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A new device ships with vendor utilities, trial software and services nobody in the organisation needs, each of which must be patched and each of which could be exploited. Wiping and applying a controlled corporate image removes all of it, which shrinks the attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Installing an operating system does not constitute a hardware test. Burn-in testing is a separate activity.",
+      "C": "Reimaging applies an existing baseline rather than creating an updated one. The baseline is defined beforehand.",
+      "D": "Performance evaluation is a procurement concern, and wiping the device is not how it would be measured."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p301",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0708",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "Which of the following factors must a systems administrator take into consideration first when reviewing options to remediate a vulnerability on an end-of-life software system in production?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Patch availability"
+      },
+      {
+        "key": "B",
+        "text": "Cost"
+      },
+      {
+        "key": "C",
+        "text": "Ease of rollback"
+      },
+      {
+        "key": "D",
+        "text": "Responsiveness"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Everything else depends on the answer to this. If the vendor still provides a patch the remediation is straightforward; if it does not, the administrator must pivot to migration, isolation or compensating controls. Patch availability is the branch point.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Cost matters, but you cannot cost an option before establishing which options exist.",
+      "C": "Ease of rollback matters once a change is planned. It presumes there is something to roll back.",
+      "D": "Responsiveness describes how quickly a system reacts. It is a performance characteristic, not a remediation factor."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p301",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9461,12 +9519,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Threat hunting is a proactive activity used to search for hidden or undetected malicious actors when no alerts have been triggered but suspicious activity is suspected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "No alerts have fired, so the detection tooling has nothing to show. Threat hunting is the proactive search through telemetry for evidence of an adversary that automated detection missed, driven by hypotheses rather than alerts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Digital forensics analyses evidence from a known incident. There is no confirmed incident yet.",
+      "C": "Vulnerability scanning finds weaknesses that could be exploited. It says nothing about whether anyone is currently inside.",
+      "D": "E-discovery is the legal process of producing electronically stored information for litigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9474,8 +9536,8 @@ export const domain4Questions = [
   {
     "id": "q0714",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A software engineer is downloading a third-party application from a public repository and wants to ensure the application has not been maliciously altered.\nWhich of the following techniques should the engineer use?",
     "choices": [
@@ -9499,89 +9561,101 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Code signing provides a cryptographic signature that verifies the software's authenticity and integrity, ensuring it has not been tampered with before download or installation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a signature created with the publisher's private key. Verifying it proves both who released the software and that not a byte has changed since, so a maliciously altered copy fails verification before it is ever run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Dynamic analysis runs the application to observe behaviour. That means executing untrusted code, which is exactly what you are trying to avoid.",
+      "C": "Encryption in transit protects the download from interception. It does nothing if the file on the repository was already altered.",
+      "D": "Static analysis reads the code for defects. It could find a problem but is impractical for a third-party binary and does not establish authenticity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0715",
+    "id": "q0723",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "Which of the following risk management strategies describes applying a compensating control to a device rather than patching?",
+    "question": "A company phone with proprietary data used by an employee has been stolen.\nWhich of the following can be used to remotely wipe the device?",
     "choices": [
       {
         "key": "A",
-        "text": "Acceptance"
+        "text": "MDM"
       },
       {
         "key": "B",
-        "text": "Mitigation"
+        "text": "MFD"
       },
       {
         "key": "C",
-        "text": "Avoidance"
+        "text": "NAC"
       },
       {
         "key": "D",
-        "text": "Transference"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Mitigation reduces risk by applying alternative controls - such as compensating controls - when patching is not possible, lowering the likelihood or impact of the vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p304",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0722",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
-    "type": "single",
-    "question": "An organization needs to block certain information from view.\nWhich of the following should the organization use to accomplish this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Obfuscation"
-      },
-      {
-        "key": "B",
-        "text": "Classification policy"
-      },
-      {
-        "key": "C",
-        "text": "Verification"
-      },
-      {
-        "key": "D",
-        "text": "Block rules"
+        "text": "DLP"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Obfuscation hides or masks sensitive information so it is not easily understood or readable by unauthorized individuals while still allowing authorized processing or use when required.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management enrols company devices under central control, and remote wipe is one of its core functions. With the handset stolen, issuing a wipe from the MDM console is what removes the proprietary data from it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MFD means multifunction device — a printer, scanner and copier combined. It is unrelated.",
+      "C": "NAC decides which devices may join the network. A stolen phone off the network is beyond its reach.",
+      "D": "DLP inspects data leaving the organisation through monitored channels. A device physically taken never passes through it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0730",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Which of the following scenarios will proper application of the least privilege principle prevent?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A network administrator shuts down a critical network interface."
+      },
+      {
+        "key": "B",
+        "text": "An analyst saves an unauthorized configuration."
+      },
+      {
+        "key": "C",
+        "text": "A threat actor discovers credentials for a shared service account."
+      },
+      {
+        "key": "D",
+        "text": "A change is executed outside of the approved change window."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Least privilege grants only the permissions a role genuinely needs. An analyst whose job is to review rather than change simply would not hold the rights to save a configuration, so the unauthorised change becomes impossible rather than merely prohibited.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A network administrator shutting down a critical interface is acting within legitimate privileges. Least privilege does not prevent authorised people doing authorised things.",
+      "C": "A threat actor discovering shared service account credentials is a credential management failure. Least privilege limits the damage afterwards but does not prevent the discovery.",
+      "D": "A change outside the approved window is a change management violation, addressed by process rather than permissions."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p310",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },

@@ -5923,51 +5923,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "File Integrity Monitoring (FIM) detects any unauthorized modification to system-level files or data, ensuring those files remain unchanged unless properly authorized.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring hashes protected system files and alerts the moment one changes. For system-level data, where any modification outside a controlled process is suspicious, that is the control that surfaces it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A NIDS detects suspicious traffic on the network. It never sees changes to files on a host.",
+      "B": "DLP inspects data leaving the organisation. Changing a local system file crosses no boundary.",
+      "C": "NAC decides which devices may join the network. It governs admission, not file state."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0707",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an operating system and applications?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Installing a new operating system thoroughly tests the equipment"
-      },
-      {
-        "key": "B",
-        "text": "Removing unneeded applications reduces the system's attack surface"
-      },
-      {
-        "key": "C",
-        "text": "Reimaging a system creates an updated baseline of the computer image"
-      },
-      {
-        "key": "D",
-        "text": "Wiping the device allows the company to evaluate its performance"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Removing the vendor's default software and installing a clean company image eliminates unnecessary applications and services, reducing the overall attack surface and improving security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5999,12 +5965,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A DDoS attack can overwhelm the VPN gateway with excessive traffic, preventing legitimate remote users from establishing VPN sessions even though their credentials, permissions, and internet connections are all functioning normally.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Credentials, permissions and connectivity all check out, yet every remote user fails identically. That points at the VPN gateway itself being unable to service requests, which is what a distributed denial of service produces by exhausting its capacity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A collision is when two different inputs produce the same hash. It is a cryptographic weakness, not a login failure.",
+      "B": "Password spraying tries common passwords across many accounts. It causes failed authentications for targeted accounts, not identical errors for everyone with valid credentials.",
+      "C": "An on-path attack intercepts traffic. It typically aims to stay invisible rather than break the service for every user."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6037,12 +6007,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Isolation prevents potentially infected systems from interacting with the rest of the network, immediately containing the spread of malware and limiting further impact while remediation actions are planned and executed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virus alerts on machines already out of compliance means infections are present and may be spreading. Isolation immediately stops those hosts reaching anything else, containing the problem while patching and clean-up are planned — containment comes before remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching is the right remediation and must follow, but applying updates to machines that are already infected does not remove the malware or stop it spreading meanwhile.",
+      "B": "Segmentation is an architectural change that takes time to design and implement. It does not address the live infections now.",
+      "C": "Monitoring adds visibility. It observes the spread rather than stopping it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p306",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.538,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6075,12 +6049,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state attackers typically have advanced capabilities and resources, making them more likely to exploit previously unknown vulnerabilities that do not yet have patches or signatures, enabling stealthy and high-impact attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Nation-states have the resources to discover or purchase vulnerabilities nobody else knows about. A zero-day has no patch and no signature, which gives them stealth and reliability that commodity attackers cannot match.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection is a well-known web application flaw. It is widely exploited by low-skill attackers and defended against routinely.",
+      "C": "A buffer overflow is a classic memory defect, largely mitigated in modern software by compiler and OS protections.",
+      "D": "Cross-site scripting is a common web vulnerability that requires no special resources to exploit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6113,51 +6091,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "HTTP security headers such as Content Security Policy, X-XSS-Protection, and X-Content- Type-Options help prevent the execution of malicious scripts in a user's browser, reducing the risk of cross-site scripting attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Security response headers such as Content-Security-Policy constrain what scripts a browser will execute and from where. That directly limits the ability of injected script to run, which is the mechanism cross-site scripting depends on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SQL injection happens server side when input is interpreted as a query. Headers sent to the browser have no effect on it.",
+      "C": "Denial of service exhausts capacity. Headers do not change how much traffic a server can absorb.",
+      "D": "SSL is a protocol, and a deprecated one. It is not a risk that headers mitigate, though HSTS enforces the use of TLS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p309",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0730",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following scenarios will proper application of the least privilege principle prevent?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "A network administrator shuts down a critical network interface."
-      },
-      {
-        "key": "B",
-        "text": "An analyst saves an unauthorized configuration."
-      },
-      {
-        "key": "C",
-        "text": "A threat actor discovers credentials for a shared service account."
-      },
-      {
-        "key": "D",
-        "text": "A change is executed outside of the approved change window."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Applying the principle of least privilege ensures users are granted only the minimum permissions required to perform their job functions, which prevents an analyst from having sufficient access to save or apply unauthorized configurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p310",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6189,12 +6133,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The slow traceroute shows an extra first hop (10.20.10.10) with very high latency that does not appear when tracing from a known-good device on the same port. This indicates the affected device's traffic is being redirected through an additional intermediary on the path, consistent with an on-path (man-in-the-middle) attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The affected device's traffic passes through an extra first hop with high latency that does not appear from a healthy device on the same port. An unexpected intermediary inserted into one host's path is the signature of an on-path attack, and the added latency is the interception cost.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "ARP cache poisoning is often how an attacker achieves this position, but the question asks what is occurring — the observable behaviour is traffic being routed through an intermediary.",
+      "C": "Resource exhaustion would slow the device or service regardless of path, and would not add a hop to the traceroute.",
+      "D": "DNS spoofing returns a wrong address for a name. The traceroute shows the correct destination reached via an extra hop, not a different destination."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p312",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

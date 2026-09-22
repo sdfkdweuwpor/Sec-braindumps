@@ -3979,12 +3979,58 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A Certificate Revocation List (CRL) is downloaded and checked locally, allowing passive verification of whether a certificate is expired or revoked without querying an online responder.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A CRL is downloaded and checked locally, so the client consults a cached list rather than contacting the CA at validation time. That offline check is what makes it passive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "OCSP queries an online responder in real time for each certificate. Making a live request is active, not passive.",
+      "C": "A TPM is a hardware chip storing keys and measuring boot integrity. It performs no certificate status checking.",
+      "D": "A CSR is the request submitted to obtain a certificate. It belongs at issuance, not validation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0702",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "A technician is setting up a public-facing web server and needs to ensure traffic is secure.\nWhich of the following steps should the technician take to begin this process?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Domain validation"
+      },
+      {
+        "key": "B",
+        "text": "DNS filtering"
+      },
+      {
+        "key": "C",
+        "text": "Wildcard creation"
+      },
+      {
+        "key": "D",
+        "text": "CSR generation"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Securing a public web server means obtaining a TLS certificate, and that process begins with generating a key pair and a certificate signing request containing the public key and subject details. Everything else follows from submitting that CSR.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Domain validation is the check the CA performs after receiving the request. It is their step, not the technician's first one.",
+      "B": "DNS filtering blocks resolution of malicious domains. It protects users browsing out, not a server being published.",
+      "C": "Wildcard creation is a choice about what the certificate covers. It is a detail of the request rather than the step that starts it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p299",
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4017,12 +4063,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A digital certificate enables both encryption (confidentiality) and digital signatures (integrity), providing strong cryptographic protection for data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital certificate binds a public key to an identity, which supports both goals at once: the key enables encryption for confidentiality, and signing with the corresponding private key provides integrity and proof of origin.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to read without genuine cryptographic strength, and it verifies nothing.",
+      "B": "Tokenisation substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
+      "D": "Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4064,12 +4114,17 @@ export const domain1Questions = [
       "E",
       "F"
     ],
-    "explanation": "Password databases should store passwords using a secure one-way transformation to prevent recovery, which is achieved by hashing. They should also be placed in an isolated network segment to limit access and reduce exposure, which is achieved through segmentation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers apply. Passwords should be stored as salted hashes, so a breach of the database yields digests rather than credentials. The server itself should sit in an isolated network segment, so far fewer systems can reach it in the first place.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Signing proves origin and integrity of data. It does not protect stored passwords from disclosure.",
+      "B": "Sanitisation removes data from media at end of life. It is a disposal control.",
+      "C": "Tokenisation substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
+      "D": "Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p304",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4077,8 +4132,8 @@ export const domain1Questions = [
   {
     "id": "q0719",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
     "question": "Which of the following are examples of operational controls that would be appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
@@ -4111,12 +4166,17 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Dual control ensures that no single individual can complete sensitive financial transactions alone, reducing the risk of fraud and error through enforced separation of duties. Mandatory vacations help detect fraudulent activity by requiring employees to step away from their roles, increasing the likelihood that unauthorized or improper actions are discovered during their absence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key escrow is a technical control for recovering encryption keys.",
+      "B": "Tokenisation is a technical data protection technique.",
+      "E": "Access badge readers are physical controls.",
+      "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.353,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4158,12 +4218,17 @@ export const domain1Questions = [
       "A",
       "B"
     ],
-    "explanation": "A security guard provides an active physical presence that deters vandalism through direct observation and the ability to intervene or report incidents immediately.\nLighting increases visibility in the affected area, discouraging vandalism by reducing concealment and increasing the likelihood of identification.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Deterrence works by making an offender believe they will be seen or caught. A guard provides an active presence that can observe and intervene, and lighting removes the concealment vandals rely on — both discourage the act rather than physically blocking it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Bollards physically stop vehicles from entering an area. They are preventive and do not address vandalism to parked cars.",
+      "D": "An access control vestibule controls people entering a building. The problem is outdoors in an ungated area.",
+      "E": "Door locks prevent entry to a building. They are preventive and irrelevant to a car park.",
+      "F": "An access badge authenticates someone at a controlled door."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false

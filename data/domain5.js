@@ -5070,8 +5070,8 @@ export const domain5Questions = [
   {
     "id": "q0704",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following is an internal audit team's function within risk management?",
     "choices": [
@@ -5095,12 +5095,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Internal audit teams assess whether the organization is complying with its established policies, ensuring controls are followed and effective.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Internal audit exists to test whether the organisation actually does what its policies say, using its own staff and reporting to management. Assessing compliance with established policy is the function, and independence from those operating the controls is what makes it credible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defining exposure posture is a risk management responsibility. Audit measures against decisions rather than making them.",
+      "B": "Implementing regulatory requirements is operational work. Audit must stay independent of what it examines.",
+      "D": "Defining and updating control monitoring is a management activity. Audit evaluates that monitoring rather than designing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p300",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.462,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5142,13 +5146,60 @@ export const domain5Questions = [
       "A",
       "D"
     ],
-    "explanation": "A risk matrix evaluates overall risk by plotting the likelihood of an event occurring against the impact it would have, producing a clear risk rating for decision-making.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk matrix plots two axes: how likely an event is and how badly it would hurt. Likelihood and impact combine to produce the rating, which is what makes the matrix a qualitative tool rather than a monetary calculation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
+      "C": "SLE is the monetary loss from one incident, used in quantitative analysis.",
+      "E": "ALE is the annualised monetary loss, again quantitative.",
+      "F": "ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0715",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "Which of the following risk management strategies describes applying a compensating control to a device rather than patching?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Acceptance"
+      },
+      {
+        "key": "B",
+        "text": "Mitigation"
+      },
+      {
+        "key": "C",
+        "text": "Avoidance"
+      },
+      {
+        "key": "D",
+        "text": "Transference"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
+      "C": "Avoidance means ceasing the activity entirely. The device stays in service.",
+      "D": "Transference shifts the financial consequence to a third party, typically through insurance."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p304",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5180,12 +5231,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "This test evaluates the effectiveness of physical security controls by attempting to gain unauthorized access to a secure area through impersonation and social engineering, rather than exploiting technical systems or configurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester defeated physical access controls by impersonating a trusted vendor and walking into a secure area. Testing whether physical barriers, procedures and staff vigilance can be bypassed is a physical penetration test.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Integrated testing combines offensive and defensive teams working together during an exercise.",
+      "C": "Partially known environment describes how much information the tester was given, not what was tested.",
+      "D": "Known environment likewise describes the information provided rather than the test type."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p306",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5218,12 +5273,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The $1 million represents a predefined trigger point at which a specific risk response is initiated, indicating the level at which the organization decides to take action by transferring the risk through insurance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The figure is a defined trigger: below it the organisation carries the risk, above it a specific response is initiated. A level at which action becomes required is a risk threshold.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk indicator is a signal that a risk may be materialising, such as a rising metric. It warns rather than triggering a decision.",
+      "B": "Risk tolerance is the broader acceptable variation around the organisation's appetite. The threshold is the specific number derived from it.",
+      "D": "Risk exposure is the amount of risk actually faced. It is what gets measured against the threshold."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

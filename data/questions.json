@@ -29442,12 +29442,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Infrastructure as Code (IaC) expresses infrastructure configurations in executable code, enabling automated, repeatable deployment and management of servers, networks, and other resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code expresses servers, networks and configuration as version-controlled definitions that a pipeline applies. Deployment becomes a repeatable, automated operation rather than a manual build, which is what automating infrastructure requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IaaS is a cloud service model supplying compute and storage. It provides the resources; something still has to automate how they are configured.",
+      "C": "IoC means indicator of compromise — an artefact showing a system was attacked.",
+      "D": "IoT refers to networked embedded devices."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29480,12 +29484,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Chain of custody ensures evidence is properly collected, preserved, documented, and handled so it remains admissible and unaltered during an investigation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the documented record of who collected each item, when, and every hand it passed through afterwards. External investigators depend on it because without that unbroken trail the evidence can be challenged as altered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores systems to normal operation. It happens after the investigation's evidence needs are met.",
+      "C": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling of collected evidence.",
+      "D": "Preparation is the work done before any incident — building plans, tooling and training."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.947,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29518,21 +29526,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A Certificate Revocation List (CRL) is downloaded and checked locally, allowing passive verification of whether a certificate is expired or revoked without querying an online responder.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A CRL is downloaded and checked locally, so the client consults a cached list rather than contacting the CA at validation time. That offline check is what makes it passive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "OCSP queries an online responder in real time for each certificate. Making a live request is active, not passive.",
+      "C": "A TPM is a hardware chip storing keys and measuring boot integrity. It performs no certificate status checking.",
+      "D": "A CSR is the request submitted to obtain a certificate. It belongs at issuance, not validation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0702",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
     "question": "A technician is setting up a public-facing web server and needs to ensure traffic is secure.\nWhich of the following steps should the technician take to begin this process?",
     "choices": [
@@ -29556,12 +29568,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Generating a Certificate Signing Request (CSR) is the first step when securing a public-facing server, as it provides the information needed for the certificate authority to issue an SSL/TLS certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Securing a public web server means obtaining a TLS certificate, and that process begins with generating a key pair and a certificate signing request containing the public key and subject details. Everything else follows from submitting that CSR.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Domain validation is the check the CA performs after receiving the request. It is their step, not the technician's first one.",
+      "B": "DNS filtering blocks resolution of malicious domains. It protects users browsing out, not a server being published.",
+      "C": "Wildcard creation is a choice about what the certificate covers. It is a detail of the request rather than the step that starts it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29594,12 +29610,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Content categorization classifies websites into predefined categories (such as adult content), allowing administrators to block entire categories and ensure only age-appropriate material is accessible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Content categorisation assigns every site to a class such as adult, gambling or social media, so entire categories can be blocked in one rule. That is how a school restricts material by nature rather than maintaining a list of individual sites.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reputation filters block sites known to be malicious. Age-inappropriate content is often on perfectly reputable sites.",
+      "B": "Network access control decides which devices may join the network. It has no view of what they browse.",
+      "C": "User behaviour analytics flags anomalous activity. It reports after the fact rather than blocking access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p299",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29607,8 +29627,8 @@
   {
     "id": "q0704",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following is an internal audit team's function within risk management?",
     "choices": [
@@ -29632,12 +29652,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Internal audit teams assess whether the organization is complying with its established policies, ensuring controls are followed and effective.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Internal audit exists to test whether the organisation actually does what its policies say, using its own staff and reporting to management. Assessing compliance with established policy is the function, and independence from those operating the controls is what makes it credible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defining exposure posture is a risk management responsibility. Audit measures against decisions rather than making them.",
+      "B": "Implementing regulatory requirements is operational work. Audit must stay independent of what it examines.",
+      "D": "Defining and updating control monitoring is a management activity. Audit evaluates that monitoring rather than designing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p300",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.462,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29670,12 +29694,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Static code analysis examines source code before compilation to identify errors and security weaknesses early in the development process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The engineer wants to find problems before compiling, which rules out anything requiring a running program. Static code analysis reads the source itself and reports errors and security weaknesses at exactly that point in the workflow.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability scanner probes a running system for known flaws. There is no deployed system yet.",
+      "C": "Input validation is a defensive technique written into the code. It is something the engineer implements, not a way to check for flaws.",
+      "D": "Sandbox testing runs the software in isolation to observe behaviour. That requires a compiled build."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p300",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.565,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29708,21 +29736,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "File Integrity Monitoring (FIM) detects any unauthorized modification to system-level files or data, ensuring those files remain unchanged unless properly authorized.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring hashes protected system files and alerts the moment one changes. For system-level data, where any modification outside a controlled process is suspicious, that is the control that surfaces it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A NIDS detects suspicious traffic on the network. It never sees changes to files on a host.",
+      "B": "DLP inspects data leaving the organisation. Changing a local system file crosses no boundary.",
+      "C": "NAC decides which devices may join the network. It governs admission, not file state."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0707",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an operating system and applications?",
     "choices": [
@@ -29746,21 +29778,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Removing the vendor's default software and installing a clean company image eliminates unnecessary applications and services, reducing the overall attack surface and improving security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A new device ships with vendor utilities, trial software and services nobody in the organisation needs, each of which must be patched and each of which could be exploited. Wiping and applying a controlled corporate image removes all of it, which shrinks the attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Installing an operating system does not constitute a hardware test. Burn-in testing is a separate activity.",
+      "C": "Reimaging applies an existing baseline rather than creating an updated one. The baseline is defined beforehand.",
+      "D": "Performance evaluation is a procurement concern, and wiping the device is not how it would be measured."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0708",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "Which of the following factors must a systems administrator take into consideration first when reviewing options to remediate a vulnerability on an end-of-life software system in production?",
     "choices": [
@@ -29784,12 +29820,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The first consideration is whether a patch is available for the end-of-life system. If no patch exists, the administrator must pursue alternative remediation options such as migration, isolation, or compensating controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Everything else depends on the answer to this. If the vendor still provides a patch the remediation is straightforward; if it does not, the administrator must pivot to migration, isolation or compensating controls. Patch availability is the branch point.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Cost matters, but you cannot cost an option before establishing which options exist.",
+      "C": "Ease of rollback matters once a change is planned. It presumes there is something to roll back.",
+      "D": "Responsiveness describes how quickly a system reacts. It is a performance characteristic, not a remediation factor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p301",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29831,12 +29871,17 @@
       "A",
       "D"
     ],
-    "explanation": "A risk matrix evaluates overall risk by plotting the likelihood of an event occurring against the impact it would have, producing a clear risk rating for decision-making.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk matrix plots two axes: how likely an event is and how badly it would hurt. Likelihood and impact combine to produce the rating, which is what makes the matrix a qualitative tool rather than a monetary calculation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
+      "C": "SLE is the monetary loss from one incident, used in quantitative analysis.",
+      "E": "ALE is the annualised monetary loss, again quantitative.",
+      "F": "ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29869,12 +29914,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Data masking protects sensitive production data when moving it into non-production environments by replacing sensitive fields with realistic but fictitious values, allowing safe testing without exposing real data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A UAT environment needs data that behaves like production without being production. Masking replaces the sensitive fields with realistic but fictitious values, so testing is meaningful while no real customer data exists outside production.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Tokenisation substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
+      "C": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique for this use case.",
+      "D": "Encryption protects data but the testers would need the key to use it, at which point the real data is exposed anyway."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29907,12 +29956,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) can enforce granular, application-level rules such as allowing downloads while blocking uploads to a specific file-sharing site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IDS detects and alerts. It blocks nothing.",
+      "B": "An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
+      "C": "A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p302",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29945,12 +29998,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A digital certificate enables both encryption (confidentiality) and digital signatures (integrity), providing strong cryptographic protection for data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital certificate binds a public key to an identity, which supports both goals at once: the key enables encryption for confidentiality, and signing with the corresponding private key provides integrity and proof of origin.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to read without genuine cryptographic strength, and it verifies nothing.",
+      "B": "Tokenisation substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
+      "D": "Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29983,12 +30040,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Threat hunting is a proactive activity used to search for hidden or undetected malicious actors when no alerts have been triggered but suspicious activity is suspected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "No alerts have fired, so the detection tooling has nothing to show. Threat hunting is the proactive search through telemetry for evidence of an adversary that automated detection missed, driven by hypotheses rather than alerts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Digital forensics analyses evidence from a known incident. There is no confirmed incident yet.",
+      "C": "Vulnerability scanning finds weaknesses that could be exploited. It says nothing about whether anyone is currently inside.",
+      "D": "E-discovery is the legal process of producing electronically stored information for litigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29996,8 +30057,8 @@
   {
     "id": "q0714",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A software engineer is downloading a third-party application from a public repository and wants to ensure the application has not been maliciously altered.\nWhich of the following techniques should the engineer use?",
     "choices": [
@@ -30021,21 +30082,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Code signing provides a cryptographic signature that verifies the software's authenticity and integrity, ensuring it has not been tampered with before download or installation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a signature created with the publisher's private key. Verifying it proves both who released the software and that not a byte has changed since, so a maliciously altered copy fails verification before it is ever run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Dynamic analysis runs the application to observe behaviour. That means executing untrusted code, which is exactly what you are trying to avoid.",
+      "C": "Encryption in transit protects the download from interception. It does nothing if the file on the repository was already altered.",
+      "D": "Static analysis reads the code for defects. It could find a problem but is impractical for a third-party binary and does not establish authenticity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p303",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0715",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
     "question": "Which of the following risk management strategies describes applying a compensating control to a device rather than patching?",
     "choices": [
@@ -30059,12 +30124,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Mitigation reduces risk by applying alternative controls - such as compensating controls - when patching is not possible, lowering the likelihood or impact of the vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
+      "C": "Avoidance means ceasing the activity entirely. The device stays in service.",
+      "D": "Transference shifts the financial consequence to a third party, typically through insurance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p304",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30106,12 +30175,17 @@
       "E",
       "F"
     ],
-    "explanation": "Password databases should store passwords using a secure one-way transformation to prevent recovery, which is achieved by hashing. They should also be placed in an isolated network segment to limit access and reduce exposure, which is achieved through segmentation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers apply. Passwords should be stored as salted hashes, so a breach of the database yields digests rather than credentials. The server itself should sit in an isolated network segment, so far fewer systems can reach it in the first place.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Signing proves origin and integrity of data. It does not protect stored passwords from disclosure.",
+      "B": "Sanitisation removes data from media at end of life. It is a disposal control.",
+      "C": "Tokenisation substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
+      "D": "Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p304",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30144,12 +30218,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A DDoS attack can overwhelm the VPN gateway with excessive traffic, preventing legitimate remote users from establishing VPN sessions even though their credentials, permissions, and internet connections are all functioning normally.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Credentials, permissions and connectivity all check out, yet every remote user fails identically. That points at the VPN gateway itself being unable to service requests, which is what a distributed denial of service produces by exhausting its capacity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A collision is when two different inputs produce the same hash. It is a cryptographic weakness, not a login failure.",
+      "B": "Password spraying tries common passwords across many accounts. It causes failed authentications for targeted accounts, not identical errors for everyone with valid credentials.",
+      "C": "An on-path attack intercepts traffic. It typically aims to stay invisible rather than break the service for every user."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30182,12 +30260,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Load balancing distributes incoming traffic across multiple identical sites, increasing application resilience and ensuring continued availability even if one site experiences performance issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Splitting traffic between two identical sites so both serve users, with either able to carry the load if the other fails, is load balancing. Sharing traffic rather than holding one site idle is what the question describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Geographic disruption is not a recognised term. Geographic dispersion means placing sites apart, which is a related but different concept.",
+      "C": "Failover switches to a standby when the primary fails. The standby is idle until then rather than sharing traffic.",
+      "D": "Parallel processing runs work concurrently for performance, typically within a computation rather than across sites."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30195,8 +30277,8 @@
   {
     "id": "q0719",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
     "question": "Which of the following are examples of operational controls that would be appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
@@ -30229,12 +30311,17 @@
       "C",
       "D"
     ],
-    "explanation": "Dual control ensures that no single individual can complete sensitive financial transactions alone, reducing the risk of fraud and error through enforced separation of duties. Mandatory vacations help detect fraudulent activity by requiring employees to step away from their roles, increasing the likelihood that unauthorized or improper actions are discovered during their absence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key escrow is a technical control for recovering encryption keys.",
+      "B": "Tokenisation is a technical data protection technique.",
+      "E": "Access badge readers are physical controls.",
+      "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p305",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.353,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30267,12 +30354,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "This test evaluates the effectiveness of physical security controls by attempting to gain unauthorized access to a secure area through impersonation and social engineering, rather than exploiting technical systems or configurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester defeated physical access controls by impersonating a trusted vendor and walking into a secure area. Testing whether physical barriers, procedures and staff vigilance can be bypassed is a physical penetration test.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Integrated testing combines offensive and defensive teams working together during an exercise.",
+      "C": "Partially known environment describes how much information the tester was given, not what was tested.",
+      "D": "Known environment likewise describes the information provided rather than the test type."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p306",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30305,21 +30396,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Isolation prevents potentially infected systems from interacting with the rest of the network, immediately containing the spread of malware and limiting further impact while remediation actions are planned and executed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virus alerts on machines already out of compliance means infections are present and may be spreading. Isolation immediately stops those hosts reaching anything else, containing the problem while patching and clean-up are planned — containment comes before remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching is the right remediation and must follow, but applying updates to machines that are already infected does not remove the malware or stop it spreading meanwhile.",
+      "B": "Segmentation is an architectural change that takes time to design and implement. It does not address the live infections now.",
+      "C": "Monitoring adds visibility. It observes the spread rather than stopping it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p306",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.538,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0722",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
     "question": "An organization needs to block certain information from view.\nWhich of the following should the organization use to accomplish this task?",
     "choices": [
@@ -30343,21 +30438,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Obfuscation hides or masks sensitive information so it is not easily understood or readable by unauthorized individuals while still allowing authorized processing or use when required.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Obfuscation transforms information so it cannot be read or understood by someone who should not see it, while the system can still work with it. Blocking information from view is precisely what it achieves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A classification policy defines sensitivity levels and handling rules. It says what must be protected without hiding anything itself.",
+      "C": "Verification confirms something is accurate or genuine.",
+      "D": "Block rules stop traffic reaching a destination. They control access to a resource rather than concealing information within it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0723",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A company phone with proprietary data used by an employee has been stolen.\nWhich of the following can be used to remotely wipe the device?",
     "choices": [
@@ -30381,12 +30480,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Mobile device management enables administrators to remotely manage, secure, and wipe mobile devices, ensuring that sensitive data can be erased if a device is lost or stolen.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management enrols company devices under central control, and remote wipe is one of its core functions. With the handset stolen, issuing a wipe from the MDM console is what removes the proprietary data from it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MFD means multifunction device — a printer, scanner and copier combined. It is unrelated.",
+      "C": "NAC decides which devices may join the network. A stolen phone off the network is beyond its reach.",
+      "D": "DLP inspects data leaving the organisation through monitored channels. A device physically taken never passes through it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30419,12 +30522,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Network access control enforces authentication and authorization policies before allowing devices to connect to the corporate network, preventing unauthorized or noncompliant visitor devices from accessing internal Wi-Fi networks and network resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Visitors are reaching the corporate network because nothing checks who or what is connecting. Network access control authenticates and posture-checks every device at the point of connection — wired port or wireless — and refuses or quarantines anything unauthorised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A VPN encrypts remote access into the network. These visitors are physically on site.",
+      "B": "WPA3 strengthens wireless encryption and authentication, which helps with the Wi-Fi half but does nothing about open network ports.",
+      "D": "HIDS monitors activity on an individual host. It protects that machine and has no say over who joins the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p307",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30457,12 +30564,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The $1 million represents a predefined trigger point at which a specific risk response is initiated, indicating the level at which the organization decides to take action by transferring the risk through insurance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The figure is a defined trigger: below it the organisation carries the risk, above it a specific response is initiated. A level at which action becomes required is a risk threshold.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk indicator is a signal that a risk may be materialising, such as a rising metric. It warns rather than triggering a decision.",
+      "B": "Risk tolerance is the broader acceptable variation around the organisation's appetite. The threshold is the specific number derived from it.",
+      "D": "Risk exposure is the amount of risk actually faced. It is what gets measured against the threshold."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30495,12 +30606,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state attackers typically have advanced capabilities and resources, making them more likely to exploit previously unknown vulnerabilities that do not yet have patches or signatures, enabling stealthy and high-impact attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Nation-states have the resources to discover or purchase vulnerabilities nobody else knows about. A zero-day has no patch and no signature, which gives them stealth and reliability that commodity attackers cannot match.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection is a well-known web application flaw. It is widely exploited by low-skill attackers and defended against routinely.",
+      "C": "A buffer overflow is a classic memory defect, largely mitigated in modern software by compiler and OS protections.",
+      "D": "Cross-site scripting is a common web vulnerability that requires no special resources to exploit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30542,12 +30657,17 @@
       "A",
       "B"
     ],
-    "explanation": "A security guard provides an active physical presence that deters vandalism through direct observation and the ability to intervene or report incidents immediately.\nLighting increases visibility in the affected area, discouraging vandalism by reducing concealment and increasing the likelihood of identification.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Deterrence works by making an offender believe they will be seen or caught. A guard provides an active presence that can observe and intervene, and lighting removes the concealment vandals rely on — both discourage the act rather than physically blocking it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Bollards physically stop vehicles from entering an area. They are preventive and do not address vandalism to parked cars.",
+      "D": "An access control vestibule controls people entering a building. The problem is outdoors in an ungated area.",
+      "E": "Door locks prevent entry to a building. They are preventive and irrelevant to a car park.",
+      "F": "An access badge authenticates someone at a controlled door."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p308",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30580,12 +30700,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "HTTP security headers such as Content Security Policy, X-XSS-Protection, and X-Content- Type-Options help prevent the execution of malicious scripts in a user's browser, reducing the risk of cross-site scripting attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Security response headers such as Content-Security-Policy constrain what scripts a browser will execute and from where. That directly limits the ability of injected script to run, which is the mechanism cross-site scripting depends on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SQL injection happens server side when input is interpreted as a query. Headers sent to the browser have no effect on it.",
+      "C": "Denial of service exhausts capacity. Headers do not change how much traffic a server can absorb.",
+      "D": "SSL is a protocol, and a deprecated one. It is not a risk that headers mitigate, though HSTS enforces the use of TLS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p309",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30618,21 +30742,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Software-defined wide area networking centrally manages multiple types of WAN links and dynamically selects paths based on performance, cost, and policy criteria, ensuring consistent connectivity and optimized use of all available circuits across geographically distributed locations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Several link types at each site, and a need to use each according to policy and performance, is exactly the problem SD-WAN solves. It manages the circuits centrally and steers traffic dynamically based on cost, latency and application requirements.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A UTM bundles security functions into one boundary appliance. It filters traffic rather than selecting paths.",
+      "C": "A VPN encrypts a tunnel between endpoints. It secures one path without managing a choice between several.",
+      "D": "SASE combines networking and security from the cloud and is related, but the requirement described is specifically about leveraging multiple existing circuits by criteria, which is SD-WAN's defining capability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p309",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0730",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "Which of the following scenarios will proper application of the least privilege principle prevent?",
     "choices": [
@@ -30656,12 +30784,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Applying the principle of least privilege ensures users are granted only the minimum permissions required to perform their job functions, which prevents an analyst from having sufficient access to save or apply unauthorized configurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Least privilege grants only the permissions a role genuinely needs. An analyst whose job is to review rather than change simply would not hold the rights to save a configuration, so the unauthorised change becomes impossible rather than merely prohibited.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A network administrator shutting down a critical interface is acting within legitimate privileges. Least privilege does not prevent authorised people doing authorised things.",
+      "C": "A threat actor discovering shared service account credentials is a credential management failure. Least privilege limits the damage afterwards but does not prevent the discovery.",
+      "D": "A change outside the approved window is a change management violation, addressed by process rather than permissions."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p310",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30694,12 +30826,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Virtual private networks encrypt remote connections, protecting data in transit from interception and eavesdropping, which directly improves the confidentiality of remote access to enterprise infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality of a remote connection means nobody on the path can read it. A VPN encrypts the traffic end to end across untrusted networks, which is the direct answer to that requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Firewalls control which traffic is permitted. They filter rather than encrypt, so permitted traffic still crosses in whatever form it was sent.",
+      "C": "Extensive logging supports detection and investigation. It records rather than protects.",
+      "D": "Intrusion detection systems alert on suspicious traffic. Again detection, not confidentiality."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p312",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30732,12 +30868,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The slow traceroute shows an extra first hop (10.20.10.10) with very high latency that does not appear when tracing from a known-good device on the same port. This indicates the affected device's traffic is being redirected through an additional intermediary on the path, consistent with an on-path (man-in-the-middle) attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The affected device's traffic passes through an extra first hop with high latency that does not appear from a healthy device on the same port. An unexpected intermediary inserted into one host's path is the signature of an on-path attack, and the added latency is the interception cost.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "ARP cache poisoning is often how an attacker achieves this position, but the question asks what is occurring — the observable behaviour is traffic being routed through an intermediary.",
+      "C": "Resource exhaustion would slow the device or service regardless of path, and would not add a hop to the traceroute.",
+      "D": "DNS spoofing returns a wrong address for a name. The traceroute shows the correct destination reached via an extra hop, not a different destination."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p312",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
