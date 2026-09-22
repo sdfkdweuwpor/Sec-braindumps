@@ -6712,12 +6712,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A generator provides long-term power during extended outages by supplying electricity as long as fuel is available, unlike a UPS which is designed for short-term backup.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A generator produces power continuously for as long as it has fuel, so it can carry a data centre through an extended grid outage. That sustained output is what distinguishes it from stored-energy solutions.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A UPS runs on batteries, sized in minutes. Its role is to bridge the gap until the generator starts or shutdown completes.",
+      "C": "An inverter converts DC to AC. It is a component within a power system rather than a source of energy.",
+      "D": "A power conditioner smooths voltage irregularities. It improves power quality but supplies none of its own."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p368",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6725,8 +6729,8 @@ export const domain3Questions = [
   {
     "id": "q0873",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
     "question": "A security analyst reviews firewall configurations and finds that firewalls are configured to fail- open mode in the event of a crash.\nWhich of the following describes the security risk associated with this configuration?",
     "choices": [
@@ -6750,12 +6754,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In fail-open mode, the firewall allows traffic to pass through without inspection during a failure, which can expose the network to unfiltered and potentially malicious traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Fail-open means that when the firewall crashes, traffic keeps flowing rather than stopping. Everything then crosses the boundary without being examined, so the network is exposed to whatever arrives for as long as the failure lasts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Increased latency during failover is a performance concern, and fail-open specifically avoids interrupting the path.",
+      "B": "Authentication tokens are issued by identity systems. A firewall failure does not invalidate them.",
+      "D": "Blocking all encrypted traffic describes fail-closed behaviour, which is the opposite configuration."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p369",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6788,12 +6796,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Backup frequency determines how current the data is at the time of recovery, directly impacting recovery objectives and overall effectiveness in a disaster recovery plan.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "How often backups run determines how much work is lost when you restore, which is precisely what the recovery point objective measures. Frequency is therefore the attribute that decides whether the backups actually satisfy the recovery plan.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hashing verifies that a backup has not been altered. It confirms integrity rather than sufficiency.",
+      "C": "Deduplication reduces storage consumption. It is an efficiency measure with no bearing on recovery objectives.",
+      "D": "Replication copies data to another location. It supports availability but is distinct from backup cadence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p369",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6826,12 +6838,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Filesystem journaling records changes in a log, allowing the system to recover to a consistent or desired state after a crash or failure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Journaling writes each pending change to a log before committing it. After a crash the system replays or rolls back that log to reach a consistent, known state, which is what makes recovery both fast and reliable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Replication to remote secondary media is a separate availability strategy. Journaling operates within one filesystem.",
+      "B": "Saying recovery always exceeds RTO and RPO describes a failure, not the importance of journaling.",
+      "C": "A point-in-time backup is a snapshot. Journaling is a continuous change log rather than a periodic copy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p370",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6864,51 +6880,59 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A warm site provides a compromise between cost and recovery speed by maintaining partially configured systems that can be brought online more quickly than a cold site but at lower cost than a fully operational hot site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A warm site keeps hardware and connectivity ready but not data or live services, so it costs far less than a hot site while recovering far faster than a cold one. That deliberate middle position is the reason to choose it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Real-time replication across identical environments describes a hot site.",
+      "B": "Nothing eliminates the need for backup testing; untested backups fail when relied on.",
+      "C": "Fully automated failover with no intervention again describes a hot site."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p373",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0903",
+    "id": "q0886",
     "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following security methods transforms data to prevent reverse engineering and can protect intellectual property within applications?",
+    "question": "Which of the following impact analysis metrics will best estimate the average operational availability of an asset?",
     "choices": [
       {
         "key": "A",
-        "text": "Masking"
+        "text": "MTBF"
       },
       {
         "key": "B",
-        "text": "Encryption"
+        "text": "SLE"
       },
       {
         "key": "C",
-        "text": "Hashing"
+        "text": "RTO"
       },
       {
         "key": "D",
-        "text": "Obfuscation"
+        "text": "RPO"
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
-    "explanation": "Obfuscation transforms code or data to make it difficult to understand, analyze, or reverse engineer. This helps protect intellectual property embedded in applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mean time between failures expresses how long an asset typically runs before failing. Combined with repair time it gives the proportion of time the asset is expected to be operational, which is the availability estimate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SLE is the monetary loss from a single incident. It is a financial risk measure.",
+      "C": "RTO is the maximum tolerable downtime after a failure. It is a recovery target rather than an availability estimate.",
+      "D": "RPO concerns how much data loss is acceptable."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p380",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
+    "source": "SY0-701_en.pdf#p373",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },

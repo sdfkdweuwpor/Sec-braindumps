@@ -7025,12 +7025,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Open service ports expose running services, and if those services are unnecessary or improperly secured, they provide entry points that attackers can exploit to gain unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every open port is a running service accepting connections. If that service is not needed, or is left unrestricted, it becomes an entry point an attacker can probe and exploit — which is exactly what enlarging the attack surface means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Antivirus scans files on a host. Ports are a network concern and are not what endpoint antivirus examines.",
+      "B": "Remote entry points exposed to the internet is one specific case, but open ports enlarge the attack surface internally too.",
+      "C": "Automatic updates are a patching mechanism and reduce vulnerability windows. That is a benefit, not an increase in exposure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p369",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7063,68 +7067,25 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A race condition occurs when multiple concurrent requests are processed without proper synchronization, allowing attackers to exploit timing issues and bypass safeguards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A race condition arises when concurrent operations are not properly synchronised, so an attacker can slip an action into the window between a check and its use. Duplicate and simultaneous requests are exactly how that window is forced open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sideloading installs software from outside an official store. It is unrelated to request handling.",
+      "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualisation boundaries.",
+      "D": "SQL injection manipulates database queries through input. It exploits parsing, not timing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p370",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.929,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0879",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "multi",
-    "question": "Which of the following phishing-resistant authentication methods reduce the chances of successful social engineering attacks? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "IM OTP"
-      },
-      {
-        "key": "B",
-        "text": "Phone calls"
-      },
-      {
-        "key": "C",
-        "text": "Passwordless"
-      },
-      {
-        "key": "D",
-        "text": "SMS"
-      },
-      {
-        "key": "E",
-        "text": "Security keys"
-      },
-      {
-        "key": "F",
-        "text": "Email"
-      }
-    ],
-    "correct": [
-      "C",
-      "E"
-    ],
-    "explanation": "Passwordless authentication removes reliance on passwords, reducing susceptibility to phishing. Security keys use cryptographic authentication tied to specific domains, making them resistant to phishing and social engineering attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p371",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0884",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "Which of the following is an adversary leveraging when they inject malicious code into regular vendor updates?",
     "choices": [
@@ -7148,13 +7109,59 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Injecting malicious code into vendor updates compromises the trusted distribution process, which is characteristic of a supply chain attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker did not break into the victim at all — they subverted a trusted vendor's update channel and let it deliver the payload. Turning a supplier's legitimate distribution into the attack path is a supply chain compromise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A zero-day is a flaw with no available patch. The update mechanism itself was abused rather than a software defect exploited.",
+      "C": "Sideloading installs software from outside an official channel. Here the official channel was used.",
+      "D": "Operating system names a category of software rather than an attack technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p373",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0890",
+    "domain": 2,
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "type": "single",
+    "question": "A penetration tester, who did not have an access badge, managed to follow a group of employees through multiple badged-access doors and into the data center without being stopped. The tester mentions this finding during the after-action review with the Chief Information Security Officer (CISO).\nWhich of the following issues should the CISO address as a result of this finding?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Role-based access"
+      },
+      {
+        "key": "B",
+        "text": "Shoulder surfing"
+      },
+      {
+        "key": "C",
+        "text": "Insider threat"
+      },
+      {
+        "key": "D",
+        "text": "Social engineering"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The tester got through badged doors by exploiting the natural reluctance of employees to challenge someone walking with them. Tailgating is a social engineering technique, and the finding is that people, not locks, were the weak point.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Role-based access governs what permissions an identity holds. The tester had no identity in the system at all.",
+      "B": "Shoulder surfing is observing someone entering a credential. Nothing was observed or stolen.",
+      "C": "An insider threat comes from someone inside the organisation. The tester is an authorised outsider."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p375",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7186,12 +7193,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Whaling is a targeted phishing attack aimed at senior executives or high-profile individuals. The message is crafted around executive-level authority, such as approving employee bonus payments, to trick the CEO into taking action.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The target is the chief executive and the lure is crafted around their specific authority to approve payments. Phishing aimed at a senior executive is whaling, and the external sending domain is the giveaway that it is fraudulent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Vishing is phishing by voice call. This arrived as email.",
+      "C": "Phishing is the general category; whaling is the precise term when the victim is a top executive.",
+      "D": "Smishing is phishing over SMS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p378",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7224,12 +7235,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Fear is the motivator when action is driven by concern about a possible threat or negative outcome. Resetting credentials because of worry about a potential cyberattack reflects a fear- based response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The supervisor is acting out of worry about what might happen rather than in response to a threat, demand or belief. Action driven by apprehension of a possible attack is the fear motivator.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Extortion involves a demand backed by a threat. Nobody is demanding anything.",
+      "C": "Ideological motivation drives action in service of a political or social cause.",
+      "D": "Ethical motivation describes acting on principle, as an ethical hacker does."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p379",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

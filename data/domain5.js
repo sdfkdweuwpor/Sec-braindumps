@@ -6459,89 +6459,59 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A non-disclosure agreement legally binds the third party to protect the confidentiality of sensitive information, including assessment results.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Vulnerability assessment results are a map of where the organisation is weakest, so they must not be disclosed. A non-disclosure agreement is the legally binding instrument that obliges the assessor to keep them confidential.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOU records mutual intent and is generally not legally binding.",
+      "B": "An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a separate NDA or a clause within it.",
+      "C": "An SLA commits a provider to measurable performance levels. It concerns service quality."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p374",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0893",
+    "id": "q0900",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A security engineer must set up new resources in the cloud. The company wants to make sure all settings are secure and consistent across every instance before the company promotes the new resources to production.\nWhich of the following is the best way for the security engineer to meet these requirements?",
+    "question": "An organization has an external developer create all of its critical software that serves various customers.\nWhich of the following is a key concern for the organization?",
     "choices": [
       {
         "key": "A",
-        "text": "Use the basic setup the cloud company provides and make changes later if needed."
+        "text": "Vendor lock-in"
       },
       {
         "key": "B",
-        "text": "Write down the setup steps in a shared document and check them once a month."
+        "text": "Support cost"
       },
       {
         "key": "C",
-        "text": "Use a saved setup file that includes the parameters and reuse it for each deployment."
+        "text": "Complexity"
       },
       {
         "key": "D",
-        "text": "Run compliance scans on the instances occasionally and fix any problems."
+        "text": "Technical debt"
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "A saved setup file with predefined parameters supports infrastructure as code and configuration templates. This ensures cloud resources are deployed with secure, repeatable, and consistent settings before being promoted to production.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When a single external developer builds all the critical software, the organisation cannot easily change supplier — the code, knowledge and tooling all sit with one party. That dependence is vendor lock-in, and it weakens negotiating position and continuity alike.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Support cost is a consequence of lock-in rather than the underlying concern.",
+      "C": "Complexity is a general software concern, not specific to outsourcing critical development.",
+      "D": "Technical debt is accumulated shortcuts needing rework. It can occur with in-house development just as easily."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p376",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0895",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "Which of the following is the primary purpose of a service that tracks logins and time spent using the service?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Availability"
-      },
-      {
-        "key": "B",
-        "text": "Accounting"
-      },
-      {
-        "key": "C",
-        "text": "Authentication"
-      },
-      {
-        "key": "D",
-        "text": "Authorization"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Accounting tracks user activity, such as login events, session duration, and resource usage. It provides an audit trail of what users did and how long they used the service.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p377",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "SY0-701_en.pdf#p379",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6573,12 +6543,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Passive reconnaissance focuses on gathering information through publicly available sources and OSINT methods without intrusive testing or payload injection. This approach is used to learn about the target while minimizing direct interaction and detection risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Passive reconnaissance gathers information about a target using public sources and ordinary interaction with public servers, without probing, injecting or attempting to exploit anything. The absence of intrusive activity is what keeps it passive and largely undetectable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Injecting a payload is exploitation, which is unmistakably active.",
+      "C": "Connecting to public servers generally, without reference to the target, does not describe reconnaissance of anyone.",
+      "D": "Injecting random parameters is fuzzing, an active testing technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p379",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

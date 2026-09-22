@@ -5141,51 +5141,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Digital signatures rely on appropriate algorithms to validate the sender's identity and ensure the integrity of the message, confirming that the content has not been altered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital signature is created with the sender's private key over a hash of the message. A sound algorithm is what makes that signature unforgeable and the hash collision-resistant, so verification genuinely proves both who sent it and that the content is unchanged.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hiding message contents is confidentiality, which requires encryption. A signed message is still readable.",
+      "C": "Automated key exchange is handled by key agreement protocols, not by the signature itself.",
+      "D": "Restricting who can decrypt a file is an encryption and key management function."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p371",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0886",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "Which of the following impact analysis metrics will best estimate the average operational availability of an asset?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "MTBF"
-      },
-      {
-        "key": "B",
-        "text": "SLE"
-      },
-      {
-        "key": "C",
-        "text": "RTO"
-      },
-      {
-        "key": "D",
-        "text": "RPO"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Mean Time Between Failures measures the average time a system operates without failure, which is directly used to estimate operational availability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p373",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5217,51 +5183,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Salting adds unique random data to each password before hashing, preventing attackers from using precomputed hash tables like rainbow tables to crack multiple passwords efficiently.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A salt is unique random data added to each password before hashing, so identical passwords produce different digests. That defeats rainbow tables and other precomputed lookups, because an attacker would need a separate table for every salt.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Salting does not make passwords reversible. Hashing remains one-way, which is the point.",
+      "C": "Salting does not lengthen an encryption key. Hashing uses no key at all.",
+      "D": "Adding rounds to slow cracking is key stretching, a related but distinct technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p374",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0890",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "A penetration tester, who did not have an access badge, managed to follow a group of employees through multiple badged-access doors and into the data center without being stopped. The tester mentions this finding during the after-action review with the Chief Information Security Officer (CISO).\nWhich of the following issues should the CISO address as a result of this finding?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Role-based access"
-      },
-      {
-        "key": "B",
-        "text": "Shoulder surfing"
-      },
-      {
-        "key": "C",
-        "text": "Insider threat"
-      },
-      {
-        "key": "D",
-        "text": "Social engineering"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Following employees through secured doors without authorization is tailgating, a form of social engineering that exploits human behavior rather than technical controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p375",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5293,12 +5225,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Trusted Platform Module securely stores cryptographic keys in hardware and performs cryptographic operations, protecting keys from exposure and tampering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A TPM is a dedicated hardware chip that generates and stores cryptographic keys so they never exist in ordinary memory, and performs operations such as sealing and attestation internally. Keeping keys out of software is what protects them from extraction.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM supplements the operating system's cryptographic services rather than replacing them.",
+      "B": "Verifying website certificates is done by the browser against its trust store.",
+      "C": "Keeping keys in software is exactly what a TPM avoids, because software-held keys can be read from memory."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p375",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5331,12 +5267,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Change management defines how updates, modifications, or deployments are planned, communicated, approved, and scheduled. Informing employees when company-owned devices can be updated with new software is part of managing and controlling organizational change.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Deciding when updates may be applied to company devices, and telling staff in advance, is change management in practice — the change is planned, scheduled and communicated rather than applied whenever someone feels like it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Onboarding covers bringing a new employee or device into the organisation.",
+      "B": "Sideloading installs software from outside an official store. These are sanctioned vendor updates.",
+      "D": "Playbook guidelines give step-by-step response instructions for specific incidents."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p376",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5369,12 +5309,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A change request should include a rollback strategy so the organization can restore the previous stable state if the software update fails or causes unexpected issues. The CAB commonly requires this risk-control detail before approving production changes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Technical detail describes what the change does; it says nothing about what happens if it fails. A change advisory board requires a documented rollback strategy before approving production work, because without one a failed update becomes an open-ended outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Fail forward means fixing forward rather than reverting. It is one approach, but boards expect a rollback plan as the default risk control.",
+      "C": "Test results matter and are often required, but the request already includes technical requirements and the universal blocking omission is the lack of a way back.",
+      "D": "Developer approval is internal to the team. The CAB is the approving authority."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p376",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5382,8 +5326,8 @@ export const domain1Questions = [
   {
     "id": "q0897",
     "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
     "question": "Which of the following is a type of preventive control?",
     "choices": [
@@ -5407,13 +5351,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An access control list prevents unauthorized access by explicitly allowing or denying traffic or user permissions before access is granted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An access control list decides in advance which traffic or users are permitted and denies everything else. Blocking the action before it occurs is what makes it preventive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs and raises alerts. Reporting after the fact is detective.",
+      "B": "A honeypot attracts and observes attackers. It is a detective and deception control.",
+      "D": "Video surveillance records events, which is detective, and deters where visible."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p378",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0903",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "Which of the following security methods transforms data to prevent reverse engineering and can protect intellectual property within applications?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Masking"
+      },
+      {
+        "key": "B",
+        "text": "Encryption"
+      },
+      {
+        "key": "C",
+        "text": "Hashing"
+      },
+      {
+        "key": "D",
+        "text": "Obfuscation"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Obfuscation rewrites code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information. Since reverse engineering depends on comprehending the code, obfuscation directly protects the intellectual property inside an application.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking hides parts of a data value for display. It applies to records, not program logic.",
+      "B": "Encryption protects data but the application must decrypt its own code to run, so it does not prevent analysis of running software.",
+      "C": "Hashing is one-way and produces a digest. Nothing executable can be recovered from it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p380",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },

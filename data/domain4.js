@@ -11518,12 +11518,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A false negative occurs when a scan fails to detect an existing vulnerability, resulting in a report that incorrectly indicates no vulnerabilities are present.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A false negative is a vulnerability that exists but the scanner failed to report. The visible symptom is a clean report — no known vulnerabilities — while the exposure is still there, which is what makes it more dangerous than a false positive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability that does not actually exist but was reported is a false positive, the opposite error.",
+      "B": "A vulnerability already remediated but still reported is also a false positive, usually caused by stale scan data.",
+      "D": "A zero-day with a known remediation is a contradiction, and a reported finding is not a negative of any kind."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p368",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11531,8 +11535,8 @@ export const domain4Questions = [
   {
     "id": "q0877",
     "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
     "question": "Which of the following best explains a reason for automating and orchestrating the service ticket process?",
     "choices": [
@@ -11556,13 +11560,69 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Automation and orchestration reduce manual intervention, ensuring consistent, faster, and less error-prone handling of service tickets by minimizing the impact of human involvement.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Manual ticket handling is slow and inconsistent — steps get skipped, priorities misjudged, records mistyped. Automating and orchestrating the process removes those human variations so each request is handled the same way every time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Employee satisfaction may improve as a side effect, but it is not the security or operational rationale.",
+      "C": "Updating computing baselines with patches is patch management, a different automation use case.",
+      "D": "Single sign-on during onboarding is an identity capability, not a benefit of ticket automation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p370",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0879",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "multi",
+    "question": "Which of the following phishing-resistant authentication methods reduce the chances of successful social engineering attacks? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IM OTP"
+      },
+      {
+        "key": "B",
+        "text": "Phone calls"
+      },
+      {
+        "key": "C",
+        "text": "Passwordless"
+      },
+      {
+        "key": "D",
+        "text": "SMS"
+      },
+      {
+        "key": "E",
+        "text": "Security keys"
+      },
+      {
+        "key": "F",
+        "text": "Email"
+      }
+    ],
+    "correct": [
+      "C",
+      "E"
+    ],
+    "explanation": "Phishing resistance means the credential cannot be relayed to an attacker. Security keys bind authentication cryptographically to the legitimate domain, so a fake site gets nothing usable. Passwordless methods remove the shared secret entirely, leaving nothing for a user to be tricked into typing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An instant-message one-time code is still a value the user can be persuaded to read out.",
+      "B": "Phone calls are the channel for vishing, which is social engineering rather than resistance to it.",
+      "D": "SMS codes can be relayed by a user in real time and are also vulnerable to SIM swapping.",
+      "F": "Email-delivered codes are similarly relayable, and a compromised mailbox exposes them directly."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p371",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11594,12 +11654,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Strengthening email security controls directly addresses phishing threats by filtering and blocking malicious or suspicious emails before they reach users, reducing the likelihood of credential compromise and fraud.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The administrator asked specifically for technical defences. A more capable secure email gateway filters phishing before it reaches a mailbox, which reduces exposure without depending on every user making the right judgement every time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Phishing campaigns and training are valuable, but they are awareness measures rather than technical controls.",
+      "C": "EDR detects malicious activity on the endpoint. Payroll fraud through credential theft may involve no malware at all.",
+      "D": "Browser patching and DNS block lists help against malicious sites, but they act after the user has already clicked."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p371",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11632,12 +11696,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Updating the SPF record to include all authorized email-sending providers ensures receiving servers can verify legitimate sources, reducing the likelihood of emails being marked as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mail is being sent by several providers, but the SPF record presumably lists only some of them. Receiving servers see unauthorised senders and mark the messages as spam, so listing every legitimate sending source resolves it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling DKIM removes a signature that helps authenticate mail, which would make the problem worse.",
+      "B": "A DMARC reject policy while SPF is incomplete would cause legitimate mail to be rejected outright rather than merely flagged.",
+      "C": "An MX record governs where inbound mail is delivered. It has no effect on outbound authentication."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p372",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11670,12 +11738,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Agentless monitoring uses existing protocols like SSH to access systems without installing local agents, which fits a setup where only SSH credentials are used.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The SIEM logs into each Unix server over SSH to gather data, with nothing installed on the target. Collecting remotely using existing protocols and credentials is agentless monitoring.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "API integration means the target exposes a programmatic interface the SIEM calls. SSH login is not an API integration.",
+      "B": "OAuth 2.0 single sign-on is a delegated authorisation mechanism for applications, not a server monitoring method.",
+      "C": "SNMP is a separate monitoring protocol. The scenario specifies SSH credentials only."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p372",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11717,13 +11789,102 @@ export const domain4Questions = [
       "D",
       "E"
     ],
-    "explanation": "File integrity monitoring detects unauthorized changes to static files by comparing them against known baselines. A web application firewall helps prevent unauthorized modifications by filtering and blocking malicious requests targeting the web server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two controls cover detection and prevention. File integrity monitoring compares the static files against a known-good baseline and alerts the moment one changes, and a web application firewall blocks the malicious requests an attacker would use to write those changes in the first place.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Network access control decides which devices may join a network. The attackers are external.",
+      "B": "Web content categorisation classifies sites for outbound filtering. It governs what staff browse.",
+      "C": "A centralised proxy mediates outbound requests, again the wrong direction.",
+      "F": "URL scanning judges whether a destination is safe to visit. It protects users browsing out, not the hosted page."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p374",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0893",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A security engineer must set up new resources in the cloud. The company wants to make sure all settings are secure and consistent across every instance before the company promotes the new resources to production.\nWhich of the following is the best way for the security engineer to meet these requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Use the basic setup the cloud company provides and make changes later if needed."
+      },
+      {
+        "key": "B",
+        "text": "Write down the setup steps in a shared document and check them once a month."
+      },
+      {
+        "key": "C",
+        "text": "Use a saved setup file that includes the parameters and reuse it for each deployment."
+      },
+      {
+        "key": "D",
+        "text": "Run compliance scans on the instances occasionally and fix any problems."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A saved definition file containing the security parameters is infrastructure as code. Every instance is created from the same reviewed template, so configuration is identical, repeatable and verifiable before anything reaches production.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Accepting the provider's basic setup and fixing it later guarantees inconsistency and leaves insecure defaults live.",
+      "B": "A shared document checked monthly relies on people following it and detects drift a month late.",
+      "D": "Occasional compliance scans find problems after deployment rather than preventing them."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p376",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0895",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Which of the following is the primary purpose of a service that tracks logins and time spent using the service?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Availability"
+      },
+      {
+        "key": "B",
+        "text": "Accounting"
+      },
+      {
+        "key": "C",
+        "text": "Authentication"
+      },
+      {
+        "key": "D",
+        "text": "Authorization"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Accounting is the third element of AAA: recording what an authenticated and authorised user actually did. Login events and session duration are accounting data, used for auditing, billing and investigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Availability means a service is reachable when needed. It is a CIA-triad goal.",
+      "C": "Authentication proves identity at the point of access. It happens at login but records nothing afterwards.",
+      "D": "Authorisation decides what an authenticated user may do."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p377",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11755,12 +11916,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Code signing verifies that compiled binaries come from a trusted source and have not been altered after signing. This directly supports integrity by allowing production systems to detect tampered or unauthorized binaries before execution.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a signature created with the publisher's private key to the compiled binary. Production systems verify it before execution, so any binary that has been altered or did not come from the trusted build process fails the check.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Input validation protects a running application from malicious input. It does not verify the binary itself.",
+      "C": "SQL injection is an attack, not a security measure.",
+      "D": "Static analysis reads source code for defects during development. It improves quality without proving the deployed binary is unmodified."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p377",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11793,59 +11958,25 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "NetFlow logs show network traffic patterns, including source, destination, volume, and timing.\nSorting by destination IP helps identify where large outbound transfers were sent, making it the best source for investigating data exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Exfiltration is defined by where the data went. NetFlow records the volume and endpoints of every conversation, and sorting by destination address surfaces the external hosts that received large outbound transfers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sorting by source address tells you which internal host was involved, which matters but does not identify the destination.",
+      "B": "Endpoint logs sorted by file extension assume you know the file type and only cover hosts running an agent.",
+      "C": "Endpoint logs sorted by file name likewise require knowing what to look for and reveal nothing about where data went."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p378",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0900",
-    "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
-    "type": "single",
-    "question": "An organization has an external developer create all of its critical software that serves various customers.\nWhich of the following is a key concern for the organization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Vendor lock-in"
-      },
-      {
-        "key": "B",
-        "text": "Support cost"
-      },
-      {
-        "key": "C",
-        "text": "Complexity"
-      },
-      {
-        "key": "D",
-        "text": "Technical debt"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Vendor lock-in is a key concern when an organization depends on an external developer for critical software. This can make it difficult to change providers, maintain control over future development, or migrate the software without significant cost or disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p379",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0904",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "Scans of new servers created from a community image show an abnormally high number of vulnerabilities.\nWhich of the following steps was most likely missed when deploying these systems?",
     "choices": [
@@ -11869,12 +12000,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Removing unnecessary software is a key hardening step. Community images often include extra packages, services, and outdated components that increase the attack surface and create many vulnerability findings.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Community images ship with a broad set of packages so they suit many uses, and most of them are unnecessary and unpatched for any particular deployment. Failing to strip that software back leaves every one of those components as a finding and as attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unused ports is part of hardening too, but ports reflect services, and it is the unnecessary software providing those services that generates the vulnerability count.",
+      "B": "Deleting temporary update files is housekeeping. It reclaims space rather than removing vulnerable components.",
+      "D": "Installing a scan agent is how the vulnerabilities were found. Its absence would produce fewer findings, not more."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p380",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
