@@ -2111,12 +2111,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A version control tool is specifically designed to track changes to code, configurations, and other files. It allows teams to monitor modifications, revert to previous versions if needed, and collaborate effectively while maintaining a history of changes. For tracking modifications to code used in building new virtual servers, tools like Git or Subversion would be the most appropriate choice.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A version control tool records every change to a file with its author, timestamp and a diff, and allows any earlier state to be recovered. Infrastructure code that builds virtual servers is code, so tracking its modifications is exactly what version control provides.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A change management ticketing system records that a change was requested and approved. It documents the decision, not the line-by-line content of the code.",
+      "B": "A behavioural analyser watches user or system activity for anomalies. It is a detection tool with no role in tracking code.",
+      "C": "A collaboration platform helps people communicate and share documents. It may hold discussion about a change but keeps no authoritative change history."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2149,12 +2153,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A CRL (Certificate Revocation List) is a list published by a Certificate Authority (CA) that contains information about certificates that have been revoked or are no longer valid. This list helps systems verify the status of a certificate and ensures that expired or compromised certificates are not trusted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The certificate revocation list is the CA's published record of certificates that should no longer be trusted, which clients check before accepting one. Note the wording is loose — a CRL carries revoked certificates, since expiry is self-evident from the certificate's own dates — but of these options it is the only publication mechanism a CA operates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a hardware chip on an endpoint that stores keys and measures boot integrity. It is not a publishing mechanism.",
+      "C": "PKI is the whole framework of authorities, certificates and policies. The CRL is one component within it, and the question asks for the specific artefact.",
+      "D": "A CSR is the request submitted to obtain a certificate. It belongs at the start of the lifecycle, not the end."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p145",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2187,12 +2195,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A CSR (Certificate Signing Request) is required to create a new SSL certificate. It is a file that contains the public key and identifying information (such as domain name and organization details) that the administrator submits to a Certificate Authority (CA). The CA uses this information to generate and issue a new SSL certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A certificate signing request packages the new public key together with the subject details and is submitted to the CA, which signs it to produce the certificate. Replacing an expired certificate starts with generating a fresh key pair and a new CSR.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "OCSP is the protocol clients use to check a certificate's revocation status in real time. It queries status rather than requesting issuance.",
+      "C": "A key is part of what goes into the request — necessary but not sufficient. The CA needs the request containing it.",
+      "D": "A CRL lists certificates that should no longer be trusted. It is part of revocation, not issuance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2225,13 +2237,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Before implementing a design change, backout planning is crucial to ensure the organization can quickly revert to a stable state if the change causes issues, including security vulnerabilities.\nBackout planning involves identifying the steps and resources needed to undo the change safely and efficiently, minimizing disruptions and maintaining security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A backout plan documents exactly how to reverse the change if it goes wrong, and having one is a prerequisite for approval. Objective 1.3 lists it explicitly as a change management component, alongside approval, impact analysis and test results.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Board review is corporate governance for major decisions. It does not appear in change management and would be wildly disproportionate for a design change.",
+      "B": "A service restart is something that may happen while implementing the change. It is an effect, not a preparatory step.",
+      "D": "Maintenance names the window in which the change happens. Scheduling is part of the process, but the question asks what the change must go through beforehand."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p152",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0346",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "An organization is preparing to export proprietary software to a customer.\nWhich of the following would be the best way to prevent the loss of intellectual property?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Code signing"
+      },
+      {
+        "key": "B",
+        "text": "Obfuscation"
+      },
+      {
+        "key": "C",
+        "text": "Tokenization"
+      },
+      {
+        "key": "D",
+        "text": "Blockchain"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Once software is in a customer's hands they can disassemble it. Obfuscation rewrites the code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information — which is what protects the algorithms that constitute the intellectual property.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Code signing proves who published the software and that it is unaltered. It establishes authenticity, not secrecy of the logic.",
+      "C": "Tokenisation substitutes sensitive data values with surrogates. It protects data records, not program logic.",
+      "D": "Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p154",
+    "needsReview": false,
+    "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2263,12 +2321,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A fail-open configuration prioritizes availability, ensuring that services remain accessible even if the firewall encounters an issue. This approach minimizes downtime for critical resources, such as a website, but may temporarily compromise other aspects of security like confidentiality or integrity. This configuration is often chosen when maintaining access is of utmost importance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Fail-open means that if the firewall fails, traffic is allowed through rather than blocked. That deliberately sacrifices protection to keep the website reachable, which shows availability has been ranked above the other properties.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confidentiality is what fail-open puts at risk — unfiltered traffic reaches the site during a failure.",
+      "B": "Non-repudiation concerns proving who performed an action. A firewall failure mode does not affect it.",
+      "D": "Integrity is likewise weakened by allowing uninspected traffic, not prioritised by it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2301,12 +2363,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique fixed-size value (hash) based on the contents of a file or script. By comparing the current hash of the script with a previously calculated hash, the engineer can verify that the script has not been modified. Hashing ensures the integrity of the script without encrypting or altering it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing the script produces a fingerprint that changes completely if even one byte is altered. Comparing the hash at launch against a known-good value proves the file is unmodified, which is integrity verification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking hides parts of a value for display. It neither detects nor prevents modification.",
+      "B": "Obfuscation makes code hard to read. An obfuscated script can still be tampered with undetected.",
+      "D": "Encryption protects confidentiality. Ciphertext can be altered, and the script must be readable to run anyway."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

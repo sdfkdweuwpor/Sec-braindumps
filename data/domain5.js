@@ -2434,12 +2434,58 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A procedure is a document that provides step-by-step instructions on how to accomplish a specific technical security task. It is detailed and actionable, ensuring consistency and clarity in task execution. Procedures are essential for tasks like configuring firewalls, applying patches, or implementing encryption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A procedure is the step-by-step instruction set for carrying out a specific task, so that it is done the same way every time. Detailing how to accomplish a technical security task is precisely its function.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A standard states a mandatory requirement — the minimum key length, the required cipher. It says what must be true, not how to bring it about.",
+      "B": "A policy states the organisation's intent and high-level rules. It is deliberately implementation-independent.",
+      "C": "A guideline offers recommended practice. It advises rather than prescribing, and is not binding."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0324",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned by potential impact if a generator was to develop a fault during failover.\nWhich of the following is the team most likely to consider in regard to risk management activities?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "RPO"
+      },
+      {
+        "key": "B",
+        "text": "ARO"
+      },
+      {
+        "key": "C",
+        "text": "BIA"
+      },
+      {
+        "key": "D",
+        "text": "MTTR"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "The team's worry is about consequence — what happens to the business if the generator fails during failover. A business impact analysis is the activity that quantifies the effect of losing a function, which is what turns that worry into a prioritised recovery requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RPO is how much data loss is tolerable, measured backwards from the failure. It concerns data, not the impact of a hardware fault.",
+      "B": "ARO is how often a loss is expected per year. It is a frequency input to loss calculation, not an impact assessment.",
+      "D": "MTTR is the average time to repair a failed component. It measures repair speed rather than the business effect of the outage."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p144",
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2472,12 +2518,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The company's decision to change its target market to eliminate exposure to a specific security risk is an example of risk avoidance. This strategy involves modifying plans, processes, or business models to eliminate the potential for a particular risk to occur, rather than mitigating or transferring it. By targeting a different market segment, the company effectively avoids the identified risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The company has removed itself from the situation that produced the risk by no longer serving that market. Eliminating exposure by not undertaking the activity is risk avoidance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An exemption formally excuses a system or process from a requirement. It is an administrative carve-out, not a change of business direction.",
+      "B": "An exception is a documented, usually temporary, deviation from policy. Again the risk is still being carried.",
+      "D": "Transfer shifts the financial consequence to someone else, typically through insurance. The company would still be serving that market."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p150",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2510,14 +2560,18 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Taking something out of scope has to be recorded formally, not just decided. Acknowledgement and attestation is the mechanism — a signed statement from the responsible party confirming the application no longer falls within the reporting requirement, which is what an external auditor will look for.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Data inventory and retention record what data exists and how long it is kept. They describe the data, not the scope of a reporting obligation.",
+      "B": "The right to be forgotten is an individual's right to erasure of personal data. It is unrelated to reporting scope.",
+      "C": "Due care and due diligence describe the standard of care expected. They are principles rather than a confirmation mechanism."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.641,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2548,12 +2602,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A conflict of interest policy ensures that decisions are made in the best interests of the company and not influenced by personal relationships or benefits. Hiring a marketing agency owned by a close relative of the CEO without appropriate disclosures or procedures would violate such a policy, as it creates a potential bias or unfair advantage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Awarding work to a company owned by a close relative of the chief executive creates exactly the bias a conflict of interest policy exists to prevent. The requirement is that such relationships are disclosed and the decision made independently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Independent assessments are external evaluations of controls. They concern assurance, not procurement relationships.",
+      "B": "Supply chain analysis maps supplier dependencies and their risks. It examines security exposure rather than personal interests.",
+      "C": "A right-to-audit clause lets a customer inspect a vendor's controls. It governs oversight after the contract exists."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.885,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2586,12 +2644,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Effective security governance requires clear assignment of roles and responsibilities to ensure accountability and proper management of security controls. Defining roles such as data owners (who make decisions), controllers (who implement decisions), and custodians (who handle day- to-day operations) is essential for ensuring security policies and procedures are effectively managed and enforced. This alignment is critical for a cohesive security framework.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Governance is fundamentally about accountability. Until it is clear who owns data, who decides how it is processed and who maintains it day to day, no policy can be enforced because there is nobody answerable for it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "External considerations such as regulation and jurisdiction must be documented, but they are inputs the governance structure responds to.",
+      "B": "Onboarding and offboarding procedures are operational processes. They are governed by the programme rather than defining it.",
+      "D": "Change management procedures are one control area among many. Important, but narrower than establishing accountability across the whole programme."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p157",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.737,
     "needsExplanation": false,
     "keyCorrected": false

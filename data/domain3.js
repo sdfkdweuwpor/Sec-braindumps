@@ -2415,82 +2415,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0324",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "single",
-    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned by potential impact if a generator was to develop a fault during failover.\nWhich of the following is the team most likely to consider in regard to risk management activities?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "RPO"
-      },
-      {
-        "key": "B",
-        "text": "ARO"
-      },
-      {
-        "key": "C",
-        "text": "BIA"
-      },
-      {
-        "key": "D",
-        "text": "MTTR"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A Business Impact Analysis (BIA) is used to identify and evaluate the potential effects of disruptions to critical business operations. During a business continuity exercise, concerns about the impact of a generator fault during failover would prompt the team to assess the associated risks and impacts on business functions, which are key components of a BIA. This helps in prioritizing recovery strategies and understanding the consequences of such failures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0325",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following is prevented by proper data sanitization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hackers' ability to obtain data from used hard drives"
-      },
-      {
-        "key": "B",
-        "text": "Devices reaching end-of-life and losing support"
-      },
-      {
-        "key": "C",
-        "text": "Disclosure of sensitive data through incorrect classification"
-      },
-      {
-        "key": "D",
-        "text": "Incorrect inventory data leading to a laptop shortage"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Proper data sanitization ensures that sensitive or confidential information is irreversibly removed from storage devices before disposal, reuse, or transfer. This process prevents hackers or unauthorized individuals from recovering data from used hard drives or other storage media, thereby mitigating the risk of data breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p145",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0334",
     "domain": 3,
     "objective": "3.2",
@@ -2518,12 +2442,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "IPSec with RADIUS supports the AAA (Authentication, Authorization, and Accounting) framework, which is required to comply with internal security policies. IPSec provides secure communication over the network, and RADIUS handles AAA functionalities by authenticating users, authorizing access levels, and keeping logs for accounting purposes. This combination ensures robust security for remote access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two requirements must be met together. IPSec provides the encrypted tunnel for remote access, and RADIUS supplies the AAA framework — authenticating the user, authorising their level of access and recording the session for accounting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RDP with LDAPS authenticates against a directory over a secure channel, but LDAP provides no accounting, so the third A is missing.",
+      "C": "A web proxy filters and logs outbound web traffic. It is not a remote access solution and does not authorise network access.",
+      "D": "A jump server with 802.1X controls device admission and gives a managed entry point, but 802.1X is an access control framework rather than a full AAA service for remote users."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2556,12 +2484,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) offers advanced capabilities such as:\n• Preventing malicious content downloads through deep packet inspection and intrusion prevention systems (IPS).\n• Establishing controls based on departments and users by integrating with directory services like Active Directory for user-based policies.\n• Mapping internet access to business applications through application-level control and service account integration.\n• Restricting content based on categorization using URL filtering and content categorization features.\n•",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every requirement is a next-generation firewall feature: deep inspection to stop malicious downloads, user and group awareness from directory integration for department-based policy, application and service-account mapping, and URL categorisation for content control. One device covers all four.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A web application firewall protects a hosted application from inbound attacks. It faces the wrong direction — the requirement is about outbound user browsing.",
+      "B": "A secure DNS server can block categories of domain, which covers one requirement. It has no user awareness and cannot inspect downloads.",
+      "C": "A jump server is a controlled administrative access point. It has nothing to do with general employee internet use."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p150",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2594,89 +2526,17 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A monolithic codebase can limit the deployment of software in a container environment because containers are designed to run lightweight, modular, and independent services. Monolithic applications are large, tightly coupled, and difficult to break into smaller components, which conflicts with the principles of containerization. This makes it harder to achieve the scalability, security, and isolation benefits of containers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containers are designed for small, independently deployable components. A monolithic application is one large tightly coupled unit, so putting it in a container yields one enormous container and none of the isolation or modularity the organisation is seeking.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Regulatory compliance may impose requirements on where and how workloads run, but it does not inherently prevent containerisation.",
+      "B": "Patch availability affects how quickly base images can be updated. It is an operational concern rather than a structural blocker.",
+      "C": "Kernel version matters because containers share the host kernel, but that is a compatibility detail that can be resolved by choosing a suitable host."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p152",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0346",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "An organization is preparing to export proprietary software to a customer.\nWhich of the following would be the best way to prevent the loss of intellectual property?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Code signing"
-      },
-      {
-        "key": "B",
-        "text": "Obfuscation"
-      },
-      {
-        "key": "C",
-        "text": "Tokenization"
-      },
-      {
-        "key": "D",
-        "text": "Blockchain"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Obfuscation is the process of making software code intentionally difficult to understand or reverse-engineer. By obfuscating the proprietary software before exporting it, the organization can protect its intellectual property from being analyzed, copied, or exploited by unauthorized parties. This method is commonly used to safeguard the core logic and algorithms of the software.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p154",
-    "needsReview": true,
-    "inferenceConfidence": 0.385,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0347",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "Which of the following should be used to ensure a device is inaccessible to a network- connected resource?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Disablement of unused services"
-      },
-      {
-        "key": "B",
-        "text": "Web application firewall"
-      },
-      {
-        "key": "C",
-        "text": "Host isolation"
-      },
-      {
-        "key": "D",
-        "text": "Network-based IDS"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Host isolation ensures that a device is inaccessible to network-connected resources by isolating it from the rest of the network. This can be achieved through techniques such as placing the device in a quarantine VLAN or blocking its communications entirely. It is a key security measure when dealing with potentially compromised or non-compliant devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p154",
-    "needsReview": true,
-    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2708,51 +2568,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "IoT devices are built to a price with minimal processing power, and many ship using plain HTTP, MQTT or proprietary protocols without encryption. Constrained hardware plus weak default configuration makes unencrypted traffic most likely here.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "SDN separates network control from forwarding. Its control channels are normally secured, and it is a management architecture rather than a class of chatty devices.",
+      "C": "A VPN exists specifically to encrypt traffic. Finding plaintext inside one would defeat its purpose.",
+      "D": "SCADA also runs legacy unencrypted protocols and is a reasonable concern, but it sits in controlled industrial networks whereas IoT devices are deployed broadly and cheaply."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0349",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "single",
-    "question": "Which of the following is the best reason to perform a tabletop exercise?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To address audit findings"
-      },
-      {
-        "key": "B",
-        "text": "To collect remediation response times"
-      },
-      {
-        "key": "C",
-        "text": "To update the IRP"
-      },
-      {
-        "key": "D",
-        "text": "To calculate the ROI"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "The primary reason to perform a tabletop exercise is to test and validate the Incident Response Plan (IRP) in a simulated environment. This helps identify gaps, refine procedures, and ensure that the plan is up-to-date and effective in addressing current threats and scenarios. Regular tabletop exercises improve organizational preparedness for real-world incidents.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

@@ -4288,6 +4288,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0325",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following is prevented by proper data sanitization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Hackers' ability to obtain data from used hard drives"
+      },
+      {
+        "key": "B",
+        "text": "Devices reaching end-of-life and losing support"
+      },
+      {
+        "key": "C",
+        "text": "Disclosure of sensitive data through incorrect classification"
+      },
+      {
+        "key": "D",
+        "text": "Incorrect inventory data leading to a laptop shortage"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Sanitisation overwrites or otherwise destroys data so it cannot be reconstructed from the medium. Its whole purpose is that a drive leaving the organisation — sold, recycled or repurposed — carries nothing recoverable for whoever receives it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Devices reaching end of life is a lifecycle fact driven by the vendor. Sanitisation happens at disposal but does not change support status.",
+      "C": "Disclosure through incorrect classification is prevented by a classification policy and correct labelling, not by wiping media.",
+      "D": "Incorrect inventory data is an asset management problem. Sanitisation destroys data rather than tracking hardware."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p145",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0327",
     "domain": 4,
     "objective": "4.3",
@@ -4315,12 +4357,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized way to assess and prioritize the severity of vulnerabilities. By assigning a numerical score to each vulnerability based on factors like exploitability and impact, CVSS helps organizations determine the urgency of applying patches, enabling efficient risk management and prioritization of remediation efforts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS converts exploitability and impact into a comparable numeric score, which is what lets a long patch backlog be ranked consistently. Without a common measure there is no defensible basis for deciding what gets patched first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SCAP is a set of standards for automating configuration and compliance checking. It measures system state rather than scoring severity.",
+      "C": "OSINT is intelligence from public sources. It can tell you a flaw is being exploited in the wild, which adjusts urgency, but it provides no score.",
+      "D": "CVE is the identifier catalogue. It names each vulnerability uniquely and carries no severity information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4353,12 +4399,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The script ensures that systems meet specific requirements such as the OS version, patch levels, and installed applications when users log in. This process is an example of baseline enforcement, where a predefined standard or configuration (baseline) is enforced to maintain system security, compliance, and stability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The script checks each machine against a defined standard — required OS version, patch level and applications — every time a user logs in. Automatically verifying systems against a known-good configuration is baseline enforcement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource scaling adjusts compute capacity to match demand. The script allocates nothing.",
+      "B": "Policy enumeration would mean listing what policies exist. The script is checking compliance against a standard, not cataloguing rules.",
+      "D": "Guard rails constrain automated provisioning so infrastructure cannot be deployed outside safe bounds. They act at build time, not at user log-in."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4391,12 +4441,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A firewall log is the most relevant log to review first when investigating the initial exploit of an IoT device. Firewalls monitor and log network traffic, including incoming and outgoing connections, which can reveal suspicious activity or unauthorized access attempts targeting the IoT device.\nBy analyzing these logs, the security analyst can pinpoint the time and source of the initial exploit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An IoT device exploit arrives over the network, so the first evidence of it is the connection itself. Firewall logs record every inbound and outbound connection with timestamps and addresses, which is what pins down when the initial exploit traffic reached the device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint logs come from managed workstations and servers. IoT devices rarely run an agent capable of producing them.",
+      "B": "Application logs record activity inside a business application. The exploit targeted a device, not an application's own functions.",
+      "D": "NAC logs record admission decisions when devices join the network. They show the device connecting, not the later exploit traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.926,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4429,52 +4483,60 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Establish: Create the secure baseline by defining the standard configurations, security settings, and policies required for systems and applications.\nDeploy: Apply the secure baseline to the systems and environments to ensure compliance with the defined standards.\nMaintain: Continuously monitor and update the baseline as needed to adapt to new threats, vulnerabilities, or changes in requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot deploy a baseline that has not been defined, and a baseline that is never revisited drifts out of date as threats and software change. Establish, deploy, maintain is the only order in which each step has what it needs from the one before.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Deploying before establishing means rolling out a standard that does not exist yet.",
+      "B": "Maintaining before deploying means curating a baseline that has never been applied to anything.",
+      "D": "Deploying before establishing has the same problem as option A — there is nothing to apply."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0332",
+    "id": "q0333",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
+    "question": "Which of the following is a reason environmental variables are a concern when reviewing potential system vulnerabilities?",
     "choices": [
       {
         "key": "A",
-        "text": "Advise the user to change passwords."
+        "text": "The contents of environmental variables could affect the scope and impact of an exploited vulnerability."
       },
       {
         "key": "B",
-        "text": "Reimage the end user's machine."
+        "text": "In-memory environmental variable values can be overwritten and used by attackers to insert malicious code."
       },
       {
         "key": "C",
-        "text": "Check the policy on personal email at work."
+        "text": "Environmental variables define cryptographic standards for the system and could create vulnerabilities if deprecated algorithms are used."
       },
       {
         "key": "D",
-        "text": "Check host firewall logs."
+        "text": "Environmental variables will determine when updates are run and could mitigate the likelihood of vulnerability exploitation. •"
       }
     ],
     "correct": [
-      "B"
+      "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Environmental variables commonly hold paths, tokens and credentials. When a vulnerability is exploited, whatever those variables contain becomes available to the attacker, so their contents directly determine how far the compromise reaches — which is why they factor into scoring impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Overwriting in-memory variables to insert malicious code describes memory injection. Environmental variables are a concern for what they hold, not as an injection vector.",
+      "C": "Cryptographic standards are defined by configuration and libraries, not by environment variables.",
+      "D": "Update scheduling is controlled by patch management tooling and policy, not by environment variables."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p148",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsReview": false,
+    "inferenceConfidence": 0.286,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -4514,12 +4576,17 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "Length: Longer passwords are more resistant to brute-force attacks. Requiring a minimum length (e.g., 12-16 characters) significantly improves password security.\nComplexity: Ensuring passwords include a mix of uppercase letters, lowercase letters, numbers, and special characters makes them harder to guess or crack using dictionary attacks.\nIncluding both length and complexity in the authentication policy helps to enhance overall password strength and security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An authentication policy governs the rules passwords must satisfy. Length is the single biggest factor in resisting brute force, and complexity widens the character set each guess must cover — both are password-composition rules a policy states.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Least privilege limits what an account may do once authenticated. It is an authorisation principle, not a password rule.",
+      "D": "Something you have describes a possession factor. That belongs in an MFA requirement rather than a password policy.",
+      "E": "Security keys are a specific MFA device. Again a factor, not a password rule.",
+      "F": "Biometrics is an inherence factor. It replaces or supplements passwords rather than defining their composition."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p151",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4552,12 +4619,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A continuous risk is an ongoing threat that requires ongoing mitigation and monitoring efforts.\nPhishing attempts are a continuous risk to organizations as attackers frequently target users via emails. An email gateway acts as a treatment strategy by actively filtering out malicious emails, thereby reducing the likelihood of successful phishing attacks. This proactive approach addresses the ongoing nature of the threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Phishing never stops arriving, so the treatment has to run continuously. An email gateway filters every message as it comes in, day after day, which is what matches a continuous risk — an always-on control rather than a one-off check.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Background checks happen once, at hire. They treat a point-in-time risk.",
+      "C": "Dual control on wire transfers applies per transaction. It is an important control but triggers only when a transfer occurs.",
+      "D": "Branch protection applies at merge time in the pipeline. Again it is event-driven rather than continuous."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p151",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4599,13 +4670,60 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": "Methodically walk around the office noting Wi-Fi signal strength: This is essential for identifying areas with weak or strong signals and understanding the coverage gaps or interference points, which are crucial for developing an accurate heat map.\nCreate or obtain a layout of the office: A layout is necessary to map the signal strength data against the physical environment, enabling proper visualization of signal coverage and pinpointing issues.\nThese two steps provide the foundation for creating a meaningful heat map to analyze wireless network performance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A heat map plots measured signal strength onto the physical space, so you need both halves before anything else: a floor plan to plot against, and readings taken systematically as you walk the building. Without the layout the measurements have nowhere to go.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Checking access point settings tells you how they are configured. Configuration does not reveal actual coverage, which depends on walls, materials and interference.",
+      "D": "Cable lengths concern the wired infrastructure. They have no bearing on radio coverage.",
+      "E": "Access logs show which devices are busiest. Usage is not the same as signal strength.",
+      "F": "Removing impediments to radio transmission is a remediation you might perform afterwards, once the heat map shows where coverage is poor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0349",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "Which of the following is the best reason to perform a tabletop exercise?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To address audit findings"
+      },
+      {
+        "key": "B",
+        "text": "To collect remediation response times"
+      },
+      {
+        "key": "C",
+        "text": "To update the IRP"
+      },
+      {
+        "key": "D",
+        "text": "To calculate the ROI"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A tabletop walks the team through a scenario against the written plan, and what it produces is a list of gaps, stale contacts and unclear steps. Feeding those back into the incident response plan is the point of running it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Audit findings are addressed by remediating the specific control deficiencies identified. A tabletop might be evidence of a control, but that is a side effect.",
+      "B": "Remediation response times are measured against real incidents or technical tests. A discussion exercise produces no meaningful timings.",
+      "D": "Calculating return on investment is a financial exercise. Tabletops produce qualitative findings, not cost figures."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p155",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4637,12 +4755,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a standardized framework for assessing the severity of vulnerabilities. It assigns a numerical score that helps organizations determine the criticality of vulnerabilities and prioritize their remediation efforts based on the risk they pose.\nThis ensures efficient use of resources to address the most severe issues first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS scores each vulnerability from 0 to 10 based on exploitability and impact, giving a consistent way to rank them. Deciding which findings to remediate first is precisely what those scores are used for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching cost depends on labour, downtime and testing in your environment. CVSS models severity, not expense.",
+      "B": "Identifying unused ports and services is the job of a port scan or configuration review.",
+      "C": "Analysing code for exploitable defects is static or dynamic application testing. CVSS scores the flaws such testing finds."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

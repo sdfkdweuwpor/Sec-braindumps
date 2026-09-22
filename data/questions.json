@@ -13539,12 +13539,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A version control tool is specifically designed to track changes to code, configurations, and other files. It allows teams to monitor modifications, revert to previous versions if needed, and collaborate effectively while maintaining a history of changes. For tracking modifications to code used in building new virtual servers, tools like Git or Subversion would be the most appropriate choice.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A version control tool records every change to a file with its author, timestamp and a diff, and allows any earlier state to be recovered. Infrastructure code that builds virtual servers is code, so tracking its modifications is exactly what version control provides.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A change management ticketing system records that a change was requested and approved. It documents the decision, not the line-by-line content of the code.",
+      "B": "A behavioural analyser watches user or system activity for anomalies. It is a detection tool with no role in tracking code.",
+      "C": "A collaboration platform helps people communicate and share documents. It may hold discussion about a change but keeps no authoritative change history."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13577,21 +13581,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "A procedure is a document that provides step-by-step instructions on how to accomplish a specific technical security task. It is detailed and actionable, ensuring consistency and clarity in task execution. Procedures are essential for tasks like configuring firewalls, applying patches, or implementing encryption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A procedure is the step-by-step instruction set for carrying out a specific task, so that it is done the same way every time. Detailing how to accomplish a technical security task is precisely its function.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A standard states a mandatory requirement — the minimum key length, the required cipher. It says what must be true, not how to bring it about.",
+      "B": "A policy states the organisation's intent and high-level rules. It is deliberately implementation-independent.",
+      "C": "A guideline offers recommended practice. It advises rather than prescribing, and is not binding."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0324",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
     "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned by potential impact if a generator was to develop a fault during failover.\nWhich of the following is the team most likely to consider in regard to risk management activities?",
     "choices": [
@@ -13615,21 +13623,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "A Business Impact Analysis (BIA) is used to identify and evaluate the potential effects of disruptions to critical business operations. During a business continuity exercise, concerns about the impact of a generator fault during failover would prompt the team to assess the associated risks and impacts on business functions, which are key components of a BIA. This helps in prioritizing recovery strategies and understanding the consequences of such failures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The team's worry is about consequence — what happens to the business if the generator fails during failover. A business impact analysis is the activity that quantifies the effect of losing a function, which is what turns that worry into a prioritised recovery requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RPO is how much data loss is tolerable, measured backwards from the failure. It concerns data, not the impact of a hardware fault.",
+      "B": "ARO is how often a loss is expected per year. It is a frequency input to loss calculation, not an impact assessment.",
+      "D": "MTTR is the average time to repair a failed component. It measures repair speed rather than the business effect of the outage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0325",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "Which of the following is prevented by proper data sanitization?",
     "choices": [
@@ -13653,12 +13665,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Proper data sanitization ensures that sensitive or confidential information is irreversibly removed from storage devices before disposal, reuse, or transfer. This process prevents hackers or unauthorized individuals from recovering data from used hard drives or other storage media, thereby mitigating the risk of data breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sanitisation overwrites or otherwise destroys data so it cannot be reconstructed from the medium. Its whole purpose is that a drive leaving the organisation — sold, recycled or repurposed — carries nothing recoverable for whoever receives it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Devices reaching end of life is a lifecycle fact driven by the vendor. Sanitisation happens at disposal but does not change support status.",
+      "C": "Disclosure through incorrect classification is prevented by a classification policy and correct labelling, not by wiping media.",
+      "D": "Incorrect inventory data is an asset management problem. Sanitisation destroys data rather than tracking hardware."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p145",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13691,12 +13707,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A CRL (Certificate Revocation List) is a list published by a Certificate Authority (CA) that contains information about certificates that have been revoked or are no longer valid. This list helps systems verify the status of a certificate and ensures that expired or compromised certificates are not trusted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The certificate revocation list is the CA's published record of certificates that should no longer be trusted, which clients check before accepting one. Note the wording is loose — a CRL carries revoked certificates, since expiry is self-evident from the certificate's own dates — but of these options it is the only publication mechanism a CA operates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a hardware chip on an endpoint that stores keys and measures boot integrity. It is not a publishing mechanism.",
+      "C": "PKI is the whole framework of authorities, certificates and policies. The CRL is one component within it, and the question asks for the specific artefact.",
+      "D": "A CSR is the request submitted to obtain a certificate. It belongs at the start of the lifecycle, not the end."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p145",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13729,12 +13749,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized way to assess and prioritize the severity of vulnerabilities. By assigning a numerical score to each vulnerability based on factors like exploitability and impact, CVSS helps organizations determine the urgency of applying patches, enabling efficient risk management and prioritization of remediation efforts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS converts exploitability and impact into a comparable numeric score, which is what lets a long patch backlog be ranked consistently. Without a common measure there is no defensible basis for deciding what gets patched first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SCAP is a set of standards for automating configuration and compliance checking. It measures system state rather than scoring severity.",
+      "C": "OSINT is intelligence from public sources. It can tell you a flaw is being exploited in the wild, which adjusts urgency, but it provides no score.",
+      "D": "CVE is the identifier catalogue. It names each vulnerability uniquely and carries no severity information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13767,12 +13791,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The script ensures that systems meet specific requirements such as the OS version, patch levels, and installed applications when users log in. This process is an example of baseline enforcement, where a predefined standard or configuration (baseline) is enforced to maintain system security, compliance, and stability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The script checks each machine against a defined standard — required OS version, patch level and applications — every time a user logs in. Automatically verifying systems against a known-good configuration is baseline enforcement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource scaling adjusts compute capacity to match demand. The script allocates nothing.",
+      "B": "Policy enumeration would mean listing what policies exist. The script is checking compliance against a standard, not cataloguing rules.",
+      "D": "Guard rails constrain automated provisioning so infrastructure cannot be deployed outside safe bounds. They act at build time, not at user log-in."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13805,12 +13833,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A firewall log is the most relevant log to review first when investigating the initial exploit of an IoT device. Firewalls monitor and log network traffic, including incoming and outgoing connections, which can reveal suspicious activity or unauthorized access attempts targeting the IoT device.\nBy analyzing these logs, the security analyst can pinpoint the time and source of the initial exploit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An IoT device exploit arrives over the network, so the first evidence of it is the connection itself. Firewall logs record every inbound and outbound connection with timestamps and addresses, which is what pins down when the initial exploit traffic reached the device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint logs come from managed workstations and servers. IoT devices rarely run an agent capable of producing them.",
+      "B": "Application logs record activity inside a business application. The exploit targeted a device, not an application's own functions.",
+      "D": "NAC logs record admission decisions when devices join the network. They show the device connecting, not the later exploit traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.926,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13843,12 +13875,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "RFID cloning occurs when an attacker duplicates the data from an RFID badge, allowing them to simulate multiple entries using the same badge ID. The multiple entries within a short period in the gate access logs indicate that the RFID badge data might have been copied and used illegitimately.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One badge cannot be physically present at the gate several times in two minutes. Duplicate reads in that window mean the credential exists in more than one place, which is the signature of a cloned RFID badge.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets cryptography, not access logs.",
+      "C": "Shoulder surfing is watching someone enter a PIN or password. It produces no badge reads at all.",
+      "D": "Tailgating is following an authorised person through a door on their swipe. That would produce one read, not several."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13881,21 +13917,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Establish: Create the secure baseline by defining the standard configurations, security settings, and policies required for systems and applications.\nDeploy: Apply the secure baseline to the systems and environments to ensure compliance with the defined standards.\nMaintain: Continuously monitor and update the baseline as needed to adapt to new threats, vulnerabilities, or changes in requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot deploy a baseline that has not been defined, and a baseline that is never revisited drifts out of date as threats and software change. Establish, deploy, maintain is the only order in which each step has what it needs from the one before.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Deploying before establishing means rolling out a standard that does not exist yet.",
+      "B": "Maintaining before deploying means curating a baseline that has never been applied to anything.",
+      "D": "Deploying before establishing has the same problem as option A — there is nothing to apply."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0332",
-    "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
     "choices": [
@@ -13919,21 +13959,25 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The file is a keystroke log: it records the user's email address, their password and the literal key presses including backspaces and control characters. A keylogger is running, so the machine is compromised and must be reimaged before anything else is trusted.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Changing passwords matters and will be necessary, but doing it while the keylogger is still running simply captures the new password too.",
+      "C": "Checking the personal email policy is a governance question. There is an active compromise to deal with first.",
+      "D": "Checking host firewall logs is useful investigation, but it defers containment while the attacker continues collecting keystrokes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p148",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0333",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "Which of the following is a reason environmental variables are a concern when reviewing potential system vulnerabilities?",
     "choices": [
@@ -13957,12 +14001,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Environmental variables store system-specific information such as paths, user-specific settings, or authentication tokens. If improperly managed or exposed, they can significantly increase the scope and impact of a vulnerability. For instance, leaked credentials or sensitive data stored in environmental variables can provide attackers with additional access or escalate their capabilities during an exploit. Therefore, careful management of these variables is crucial for system security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Environmental variables commonly hold paths, tokens and credentials. When a vulnerability is exploited, whatever those variables contain becomes available to the attacker, so their contents directly determine how far the compromise reaches — which is why they factor into scoring impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Overwriting in-memory variables to insert malicious code describes memory injection. Environmental variables are a concern for what they hold, not as an injection vector.",
+      "C": "Cryptographic standards are defined by configuration and libraries, not by environment variables.",
+      "D": "Update scheduling is controlled by patch management tooling and policy, not by environment variables."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p148",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13995,12 +14043,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "IPSec with RADIUS supports the AAA (Authentication, Authorization, and Accounting) framework, which is required to comply with internal security policies. IPSec provides secure communication over the network, and RADIUS handles AAA functionalities by authenticating users, authorizing access levels, and keeping logs for accounting purposes. This combination ensures robust security for remote access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two requirements must be met together. IPSec provides the encrypted tunnel for remote access, and RADIUS supplies the AAA framework — authenticating the user, authorising their level of access and recording the session for accounting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RDP with LDAPS authenticates against a directory over a secure channel, but LDAP provides no accounting, so the third A is missing.",
+      "C": "A web proxy filters and logs outbound web traffic. It is not a remote access solution and does not authorise network access.",
+      "D": "A jump server with 802.1X controls device admission and gives a managed entry point, but 802.1X is an access control framework rather than a full AAA service for remote users."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14033,12 +14085,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A CSR (Certificate Signing Request) is required to create a new SSL certificate. It is a file that contains the public key and identifying information (such as domain name and organization details) that the administrator submits to a Certificate Authority (CA). The CA uses this information to generate and issue a new SSL certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A certificate signing request packages the new public key together with the subject details and is submitted to the CA, which signs it to produce the certificate. Replacing an expired certificate starts with generating a fresh key pair and a new CSR.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "OCSP is the protocol clients use to check a certificate's revocation status in real time. It queries status rather than requesting issuance.",
+      "C": "A key is part of what goes into the request — necessary but not sufficient. The CA needs the request containing it.",
+      "D": "A CRL lists certificates that should no longer be trusted. It is part of revocation, not issuance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14071,12 +14127,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Smishing (SMS phishing) is a type of social engineering attack where attackers use text messages to deceive individuals into revealing sensitive information or performing actions like a password reset. In this case, the unknown sender pretending to be the CEO and requesting a password reset via text exemplifies smishing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Smishing is phishing delivered by SMS. The text message, the impersonated executive, the manufactured emergency and the request to reset a password are all standard elements — the channel is what names the vector.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting registers look-alike domains for users who mistype an address. No domain is involved.",
+      "C": "Pretexting is the invented story used to justify the request — the emergency. It is the technique inside the attack rather than the vector.",
+      "D": "Impersonation is likewise the technique, pretending to be the CEO. The question asks specifically which threat vector delivered it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14109,12 +14169,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) offers advanced capabilities such as:\n• Preventing malicious content downloads through deep packet inspection and intrusion prevention systems (IPS).\n• Establishing controls based on departments and users by integrating with directory services like Active Directory for user-based policies.\n• Mapping internet access to business applications through application-level control and service account integration.\n• Restricting content based on categorization using URL filtering and content categorization features.\n•",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every requirement is a next-generation firewall feature: deep inspection to stop malicious downloads, user and group awareness from directory integration for department-based policy, application and service-account mapping, and URL categorisation for content control. One device covers all four.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A web application firewall protects a hosted application from inbound attacks. It faces the wrong direction — the requirement is about outbound user browsing.",
+      "B": "A secure DNS server can block categories of domain, which covers one requirement. It has no user awareness and cannot inspect downloads.",
+      "C": "A jump server is a controlled administrative access point. It has nothing to do with general employee internet use."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p150",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14147,12 +14211,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The company's decision to change its target market to eliminate exposure to a specific security risk is an example of risk avoidance. This strategy involves modifying plans, processes, or business models to eliminate the potential for a particular risk to occur, rather than mitigating or transferring it. By targeting a different market segment, the company effectively avoids the identified risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The company has removed itself from the situation that produced the risk by no longer serving that market. Eliminating exposure by not undertaking the activity is risk avoidance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An exemption formally excuses a system or process from a requirement. It is an administrative carve-out, not a change of business direction.",
+      "B": "An exception is a documented, usually temporary, deviation from policy. Again the risk is still being carried.",
+      "D": "Transfer shifts the financial consequence to someone else, typically through insurance. The company would still be serving that market."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p150",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14194,12 +14262,17 @@
       "A",
       "B"
     ],
-    "explanation": "Length: Longer passwords are more resistant to brute-force attacks. Requiring a minimum length (e.g., 12-16 characters) significantly improves password security.\nComplexity: Ensuring passwords include a mix of uppercase letters, lowercase letters, numbers, and special characters makes them harder to guess or crack using dictionary attacks.\nIncluding both length and complexity in the authentication policy helps to enhance overall password strength and security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An authentication policy governs the rules passwords must satisfy. Length is the single biggest factor in resisting brute force, and complexity widens the character set each guess must cover — both are password-composition rules a policy states.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Least privilege limits what an account may do once authenticated. It is an authorisation principle, not a password rule.",
+      "D": "Something you have describes a possession factor. That belongs in an MFA requirement rather than a password policy.",
+      "E": "Security keys are a specific MFA device. Again a factor, not a password rule.",
+      "F": "Biometrics is an inherence factor. It replaces or supplements passwords rather than defining their composition."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p151",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14232,12 +14305,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A continuous risk is an ongoing threat that requires ongoing mitigation and monitoring efforts.\nPhishing attempts are a continuous risk to organizations as attackers frequently target users via emails. An email gateway acts as a treatment strategy by actively filtering out malicious emails, thereby reducing the likelihood of successful phishing attacks. This proactive approach addresses the ongoing nature of the threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Phishing never stops arriving, so the treatment has to run continuously. An email gateway filters every message as it comes in, day after day, which is what matches a continuous risk — an always-on control rather than a one-off check.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Background checks happen once, at hire. They treat a point-in-time risk.",
+      "C": "Dual control on wire transfers applies per transaction. It is an important control but triggers only when a transfer occurs.",
+      "D": "Branch protection applies at merge time in the pipeline. Again it is event-driven rather than continuous."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p151",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14270,12 +14347,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A monolithic codebase can limit the deployment of software in a container environment because containers are designed to run lightweight, modular, and independent services. Monolithic applications are large, tightly coupled, and difficult to break into smaller components, which conflicts with the principles of containerization. This makes it harder to achieve the scalability, security, and isolation benefits of containers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containers are designed for small, independently deployable components. A monolithic application is one large tightly coupled unit, so putting it in a container yields one enormous container and none of the isolation or modularity the organisation is seeking.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Regulatory compliance may impose requirements on where and how workloads run, but it does not inherently prevent containerisation.",
+      "B": "Patch availability affects how quickly base images can be updated. It is an operational concern rather than a structural blocker.",
+      "C": "Kernel version matters because containers share the host kernel, but that is a compatibility detail that can be resolved by choosing a suitable host."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p152",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14308,12 +14389,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Before implementing a design change, backout planning is crucial to ensure the organization can quickly revert to a stable state if the change causes issues, including security vulnerabilities.\nBackout planning involves identifying the steps and resources needed to undo the change safely and efficiently, minimizing disruptions and maintaining security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A backout plan documents exactly how to reverse the change if it goes wrong, and having one is a prerequisite for approval. Objective 1.3 lists it explicitly as a change management component, alongside approval, impact analysis and test results.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Board review is corporate governance for major decisions. It does not appear in change management and would be wildly disproportionate for a design change.",
+      "B": "A service restart is something that may happen while implementing the change. It is an effect, not a preparatory step.",
+      "D": "Maintenance names the window in which the change happens. Scheduling is part of the process, but the question asks what the change must go through beforehand."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p152",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14346,14 +14431,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Taking something out of scope has to be recorded formally, not just decided. Acknowledgement and attestation is the mechanism — a signed statement from the responsible party confirming the application no longer falls within the reporting requirement, which is what an external auditor will look for.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Data inventory and retention record what data exists and how long it is kept. They describe the data, not the scope of a reporting obligation.",
+      "B": "The right to be forgotten is an individual's right to erasure of personal data. It is unrelated to reporting scope.",
+      "C": "Due care and due diligence describe the standard of care expected. They are principles rather than a confirmation mechanism."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.641,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -14393,12 +14482,17 @@
       "A",
       "C"
     ],
-    "explanation": "Methodically walk around the office noting Wi-Fi signal strength: This is essential for identifying areas with weak or strong signals and understanding the coverage gaps or interference points, which are crucial for developing an accurate heat map.\nCreate or obtain a layout of the office: A layout is necessary to map the signal strength data against the physical environment, enabling proper visualization of signal coverage and pinpointing issues.\nThese two steps provide the foundation for creating a meaningful heat map to analyze wireless network performance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A heat map plots measured signal strength onto the physical space, so you need both halves before anything else: a floor plan to plot against, and readings taken systematically as you walk the building. Without the layout the measurements have nowhere to go.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Checking access point settings tells you how they are configured. Configuration does not reveal actual coverage, which depends on walls, materials and interference.",
+      "D": "Cable lengths concern the wired infrastructure. They have no bearing on radio coverage.",
+      "E": "Access logs show which devices are busiest. Usage is not the same as signal strength.",
+      "F": "Removing impediments to radio transmission is a remediation you might perform afterwards, once the heat map shows where coverage is poor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14431,21 +14525,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Patching is used to improve both security and functionality by updating software to fix vulnerabilities, improve performance, or add features. This process ensures that critical application data is preserved while addressing issues that could compromise the application's security or functionality. Regular patching is a key part of maintaining a secure and efficient system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch modifies the software while leaving its data intact, fixing security defects and often improving functionality at the same time. That combination — better security and function without losing application data — is exactly what patching delivers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reformatting erases the storage volume, destroying the data along with everything else.",
+      "B": "Decommissioning retires the system entirely. There is no ongoing functionality to improve.",
+      "D": "Encryption protects confidentiality. It neither fixes defects nor improves functionality."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0346",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
     "question": "An organization is preparing to export proprietary software to a customer.\nWhich of the following would be the best way to prevent the loss of intellectual property?",
     "choices": [
@@ -14469,21 +14567,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Obfuscation is the process of making software code intentionally difficult to understand or reverse-engineer. By obfuscating the proprietary software before exporting it, the organization can protect its intellectual property from being analyzed, copied, or exploited by unauthorized parties. This method is commonly used to safeguard the core logic and algorithms of the software.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once software is in a customer's hands they can disassemble it. Obfuscation rewrites the code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information — which is what protects the algorithms that constitute the intellectual property.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Code signing proves who published the software and that it is unaltered. It establishes authenticity, not secrecy of the logic.",
+      "C": "Tokenisation substitutes sensitive data values with surrogates. It protects data records, not program logic.",
+      "D": "Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p154",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0347",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "domain": 2,
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "Which of the following should be used to ensure a device is inaccessible to a network- connected resource?",
     "choices": [
@@ -14507,12 +14609,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Host isolation ensures that a device is inaccessible to network-connected resources by isolating it from the rest of the network. This can be achieved through techniques such as placing the device in a quarantine VLAN or blocking its communications entirely. It is a key security measure when dealing with potentially compromised or non-compliant devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is exactly what inaccessibility requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unused services closes individual listening ports. The device remains reachable on whatever is still running.",
+      "B": "A web application firewall inspects HTTP traffic to a web application. It filters rather than disconnects, and only for one protocol.",
+      "D": "A network-based IDS watches traffic and alerts. It is passive and blocks nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p154",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14545,21 +14651,25 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "IoT devices are built to a price with minimal processing power, and many ship using plain HTTP, MQTT or proprietary protocols without encryption. Constrained hardware plus weak default configuration makes unencrypted traffic most likely here.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "SDN separates network control from forwarding. Its control channels are normally secured, and it is a management architecture rather than a class of chatty devices.",
+      "C": "A VPN exists specifically to encrypt traffic. Finding plaintext inside one would defeat its purpose.",
+      "D": "SCADA also runs legacy unencrypted protocols and is a reasonable concern, but it sits in controlled industrial networks whereas IoT devices are deployed broadly and cheaply."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0349",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "Which of the following is the best reason to perform a tabletop exercise?",
     "choices": [
@@ -14583,12 +14693,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The primary reason to perform a tabletop exercise is to test and validate the Incident Response Plan (IRP) in a simulated environment. This helps identify gaps, refine procedures, and ensure that the plan is up-to-date and effective in addressing current threats and scenarios. Regular tabletop exercises improve organizational preparedness for real-world incidents.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop walks the team through a scenario against the written plan, and what it produces is a list of gaps, stale contacts and unclear steps. Feeding those back into the incident response plan is the point of running it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Audit findings are addressed by remediating the specific control deficiencies identified. A tabletop might be evidence of a control, but that is a side effect.",
+      "B": "Remediation response times are measured against real incidents or technical tests. A discussion exercise produces no meaningful timings.",
+      "D": "Calculating return on investment is a financial exercise. Tabletops produce qualitative findings, not cost figures."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14621,12 +14735,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a standardized framework for assessing the severity of vulnerabilities. It assigns a numerical score that helps organizations determine the criticality of vulnerabilities and prioritize their remediation efforts based on the risk they pose.\nThis ensures efficient use of resources to address the most severe issues first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS scores each vulnerability from 0 to 10 based on exploitability and impact, giving a consistent way to rank them. Deciding which findings to remediate first is precisely what those scores are used for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching cost depends on labour, downtime and testing in your environment. CVSS models severity, not expense.",
+      "B": "Identifying unused ports and services is the job of a port scan or configuration review.",
+      "C": "Analysing code for exploitable defects is static or dynamic application testing. CVSS scores the flaws such testing finds."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p155",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14659,12 +14777,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A conflict of interest policy ensures that decisions are made in the best interests of the company and not influenced by personal relationships or benefits. Hiring a marketing agency owned by a close relative of the CEO without appropriate disclosures or procedures would violate such a policy, as it creates a potential bias or unfair advantage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Awarding work to a company owned by a close relative of the chief executive creates exactly the bias a conflict of interest policy exists to prevent. The requirement is that such relationships are disclosed and the decision made independently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Independent assessments are external evaluations of controls. They concern assurance, not procurement relationships.",
+      "B": "Supply chain analysis maps supplier dependencies and their risks. It examines security exposure rather than personal interests.",
+      "C": "A right-to-audit clause lets a customer inspect a vendor's controls. It governs oversight after the contract exists."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.885,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14697,12 +14819,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A fail-open configuration prioritizes availability, ensuring that services remain accessible even if the firewall encounters an issue. This approach minimizes downtime for critical resources, such as a website, but may temporarily compromise other aspects of security like confidentiality or integrity. This configuration is often chosen when maintaining access is of utmost importance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Fail-open means that if the firewall fails, traffic is allowed through rather than blocked. That deliberately sacrifices protection to keep the website reachable, which shows availability has been ranked above the other properties.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confidentiality is what fail-open puts at risk — unfiltered traffic reaches the site during a failure.",
+      "B": "Non-repudiation concerns proving who performed an action. A firewall failure mode does not affect it.",
+      "D": "Integrity is likewise weakened by allowing uninspected traffic, not prioritised by it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14735,12 +14861,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique fixed-size value (hash) based on the contents of a file or script. By comparing the current hash of the script with a previously calculated hash, the engineer can verify that the script has not been modified. Hashing ensures the integrity of the script without encrypting or altering it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing the script produces a fingerprint that changes completely if even one byte is altered. Comparing the hash at launch against a known-good value proves the file is unmodified, which is integrity verification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking hides parts of a value for display. It neither detects nor prevents modification.",
+      "B": "Obfuscation makes code hard to read. An obfuscated script can still be tampered with undetected.",
+      "D": "Encryption protects confidentiality. Ciphertext can be altered, and the script must be readable to run anyway."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p156",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14773,12 +14903,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Effective security governance requires clear assignment of roles and responsibilities to ensure accountability and proper management of security controls. Defining roles such as data owners (who make decisions), controllers (who implement decisions), and custodians (who handle day- to-day operations) is essential for ensuring security policies and procedures are effectively managed and enforced. This alignment is critical for a cohesive security framework.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Governance is fundamentally about accountability. Until it is clear who owns data, who decides how it is processed and who maintains it day to day, no policy can be enforced because there is nobody answerable for it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "External considerations such as regulation and jurisdiction must be documented, but they are inputs the governance structure responds to.",
+      "B": "Onboarding and offboarding procedures are operational processes. They are governed by the programme rather than defining it.",
+      "D": "Change management procedures are one control area among many. Important, but narrower than establishing accountability across the whole programme."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p157",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.737,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14786,8 +14920,8 @@
   {
     "id": "q0355",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A contractor is required to visually inspect the motherboards of all new servers that are purchased to determine whether the servers were tampered with.\nWhich of the following risks is the contractor attempting to mitigate?",
     "choices": [
@@ -14811,12 +14945,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "By visually inspecting the motherboards of new servers, the contractor is mitigating supply chain risks, which include the possibility of tampering or malicious components being introduced during manufacturing or transit. Such inspections help ensure the integrity of hardware and reduce the likelihood of compromised devices entering the organization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Inspecting hardware on arrival guards against components being added or substituted somewhere between the factory and the loading dock. Tampering introduced before the equipment ever reaches the organisation is a supply chain risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An embedded rootkit is one thing such tampering might install. It is a possible payload rather than the risk category being mitigated.",
+      "C": "Firmware failure is a reliability problem. Visual inspection of a motherboard would not reveal it.",
+      "D": "An RFID keylogger is a specific device that might be planted, again an example rather than the category."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p157",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false

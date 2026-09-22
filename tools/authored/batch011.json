@@ -1,0 +1,241 @@
+{
+"q0322": {"objective":"1.3",
+ "explanation":"A version control tool records every change to a file with its author, timestamp and a diff, and allows any earlier state to be recovered. Infrastructure code that builds virtual servers is code, so tracking its modifications is exactly what version control provides.",
+ "incorrect":{
+  "A":"A change management ticketing system records that a change was requested and approved. It documents the decision, not the line-by-line content of the code.",
+  "B":"A behavioural analyser watches user or system activity for anomalies. It is a detection tool with no role in tracking code.",
+  "C":"A collaboration platform helps people communicate and share documents. It may hold discussion about a change but keeps no authoritative change history."}},
+
+"q0323": {"objective":"5.1",
+ "explanation":"A procedure is the step-by-step instruction set for carrying out a specific task, so that it is done the same way every time. Detailing how to accomplish a technical security task is precisely its function.",
+ "incorrect":{
+  "A":"A standard states a mandatory requirement — the minimum key length, the required cipher. It says what must be true, not how to bring it about.",
+  "B":"A policy states the organisation's intent and high-level rules. It is deliberately implementation-independent.",
+  "C":"A guideline offers recommended practice. It advises rather than prescribing, and is not binding."}},
+
+"q0324": {"objective":"5.2",
+ "explanation":"The team's worry is about consequence — what happens to the business if the generator fails during failover. A business impact analysis is the activity that quantifies the effect of losing a function, which is what turns that worry into a prioritised recovery requirement.",
+ "incorrect":{
+  "A":"RPO is how much data loss is tolerable, measured backwards from the failure. It concerns data, not the impact of a hardware fault.",
+  "B":"ARO is how often a loss is expected per year. It is a frequency input to loss calculation, not an impact assessment.",
+  "D":"MTTR is the average time to repair a failed component. It measures repair speed rather than the business effect of the outage."}},
+
+"q0325": {"objective":"4.2",
+ "explanation":"Sanitisation overwrites or otherwise destroys data so it cannot be reconstructed from the medium. Its whole purpose is that a drive leaving the organisation — sold, recycled or repurposed — carries nothing recoverable for whoever receives it.",
+ "incorrect":{
+  "B":"Devices reaching end of life is a lifecycle fact driven by the vendor. Sanitisation happens at disposal but does not change support status.",
+  "C":"Disclosure through incorrect classification is prevented by a classification policy and correct labelling, not by wiping media.",
+  "D":"Incorrect inventory data is an asset management problem. Sanitisation destroys data rather than tracking hardware."}},
+
+"q0326": {"objective":"1.4",
+ "explanation":"The certificate revocation list is the CA's published record of certificates that should no longer be trusted, which clients check before accepting one. Note the wording is loose — a CRL carries revoked certificates, since expiry is self-evident from the certificate's own dates — but of these options it is the only publication mechanism a CA operates.",
+ "incorrect":{
+  "A":"A TPM is a hardware chip on an endpoint that stores keys and measures boot integrity. It is not a publishing mechanism.",
+  "C":"PKI is the whole framework of authorities, certificates and policies. The CRL is one component within it, and the question asks for the specific artefact.",
+  "D":"A CSR is the request submitted to obtain a certificate. It belongs at the start of the lifecycle, not the end."}},
+
+"q0327": {"objective":"4.3",
+ "explanation":"CVSS converts exploitability and impact into a comparable numeric score, which is what lets a long patch backlog be ranked consistently. Without a common measure there is no defensible basis for deciding what gets patched first.",
+ "incorrect":{
+  "B":"SCAP is a set of standards for automating configuration and compliance checking. It measures system state rather than scoring severity.",
+  "C":"OSINT is intelligence from public sources. It can tell you a flaw is being exploited in the wild, which adjusts urgency, but it provides no score.",
+  "D":"CVE is the identifier catalogue. It names each vulnerability uniquely and carries no severity information."}},
+
+"q0328": {"objective":"4.7",
+ "explanation":"The script checks each machine against a defined standard — required OS version, patch level and applications — every time a user logs in. Automatically verifying systems against a known-good configuration is baseline enforcement.",
+ "incorrect":{
+  "A":"Resource scaling adjusts compute capacity to match demand. The script allocates nothing.",
+  "B":"Policy enumeration would mean listing what policies exist. The script is checking compliance against a standard, not cataloguing rules.",
+  "D":"Guard rails constrain automated provisioning so infrastructure cannot be deployed outside safe bounds. They act at build time, not at user log-in."}},
+
+"q0329": {"objective":"4.9",
+ "explanation":"An IoT device exploit arrives over the network, so the first evidence of it is the connection itself. Firewall logs record every inbound and outbound connection with timestamps and addresses, which is what pins down when the initial exploit traffic reached the device.",
+ "incorrect":{
+  "A":"Endpoint logs come from managed workstations and servers. IoT devices rarely run an agent capable of producing them.",
+  "B":"Application logs record activity inside a business application. The exploit targeted a device, not an application's own functions.",
+  "D":"NAC logs record admission decisions when devices join the network. They show the device connecting, not the later exploit traffic."}},
+
+"q0330": {"objective":"2.4",
+ "explanation":"One badge cannot be physically present at the gate several times in two minutes. Duplicate reads in that window mean the credential exists in more than one place, which is the signature of a cloned RFID badge.",
+ "incorrect":{
+  "B":"A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets cryptography, not access logs.",
+  "C":"Shoulder surfing is watching someone enter a PIN or password. It produces no badge reads at all.",
+  "D":"Tailgating is following an authorised person through a door on their swipe. That would produce one read, not several."}},
+
+"q0331": {"objective":"4.1",
+ "explanation":"You cannot deploy a baseline that has not been defined, and a baseline that is never revisited drifts out of date as threats and software change. Establish, deploy, maintain is the only order in which each step has what it needs from the one before.",
+ "incorrect":{
+  "A":"Deploying before establishing means rolling out a standard that does not exist yet.",
+  "B":"Maintaining before deploying means curating a baseline that has never been applied to anything.",
+  "D":"Deploying before establishing has the same problem as option A — there is nothing to apply."}},
+
+"q0332": {"objective":"2.4",
+ "explanation":"The file is a keystroke log: it records the user's email address, their password and the literal key presses including backspaces and control characters. A keylogger is running, so the machine is compromised and must be reimaged before anything else is trusted.",
+ "incorrect":{
+  "A":"Changing passwords matters and will be necessary, but doing it while the keylogger is still running simply captures the new password too.",
+  "C":"Checking the personal email policy is a governance question. There is an active compromise to deal with first.",
+  "D":"Checking host firewall logs is useful investigation, but it defers containment while the attacker continues collecting keystrokes."}},
+
+"q0333": {"objective":"4.3",
+ "explanation":"Environmental variables commonly hold paths, tokens and credentials. When a vulnerability is exploited, whatever those variables contain becomes available to the attacker, so their contents directly determine how far the compromise reaches — which is why they factor into scoring impact.",
+ "incorrect":{
+  "B":"Overwriting in-memory variables to insert malicious code describes memory injection. Environmental variables are a concern for what they hold, not as an injection vector.",
+  "C":"Cryptographic standards are defined by configuration and libraries, not by environment variables.",
+  "D":"Update scheduling is controlled by patch management tooling and policy, not by environment variables."}},
+
+"q0334": {"objective":"3.2",
+ "explanation":"Two requirements must be met together. IPSec provides the encrypted tunnel for remote access, and RADIUS supplies the AAA framework — authenticating the user, authorising their level of access and recording the session for accounting.",
+ "incorrect":{
+  "B":"RDP with LDAPS authenticates against a directory over a secure channel, but LDAP provides no accounting, so the third A is missing.",
+  "C":"A web proxy filters and logs outbound web traffic. It is not a remote access solution and does not authorise network access.",
+  "D":"A jump server with 802.1X controls device admission and gives a managed entry point, but 802.1X is an access control framework rather than a full AAA service for remote users."}},
+
+"q0335": {"objective":"1.4",
+ "explanation":"A certificate signing request packages the new public key together with the subject details and is submitted to the CA, which signs it to produce the certificate. Replacing an expired certificate starts with generating a fresh key pair and a new CSR.",
+ "incorrect":{
+  "B":"OCSP is the protocol clients use to check a certificate's revocation status in real time. It queries status rather than requesting issuance.",
+  "C":"A key is part of what goes into the request — necessary but not sufficient. The CA needs the request containing it.",
+  "D":"A CRL lists certificates that should no longer be trusted. It is part of revocation, not issuance."}},
+
+"q0336": {"objective":"2.2",
+ "explanation":"Smishing is phishing delivered by SMS. The text message, the impersonated executive, the manufactured emergency and the request to reset a password are all standard elements — the channel is what names the vector.",
+ "incorrect":{
+  "A":"Typosquatting registers look-alike domains for users who mistype an address. No domain is involved.",
+  "C":"Pretexting is the invented story used to justify the request — the emergency. It is the technique inside the attack rather than the vector.",
+  "D":"Impersonation is likewise the technique, pretending to be the CEO. The question asks specifically which threat vector delivered it."}},
+
+"q0337": {"objective":"3.2",
+ "explanation":"Every requirement is a next-generation firewall feature: deep inspection to stop malicious downloads, user and group awareness from directory integration for department-based policy, application and service-account mapping, and URL categorisation for content control. One device covers all four.",
+ "incorrect":{
+  "A":"A web application firewall protects a hosted application from inbound attacks. It faces the wrong direction — the requirement is about outbound user browsing.",
+  "B":"A secure DNS server can block categories of domain, which covers one requirement. It has no user awareness and cannot inspect downloads.",
+  "C":"A jump server is a controlled administrative access point. It has nothing to do with general employee internet use."}},
+
+"q0338": {"objective":"5.2",
+ "explanation":"The company has removed itself from the situation that produced the risk by no longer serving that market. Eliminating exposure by not undertaking the activity is risk avoidance.",
+ "incorrect":{
+  "A":"An exemption formally excuses a system or process from a requirement. It is an administrative carve-out, not a change of business direction.",
+  "B":"An exception is a documented, usually temporary, deviation from policy. Again the risk is still being carried.",
+  "D":"Transfer shifts the financial consequence to someone else, typically through insurance. The company would still be serving that market."}},
+
+"q0339": {"objective":"4.6",
+ "explanation":"An authentication policy governs the rules passwords must satisfy. Length is the single biggest factor in resisting brute force, and complexity widens the character set each guess must cover — both are password-composition rules a policy states.",
+ "incorrect":{
+  "C":"Least privilege limits what an account may do once authenticated. It is an authorisation principle, not a password rule.",
+  "D":"Something you have describes a possession factor. That belongs in an MFA requirement rather than a password policy.",
+  "E":"Security keys are a specific MFA device. Again a factor, not a password rule.",
+  "F":"Biometrics is an inherence factor. It replaces or supplements passwords rather than defining their composition."}},
+
+"q0340": {"objective":"4.5",
+ "explanation":"Phishing never stops arriving, so the treatment has to run continuously. An email gateway filters every message as it comes in, day after day, which is what matches a continuous risk — an always-on control rather than a one-off check.",
+ "incorrect":{
+  "B":"Background checks happen once, at hire. They treat a point-in-time risk.",
+  "C":"Dual control on wire transfers applies per transaction. It is an important control but triggers only when a transfer occurs.",
+  "D":"Branch protection applies at merge time in the pipeline. Again it is event-driven rather than continuous."}},
+
+"q0341": {"objective":"3.1",
+ "explanation":"Containers are designed for small, independently deployable components. A monolithic application is one large tightly coupled unit, so putting it in a container yields one enormous container and none of the isolation or modularity the organisation is seeking.",
+ "incorrect":{
+  "A":"Regulatory compliance may impose requirements on where and how workloads run, but it does not inherently prevent containerisation.",
+  "B":"Patch availability affects how quickly base images can be updated. It is an operational concern rather than a structural blocker.",
+  "C":"Kernel version matters because containers share the host kernel, but that is a compatibility detail that can be resolved by choosing a suitable host."}},
+
+"q0342": {"objective":"1.3",
+ "explanation":"A backout plan documents exactly how to reverse the change if it goes wrong, and having one is a prerequisite for approval. Objective 1.3 lists it explicitly as a change management component, alongside approval, impact analysis and test results.",
+ "incorrect":{
+  "A":"Board review is corporate governance for major decisions. It does not appear in change management and would be wildly disproportionate for a design change.",
+  "B":"A service restart is something that may happen while implementing the change. It is an effect, not a preparatory step.",
+  "D":"Maintenance names the window in which the change happens. Scheduling is part of the process, but the question asks what the change must go through beforehand."}},
+
+"q0343": {"objective":"5.4",
+ "explanation":"Taking something out of scope has to be recorded formally, not just decided. Acknowledgement and attestation is the mechanism — a signed statement from the responsible party confirming the application no longer falls within the reporting requirement, which is what an external auditor will look for.",
+ "incorrect":{
+  "A":"Data inventory and retention record what data exists and how long it is kept. They describe the data, not the scope of a reporting obligation.",
+  "B":"The right to be forgotten is an individual's right to erasure of personal data. It is unrelated to reporting scope.",
+  "C":"Due care and due diligence describe the standard of care expected. They are principles rather than a confirmation mechanism."}},
+
+"q0344": {"objective":"4.1",
+ "explanation":"A heat map plots measured signal strength onto the physical space, so you need both halves before anything else: a floor plan to plot against, and readings taken systematically as you walk the building. Without the layout the measurements have nowhere to go.",
+ "incorrect":{
+  "B":"Checking access point settings tells you how they are configured. Configuration does not reveal actual coverage, which depends on walls, materials and interference.",
+  "D":"Cable lengths concern the wired infrastructure. They have no bearing on radio coverage.",
+  "E":"Access logs show which devices are busiest. Usage is not the same as signal strength.",
+  "F":"Removing impediments to radio transmission is a remediation you might perform afterwards, once the heat map shows where coverage is poor."}},
+
+"q0345": {"objective":"2.5",
+ "explanation":"A patch modifies the software while leaving its data intact, fixing security defects and often improving functionality at the same time. That combination — better security and function without losing application data — is exactly what patching delivers.",
+ "incorrect":{
+  "A":"Reformatting erases the storage volume, destroying the data along with everything else.",
+  "B":"Decommissioning retires the system entirely. There is no ongoing functionality to improve.",
+  "D":"Encryption protects confidentiality. It neither fixes defects nor improves functionality."}},
+
+"q0346": {"objective":"1.4",
+ "explanation":"Once software is in a customer's hands they can disassemble it. Obfuscation rewrites the code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information — which is what protects the algorithms that constitute the intellectual property.",
+ "incorrect":{
+  "A":"Code signing proves who published the software and that it is unaltered. It establishes authenticity, not secrecy of the logic.",
+  "C":"Tokenisation substitutes sensitive data values with surrogates. It protects data records, not program logic.",
+  "D":"Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."}},
+
+"q0347": {"objective":"2.5",
+ "explanation":"Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is exactly what inaccessibility requires.",
+ "incorrect":{
+  "A":"Disabling unused services closes individual listening ports. The device remains reachable on whatever is still running.",
+  "B":"A web application firewall inspects HTTP traffic to a web application. It filters rather than disconnects, and only for one protocol.",
+  "D":"A network-based IDS watches traffic and alerts. It is passive and blocks nothing."}},
+
+"q0348": {"objective":"3.1",
+ "explanation":"IoT devices are built to a price with minimal processing power, and many ship using plain HTTP, MQTT or proprietary protocols without encryption. Constrained hardware plus weak default configuration makes unencrypted traffic most likely here.",
+ "incorrect":{
+  "A":"SDN separates network control from forwarding. Its control channels are normally secured, and it is a management architecture rather than a class of chatty devices.",
+  "C":"A VPN exists specifically to encrypt traffic. Finding plaintext inside one would defeat its purpose.",
+  "D":"SCADA also runs legacy unencrypted protocols and is a reasonable concern, but it sits in controlled industrial networks whereas IoT devices are deployed broadly and cheaply."}},
+
+"q0349": {"objective":"4.8",
+ "explanation":"A tabletop walks the team through a scenario against the written plan, and what it produces is a list of gaps, stale contacts and unclear steps. Feeding those back into the incident response plan is the point of running it.",
+ "incorrect":{
+  "A":"Audit findings are addressed by remediating the specific control deficiencies identified. A tabletop might be evidence of a control, but that is a side effect.",
+  "B":"Remediation response times are measured against real incidents or technical tests. A discussion exercise produces no meaningful timings.",
+  "D":"Calculating return on investment is a financial exercise. Tabletops produce qualitative findings, not cost figures."}},
+
+"q0350": {"objective":"4.3",
+ "explanation":"CVSS scores each vulnerability from 0 to 10 based on exploitability and impact, giving a consistent way to rank them. Deciding which findings to remediate first is precisely what those scores are used for.",
+ "incorrect":{
+  "A":"Patching cost depends on labour, downtime and testing in your environment. CVSS models severity, not expense.",
+  "B":"Identifying unused ports and services is the job of a port scan or configuration review.",
+  "C":"Analysing code for exploitable defects is static or dynamic application testing. CVSS scores the flaws such testing finds."}},
+
+"q0351": {"objective":"5.3",
+ "explanation":"Awarding work to a company owned by a close relative of the chief executive creates exactly the bias a conflict of interest policy exists to prevent. The requirement is that such relationships are disclosed and the decision made independently.",
+ "incorrect":{
+  "A":"Independent assessments are external evaluations of controls. They concern assurance, not procurement relationships.",
+  "B":"Supply chain analysis maps supplier dependencies and their risks. It examines security exposure rather than personal interests.",
+  "C":"A right-to-audit clause lets a customer inspect a vendor's controls. It governs oversight after the contract exists."}},
+
+"q0352": {"objective":"1.2",
+ "explanation":"Fail-open means that if the firewall fails, traffic is allowed through rather than blocked. That deliberately sacrifices protection to keep the website reachable, which shows availability has been ranked above the other properties.",
+ "incorrect":{
+  "A":"Confidentiality is what fail-open puts at risk — unfiltered traffic reaches the site during a failure.",
+  "B":"Non-repudiation concerns proving who performed an action. A firewall failure mode does not affect it.",
+  "D":"Integrity is likewise weakened by allowing uninspected traffic, not prioritised by it."}},
+
+"q0353": {"objective":"1.4",
+ "explanation":"Hashing the script produces a fingerprint that changes completely if even one byte is altered. Comparing the hash at launch against a known-good value proves the file is unmodified, which is integrity verification.",
+ "incorrect":{
+  "A":"Masking hides parts of a value for display. It neither detects nor prevents modification.",
+  "B":"Obfuscation makes code hard to read. An obfuscated script can still be tampered with undetected.",
+  "D":"Encryption protects confidentiality. Ciphertext can be altered, and the script must be readable to run anyway."}},
+
+"q0354": {"objective":"5.1",
+ "explanation":"Governance is fundamentally about accountability. Until it is clear who owns data, who decides how it is processed and who maintains it day to day, no policy can be enforced because there is nobody answerable for it.",
+ "incorrect":{
+  "A":"External considerations such as regulation and jurisdiction must be documented, but they are inputs the governance structure responds to.",
+  "B":"Onboarding and offboarding procedures are operational processes. They are governed by the programme rather than defining it.",
+  "D":"Change management procedures are one control area among many. Important, but narrower than establishing accountability across the whole programme."}},
+
+"q0355": {"objective":"2.2",
+ "explanation":"Inspecting hardware on arrival guards against components being added or substituted somewhere between the factory and the loading dock. Tampering introduced before the equipment ever reaches the organisation is a supply chain risk.",
+ "incorrect":{
+  "A":"An embedded rootkit is one thing such tampering might install. It is a possible payload rather than the risk category being mitigated.",
+  "C":"Firmware failure is a reliability problem. Visual inspection of a motherboard would not reveal it.",
+  "D":"An RFID keylogger is a specific device that might be planted, again an example rather than the category."}}
+}

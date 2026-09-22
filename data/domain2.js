@@ -2360,51 +2360,59 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RFID cloning occurs when an attacker duplicates the data from an RFID badge, allowing them to simulate multiple entries using the same badge ID. The multiple entries within a short period in the gate access logs indicate that the RFID badge data might have been copied and used illegitimately.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One badge cannot be physically present at the gate several times in two minutes. Duplicate reads in that window mean the credential exists in more than one place, which is the signature of a cloned RFID badge.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets cryptography, not access logs.",
+      "C": "Shoulder surfing is watching someone enter a PIN or password. It produces no badge reads at all.",
+      "D": "Tailgating is following an authorised person through a door on their swipe. That would produce one read, not several."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0333",
+    "id": "q0332",
     "domain": 2,
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "Which of the following is a reason environmental variables are a concern when reviewing potential system vulnerabilities?",
+    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
     "choices": [
       {
         "key": "A",
-        "text": "The contents of environmental variables could affect the scope and impact of an exploited vulnerability."
+        "text": "Advise the user to change passwords."
       },
       {
         "key": "B",
-        "text": "In-memory environmental variable values can be overwritten and used by attackers to insert malicious code."
+        "text": "Reimage the end user's machine."
       },
       {
         "key": "C",
-        "text": "Environmental variables define cryptographic standards for the system and could create vulnerabilities if deprecated algorithms are used."
+        "text": "Check the policy on personal email at work."
       },
       {
         "key": "D",
-        "text": "Environmental variables will determine when updates are run and could mitigate the likelihood of vulnerability exploitation. •"
+        "text": "Check host firewall logs."
       }
     ],
     "correct": [
-      "A"
+      "B"
     ],
-    "explanation": "Environmental variables store system-specific information such as paths, user-specific settings, or authentication tokens. If improperly managed or exposed, they can significantly increase the scope and impact of a vulnerability. For instance, leaked credentials or sensitive data stored in environmental variables can provide attackers with additional access or escalate their capabilities during an exploit. Therefore, careful management of these variables is crucial for system security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The file is a keystroke log: it records the user's email address, their password and the literal key presses including backspaces and control characters. A keylogger is running, so the machine is compromised and must be reimaged before anything else is trusted.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Changing passwords matters and will be necessary, but doing it while the keylogger is still running simply captures the new password too.",
+      "C": "Checking the personal email policy is a governance question. There is an active compromise to deal with first.",
+      "D": "Checking host firewall logs is useful investigation, but it defers containment while the attacker continues collecting keystrokes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p148",
-    "needsReview": true,
-    "inferenceConfidence": 0.286,
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2436,12 +2444,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Smishing (SMS phishing) is a type of social engineering attack where attackers use text messages to deceive individuals into revealing sensitive information or performing actions like a password reset. In this case, the unknown sender pretending to be the CEO and requesting a password reset via text exemplifies smishing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Smishing is phishing delivered by SMS. The text message, the impersonated executive, the manufactured emergency and the request to reset a password are all standard elements — the channel is what names the vector.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting registers look-alike domains for users who mistype an address. No domain is involved.",
+      "C": "Pretexting is the invented story used to justify the request — the emergency. It is the technique inside the attack rather than the vector.",
+      "D": "Impersonation is likewise the technique, pretending to be the CEO. The question asks specifically which threat vector delivered it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2474,21 +2486,67 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Patching is used to improve both security and functionality by updating software to fix vulnerabilities, improve performance, or add features. This process ensures that critical application data is preserved while addressing issues that could compromise the application's security or functionality. Regular patching is a key part of maintaining a secure and efficient system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch modifies the software while leaving its data intact, fixing security defects and often improving functionality at the same time. That combination — better security and function without losing application data — is exactly what patching delivers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reformatting erases the storage volume, destroying the data along with everything else.",
+      "B": "Decommissioning retires the system entirely. There is no ongoing functionality to improve.",
+      "D": "Encryption protects confidentiality. It neither fixes defects nor improves functionality."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p153",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0347",
+    "domain": 2,
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "type": "single",
+    "question": "Which of the following should be used to ensure a device is inaccessible to a network- connected resource?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Disablement of unused services"
+      },
+      {
+        "key": "B",
+        "text": "Web application firewall"
+      },
+      {
+        "key": "C",
+        "text": "Host isolation"
+      },
+      {
+        "key": "D",
+        "text": "Network-based IDS"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is exactly what inaccessibility requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unused services closes individual listening ports. The device remains reachable on whatever is still running.",
+      "B": "A web application firewall inspects HTTP traffic to a web application. It filters rather than disconnects, and only for one protocol.",
+      "D": "A network-based IDS watches traffic and alerts. It is passive and blocks nothing."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p154",
+    "needsReview": false,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0355",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A contractor is required to visually inspect the motherboards of all new servers that are purchased to determine whether the servers were tampered with.\nWhich of the following risks is the contractor attempting to mitigate?",
     "choices": [
@@ -2512,12 +2570,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "By visually inspecting the motherboards of new servers, the contractor is mitigating supply chain risks, which include the possibility of tampering or malicious components being introduced during manufacturing or transit. Such inspections help ensure the integrity of hardware and reduce the likelihood of compromised devices entering the organization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Inspecting hardware on arrival guards against components being added or substituted somewhere between the factory and the loading dock. Tampering introduced before the equipment ever reaches the organisation is a supply chain risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An embedded rootkit is one thing such tampering might install. It is a possible payload rather than the risk category being mitigated.",
+      "C": "Firmware failure is a reliability problem. Visual inspection of a motherboard would not reveal it.",
+      "D": "An RFID keylogger is a specific device that might be planted, again an example rather than the category."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p157",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
