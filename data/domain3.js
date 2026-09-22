@@ -8,7 +8,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Employees located off-site must have access to company resources in order to complete their\nassigned tasks. These employees utilize a solution that allows remote access without\ninterception concerns.\nWhich of the following best describes this solution?",
+    "question": "Employees located off-site must have access to company resources in order to complete their assigned tasks. These employees utilize a solution that allows remote access without interception concerns.\nWhich of the following best describes this solution?",
     "choices": [
       {
         "key": "A",
@@ -84,7 +84,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company is decommissioning its physical servers and replacing them with an architecture that\nwill reduce the number of individual operating systems.\nWhich of the following strategies should the company use to achieve this security requirement?",
+    "question": "A company is decommissioning its physical servers and replacing them with an architecture that will reduce the number of individual operating systems.\nWhich of the following strategies should the company use to achieve this security requirement?",
     "choices": [
       {
         "key": "A",
@@ -122,7 +122,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The executive management team is mandating the company develop a disaster recovery plan.\nThe cost must be kept to a minimum, and the money to fund additional internet connections is\nnot available.\nWhich of the following would be the best option?",
+    "question": "The executive management team is mandating the company develop a disaster recovery plan.\nThe cost must be kept to a minimum, and the money to fund additional internet connections is not available.\nWhich of the following would be the best option?",
     "choices": [
       {
         "key": "A",
@@ -160,7 +160,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A utility company is designing a new platform that will host all the virtual machines used by\nbusiness applications. The requirements include:\n• A starting baseline of 50% memory utilization\n• Storage scalability\n• Single circuit failure resilience\nWhich of the following best meets all of these requirements?",
+    "question": "A utility company is designing a new platform that will host all the virtual machines used by business applications. The requirements include:\n• A starting baseline of 50% memory utilization\n• Storage scalability\n• Single circuit failure resilience Which of the following best meets all of these requirements?",
     "choices": [
       {
         "key": "A",
@@ -198,7 +198,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "An incident analyst finds several image files on a hard disk. The image files may contain\ngeolocation coordinates.\nWhich of the following best describes the type of information the analyst is trying to extract from\nthe image files?",
+    "question": "An incident analyst finds several image files on a hard disk. The image files may contain geolocation coordinates.\nWhich of the following best describes the type of information the analyst is trying to extract from the image files?",
     "choices": [
       {
         "key": "A",
@@ -236,7 +236,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A coffee shop owner wants to restrict internet access to only paying customers by prompting\nthem for a receipt number.\nWhich of the following is the best method to use given this requirement?",
+    "question": "A coffee shop owner wants to restrict internet access to only paying customers by prompting them for a receipt number.\nWhich of the following is the best method to use given this requirement?",
     "choices": [
       {
         "key": "A",
@@ -274,7 +274,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A company needs to keep the fewest records possible, meet compliance needs, and ensure\ndestruction of records that are no longer needed.\nWhich of the following best describes the policy that meets these requirements?",
+    "question": "A company needs to keep the fewest records possible, meet compliance needs, and ensure destruction of records that are no longer needed.\nWhich of the following best describes the policy that meets these requirements?",
     "choices": [
       {
         "key": "A",
@@ -312,7 +312,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following is the best reason an organization should enforce a data classification\npolicy to help protect its most sensitive information?",
+    "question": "Which of the following is the best reason an organization should enforce a data classification policy to help protect its most sensitive information?",
     "choices": [
       {
         "key": "A",
@@ -350,7 +350,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An architect has a request to increase the speed of data transfer using JSON requests\nexternally. Currently, the organization uses SFTP to transfer data files.\nWhich of the following will most likely meet the requirements?",
+    "question": "An architect has a request to increase the speed of data transfer using JSON requests externally. Currently, the organization uses SFTP to transfer data files.\nWhich of the following will most likely meet the requirements?",
     "choices": [
       {
         "key": "A",
@@ -388,7 +388,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A user is requesting Telnet access to manage a remote development web server. Insecure\nprotocols are not allowed for use within any environment.\nWhich of the following should be configured to allow remote access to this server?",
+    "question": "A user is requesting Telnet access to manage a remote development web server. Insecure protocols are not allowed for use within any environment.\nWhich of the following should be configured to allow remote access to this server?",
     "choices": [
       {
         "key": "A",
@@ -420,7 +420,7 @@ export const domain3Questions = [
     "references": [],
     "source": "SY0-701_en.pdf#p28",
     "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.5,
     "needsExplanation": true,
     "keyCorrected": false
   },
@@ -468,7 +468,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless\nnetwork for business activities. The legal department is concerned that visitors might connect to\nthe network and perform illicit activities.\nWhich of me following should the security team implement to address this concern?",
+    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities.\nWhich of me following should the security team implement to address this concern?",
     "choices": [
       {
         "key": "A",
@@ -506,7 +506,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A multinational bank hosts several servers in its data center. These servers run a business-\ncritical application used by customers to access their account information.\nWhich of the following should the bank use to ensure accessibility during peak usage times?",
+    "question": "A multinational bank hosts several servers in its data center. These servers run a business- critical application used by customers to access their account information.\nWhich of the following should the bank use to ensure accessibility during peak usage times?",
     "choices": [
       {
         "key": "A",
@@ -582,7 +582,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following is a common data removal option for companies that want to wipe\nsensitive data from hard drives in a repeatable manner but allow the hard drives to be reused?",
+    "question": "Which of the following is a common data removal option for companies that want to wipe sensitive data from hard drives in a repeatable manner but allow the hard drives to be reused?",
     "choices": [
       {
         "key": "A",
@@ -620,7 +620,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization wants to improve the company's security authentication method for remote\nemployees. Given the following requirements:\n• Must work across SaaS and internal network applications\n• Must be device manufacturer agnostic\n• Must have offline capabilities\nWhich of the following would be the most appropriate authentication method?",
+    "question": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements:\n• Must work across SaaS and internal network applications\n• Must be device manufacturer agnostic\n• Must have offline capabilities Which of the following would be the most appropriate authentication method?",
     "choices": [
       {
         "key": "A",
@@ -658,7 +658,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An organization recently started hosting a new service that customers access through a web\nportal. A security engineer needs to add to the existing security devices a new solution to\nprotect this new service.\nWhich of the following is the engineer most likely to deploy?",
+    "question": "An organization recently started hosting a new service that customers access through a web portal. A security engineer needs to add to the existing security devices a new solution to protect this new service.\nWhich of the following is the engineer most likely to deploy?",
     "choices": [
       {
         "key": "A",
@@ -696,7 +696,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following would be the best way to test resiliency in the event of a primary power\nfailure?",
+    "question": "Which of the following would be the best way to test resiliency in the event of a primary power failure?",
     "choices": [
       {
         "key": "A",
@@ -772,7 +772,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A systems administrator needs to ensure the secure communication of sensitive data within the\norganization's private cloud.\nWhich of the following is the best choice for the administrator to implement?",
+    "question": "A systems administrator needs to ensure the secure communication of sensitive data within the organization's private cloud.\nWhich of the following is the best choice for the administrator to implement?",
     "choices": [
       {
         "key": "A",
@@ -794,7 +794,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "IPSec (Internet Protocol Security) is a suite of protocols designed to secure IP communications\nby authenticating and encrypting each IP packet in a communication session. It is widely used\nfor securing data transfer in networks, including private clouds, by providing confidentiality,\nintegrity, and authenticity of data.",
+    "explanation": "IPSec (Internet Protocol Security) is a suite of protocols designed to secure IP communications by authenticating and encrypting each IP packet in a communication session. It is widely used for securing data transfer in networks, including private clouds, by providing confidentiality, integrity, and authenticity of data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -841,7 +841,7 @@ export const domain3Questions = [
       "A",
       "B"
     ],
-    "explanation": "Reporting involves documenting and communicating the findings of vulnerability scans and\nassessments. This allows stakeholders to be informed about existing vulnerabilities and track\nremediation efforts.\nPrioritization is the process of ranking vulnerabilities based on their severity, impact, and\nexploitability, helping the organization address the most critical vulnerabilities first.",
+    "explanation": "Reporting involves documenting and communicating the findings of vulnerability scans and assessments. This allows stakeholders to be informed about existing vulnerabilities and track remediation efforts.\nPrioritization is the process of ranking vulnerabilities based on their severity, impact, and exploitability, helping the organization address the most critical vulnerabilities first.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -879,7 +879,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Vendor diversity can help mitigate the impact of zero-day vulnerabilities. By using multiple\nvendors for similar services or components, organizations reduce the likelihood that a single\nvulnerability affecting one vendor's products will compromise the entire system. This diversity\ncreates resilience against attacks exploiting unknown vulnerabilities in any single vendor's\nsoftware.",
+    "explanation": "Vendor diversity can help mitigate the impact of zero-day vulnerabilities. By using multiple vendors for similar services or components, organizations reduce the likelihood that a single vulnerability affecting one vendor's products will compromise the entire system. This diversity creates resilience against attacks exploiting unknown vulnerabilities in any single vendor's software.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -895,7 +895,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization is looking to optimize its environment and reduce the number of patches\nnecessary for operating systems.\nWhich of the following will best help to achieve this objective?",
+    "question": "An organization is looking to optimize its environment and reduce the number of patches necessary for operating systems.\nWhich of the following will best help to achieve this objective?",
     "choices": [
       {
         "key": "A",
@@ -917,7 +917,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Containers package applications with only the necessary components and dependencies, which\nreduces the footprint of the operating system components in each instance. This approach\nminimizes the number of OS patches required, as each container runs only essential services\ninstead of a full OS environment, making it easier to isolate and update application\ndependencies without affecting the host or requiring frequent OS-level patches.",
+    "explanation": "Containers package applications with only the necessary components and dependencies, which reduces the footprint of the operating system components in each instance. This approach minimizes the number of OS patches required, as each container runs only essential services instead of a full OS environment, making it easier to isolate and update application dependencies without affecting the host or requiring frequent OS-level patches.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -933,7 +933,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization plans to expand its operations internationally and needs to keep data at the\nnew location secure. The organization wants to use the most secure architecture model\npossible.\nWhich of the following models offers the highest level of security?",
+    "question": "An organization plans to expand its operations internationally and needs to keep data at the new location secure. The organization wants to use the most secure architecture model possible.\nWhich of the following models offers the highest level of security?",
     "choices": [
       {
         "key": "A",
@@ -955,7 +955,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An on-premises architecture provides the highest level of control over data security, as the\norganization manages its own hardware, software, and network infrastructure directly. This\nsetup enables the organization to implement strict access controls, customize security\nmeasures according to regulatory requirements, and avoid some of the risks associated with\ndata transmission and storage in cloud environments, particularly for sensitive or proprietary\ninformation.",
+    "explanation": "An on-premises architecture provides the highest level of control over data security, as the organization manages its own hardware, software, and network infrastructure directly. This setup enables the organization to implement strict access controls, customize security measures according to regulatory requirements, and avoid some of the risks associated with data transmission and storage in cloud environments, particularly for sensitive or proprietary information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -966,12 +966,50 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0132",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "Which of the following should an organization use to protect its environment from external attacks conducted by an unauthorized hacker?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "ACL"
+      },
+      {
+        "key": "B",
+        "text": "IDS"
+      },
+      {
+        "key": "C",
+        "text": "HIDS"
+      },
+      {
+        "key": "D",
+        "text": "NIPS"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A Network Intrusion Prevention System (NIPS) actively monitors network traffic and can detect and block malicious activities in real-time, helping to prevent external attacks. Unlike IDS, which only detects intrusions, NIPS can take immediate action to stop threats, making it a strong defensive measure against unauthorized external attacks.",
+    "explanationSource": "pdf",
+    "incorrectExplanations": {},
+    "references": [],
+    "source": "SY0-701_en.pdf#p62",
+    "needsReview": true,
+    "inferenceConfidence": 0.7,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0133",
     "domain": 3,
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following would enable a data center to remain operational through a multiday\npower outage?",
+    "question": "Which of the following would enable a data center to remain operational through a multiday power outage?",
     "choices": [
       {
         "key": "A",
@@ -993,7 +1031,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A generator can provide continuous power for extended periods during a power outage, as long\nas it has sufficient fuel. Unlike an Uninterruptible Power Supply (UPS), which is typically used to\nbridge short power interruptions, a generator is designed to sustain operations over longer\ndurations, making it ideal for keeping a data center functional during a multiday outage.",
+    "explanation": "A generator can provide continuous power for extended periods during a power outage, as long as it has sufficient fuel. Unlike an Uninterruptible Power Supply (UPS), which is typically used to bridge short power interruptions, a generator is designed to sustain operations over longer durations, making it ideal for keeping a data center functional during a multiday outage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1009,7 +1047,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A security manager created new documentation to use in response to various types of security\nincidents.\nWhich of the following is the next step the manager should take?",
+    "question": "A security manager created new documentation to use in response to various types of security incidents.\nWhich of the following is the next step the manager should take?",
     "choices": [
       {
         "key": "A",
@@ -1031,7 +1069,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A tabletop exercise allows the team to walk through various incident response scenarios using\nthe new documentation, helping to ensure everyone understands their roles and the\nprocedures. This step verifies the effectiveness of the documentation, identifies any gaps, and\nprovides practical experience for the team, which is essential for effective incident response.",
+    "explanation": "A tabletop exercise allows the team to walk through various incident response scenarios using the new documentation, helping to ensure everyone understands their roles and the procedures. This step verifies the effectiveness of the documentation, identifies any gaps, and provides practical experience for the team, which is essential for effective incident response.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1047,7 +1085,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
-    "question": "A company is developing a critical system for the government and storing project information on\na fileshare.\nWhich of the following describes how this data will most likely be classified? (Choose two.)",
+    "question": "A company is developing a critical system for the government and storing project information on a fileshare.\nWhich of the following describes how this data will most likely be classified? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1078,7 +1116,7 @@ export const domain3Questions = [
       "B",
       "F"
     ],
-    "explanation": "Since the company is developing a critical system for the government, project information would\nlikely be classified as Confidential to prevent unauthorized access and maintain secrecy, and\nRestricted to limit access strictly to authorized personnel only, given the sensitivity and\nimportance of government-related work.",
+    "explanation": "Since the company is developing a critical system for the government, project information would likely be classified as Confidential to prevent unauthorized access and maintain secrecy, and Restricted to limit access strictly to authorized personnel only, given the sensitivity and importance of government-related work.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1094,7 +1132,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security engineer configured a remote access VPN. The remote access VPN allows end\nusers to connect to the network by using an agent that is installed on the endpoint, which\nestablishes an encrypted tunnel.\nWhich of the following protocols did the engineer most likely implement?",
+    "question": "A security engineer configured a remote access VPN. The remote access VPN allows end users to connect to the network by using an agent that is installed on the endpoint, which establishes an encrypted tunnel.\nWhich of the following protocols did the engineer most likely implement?",
     "choices": [
       {
         "key": "A",
@@ -1116,7 +1154,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "IPSec is commonly used in remote access VPNs to establish secure, encrypted tunnels\nbetween the endpoint and the network. This ensures that data transmitted over the VPN is\nprotected from interception, providing confidentiality, integrity, and authentication. IPSec is a\nwidely used protocol for secure remote access VPNs.",
+    "explanation": "IPSec is commonly used in remote access VPNs to establish secure, encrypted tunnels between the endpoint and the network. This ensures that data transmitted over the VPN is protected from interception, providing confidentiality, integrity, and authentication. IPSec is a widely used protocol for secure remote access VPNs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1132,7 +1170,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A university employee logged on to the academic server and attempted to guess the system\nadministrators' log-in credentials.\nWhich of the following security measures should the university have implemented to detect the\nemployee's attempts to gain access to the administrators' accounts?",
+    "question": "A university employee logged on to the academic server and attempted to guess the system administrators' log-in credentials.\nWhich of the following security measures should the university have implemented to detect the employee's attempts to gain access to the administrators' accounts?",
     "choices": [
       {
         "key": "A",
@@ -1154,7 +1192,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "User activity logs record user actions, including failed login attempts, account access patterns,\nand unusual behaviors. By reviewing these logs, security teams can detect unauthorized access\nattempts, such as an employee attempting to guess administrator credentials.",
+    "explanation": "User activity logs record user actions, including failed login attempts, account access patterns, and unusual behaviors. By reviewing these logs, security teams can detect unauthorized access attempts, such as an employee attempting to guess administrator credentials.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1170,7 +1208,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following strategies should an organization use to efficiently manage and analyze\nmultiple types of logs?",
+    "question": "Which of the following strategies should an organization use to efficiently manage and analyze multiple types of logs?",
     "choices": [
       {
         "key": "A",
@@ -1192,7 +1230,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Security Information and Event Management (SIEM) solution centralizes log collection,\naggregation, and analysis from various sources. SIEMs provide real-time monitoring,\ncorrelation, and alerting on security events, enabling organizations to efficiently manage and\nanalyze logs from diverse systems in a single platform. This approach is highly effective for\nidentifying security incidents and ensuring compliance.",
+    "explanation": "A Security Information and Event Management (SIEM) solution centralizes log collection, aggregation, and analysis from various sources. SIEMs provide real-time monitoring, correlation, and alerting on security events, enabling organizations to efficiently manage and analyze logs from diverse systems in a single platform. This approach is highly effective for identifying security incidents and ensuring compliance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1208,7 +1246,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following data states applies to data that is being actively processed by a database\nserver?",
+    "question": "Which of the following data states applies to data that is being actively processed by a database server?",
     "choices": [
       {
         "key": "A",
@@ -1230,7 +1268,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data \"in use\" refers to data actively being accessed, processed, or modified by an application or\nsystem, such as a database server. This is distinct from data \"at rest,\" which is stored but not\nactively accessed, and data \"in transit,\" which is being transmitted over a network.",
+    "explanation": "Data \"in use\" refers to data actively being accessed, processed, or modified by an application or system, such as a database server. This is distinct from data \"at rest,\" which is stored but not actively accessed, and data \"in transit,\" which is being transmitted over a network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1246,7 +1284,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following architectures is most suitable to provide redundancy for critical business\nprocesses?",
+    "question": "Which of the following architectures is most suitable to provide redundancy for critical business processes?",
     "choices": [
       {
         "key": "A",
@@ -1268,7 +1306,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Cloud-native architectures are designed with scalability, redundancy, and resilience in mind.\nThey leverage the distributed nature of cloud infrastructure, allowing for automatic failover, load\nbalancing, and redundancy across multiple geographic regions. This ensures high availability\nand continuous operation for critical business processes, even in the event of hardware or\nregional failures.",
+    "explanation": "Cloud-native architectures are designed with scalability, redundancy, and resilience in mind.\nThey leverage the distributed nature of cloud infrastructure, allowing for automatic failover, load balancing, and redundancy across multiple geographic regions. This ensures high availability and continuous operation for critical business processes, even in the event of hardware or regional failures.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1284,7 +1322,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following provides the best protection against unwanted or insecure\ncommunications to and from a device?",
+    "question": "Which of the following provides the best protection against unwanted or insecure communications to and from a device?",
     "choices": [
       {
         "key": "A",
@@ -1306,7 +1344,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A host-based firewall monitors and controls incoming and outgoing network traffic on a specific\ndevice, based on predetermined security rules. It provides protection by blocking unauthorized\nor potentially harmful communications, ensuring that only trusted traffic can access the device.\nThis helps prevent both inbound and outbound threats at the device level.",
+    "explanation": "A host-based firewall monitors and controls incoming and outgoing network traffic on a specific device, based on predetermined security rules. It provides protection by blocking unauthorized or potentially harmful communications, ensuring that only trusted traffic can access the device.\nThis helps prevent both inbound and outbound threats at the device level.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1322,7 +1360,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An enterprise security team is researching a new security architecture to better protect the\ncompany's networks and applications against the latest cyberthreats. The company has a fully\nremote workforce. The solution should be highly redundant and enable users to connect to a\nVPN with an integrated, software-based firewall.\nWhich of the following solutions meets these requirements?",
+    "question": "An enterprise security team is researching a new security architecture to better protect the company's networks and applications against the latest cyberthreats. The company has a fully remote workforce. The solution should be highly redundant and enable users to connect to a VPN with an integrated, software-based firewall.\nWhich of the following solutions meets these requirements?",
     "choices": [
       {
         "key": "A",
@@ -1344,7 +1382,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SASE combines network and security functions, including VPN, software-based firewalls,\nsecure web gateways, and more, into a single cloud-delivered service. It is well-suited for a fully\nremote workforce as it provides secure, scalable, and redundant access to company resources\nfrom any location, while protecting networks and applications against the latest cyberthreats.",
+    "explanation": "SASE combines network and security functions, including VPN, software-based firewalls, secure web gateways, and more, into a single cloud-delivered service. It is well-suited for a fully remote workforce as it provides secure, scalable, and redundant access to company resources from any location, while protecting networks and applications against the latest cyberthreats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1355,12 +1393,50 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0177",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following is the best way to validate the integrity and availability of a disaster recovery site?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Lead a simulated failover."
+      },
+      {
+        "key": "B",
+        "text": "Conduct a tabletop exercise."
+      },
+      {
+        "key": "C",
+        "text": "Periodically test the generators."
+      },
+      {
+        "key": "D",
+        "text": "Develop requirements for database encryption."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A simulated failover involves switching operations from the primary site to the disaster recovery site, testing the systems, applications, and processes in a real-world scenario. This approach validates that the disaster recovery site can support operations effectively, ensuring both integrity and availability in the event of an actual disaster.",
+    "explanationSource": "pdf",
+    "incorrectExplanations": {},
+    "references": [],
+    "source": "SY0-701_en.pdf#p80",
+    "needsReview": true,
+    "inferenceConfidence": 0.44,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0181",
     "domain": 3,
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A systems administrator successfully configures VPN access to a cloud environment.\nWhich of the following capabilities should the administrator use to best facilitate remote\nadministration?",
+    "question": "A systems administrator successfully configures VPN access to a cloud environment.\nWhich of the following capabilities should the administrator use to best facilitate remote administration?",
     "choices": [
       {
         "key": "A",
@@ -1382,7 +1458,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A jump host in a shared services security zone is specifically designed to provide secure access\nto remote environments, such as a cloud environment, while ensuring that access is monitored\nand controlled. This setup facilitates remote administration by providing a dedicated entry point,\nallowing administrators to access sensitive network areas through a secure, segmented\npathway. This setup minimizes direct exposure to the cloud environment and enhances security.",
+    "explanation": "A jump host in a shared services security zone is specifically designed to provide secure access to remote environments, such as a cloud environment, while ensuring that access is monitored and controlled. This setup facilitates remote administration by providing a dedicated entry point, allowing administrators to access sensitive network areas through a secure, segmented pathway. This setup minimizes direct exposure to the cloud environment and enhances security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1398,7 +1474,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following best describes the concept of information being stored outside of its\ncountry of origin while still being subject to the laws and requirements of the country of origin?",
+    "question": "Which of the following best describes the concept of information being stored outside of its country of origin while still being subject to the laws and requirements of the country of origin?",
     "choices": [
       {
         "key": "A",
@@ -1420,7 +1496,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data sovereignty refers to the concept that data stored outside its country of origin is still subject\nto the laws and regulations of that original country. This means that, regardless of where the\ndata is physically stored, it remains governed by the legal requirements and privacy standards\nof its originating country. This concept is essential for ensuring that data complies with national\nregulations, even in cross-border storage scenarios.",
+    "explanation": "Data sovereignty refers to the concept that data stored outside its country of origin is still subject to the laws and regulations of that original country. This means that, regardless of where the data is physically stored, it remains governed by the legal requirements and privacy standards of its originating country. This concept is essential for ensuring that data complies with national regulations, even in cross-border storage scenarios.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1458,7 +1534,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Behavioral analytics involves monitoring and analyzing user behaviors to detect unusual or\nsuspicious patterns that may indicate insider threats. By establishing a baseline of normal\nbehavior, behavioral analytics solutions can identify deviations that could signal potential\nmalicious or risky activities by users, helping to prevent insider threats. This approach is\neffective in detecting unauthorized actions that traditional access control or identity\nmanagement systems might miss.",
+    "explanation": "Behavioral analytics involves monitoring and analyzing user behaviors to detect unusual or suspicious patterns that may indicate insider threats. By establishing a baseline of normal behavior, behavioral analytics solutions can identify deviations that could signal potential malicious or risky activities by users, helping to prevent insider threats. This approach is effective in detecting unauthorized actions that traditional access control or identity management systems might miss.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1474,7 +1550,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following explains how to determine the global regulations that data is subject to\nregardless of the country where the data is stored?",
+    "question": "Which of the following explains how to determine the global regulations that data is subject to regardless of the country where the data is stored?",
     "choices": [
       {
         "key": "A",
@@ -1496,7 +1572,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Data sovereignty refers to the principle that data is subject to the laws and regulations of the\ncountry where it originated, regardless of where it is stored. This concept ensures that data\ncomplies with the legal requirements of its country of origin, even when stored or processed\nacross borders.",
+    "explanation": "Data sovereignty refers to the principle that data is subject to the laws and regulations of the country where it originated, regardless of where it is stored. This concept ensures that data complies with the legal requirements of its country of origin, even when stored or processed across borders.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1512,7 +1588,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
-    "question": "An organization's web servers host an online ordering system. The organization discovers that\nthe servers are vulnerable to a malicious JavaScript injection, which could allow attackers to\naccess customer payment information.\nWhich of the following mitigation strategies would be most effective for preventing an attack on\nthe organization's web servers? (Choose two.)",
+    "question": "An organization's web servers host an online ordering system. The organization discovers that the servers are vulnerable to a malicious JavaScript injection, which could allow attackers to access customer payment information.\nWhich of the following mitigation strategies would be most effective for preventing an attack on the organization's web servers? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1543,7 +1619,7 @@ export const domain3Questions = [
       "A",
       "D"
     ],
-    "explanation": "Regularly updating server software and applying patches addresses known vulnerabilities,\nreducing the risk of exploitation through unpatched flaws.\nA web-application firewall (WAF) is particularly effective against malicious injections, as it\nmonitors and filters HTTP traffic to block injection attempts, such as JavaScript injections.\nTogether, these strategies provide robust protection against attacks targeting the web servers.",
+    "explanation": "Regularly updating server software and applying patches addresses known vulnerabilities, reducing the risk of exploitation through unpatched flaws.\nA web-application firewall (WAF) is particularly effective against malicious injections, as it monitors and filters HTTP traffic to block injection attempts, such as JavaScript injections.\nTogether, these strategies provide robust protection against attacks targeting the web servers.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1581,7 +1657,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Security Information and Event Management (SIEM) system is best suited for logging and\nmonitoring in a cloud environment. SIEM tools collect, aggregate, and analyze log data from\nmultiple sources within the environment, providing real-time monitoring, alerts, and analysis of\nsecurity events. This centralized approach helps identify potential security incidents across\ncloud resources effectively.",
+    "explanation": "A Security Information and Event Management (SIEM) system is best suited for logging and monitoring in a cloud environment. SIEM tools collect, aggregate, and analyze log data from multiple sources within the environment, providing real-time monitoring, alerts, and analysis of security events. This centralized approach helps identify potential security incidents across cloud resources effectively.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1619,7 +1695,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Before a new web server goes live, the first step should be to harden the virtual host. Hardening\ninvolves securing the server by disabling unnecessary services, configuring permissions, and\napplying best practices to minimize vulnerabilities. This foundational step reduces the attack\nsurface and ensures the server is secure before additional security measures, such as WAF\nrules, intrusion detection, or patch management, are applied.",
+    "explanation": "Before a new web server goes live, the first step should be to harden the virtual host. Hardening involves securing the server by disabling unnecessary services, configuring permissions, and applying best practices to minimize vulnerabilities. This foundational step reduces the attack surface and ensures the server is secure before additional security measures, such as WAF rules, intrusion detection, or patch management, are applied.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1635,7 +1711,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following would be the best solution to deploy a low-cost standby site that includes\nhardware and internet access?",
+    "question": "Which of the following would be the best solution to deploy a low-cost standby site that includes hardware and internet access?",
     "choices": [
       {
         "key": "A",
@@ -1673,7 +1749,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "multi",
-    "question": "An organization wants to implement a secure solution for remote users. The users handle\nsensitive PHI on a regular basis and need to access an internally developed corporate\napplication.\nWhich of the following best meet the organization's security requirements? (Choose two.)",
+    "question": "An organization wants to implement a secure solution for remote users. The users handle sensitive PHI on a regular basis and need to access an internally developed corporate application.\nWhich of the following best meet the organization's security requirements? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1704,7 +1780,7 @@ export const domain3Questions = [
       "E",
       "F"
     ],
-    "explanation": "Multi-factor authentication (MFA) and a virtual private network (VPN) best meet the\norganization's security requirements for remote access to sensitive information like protected\nhealth information (PHI).\nMFA adds a layer of security by requiring multiple forms of verification before granting access,\nwhich helps protect against unauthorized access.\nVPN provides a secure encrypted connection for remote users, ensuring that data transmitted\nover the network remains confidential and secure.\nTogether, these controls help secure remote access to the corporate application handling\nsensitive data.",
+    "explanation": "Multi-factor authentication (MFA) and a virtual private network (VPN) best meet the organization's security requirements for remote access to sensitive information like protected health information (PHI).\nMFA adds a layer of security by requiring multiple forms of verification before granting access, which helps protect against unauthorized access.\nVPN provides a secure encrypted connection for remote users, ensuring that data transmitted over the network remains confidential and secure.\nTogether, these controls help secure remote access to the corporate application handling sensitive data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1742,7 +1818,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An air-gapped system is physically isolated from any other network, meaning it has no direct or\nindirect connection to the internet or other networks. This architecture is commonly used to\nprotect highly secure systems by ensuring that they are not accessible remotely, thus reducing\nthe risk of unauthorized access or cyberattacks. This approach aligns with the client's goal of\nphysically isolating its secure systems.",
+    "explanation": "An air-gapped system is physically isolated from any other network, meaning it has no direct or indirect connection to the internet or other networks. This architecture is commonly used to protect highly secure systems by ensuring that they are not accessible remotely, thus reducing the risk of unauthorized access or cyberattacks. This approach aligns with the client's goal of physically isolating its secure systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1758,7 +1834,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company is in the process of migrating to cloud-based services. The company's IT\ndepartment has limited resources for migration and ongoing support.\nWhich of the following best meets the company's needs?",
+    "question": "A company is in the process of migrating to cloud-based services. The company's IT department has limited resources for migration and ongoing support.\nWhich of the following best meets the company's needs?",
     "choices": [
       {
         "key": "A",
@@ -1780,7 +1856,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Secure Access Service Edge (SASE) combines network security functions with wide area\nnetwork (WAN) capabilities in a cloud-delivered model, which simplifies management and\nprovides scalable, secure access to cloud-based services. For a company with limited IT\nresources, SASE offers an integrated solution that reduces the need for extensive on-premises\ninfrastructure and simplifies ongoing support. This approach allows the company to enhance\nsecurity while efficiently supporting its cloud migration.",
+    "explanation": "Secure Access Service Edge (SASE) combines network security functions with wide area network (WAN) capabilities in a cloud-delivered model, which simplifies management and provides scalable, secure access to cloud-based services. For a company with limited IT resources, SASE offers an integrated solution that reduces the need for extensive on-premises infrastructure and simplifies ongoing support. This approach allows the company to enhance security while efficiently supporting its cloud migration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1796,7 +1872,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "multi",
-    "question": "Which of the following best describe the benefits of a microservices architecture when\ncompared to a monolithic architecture? (Choose two.)",
+    "question": "Which of the following best describe the benefits of a microservices architecture when compared to a monolithic architecture? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1827,7 +1903,7 @@ export const domain3Questions = [
       "C",
       "D"
     ],
-    "explanation": "A microservices architecture offers the following benefits compared to a monolithic architecture:\nImproved scalability: Each microservice can be independently scaled based on demand,\nallowing more efficient resource usage and better performance for high-demand components.\nIncreased compartmentalization : Microservices are designed as separate, independent\ncomponents, which improves modularity and allows for better fault isolation, easier updates, and\nfocused development on specific services.\nWhile microservices have benefits such as easier debugging and reduced cost of ownership,\ntheir primary advantages lie in scalability and compartmentalization.",
+    "explanation": "A microservices architecture offers the following benefits compared to a monolithic architecture:\nImproved scalability: Each microservice can be independently scaled based on demand, allowing more efficient resource usage and better performance for high-demand components.\nIncreased compartmentalization : Microservices are designed as separate, independent components, which improves modularity and allows for better fault isolation, easier updates, and focused development on specific services.\nWhile microservices have benefits such as easier debugging and reduced cost of ownership, their primary advantages lie in scalability and compartmentalization.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1843,7 +1919,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A penetration tester finds an unused Ethernet port during an on-site penetration test. Upon\nplugging a device into the unused port, the penetration tester notices that the machine is\nassigned an IP address, allowing the tester to enumerate the local network.\nWhich of the following should an administrator implement in order to prevent this situation from\nhappening in the future?",
+    "question": "A penetration tester finds an unused Ethernet port during an on-site penetration test. Upon plugging a device into the unused port, the penetration tester notices that the machine is assigned an IP address, allowing the tester to enumerate the local network.\nWhich of the following should an administrator implement in order to prevent this situation from happening in the future?",
     "choices": [
       {
         "key": "A",
@@ -1865,7 +1941,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Port security is a network security feature that restricts input to an Ethernet port based on MAC\naddresses, which helps prevent unauthorized devices from gaining access to the network. By\nimplementing port security, administrators can control which devices are allowed to connect to\nspecific network ports, preventing unauthorized access through unused or untrusted ports. This\nmeasure would have prevented the penetration tester from gaining access to the local network\nby plugging into an unused port.",
+    "explanation": "Port security is a network security feature that restricts input to an Ethernet port based on MAC addresses, which helps prevent unauthorized devices from gaining access to the network. By implementing port security, administrators can control which devices are allowed to connect to specific network ports, preventing unauthorized access through unused or untrusted ports. This measure would have prevented the penetration tester from gaining access to the local network by plugging into an unused port.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1881,7 +1957,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company that has a large IT operation is looking to better control, standardize, and lower the\ntime required to build new servers.\nWhich of the following architectures will best achieve the company's objectives?",
+    "question": "A company that has a large IT operation is looking to better control, standardize, and lower the time required to build new servers.\nWhich of the following architectures will best achieve the company's objectives?",
     "choices": [
       {
         "key": "A",
@@ -1903,7 +1979,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as Code (IaC) is the best solution for controlling, standardizing, and speeding up\nthe process of building new servers. IaC allows the company to define the infrastructure using\ncode, enabling automated provisioning, configuration, and management of servers and other IT\nresources. This approach ensures consistency, reduces human error, and accelerates the\ndeployment process. With IaC, the company can quickly spin up new servers in a standardized\nand efficient manner.",
+    "explanation": "Infrastructure as Code (IaC) is the best solution for controlling, standardizing, and speeding up the process of building new servers. IaC allows the company to define the infrastructure using code, enabling automated provisioning, configuration, and management of servers and other IT resources. This approach ensures consistency, reduces human error, and accelerates the deployment process. With IaC, the company can quickly spin up new servers in a standardized and efficient manner.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1919,7 +1995,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A malicious actor conducted a brute-force attack on a company's web servers and eventually\ngained access to the company's customer information database.\nWhich of the following is the most effective way to prevent similar attacks?",
+    "question": "A malicious actor conducted a brute-force attack on a company's web servers and eventually gained access to the company's customer information database.\nWhich of the following is the most effective way to prevent similar attacks?",
     "choices": [
       {
         "key": "A",
@@ -1941,7 +2017,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The most effective way to prevent similar brute-force attacks in the future is to implement\nmultifactor authentication (MFA). MFA requires users to provide multiple forms of authentication\n(such as a password and a one-time code sent to a mobile device) before gaining access. This\nsignificantly reduces the likelihood of successful brute-force attacks, as attackers would need\nmore than just the password to gain unauthorized access to the system.\nWhile regular patching, web application firewalls, and encryption of customer data are important\nsecurity measures, MFA directly addresses the core vulnerability exploited by brute-force\nattacks.",
+    "explanation": "The most effective way to prevent similar brute-force attacks in the future is to implement multifactor authentication (MFA). MFA requires users to provide multiple forms of authentication (such as a password and a one-time code sent to a mobile device) before gaining access. This significantly reduces the likelihood of successful brute-force attacks, as attackers would need more than just the password to gain unauthorized access to the system.\nWhile regular patching, web application firewalls, and encryption of customer data are important security measures, MFA directly addresses the core vulnerability exploited by brute-force attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2017,7 +2093,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The log snippet shows an HTTP request where an attacker is attempting to insert new data into\nthe database through a SQL injection attack. The request contains an SQL command INSERT\nINTO users VALUES ('temp', 'pass123'), which is likely an attempt to create a new user with the\nusername \"temp\" and the password \"pass123.\"",
+    "explanation": "The log snippet shows an HTTP request where an attacker is attempting to insert new data into the database through a SQL injection attack. The request contains an SQL command INSERT INTO users VALUES ('temp', 'pass123'), which is likely an attempt to create a new user with the username \"temp\" and the password \"pass123.\"",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2033,7 +2109,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A company wants to improve the availability of its application with a solution that requires\nminimal effort in the event a server needs to be replaced or added.\nWhich of the following would be the best solution to meet these objectives?",
+    "question": "A company wants to improve the availability of its application with a solution that requires minimal effort in the event a server needs to be replaced or added.\nWhich of the following would be the best solution to meet these objectives?",
     "choices": [
       {
         "key": "A",
@@ -2055,7 +2131,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Load balancing is the best solution for improving the availability of an application with minimal\neffort in the event that a server needs to be replaced or added. A load balancer distributes\nincoming traffic across multiple servers, ensuring that the application remains available even if\none or more servers experience issues. This approach allows the system to scale and remain\nhighly available without requiring significant manual intervention when adding or replacing\nservers.",
+    "explanation": "Load balancing is the best solution for improving the availability of an application with minimal effort in the event that a server needs to be replaced or added. A load balancer distributes incoming traffic across multiple servers, ensuring that the application remains available even if one or more servers experience issues. This approach allows the system to scale and remain highly available without requiring significant manual intervention when adding or replacing servers.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2071,7 +2147,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A network engineer is increasing the overall security of network devices and needs to harden\nthe devices.\nWhich of the following will best accomplish this task?",
+    "question": "A network engineer is increasing the overall security of network devices and needs to harden the devices.\nWhich of the following will best accomplish this task?",
     "choices": [
       {
         "key": "A",
@@ -2093,7 +2169,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Replacing Telnet with SSH (Secure Shell) is one of the best practices for hardening network\ndevices. Telnet sends data, including passwords, in plaintext, making it vulnerable to\ninterception. SSH, on the other hand,\nencrypts the communication between devices, providing a more secure way to manage network\ndevices remotely.",
+    "explanation": "Replacing Telnet with SSH (Secure Shell) is one of the best practices for hardening network devices. Telnet sends data, including passwords, in plaintext, making it vulnerable to interception. SSH, on the other hand, encrypts the communication between devices, providing a more secure way to manage network devices remotely.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2109,7 +2185,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following is most likely a security concern when installing and using low-cost IoT\ndevices in infrastructure environments?",
+    "question": "Which of the following is most likely a security concern when installing and using low-cost IoT devices in infrastructure environments?",
     "choices": [
       {
         "key": "A",
@@ -2131,7 +2207,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Storage of data is a significant security concern when installing and using low-cost IoT (Internet\nof Things) devices in infrastructure environments. Many low-cost IoT devices may not have\nrobust security measures in place to protect the data they collect or transmit. This data could be\nsensitive, such as operational metrics or user data, and if not properly secured, it could be\nvulnerable to theft, unauthorized access, or misuse.",
+    "explanation": "Storage of data is a significant security concern when installing and using low-cost IoT (Internet of Things) devices in infrastructure environments. Many low-cost IoT devices may not have robust security measures in place to protect the data they collect or transmit. This data could be sensitive, such as operational metrics or user data, and if not properly secured, it could be vulnerable to theft, unauthorized access, or misuse.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2147,7 +2223,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security team is in the process of hardening the network against externally crafted malicious\npackets.\nWhich of the following is the most secure method to protect the internal network?",
+    "question": "A security team is in the process of hardening the network against externally crafted malicious packets.\nWhich of the following is the most secure method to protect the internal network?",
     "choices": [
       {
         "key": "A",
@@ -2173,7 +2249,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An Intrusion Prevention System (IPS) is the most secure method for protecting the internal\nnetwork against externally crafted malicious packets. IPS can monitor network traffic in real-\ntime, detect, and block malicious packets or suspicious activity, which is critical for defending\nagainst external threats. An IPS actively analyzes traffic and can take action (such as blocking\ntraffic or alerting administrators) to prevent attacks, making it highly effective in hardening the\nnetwork against malicious packets.",
+    "explanation": "An Intrusion Prevention System (IPS) is the most secure method for protecting the internal network against externally crafted malicious packets. IPS can monitor network traffic in real- time, detect, and block malicious packets or suspicious activity, which is critical for defending against external threats. An IPS actively analyzes traffic and can take action (such as blocking traffic or alerting administrators) to prevent attacks, making it highly effective in hardening the network against malicious packets.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2189,7 +2265,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A company is using a legacy FTP server to transfer financial data to a third party. The legacy\nsystem does not support SFTP, so a compensating control is needed to protect the sensitive,\nfinancial data in transit.\nWhich of the following would be the most appropriate for the company to use?",
+    "question": "A company is using a legacy FTP server to transfer financial data to a third party. The legacy system does not support SFTP, so a compensating control is needed to protect the sensitive, financial data in transit.\nWhich of the following would be the most appropriate for the company to use?",
     "choices": [
       {
         "key": "A",
@@ -2211,13 +2287,13 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Since the legacy FTP server does not support SFTP (which would provide secure file transfer),\nSSH tunneling is a compensating control that can help protect sensitive financial data in transit.\nSSH tunneling involves creating a secure, encrypted tunnel between the FTP server and the\nthird party, ensuring that the data transferred through FTP is encrypted and protected from\neavesdropping or tampering.",
+    "explanation": "Since the legacy FTP server does not support SFTP (which would provide secure file transfer), SSH tunneling is a compensating control that can help protect sensitive financial data in transit.\nSSH tunneling involves creating a secure, encrypted tunnel between the FTP server and the third party, ensuring that the data transferred through FTP is encrypted and protected from eavesdropping or tampering.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p121",
     "needsReview": true,
-    "inferenceConfidence": 0.409,
+    "inferenceConfidence": 0.346,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2227,7 +2303,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company is implementing a policy to allow employees to use their personal equipment for\nwork. However, the company wants to ensure that only company-approved applications can be\ninstalled.\nWhich of the following addresses this concern?",
+    "question": "A company is implementing a policy to allow employees to use their personal equipment for work. However, the company wants to ensure that only company-approved applications can be installed.\nWhich of the following addresses this concern?",
     "choices": [
       {
         "key": "A",
@@ -2249,7 +2325,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MDM (Mobile Device Management) is the most appropriate solution for this scenario. MDM\nallows companies to manage and secure mobile devices, including personal devices used for\nwork (BYOD - Bring Your Own Device). With MDM, the company can enforce policies such as\nrestricting the installation of unauthorized applications and ensuring that only company-\napproved applications are installed on the devices. MDM also allows remote management,\nconfiguration, and monitoring of devices to ensure compliance with company policies.",
+    "explanation": "MDM (Mobile Device Management) is the most appropriate solution for this scenario. MDM allows companies to manage and secure mobile devices, including personal devices used for work (BYOD - Bring Your Own Device). With MDM, the company can enforce policies such as restricting the installation of unauthorized applications and ensuring that only company- approved applications are installed on the devices. MDM also allows remote management, configuration, and monitoring of devices to ensure compliance with company policies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2287,7 +2363,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Tokenization is a data protection strategy that involves replacing sensitive data with surrogate\nvalues, or \"tokens,\" which have no meaningful value outside the specific context in which they\nare used. These tokens are used in place of the original sensitive data to protect it, and the\nactual sensitive data is stored securely in a separate system or vault. Tokenization is commonly\nused to protect payment card information, personal identification details, and other sensitive\ndata.",
+    "explanation": "Tokenization is a data protection strategy that involves replacing sensitive data with surrogate values, or \"tokens,\" which have no meaningful value outside the specific context in which they are used. These tokens are used in place of the original sensitive data to protect it, and the actual sensitive data is stored securely in a separate system or vault. Tokenization is commonly used to protect payment card information, personal identification details, and other sensitive data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2303,7 +2379,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
-    "question": "A security administrator is addressing an issue with a legacy system that communicates data\nusing an unencrypted protocol to transfer sensitive data to a third party. No software updates\nthat use an encrypted protocol are available, so a compensating control is needed.\nWhich of the following are the most appropriate for the administrator to suggest? (Choose two.)",
+    "question": "A security administrator is addressing an issue with a legacy system that communicates data using an unencrypted protocol to transfer sensitive data to a third party. No software updates that use an encrypted protocol are available, so a compensating control is needed.\nWhich of the following are the most appropriate for the administrator to suggest? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -2350,7 +2426,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A growing organization, which hosts an externally accessible application, adds multiple virtual\nservers to improve application performance and decrease the resource usage on individual\nservers.\nWhich of the following solutions is the organization most likely to employ to further increase\nperformance and availability?",
+    "question": "A growing organization, which hosts an externally accessible application, adds multiple virtual servers to improve application performance and decrease the resource usage on individual servers.\nWhich of the following solutions is the organization most likely to employ to further increase performance and availability?",
     "choices": [
       {
         "key": "A",
@@ -2372,7 +2448,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A load balancer is the most likely solution the organization would employ to further increase the\nperformance and availability of their application. A load balancer distributes incoming network\ntraffic across multiple servers, ensuring that no single server becomes overwhelmed with\nrequests. This helps improve performance by optimizing resource utilization and increases\navailability by ensuring that if one server fails, others can continue to handle the traffic.",
+    "explanation": "A load balancer is the most likely solution the organization would employ to further increase the performance and availability of their application. A load balancer distributes incoming network traffic across multiple servers, ensuring that no single server becomes overwhelmed with requests. This helps improve performance by optimizing resource utilization and increases availability by ensuring that if one server fails, others can continue to handle the traffic.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2388,7 +2464,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An administrator is creating a secure method for a contractor to access a test environment.\nWhich of the following would provide the contractor with the best access to the test\nenvironment?",
+    "question": "An administrator is creating a secure method for a contractor to access a test environment.\nWhich of the following would provide the contractor with the best access to the test environment?",
     "choices": [
       {
         "key": "A",
@@ -2410,7 +2486,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A jump server (also known as a jump box) is a secure system designed to serve as a controlled\nentry point for accessing servers and environments. It is commonly used to provide external\ncontractors or administrators with access to a specific environment, such as a test environment,\nwhile minimizing the risk of unauthorized access to other parts of the network. Jump servers\ntypically include additional security measures like multi-factor authentication and logging to\nenhance control and monitoring.",
+    "explanation": "A jump server (also known as a jump box) is a secure system designed to serve as a controlled entry point for accessing servers and environments. It is commonly used to provide external contractors or administrators with access to a specific environment, such as a test environment, while minimizing the risk of unauthorized access to other parts of the network. Jump servers typically include additional security measures like multi-factor authentication and logging to enhance control and monitoring.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2448,7 +2524,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Encryption transforms cleartext into ciphertext using an algorithm and a key to protect the data's\nconfidentiality. The ciphertext can be decrypted back into the original cleartext with the correct\nkey.\nHashing is a one-way process that generates a fixed-size hash value (checksum) from input\ndata. Hashing is typically used to ensure data integrity by detecting changes in the data, as\neven a small alteration results in a completely different hash value.",
+    "explanation": "Encryption transforms cleartext into ciphertext using an algorithm and a key to protect the data's confidentiality. The ciphertext can be decrypted back into the original cleartext with the correct key.\nHashing is a one-way process that generates a fixed-size hash value (checksum) from input data. Hashing is typically used to ensure data integrity by detecting changes in the data, as even a small alteration results in a completely different hash value.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2464,7 +2540,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following is the best way to provide secure, remote access for employees while\nminimizing the exposure of a company's internal network?",
+    "question": "Which of the following is the best way to provide secure, remote access for employees while minimizing the exposure of a company's internal network?",
     "choices": [
       {
         "key": "A",
@@ -2486,7 +2562,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A VPN (Virtual Private Network) provides secure, encrypted remote access to an organization's\ninternal network. It ensures that data transmitted between remote employees and the internal\nnetwork is protected from interception and minimizes the exposure of the internal network by\ncontrolling access through secure tunnels. VPNs are a widely used and effective solution for\nenabling secure remote work.",
+    "explanation": "A VPN (Virtual Private Network) provides secure, encrypted remote access to an organization's internal network. It ensures that data transmitted between remote employees and the internal network is protected from interception and minimizes the exposure of the internal network by controlling access through secure tunnels. VPNs are a widely used and effective solution for enabling secure remote work.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2502,7 +2578,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned\nby potential impact if a generator was to develop a fault during failover.\nWhich of the following is the team most likely to consider in regard to risk management\nactivities?",
+    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned by potential impact if a generator was to develop a fault during failover.\nWhich of the following is the team most likely to consider in regard to risk management activities?",
     "choices": [
       {
         "key": "A",
@@ -2524,7 +2600,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A Business Impact Analysis (BIA) is used to identify and evaluate the potential effects of\ndisruptions to critical business operations. During a business continuity exercise, concerns\nabout the impact of a generator fault during failover would prompt the team to assess the\nassociated risks and impacts on business functions, which are key components of a BIA. This\nhelps in prioritizing recovery strategies and understanding the consequences of such failures.",
+    "explanation": "A Business Impact Analysis (BIA) is used to identify and evaluate the potential effects of disruptions to critical business operations. During a business continuity exercise, concerns about the impact of a generator fault during failover would prompt the team to assess the associated risks and impacts on business functions, which are key components of a BIA. This helps in prioritizing recovery strategies and understanding the consequences of such failures.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2562,7 +2638,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Proper data sanitization ensures that sensitive or confidential information is irreversibly removed\nfrom storage devices before disposal, reuse, or transfer. This process prevents hackers or\nunauthorized individuals from recovering data from used hard drives or other storage media,\nthereby mitigating the risk of data breaches.",
+    "explanation": "Proper data sanitization ensures that sensitive or confidential information is irreversibly removed from storage devices before disposal, reuse, or transfer. This process prevents hackers or unauthorized individuals from recovering data from used hard drives or other storage media, thereby mitigating the risk of data breaches.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2578,7 +2654,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company evaluates several options that would allow employees to have remote access to the\nnetwork. The security team wants to ensure the solution includes AAA to comply with internal\nsecurity policies.\nWhich of the following should the security team recommend?",
+    "question": "A company evaluates several options that would allow employees to have remote access to the network. The security team wants to ensure the solution includes AAA to comply with internal security policies.\nWhich of the following should the security team recommend?",
     "choices": [
       {
         "key": "A",
@@ -2600,7 +2676,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "IPSec with RADIUS supports the AAA (Authentication, Authorization, and Accounting)\nframework, which is required to comply with internal security policies. IPSec provides secure\ncommunication over the network, and RADIUS handles AAA functionalities by authenticating\nusers, authorizing access levels, and keeping logs for accounting purposes. This combination\nensures robust security for remote access.",
+    "explanation": "IPSec with RADIUS supports the AAA (Authentication, Authorization, and Accounting) framework, which is required to comply with internal security policies. IPSec provides secure communication over the network, and RADIUS handles AAA functionalities by authenticating users, authorizing access levels, and keeping logs for accounting purposes. This combination ensures robust security for remote access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2638,7 +2714,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) offers advanced capabilities such as:\n• Preventing malicious content downloads through deep packet inspection and intrusion\nprevention systems (IPS).\n• Establishing controls based on departments and users by integrating with directory\nservices like Active Directory for user-based policies.\n• Mapping internet access to business applications through application-level control and\nservice account integration.\n• Restricting content based on categorization using URL filtering and content\ncategorization features.\n•",
+    "explanation": "A Next-Generation Firewall (NGFW) offers advanced capabilities such as:\n• Preventing malicious content downloads through deep packet inspection and intrusion prevention systems (IPS).\n• Establishing controls based on departments and users by integrating with directory services like Active Directory for user-based policies.\n• Mapping internet access to business applications through application-level control and service account integration.\n• Restricting content based on categorization using URL filtering and content categorization features.\n•",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2676,7 +2752,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A monolithic codebase can limit the deployment of software in a container environment because\ncontainers are designed to run lightweight, modular, and independent services. Monolithic\napplications are large, tightly coupled, and difficult to break into smaller components, which\nconflicts with the principles of containerization. This makes it harder to achieve the scalability,\nsecurity, and isolation benefits of containers.",
+    "explanation": "A monolithic codebase can limit the deployment of software in a container environment because containers are designed to run lightweight, modular, and independent services. Monolithic applications are large, tightly coupled, and difficult to break into smaller components, which conflicts with the principles of containerization. This makes it harder to achieve the scalability, security, and isolation benefits of containers.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2714,7 +2790,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Obfuscation is the process of making software code intentionally difficult to\nunderstand or reverse-engineer. By obfuscating the proprietary software before exporting it, the\norganization can protect its intellectual property from being analyzed, copied, or exploited by\nunauthorized parties. This method is commonly used to safeguard the core logic and algorithms\nof the software.",
+    "explanation": "Obfuscation is the process of making software code intentionally difficult to understand or reverse-engineer. By obfuscating the proprietary software before exporting it, the organization can protect its intellectual property from being analyzed, copied, or exploited by unauthorized parties. This method is commonly used to safeguard the core logic and algorithms of the software.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2730,7 +2806,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following should be used to ensure a device is inaccessible to a network-\nconnected resource?",
+    "question": "Which of the following should be used to ensure a device is inaccessible to a network- connected resource?",
     "choices": [
       {
         "key": "A",
@@ -2752,7 +2828,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Host isolation ensures that a device is inaccessible to network-connected resources by isolating\nit from the rest of the network. This can be achieved through techniques such as placing the\ndevice in a quarantine VLAN or blocking its communications entirely. It is a key security\nmeasure when dealing with potentially compromised or non-compliant devices.",
+    "explanation": "Host isolation ensures that a device is inaccessible to network-connected resources by isolating it from the rest of the network. This can be achieved through techniques such as placing the device in a quarantine VLAN or blocking its communications entirely. It is a key security measure when dealing with potentially compromised or non-compliant devices.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2828,7 +2904,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The primary reason to perform a tabletop exercise is to test and validate the Incident Response\nPlan (IRP) in a simulated environment. This helps identify gaps, refine procedures, and ensure\nthat the plan is up-to-date and effective in addressing current threats and scenarios. Regular\ntabletop exercises improve organizational preparedness for real-world incidents.",
+    "explanation": "The primary reason to perform a tabletop exercise is to test and validate the Incident Response Plan (IRP) in a simulated environment. This helps identify gaps, refine procedures, and ensure that the plan is up-to-date and effective in addressing current threats and scenarios. Regular tabletop exercises improve organizational preparedness for real-world incidents.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2844,7 +2920,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following best protects sensitive data in transit across a geographically dispersed\ninfrastructure?",
+    "question": "Which of the following best protects sensitive data in transit across a geographically dispersed infrastructure?",
     "choices": [
       {
         "key": "A",
@@ -2866,7 +2942,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption ensures that sensitive data is protected while it is being transmitted across networks,\nespecially over long distances or between geographically dispersed infrastructures. By\nencrypting data, it becomes unreadable to unauthorized parties, even if intercepted, ensuring\nconfidentiality and integrity during transmission. Encryption is the most effective method for\nprotecting data in transit.",
+    "explanation": "Encryption ensures that sensitive data is protected while it is being transmitted across networks, especially over long distances or between geographically dispersed infrastructures. By encrypting data, it becomes unreadable to unauthorized parties, even if intercepted, ensuring confidentiality and integrity during transmission. Encryption is the most effective method for protecting data in transit.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2882,7 +2958,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "As part of new compliance audit requirements, multiple servers need to be segmented on\ndifferent networks and should be reachable only from authorized internal systems.\nWhich of the following would meet the requirements?",
+    "question": "As part of new compliance audit requirements, multiple servers need to be segmented on different networks and should be reachable only from authorized internal systems.\nWhich of the following would meet the requirements?",
     "choices": [
       {
         "key": "A",
@@ -2942,7 +3018,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "IP geolocation allows you to identify the geographical location of an IP address, enabling you to\nblock or limit access from high-risk regions. By using IP geolocation, you can restrict or monitor\ntraffic coming from certain geographic areas that are known to be sources of frequent\ncyberattacks. This is an effective way to mitigate risks associated with unwanted or malicious\ntraffic from those regions.",
+    "explanation": "IP geolocation allows you to identify the geographical location of an IP address, enabling you to block or limit access from high-risk regions. By using IP geolocation, you can restrict or monitor traffic coming from certain geographic areas that are known to be sources of frequent cyberattacks. This is an effective way to mitigate risks associated with unwanted or malicious traffic from those regions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2980,7 +3056,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A generator provides backup power in the event of a power outage, ensuring that critical\nsystems remain operational. Since the company's only data center was halted due to the\noutage, installing a generator would help prevent downtime in the future by supplying power\nwhen the main power source fails. Other options, such as snapshots and load balancing, do not\ndirectly address power failure issues.",
+    "explanation": "A generator provides backup power in the event of a power outage, ensuring that critical systems remain operational. Since the company's only data center was halted due to the outage, installing a generator would help prevent downtime in the future by supplying power when the main power source fails. Other options, such as snapshots and load balancing, do not directly address power failure issues.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2996,7 +3072,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A security professional discovers a folder that contains an employee's personal information\nlocated on the enterprise's shared drive.\nWhich of the following best describes the data type the security professional should use to\nidentify organizational policies and standards concerning the storage of employees' personal\ninformation?",
+    "question": "A security professional discovers a folder that contains an employee's personal information located on the enterprise's shared drive.\nWhich of the following best describes the data type the security professional should use to identify organizational policies and standards concerning the storage of employees' personal information?",
     "choices": [
       {
         "key": "A",
@@ -3018,7 +3094,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Privacy data classification includes Personally Identifiable Information (PII), which consists of an\nemployee's personal details such as name, address, Social Security number, or other sensitive\ninformation. Organizational policies and standards concerning the storage and protection of\nsuch data fall under privacy regulations (e.g., GDPR, CCPA, or HIPAA). Ensuring compliance\nwith these policies helps prevent unauthorized access and data breaches.",
+    "explanation": "Privacy data classification includes Personally Identifiable Information (PII), which consists of an employee's personal details such as name, address, Social Security number, or other sensitive information. Organizational policies and standards concerning the storage and protection of such data fall under privacy regulations (e.g., GDPR, CCPA, or HIPAA). Ensuring compliance with these policies helps prevent unauthorized access and data breaches.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3034,7 +3110,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A site reliability engineer is designing a recovery strategy that requires quick failover to an\nidentical site if the primary facility goes down.\nWhich of the following types of sites should the engineer consider?",
+    "question": "A site reliability engineer is designing a recovery strategy that requires quick failover to an identical site if the primary facility goes down.\nWhich of the following types of sites should the engineer consider?",
     "choices": [
       {
         "key": "A",
@@ -3056,7 +3132,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is a fully operational, identical backup site that can take over immediately in case the\nprimary facility goes down. It includes up-to-date data, active servers, and network\nconfigurations, allowing for quick failover with minimal downtime. This makes it the best choice\nfor high availability and business continuity requirements.",
+    "explanation": "A hot site is a fully operational, identical backup site that can take over immediately in case the primary facility goes down. It includes up-to-date data, active servers, and network configurations, allowing for quick failover with minimal downtime. This makes it the best choice for high availability and business continuity requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3072,7 +3148,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following would an organization most likely use to minimize the loss of data on a\nfile server in the event data needs to be restored?",
+    "question": "Which of the following would an organization most likely use to minimize the loss of data on a file server in the event data needs to be restored?",
     "choices": [
       {
         "key": "A",
@@ -3094,7 +3170,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Snapshots capture the state of a file server at a specific point in time, allowing for quick\nrecovery of lost or corrupted data. They provide an efficient way to restore files without relying\nsolely on full backups, minimizing data loss and downtime. This makes snapshots an ideal\nsolution for data recovery and protection on a file server.",
+    "explanation": "Snapshots capture the state of a file server at a specific point in time, allowing for quick recovery of lost or corrupted data. They provide an efficient way to restore files without relying solely on full backups, minimizing data loss and downtime. This makes snapshots an ideal solution for data recovery and protection on a file server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3132,7 +3208,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data classification is essential for a Data Loss Prevention (DLP) solution to function effectively.\nIt identifies and labels data based on sensitivity and importance, enabling the DLP system to\napply appropriate policies to protect it.",
+    "explanation": "Data classification is essential for a Data Loss Prevention (DLP) solution to function effectively.\nIt identifies and labels data based on sensitivity and importance, enabling the DLP system to apply appropriate policies to protect it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3148,7 +3224,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious\nlinks.\nWhich of the following configuration items does the security administrator need to review?",
+    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious links.\nWhich of the following configuration items does the security administrator need to review?",
     "choices": [
       {
         "key": "A",
@@ -3170,7 +3246,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Content categorization defines how websites are classified (e.g., gambling, malicious, social\nmedia) within the web-filtering product. If users are still accessing malicious links, it likely means\nthe categorization settings need to be reviewed or updated to block those sites effectively.",
+    "explanation": "Content categorization defines how websites are classified (e.g., gambling, malicious, social media) within the web-filtering product. If users are still accessing malicious links, it likely means the categorization settings need to be reviewed or updated to block those sites effectively.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3186,7 +3262,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Company A jointly develops a product with Company B, which is located in a different country.\nCompany A finds out that their intellectual property is being shared with unauthorized\ncompanies.\nWhich of the following has been breached?",
+    "question": "Company A jointly develops a product with Company B, which is located in a different country.\nCompany A finds out that their intellectual property is being shared with unauthorized companies.\nWhich of the following has been breached?",
     "choices": [
       {
         "key": "A",
@@ -3208,7 +3284,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Memorandum of Agreement establishes the formal terms of collaboration between parties,\nincluding confidentiality and intellectual property rights. Unauthorized sharing of jointly\ndeveloped IP constitutes a breach of that agreement.",
+    "explanation": "A Memorandum of Agreement establishes the formal terms of collaboration between parties, including confidentiality and intellectual property rights. Unauthorized sharing of jointly developed IP constitutes a breach of that agreement.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3250,7 +3326,7 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "By dividing a network into distinct security zones, segmentation isolates traffic\nflows and contains breaches, preventing attackers from moving laterally across the entire\nenvironment.",
+    "explanation": "By dividing a network into distinct security zones, segmentation isolates traffic flows and contains breaches, preventing attackers from moving laterally across the entire environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3266,7 +3342,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following is the best way to prevent data from being leaked from a secure network\nthat does not need to communicate externally?",
+    "question": "Which of the following is the best way to prevent data from being leaked from a secure network that does not need to communicate externally?",
     "choices": [
       {
         "key": "A",
@@ -3288,7 +3364,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Physically isolating a network (air gapping) ensures there is no direct or indirect external\nconnection, effectively preventing any data leakage from the secure environment.",
+    "explanation": "Physically isolating a network (air gapping) ensures there is no direct or indirect external connection, effectively preventing any data leakage from the secure environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3304,7 +3380,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "multi",
-    "question": "A company uses a cloud-based server for file storage and wants to ensure the security of its\ndata in transit.\nWhich of the following should the company use to secure this type of communication? (Choose\ntwo.)",
+    "question": "A company uses a cloud-based server for file storage and wants to ensure the security of its data in transit.\nWhich of the following should the company use to secure this type of communication? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3335,7 +3411,7 @@ export const domain3Questions = [
       "A",
       "D"
     ],
-    "explanation": "TLS certificates establish an encrypted channel (SSL/TLS) between clients and the cloud\nserver, ensuring all file-transfer traffic is protected in transit.\nA VPN creates a secure, encrypted tunnel over the Internet, adding an additional layer of\nprotection for all network communications with the cloud environment.",
+    "explanation": "TLS certificates establish an encrypted channel (SSL/TLS) between clients and the cloud server, ensuring all file-transfer traffic is protected in transit.\nA VPN creates a secure, encrypted tunnel over the Internet, adding an additional layer of protection for all network communications with the cloud environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3351,7 +3427,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following provides resilience by hosting critical VMs within different IaaS providers\nwhile being maintained by internal application owners?",
+    "question": "Which of the following provides resilience by hosting critical VMs within different IaaS providers while being maintained by internal application owners?",
     "choices": [
       {
         "key": "A",
@@ -3373,7 +3449,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "By distributing critical virtual machines across multiple IaaS providers, a multicloud architecture\nremoves single points of failure and ensures continuity even if one provider experiences an\noutage, while allowing internal teams to maintain control over deployment and configuration.",
+    "explanation": "By distributing critical virtual machines across multiple IaaS providers, a multicloud architecture removes single points of failure and ensures continuity even if one provider experiences an outage, while allowing internal teams to maintain control over deployment and configuration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3389,7 +3465,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An organization keeps servers with confidential information in the same network as\nworkstations. An attacker compromises a workstation and moves laterally to a server.\nWhich of the following could have prevented the attacker from accessing the server?",
+    "question": "An organization keeps servers with confidential information in the same network as workstations. An attacker compromises a workstation and moves laterally to a server.\nWhich of the following could have prevented the attacker from accessing the server?",
     "choices": [
       {
         "key": "A",
@@ -3411,7 +3487,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "By placing servers and workstations into separate security zones (network segments) with\ncontrolled access between them, the organization would prevent a compromised workstation\nfrom directly reaching the confidential servers. This isolation stops lateral movement without\nneeding VPNs, proxies, or load balancers.",
+    "explanation": "By placing servers and workstations into separate security zones (network segments) with controlled access between them, the organization would prevent a compromised workstation from directly reaching the confidential servers. This isolation stops lateral movement without needing VPNs, proxies, or load balancers.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3427,7 +3503,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following should a systems administrator do after performing remediation\nactivities?",
+    "question": "Which of the following should a systems administrator do after performing remediation activities?",
     "choices": [
       {
         "key": "A",
@@ -3449,7 +3525,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "After applying patches or other remediation steps, rescanning verifies that the vulnerabilities\nhave been effectively resolved and ensures no residual issues remain.",
+    "explanation": "After applying patches or other remediation steps, rescanning verifies that the vulnerabilities have been effectively resolved and ensures no residual issues remain.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3465,7 +3541,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization wants to increase an application's resiliency by configuring access to multiple\nservers in the organization's geographically dispersed environment.\nWhich of the following best describes this architecture?",
+    "question": "An organization wants to increase an application's resiliency by configuring access to multiple servers in the organization's geographically dispersed environment.\nWhich of the following best describes this architecture?",
     "choices": [
       {
         "key": "A",
@@ -3487,7 +3563,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A load-balanced architecture distributes incoming application traffic across multiple servers,\npotentially in different geographic locations, to optimize resource use, improve response times,\nand provide redundancy if any single server fails.",
+    "explanation": "A load-balanced architecture distributes incoming application traffic across multiple servers, potentially in different geographic locations, to optimize resource use, improve response times, and provide redundancy if any single server fails.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3503,7 +3579,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "An organization decides that most employees will work remotely. The existing VPN solution\ndoes not have adequate bandwidth, and the content filtering proxy is on premises.\nWhich of the following strategies will enable the business to securely achieve its objective while\nalso being prepared to quickly scale for growth?",
+    "question": "An organization decides that most employees will work remotely. The existing VPN solution does not have adequate bandwidth, and the content filtering proxy is on premises.\nWhich of the following strategies will enable the business to securely achieve its objective while also being prepared to quickly scale for growth?",
     "choices": [
       {
         "key": "A",
@@ -3525,7 +3601,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Secure Access Service Edge (SASE) solution delivers VPN, firewall, and content-filtering\nfunctions from the cloud, eliminating on-premises bottlenecks and easily scaling as remote\nusage grows when agents are deployed to endpoints.",
+    "explanation": "A Secure Access Service Edge (SASE) solution delivers VPN, firewall, and content-filtering functions from the cloud, eliminating on-premises bottlenecks and easily scaling as remote usage grows when agents are deployed to endpoints.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3541,7 +3617,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following options most efficiently maintains a system state in the event of a system\nfailure?",
+    "question": "Which of the following options most efficiently maintains a system state in the event of a system failure?",
     "choices": [
       {
         "key": "A",
@@ -3563,7 +3639,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer distributes traffic across multiple, redundant systems and can automatically\ndetect and reroute around a failed node. This active–active approach preserves the running\nsystem state and minimizes downtime far more efficiently than standby sites or periodic\nbackups.",
+    "explanation": "A load balancer distributes traffic across multiple, redundant systems and can automatically detect and reroute around a failed node. This active–active approach preserves the running system state and minimizes downtime far more efficiently than standby sites or periodic backups.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3601,7 +3677,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data sovereignty concerns the legal and regulatory requirements governing data where it\nphysically resides. Storing data at rest outside a country's borders subjects it to the foreign\njurisdiction's laws, making this the key data sovereignty issue.",
+    "explanation": "Data sovereignty concerns the legal and regulatory requirements governing data where it physically resides. Storing data at rest outside a country's borders subjects it to the foreign jurisdiction's laws, making this the key data sovereignty issue.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3617,7 +3693,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A penetration test reveals that users can easily access internal VLANs from the company's\nguest Wi-Fi.\nWhich of the following security principles would remediate this vulnerability by improving\nnetwork authentication mechanisms?",
+    "question": "A penetration test reveals that users can easily access internal VLANs from the company's guest Wi-Fi.\nWhich of the following security principles would remediate this vulnerability by improving network authentication mechanisms?",
     "choices": [
       {
         "key": "A",
@@ -3639,7 +3715,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "802.1X enforces port-based authentication before assigning a device to a VLAN, ensuring only\nauthorized users can join internal networks and preventing guests from accessing protected\nsegments.",
+    "explanation": "802.1X enforces port-based authentication before assigning a device to a VLAN, ensuring only authorized users can join internal networks and preventing guests from accessing protected segments.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3655,7 +3731,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following policies outlines what employees can and cannot do on company-issued\ndevices?",
+    "question": "Which of the following policies outlines what employees can and cannot do on company-issued devices?",
     "choices": [
       {
         "key": "A",
@@ -3677,7 +3753,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An acceptable use policy defines the permitted and prohibited behaviors for employees when\nusing company-issued devices, ensuring clear guidelines on what activities are allowed.",
+    "explanation": "An acceptable use policy defines the permitted and prohibited behaviors for employees when using company-issued devices, ensuring clear guidelines on what activities are allowed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3715,7 +3791,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption transforms data into ciphertext before transmission, ensuring that intercepted\ninformation remains unreadable to unauthorized parties and thus securing data in transit.",
+    "explanation": "Encryption transforms data into ciphertext before transmission, ensuring that intercepted information remains unreadable to unauthorized parties and thus securing data in transit.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3753,7 +3829,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When users log in to a corporate domain, they're typically presented with an acceptable use\npolicy outlining the rules and responsibilities for system use before gaining access. This ensures\nthey agree to organizational guidelines up front.",
+    "explanation": "When users log in to a corporate domain, they're typically presented with an acceptable use policy outlining the rules and responsibilities for system use before gaining access. This ensures they agree to organizational guidelines up front.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3769,7 +3845,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following is most likely a security concern when installing and using low-cost IoT\ndevices in infrastructure environments?",
+    "question": "Which of the following is most likely a security concern when installing and using low-cost IoT devices in infrastructure environments?",
     "choices": [
       {
         "key": "A",
@@ -3791,7 +3867,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Low-cost IoT devices often come from unvetted or knock-off manufacturers, introducing\ncounterfeit or tampered hardware and firmware that can embed backdoors or malicious\ncomponents, posing a major supply-chain security risk.",
+    "explanation": "Low-cost IoT devices often come from unvetted or knock-off manufacturers, introducing counterfeit or tampered hardware and firmware that can embed backdoors or malicious components, posing a major supply-chain security risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3807,7 +3883,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "All clients who connect to the switchports are required to complete a posture analysis before\naccessing the internet.\nWhich of the following should the IT team configure to help secure the enterprise infrastructure?",
+    "question": "All clients who connect to the switchports are required to complete a posture analysis before accessing the internet.\nWhich of the following should the IT team configure to help secure the enterprise infrastructure?",
     "choices": [
       {
         "key": "A",
@@ -3829,7 +3905,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Network Access Control (NAC) enforces endpoint posture checks, such as antivirus status,\npatch levels, and configuration, before allowing devices on switchports to access the network or\ninternet.",
+    "explanation": "Network Access Control (NAC) enforces endpoint posture checks, such as antivirus status, patch levels, and configuration, before allowing devices on switchports to access the network or internet.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3845,7 +3921,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following can be deployed in data centers as a protection against an undervoltage\nevent?",
+    "question": "Which of the following can be deployed in data centers as a protection against an undervoltage event?",
     "choices": [
       {
         "key": "A",
@@ -3867,7 +3943,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A UPS provides battery-backed power and voltage regulation, protecting equipment from\nundervoltage (brownout) conditions by supplying stable power until normal levels are restored or\na generator comes online. Surge protectors, by contrast, guard against overvoltage, and the\nother options don't address voltage dips.",
+    "explanation": "A UPS provides battery-backed power and voltage regulation, protecting equipment from undervoltage (brownout) conditions by supplying stable power until normal levels are restored or a generator comes online. Surge protectors, by contrast, guard against overvoltage, and the other options don't address voltage dips.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3905,7 +3981,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "By employing multiple cloud providers for the same workloads, the university reduces reliance\non a single vendor and mitigates risks like outages or vendor-specific vulnerabilities.",
+    "explanation": "By employing multiple cloud providers for the same workloads, the university reduces reliance on a single vendor and mitigates risks like outages or vendor-specific vulnerabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3943,7 +4019,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SCADA systems orchestrate and manage PLCs in industrial environments, and their native\nmanagement protocols (e.g., Modbus, DNP3) are often sent unencrypted.",
+    "explanation": "SCADA systems orchestrate and manage PLCs in industrial environments, and their native management protocols (e.g., Modbus, DNP3) are often sent unencrypted.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3959,7 +4035,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An administrator must implement a solution that provides security and network connectivity\nbetween two companies.\nWhich of the following infrastructure solutions is the best for this purpose?",
+    "question": "An administrator must implement a solution that provides security and network connectivity between two companies.\nWhich of the following infrastructure solutions is the best for this purpose?",
     "choices": [
       {
         "key": "A",
@@ -3981,7 +4057,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VPN establishes an encrypted tunnel over the Internet (or other untrusted networks), securely\nlinking two separate corporate networks so they can communicate as if on a private network.",
+    "explanation": "A VPN establishes an encrypted tunnel over the Internet (or other untrusted networks), securely linking two separate corporate networks so they can communicate as if on a private network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3997,7 +4073,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following would a service provider supply as an assurance for a disposal service\nas part of a disposal process?",
+    "question": "Which of the following would a service provider supply as an assurance for a disposal service as part of a disposal process?",
     "choices": [
       {
         "key": "A",
@@ -4019,7 +4095,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "As part of secure disposal, a service provider issues a certificate of destruction (a form of\ncertification) to formally attest that media or documents were disposed of in accordance with\nagreed procedures and compliance requirements.",
+    "explanation": "As part of secure disposal, a service provider issues a certificate of destruction (a form of certification) to formally attest that media or documents were disposed of in accordance with agreed procedures and compliance requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4035,7 +4111,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "An organization discovers that its cold site does not have enough storage and computers\navailable.\nWhich of the following was most likely the cause of this failure?",
+    "question": "An organization discovers that its cold site does not have enough storage and computers available.\nWhich of the following was most likely the cause of this failure?",
     "choices": [
       {
         "key": "A",
@@ -4057,7 +4133,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Capacity planning ensures that a disaster recovery site, such as a cold site, has sufficient\nresources like storage and computers. A failure in capacity planning likely led to the shortfall.",
+    "explanation": "Capacity planning ensures that a disaster recovery site, such as a cold site, has sufficient resources like storage and computers. A failure in capacity planning likely led to the shortfall.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4095,7 +4171,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Generators are the best safeguard against extended power failures, as they can provide power\nfor long durations, unlike batteries or uninterruptible power supplies, which are intended for\nshort-term use.",
+    "explanation": "Generators are the best safeguard against extended power failures, as they can provide power for long durations, unlike batteries or uninterruptible power supplies, which are intended for short-term use.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4111,7 +4187,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A company wants to update its disaster recovery plan to include a dedicated location for\nimmediate continued operations if a catastrophic event occurs.\nWhich of the following options is best to include in the disaster recovery plan?",
+    "question": "A company wants to update its disaster recovery plan to include a dedicated location for immediate continued operations if a catastrophic event occurs.\nWhich of the following options is best to include in the disaster recovery plan?",
     "choices": [
       {
         "key": "A",
@@ -4133,7 +4209,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hot site is a fully equipped, dedicated location that allows immediate\ncontinuation of business operations after a disaster, making it the best choice for minimal\ndowntime.",
+    "explanation": "A hot site is a fully equipped, dedicated location that allows immediate continuation of business operations after a disaster, making it the best choice for minimal downtime.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4149,7 +4225,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the\nnetwork.\nWhich of the following would be best for the security team to configure on the MDM before\nallowing access to corporate resources?",
+    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to configure on the MDM before allowing access to corporate resources?",
     "choices": [
       {
         "key": "A",
@@ -4171,7 +4247,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Compliance attestation via MDM verifies device posture (OS version, policies, certificates)\nbefore granting access, ensuring only compliant devices leave the quarantine subnet and reach\ncorporate resources.",
+    "explanation": "Compliance attestation via MDM verifies device posture (OS version, policies, certificates) before granting access, ensuring only compliant devices leave the quarantine subnet and reach corporate resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4187,7 +4263,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company executive connects to various networks, such as hotel guest Wi-Fi. while traveling.\nA security analyst needs to provide a solution that will allow the executive to securely access\nthe corporate internal resources.\nWhich of the following would best meet this requirement?",
+    "question": "A company executive connects to various networks, such as hotel guest Wi-Fi. while traveling.\nA security analyst needs to provide a solution that will allow the executive to securely access the corporate internal resources.\nWhich of the following would best meet this requirement?",
     "choices": [
       {
         "key": "A",
@@ -4209,7 +4285,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A VPN establishes an encrypted tunnel over untrusted networks, ensuring the\nexecutive can securely access corporate internal resources from any location.",
+    "explanation": "A VPN establishes an encrypted tunnel over untrusted networks, ensuring the executive can securely access corporate internal resources from any location.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4225,7 +4301,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following architecture models ensures that critical systems are physically isolated\non the network to prevent access from users with remote access privileges?",
+    "question": "Which of the following architecture models ensures that critical systems are physically isolated on the network to prevent access from users with remote access privileges?",
     "choices": [
       {
         "key": "A",
@@ -4247,7 +4323,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An air-gapped architecture physically isolates critical systems from all other networks, ensuring\nthey cannot be accessed remotely.",
+    "explanation": "An air-gapped architecture physically isolates critical systems from all other networks, ensuring they cannot be accessed remotely.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4263,7 +4339,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security analyst must prevent remote users from accessing malicious URLs. The sites need to\nbe checked inline for reputation, content, or categorization.\nWhich of the following technologies will help secure the enterprise?",
+    "question": "A security analyst must prevent remote users from accessing malicious URLs. The sites need to be checked inline for reputation, content, or categorization.\nWhich of the following technologies will help secure the enterprise?",
     "choices": [
       {
         "key": "A",
@@ -4285,7 +4361,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SASE provides a cloud-delivered, inline secure web gateway with URL reputation, content\ninspection, and categorization for remote users without backhauling traffic through on-premises\nfirewalls.",
+    "explanation": "SASE provides a cloud-delivered, inline secure web gateway with URL reputation, content inspection, and categorization for remote users without backhauling traffic through on-premises firewalls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4301,7 +4377,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A Chief Information Officer wants to ensure that network devices cannot connect to the public\ninternet and the local network to directly perform firmware updates. The IT team must manually\nperform the update process by using a portable device.\nWhich of the following architecture types best fits this description?",
+    "question": "A Chief Information Officer wants to ensure that network devices cannot connect to the public internet and the local network to directly perform firmware updates. The IT team must manually perform the update process by using a portable device.\nWhich of the following architecture types best fits this description?",
     "choices": [
       {
         "key": "A",
@@ -4323,7 +4399,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An air-gapped architecture physically or logically isolates systems from external and internal\nnetworks, preventing direct connectivity and requiring manual methods, such as portable\ndevices, to perform updates.",
+    "explanation": "An air-gapped architecture physically or logically isolates systems from external and internal networks, preventing direct connectivity and requiring manual methods, such as portable devices, to perform updates.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4339,7 +4415,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "The internal security team is investigating a suspicious attachment and wants to perform a\nbehavior analysis in an isolated environment.\nWhich of the following will the security team most likely use?",
+    "question": "The internal security team is investigating a suspicious attachment and wants to perform a behavior analysis in an isolated environment.\nWhich of the following will the security team most likely use?",
     "choices": [
       {
         "key": "A",
@@ -4361,7 +4437,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A sandbox provides an isolated environment where suspicious files can be safely executed and\nmonitored for malicious behavior without risking the security of the production network or\nsystems.",
+    "explanation": "A sandbox provides an isolated environment where suspicious files can be safely executed and monitored for malicious behavior without risking the security of the production network or systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4399,7 +4475,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "User behavior analytics monitors and analyzes user activities to detect anomalies or suspicious\nbehavior, making it effective in identifying and reducing the risk posed by malicious insiders.",
+    "explanation": "User behavior analytics monitors and analyzes user activities to detect anomalies or suspicious behavior, making it effective in identifying and reducing the risk posed by malicious insiders.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4415,7 +4491,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A security officer observes that a software development team is not complying with its corporate\nsecurity policy on encrypting confidential data.\nWhich of the following categories refers to this type of non-compliance?",
+    "question": "A security officer observes that a software development team is not complying with its corporate security policy on encrypting confidential data.\nWhich of the following categories refers to this type of non-compliance?",
     "choices": [
       {
         "key": "A",
@@ -4437,7 +4513,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "It's a violation of an internal corporate security policy, so the non-compliance is classified as\ninternal.",
+    "explanation": "It's a violation of an internal corporate security policy, so the non-compliance is classified as internal.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4453,7 +4529,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following data types best describes an AI tool developed by a company to\nautomate the ticketing system under a specific contract?",
+    "question": "Which of the following data types best describes an AI tool developed by a company to automate the ticketing system under a specific contract?",
     "choices": [
       {
         "key": "A",
@@ -4475,7 +4551,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The AI tool is a proprietary creation owned by the company under contract, making it intellectual\nproperty.",
+    "explanation": "The AI tool is a proprietary creation owned by the company under contract, making it intellectual property.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4491,7 +4567,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following would best allow a company to prevent access to systems from the\ninternet?",
+    "question": "Which of the following would best allow a company to prevent access to systems from the internet?",
     "choices": [
       {
         "key": "A",
@@ -4513,7 +4589,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An air-gapped system is physically and logically isolated from any external (internet-facing)\nnetwork, so packets from the internet simply have no path to reach it. This architectural\nseparation is the most definitive way to prevent internet access altogether, rather than just\nlimiting or monitoring it.",
+    "explanation": "An air-gapped system is physically and logically isolated from any external (internet-facing) network, so packets from the internet simply have no path to reach it. This architectural separation is the most definitive way to prevent internet access altogether, rather than just limiting or monitoring it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4529,7 +4605,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned\nby potential impacts if a generator were to develop a fault during an extended outage.\nWhich of the following is the team most likely to consider when conducting and planning\ninfrastructure maintenance activities?",
+    "question": "While conducting a business continuity tabletop exercise, the security team becomes concerned by potential impacts if a generator were to develop a fault during an extended outage.\nWhich of the following is the team most likely to consider when conducting and planning infrastructure maintenance activities?",
     "choices": [
       {
         "key": "A",
@@ -4551,7 +4627,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "They're worried about how long the generator can run before it's likely to fail during a prolonged\noutage. MTBF quantifies the expected operational time between failures, guiding preventive\nmaintenance schedules and part replacement intervals to reduce the chance of a fault when the\ngenerator is most needed.",
+    "explanation": "They're worried about how long the generator can run before it's likely to fail during a prolonged outage. MTBF quantifies the expected operational time between failures, guiding preventive maintenance schedules and part replacement intervals to reduce the chance of a fault when the generator is most needed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4589,7 +4665,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "AES with a 256-bit key is strong, standards-approved symmetric encryption specifically suited\nfor protecting stored data. It renders the ciphertext unreadable without the key, meets common\nregulatory requirements (e.g., FIPS 140-2 validated implementations), and provides far stronger\nassurance for data at rest than transport protocols, masking, or password salting techniques\nthat don't actually encrypt the full dataset.",
+    "explanation": "AES with a 256-bit key is strong, standards-approved symmetric encryption specifically suited for protecting stored data. It renders the ciphertext unreadable without the key, meets common regulatory requirements (e.g., FIPS 140-2 validated implementations), and provides far stronger assurance for data at rest than transport protocols, masking, or password salting techniques that don't actually encrypt the full dataset.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4605,7 +4681,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
-    "question": "A security administrator must use a strategy to protect the company's data. The security\nadministrator decides to deploy FDE on the end user devices and TLS for all web connections.\nWhich of the following concepts are being used? (Choose two.)",
+    "question": "A security administrator must use a strategy to protect the company's data. The security administrator decides to deploy FDE on the end user devices and TLS for all web connections.\nWhich of the following concepts are being used? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4636,7 +4712,7 @@ export const domain3Questions = [
       "B",
       "E"
     ],
-    "explanation": "TLS - Data in transit: TLS encrypts sessions as information moves across networks, preventing\ninterception or tampering while the data is traveling.\nFDE - Data at rest: Full-disk encryption protects files stored on the device; if the drive is lost or\nstolen, the data remains unreadable without the key.",
+    "explanation": "TLS - Data in transit: TLS encrypts sessions as information moves across networks, preventing interception or tampering while the data is traveling.\nFDE - Data at rest: Full-disk encryption protects files stored on the device; if the drive is lost or stolen, the data remains unreadable without the key.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4652,7 +4728,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A business manager is concerned about the availability of an application running on hardware in\nthe local data center.\nWhich of the following solutions will improve availability while reducing maintenance overhead?",
+    "question": "A business manager is concerned about the availability of an application running on hardware in the local data center.\nWhich of the following solutions will improve availability while reducing maintenance overhead?",
     "choices": [
       {
         "key": "A",
@@ -4674,7 +4750,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Transitioning from on-premises to a cloud environment improves availability through the\nprovider's redundant infrastructure and managed services, while reducing maintenance\noverhead since hardware and many operational tasks are handled by the cloud provider.",
+    "explanation": "Transitioning from on-premises to a cloud environment improves availability through the provider's redundant infrastructure and managed services, while reducing maintenance overhead since hardware and many operational tasks are handled by the cloud provider.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4690,7 +4766,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company wants to ensure that a mission-critical database can only be accessed from specific\ninternal IP addresses.\nWhich of the following should the company deploy to meet this requirement?",
+    "question": "A company wants to ensure that a mission-critical database can only be accessed from specific internal IP addresses.\nWhich of the following should the company deploy to meet this requirement?",
     "choices": [
       {
         "key": "A",
@@ -4712,7 +4788,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A jump server acts as a controlled access point that can be restricted to specific internal IP\naddresses, ensuring that only approved internal sources can connect to the mission-critical\ndatabase.",
+    "explanation": "A jump server acts as a controlled access point that can be restricted to specific internal IP addresses, ensuring that only approved internal sources can connect to the mission-critical database.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4728,7 +4804,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A security team wants to work with the same organization's development team to ensure WAF\npolicies are automatically created when applications are deployed.\nWhich of the following concepts describes this capability?",
+    "question": "A security team wants to work with the same organization's development team to ensure WAF policies are automatically created when applications are deployed.\nWhich of the following concepts describes this capability?",
     "choices": [
       {
         "key": "A",
@@ -4750,7 +4826,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Infrastructure as Code (IaC) allows security configurations, such as WAF policies, to be\nautomatically provisioned and managed as part of the application deployment process, ensuring\nconsistency and reducing manual effort.",
+    "explanation": "Infrastructure as Code (IaC) allows security configurations, such as WAF policies, to be automatically provisioned and managed as part of the application deployment process, ensuring consistency and reducing manual effort.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4766,7 +4842,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following uses proprietary controls and is designed to function in harsh\nenvironments over many years with limited remote access management?",
+    "question": "Which of the following uses proprietary controls and is designed to function in harsh environments over many years with limited remote access management?",
     "choices": [
       {
         "key": "A",
@@ -4788,7 +4864,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Industrial Control Systems (ICS) use proprietary controls and are built to operate reliably in\nharsh environments for extended periods, often with limited remote access and management\ncapabilities.",
+    "explanation": "Industrial Control Systems (ICS) use proprietary controls and are built to operate reliably in harsh environments for extended periods, often with limited remote access and management capabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4799,12 +4875,50 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0619",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "Which of the following security concepts is being followed when applying encryption to sensitive data?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Confidentiality"
+      },
+      {
+        "key": "B",
+        "text": "Non-repudiation"
+      },
+      {
+        "key": "C",
+        "text": "Availability"
+      },
+      {
+        "key": "D",
+        "text": "Integrity"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Encryption ensures confidentiality by protecting sensitive data from unauthorized access, allowing only authorized parties with the correct decryption key to read it.",
+    "explanationSource": "pdf",
+    "incorrectExplanations": {},
+    "references": [],
+    "source": "SY0-701_en.pdf#p262",
+    "needsReview": true,
+    "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0622",
     "domain": 3,
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following should be used to ensure that a device is inaccessible to a network-\nconnected resource?",
+    "question": "Which of the following should be used to ensure that a device is inaccessible to a network- connected resource?",
     "choices": [
       {
         "key": "A",
@@ -4826,7 +4940,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Host isolation removes a device from communicating with network-connected resources,\nensuring it cannot access or affect other systems while remaining powered on for investigation\nor remediation.",
+    "explanation": "Host isolation removes a device from communicating with network-connected resources, ensuring it cannot access or affect other systems while remaining powered on for investigation or remediation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4842,7 +4956,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following should be used to select a label for a file based on the file's value,\nsensitivity, or applicable regulations?",
+    "question": "Which of the following should be used to select a label for a file based on the file's value, sensitivity, or applicable regulations?",
     "choices": [
       {
         "key": "A",
@@ -4864,7 +4978,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Classification assigns labels to files based on their sensitivity, value, and regulatory\nrequirements, guiding how the data should be handled and protected.",
+    "explanation": "Classification assigns labels to files based on their sensitivity, value, and regulatory requirements, guiding how the data should be handled and protected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4902,7 +5016,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization replaces sensitive data with non-sensitive, unique tokens while storing the actual\ndata securely in a separate location, effectively protecting data at rest in a database.",
+    "explanation": "Tokenization replaces sensitive data with non-sensitive, unique tokens while storing the actual data securely in a separate location, effectively protecting data at rest in a database.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4918,7 +5032,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company hired a security consultant to suggest a device that will protect its inbound HTTP\ntraffic by immediately blocking security violations.\nWhich of the following should the consultant most likely suggest?",
+    "question": "A company hired a security consultant to suggest a device that will protect its inbound HTTP traffic by immediately blocking security violations.\nWhich of the following should the consultant most likely suggest?",
     "choices": [
       {
         "key": "A",
@@ -4940,7 +5054,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Web Application Firewall (WAF) protects inbound HTTP traffic by monitoring, filtering, and\nimmediately blocking malicious requests targeting web applications.",
+    "explanation": "A Web Application Firewall (WAF) protects inbound HTTP traffic by monitoring, filtering, and immediately blocking malicious requests targeting web applications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4956,7 +5070,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security manager needs an automated solution that will take immediate action to protect an\norganization against inbound malicious traffic.\nWhich of the following is the best solution?",
+    "question": "A security manager needs an automated solution that will take immediate action to protect an organization against inbound malicious traffic.\nWhich of the following is the best solution?",
     "choices": [
       {
         "key": "A",
@@ -4978,7 +5092,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Intrusion Prevention System (IPS) automatically detects and blocks malicious network traffic\nin real time, providing immediate protection against inbound threats.",
+    "explanation": "An Intrusion Prevention System (IPS) automatically detects and blocks malicious network traffic in real time, providing immediate protection against inbound threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4994,7 +5108,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company wants to improve the security of the local network by authenticating and encrypting\nall of the internal traffic between corporate sites.\nWhich of the following should the company deploy to achieve this goal?",
+    "question": "A company wants to improve the security of the local network by authenticating and encrypting all of the internal traffic between corporate sites.\nWhich of the following should the company deploy to achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -5016,7 +5130,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "IPsec authenticates and encrypts IP traffic, providing secure communication between corporate\nsites over the local or wide area network.",
+    "explanation": "IPsec authenticates and encrypts IP traffic, providing secure communication between corporate sites over the local or wide area network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5032,7 +5146,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following data classifications best applies when data is intended for internal\norganizational use or with commercial partners?",
+    "question": "Which of the following data classifications best applies when data is intended for internal organizational use or with commercial partners?",
     "choices": [
       {
         "key": "A",
@@ -5054,7 +5168,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Confidential data is intended for internal organizational use or for sharing with trusted\ncommercial partners, requiring protection from unauthorized disclosure.",
+    "explanation": "Confidential data is intended for internal organizational use or for sharing with trusted commercial partners, requiring protection from unauthorized disclosure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5092,7 +5206,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Software-defined networking (SDN) enables microsegmentation by allowing fine-grained,\nsoftware-based control over network traffic flows, isolating workloads and minimizing attack\nsurfaces.",
+    "explanation": "Software-defined networking (SDN) enables microsegmentation by allowing fine-grained, software-based control over network traffic flows, isolating workloads and minimizing attack surfaces.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5139,7 +5253,7 @@ export const domain3Questions = [
       "A",
       "E"
     ],
-    "explanation": "A jump server restricts and controls administrative access to the database system, reducing the\nattack surface. A host-based firewall limits network connections directly to the database server,\npreventing unauthorized access and hardening the system.",
+    "explanation": "A jump server restricts and controls administrative access to the database system, reducing the attack surface. A host-based firewall limits network connections directly to the database server, preventing unauthorized access and hardening the system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5155,7 +5269,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "multi",
-    "question": "A company uses a cloud-based platform for file storage and wants to ensure the security of its\ndata in transit.\nWhich of the following should the company verify are in place to secure this type of\ncommunication? (Choose two.)",
+    "question": "A company uses a cloud-based platform for file storage and wants to ensure the security of its data in transit.\nWhich of the following should the company verify are in place to secure this type of communication? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -5186,7 +5300,7 @@ export const domain3Questions = [
       "A",
       "C"
     ],
-    "explanation": "TLS certificates enable secure, encrypted connections, while HTTPS ensures data in transit to\nand from the cloud storage is encrypted, protecting it from interception.",
+    "explanation": "TLS certificates enable secure, encrypted connections, while HTTPS ensures data in transit to and from the cloud storage is encrypted, protecting it from interception.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5202,7 +5316,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company wants to protect a specialized legacy platform that controls the physical flow of gas\ninside of pipes.\nWhich of the following environments does the company need to secure to best achieve this\ngoal?",
+    "question": "A company wants to protect a specialized legacy platform that controls the physical flow of gas inside of pipes.\nWhich of the following environments does the company need to secure to best achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -5224,7 +5338,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SCADA systems are industrial control environments designed to monitor and manage\nprocesses like the physical flow of gas in pipelines, so securing the SCADA environment\nprotects the legacy platform that controls those operations.",
+    "explanation": "SCADA systems are industrial control environments designed to monitor and manage processes like the physical flow of gas in pipelines, so securing the SCADA environment protects the legacy platform that controls those operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5240,7 +5354,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following technologies must be used in an organization that intends to automate\ninfrastructure deployment?",
+    "question": "Which of the following technologies must be used in an organization that intends to automate infrastructure deployment?",
     "choices": [
       {
         "key": "A",
@@ -5262,7 +5376,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Infrastructure as Code (IaC) expresses infrastructure configurations in executable code,\nenabling automated, repeatable deployment and management of servers, networks, and other\nresources.",
+    "explanation": "Infrastructure as Code (IaC) expresses infrastructure configurations in executable code, enabling automated, repeatable deployment and management of servers, networks, and other resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5278,7 +5392,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following factors must a systems administrator take into consideration first when\nreviewing options to remediate a vulnerability on an end-of-life software system in production?",
+    "question": "Which of the following factors must a systems administrator take into consideration first when reviewing options to remediate a vulnerability on an end-of-life software system in production?",
     "choices": [
       {
         "key": "A",
@@ -5300,7 +5414,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The first consideration is whether a patch is available for the end-of-life system. If no patch\nexists, the administrator must pursue alternative remediation options such as migration,\nisolation, or compensating controls.",
+    "explanation": "The first consideration is whether a patch is available for the end-of-life system. If no patch exists, the administrator must pursue alternative remediation options such as migration, isolation, or compensating controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5338,7 +5452,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data masking protects sensitive production data when moving it into non-production\nenvironments by replacing sensitive fields with realistic but fictitious values, allowing safe testing\nwithout exposing real data.",
+    "explanation": "Data masking protects sensitive production data when moving it into non-production environments by replacing sensitive fields with realistic but fictitious values, allowing safe testing without exposing real data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5354,7 +5468,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company wants to restrict uploads to a popular file-sharing website but allow downloads from\nthe same website.\nWhich of the following technologies would best accomplish this goal?",
+    "question": "A company wants to restrict uploads to a popular file-sharing website but allow downloads from the same website.\nWhich of the following technologies would best accomplish this goal?",
     "choices": [
       {
         "key": "A",
@@ -5376,7 +5490,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Next-Generation Firewall (NGFW) can enforce granular, application-level rules such as\nallowing downloads while blocking uploads to a specific file-sharing site.",
+    "explanation": "A Next-Generation Firewall (NGFW) can enforce granular, application-level rules such as allowing downloads while blocking uploads to a specific file-sharing site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5392,7 +5506,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following should a systems administrator set up to increase the resilience of an\napplication by splitting the traffic between two identical sites?",
+    "question": "Which of the following should a systems administrator set up to increase the resilience of an application by splitting the traffic between two identical sites?",
     "choices": [
       {
         "key": "A",
@@ -5414,7 +5528,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Load balancing distributes incoming traffic across multiple identical sites, increasing application\nresilience and ensuring continued availability even if one site experiences performance issues.",
+    "explanation": "Load balancing distributes incoming traffic across multiple identical sites, increasing application resilience and ensuring continued availability even if one site experiences performance issues.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5452,7 +5566,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Mobile device management enables administrators to remotely manage, secure, and wipe\nmobile devices, ensuring that sensitive data can be erased if a device is lost or stolen.",
+    "explanation": "Mobile device management enables administrators to remotely manage, secure, and wipe mobile devices, ensuring that sensitive data can be erased if a device is lost or stolen.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5468,7 +5582,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Visitors to a company's facilities are connecting to the company's corporate network Wi-Fi and\nopen network ports.\nWhich of the following should the security engineer implement to prevent this unauthorized\naccess?",
+    "question": "Visitors to a company's facilities are connecting to the company's corporate network Wi-Fi and open network ports.\nWhich of the following should the security engineer implement to prevent this unauthorized access?",
     "choices": [
       {
         "key": "A",
@@ -5490,7 +5604,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Network access control enforces authentication and authorization policies before\nallowing devices to connect to the corporate network, preventing unauthorized or noncompliant\nvisitor devices from accessing internal Wi-Fi networks and network resources.",
+    "explanation": "Network access control enforces authentication and authorization policies before allowing devices to connect to the corporate network, preventing unauthorized or noncompliant visitor devices from accessing internal Wi-Fi networks and network resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5506,7 +5620,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An organization with multiple geographic locations has invested in various internet circuits at\neach location, including MPLS, 4G/5G, broadband, and dial-up. An architect is configuring a\nsolution that will allow locations to function consistently and leverage links based on specific\ncriteria.\nWhich of the following is the best solution for the architect to configure?",
+    "question": "An organization with multiple geographic locations has invested in various internet circuits at each location, including MPLS, 4G/5G, broadband, and dial-up. An architect is configuring a solution that will allow locations to function consistently and leverage links based on specific criteria.\nWhich of the following is the best solution for the architect to configure?",
     "choices": [
       {
         "key": "A",
@@ -5528,7 +5642,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Software-defined wide area networking centrally manages multiple types of WAN links and\ndynamically selects paths based on performance, cost, and policy criteria, ensuring consistent\nconnectivity and optimized use of all available circuits across geographically distributed\nlocations.",
+    "explanation": "Software-defined wide area networking centrally manages multiple types of WAN links and dynamically selects paths based on performance, cost, and policy criteria, ensuring consistent connectivity and optimized use of all available circuits across geographically distributed locations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5544,7 +5658,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following is the best way to improve the confidentiality of remote connections to an\nenterprise's infrastructure?",
+    "question": "Which of the following is the best way to improve the confidentiality of remote connections to an enterprise's infrastructure?",
     "choices": [
       {
         "key": "A",
@@ -5566,7 +5680,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Virtual private networks encrypt remote connections, protecting data in transit from interception\nand eavesdropping, which directly improves the confidentiality of remote access to enterprise\ninfrastructure.",
+    "explanation": "Virtual private networks encrypt remote connections, protecting data in transit from interception and eavesdropping, which directly improves the confidentiality of remote access to enterprise infrastructure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5582,7 +5696,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The management team wants to assess the cybersecurity team's readiness to respond to a\nthreat scenario.\nWhich of the following will adequately assess and formalize a response within a short time?",
+    "question": "The management team wants to assess the cybersecurity team's readiness to respond to a threat scenario.\nWhich of the following will adequately assess and formalize a response within a short time?",
     "choices": [
       {
         "key": "A",
@@ -5604,7 +5718,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A tabletop exercise simulates a threat scenario in a controlled setting, allowing the cybersecurity\nteam to practice response procedures, evaluate readiness, and formally document performance\nand gaps within a short time frame.",
+    "explanation": "A tabletop exercise simulates a threat scenario in a controlled setting, allowing the cybersecurity team to practice response procedures, evaluate readiness, and formally document performance and gaps within a short time frame.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5646,7 +5760,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Full disk encryption protects data stored on the workstation's storage media, ensuring that\ninformation remains confidential when the system is powered off or the storage device is\nremoved, which is protection of data at rest.",
+    "explanation": "Full disk encryption protects data stored on the workstation's storage media, ensuring that information remains confidential when the system is powered off or the storage device is removed, which is protection of data at rest.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5662,7 +5776,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) requires that new servers include hardware-level\nmemory encryption.\nWhich of the following data states does the CISO want to protect?",
+    "question": "The Chief Information Security Officer (CISO) requires that new servers include hardware-level memory encryption.\nWhich of the following data states does the CISO want to protect?",
     "choices": [
       {
         "key": "A",
@@ -5684,7 +5798,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hardware-level memory encryption protects data while it is actively being processed and stored\nin system memory, which corresponds to protecting data in use.",
+    "explanation": "Hardware-level memory encryption protects data while it is actively being processed and stored in system memory, which corresponds to protecting data in use.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5700,7 +5814,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following would most likely mitigate the impact of an extended power outage on a\ncompany's environment?",
+    "question": "Which of the following would most likely mitigate the impact of an extended power outage on a company's environment?",
     "choices": [
       {
         "key": "A",
@@ -5722,7 +5836,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hot site provides a fully operational alternate environment with power, systems, and data\nalready available, allowing the company to continue operations during an extended power\noutage affecting the primary site.",
+    "explanation": "A hot site provides a fully operational alternate environment with power, systems, and data already available, allowing the company to continue operations during an extended power outage affecting the primary site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5738,7 +5852,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A security architect is designing an environment in which certain systems must not be able to\naccess the internet.\nWhich of the following describes this configuration?",
+    "question": "A security architect is designing an environment in which certain systems must not be able to access the internet.\nWhich of the following describes this configuration?",
     "choices": [
       {
         "key": "A",
@@ -5760,7 +5874,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An air-gapped configuration physically or logically isolates systems from external networks,\nincluding the internet, ensuring they cannot communicate outside the controlled environment.",
+    "explanation": "An air-gapped configuration physically or logically isolates systems from external networks, including the internet, ensuring they cannot communicate outside the controlled environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5776,7 +5890,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A manufacturing organization receives the results from a penetration test. According to the\nresults, legacy devices that are critical to continued business function display vulnerabilities.\nThe devices have minimal vendor support and should be segmented and monitored closely.\nWhich of the following devices were most likely identified?",
+    "question": "A manufacturing organization receives the results from a penetration test. According to the results, legacy devices that are critical to continued business function display vulnerabilities.\nThe devices have minimal vendor support and should be segmented and monitored closely.\nWhich of the following devices were most likely identified?",
     "choices": [
       {
         "key": "A",
@@ -5798,7 +5912,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Embedded systems are often legacy, purpose-built devices with limited vendor support, are\ncritical to industrial operations, and commonly require network segmentation and close\nmonitoring due to unpatched vulnerabilities.",
+    "explanation": "Embedded systems are often legacy, purpose-built devices with limited vendor support, are critical to industrial operations, and commonly require network segmentation and close monitoring due to unpatched vulnerabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5814,7 +5928,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An organization experiences data loss after several employees traveled to an area that is well-\nknown for corporate espionage. The employees always used VPNs when connected to the hotel\nWi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their\ndevices unattended.\nWhich of the following will best prevent data loss events in the future?",
+    "question": "An organization experiences data loss after several employees traveled to an area that is well- known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended.\nWhich of the following will best prevent data loss events in the future?",
     "choices": [
       {
         "key": "A",
@@ -5836,7 +5950,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption ensures that all data stored on a device is unreadable without proper\nauthentication. If devices are stolen, seized, or accessed offline during travel in high-risk\nregions, encrypted disks prevent attackers from extracting sensitive data, effectively mitigating\ndata loss from physical compromise.",
+    "explanation": "Full disk encryption ensures that all data stored on a device is unreadable without proper authentication. If devices are stolen, seized, or accessed offline during travel in high-risk regions, encrypted disks prevent attackers from extracting sensitive data, effectively mitigating data loss from physical compromise.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5852,7 +5966,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security administrator wants to improve the reliability of the firewall connection at the\ncompany's primary data center.\nWhich of the following should the administrator configure?",
+    "question": "A security administrator wants to improve the reliability of the firewall connection at the company's primary data center.\nWhich of the following should the administrator configure?",
     "choices": [
       {
         "key": "A",
@@ -5874,7 +5988,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A firewall cluster increases reliability by providing high availability and failover between multiple\nfirewall instances. If one firewall fails, another can take over processing traffic, ensuring\ncontinuous connectivity at the primary data center.",
+    "explanation": "A firewall cluster increases reliability by providing high availability and failover between multiple firewall instances. If one firewall fails, another can take over processing traffic, ensuring continuous connectivity at the primary data center.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5912,7 +6026,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data sovereignty refers to the concept that data is subject to the laws and governance\nstructures of the country where it is collected, stored, or processed. Organizations must ensure\nthat data handling practices comply with the legal and regulatory requirements of the jurisdiction\nwhere the data resides. This creates challenges when operating across multiple countries\nbecause different regions may impose restrictions on where data can be stored or processed.",
+    "explanation": "Data sovereignty refers to the concept that data is subject to the laws and governance structures of the country where it is collected, stored, or processed. Organizations must ensure that data handling practices comply with the legal and regulatory requirements of the jurisdiction where the data resides. This creates challenges when operating across multiple countries because different regions may impose restrictions on where data can be stored or processed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5959,7 +6073,7 @@ export const domain3Questions = [
       "E",
       "F"
     ],
-    "explanation": "Using cloud-based repositories can violate data sovereignty requirements if the cloud provider\nstores or processes data in jurisdictions outside the country or region required by applicable\nregulations. This may place the data under foreign legal authority, creating compliance issues.\nMultiregion redundancy for backups replicates data across multiple geographic locations. If\nthose backup locations are in different countries or regions than permitted by regulatory or\ncontractual requirements, the organization may violate laws governing where data must remain\nstored or processed.",
+    "explanation": "Using cloud-based repositories can violate data sovereignty requirements if the cloud provider stores or processes data in jurisdictions outside the country or region required by applicable regulations. This may place the data under foreign legal authority, creating compliance issues.\nMultiregion redundancy for backups replicates data across multiple geographic locations. If those backup locations are in different countries or regions than permitted by regulatory or contractual requirements, the organization may violate laws governing where data must remain stored or processed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5997,7 +6111,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "High availability ensures systems remain operational even when hardware failures occur. By\npurchasing and configuring spare devices for critical network infrastructure, the organization can\nquickly replace or fail over to backup equipment if a primary device fails. This minimizes\ndowntime and maintains continuous service availability for critical operations.",
+    "explanation": "High availability ensures systems remain operational even when hardware failures occur. By purchasing and configuring spare devices for critical network infrastructure, the organization can quickly replace or fail over to backup equipment if a primary device fails. This minimizes downtime and maintains continuous service availability for critical operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6035,7 +6149,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A web application firewall protects web applications by monitoring and filtering HTTP/HTTPS\ntraffic between users and the web server. It can detect and block malicious inputs such as\ninjected scripts that are characteristic of cross-site scripting attacks. By inspecting requests and\nenforcing rules that prevent malicious code from being delivered to the application, it helps stop\nXSS attacks before they reach the web server.",
+    "explanation": "A web application firewall protects web applications by monitoring and filtering HTTP/HTTPS traffic between users and the web server. It can detect and block malicious inputs such as injected scripts that are characteristic of cross-site scripting attacks. By inspecting requests and enforcing rules that prevent malicious code from being delivered to the application, it helps stop XSS attacks before they reach the web server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6051,7 +6165,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company that has a large IT operation is looking to better control, standardize, and lower the\ntime required to build new servers.\nWhich of the following architectures will best achieve the company's objectives?",
+    "question": "A company that has a large IT operation is looking to better control, standardize, and lower the time required to build new servers.\nWhich of the following architectures will best achieve the company's objectives?",
     "choices": [
       {
         "key": "A",
@@ -6073,7 +6187,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as Code allows infrastructure such as servers, networks, and configurations to be\ndefined and managed through code and automation tools. This approach standardizes server\ndeployments, ensures consistent configurations, and significantly reduces the time required to\nprovision new systems by automating the build and deployment process.",
+    "explanation": "Infrastructure as Code allows infrastructure such as servers, networks, and configurations to be defined and managed through code and automation tools. This approach standardizes server deployments, ensures consistent configurations, and significantly reduces the time required to provision new systems by automating the build and deployment process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6089,7 +6203,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company requests a collaboration between the infrastructure and security teams to determine\nthe most secure method of deploying applications that saves costs on physical hardware.\nWhich of the following is the best way to achieve this goal?",
+    "question": "A company requests a collaboration between the infrastructure and security teams to determine the most secure method of deploying applications that saves costs on physical hardware.\nWhich of the following is the best way to achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -6111,7 +6225,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization allows multiple virtual machines to run on a single physical server by using a\nhypervisor to separate operating systems and applications. This approach reduces the need for\nadditional physical hardware while maintaining isolation between workloads. It enables secure\nand efficient deployment of applications, lowers hardware costs, and improves resource\nutilization within the infrastructure.",
+    "explanation": "Virtualization allows multiple virtual machines to run on a single physical server by using a hypervisor to separate operating systems and applications. This approach reduces the need for additional physical hardware while maintaining isolation between workloads. It enables secure and efficient deployment of applications, lowers hardware costs, and improves resource utilization within the infrastructure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6149,7 +6263,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer distributes incoming client requests across multiple servers or service\ninstances. This ensures that if one server becomes overloaded or fails, traffic can be redirected\nto other available servers. By preventing a single point of failure and balancing workload across\nsystems, it helps maintain continuous access to the service and supports high availability.",
+    "explanation": "A load balancer distributes incoming client requests across multiple servers or service instances. This ensures that if one server becomes overloaded or fails, traffic can be redirected to other available servers. By preventing a single point of failure and balancing workload across systems, it helps maintain continuous access to the service and supports high availability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6165,7 +6279,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following is a major security implication of connecting an ICS network to an\nenterprise network?",
+    "question": "Which of the following is a major security implication of connecting an ICS network to an enterprise network?",
     "choices": [
       {
         "key": "A",
@@ -6187,7 +6301,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Connecting an ICS network to an enterprise network increases exposure to external threats,\nmaking it more susceptible to exploitation that can disrupt critical industrial operations.",
+    "explanation": "Connecting an ICS network to an enterprise network increases exposure to external threats, making it more susceptible to exploitation that can disrupt critical industrial operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6225,7 +6339,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In cloud shared responsibility models, customers are always responsible for their data and how\nit is managed and protected, regardless of the cloud service model.",
+    "explanation": "In cloud shared responsibility models, customers are always responsible for their data and how it is managed and protected, regardless of the cloud service model.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6241,7 +6355,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following should an organization implement to avoid unnecessary liability after the\nend of a legal contract obligation with a third party?",
+    "question": "Which of the following should an organization implement to avoid unnecessary liability after the end of a legal contract obligation with a third party?",
     "choices": [
       {
         "key": "A",
@@ -6263,7 +6377,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data retention policies ensure data is only kept for the required period and then properly\ndisposed of, reducing unnecessary legal liability after contractual obligations end.",
+    "explanation": "Data retention policies ensure data is only kept for the required period and then properly disposed of, reducing unnecessary legal liability after contractual obligations end.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6279,7 +6393,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following is a reason an organization should use different CSPs for a critical\nfinancial application?",
+    "question": "Which of the following is a reason an organization should use different CSPs for a critical financial application?",
     "choices": [
       {
         "key": "A",
@@ -6301,7 +6415,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Using multiple cloud service providers introduces platform diversity, reducing the risk of a single\npoint of failure and ensuring continued access to critical resources if one provider experiences\nan outage.",
+    "explanation": "Using multiple cloud service providers introduces platform diversity, reducing the risk of a single point of failure and ensuring continued access to critical resources if one provider experiences an outage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6317,7 +6431,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A security engineer must deploy a sensor to actively monitor a closed network. The company's\nenterprise SIEM is located in the cloud, and there is a strict policy against connecting this\nnetwork to the internet.\nWhich of the following will best address these requirements?",
+    "question": "A security engineer must deploy a sensor to actively monitor a closed network. The company's enterprise SIEM is located in the cloud, and there is a strict policy against connecting this network to the internet.\nWhich of the following will best address these requirements?",
     "choices": [
       {
         "key": "A",
@@ -6339,7 +6453,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A data diode enables one-way data transfer from the closed network to the enterprise network,\nallowing monitoring data to be sent to the SIEM without exposing the closed network to inbound\nconnections or internet access, preserving isolation while enabling visibility.",
+    "explanation": "A data diode enables one-way data transfer from the closed network to the enterprise network, allowing monitoring data to be sent to the SIEM without exposing the closed network to inbound connections or internet access, preserving isolation while enabling visibility.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6377,7 +6491,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Building an asset inventory establishes visibility into all systems, devices, and data within the\nenvironment, which is foundational for identifying risks and developing effective security\ncontrols.",
+    "explanation": "Building an asset inventory establishes visibility into all systems, devices, and data within the environment, which is foundational for identifying risks and developing effective security controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6415,7 +6529,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Rerouting tasks to other processors provides fault tolerance, ensuring workloads continue\nprocessing even if a component fails, which supports system resilience and rapid recovery.",
+    "explanation": "Rerouting tasks to other processors provides fault tolerance, ensuring workloads continue processing even if a component fails, which supports system resilience and rapid recovery.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6431,7 +6545,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A site reliability engineer is designing a recovery strategy that requires quick fail over to an\nidentical site if the primary facility goes down.\nWhich of the following types of sites should the engineer consider?",
+    "question": "A site reliability engineer is designing a recovery strategy that requires quick fail over to an identical site if the primary facility goes down.\nWhich of the following types of sites should the engineer consider?",
     "choices": [
       {
         "key": "A",
@@ -6453,7 +6567,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is fully operational with real-time data replication and identical systems, allowing\nimmediate failover with minimal downtime.",
+    "explanation": "A hot site is fully operational with real-time data replication and identical systems, allowing immediate failover with minimal downtime.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6491,7 +6605,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a hybrid cloud model, customers retain responsibility for managing their infrastructure\nconfigurations and deployments, including versioning infrastructure-as-code used to provision\nand maintain resources.",
+    "explanation": "In a hybrid cloud model, customers retain responsibility for managing their infrastructure configurations and deployments, including versioning infrastructure-as-code used to provision and maintain resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6529,7 +6643,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Data loss prevention tools monitor and detect sensitive data such as intellectual property on\nendpoints and servers, identifying staging or unauthorized movement of files before exfiltration.",
+    "explanation": "Data loss prevention tools monitor and detect sensitive data such as intellectual property on endpoints and servers, identifying staging or unauthorized movement of files before exfiltration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6545,7 +6659,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following will best provide consistent power to a data center for an extended time\nduring a power grid outage?",
+    "question": "Which of the following will best provide consistent power to a data center for an extended time during a power grid outage?",
     "choices": [
       {
         "key": "A",
@@ -6567,7 +6681,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A generator provides long-term power during extended outages by supplying electricity as long\nas fuel is available, unlike a UPS which is designed for short-term backup.",
+    "explanation": "A generator provides long-term power during extended outages by supplying electricity as long as fuel is available, unlike a UPS which is designed for short-term backup.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6583,7 +6697,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A security analyst reviews firewall configurations and finds that firewalls are configured to fail-\nopen mode in the event of a crash.\nWhich of the following describes the security risk associated with this configuration?",
+    "question": "A security analyst reviews firewall configurations and finds that firewalls are configured to fail- open mode in the event of a crash.\nWhich of the following describes the security risk associated with this configuration?",
     "choices": [
       {
         "key": "A",
@@ -6605,7 +6719,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In fail-open mode, the firewall allows traffic to pass through without inspection during a failure,\nwhich can expose the network to unfiltered and potentially malicious traffic.",
+    "explanation": "In fail-open mode, the firewall allows traffic to pass through without inspection during a failure, which can expose the network to unfiltered and potentially malicious traffic.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6621,7 +6735,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following should an analyst consider when evaluating the effectiveness of the\nbackups in an organization's DRP?",
+    "question": "Which of the following should an analyst consider when evaluating the effectiveness of the backups in an organization's DRP?",
     "choices": [
       {
         "key": "A",
@@ -6643,7 +6757,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Backup frequency determines how current the data is at the time of recovery, directly impacting\nrecovery objectives and overall effectiveness in a disaster recovery plan.",
+    "explanation": "Backup frequency determines how current the data is at the time of recovery, directly impacting recovery objectives and overall effectiveness in a disaster recovery plan.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6681,7 +6795,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Filesystem journaling records changes in a log, allowing the system to recover to a consistent or\ndesired state after a crash or failure.",
+    "explanation": "Filesystem journaling records changes in a log, allowing the system to recover to a consistent or desired state after a crash or failure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6697,7 +6811,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following best explains why an organization would choose a warm site for disaster\nrecovery?",
+    "question": "Which of the following best explains why an organization would choose a warm site for disaster recovery?",
     "choices": [
       {
         "key": "A",
@@ -6719,13 +6833,13 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A warm site provides a compromise between cost and recovery speed by maintaining partially\nconfigured systems that can be brought online more quickly than a cold site but at lower cost\nthan a fully operational hot site.",
+    "explanation": "A warm site provides a compromise between cost and recovery speed by maintaining partially configured systems that can be brought online more quickly than a cold site but at lower cost than a fully operational hot site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p373",
     "needsReview": true,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6735,7 +6849,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following security methods transforms data to prevent reverse engineering and can\nprotect intellectual property within applications?",
+    "question": "Which of the following security methods transforms data to prevent reverse engineering and can protect intellectual property within applications?",
     "choices": [
       {
         "key": "A",
@@ -6757,7 +6871,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Obfuscation transforms code or data to make it difficult to understand, analyze, or reverse\nengineer. This helps protect intellectual property embedded in applications.",
+    "explanation": "Obfuscation transforms code or data to make it difficult to understand, analyze, or reverse engineer. This helps protect intellectual property embedded in applications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6773,7 +6887,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following best distinguishes serverless architecture from traditional on-premises\nmodels in terms of security accountability?",
+    "question": "Which of the following best distinguishes serverless architecture from traditional on-premises models in terms of security accountability?",
     "choices": [
       {
         "key": "A",
@@ -6795,7 +6909,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Serverless architecture shifts more responsibility for the underlying infrastructure to the cloud\nprovider. The customer generally focuses on securing application code, permissions, data, and\nconfigurations, while the provider handles host maintenance, infrastructure management, and\nmuch of the system patching.",
+    "explanation": "Serverless architecture shifts more responsibility for the underlying infrastructure to the cloud provider. The customer generally focuses on securing application code, permissions, data, and configurations, while the provider handles host maintenance, infrastructure management, and much of the system patching.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6811,7 +6925,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "An organization experiences a compromise in a cloud-hosted solution that contains customer\ninformation.\nWhich of the following strategies will help determine the sensitivity level of the breach?",
+    "question": "An organization experiences a compromise in a cloud-hosted solution that contains customer information.\nWhich of the following strategies will help determine the sensitivity level of the breach?",
     "choices": [
       {
         "key": "A",
@@ -6833,7 +6947,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data classification identifies the type and sensitivity of information involved, such as public,\ninternal, confidential, or regulated customer data. This helps determine the severity and impact\nof the breach.",
+    "explanation": "Data classification identifies the type and sensitivity of information involved, such as public, internal, confidential, or regulated customer data. This helps determine the severity and impact of the breach.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6849,7 +6963,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An unknown source has attacked an organization's network multiple times. The organization\nhas a firewall but no other source of protection against these attacks.\nWhich of the following is the best security item to add?",
+    "question": "An unknown source has attacked an organization's network multiple times. The organization has a firewall but no other source of protection against these attacks.\nWhich of the following is the best security item to add?",
     "choices": [
       {
         "key": "A",
@@ -6871,7 +6985,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An intrusion prevention system actively detects and blocks malicious network traffic. Since the\norganization already has a firewall but is still being attacked, adding prevention capability\nprovides stronger protection against repeated network-based attacks.",
+    "explanation": "An intrusion prevention system actively detects and blocks malicious network traffic. Since the organization already has a firewall but is still being attacked, adding prevention capability provides stronger protection against repeated network-based attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6887,7 +7001,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A small business initially plans to open common communications ports (21, 22, 25, 80, 443) on\nits firewall to allow broad access to its screened subnet. However, their security consultant\nadvises against this action.\nWhich of the following security principles is the consultant addressing?",
+    "question": "A small business initially plans to open common communications ports (21, 22, 25, 80, 443) on its firewall to allow broad access to its screened subnet. However, their security consultant advises against this action.\nWhich of the following security principles is the consultant addressing?",
     "choices": [
       {
         "key": "A",
@@ -6909,7 +7023,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Opening many common ports increases the number of exposed services that attackers can\ntarget. The consultant is addressing attack surface reduction by limiting unnecessary externally\naccessible ports.",
+    "explanation": "Opening many common ports increases the number of exposed services that attackers can target. The consultant is addressing attack surface reduction by limiting unnecessary externally accessible ports.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6925,7 +7039,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization plans to set up a new security operations center (SOC) environment and wants\nto mitigate vendor lock-in.\nWhich of the following architecture models should the organization adopt?",
+    "question": "An organization plans to set up a new security operations center (SOC) environment and wants to mitigate vendor lock-in.\nWhich of the following architecture models should the organization adopt?",
     "choices": [
       {
         "key": "A",
@@ -6947,7 +7061,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A multicloud architecture uses services from multiple cloud providers, reducing dependency on\na single vendor. This helps the organization avoid vendor lock-in and gives the SOC more\nflexibility in choosing, integrating, or replacing security services.",
+    "explanation": "A multicloud architecture uses services from multiple cloud providers, reducing dependency on a single vendor. This helps the organization avoid vendor lock-in and gives the SOC more flexibility in choosing, integrating, or replacing security services.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6963,7 +7077,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A hospital in an area prone to natural disasters needs to move its network infrastructure to the\ncloud.\nWhich of the following technical considerations is the most important?",
+    "question": "A hospital in an area prone to natural disasters needs to move its network infrastructure to the cloud.\nWhich of the following technical considerations is the most important?",
     "choices": [
       {
         "key": "A",
@@ -6985,7 +7099,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Availability is the most important consideration because the hospital must ensure critical\nsystems and services remain accessible during or after natural disasters. Cloud infrastructure\nshould be designed with redundancy, fault tolerance, and resilient connectivity to support\ncontinuous healthcare operations.",
+    "explanation": "Availability is the most important consideration because the hospital must ensure critical systems and services remain accessible during or after natural disasters. Cloud infrastructure should be designed with redundancy, fault tolerance, and resilient connectivity to support continuous healthcare operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7023,7 +7137,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A hot site with high availability provides a ready-to-use alternate environment that can quickly\ntake over operations if the primary site is disrupted. This offers the strongest resiliency for an\norganization in a hurricane-prone area because services can continue with minimal downtime.",
+    "explanation": "A hot site with high availability provides a ready-to-use alternate environment that can quickly take over operations if the primary site is disrupted. This offers the strongest resiliency for an organization in a hurricane-prone area because services can continue with minimal downtime.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7039,7 +7153,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following should an organization implement to address privacy concerns for a\nwebsite that collects personal information?",
+    "question": "Which of the following should an organization implement to address privacy concerns for a website that collects personal information?",
     "choices": [
       {
         "key": "A",
@@ -7061,7 +7175,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Providing a user opt-out mechanism allows individuals to control whether their personal\ninformation is collected, processed, or shared, directly addressing privacy and consent\nconcerns.",
+    "explanation": "Providing a user opt-out mechanism allows individuals to control whether their personal information is collected, processed, or shared, directly addressing privacy and consent concerns.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7077,7 +7191,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Two companies with separate, private cloud deployments plan to collaborate on a short-term\nproject. Company A creates a new, public cloud deployment for Company B to access during\nthis project.\nWhich of the following describes the new cloud architecture for both companies?",
+    "question": "Two companies with separate, private cloud deployments plan to collaborate on a short-term project. Company A creates a new, public cloud deployment for Company B to access during this project.\nWhich of the following describes the new cloud architecture for both companies?",
     "choices": [
       {
         "key": "A",
@@ -7099,7 +7213,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Each company combines its existing private cloud with the newly created public cloud\nenvironment, resulting in a hybrid cloud architecture.",
+    "explanation": "Each company combines its existing private cloud with the newly created public cloud environment, resulting in a hybrid cloud architecture.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7115,7 +7229,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "A new startup hires 100 remote and local developers. The startup is concerned with protecting\nits intellectual property. They ask the security team to ensure the IAM configuration is strong but\nflexible enough to account for remote workers.\nWhich of the following will ensure secure access and quick onboarding for new hires?",
+    "question": "A new startup hires 100 remote and local developers. The startup is concerned with protecting its intellectual property. They ask the security team to ensure the IAM configuration is strong but flexible enough to account for remote workers.\nWhich of the following will ensure secure access and quick onboarding for new hires?",
     "choices": [
       {
         "key": "A",
@@ -7137,7 +7251,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Integrating LDAP with a cloud directory provides centralized identity and access management\nfor both local and remote employees. It enables consistent authentication, centralized account\nprovisioning, and efficient onboarding while allowing developers to securely access\norganizational resources from different locations.",
+    "explanation": "Integrating LDAP with a cloud directory provides centralized identity and access management for both local and remote employees. It enables consistent authentication, centralized account provisioning, and efficient onboarding while allowing developers to securely access organizational resources from different locations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7153,7 +7267,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A company has a primary web server and a standby backup. The company wants to\nimmediately increase the servers' ability to handle higher traffic volumes.\nWhich of the following methods is the simplest way to meet this objective?",
+    "question": "A company has a primary web server and a standby backup. The company wants to immediately increase the servers' ability to handle higher traffic volumes.\nWhich of the following methods is the simplest way to meet this objective?",
     "choices": [
       {
         "key": "A",
@@ -7175,7 +7289,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Load balancing distributes incoming traffic across multiple available servers. Using both the\nprimary and standby servers to process requests immediately increases the environment's\ncapacity to handle higher traffic volumes while reducing the workload on any single server.",
+    "explanation": "Load balancing distributes incoming traffic across multiple available servers. Using both the primary and standby servers to process requests immediately increases the environment's capacity to handle higher traffic volumes while reducing the workload on any single server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7191,7 +7305,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security analyst reviews logs and finds a large number of malicious requests that have caused\nperformance issues on the company's site.\nWhich of the following would have most likely prevented this attack?",
+    "question": "A security analyst reviews logs and finds a large number of malicious requests that have caused performance issues on the company's site.\nWhich of the following would have most likely prevented this attack?",
     "choices": [
       {
         "key": "A",
@@ -7213,7 +7327,49 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A web application firewall (WAF) filters and blocks malicious HTTP/HTTPS requests before they\nreach the web application. It can detect and mitigate application-layer attacks that generate\nlarge volumes of harmful requests and cause website performance problems.",
+    "explanation": "A web application firewall (WAF) filters and blocks malicious HTTP/HTTPS requests before they reach the web application. It can detect and mitigate application-layer attacks that generate large volumes of harmful requests and cause website performance problems.",
+    "explanationSource": "pdf",
+    "incorrectExplanations": {},
+    "references": [],
+    "source": "SY0-701_en.pdf#p406",
+    "needsReview": true,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0968",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "Which of the following is the best way to sanitize an SSD to prevent the exposure of sensitive data while allowing the drive to be reused?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Secure erasing"
+      },
+      {
+        "key": "B",
+        "text": "Degaussing"
+      },
+      {
+        "key": "C",
+        "text": "Formatting"
+      },
+      {
+        "key": "D",
+        "text": "File wiping"
+      },
+      {
+        "key": "E",
+        "text": "Encrypting"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Secure erasing is the appropriate sanitization method for an SSD because it removes stored data across the drive, including areas that normal file deletion or formatting may not reliably clear, while keeping the device usable for reuse.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7229,7 +7385,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following best explains the reason to include platform diversity as part of secure\narchitecture?",
+    "question": "Which of the following best explains the reason to include platform diversity as part of secure architecture?",
     "choices": [
       {
         "key": "A",
@@ -7251,7 +7407,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Platform diversity reduces the risk of a single vulnerability or exploit compromising the entire\nenvironment.\nWhen different technologies, operating systems, or platforms are used, an attack that\nsuccessfully affects one technology may not affect other components, improving overall\nresilience.",
+    "explanation": "Platform diversity reduces the risk of a single vulnerability or exploit compromising the entire environment.\nWhen different technologies, operating systems, or platforms are used, an attack that successfully affects one technology may not affect other components, improving overall resilience.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7289,7 +7445,7 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a discussion-based simulation used to evaluate how effectively personnel\nwould respond to a hypothetical incident. It helps reveal gaps, unclear responsibilities,\ncommunication issues, and other weaknesses in existing incident response and business\ncontinuity plans.",
+    "explanation": "A tabletop exercise is a discussion-based simulation used to evaluate how effectively personnel would respond to a hypothetical incident. It helps reveal gaps, unclear responsibilities, communication issues, and other weaknesses in existing incident response and business continuity plans.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],

@@ -1,0 +1,79 @@
+/* Design tokens. Dark is the default; [data-theme="light"] overrides the
+   same names so nothing else in the app needs to know which theme is on. */
+:root {
+  --navy-900: #070b18;
+  --navy-850: #0b1124;
+  --navy-800: #101a33;
+  --navy-700: #182543;
+  --navy-600: #22325a;
+
+  --bg:            var(--navy-900);
+  --bg-raised:     var(--navy-850);
+  --bg-card:       var(--navy-800);
+  --bg-hover:      var(--navy-700);
+  --border:        #22325a;
+  --border-strong: #32457a;
+
+  --text:      #e8edf9;
+  --text-dim:  #9aa8c7;
+  --text-faint:#6b7a9e;
+
+  --accent:      #22e3d4;
+  --accent-dim:  #12a89e;
+  --accent-ink:  #04221f;
+  --secondary:   #a97bff;
+  --secondary-dim:#7b4fd4;
+
+  --correct:      #34d399;
+  --correct-bg:   #0c2f26;
+  --correct-brd:  #1d7a5f;
+  --incorrect:    #f87171;
+  --incorrect-bg: #331317;
+  --incorrect-brd:#9b3b3b;
+  --flag:         #fbbf24;
+  --flag-bg:      #2e2410;
+  --flag-brd:     #8a6a17;
+
+  --radius:   12px;
+  --radius-sm: 8px;
+  --tap:      44px;
+  --maxw:     860px;
+
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", monospace;
+}
+
+[data-theme="light"] {
+  --bg:            #f5f7fc;
+  --bg-raised:     #ffffff;
+  --bg-card:       #ffffff;
+  --bg-hover:      #eaeffb;
+  --border:        #d3dcef;
+  --border-strong: #b3c1de;
+
+  --text:      #121a2e;
+  --text-dim:  #4a5878;
+  --text-faint:#71809f;
+
+  --accent:      #067e76;
+  --accent-dim:  #0aa093;
+  --accent-ink:  #ffffff;
+  --secondary:   #6b3fc4;
+  --secondary-dim:#8b63e0;
+
+  --correct:      #08744f;
+  --correct-bg:   #e2f6ee;
+  --correct-brd:  #7fc9ac;
+  --incorrect:    #b3261e;
+  --incorrect-bg: #fdeaea;
+  --incorrect-brd:#e8a3a0;
+  --flag:         #8a5a00;
+  --flag-bg:      #fdf3dc;
+  --flag-brd:     #d9b566;
+
+  --shadow: 0 1px 2px rgba(16,26,48,.06), 0 8px 24px rgba(16,26,48,.08);
+}

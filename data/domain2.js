@@ -8,7 +8,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A systems administrator notices that the research and development department is not using the\ncompany VPN when accessing various company-related services and systems.\nWhich of the following scenarios describes this activity?",
+    "question": "A systems administrator notices that the research and development department is not using the company VPN when accessing various company-related services and systems.\nWhich of the following scenarios describes this activity?",
     "choices": [
       {
         "key": "A",
@@ -46,7 +46,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following threat vectors is most commonly utilized by insider threat actors\nattempting data exfiltration?",
+    "question": "Which of the following threat vectors is most commonly utilized by insider threat actors attempting data exfiltration?",
     "choices": [
       {
         "key": "A",
@@ -122,7 +122,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An attacker posing as the Chief Executive Officer calls an employee and instructs the employee\nto buy gift cards.\nWhich of the following techniques is the attacker using?",
+    "question": "An attacker posing as the Chief Executive Officer calls an employee and instructs the employee to buy gift cards.\nWhich of the following techniques is the attacker using?",
     "choices": [
       {
         "key": "A",
@@ -160,7 +160,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A recent penetration test identified that an attacker could flood the MAC address table of\nnetwork switches.\nWhich of the following would best mitigate this type of attack?",
+    "question": "A recent penetration test identified that an attacker could flood the MAC address table of network switches.\nWhich of the following would best mitigate this type of attack?",
     "choices": [
       {
         "key": "A",
@@ -198,7 +198,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A user would like to install software and features that are not available with a smartphone's\ndefault software.\nWhich of the following would allow the user to install unauthorized software and enable new\nfeatures?",
+    "question": "A user would like to install software and features that are not available with a smartphone's default software.\nWhich of the following would allow the user to install unauthorized software and enable new features?",
     "choices": [
       {
         "key": "A",
@@ -236,7 +236,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "multi",
-    "question": "Which of the following methods can be used to detect attackers who have successfully\ninfiltrated a network? (Choose two.)",
+    "question": "Which of the following methods can be used to detect attackers who have successfully infiltrated a network? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -283,7 +283,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A user, who is waiting for a flight at an airport, logs in to the airline website using the public Wi-\nFi, ignores a security warning and purchases an upgraded seat.\nWhen the flight lands, the user finds unauthorized credit card charges.\nWhich of the following attacks most likely occurred?",
+    "question": "A user, who is waiting for a flight at an airport, logs in to the airline website using the public Wi- Fi, ignores a security warning and purchases an upgraded seat.\nWhen the flight lands, the user finds unauthorized credit card charges.\nWhich of the following attacks most likely occurred?",
     "choices": [
       {
         "key": "A",
@@ -321,7 +321,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A user downloaded software from an online forum. After the user installed the software, the\nsecurity team observed external network traffic connecting to the user's computer on an\nuncommon port.\nWhich of the following is the most likely explanation of this unauthorized connection?",
+    "question": "A user downloaded software from an online forum. After the user installed the software, the security team observed external network traffic connecting to the user's computer on an uncommon port.\nWhich of the following is the most likely explanation of this unauthorized connection?",
     "choices": [
       {
         "key": "A",
@@ -397,7 +397,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "During a recent company safety stand-down, the cyber-awareness team gave a presentation on\nthe importance of cyber hygiene. One topic the team covered was best practices for printing\ncenters.\nWhich of the following describes an attack method that relates to printing centers?",
+    "question": "During a recent company safety stand-down, the cyber-awareness team gave a presentation on the importance of cyber hygiene. One topic the team covered was best practices for printing centers.\nWhich of the following describes an attack method that relates to printing centers?",
     "choices": [
       {
         "key": "A",
@@ -435,7 +435,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security team has been alerted to a flood of incoming emails that have various subject lines\nand are addressed to multiple email inboxes. Each email contains a URL shortener link that is\nredirecting to a dead domain.\nWhich of the following is the best step for the security team to take?",
+    "question": "A security team has been alerted to a flood of incoming emails that have various subject lines and are addressed to multiple email inboxes. Each email contains a URL shortener link that is redirecting to a dead domain.\nWhich of the following is the best step for the security team to take?",
     "choices": [
       {
         "key": "A",
@@ -473,7 +473,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security administrator is hardening corporate systems and applying appropriate mitigations by\nconsulting a real-world knowledge base for adversary behavior.\nWhich of the following would be best for the administrator to reference?",
+    "question": "A security administrator is hardening corporate systems and applying appropriate mitigations by consulting a real-world knowledge base for adversary behavior.\nWhich of the following would be best for the administrator to reference?",
     "choices": [
       {
         "key": "A",
@@ -511,7 +511,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following is the most important security concern when using legacy systems to\nprovide production service?",
+    "question": "Which of the following is the most important security concern when using legacy systems to provide production service?",
     "choices": [
       {
         "key": "A",
@@ -549,7 +549,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following best describes a social engineering attack that uses a targeted electronic\nmessaging campaign aimed at a Chief Executive Officer?",
+    "question": "Which of the following best describes a social engineering attack that uses a targeted electronic messaging campaign aimed at a Chief Executive Officer?",
     "choices": [
       {
         "key": "A",
@@ -587,7 +587,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company wants to implement MFA. Which of the following enables the additional factor while\nusing a smart card?",
+    "question": "A company wants to implement MFA. Which of the following enables the additional factor while using a smart card?",
     "choices": [
       {
         "key": "A",
@@ -625,7 +625,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following data roles is responsible for identifying risks and appropriate access to\ndata?",
+    "question": "Which of the following data roles is responsible for identifying risks and appropriate access to data?",
     "choices": [
       {
         "key": "A",
@@ -663,7 +663,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "An organization experienced a security breach that allowed an attacker to send fraudulent wire\ntransfers from a hardened PC exclusively to the attacker's bank through remote connections. A\nsecurity analyst is creating a timeline of events and has found a different PC on the network\ncontaining malware. Upon reviewing the command history, the analyst finds the following:\nPS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com /\nntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327\nWhich of the following best describes how the attacker gained access to the hardened PC?",
+    "question": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst finds the following:\nPS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com / ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327 Which of the following best describes how the attacker gained access to the hardened PC?",
     "choices": [
       {
         "key": "A",
@@ -701,7 +701,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security administrator notices numerous unused, non-compliant desktops are connected to\nthe network.\nWhich of the following actions would the administrator most likely recommend to the\nmanagement team?",
+    "question": "A security administrator notices numerous unused, non-compliant desktops are connected to the network.\nWhich of the following actions would the administrator most likely recommend to the management team?",
     "choices": [
       {
         "key": "A",
@@ -739,7 +739,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A malicious update was distributed to a common software platform and disabled services at\nmany organizations.\nWhich of the following best describes this type of vulnerability?",
+    "question": "A malicious update was distributed to a common software platform and disabled services at many organizations.\nWhich of the following best describes this type of vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -777,7 +777,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company web server is initiating outbound traffic to a low-reputation, public IP on non-\nstandard pat. The web server is used to present an unauthenticated page to clients who upload\nimages the company. An analyst notices a suspicious process running on the server hat was\nnot created by the company development team.\nWhich of the following is the most likely explanation for his security incident?",
+    "question": "A company web server is initiating outbound traffic to a low-reputation, public IP on non- standard pat. The web server is used to present an unauthenticated page to clients who upload images the company. An analyst notices a suspicious process running on the server hat was not created by the company development team.\nWhich of the following is the most likely explanation for his security incident?",
     "choices": [
       {
         "key": "A",
@@ -815,7 +815,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A systems administrator deployed a monitoring solution that does not require installation on the\nendpoints that the solution is monitoring.\nWhich of the following is described in this scenario?",
+    "question": "A systems administrator deployed a monitoring solution that does not require installation on the endpoints that the solution is monitoring.\nWhich of the following is described in this scenario?",
     "choices": [
       {
         "key": "A",
@@ -853,7 +853,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security analyst is reviewing the source code of an application in order to identify\nmisconfigurations and vulnerabilities.\nWhich of the following kinds of analysis best describes this review?",
+    "question": "A security analyst is reviewing the source code of an application in order to identify misconfigurations and vulnerabilities.\nWhich of the following kinds of analysis best describes this review?",
     "choices": [
       {
         "key": "A",
@@ -891,7 +891,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company's online shopping website became unusable shortly after midnight on January 30,\n2023.\nWhen a security analyst reviewed the database server, the analyst noticed the following code\nused for backing up data:\nWhich of the following should the analyst do next?",
+    "question": "A company's online shopping website became unusable shortly after midnight on January 30, 2023.\nWhen a security analyst reviewed the database server, the analyst noticed the following code used for backing up data:\nWhich of the following should the analyst do next?",
     "choices": [
       {
         "key": "A",
@@ -929,7 +929,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following threat actors is the most likely to seek financial gain through the use of\nransomware attacks?",
+    "question": "Which of the following threat actors is the most likely to seek financial gain through the use of ransomware attacks?",
     "choices": [
       {
         "key": "A",
@@ -951,7 +951,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Organized crime groups are primarily motivated by financial gain. Ransomware attacks are a\npopular tool for these groups because they can encrypt a victim's data and demand a ransom\npayment (often in cryptocurrency) to restore access. This form of attack can yield a high\nfinancial return if victims choose to pay.",
+    "explanation": "Organized crime groups are primarily motivated by financial gain. Ransomware attacks are a popular tool for these groups because they can encrypt a victim's data and demand a ransom payment (often in cryptocurrency) to restore access. This form of attack can yield a high financial return if victims choose to pay.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -967,7 +967,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A systems administrator is concerned about vulnerabilities within cloud computing instances.\nWhich of the following is most important for the administrator to consider when architecting a\ncloud computing environment?",
+    "question": "A systems administrator is concerned about vulnerabilities within cloud computing instances.\nWhich of the following is most important for the administrator to consider when architecting a cloud computing environment?",
     "choices": [
       {
         "key": "A",
@@ -993,7 +993,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In cloud computing, virtual machines (VMs) share physical resources. VM escape is a critical\nvulnerability where an attacker could break out of a virtualized environment and access the host\nsystem or other VMs running on the same physical hardware. This would pose a significant\nsecurity risk, as it could allow attackers to compromise the entire cloud infrastructure.",
+    "explanation": "In cloud computing, virtual machines (VMs) share physical resources. VM escape is a critical vulnerability where an attacker could break out of a virtualized environment and access the host system or other VMs running on the same physical hardware. This would pose a significant security risk, as it could allow attackers to compromise the entire cloud infrastructure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1004,50 +1004,12 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0132",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following should an organization use to protect its environment from external\nattacks conducted by an unauthorized hacker?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "ACL"
-      },
-      {
-        "key": "B",
-        "text": "IDS"
-      },
-      {
-        "key": "C",
-        "text": "HIDS"
-      },
-      {
-        "key": "D",
-        "text": "NIPS"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "A Network Intrusion Prevention System (NIPS) actively monitors network traffic and can detect\nand block malicious activities in real-time, helping to prevent external attacks. Unlike IDS, which\nonly detects intrusions, NIPS can take immediate action to stop threats, making it a strong\ndefensive measure against unauthorized external attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p62",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0137",
     "domain": 2,
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A company is redesigning its infrastructure and wants to reduce the number of physical servers\nin use.\nWhich of the following architectures is best suited for this goal?",
+    "question": "A company is redesigning its infrastructure and wants to reduce the number of physical servers in use.\nWhich of the following architectures is best suited for this goal?",
     "choices": [
       {
         "key": "A",
@@ -1069,7 +1031,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization allows multiple virtual machines (VMs) to run on a single physical server, reducing\nthe need for multiple physical servers. This approach consolidates workloads, optimizes\nhardware usage, and lowers operational costs by enabling multiple isolated environments on\nfewer physical devices.",
+    "explanation": "Virtualization allows multiple virtual machines (VMs) to run on a single physical server, reducing the need for multiple physical servers. This approach consolidates workloads, optimizes hardware usage, and lowers operational costs by enabling multiple isolated environments on fewer physical devices.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1107,7 +1069,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Social engineering tactics, such as phishing, are commonly used by attackers to trick individuals\ninto revealing their login credentials. By posing as a trusted entity or creating a fake login page,\nattackers can harvest usernames and passwords directly from unsuspecting users. This method\nis highly effective and frequently used for credential harvesting.",
+    "explanation": "Social engineering tactics, such as phishing, are commonly used by attackers to trick individuals into revealing their login credentials. By posing as a trusted entity or creating a fake login page, attackers can harvest usernames and passwords directly from unsuspecting users. This method is highly effective and frequently used for credential harvesting.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1123,7 +1085,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator receives an alert that a company's internal file server is very slow and\nis only working intermittently. The systems administrator reviews the server management\nsoftware and finds the following information about the server:\nWhich of the following indicators most likely triggered this alert?",
+    "question": "A systems administrator receives an alert that a company's internal file server is very slow and is only working intermittently. The systems administrator reviews the server management software and finds the following information about the server:\nWhich of the following indicators most likely triggered this alert?",
     "choices": [
       {
         "key": "A",
@@ -1145,7 +1107,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attached information shows that the CPU usage is at 99.6% and memory usage is at 97%.\nThese high levels of resource consumption would lead to slow performance and intermittent\nissues, triggering an alert due to the server's limited ability to handle additional requests.",
+    "explanation": "The attached information shows that the CPU usage is at 99.6% and memory usage is at 97%.\nThese high levels of resource consumption would lead to slow performance and intermittent issues, triggering an alert due to the server's limited ability to handle additional requests.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1183,7 +1145,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Network Access Control (NAC) platforms are primarily used to secure access to the\norganization's network, typically focusing on wired and wireless connections. By implementing\nNAC, the administrator can control which devices are allowed to connect to the network and\nenforce security policies, reducing the risk of unauthorized access via the wired network.",
+    "explanation": "Network Access Control (NAC) platforms are primarily used to secure access to the organization's network, typically focusing on wired and wireless connections. By implementing NAC, the administrator can control which devices are allowed to connect to the network and enforce security policies, reducing the risk of unauthorized access via the wired network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1199,7 +1161,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "While reviewing logs, a security administrator identifies the following code:\n<script>function (send_info)</script>\nWhich of the following best describes the vulnerability being exploited?",
+    "question": "While reviewing logs, a security administrator identifies the following code:\n<script>function (send_info)</script> Which of the following best describes the vulnerability being exploited?",
     "choices": [
       {
         "key": "A",
@@ -1221,7 +1183,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The <script> tags in the code suggest a Cross-Site Scripting (XSS) attack, where malicious\nscripts are injected into web pages viewed by other users. XSS vulnerabilities allow attackers to\nexecute scripts in the context of a user's browser, which can lead to data theft, session\nhijacking, and other malicious actions.",
+    "explanation": "The <script> tags in the code suggest a Cross-Site Scripting (XSS) attack, where malicious scripts are injected into web pages viewed by other users. XSS vulnerabilities allow attackers to execute scripts in the context of a user's browser, which can lead to data theft, session hijacking, and other malicious actions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1237,7 +1199,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A network administrator wants to ensure that network traffic is highly secure while in transit.\nWhich of the following actions best describes the actions the network administrator should\ntake?",
+    "question": "A network administrator wants to ensure that network traffic is highly secure while in transit.\nWhich of the following actions best describes the actions the network administrator should take?",
     "choices": [
       {
         "key": "A",
@@ -1259,7 +1221,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Using TLS and other encrypted protocols ensures that data is securely transmitted, protecting it\nfrom interception or eavesdropping. By restricting traffic to secure protocols, the administrator\ncan maintain high security for data in transit across the network. This approach directly\naddresses securing network traffic rather than focusing solely on perimeter or endpoint security.",
+    "explanation": "Using TLS and other encrypted protocols ensures that data is securely transmitted, protecting it from interception or eavesdropping. By restricting traffic to secure protocols, the administrator can maintain high security for data in transit across the network. This approach directly addresses securing network traffic rather than focusing solely on perimeter or endpoint security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1297,7 +1259,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Memory injection techniques allow attackers to inject malicious code directly into a process's\nmemory space, often bypassing traditional file-based detection methods. By operating in-\nmemory, these exploits can evade detection by the operating system and avoid leaving traces\non disk, making them harder for antivirus and other security software to identify.",
+    "explanation": "Memory injection techniques allow attackers to inject malicious code directly into a process's memory space, often bypassing traditional file-based detection methods. By operating in- memory, these exploits can evade detection by the operating system and avoid leaving traces on disk, making them harder for antivirus and other security software to identify.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1313,7 +1275,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A malicious insider from the marketing team alters records and transfers company funds to a\npersonal account.\nWhich of the following methods would be the best way to secure company records in the future?",
+    "question": "A malicious insider from the marketing team alters records and transfers company funds to a personal account.\nWhich of the following methods would be the best way to secure company records in the future?",
     "choices": [
       {
         "key": "A",
@@ -1335,7 +1297,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Implementing strict permission restrictions ensures that users can only access the data and\nfunctions necessary for their specific roles. By limiting access rights, the company can reduce\nthe risk of unauthorized modifications by restricting sensitive financial records to only those who\nabsolutely need access. Additionally, permission restrictions allow for better monitoring and\ncontrol over sensitive data, making it harder for malicious insiders to perform unauthorized\nactions.",
+    "explanation": "Implementing strict permission restrictions ensures that users can only access the data and functions necessary for their specific roles. By limiting access rights, the company can reduce the risk of unauthorized modifications by restricting sensitive financial records to only those who absolutely need access. Additionally, permission restrictions allow for better monitoring and control over sensitive data, making it harder for malicious insiders to perform unauthorized actions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1351,7 +1313,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A customer of a large company receives a phone call from someone claiming to work for the\ncompany and asking for the customer's credit card information. The customer sees the caller ID\nis the same as the company's main phone number.\nWhich of the following attacks is the customer most likely a target of?",
+    "question": "A customer of a large company receives a phone call from someone claiming to work for the company and asking for the customer's credit card information. The customer sees the caller ID is the same as the company's main phone number.\nWhich of the following attacks is the customer most likely a target of?",
     "choices": [
       {
         "key": "A",
@@ -1373,7 +1335,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack where attackers impersonate a trusted\nentity over the phone to obtain sensitive information, such as credit card details. In this case, the\nattacker spoofed the company's main phone number on the caller ID to gain the customer's\ntrust, making it likely that the customer is the target of a vishing attack.",
+    "explanation": "Vishing (voice phishing) is a social engineering attack where attackers impersonate a trusted entity over the phone to obtain sensitive information, such as credit card details. In this case, the attacker spoofed the company's main phone number on the caller ID to gain the customer's trust, making it likely that the customer is the target of a vishing attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1389,7 +1351,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is reviewing logs to identify the destination of command-and-control traffic\noriginating from a compromised device within the on-premises network.\nWhich of the following is the best log to review?",
+    "question": "A security analyst is reviewing logs to identify the destination of command-and-control traffic originating from a compromised device within the on-premises network.\nWhich of the following is the best log to review?",
     "choices": [
       {
         "key": "A",
@@ -1411,7 +1373,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Firewall logs are ideal for identifying the destination of command-and-control (C2) traffic\nbecause they log all inbound and outbound connections, including IP addresses, ports, and\nprotocols used. By reviewing firewall logs, a security analyst can trace where the compromised\ndevice is attempting to send data and potentially identify the external command-and-control\nserver, aiding in the containment of the threat.",
+    "explanation": "Firewall logs are ideal for identifying the destination of command-and-control (C2) traffic because they log all inbound and outbound connections, including IP addresses, ports, and protocols used. By reviewing firewall logs, a security analyst can trace where the compromised device is attempting to send data and potentially identify the external command-and-control server, aiding in the containment of the threat.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1427,7 +1389,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "During a SQL update of a database, a temporary field that was created was replaced by an\nattacker in order to allow access to the system.\nWhich of the following best describes this type of vulnerability?",
+    "question": "During a SQL update of a database, a temporary field that was created was replaced by an attacker in order to allow access to the system.\nWhich of the following best describes this type of vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -1465,7 +1427,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security analyst wants to better understand the behavior of users and devices in order to gain\nvisibility into potential malicious activities. The analyst needs a control to detect when actions\ndeviate from a common baseline.\nWhich of the following should the analyst use?",
+    "question": "A security analyst wants to better understand the behavior of users and devices in order to gain visibility into potential malicious activities. The analyst needs a control to detect when actions deviate from a common baseline.\nWhich of the following should the analyst use?",
     "choices": [
       {
         "key": "A",
@@ -1487,7 +1449,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Endpoint Detection and Response (EDR) solutions provide visibility into the behavior of users\nand devices, monitoring for deviations from established baselines. EDR tools are designed to\ndetect suspicious activities by continuously analyzing endpoint behaviors, which helps identify\npotential threats, including malicious activities, that may otherwise go unnoticed. This is\nparticularly useful for spotting deviations from normal patterns and enhancing security response.",
+    "explanation": "Endpoint Detection and Response (EDR) solutions provide visibility into the behavior of users and devices, monitoring for deviations from established baselines. EDR tools are designed to detect suspicious activities by continuously analyzing endpoint behaviors, which helps identify potential threats, including malicious activities, that may otherwise go unnoticed. This is particularly useful for spotting deviations from normal patterns and enhancing security response.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1525,7 +1487,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Memory injection attacks are particularly dangerous for systems running a Real-Time Operating\nSystem (RTOS) because these systems often have limited resources and strict timing\nrequirements, making them more susceptible to disruptions caused by injected code. Memory\ninjection can compromise the system's integrity, allowing an attacker to alter its operation or\ncause it to behave unpredictably.",
+    "explanation": "Memory injection attacks are particularly dangerous for systems running a Real-Time Operating System (RTOS) because these systems often have limited resources and strict timing requirements, making them more susceptible to disruptions caused by injected code. Memory injection can compromise the system's integrity, allowing an attacker to alter its operation or cause it to behave unpredictably.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1541,7 +1503,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following threat actors would most likely deface the website of a high-profile music\ngroup?",
+    "question": "Which of the following threat actors would most likely deface the website of a high-profile music group?",
     "choices": [
       {
         "key": "A",
@@ -1563,7 +1525,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Unskilled attackers, often referred to as \"script kiddies,\" are more likely to deface websites for\nattention or to make a public statement rather than for financial gain or political motivations.\nDefacing a high-profile music group's website aligns with the typical goals of an unskilled\nattacker seeking notoriety or a sense of accomplishment by exploiting visible and relatively\nsimple vulnerabilities.",
+    "explanation": "Unskilled attackers, often referred to as \"script kiddies,\" are more likely to deface websites for attention or to make a public statement rather than for financial gain or political motivations.\nDefacing a high-profile music group's website aligns with the typical goals of an unskilled attacker seeking notoriety or a sense of accomplishment by exploiting visible and relatively simple vulnerabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1579,7 +1541,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security administrator observed the following in a web server log while investigating an\nincident:\n\"GET ../../../../etc/passwd\"\nWhich of the following attacks did the security administrator most likely see?",
+    "question": "A security administrator observed the following in a web server log while investigating an incident:\n\"GET ../../../../etc/passwd\" Which of the following attacks did the security administrator most likely see?",
     "choices": [
       {
         "key": "A",
@@ -1601,7 +1563,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The log entry GET ../../../../etc/passwd indicates a directory traversal attack. Directory traversal\nis an attack technique that attempts to access files and directories outside the web server's root\ndirectory by using sequences like ../ to move up the directory tree. In this case, the attacker is\nattempting to reach the /etc/ passwd file, which typically contains user account information on\nUnix-based systems. This type of attack can allow unauthorized access to sensitive files on the\nserver.",
+    "explanation": "The log entry GET ../../../../etc/passwd indicates a directory traversal attack. Directory traversal is an attack technique that attempts to access files and directories outside the web server's root directory by using sequences like ../ to move up the directory tree. In this case, the attacker is attempting to reach the /etc/ passwd file, which typically contains user account information on Unix-based systems. This type of attack can allow unauthorized access to sensitive files on the server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1617,7 +1579,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An attacker submits a request containing unexpected characters in an attempt to gain\nunauthorized access to information within the underlying systems.\nWhich of the following best describes this attack?",
+    "question": "An attacker submits a request containing unexpected characters in an attempt to gain unauthorized access to information within the underlying systems.\nWhich of the following best describes this attack?",
     "choices": [
       {
         "key": "A",
@@ -1639,7 +1601,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection is an attack technique where an attacker includes unexpected characters or SQL\ncode in a request to manipulate a database query, aiming to gain unauthorized access to data\nor execute additional database commands. This form of injection targets vulnerabilities in\napplications that don't properly validate input, allowing attackers to interact with underlying\ndatabase systems maliciously.",
+    "explanation": "SQL injection is an attack technique where an attacker includes unexpected characters or SQL code in a request to manipulate a database query, aiming to gain unauthorized access to data or execute additional database commands. This form of injection targets vulnerabilities in applications that don't properly validate input, allowing attackers to interact with underlying database systems maliciously.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1655,7 +1617,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following types of vulnerabilities is primarily caused by improper use and\nmanagement of cryptographic certificates?",
+    "question": "Which of the following types of vulnerabilities is primarily caused by improper use and management of cryptographic certificates?",
     "choices": [
       {
         "key": "A",
@@ -1693,7 +1655,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A user's workstation becomes unresponsive and displays a ransom note demanding payment to\ndecrypt files. Before the attack, the user opened a resume they received in a message, browsed\nthe company's website, and installed OS updates.\nWhich of the following is the most likely vector of this attack?",
+    "question": "A user's workstation becomes unresponsive and displays a ransom note demanding payment to decrypt files. Before the attack, the user opened a resume they received in a message, browsed the company's website, and installed OS updates.\nWhich of the following is the most likely vector of this attack?",
     "choices": [
       {
         "key": "A",
@@ -1715,7 +1677,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The most likely vector of this attack is a spear-phishing attachment. The user opened a resume\nreceived in a message, which is a common method used in spear-phishing attacks. These\nattacks often involve sending a specifically crafted attachment (like a resume) to the targeted\nuser. Once the attachment is opened, it could trigger malware, such as ransomware, which\nencrypts files on the system and displays a ransom note. This attack vector aligns with the\ndescribed symptoms, as the user interacted with the malicious attachment before experiencing\nthe ransomware infection.",
+    "explanation": "The most likely vector of this attack is a spear-phishing attachment. The user opened a resume received in a message, which is a common method used in spear-phishing attacks. These attacks often involve sending a specifically crafted attachment (like a resume) to the targeted user. Once the attachment is opened, it could trigger malware, such as ransomware, which encrypts files on the system and displays a ransom note. This attack vector aligns with the described symptoms, as the user interacted with the malicious attachment before experiencing the ransomware infection.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1731,7 +1693,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security administrator documented the following records during an assessment of network\nservices:\nTwo weeks later, the administrator performed a log review and noticed the records were\nchanged as follows:\nWhen consulting the service owner, the administrator validated that the new address was not\npart of the company network.\nWhich of the following was the company most likely experiencing?",
+    "question": "A security administrator documented the following records during an assessment of network services:\nTwo weeks later, the administrator performed a log review and noticed the records were changed as follows:\nWhen consulting the service owner, the administrator validated that the new address was not part of the company network.\nWhich of the following was the company most likely experiencing?",
     "choices": [
       {
         "key": "A",
@@ -1753,7 +1715,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "DNS poisoning (also known as DNS cache poisoning) involves an attacker manipulating DNS\nrecords, redirecting traffic to malicious destinations. In this case, the change in the DNS records\nto an IP address outside the company's network suggests that the attacker may have poisoned\nthe DNS cache or altered the DNS records to reroute traffic, potentially leading to a malicious\nsite or server.\nThis is not a DDoS attack, ransomware compromise, or spyware infection as the primary issue\nappears to be manipulation of DNS records, which is characteristic of DNS poisoning.",
+    "explanation": "DNS poisoning (also known as DNS cache poisoning) involves an attacker manipulating DNS records, redirecting traffic to malicious destinations. In this case, the change in the DNS records to an IP address outside the company's network suggests that the attacker may have poisoned the DNS cache or altered the DNS records to reroute traffic, potentially leading to a malicious site or server.\nThis is not a DDoS attack, ransomware compromise, or spyware infection as the primary issue appears to be manipulation of DNS records, which is characteristic of DNS poisoning.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1769,7 +1731,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A government official receives a blank envelope containing photos and a note instructing the\nofficial to wire a large sum of money by midnight to prevent the photos from being leaked on the\ninternet.\nWhich of the following best describes the threat actor's intent?",
+    "question": "A government official receives a blank envelope containing photos and a note instructing the official to wire a large sum of money by midnight to prevent the photos from being leaked on the internet.\nWhich of the following best describes the threat actor's intent?",
     "choices": [
       {
         "key": "A",
@@ -1791,7 +1753,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The threat actor's intent in this scenario is best described as blackmail. The official is being\nthreatened with the release of compromising photos unless a large sum of money is paid, which\nis a classic form of blackmail. The attacker is using the threat of exposing sensitive information\nto coerce the official into making a payment.",
+    "explanation": "The threat actor's intent in this scenario is best described as blackmail. The official is being threatened with the release of compromising photos unless a large sum of money is paid, which is a classic form of blackmail. The attacker is using the threat of exposing sensitive information to coerce the official into making a payment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1829,7 +1791,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VM escape occurs when an attacker manages to break out of a virtual machine (VM) and gain\naccess to the underlying hypervisor or host system. Once the attacker has access to the\nhypervisor, they can potentially compromise other VMs running on the same host, which could\nlead to unauthorized access, data breaches, or further exploitation of the system.",
+    "explanation": "A VM escape occurs when an attacker manages to break out of a virtual machine (VM) and gain access to the underlying hypervisor or host system. Once the attacker has access to the hypervisor, they can potentially compromise other VMs running on the same host, which could lead to unauthorized access, data breaches, or further exploitation of the system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1845,7 +1807,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following is a type of vulnerability that involves inserting scripts into web-based\napplications in order to take control of the client's web browser?",
+    "question": "Which of the following is a type of vulnerability that involves inserting scripts into web-based applications in order to take control of the client's web browser?",
     "choices": [
       {
         "key": "A",
@@ -1867,7 +1829,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cross-site scripting (XSS) is a type of vulnerability that occurs when attackers inject malicious\nscripts into web applications. These scripts are then executed by the client's web browser,\nwhich can allow the attacker to steal sensitive data (such as cookies or session tokens),\nimpersonate users, or perform other malicious actions within the context of the user's session.",
+    "explanation": "Cross-site scripting (XSS) is a type of vulnerability that occurs when attackers inject malicious scripts into web applications. These scripts are then executed by the client's web browser, which can allow the attacker to steal sensitive data (such as cookies or session tokens), impersonate users, or perform other malicious actions within the context of the user's session.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1883,7 +1845,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following actors attacking an organization is the most likely to be motivated by\npersonal beliefs?",
+    "question": "Which of the following actors attacking an organization is the most likely to be motivated by personal beliefs?",
     "choices": [
       {
         "key": "A",
@@ -1905,7 +1867,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A hacktivist is a type of attacker who is motivated by personal or political beliefs, often aiming to\npromote a cause or to protest against certain actions or policies. Hacktivists typically use\nhacking as a means of expressing their views or making a statement, rather than for financial\ngain or other personal benefits, which distinguishes them from other types of threat actors like\nnation-states or organized crime groups.",
+    "explanation": "A hacktivist is a type of attacker who is motivated by personal or political beliefs, often aiming to promote a cause or to protest against certain actions or policies. Hacktivists typically use hacking as a means of expressing their views or making a statement, rather than for financial gain or other personal benefits, which distinguishes them from other types of threat actors like nation-states or organized crime groups.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1921,7 +1883,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A malicious actor is trying to access sensitive financial information from a company's database\nby intercepting and reusing log-in credentials.\nWhich of the following attacks is the malicious actor attempting?",
+    "question": "A malicious actor is trying to access sensitive financial information from a company's database by intercepting and reusing log-in credentials.\nWhich of the following attacks is the malicious actor attempting?",
     "choices": [
       {
         "key": "A",
@@ -1943,7 +1905,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An \"on-path\" attack, previously known as a man-in-the-middle (MITM) attack, occurs when a\nmalicious actor intercepts communication between two parties (such as a user and a server). In\nthis scenario, the attacker is trying to access sensitive financial information by intercepting and\nreusing login credentials. The malicious actor can capture the credentials and then use them to\ngain unauthorized access to the system or data.",
+    "explanation": "An \"on-path\" attack, previously known as a man-in-the-middle (MITM) attack, occurs when a malicious actor intercepts communication between two parties (such as a user and a server). In this scenario, the attacker is trying to access sensitive financial information by intercepting and reusing login credentials. The malicious actor can capture the credentials and then use them to gain unauthorized access to the system or data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1959,7 +1921,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A systems administrator is reviewing the VPN logs and notices that during non-working hours a\nuser is accessing the company file server and information is being transferred to a suspicious IP\naddress.\nWhich of the following threats is most likely occurring?",
+    "question": "A systems administrator is reviewing the VPN logs and notices that during non-working hours a user is accessing the company file server and information is being transferred to a suspicious IP address.\nWhich of the following threats is most likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -1981,13 +1943,13 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data exfiltration refers to the unauthorized transfer of sensitive data from a company's systems\nto an external location, often by a malicious actor. In this case, the VPN logs indicate that a user\nis accessing the company file server and transferring information to a suspicious IP address\nduring non-working hours. This behavior strongly suggests that sensitive data is being stolen or\ntransferred without authorization, which is the essence of data exfiltration.",
+    "explanation": "Data exfiltration refers to the unauthorized transfer of sensitive data from a company's systems to an external location, often by a malicious actor. In this case, the VPN logs indicate that a user is accessing the company file server and transferring information to a suspicious IP address during non-working hours. This behavior strongly suggests that sensitive data is being stolen or transferred without authorization, which is the essence of data exfiltration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p112",
     "needsReview": true,
-    "inferenceConfidence": 0.714,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1997,7 +1959,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A company's accounting department receives an urgent payment message from the company's\nbank domain with instructions to wire transfer funds. The sender requests that the transfer be\ncompleted as soon as possible.\nWhich of the following attacks is described?",
+    "question": "A company's accounting department receives an urgent payment message from the company's bank domain with instructions to wire transfer funds. The sender requests that the transfer be completed as soon as possible.\nWhich of the following attacks is described?",
     "choices": [
       {
         "key": "A",
@@ -2019,7 +1981,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Business email compromise (BEC) is a type of attack in which a hacker impersonates an\nexecutive, business partner, or trusted entity within the company (often via email) to trick\nemployees into performing unauthorized financial transactions, such as wire transfers. In this\ncase, the attacker uses a fraudulent message from what appears to be the company's bank,\nurgently requesting a wire transfer, which is a hallmark of a BEC attack.",
+    "explanation": "Business email compromise (BEC) is a type of attack in which a hacker impersonates an executive, business partner, or trusted entity within the company (often via email) to trick employees into performing unauthorized financial transactions, such as wire transfers. In this case, the attacker uses a fraudulent message from what appears to be the company's bank, urgently requesting a wire transfer, which is a hallmark of a BEC attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2035,7 +1997,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An analyst is reviewing job postings to ensure sensitive company information is not being\nshared with the general public.\nWhich of the following is the analyst most likely looking for?",
+    "question": "An analyst is reviewing job postings to ensure sensitive company information is not being shared with the general public.\nWhich of the following is the analyst most likely looking for?",
     "choices": [
       {
         "key": "A",
@@ -2057,7 +2019,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When reviewing job postings, an analyst would be most concerned with software versions being\nshared, as this can potentially expose vulnerabilities in the company's systems. If the version of\nsoftware being used by the company is disclosed, attackers could target known vulnerabilities in\nthose specific versions. Therefore, job postings should not contain such sensitive details.",
+    "explanation": "When reviewing job postings, an analyst would be most concerned with software versions being shared, as this can potentially expose vulnerabilities in the company's systems. If the version of software being used by the company is disclosed, attackers could target known vulnerabilities in those specific versions. Therefore, job postings should not contain such sensitive details.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2073,7 +2035,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An engineer has ensured that the switches are using the latest OS, the servers have the latest\npatches, and the endpoints' definitions are up to date.\nWhich of the following will these actions most effectively prevent?",
+    "question": "An engineer has ensured that the switches are using the latest OS, the servers have the latest patches, and the endpoints' definitions are up to date.\nWhich of the following will these actions most effectively prevent?",
     "choices": [
       {
         "key": "A",
@@ -2095,7 +2057,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "By ensuring that switches are using the latest OS, servers have the latest patches, and\nendpoints' definitions are up to date, the engineer is most effectively protecting against known\nexploits. Exploits are typically vulnerabilities in software or systems that attackers use to gain\nunauthorized access or control. Patching systems and updating definitions helps close these\nknown vulnerabilities, making it more difficult for attackers to exploit them.",
+    "explanation": "By ensuring that switches are using the latest OS, servers have the latest patches, and endpoints' definitions are up to date, the engineer is most effectively protecting against known exploits. Exploits are typically vulnerabilities in software or systems that attackers use to gain unauthorized access or control. Patching systems and updating definitions helps close these known vulnerabilities, making it more difficult for attackers to exploit them.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2111,7 +2073,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following is the best way to prevent an unauthorized user from plugging a laptop\ninto an employee's phone network port and then using tools to scan for database servers?",
+    "question": "Which of the following is the best way to prevent an unauthorized user from plugging a laptop into an employee's phone network port and then using tools to scan for database servers?",
     "choices": [
       {
         "key": "A",
@@ -2149,7 +2111,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following should a systems administrator use to decrease the company's hardware\nattack surface?",
+    "question": "Which of the following should a systems administrator use to decrease the company's hardware attack surface?",
     "choices": [
       {
         "key": "A",
@@ -2187,7 +2149,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security manager wants to reduce the number of steps required to identify and contain basic\nthreats.\nWhich of the following will help achieve this goal?",
+    "question": "A security manager wants to reduce the number of steps required to identify and contain basic threats.\nWhich of the following will help achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -2209,7 +2171,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SOAR (Security Orchestration, Automation, and Response) is designed to automate and\nstreamline security operations, including threat identification and containment. SOAR platforms\nintegrate with existing security tools to automate repetitive tasks, facilitate faster decision-\nmaking, and reduce the number of manual steps required to respond to basic threats. This\nhelps improve response times and operational efficiency by orchestrating workflows and\nautomating incident handling.",
+    "explanation": "SOAR (Security Orchestration, Automation, and Response) is designed to automate and streamline security operations, including threat identification and containment. SOAR platforms integrate with existing security tools to automate repetitive tasks, facilitate faster decision- making, and reduce the number of manual steps required to respond to basic threats. This helps improve response times and operational efficiency by orchestrating workflows and automating incident handling.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2225,7 +2187,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following describes the most effective way to address OS vulnerabilities after they\nare identified?",
+    "question": "Which of the following describes the most effective way to address OS vulnerabilities after they are identified?",
     "choices": [
       {
         "key": "A",
@@ -2247,7 +2209,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Patching is the most effective way to address operating system vulnerabilities once they are\nidentified. Patches are updates released by software vendors to fix known vulnerabilities,\nincluding security holes, bugs, or other issues that could be exploited by attackers. Applying\npatches promptly ensures that vulnerabilities are mitigated, reducing the risk of an attack.",
+    "explanation": "Patching is the most effective way to address operating system vulnerabilities once they are identified. Patches are updates released by software vendors to fix known vulnerabilities, including security holes, bugs, or other issues that could be exploited by attackers. Applying patches promptly ensures that vulnerabilities are mitigated, reducing the risk of an attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2285,7 +2247,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Memory injection is a type of attack where malicious code is injected into the memory space of\nan already running process. This allows the attacker to control or manipulate the process's\nbehavior by executing the injected code. This technique is commonly used in exploits such as\ncode injection attacks, where the attacker injects malicious code into a process's memory,\ncausing it to execute and perform malicious actions.",
+    "explanation": "Memory injection is a type of attack where malicious code is injected into the memory space of an already running process. This allows the attacker to control or manipulate the process's behavior by executing the injected code. This technique is commonly used in exploits such as code injection attacks, where the attacker injects malicious code into a process's memory, causing it to execute and perform malicious actions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2301,7 +2263,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the\nnetwork.\nWhich of the following would be best for the security team to perform before allowing access to\ncorporate resources?",
+    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to perform before allowing access to corporate resources?",
     "choices": [
       {
         "key": "A",
@@ -2323,7 +2285,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Before allowing guest devices to access corporate resources, the security team should perform\ncompliance attestation. This involves ensuring that the guest devices meet specific security and\nconfiguration requirements, such as up-to-date antivirus software, the latest security patches,\nand proper configurations. Compliance attestation helps verify that the devices are safe to\nconnect to the corporate network and reduces the risk of introducing vulnerabilities.",
+    "explanation": "Before allowing guest devices to access corporate resources, the security team should perform compliance attestation. This involves ensuring that the guest devices meet specific security and configuration requirements, such as up-to-date antivirus software, the latest security patches, and proper configurations. Compliance attestation helps verify that the devices are safe to connect to the corporate network and reduces the risk of introducing vulnerabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2339,7 +2301,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective\nactivities associated with common threats, including phishing, social engineering, and business\nemail compromise.\nWhich of the following documents would be most relevant to revise as part of this process?",
+    "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise.\nWhich of the following documents would be most relevant to revise as part of this process?",
     "choices": [
       {
         "key": "A",
@@ -2361,13 +2323,13 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Incident Response Plan (IRP) is the most relevant document to revise when developing\nprocedures for detective and corrective activities related to common threats such as phishing,\nsocial engineering, and business email compromise. The IRP outlines the steps to be taken\nwhen a security incident occurs, including detection, containment, eradication, and recovery. It\nensures that the organization is prepared to respond to and mitigate the effects of these types of\nthreats.",
+    "explanation": "An Incident Response Plan (IRP) is the most relevant document to revise when developing procedures for detective and corrective activities related to common threats such as phishing, social engineering, and business email compromise. The IRP outlines the steps to be taken when a security incident occurs, including detection, containment, eradication, and recovery. It ensures that the organization is prepared to respond to and mitigate the effects of these types of threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p126",
     "needsReview": true,
-    "inferenceConfidence": 0.417,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2377,7 +2339,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following is a type of vulnerability that refers to the unauthorized installation of\napplications on a device through means other than the official application store?",
+    "question": "Which of the following is a type of vulnerability that refers to the unauthorized installation of applications on a device through means other than the official application store?",
     "choices": [
       {
         "key": "A",
@@ -2399,7 +2361,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Side loading refers to the process of installing applications on a device through means other\nthan the official application store (such as downloading apps from third-party sources). This can\nintroduce security risks because apps from unofficial sources may not undergo the same vetting\nprocess as those from the official app store, potentially allowing malicious software to be\ninstalled.",
+    "explanation": "Side loading refers to the process of installing applications on a device through means other than the official application store (such as downloading apps from third-party sources). This can introduce security risks because apps from unofficial sources may not undergo the same vetting process as those from the official app store, potentially allowing malicious software to be installed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2415,7 +2377,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A company's website is www.company.com. Attackers purchased the domain\nwww.c0mpany.com.\nWhich of the following types of attacks describes this example?",
+    "question": "A company's website is www.company.com. Attackers purchased the domain www.c0mpany.com.\nWhich of the following types of attacks describes this example?",
     "choices": [
       {
         "key": "A",
@@ -2437,7 +2399,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Typosquatting is a type of attack where attackers register a domain that is very similar to a\nlegitimate one, often differing by only a small change, such as replacing a letter with a number\nor character. In this example, attackers purchased www.c0mpany.com, which is a slight\nvariation of the legitimate domain www.company.com. Typosquatting relies on users making\ntypographical errors when entering a web address, leading them to the malicious site instead of\nthe legitimate one.",
+    "explanation": "Typosquatting is a type of attack where attackers register a domain that is very similar to a legitimate one, often differing by only a small change, such as replacing a letter with a number or character. In this example, attackers purchased www.c0mpany.com, which is a slight variation of the legitimate domain www.company.com. Typosquatting relies on users making typographical errors when entering a web address, leading them to the malicious site instead of the legitimate one.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2475,7 +2437,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Access Control List (ACL) allows a systems administrator to specify and fine-tune the\npermissions for a file or directory. It defines which users or groups have permission to access\nthe resource and what level of access (e.g., read, write, execute) they have. ACLs provide a\ngranular way to manage permissions and ensure that users can only access resources\naccording to their roles or needs.",
+    "explanation": "An Access Control List (ACL) allows a systems administrator to specify and fine-tune the permissions for a file or directory. It defines which users or groups have permission to access the resource and what level of access (e.g., read, write, execute) they have. ACLs provide a granular way to manage permissions and ensure that users can only access resources according to their roles or needs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2491,7 +2453,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A systems administrator is concerned users are accessing emails through a duplicate site that is\nnot run by the company.\nWhich of the following is used in this scenario?",
+    "question": "A systems administrator is concerned users are accessing emails through a duplicate site that is not run by the company.\nWhich of the following is used in this scenario?",
     "choices": [
       {
         "key": "A",
@@ -2529,7 +2491,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A systems administrator just purchased multiple network devices.\nWhich of the following should the systems administrator perform to prevent attackers from\naccessing the devices by using publicly available information?",
+    "question": "A systems administrator just purchased multiple network devices.\nWhich of the following should the systems administrator perform to prevent attackers from accessing the devices by using publicly available information?",
     "choices": [
       {
         "key": "A",
@@ -2551,7 +2513,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Changing default passwords is a critical step in securing network devices. Default credentials\nare often publicly available and widely known by attackers, making devices vulnerable to\nunauthorized access. By replacing these defaults with strong, unique passwords, the systems\nadministrator can significantly reduce the risk of compromise.",
+    "explanation": "Changing default passwords is a critical step in securing network devices. Default credentials are often publicly available and widely known by attackers, making devices vulnerable to unauthorized access. By replacing these defaults with strong, unique passwords, the systems administrator can significantly reduce the risk of compromise.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2589,7 +2551,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OSINT (Open-Source Intelligence) refers to the collection and analysis of publicly available\ninformation from various sources, such as social media, websites, and public records. In social\nengineering testing, OSINT is used to gather information about a target, such as employee\nnames, roles, and behaviors, which can then be exploited during the test to assess the\norganization's vulnerability to social engineering attacks.",
+    "explanation": "OSINT (Open-Source Intelligence) refers to the collection and analysis of publicly available information from various sources, such as social media, websites, and public records. In social engineering testing, OSINT is used to gather information about a target, such as employee names, roles, and behaviors, which can then be exploited during the test to assess the organization's vulnerability to social engineering attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2605,7 +2567,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A company relies on open-source software libraries to build the software used by its customers.\nWhich of the following vulnerability types would be the most difficult to remediate due to the\ncompany's reliance on open-source libraries?",
+    "question": "A company relies on open-source software libraries to build the software used by its customers.\nWhich of the following vulnerability types would be the most difficult to remediate due to the company's reliance on open-source libraries?",
     "choices": [
       {
         "key": "A",
@@ -2627,7 +2589,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A zero-day vulnerability is a security flaw that is unknown to the vendor or developer and has no\navailable fix at the time of its discovery.\nWhen relying on open-source libraries, addressing zero-day vulnerabilities can be particularly\nchallenging because the company depends on the open-source community or the library's\nmaintainers to identify and patch the issue. The company often has limited control over the\ndevelopment and update process for these libraries, making remediation more difficult\ncompared to other vulnerability types where known fixes or mitigations are available.",
+    "explanation": "A zero-day vulnerability is a security flaw that is unknown to the vendor or developer and has no available fix at the time of its discovery.\nWhen relying on open-source libraries, addressing zero-day vulnerabilities can be particularly challenging because the company depends on the open-source community or the library's maintainers to identify and patch the issue. The company often has limited control over the development and update process for these libraries, making remediation more difficult compared to other vulnerability types where known fixes or mitigations are available.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2643,7 +2605,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An organization has a new regulatory requirement to implement corrective controls on a\nfinancial system.\nWhich of the following is the most likely reason for the new requirement?",
+    "question": "An organization has a new regulatory requirement to implement corrective controls on a financial system.\nWhich of the following is the most likely reason for the new requirement?",
     "choices": [
       {
         "key": "A",
@@ -2665,7 +2627,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Corrective controls are designed to identify and fix issues that arise in a system to prevent\nfurther propagation of errors. In a financial system, implementing corrective controls ensures\nthat errors, such as data inaccuracies or processing mistakes, are identified and corrected\nbefore they can affect other interconnected systems. Regulatory requirements often mandate\nsuch controls to maintain data integrity and reliability across financial operations.",
+    "explanation": "Corrective controls are designed to identify and fix issues that arise in a system to prevent further propagation of errors. In a financial system, implementing corrective controls ensures that errors, such as data inaccuracies or processing mistakes, are identified and corrected before they can affect other interconnected systems. Regulatory requirements often mandate such controls to maintain data integrity and reliability across financial operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2681,7 +2643,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company's gate access logs show multiple entries from an employee's ID badge within a two-\nminute period.\nWhich of the following is this an example of?",
+    "question": "A company's gate access logs show multiple entries from an employee's ID badge within a two- minute period.\nWhich of the following is this an example of?",
     "choices": [
       {
         "key": "A",
@@ -2703,7 +2665,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RFID cloning occurs when an attacker duplicates the data from an RFID badge, allowing them\nto simulate multiple entries using the same badge ID. The multiple entries within a short period\nin the gate access logs indicate that the RFID badge data might have been copied and used\nillegitimately.",
+    "explanation": "RFID cloning occurs when an attacker duplicates the data from an RFID badge, allowing them to simulate multiple entries using the same badge ID. The multiple entries within a short period in the gate access logs indicate that the RFID badge data might have been copied and used illegitimately.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2719,7 +2681,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "Which of the following is a reason environmental variables are a concern when reviewing\npotential system vulnerabilities?",
+    "question": "Which of the following is a reason environmental variables are a concern when reviewing potential system vulnerabilities?",
     "choices": [
       {
         "key": "A",
@@ -2741,7 +2703,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Environmental variables store system-specific information such as paths, user-specific settings,\nor authentication tokens. If improperly managed or exposed, they can significantly increase the\nscope and impact of a vulnerability. For instance, leaked credentials or sensitive data stored in\nenvironmental variables can provide attackers with additional access or escalate their\ncapabilities during an exploit. Therefore, careful management of these variables is crucial for\nsystem security.",
+    "explanation": "Environmental variables store system-specific information such as paths, user-specific settings, or authentication tokens. If improperly managed or exposed, they can significantly increase the scope and impact of a vulnerability. For instance, leaked credentials or sensitive data stored in environmental variables can provide attackers with additional access or escalate their capabilities during an exploit. Therefore, careful management of these variables is crucial for system security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2757,7 +2719,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A systems administrator receives a text message from an unknown number claiming to be the\nChief Executive Officer of the company. The message states an emergency situation requires a\npassword reset.\nWhich of the following threat vectors is being used?",
+    "question": "A systems administrator receives a text message from an unknown number claiming to be the Chief Executive Officer of the company. The message states an emergency situation requires a password reset.\nWhich of the following threat vectors is being used?",
     "choices": [
       {
         "key": "A",
@@ -2779,7 +2741,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Smishing (SMS phishing) is a type of social engineering attack where attackers use text\nmessages to deceive individuals into revealing sensitive information or performing actions like a\npassword reset. In this case, the unknown sender pretending to be the CEO and requesting a\npassword reset via text exemplifies smishing.",
+    "explanation": "Smishing (SMS phishing) is a type of social engineering attack where attackers use text messages to deceive individuals into revealing sensitive information or performing actions like a password reset. In this case, the unknown sender pretending to be the CEO and requesting a password reset via text exemplifies smishing.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2795,7 +2757,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following is used to improve security and overall functionality without losing critical\napplication data?",
+    "question": "Which of the following is used to improve security and overall functionality without losing critical application data?",
     "choices": [
       {
         "key": "A",
@@ -2817,7 +2779,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Patching is used to improve both security and functionality by updating software to fix\nvulnerabilities, improve performance, or add features. This process ensures that critical\napplication data is preserved while addressing issues that could compromise the application's\nsecurity or functionality. Regular patching is a key part of maintaining a secure and efficient\nsystem.",
+    "explanation": "Patching is used to improve both security and functionality by updating software to fix vulnerabilities, improve performance, or add features. This process ensures that critical application data is preserved while addressing issues that could compromise the application's security or functionality. Regular patching is a key part of maintaining a secure and efficient system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2833,7 +2795,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A contractor is required to visually inspect the motherboards of all new servers that are\npurchased to determine whether the servers were tampered with.\nWhich of the following risks is the contractor attempting to mitigate?",
+    "question": "A contractor is required to visually inspect the motherboards of all new servers that are purchased to determine whether the servers were tampered with.\nWhich of the following risks is the contractor attempting to mitigate?",
     "choices": [
       {
         "key": "A",
@@ -2855,7 +2817,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "By visually inspecting the motherboards of new servers, the contractor is mitigating supply chain\nrisks, which include the possibility of tampering or malicious components being introduced\nduring manufacturing or transit. Such inspections help ensure the integrity of hardware and\nreduce the likelihood of compromised devices entering the organization.",
+    "explanation": "By visually inspecting the motherboards of new servers, the contractor is mitigating supply chain risks, which include the possibility of tampering or malicious components being introduced during manufacturing or transit. Such inspections help ensure the integrity of hardware and reduce the likelihood of compromised devices entering the organization.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2893,7 +2855,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Side loading involves installing software or applications from sources outside official or trusted\nrepositories. This process can potentially introduce malicious software, such as a rootkit, which\nembeds itself deeply into a system to maintain privileged access and evade detection. Rootkits\nare often a significant threat when using unverified or non-trusted installation sources.",
+    "explanation": "Side loading involves installing software or applications from sources outside official or trusted repositories. This process can potentially introduce malicious software, such as a rootkit, which embeds itself deeply into a system to maintain privileged access and evade detection. Rootkits are often a significant threat when using unverified or non-trusted installation sources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2909,7 +2871,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "While a school district is performing state testing, a security analyst notices all internet services\nare unavailable. The analyst discovers that ARP poisoning is occurring on the network and then\nterminates access for the host.\nWhich of the following is most likely responsible for this malicious activity?",
+    "question": "While a school district is performing state testing, a security analyst notices all internet services are unavailable. The analyst discovers that ARP poisoning is occurring on the network and then terminates access for the host.\nWhich of the following is most likely responsible for this malicious activity?",
     "choices": [
       {
         "key": "A",
@@ -2931,7 +2893,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The malicious activity involving ARP poisoning in a school district during state testing suggests\ndeliberate and targeted action, likely from someone with internal access and knowledge of the\nnetwork. This aligns with an insider threat, where an individual within the organization, such as a\nstudent or staff member, intentionally disrupts network operations. Insiders often have the\naccess and opportunity required to carry out such attacks.",
+    "explanation": "The malicious activity involving ARP poisoning in a school district during state testing suggests deliberate and targeted action, likely from someone with internal access and knowledge of the network. This aligns with an insider threat, where an individual within the organization, such as a student or staff member, intentionally disrupts network operations. Insiders often have the access and opportunity required to carry out such attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2947,7 +2909,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A user needs to complete training at https://comptiatraining.com. After manually entering the\nURL, the user sees that the accessed website is noticeably different from the standard company\nwebsite.\nWhich of the following is the most likely explanation for the difference?",
+    "question": "A user needs to complete training at https://comptiatraining.com. After manually entering the URL, the user sees that the accessed website is noticeably different from the standard company website.\nWhich of the following is the most likely explanation for the difference?",
     "choices": [
       {
         "key": "A",
@@ -2969,7 +2931,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Typosquatting occurs when an attacker registers a domain name that is very similar to a\nlegitimate website, often exploiting common typographical errors (e.g., \"comptiatrainning.com\"\ninstead of \"comptiatraining.com\"). If a user manually enters an incorrect URL and lands on a\nfraudulent website, it is most likely a typosquatting attempt. This is commonly used for phishing\nor distributing malware.",
+    "explanation": "Typosquatting occurs when an attacker registers a domain name that is very similar to a legitimate website, often exploiting common typographical errors (e.g., \"comptiatrainning.com\" instead of \"comptiatraining.com\"). If a user manually enters an incorrect URL and lands on a fraudulent website, it is most likely a typosquatting attempt. This is commonly used for phishing or distributing malware.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3007,7 +2969,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack conducted over the phone. In this\nscenario, the attacker impersonates the CEO to manipulate the help desk employee into\nresetting a password, which is a classic example of a vishing attempt.",
+    "explanation": "Vishing (voice phishing) is a social engineering attack conducted over the phone. In this scenario, the attacker impersonates the CEO to manipulate the help desk employee into resetting a password, which is a classic example of a vishing attempt.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3045,7 +3007,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Patching involves applying updates or fixes to software to address known vulnerabilities. If a\nvulnerability is found on a web server, applying a patch is the most effective and direct way to\nresolve the issue and protect the system from exploitation. This action fixes the security holes in\nthe software, making it secure against known threats.",
+    "explanation": "Patching involves applying updates or fixes to software to address known vulnerabilities. If a vulnerability is found on a web server, applying a patch is the most effective and direct way to resolve the issue and protect the system from exploitation. This action fixes the security holes in the software, making it secure against known threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3061,7 +3023,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company is concerned about employees unintentionally introducing malware into the network.\nThe company identified fifty employees who clicked on a link embedded in an email sent by the\ninternal IT department.\nWhich of the following should the company implement to best improve its security posture?",
+    "question": "A company is concerned about employees unintentionally introducing malware into the network.\nThe company identified fifty employees who clicked on a link embedded in an email sent by the internal IT department.\nWhich of the following should the company implement to best improve its security posture?",
     "choices": [
       {
         "key": "A",
@@ -3099,7 +3061,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A penetration test identifies that an SMBv1 is enabled on multiple servers across an\norganization. The organization wants to remediate this vulnerability in the most efficient way\npossible.\nWhich of the following should the organization use for this purpose?",
+    "question": "A penetration test identifies that an SMBv1 is enabled on multiple servers across an organization. The organization wants to remediate this vulnerability in the most efficient way possible.\nWhich of the following should the organization use for this purpose?",
     "choices": [
       {
         "key": "A",
@@ -3121,7 +3083,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Group Policy Object (GPO) can be used to efficiently disable SMBv1 across multiple servers\nwithin an organization. By configuring a GPO to disable the outdated and vulnerable SMBv1\nprotocol, the organization can ensure that the change is applied consistently across all affected\nsystems. This is a centralized and efficient method for remediation, reducing the potential attack\nsurface related to SMBv1.",
+    "explanation": "A Group Policy Object (GPO) can be used to efficiently disable SMBv1 across multiple servers within an organization. By configuring a GPO to disable the outdated and vulnerable SMBv1 protocol, the organization can ensure that the change is applied consistently across all affected systems. This is a centralized and efficient method for remediation, reducing the potential attack surface related to SMBv1.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3137,7 +3099,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security team receives reports about high latency and complete network unavailability\nthroughout most of the office building. Flow logs from the campus switches show high traffic on\nTCP 445.\nWhich of the following is most likely the root cause of this incident?",
+    "question": "A security team receives reports about high latency and complete network unavailability throughout most of the office building. Flow logs from the campus switches show high traffic on TCP 445.\nWhich of the following is most likely the root cause of this incident?",
     "choices": [
       {
         "key": "A",
@@ -3159,7 +3121,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "TCP port 445 is commonly used for Microsoft SMB (Server Message Block) protocol, which is\noften targeted by worms like WannaCry and NotPetya to spread rapidly across a network. The\nsymptoms described - high traffic on TCP 445, high latency, and network unavailability -\nsuggest a self-replicating worm is propagating, overwhelming network resources and disrupting\nnormal operations.",
+    "explanation": "TCP port 445 is commonly used for Microsoft SMB (Server Message Block) protocol, which is often targeted by worms like WannaCry and NotPetya to spread rapidly across a network. The symptoms described - high traffic on TCP 445, high latency, and network unavailability - suggest a self-replicating worm is propagating, overwhelming network resources and disrupting normal operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3175,7 +3137,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following is a type of vulnerability that may result from outdated algorithms or\nkeys?",
+    "question": "Which of the following is a type of vulnerability that may result from outdated algorithms or keys?",
     "choices": [
       {
         "key": "A",
@@ -3197,7 +3159,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cryptographic vulnerabilities occur when outdated algorithms or weak encryption keys are used,\nmaking systems susceptible to attacks such as brute force or cryptanalysis. These issues\nundermine the confidentiality and integrity of encrypted data.",
+    "explanation": "Cryptographic vulnerabilities occur when outdated algorithms or weak encryption keys are used, making systems susceptible to attacks such as brute force or cryptanalysis. These issues undermine the confidentiality and integrity of encrypted data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3235,7 +3197,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Upgrading end-of-support operating systems ensures that the servers receive security patches\nand updates, significantly reducing vulnerabilities and thereby the overall attack surface.",
+    "explanation": "Upgrading end-of-support operating systems ensures that the servers receive security patches and updates, significantly reducing vulnerabilities and thereby the overall attack surface.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3273,7 +3235,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hacktivists are typically driven by ideological or political motivations, using hacking to promote\nor protest specific philosophical beliefs or causes.",
+    "explanation": "Hacktivists are typically driven by ideological or political motivations, using hacking to promote or protest specific philosophical beliefs or causes.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3327,7 +3289,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following should be used to ensure a user has the permissions needed to\neffectively do an assigned job role?",
+    "question": "Which of the following should be used to ensure a user has the permissions needed to effectively do an assigned job role?",
     "choices": [
       {
         "key": "A",
@@ -3349,7 +3311,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The principle of least privilege ensures users are granted only the permissions necessary to\nperform their specific job functions, minimizing the risk of unauthorized access or actions.",
+    "explanation": "The principle of least privilege ensures users are granted only the permissions necessary to perform their specific job functions, minimizing the risk of unauthorized access or actions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3365,7 +3327,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An employee receives a text message from an unrecognized number claiming to be the Chief\nExecutive Officer and asking the employee to purchase gift cards.\nWhich of the following types of attacks describes this example?",
+    "question": "An employee receives a text message from an unrecognized number claiming to be the Chief Executive Officer and asking the employee to purchase gift cards.\nWhich of the following types of attacks describes this example?",
     "choices": [
       {
         "key": "A",
@@ -3387,7 +3349,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Impersonation involves an attacker pretending to be a trusted individual, such as\na CEO, to trick someone into taking an action - in this case, purchasing gift cards - often seen in\nsocial engineering attacks via text or email.",
+    "explanation": "Impersonation involves an attacker pretending to be a trusted individual, such as a CEO, to trick someone into taking an action - in this case, purchasing gift cards - often seen in social engineering attacks via text or email.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3403,7 +3365,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An unexpected and out-of-character email message from a Chief Executive Officer's corporate\naccount asked an employee to provide financial information and to change the recipient's\ncontact number.\nWhich of the following attack vectors is most likely being used?",
+    "question": "An unexpected and out-of-character email message from a Chief Executive Officer's corporate account asked an employee to provide financial information and to change the recipient's contact number.\nWhich of the following attack vectors is most likely being used?",
     "choices": [
       {
         "key": "A",
@@ -3425,7 +3387,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Business email compromise (BEC) involves the use of a legitimate or spoofed business email\naccount, often from executives, to trick employees into performing unauthorized actions like\ntransferring funds or revealing sensitive information.",
+    "explanation": "Business email compromise (BEC) involves the use of a legitimate or spoofed business email account, often from executives, to trick employees into performing unauthorized actions like transferring funds or revealing sensitive information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3441,7 +3403,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is reviewing the following logs about a suspicious activity alert for a user's\nVPN log-ins:\nWhich of the following malicious activity indicators triggered the alert?",
+    "question": "A security analyst is reviewing the following logs about a suspicious activity alert for a user's VPN log-ins:\nWhich of the following malicious activity indicators triggered the alert?",
     "choices": [
       {
         "key": "A",
@@ -3463,7 +3425,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs show successful logins from Chicago, IL, and then within minutes, logins from Rome,\nItaly, followed again by logins from Chicago. The time between these geographically distant\nlogins is too short for physical travel, triggering the \"impossible travel\" alert—an indication of\npotential credential compromise.",
+    "explanation": "The logs show successful logins from Chicago, IL, and then within minutes, logins from Rome, Italy, followed again by logins from Chicago. The time between these geographically distant logins is too short for physical travel, triggering the \"impossible travel\" alert—an indication of potential credential compromise.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3501,7 +3463,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The use of unauthorized software by an internal employee is a classic example of Shadow IT,\nwhere unsanctioned applications introduce unvetted security and compliance risks.",
+    "explanation": "The use of unauthorized software by an internal employee is a classic example of Shadow IT, where unsanctioned applications introduce unvetted security and compliance risks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3539,7 +3501,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "VM escape occurs when an attacker breaks out of a virtual machine's sandbox to interact\ndirectly with the underlying hypervisor, granting unauthorized access to the host platform. This\nis the vulnerability exploited when compromising a hypervisor.",
+    "explanation": "VM escape occurs when an attacker breaks out of a virtual machine's sandbox to interact directly with the underlying hypervisor, granting unauthorized access to the host platform. This is the vulnerability exploited when compromising a hypervisor.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3555,7 +3517,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An attacker defaces a company's website and refuses to relinquish control until the company\nremoves specific harmful chemicals from its products.\nWhich of the following best describes this type of threat actor?",
+    "question": "An attacker defaces a company's website and refuses to relinquish control until the company removes specific harmful chemicals from its products.\nWhich of the following best describes this type of threat actor?",
     "choices": [
       {
         "key": "A",
@@ -3577,7 +3539,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hacktivist uses cyberattacks, such as website defacement, to advance a political or social\nagenda. In this case, the attacker's demand to remove harmful chemicals reflects an ideological\nmotive, characteristic of hacktivism.",
+    "explanation": "A hacktivist uses cyberattacks, such as website defacement, to advance a political or social agenda. In this case, the attacker's demand to remove harmful chemicals reflects an ideological motive, characteristic of hacktivism.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3593,7 +3555,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "multi",
-    "question": "An organization found gaps in its software development environment and is implementing\ncompensating controls to better protect its systems from external threats.\nWhich of the following would be most effective? (Choose two.)",
+    "question": "An organization found gaps in its software development environment and is implementing compensating controls to better protect its systems from external threats.\nWhich of the following would be most effective? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3624,7 +3586,7 @@ export const domain2Questions = [
       "A",
       "F"
     ],
-    "explanation": "Platform hardening locks down development hosts, removing unnecessary services and closing\nunused ports, so attackers have fewer vulnerabilities to exploit. An application allow list ensures\nonly approved, vetted software can run in the environment, preventing malicious or untested\ncode from executing.",
+    "explanation": "Platform hardening locks down development hosts, removing unnecessary services and closing unused ports, so attackers have fewer vulnerabilities to exploit. An application allow list ensures only approved, vetted software can run in the environment, preventing malicious or untested code from executing.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3640,7 +3602,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "An employee receives from a vendor a marketing communication email that includes an\nattachment.\nWhen the employee opens the attachment, the employee's screen displays odd text requesting\npayment in order to recover data. Within moments, a company-wide email is sent to employees\nrequesting that employees disconnect their computers from the internet and shut them down.\nWhich of the following describes this type of malware?",
+    "question": "An employee receives from a vendor a marketing communication email that includes an attachment.\nWhen the employee opens the attachment, the employee's screen displays odd text requesting payment in order to recover data. Within moments, a company-wide email is sent to employees requesting that employees disconnect their computers from the internet and shut them down.\nWhich of the following describes this type of malware?",
     "choices": [
       {
         "key": "A",
@@ -3662,7 +3624,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Ransomware encrypts a user's files (displaying garbled text) and demands payment to restore\naccess, matching the behavior described.",
+    "explanation": "Ransomware encrypts a user's files (displaying garbled text) and demands payment to restore access, matching the behavior described.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3678,7 +3640,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "During a SQL update of a database, a temporary field used as part of the update sequence was\nmodified by an attacker before the update completed in order to allow access to the system.\nWhich of the following best describes this type of vulnerability?",
+    "question": "During a SQL update of a database, a temporary field used as part of the update sequence was modified by an attacker before the update completed in order to allow access to the system.\nWhich of the following best describes this type of vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -3700,7 +3662,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A race condition occurs when an attacker exploits the timing window between operations,\nmodifying the temporary field before the update completes, to alter the intended logic and gain\nunauthorized access.",
+    "explanation": "A race condition occurs when an attacker exploits the timing window between operations, modifying the temporary field before the update completes, to alter the intended logic and gain unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3716,7 +3678,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A company's accounts payable clerk receives a message from a vendor asking to change their\nbank account before paying an invoice. The clerk makes the change and sends the payment to\nthe new account. Days later, the clerk receives another message from the same vendor with a\nrequest for a missing payment to the original bank account.\nWhich of the following has most likely occurred?",
+    "question": "A company's accounts payable clerk receives a message from a vendor asking to change their bank account before paying an invoice. The clerk makes the change and sends the payment to the new account. Days later, the clerk receives another message from the same vendor with a request for a missing payment to the original bank account.\nWhich of the following has most likely occurred?",
     "choices": [
       {
         "key": "A",
@@ -3738,7 +3700,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attacker impersonated a trusted vendor via email to redirect funds to their own account, a\nhallmark of business email compromise. This social engineering tactic exploits legitimate\nbusiness processes to fraudulently transfer money.",
+    "explanation": "The attacker impersonated a trusted vendor via email to redirect funds to their own account, a hallmark of business email compromise. This social engineering tactic exploits legitimate business processes to fraudulently transfer money.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3754,7 +3716,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A systems administrator wants to use a technical solution to explicitly define file permissions for\nthe entire team.\nWhich of the following should the administrator implement?",
+    "question": "A systems administrator wants to use a technical solution to explicitly define file permissions for the entire team.\nWhich of the following should the administrator implement?",
     "choices": [
       {
         "key": "A",
@@ -3776,7 +3738,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An Access Control List (ACL) is a technical mechanism that explicitly assigns read, write, and\nexecute permissions to specific users or groups for each file, providing granular control over file\naccess.",
+    "explanation": "An Access Control List (ACL) is a technical mechanism that explicitly assigns read, write, and execute permissions to specific users or groups for each file, providing granular control over file access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3792,7 +3754,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security analyst receives an alert from a front-end web server connected to a database back\nend. The alert contains the following logs:\nWhich of the following attacks is occurring?",
+    "question": "A security analyst receives an alert from a front-end web server connected to a database back end. The alert contains the following logs:\nWhich of the following attacks is occurring?",
     "choices": [
       {
         "key": "A",
@@ -3814,7 +3776,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The log shows classic SQL injection techniques—tautology (1=1), comment injection ('--), and a\ntime-based payload (dbms_lock.sleep(20)), all indicative of an SQL injection attack.",
+    "explanation": "The log shows classic SQL injection techniques—tautology (1=1), comment injection ('--), and a time-based payload (dbms_lock.sleep(20)), all indicative of an SQL injection attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3830,7 +3792,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A systems administrator has overwritten all of the supervisor's permissions in order to perform\nmalicious activities.\nWhich of the following does this describe?",
+    "question": "A systems administrator has overwritten all of the supervisor's permissions in order to perform malicious activities.\nWhich of the following does this describe?",
     "choices": [
       {
         "key": "A",
@@ -3852,7 +3814,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An insider threat involves a trusted individual within the organization, such as a systems\nadministrator, misusing their legitimate access to carry out malicious actions, like overwriting a\nsupervisor's permissions.",
+    "explanation": "An insider threat involves a trusted individual within the organization, such as a systems administrator, misusing their legitimate access to carry out malicious actions, like overwriting a supervisor's permissions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3868,7 +3830,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Several employees download a productivity program that is useful but also leaks contact\ninformation and corporate organizational structure details.\nWhich of the following is the best way to prevent this issue?",
+    "question": "Several employees download a productivity program that is useful but also leaks contact information and corporate organizational structure details.\nWhich of the following is the best way to prevent this issue?",
     "choices": [
       {
         "key": "A",
@@ -3894,7 +3856,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An application allow list ensures only approved software can be installed or run on corporate\nendpoints, blocking any unapproved programs that might leak sensitive information.",
+    "explanation": "An application allow list ensures only approved software can be installed or run on corporate endpoints, blocking any unapproved programs that might leak sensitive information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3932,7 +3894,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Smishing is a form of phishing conducted via SMS or text messages. An unsolicited, threatening\ntext demanding money exemplifies a smishing attack.",
+    "explanation": "Smishing is a form of phishing conducted via SMS or text messages. An unsolicited, threatening text demanding money exemplifies a smishing attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3948,7 +3910,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "Employees receive a text message containing a link to a web page that prompts the user to\nenter their ID and a work phone number. The text message appears to come from the Chief\nExecutive Officer, but it is later discovered that the message is not legitimate.\nWhich of the following does this best represent? (Choose two.)",
+    "question": "Employees receive a text message containing a link to a web page that prompts the user to enter their ID and a work phone number. The text message appears to come from the Chief Executive Officer, but it is later discovered that the message is not legitimate.\nWhich of the following does this best represent? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3979,7 +3941,7 @@ export const domain2Questions = [
       "B",
       "C"
     ],
-    "explanation": "Smishing is phishing via SMS/text messages, exactly as seen when users receive a malicious\nlink by text.\nImpersonation occurs when the attacker poses as the CEO to lend credibility to the request and\ntrick employees into divulging sensitive information.",
+    "explanation": "Smishing is phishing via SMS/text messages, exactly as seen when users receive a malicious link by text.\nImpersonation occurs when the attacker poses as the CEO to lend credibility to the request and trick employees into divulging sensitive information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3995,7 +3957,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following threat vectors would a user be vulnerable to when using a smartphone to\nscan a two-dimensional matrix barcode?",
+    "question": "Which of the following threat vectors would a user be vulnerable to when using a smartphone to scan a two-dimensional matrix barcode?",
     "choices": [
       {
         "key": "A",
@@ -4033,7 +3995,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An employee receives a work phone. Instead of starting up with the normal operating system,\nthe phone loads to a gaming platform using administrative credentials.\nWhich of the following issues occurred?",
+    "question": "An employee receives a work phone. Instead of starting up with the normal operating system, the phone loads to a gaming platform using administrative credentials.\nWhich of the following issues occurred?",
     "choices": [
       {
         "key": "A",
@@ -4055,7 +4017,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Jailbreaking a device removes manufacturer, or carrier-imposed restrictions, granting\nadministrative control and allowing it to boot into unauthorized software (in this case, a gaming\nplatform) instead of the standard operating system.",
+    "explanation": "Jailbreaking a device removes manufacturer, or carrier-imposed restrictions, granting administrative control and allowing it to boot into unauthorized software (in this case, a gaming platform) instead of the standard operating system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4071,7 +4033,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A software engineering manager wants to scan the code for security vulnerabilities before it is\npushed into production.\nWhich of the following types of analysis should the manager select?",
+    "question": "A software engineering manager wants to scan the code for security vulnerabilities before it is pushed into production.\nWhich of the following types of analysis should the manager select?",
     "choices": [
       {
         "key": "A",
@@ -4097,7 +4059,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Static analysis inspects source code at rest, prior to execution, to identify security vulnerabilities,\ncoding errors, and insecure patterns before the software is deployed.",
+    "explanation": "Static analysis inspects source code at rest, prior to execution, to identify security vulnerabilities, coding errors, and insecure patterns before the software is deployed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4113,7 +4075,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following is a social engineering attack in which a bad actor impersonates a web\nURL?",
+    "question": "Which of the following is a social engineering attack in which a bad actor impersonates a web URL?",
     "choices": [
       {
         "key": "A",
@@ -4135,7 +4097,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Typosquatting involves registering a look-alike domain (e.g., examplе.com instead of\nexample.com) to trick users who mistype URLs into visiting a malicious site.",
+    "explanation": "Typosquatting involves registering a look-alike domain (e.g., examplе.com instead of example.com) to trick users who mistype URLs into visiting a malicious site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4151,7 +4113,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security\nOfficer is concerned about the increased risk of an insider threat.\nWhich of the following would most likely help the security awareness team address this potential\nthreat?",
+    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat.\nWhich of the following would most likely help the security awareness team address this potential threat?",
     "choices": [
       {
         "key": "A",
@@ -4173,7 +4135,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Equipping supervisors to recognize signs of dissatisfaction and potential insider threats enables\nearly intervention, addressing the human factors that awareness programs are designed to\ninfluence.",
+    "explanation": "Equipping supervisors to recognize signs of dissatisfaction and potential insider threats enables early intervention, addressing the human factors that awareness programs are designed to influence.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4189,7 +4151,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "The help desk receives multiple calls indicating machines with an outdated OS version are\nrunning slowly. Several users report seeing virus detection alerts.\nWhich of the following mitigation techniques should be reviewed first?",
+    "question": "The help desk receives multiple calls indicating machines with an outdated OS version are running slowly. Several users report seeing virus detection alerts.\nWhich of the following mitigation techniques should be reviewed first?",
     "choices": [
       {
         "key": "A",
@@ -4211,7 +4173,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Outdated operating systems are a primary vector for malware and performance issues.\nEnsuring that all machines are fully patched closes known vulnerabilities that attackers exploit -\nreducing infections and restoring system stability.",
+    "explanation": "Outdated operating systems are a primary vector for malware and performance issues.\nEnsuring that all machines are fully patched closes known vulnerabilities that attackers exploit - reducing infections and restoring system stability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4227,7 +4189,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following actions should be performed on end-of-life equipment before it is\ndiscarded?",
+    "question": "Which of the following actions should be performed on end-of-life equipment before it is discarded?",
     "choices": [
       {
         "key": "A",
@@ -4249,7 +4211,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Decommissioning formally retires the equipment by removing it from operational use, securely\nwiping or destroying any stored data, and updating asset inventories - ensuring sensitive\ninformation isn't left on discarded hardware.",
+    "explanation": "Decommissioning formally retires the equipment by removing it from operational use, securely wiping or destroying any stored data, and updating asset inventories - ensuring sensitive information isn't left on discarded hardware.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4265,7 +4227,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A government worker secretly copies classified files that contain defense tactics information to\nan external drive. The government worker then gives the external drive to a corrupt\norganization.\nWhich of the following best describes the motivation of the worker?",
+    "question": "A government worker secretly copies classified files that contain defense tactics information to an external drive. The government worker then gives the external drive to a corrupt organization.\nWhich of the following best describes the motivation of the worker?",
     "choices": [
       {
         "key": "A",
@@ -4287,7 +4249,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When an insider steals classified defense information and passes it to a hostile organization,\ntheir primary motivation is intelligence gathering on behalf of that organization - classic\nespionage.",
+    "explanation": "When an insider steals classified defense information and passes it to a hostile organization, their primary motivation is intelligence gathering on behalf of that organization - classic espionage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4303,7 +4265,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator discovers a guest user gained access to classified reports. Upon\nfurther investigation, the logs indicate that the user was added to the administrator group.\nWhich of the following best describes this attack?",
+    "question": "A systems administrator discovers a guest user gained access to classified reports. Upon further investigation, the logs indicate that the user was added to the administrator group.\nWhich of the following best describes this attack?",
     "choices": [
       {
         "key": "A",
@@ -4325,7 +4287,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Privilege escalation occurs when an attacker, the guest user, gains higher-level permissions\nthan originally assigned (being added to the administrator group), allowing access to classified\nresources.",
+    "explanation": "Privilege escalation occurs when an attacker, the guest user, gains higher-level permissions than originally assigned (being added to the administrator group), allowing access to classified resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4363,7 +4325,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is a fully configured, operational environment that mirrors the primary site, allowing\nimmediate failover and near-instant service restoration after a disaster.",
+    "explanation": "A hot site is a fully configured, operational environment that mirrors the primary site, allowing immediate failover and near-instant service restoration after a disaster.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4379,7 +4341,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following attacks uses a website to collectively target a group of developers within\nan organization?",
+    "question": "Which of the following attacks uses a website to collectively target a group of developers within an organization?",
     "choices": [
       {
         "key": "A",
@@ -4401,7 +4363,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering hole attack compromises a website commonly visited by a specific group, such as\ndevelopers, so when they visit the site, they are collectively targeted and potentially infected.",
+    "explanation": "A watering hole attack compromises a website commonly visited by a specific group, such as developers, so when they visit the site, they are collectively targeted and potentially infected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4417,7 +4379,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A security analyst identifies an employee who added an unauthorized wireless router to an\noffice branch. After an investigation, the router is removed, and the employee is given\nmandatory retraining.\nWhich of the following best describes this incident?",
+    "question": "A security analyst identifies an employee who added an unauthorized wireless router to an office branch. After an investigation, the router is removed, and the employee is given mandatory retraining.\nWhich of the following best describes this incident?",
     "choices": [
       {
         "key": "A",
@@ -4439,7 +4401,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Shadow IT refers to the use of unauthorized devices, software, or systems, such as an\nemployee adding a wireless router without approval, outside of official IT processes.",
+    "explanation": "Shadow IT refers to the use of unauthorized devices, software, or systems, such as an employee adding a wireless router without approval, outside of official IT processes.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4477,7 +4439,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OS-based vulnerabilities are a significant concern because exploiting them can give an attacker\naccess to core system functions, potentially impacting all applications and users on that system.",
+    "explanation": "OS-based vulnerabilities are a significant concern because exploiting them can give an attacker access to core system functions, potentially impacting all applications and users on that system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4493,7 +4455,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "During a penetration test in a hypervisor, the security engineer is able to use a script to inject a\nmalicious payload and access the host filesystem.\nWhich of the following best describes this vulnerability?",
+    "question": "During a penetration test in a hypervisor, the security engineer is able to use a script to inject a malicious payload and access the host filesystem.\nWhich of the following best describes this vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -4515,7 +4477,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape occurs when an attacker exploits a vulnerability in the hypervisor, allowing them to\nbreak out of the virtual machine and access the underlying host system's resources.",
+    "explanation": "VM escape occurs when an attacker exploits a vulnerability in the hypervisor, allowing them to break out of the virtual machine and access the underlying host system's resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4531,7 +4493,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A company is experiencing a high number of users who are clicking on email-based attacks\neven though those users have completed annual training. The company's Chief Security Officer\nwants to identify and reduce which users are phished the most often.\nWhich of the following will best achieve this result?",
+    "question": "A company is experiencing a high number of users who are clicking on email-based attacks even though those users have completed annual training. The company's Chief Security Officer wants to identify and reduce which users are phished the most often.\nWhich of the following will best achieve this result?",
     "choices": [
       {
         "key": "A",
@@ -4553,7 +4515,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Deploying a simulated phishing product allows the company to directly measure which users are\nsusceptible to phishing attacks by tracking who clicks on simulated malicious links, enabling\ntargeted awareness and training efforts.",
+    "explanation": "Deploying a simulated phishing product allows the company to directly measure which users are susceptible to phishing attacks by tracking who clicks on simulated malicious links, enabling targeted awareness and training efforts.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4569,7 +4531,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following mitigation techniques would a security analyst most likely use to avoid\nbloatware on devices?",
+    "question": "Which of the following mitigation techniques would a security analyst most likely use to avoid bloatware on devices?",
     "choices": [
       {
         "key": "A",
@@ -4591,7 +4553,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An application allow list ensures that only approved applications can be installed or run on a\ndevice, effectively preventing the installation of unwanted bloatware.",
+    "explanation": "An application allow list ensures that only approved applications can be installed or run on a device, effectively preventing the installation of unwanted bloatware.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4607,7 +4569,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is monitoring logs from the organization's SIEM and identifies logs related to\none of their salespeople:\nWhich of the following is being displayed in the logs?",
+    "question": "A security analyst is monitoring logs from the organization's SIEM and identifies logs related to one of their salespeople:\nWhich of the following is being displayed in the logs?",
     "choices": [
       {
         "key": "A",
@@ -4629,7 +4591,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs show the same employee account accessing services from geographically distant\nlocations (Atlanta and Beijing) within a short time frame, which is not physically possible, this is\nknown as impossible travel.",
+    "explanation": "The logs show the same employee account accessing services from geographically distant locations (Atlanta and Beijing) within a short time frame, which is not physically possible, this is known as impossible travel.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4667,7 +4629,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An MDM solution can enforce device policies that block attempts to modify or replace the mobile\nOS, preventing users from jailbreaking their devices.",
+    "explanation": "An MDM solution can enforce device policies that block attempts to modify or replace the mobile OS, preventing users from jailbreaking their devices.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4683,7 +4645,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security team receives reports about high latency and complete network unavailability\nthroughout most of the office building. Flow logs from the campus switches show high traffic on\nTCP 445.\nWhich of the following is most likely the root cause of this incident?",
+    "question": "A security team receives reports about high latency and complete network unavailability throughout most of the office building. Flow logs from the campus switches show high traffic on TCP 445.\nWhich of the following is most likely the root cause of this incident?",
     "choices": [
       {
         "key": "A",
@@ -4705,7 +4667,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A worm exploiting SMB will flood TCP 445 with propagation traffic, overwhelming the network\nand causing high latency and outages.",
+    "explanation": "A worm exploiting SMB will flood TCP 445 with propagation traffic, overwhelming the network and causing high latency and outages.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4721,7 +4683,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A systems administrator needs to provide traveling employees with a security measure that will\nprotect company devices regardless of where they are working.\nWhich of the following should the administrator implement?",
+    "question": "A systems administrator needs to provide traveling employees with a security measure that will protect company devices regardless of where they are working.\nWhich of the following should the administrator implement?",
     "choices": [
       {
         "key": "A",
@@ -4743,7 +4705,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Host-based Intrusion Prevention System (HIPS) runs directly on each device, monitoring and\nblocking malicious activity locally, ensuring protection regardless of the network the traveling\nemployee uses.",
+    "explanation": "A Host-based Intrusion Prevention System (HIPS) runs directly on each device, monitoring and blocking malicious activity locally, ensuring protection regardless of the network the traveling employee uses.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4759,7 +4721,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A customer changes the underlying file structure of a new mobile phone to install a keylogger\nwith administrator permissions.\nWhich of the following does this best describe?",
+    "question": "A customer changes the underlying file structure of a new mobile phone to install a keylogger with administrator permissions.\nWhich of the following does this best describe?",
     "choices": [
       {
         "key": "A",
@@ -4781,7 +4743,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Modifying the device's file structure to gain root access and install unauthorized software\ndescribes jailbreaking.",
+    "explanation": "Modifying the device's file structure to gain root access and install unauthorized software describes jailbreaking.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4797,7 +4759,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "While a school district is performing state testing, a security analyst notices all internet services\nare unavailable. The analyst discovers that ARP poisoning is occurring on the network ana then\nterminates access for the host.\nWhich of the following is most likely responsive for this malicious activity?",
+    "question": "While a school district is performing state testing, a security analyst notices all internet services are unavailable. The analyst discovers that ARP poisoning is occurring on the network ana then terminates access for the host.\nWhich of the following is most likely responsive for this malicious activity?",
     "choices": [
       {
         "key": "A",
@@ -4819,7 +4781,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "ARP poisoning is a basic attack that does not require advanced skills or tools, making it a\ncommon method used by unskilled attackers (also known as \"script kiddies\") to disrupt network\noperations.",
+    "explanation": "ARP poisoning is a basic attack that does not require advanced skills or tools, making it a common method used by unskilled attackers (also known as \"script kiddies\") to disrupt network operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4835,7 +4797,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "multi",
-    "question": "Which of the following hardening techniques must be applied on a container image before\ndeploying it to a production environment? (Choose two.)",
+    "question": "Which of the following hardening techniques must be applied on a container image before deploying it to a production environment? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4866,7 +4828,7 @@ export const domain2Questions = [
       "A",
       "C"
     ],
-    "explanation": "Removing default applications reduces the attack surface by eliminating unnecessary software\nthat could be exploited. Disabling Telnet is essential because it is an insecure protocol, and\nleaving it enabled can create vulnerabilities within the container.",
+    "explanation": "Removing default applications reduces the attack surface by eliminating unnecessary software that could be exploited. Disabling Telnet is essential because it is an insecure protocol, and leaving it enabled can create vulnerabilities within the container.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4882,7 +4844,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following would best explain why a security analyst is running daily vulnerability\nscans on all corporate endpoints?",
+    "question": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
     "choices": [
       {
         "key": "A",
@@ -4904,13 +4866,13 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Daily vulnerability scans help identify unpatched vulnerabilities on corporate endpoints, allowing\nthe security analyst to verify that patches are being installed and to track the effectiveness and\nstatus of patch management.",
+    "explanation": "Daily vulnerability scans help identify unpatched vulnerabilities on corporate endpoints, allowing the security analyst to verify that patches are being installed and to track the effectiveness and status of patch management.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p234",
     "needsReview": true,
-    "inferenceConfidence": 0.333,
+    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4942,7 +4904,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The input \"10 OR 1=1\" is a common SQL injection technique designed to manipulate SQL\nqueries, allowing unauthorized access or retrieval of data by altering the logic of the query.",
+    "explanation": "The input \"10 OR 1=1\" is a common SQL injection technique designed to manipulate SQL queries, allowing unauthorized access or retrieval of data by altering the logic of the query.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4958,7 +4920,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "An employee decides to collect PII data from the company's system for personal use. The\nemployee compresses the data into a single encrypted file before sending the file to their\npersonal email. The security department becomes aware of the attempted misuse and blocks\nthe attachment from leaving the corporate environment.\nWhich of the following types of employee training would most likely reduce the occurrence of\nthis type of issue? (Choose two.)",
+    "question": "An employee decides to collect PII data from the company's system for personal use. The employee compresses the data into a single encrypted file before sending the file to their personal email. The security department becomes aware of the attempted misuse and blocks the attachment from leaving the corporate environment.\nWhich of the following types of employee training would most likely reduce the occurrence of this type of issue? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4989,7 +4951,7 @@ export const domain2Questions = [
       "A",
       "D"
     ],
-    "explanation": "Privacy legislation - Teaching employees the legal obligations for handling PII (e.g., GDPR,\nHIPAA) makes them aware that personal use/transfer is prohibited and punishable.\nCompany compliance - Training on internal policies and acceptable-use rules reinforces exactly\nwhat the organization allows or forbids with company data, reducing intentional misuse.",
+    "explanation": "Privacy legislation - Teaching employees the legal obligations for handling PII (e.g., GDPR, HIPAA) makes them aware that personal use/transfer is prohibited and punishable.\nCompany compliance - Training on internal policies and acceptable-use rules reinforces exactly what the organization allows or forbids with company data, reducing intentional misuse.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5027,7 +4989,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Smishing is phishing delivered via SMS/text messages; the malicious text lured\nthe user to a fake bank site.",
+    "explanation": "Smishing is phishing delivered via SMS/text messages; the malicious text lured the user to a fake bank site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5043,7 +5005,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A group of people is working together to run multiple ransomware attacks against targets that\nthe group selected to yield the most financial gain.\nWhich of the following best describes this type of activity?",
+    "question": "A group of people is working together to run multiple ransomware attacks against targets that the group selected to yield the most financial gain.\nWhich of the following best describes this type of activity?",
     "choices": [
       {
         "key": "A",
@@ -5065,7 +5027,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Coordinated ransomware campaigns for profit are characteristic of organized crime groups -\ncriminal enterprises motivated by financial gain rather than ideology or national interest.",
+    "explanation": "Coordinated ransomware campaigns for profit are characteristic of organized crime groups - criminal enterprises motivated by financial gain rather than ideology or national interest.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5081,7 +5043,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following vulnerabilities results in an application running extremely slowly due to an\nabnormally large number of incoming packets?",
+    "question": "Which of the following vulnerabilities results in an application running extremely slowly due to an abnormally large number of incoming packets?",
     "choices": [
       {
         "key": "A",
@@ -5103,7 +5065,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An overwhelming volume of packets can fill an application's input buffers faster than it can\nprocess them. Once those buffers are saturated, the program spends excessive time handling\noverflow conditions (or even overwrites memory), causing dramatic slowdowns and potential\ninstability - classic symptoms of a buffer overflow–style resource exhaustion.",
+    "explanation": "An overwhelming volume of packets can fill an application's input buffers faster than it can process them. Once those buffers are saturated, the program spends excessive time handling overflow conditions (or even overwrites memory), causing dramatic slowdowns and potential instability - classic symptoms of a buffer overflow–style resource exhaustion.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5119,7 +5081,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company experiences a breach. The investigation reveals that the threat actor used a zero-\nday vulnerability to gain access and move laterally.\nWhich of the following would best improve the company's security posture and minimize the\ntime to detect this type of incident?",
+    "question": "A company experiences a breach. The investigation reveals that the threat actor used a zero- day vulnerability to gain access and move laterally.\nWhich of the following would best improve the company's security posture and minimize the time to detect this type of incident?",
     "choices": [
       {
         "key": "A",
@@ -5141,7 +5103,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "UBA builds baselines of normal user and entity activity (logins, data access patterns, movement\nbetween hosts) and flags deviations - the kind of anomalous lateral movement a zero-day–\ndriven intruder generates. Because it's behavior-based rather than signature-based, it can\nsurface unseen exploits faster and shrink detection time for novel attacks.",
+    "explanation": "UBA builds baselines of normal user and entity activity (logins, data access patterns, movement between hosts) and flags deviations - the kind of anomalous lateral movement a zero-day– driven intruder generates. Because it's behavior-based rather than signature-based, it can surface unseen exploits faster and shrink detection time for novel attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5157,7 +5119,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A user sits in a coffee shop on a government-issued laptop. A stranger starts a conversation\nwith the user and starts asking about where the user works, what division the user works in, and\nadditional personal information.\nWhich of the following best describes the stranger's behavior?",
+    "question": "A user sits in a coffee shop on a government-issued laptop. A stranger starts a conversation with the user and starts asking about where the user works, what division the user works in, and additional personal information.\nWhich of the following best describes the stranger's behavior?",
     "choices": [
       {
         "key": "A",
@@ -5179,7 +5141,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The stranger is manipulating a casual conversation to elicit sensitive details (employer, division,\npersonal info). This intentional information-gathering through interpersonal interaction is classic\nsocial engineering - exploiting human trust rather than technical flaws.",
+    "explanation": "The stranger is manipulating a casual conversation to elicit sensitive details (employer, division, personal info). This intentional information-gathering through interpersonal interaction is classic social engineering - exploiting human trust rather than technical flaws.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5217,7 +5179,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Once hardware reaches end of life, manufacturers typically end security support. Without new\nfirmware/ microcode patches or drivers, newly discovered vulnerabilities remain unpatched,\nleaving the device exposed indefinitely - this is the core security concern with EOL gear.",
+    "explanation": "Once hardware reaches end of life, manufacturers typically end security support. Without new firmware/ microcode patches or drivers, newly discovered vulnerabilities remain unpatched, leaving the device exposed indefinitely - this is the core security concern with EOL gear.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5255,7 +5217,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "End-of-life applications no longer receive security patches. Newly found flaws stay unpatched,\nleaving the software inherently vulnerable and an easy entry point for attackers.",
+    "explanation": "End-of-life applications no longer receive security patches. Newly found flaws stay unpatched, leaving the software inherently vulnerable and an easy entry point for attackers.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5271,7 +5233,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following is an advantage of a microservice-based architecture over traditional\nsoftware architectures?",
+    "question": "Which of the following is an advantage of a microservice-based architecture over traditional software architectures?",
     "choices": [
       {
         "key": "A",
@@ -5293,7 +5255,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Microservices are small, independently deployable components. Because each service can be\nbuilt, tested, and released on its own pipeline, a security fix in one area doesn't require\nrebuilding and redeploying the whole application. That independence enables rapid, even\nmultiple-per-day patches, shrinking exposure windows when vulnerabilities are found.",
+    "explanation": "Microservices are small, independently deployable components. Because each service can be built, tested, and released on its own pipeline, a security fix in one area doesn't require rebuilding and redeploying the whole application. That independence enables rapid, even multiple-per-day patches, shrinking exposure windows when vulnerabilities are found.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5309,7 +5271,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An organization purchases software from an overseas company. The organization's IDS\nsolution detects that advertising data from the software is unexpectedly reporting back to the\noverseas company.\nWhich of the following threat vectors does this best describe?",
+    "question": "An organization purchases software from an overseas company. The organization's IDS solution detects that advertising data from the software is unexpectedly reporting back to the overseas company.\nWhich of the following threat vectors does this best describe?",
     "choices": [
       {
         "key": "A",
@@ -5331,7 +5293,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The compromise came through third-party software the organization obtained and trusted; its\nunexpected \"phone home\" behavior is a classic supply chain risk, where embedded code or\ntelemetry from a vendor creates a hidden data exfiltration path.",
+    "explanation": "The compromise came through third-party software the organization obtained and trusted; its unexpected \"phone home\" behavior is a classic supply chain risk, where embedded code or telemetry from a vendor creates a hidden data exfiltration path.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5347,7 +5309,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An accounting clerk sent money to an attacker's bank account after receiving fraudulent\ninstructions over the phone to use a new account.\nWhich of the following would most likely prevent this activity in the future?",
+    "question": "An accounting clerk sent money to an attacker's bank account after receiving fraudulent instructions over the phone to use a new account.\nWhich of the following would most likely prevent this activity in the future?",
     "choices": [
       {
         "key": "A",
@@ -5369,7 +5331,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Stronger, verified procedures (e.g., dual approval, out-of-band callback to a known contact,\npreapproved account lists) make it impossible for a single clerk to act on a phone request alone.\nBy baking verification steps into the wire-transfer workflow, future fraudulent instructions get\nstopped at the process gate.",
+    "explanation": "Stronger, verified procedures (e.g., dual approval, out-of-band callback to a known contact, preapproved account lists) make it impossible for a single clerk to act on a phone request alone.\nBy baking verification steps into the wire-transfer workflow, future fraudulent instructions get stopped at the process gate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5385,7 +5347,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A private equity firm has been the target of protests. The firm discovers its public website has\nbeen defaced.\nWhich of the following is most likely the threat actor?",
+    "question": "A private equity firm has been the target of protests. The firm discovers its public website has been defaced.\nWhich of the following is most likely the threat actor?",
     "choices": [
       {
         "key": "A",
@@ -5407,7 +5369,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Defacement tied to public protests signals an ideologically motivated actor. Hacktivists target\nvisibility - public sites - to broadcast a message or embarrass the organization, rather than to\nsteal money or state secrets.",
+    "explanation": "Defacement tied to public protests signals an ideologically motivated actor. Hacktivists target visibility - public sites - to broadcast a message or embarrass the organization, rather than to steal money or state secrets.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5423,7 +5385,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following best describes when a user installs an application from an unofficial\napplication store?",
+    "question": "Which of the following best describes when a user installs an application from an unofficial application store?",
     "choices": [
       {
         "key": "A",
@@ -5445,7 +5407,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Installing an app from an unofficial/third-party store bypasses the platform's vetted distribution\nchannel, which is exactly what side loading means: loading software \"from the side\" instead of\nthe official app store. This increases risk because the code may not be reviewed, signed, or\nscanned to the platform's security standards.",
+    "explanation": "Installing an app from an unofficial/third-party store bypasses the platform's vetted distribution channel, which is exactly what side loading means: loading software \"from the side\" instead of the official app store. This increases risk because the code may not be reviewed, signed, or scanned to the platform's security standards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5461,7 +5423,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following describes an agent-based application that detects and blocks malicious\nbehavior on enterprise systems while disconnected from the corporate network?",
+    "question": "Which of the following describes an agent-based application that detects and blocks malicious behavior on enterprise systems while disconnected from the corporate network?",
     "choices": [
       {
         "key": "A",
@@ -5483,7 +5445,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Endpoint protection is an agent-based solution installed on devices that can detect and block\nmalicious activity locally, allowing it to function even when the system is disconnected from the\ncorporate network.",
+    "explanation": "Endpoint protection is an agent-based solution installed on devices that can detect and block malicious activity locally, allowing it to function even when the system is disconnected from the corporate network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5499,7 +5461,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A manager meets with various stakeholders involved with a recently resolved security incident.\nDuring the meeting, they discuss potential improvements to the environment in order to better\nrespond to future incidents.\nWhich of the following incident response activities does this describe?",
+    "question": "A manager meets with various stakeholders involved with a recently resolved security incident.\nDuring the meeting, they discuss potential improvements to the environment in order to better respond to future incidents.\nWhich of the following incident response activities does this describe?",
     "choices": [
       {
         "key": "A",
@@ -5521,7 +5483,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The lessons learned phase occurs after an incident is resolved and involves reviewing the\nresponse process, identifying improvements, and implementing changes to enhance future\nincident handling.",
+    "explanation": "The lessons learned phase occurs after an incident is resolved and involves reviewing the response process, identifying improvements, and implementing changes to enhance future incident handling.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5537,7 +5499,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An employee from the accounting department logs in to the website used for processing the\ncompany's payments. After logging in, a new desktop application automatically downloads on\nthe employee's computer and causes the computer to restart.\nWhich of the following attacks has occurred?",
+    "question": "An employee from the accounting department logs in to the website used for processing the company's payments. After logging in, a new desktop application automatically downloads on the employee's computer and causes the computer to restart.\nWhich of the following attacks has occurred?",
     "choices": [
       {
         "key": "A",
@@ -5559,7 +5521,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering hole attack compromises a legitimate website frequently visited by the target,\nembedding malicious code that delivers malware, such as the unauthorized desktop application\ndownloaded after the employee logged in.",
+    "explanation": "A watering hole attack compromises a legitimate website frequently visited by the target, embedding malicious code that delivers malware, such as the unauthorized desktop application downloaded after the employee logged in.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5597,7 +5559,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Isolating the workstation immediately stops communication with the malicious IP and prevents\nfurther spread or data exfiltration, making it the most effective containment action.",
+    "explanation": "Isolating the workstation immediately stops communication with the malicious IP and prevents further spread or data exfiltration, making it the most effective containment action.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5613,7 +5575,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following would most likely prevent exploitation of an end-of-life, business-critical\nsystem?",
+    "question": "Which of the following would most likely prevent exploitation of an end-of-life, business-critical system?",
     "choices": [
       {
         "key": "A",
@@ -5635,7 +5597,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Isolation places the end-of-life system on a segmented network or removes its external\nconnectivity, reducing exposure and preventing attackers from exploiting its vulnerabilities while\nit remains in use.",
+    "explanation": "Isolation places the end-of-life system on a segmented network or removes its external connectivity, reducing exposure and preventing attackers from exploiting its vulnerabilities while it remains in use.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5673,7 +5635,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hacktivists are motivated by philosophical or political beliefs, using hacking to promote their\ncause or draw attention to specific social or ideological issues.",
+    "explanation": "Hacktivists are motivated by philosophical or political beliefs, using hacking to promote their cause or draw attention to specific social or ideological issues.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5711,7 +5673,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A cold site is the least expensive recovery option, providing space and infrastructure but no\nactive systems, allowing for recovery at a lower cost—though with slower setup compared to hot\nor warm sites.",
+    "explanation": "A cold site is the least expensive recovery option, providing space and infrastructure but no active systems, allowing for recovery at a lower cost—though with slower setup compared to hot or warm sites.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5727,7 +5689,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "After multiple phishing simulations, the Chief Security Officer announces a new program that\nincentivizes employees to not click phishing links in the upcoming quarter.\nWhich of the following security awareness execution techniques does this represent?",
+    "question": "After multiple phishing simulations, the Chief Security Officer announces a new program that incentivizes employees to not click phishing links in the upcoming quarter.\nWhich of the following security awareness execution techniques does this represent?",
     "choices": [
       {
         "key": "A",
@@ -5749,7 +5711,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Gamification uses rewards, competition, or incentives to motivate and reinforce desired\nbehaviors - in this case, encouraging employees to avoid clicking phishing links through a\nreward-based program.",
+    "explanation": "Gamification uses rewards, competition, or incentives to motivate and reinforce desired behaviors - in this case, encouraging employees to avoid clicking phishing links through a reward-based program.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5765,7 +5727,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security analyst sees an increase of vulnerabilities on workstations after a deployment of a\ncompany group policy.\nWhich of the following vulnerability types will the analyst most likely find on the workstations?",
+    "question": "A security analyst sees an increase of vulnerabilities on workstations after a deployment of a company group policy.\nWhich of the following vulnerability types will the analyst most likely find on the workstations?",
     "choices": [
       {
         "key": "A",
@@ -5787,7 +5749,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A misconfiguration vulnerability occurs when system settings - such as those deployed via\ngroup policy - are set insecurely, unintentionally weakening security and increasing exposure to\nthreats.",
+    "explanation": "A misconfiguration vulnerability occurs when system settings - such as those deployed via group policy - are set insecurely, unintentionally weakening security and increasing exposure to threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5803,7 +5765,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following threat actors would most likely target an organization by using a logic\nbomb within an internally-developed application?",
+    "question": "Which of the following threat actors would most likely target an organization by using a logic bomb within an internally-developed application?",
     "choices": [
       {
         "key": "A",
@@ -5825,13 +5787,13 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A trusted insider, such as a disgruntled employee or contractor with authorized access to\ninternal systems, is most likely to plant a logic bomb in an internally-developed application since\nthey have both the access and knowledge needed to insert the malicious code.",
+    "explanation": "A trusted insider, such as a disgruntled employee or contractor with authorized access to internal systems, is most likely to plant a logic bomb in an internally-developed application since they have both the access and knowledge needed to insert the malicious code.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p260",
     "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5841,7 +5803,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following types of vulnerabilities involves attacking a system to access adjacent\nhosts?",
+    "question": "Which of the following types of vulnerabilities involves attacking a system to access adjacent hosts?",
     "choices": [
       {
         "key": "A",
@@ -5863,7 +5825,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape exploits a vulnerability in the virtualization layer, allowing an attacker to break out of\na virtual machine and gain access to the host system or adjacent virtual machines.",
+    "explanation": "VM escape exploits a vulnerability in the virtualization layer, allowing an attacker to break out of a virtual machine and gain access to the host system or adjacent virtual machines.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5901,7 +5863,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "If reported email data is not used to update and tune filtering tools, the malicious email can\ncontinue bypassing defenses and reaching other users' inboxes.",
+    "explanation": "If reported email data is not used to update and tune filtering tools, the malicious email can continue bypassing defenses and reaching other users' inboxes.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5917,7 +5879,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "While browsing a web page, a user receives a pop-up with a link telling them to navigate to\nanother site. To which of the following is the site vulnerable?",
+    "question": "While browsing a web page, a user receives a pop-up with a link telling them to navigate to another site. To which of the following is the site vulnerable?",
     "choices": [
       {
         "key": "A",
@@ -5939,7 +5901,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cross-Site Scripting (XSS) allows attackers to inject malicious scripts into a web page, which\ncan display pop-ups or redirect users to other sites without their consent.",
+    "explanation": "Cross-Site Scripting (XSS) allows attackers to inject malicious scripts into a web page, which can display pop-ups or redirect users to other sites without their consent.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5955,7 +5917,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An administrator must secure several end-of-life SCADA devices in a manufacturing facility on a\nlimited budget.\nWhich of the following should the security administrator do to best secure these devices?",
+    "question": "An administrator must secure several end-of-life SCADA devices in a manufacturing facility on a limited budget.\nWhich of the following should the security administrator do to best secure these devices?",
     "choices": [
       {
         "key": "A",
@@ -5977,7 +5939,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Network segmentation isolates end-of-life SCADA devices from other systems, reducing the\nattack surface and limiting lateral movement, which is critical when patching or direct security\nupdates are not possible.",
+    "explanation": "Network segmentation isolates end-of-life SCADA devices from other systems, reducing the attack surface and limiting lateral movement, which is critical when patching or direct security updates are not possible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5993,7 +5955,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following would help reduce the impact of a zero-day vulnerability in NAS installed\non a large office network?",
+    "question": "Which of the following would help reduce the impact of a zero-day vulnerability in NAS installed on a large office network?",
     "choices": [
       {
         "key": "A",
@@ -6015,7 +5977,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Segmentation isolates the NAS from the broader network, limiting an attacker's ability to exploit\nthe zero-day vulnerability and reducing the potential impact on other systems.",
+    "explanation": "Segmentation isolates the NAS from the broader network, limiting an attacker's ability to exploit the zero-day vulnerability and reducing the potential impact on other systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6031,7 +5993,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An IT team rolls out a new management application that uses a randomly generated MFA token\nthat is sent to the administrator's phone. Despite this new MFA precaution, there is a security\nbreach of the same software.\nWhich of the following describes this kind of attack?",
+    "question": "An IT team rolls out a new management application that uses a randomly generated MFA token that is sent to the administrator's phone. Despite this new MFA precaution, there is a security breach of the same software.\nWhich of the following describes this kind of attack?",
     "choices": [
       {
         "key": "A",
@@ -6053,7 +6015,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Smishing uses fraudulent SMS messages to trick victims into revealing sensitive information or\nclicking malicious links, potentially compromising MFA tokens sent to a phone.",
+    "explanation": "Smishing uses fraudulent SMS messages to trick victims into revealing sensitive information or clicking malicious links, potentially compromising MFA tokens sent to a phone.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6091,7 +6053,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The successful logins from multiple distant geographic locations within minutes indicate that the\nsame credentials are being used by different individuals or systems, which is consistent with\npassword sharing.",
+    "explanation": "The successful logins from multiple distant geographic locations within minutes indicate that the same credentials are being used by different individuals or systems, which is consistent with password sharing.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6129,7 +6091,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly sanitized before processing or\ndisplaying, effectively preventing cross-site scripting attacks.",
+    "explanation": "Input validation ensures that user-supplied data is properly sanitized before processing or displaying, effectively preventing cross-site scripting attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6167,7 +6129,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An evil twin attack sets up a rogue wireless access point that mimics a legitimate one, targeting\ninsecure or poorly secured networks to capture user data.",
+    "explanation": "An evil twin attack sets up a rogue wireless access point that mimics a legitimate one, targeting insecure or poorly secured networks to capture user data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6183,7 +6145,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A penetration testing report indicated that an organization should implement controls related to\ndatabase input validation.\nWhich of the following best identifies the type of vulnerability that was likely discovered during\nthe test?",
+    "question": "A penetration testing report indicated that an organization should implement controls related to database input validation.\nWhich of the following best identifies the type of vulnerability that was likely discovered during the test?",
     "choices": [
       {
         "key": "A",
@@ -6205,7 +6167,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection (SQLi) exploits improper or missing input validation in database queries, allowing\nattackers to manipulate SQL commands and access or modify database content.",
+    "explanation": "SQL injection (SQLi) exploits improper or missing input validation in database queries, allowing attackers to manipulate SQL commands and access or modify database content.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6221,7 +6183,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst investigates logs and notices similar data types are being sent to IP\naddresses with a bad reputation.\nWhich of the following attack types does this best describe?",
+    "question": "A security analyst investigates logs and notices similar data types are being sent to IP addresses with a bad reputation.\nWhich of the following attack types does this best describe?",
     "choices": [
       {
         "key": "A",
@@ -6243,13 +6205,13 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Spyware covertly collects and transmits data to external servers, often to IP addresses with\nknown bad reputations, matching the described behavior in the logs.",
+    "explanation": "Spyware covertly collects and transmits data to external servers, often to IP addresses with known bad reputations, matching the described behavior in the logs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p277",
     "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.389,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6259,7 +6221,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following describes a situation where a user is authorized before being\nauthenticated?",
+    "question": "Which of the following describes a situation where a user is authorized before being authenticated?",
     "choices": [
       {
         "key": "A",
@@ -6281,7 +6243,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Privilege escalation can occur if authorization is granted without proper authentication, allowing\na user to gain higher-level access than intended.",
+    "explanation": "Privilege escalation can occur if authorization is granted without proper authentication, allowing a user to gain higher-level access than intended.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6297,7 +6259,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An employee decides to take malicious action against an organization after being passed over\nfor a promotion.\nWhich of the following threats does the employee now represent?",
+    "question": "An employee decides to take malicious action against an organization after being passed over for a promotion.\nWhich of the following threats does the employee now represent?",
     "choices": [
       {
         "key": "A",
@@ -6319,7 +6281,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An insider threat involves a person within the organization, such as an employee, who uses\ntheir access for malicious purposes, often due to personal grievances or dissatisfaction.",
+    "explanation": "An insider threat involves a person within the organization, such as an employee, who uses their access for malicious purposes, often due to personal grievances or dissatisfaction.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6335,7 +6297,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A user's system became infected when malware was downloaded and extracted. The malware\nis now active in the computer's volatile storage.\nWhich of the following best describes the technique leveraged by the malware?",
+    "question": "A user's system became infected when malware was downloaded and extracted. The malware is now active in the computer's volatile storage.\nWhich of the following best describes the technique leveraged by the malware?",
     "choices": [
       {
         "key": "A",
@@ -6357,7 +6319,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Memory injection refers to a technique where malware is loaded directly into the system's\nvolatile memory (RAM) to execute malicious code without writing files to disk, making detection\nand persistence more difficult. This matches the scenario where the malware is now active in\nthe computer's volatile storage.",
+    "explanation": "Memory injection refers to a technique where malware is loaded directly into the system's volatile memory (RAM) to execute malicious code without writing files to disk, making detection and persistence more difficult. This matches the scenario where the malware is now active in the computer's volatile storage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6395,7 +6357,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is an attack in which a malicious actor breaks out of the confines of a virtual\nmachine to gain access to the underlying hypervisor or other virtual machines, matching the\nscenario described.",
+    "explanation": "VM escape is an attack in which a malicious actor breaks out of the confines of a virtual machine to gain access to the underlying hypervisor or other virtual machines, matching the scenario described.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6411,7 +6373,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An administrator learns that users are receiving large quantities of unsolicited messages. The\nadministrator checks the content filter and sees hundreds of messages sent to multiple users.\nWhich of the following best describes this kind of attack?",
+    "question": "An administrator learns that users are receiving large quantities of unsolicited messages. The administrator checks the content filter and sees hundreds of messages sent to multiple users.\nWhich of the following best describes this kind of attack?",
     "choices": [
       {
         "key": "A",
@@ -6433,7 +6395,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Phishing involves sending large quantities of unsolicited messages to users in an attempt to\ntrick them into revealing sensitive information or performing malicious actions. This aligns with\nusers receiving many unsolicited emails.",
+    "explanation": "Phishing involves sending large quantities of unsolicited messages to users in an attempt to trick them into revealing sensitive information or performing malicious actions. This aligns with users receiving many unsolicited emails.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6471,7 +6433,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Typosquatting involves registering domain names that are visually or typographically similar to\nlegitimate sites to trick users into visiting the malicious site, matching the scenario described.",
+    "explanation": "Typosquatting involves registering domain names that are visually or typographically similar to legitimate sites to trick users into visiting the malicious site, matching the scenario described.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6487,7 +6449,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A security analyst is investigating an alert that was produced by endpoint protection software.\nThe analyst determines this event was a false positive triggered by an employee who attempted\nto download a file.\nWhich of the following is the most likely reason the download was blocked?",
+    "question": "A security analyst is investigating an alert that was produced by endpoint protection software.\nThe analyst determines this event was a false positive triggered by an employee who attempted to download a file.\nWhich of the following is the most likely reason the download was blocked?",
     "choices": [
       {
         "key": "A",
@@ -6509,7 +6471,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A misconfiguration in the endpoint protection software can lead to false positives, causing\nlegitimate files to be incorrectly flagged and blocked during download.",
+    "explanation": "A misconfiguration in the endpoint protection software can lead to false positives, causing legitimate files to be incorrectly flagged and blocked during download.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6525,7 +6487,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company discovers that an employee was paid by a competitor to save internal business files\nto a thumb drive and deliver it to the competitor.\nWhich of the following is most likely the employee's motivation?",
+    "question": "A company discovers that an employee was paid by a competitor to save internal business files to a thumb drive and deliver it to the competitor.\nWhich of the following is most likely the employee's motivation?",
     "choices": [
       {
         "key": "A",
@@ -6547,7 +6509,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The employee was compensated by a competitor, making financial gain the most likely\nmotivation for stealing and delivering internal business files.",
+    "explanation": "The employee was compensated by a competitor, making financial gain the most likely motivation for stealing and delivering internal business files.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6563,7 +6525,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A systems administrator configures a new application. The next day, a security analyst reviews\nthe logs and identifies multiple accounts that had been created overnight with administrative\nprivileges and connections from different countries.\nWhich of the following solutions would have prevented this incident?",
+    "question": "A systems administrator configures a new application. The next day, a security analyst reviews the logs and identifies multiple accounts that had been created overnight with administrative privileges and connections from different countries.\nWhich of the following solutions would have prevented this incident?",
     "choices": [
       {
         "key": "A",
@@ -6585,7 +6547,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Changing the default credentials would have blocked unauthorized access to the application's\nadministrative interface, preventing attackers from logging in overnight and creating privileged\naccounts.",
+    "explanation": "Changing the default credentials would have blocked unauthorized access to the application's administrative interface, preventing attackers from logging in overnight and creating privileged accounts.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6601,7 +6563,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "An organization has been experiencing issues with deleted network share data and improperly\nassigned permissions.\nWhich of the following would best help track and remediate these issues?",
+    "question": "An organization has been experiencing issues with deleted network share data and improperly assigned permissions.\nWhich of the following would best help track and remediate these issues?",
     "choices": [
       {
         "key": "A",
@@ -6623,7 +6585,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "FIM continuously monitors files and their permissions on network shares, alerting when items\nare deleted or access rights are changed so administrators can quickly investigate and\nremediate.",
+    "explanation": "FIM continuously monitors files and their permissions on network shares, alerting when items are deleted or access rights are changed so administrators can quickly investigate and remediate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6661,7 +6623,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The \"../../../etc/passwd\" and \"../../../etc/shadow\" path sequences attempt to climb directories and\nread sensitive files, indicating a directory traversal attack.",
+    "explanation": "The \"../../../etc/passwd\" and \"../../../etc/shadow\" path sequences attempt to climb directories and read sensitive files, indicating a directory traversal attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6699,7 +6661,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An MDM platform can detect devices that have been jailbroken and enforce policies - such as\nblocking access or wiping the device - to prevent compromised, unsupported mobile operating\nsystems from accessing organizational resources.",
+    "explanation": "An MDM platform can detect devices that have been jailbroken and enforce policies - such as blocking access or wiping the device - to prevent compromised, unsupported mobile operating systems from accessing organizational resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6715,7 +6677,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "During a routine audit, an analyst discovers that a department at a high school uses a\nsimulation program that was not properly vetted before deployment.\nWhich of the following threats is this an example of?",
+    "question": "During a routine audit, an analyst discovers that a department at a high school uses a simulation program that was not properly vetted before deployment.\nWhich of the following threats is this an example of?",
     "choices": [
       {
         "key": "A",
@@ -6737,7 +6699,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Software deployed by users without formal review or approval is classified as shadow IT, since\nit operates outside the organization's sanctioned processes and controls.",
+    "explanation": "Software deployed by users without formal review or approval is classified as shadow IT, since it operates outside the organization's sanctioned processes and controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6775,7 +6737,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "File Integrity Monitoring (FIM) detects any unauthorized modification to system-level files or\ndata, ensuring those files remain unchanged unless properly authorized.",
+    "explanation": "File Integrity Monitoring (FIM) detects any unauthorized modification to system-level files or data, ensuring those files remain unchanged unless properly authorized.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6791,7 +6753,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following best describes why a company would erase a newly purchased device\nand install its own image with an operating system and applications?",
+    "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an operating system and applications?",
     "choices": [
       {
         "key": "A",
@@ -6813,7 +6775,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Removing the vendor's default software and installing a clean company image eliminates\nunnecessary applications and services, reducing the overall attack surface and improving\nsecurity.",
+    "explanation": "Removing the vendor's default software and installing a clean company image eliminates unnecessary applications and services, reducing the overall attack surface and improving security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6829,7 +6791,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "Remote users report that they are unable to log in to the VPN. The help desk confirms that each\nemployee has a stable internet connection and correct permissions for VPN use but also\nidentifies similar login errors for all affected users.\nWhich of the following types of attacks most likely occurred?",
+    "question": "Remote users report that they are unable to log in to the VPN. The help desk confirms that each employee has a stable internet connection and correct permissions for VPN use but also identifies similar login errors for all affected users.\nWhich of the following types of attacks most likely occurred?",
     "choices": [
       {
         "key": "A",
@@ -6851,7 +6813,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A DDoS attack can overwhelm the VPN gateway with excessive traffic, preventing legitimate\nremote users from establishing VPN sessions even though their credentials, permissions, and\ninternet connections are all functioning normally.",
+    "explanation": "A DDoS attack can overwhelm the VPN gateway with excessive traffic, preventing legitimate remote users from establishing VPN sessions even though their credentials, permissions, and internet connections are all functioning normally.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6867,7 +6829,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "The help desk receives multiple calls indicating that machines are running slowly when running\nenterprise applications. The help desk notes that the affected machines are out of compliance\nwith the organization's OS baselines. Several users also report receiving virus detection alerts.\nWhich of the following mitigation techniques should the help desk consider first?",
+    "question": "The help desk receives multiple calls indicating that machines are running slowly when running enterprise applications. The help desk notes that the affected machines are out of compliance with the organization's OS baselines. Several users also report receiving virus detection alerts.\nWhich of the following mitigation techniques should the help desk consider first?",
     "choices": [
       {
         "key": "A",
@@ -6889,7 +6851,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Isolation prevents potentially infected systems from interacting with the rest of the network,\nimmediately containing the spread of malware and limiting further impact while remediation\nactions are planned and executed.",
+    "explanation": "Isolation prevents potentially infected systems from interacting with the rest of the network, immediately containing the spread of malware and limiting further impact while remediation actions are planned and executed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6927,7 +6889,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state attackers typically have advanced capabilities and resources, making them more\nlikely to exploit previously unknown vulnerabilities that do not yet have patches or signatures,\nenabling stealthy and high-impact attacks.",
+    "explanation": "Nation-state attackers typically have advanced capabilities and resources, making them more likely to exploit previously unknown vulnerabilities that do not yet have patches or signatures, enabling stealthy and high-impact attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6965,7 +6927,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "HTTP security headers such as Content Security Policy, X-XSS-Protection, and X-Content-\nType-Options help prevent the execution of malicious scripts in a user's browser, reducing the\nrisk of cross-site scripting attacks.",
+    "explanation": "HTTP security headers such as Content Security Policy, X-XSS-Protection, and X-Content- Type-Options help prevent the execution of malicious scripts in a user's browser, reducing the risk of cross-site scripting attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7003,7 +6965,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Applying the principle of least privilege ensures users are granted only the minimum\npermissions required to perform their job functions, which prevents an analyst from having\nsufficient access to save or apply unauthorized configurations.",
+    "explanation": "Applying the principle of least privilege ensures users are granted only the minimum permissions required to perform their job functions, which prevents an analyst from having sufficient access to save or apply unauthorized configurations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7019,7 +6981,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "While troubleshooting an internal resource's poor performance for an end user, a network\nengineer performs a traceroute on the end device and receives the following output:\nThe engineer performs a traceroute from a device that is not experiencing poor performance but\nis connected to the same port. The engineer receives the following output:\nWhich of the following is most likely occurring?",
+    "question": "While troubleshooting an internal resource's poor performance for an end user, a network engineer performs a traceroute on the end device and receives the following output:\nThe engineer performs a traceroute from a device that is not experiencing poor performance but is connected to the same port. The engineer receives the following output:\nWhich of the following is most likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -7041,7 +7003,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The slow traceroute shows an extra first hop (10.20.10.10) with very high latency that does not\nappear when tracing from a known-good device on the same port. This indicates the affected\ndevice's traffic is being redirected through an additional intermediary on the path, consistent\nwith an on-path (man-in-the-middle) attack.",
+    "explanation": "The slow traceroute shows an extra first hop (10.20.10.10) with very high latency that does not appear when tracing from a known-good device on the same port. This indicates the affected device's traffic is being redirected through an additional intermediary on the path, consistent with an on-path (man-in-the-middle) attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7057,7 +7019,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A network security analyst monitors the network's IDS. which has flagged unusual activity. The\nIDS has detected multiple login attempts to a database server within a short period. These\nattempts come from various IP addresses that are not normally recognized by the network's\nusual traffic patterns. Each attempt uses the same username and password. Based on the\nfollowing log output:\nWhich of the following types of network attacks is most likely occurring?",
+    "question": "A network security analyst monitors the network's IDS. which has flagged unusual activity. The IDS has detected multiple login attempts to a database server within a short period. These attempts come from various IP addresses that are not normally recognized by the network's usual traffic patterns. Each attempt uses the same username and password. Based on the following log output:\nWhich of the following types of network attacks is most likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -7079,7 +7041,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The repeated use of the same username and password across multiple login attempts from\ndifferent IP addresses indicates stolen credentials are being reused to gain unauthorized\naccess, which is characteristic of a credential replay attack.",
+    "explanation": "The repeated use of the same username and password across multiple login attempts from different IP addresses indicates stolen credentials are being reused to gain unauthorized access, which is characteristic of a credential replay attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7095,7 +7057,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following threat actors will most likely use multiple zero-day vulnerabilities to target\ngovernment research organizations to steal IPs?",
+    "question": "Which of the following threat actors will most likely use multiple zero-day vulnerabilities to target government research organizations to steal IPs?",
     "choices": [
       {
         "key": "A",
@@ -7117,7 +7079,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state actors have the resources, funding, and advanced capabilities required to discover\nor acquire multiple zero-day vulnerabilities and commonly target government research\norganizations to steal intellectual property.",
+    "explanation": "Nation-state actors have the resources, funding, and advanced capabilities required to discover or acquire multiple zero-day vulnerabilities and commonly target government research organizations to steal intellectual property.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7133,7 +7095,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "While accessing a banking website, a user notices that the cursor keeps disappearing and there\nseems to be a lag when entering login information.\nWhich of the following best describes this type of attack?",
+    "question": "While accessing a banking website, a user notices that the cursor keeps disappearing and there seems to be a lag when entering login information.\nWhich of the following best describes this type of attack?",
     "choices": [
       {
         "key": "A",
@@ -7155,7 +7117,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A keylogger can interfere with normal input behavior and introduce lag while capturing\nkeystrokes during credential entry, which aligns with the observed cursor issues and delays\nwhen typing login information.",
+    "explanation": "A keylogger can interfere with normal input behavior and introduce lag while capturing keystrokes during credential entry, which aligns with the observed cursor issues and delays when typing login information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7193,7 +7155,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Removable devices such as USB drives are commonly used to transfer data into and out of air-\ngapped networks, making them the most frequent and practical path for data loss in otherwise\nisolated environments.",
+    "explanation": "Removable devices such as USB drives are commonly used to transfer data into and out of air- gapped networks, making them the most frequent and practical path for data loss in otherwise isolated environments.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7209,7 +7171,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An attacker pretending to be from the help desk calls a user. The attacker asks the user to verify\na password in order to fix a technical issue.\nWhich of the following security awareness topics does this scenario best describe?",
+    "question": "An attacker pretending to be from the help desk calls a user. The attacker asks the user to verify a password in order to fix a technical issue.\nWhich of the following security awareness topics does this scenario best describe?",
     "choices": [
       {
         "key": "A",
@@ -7231,7 +7193,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The attacker manipulates the user by impersonating trusted support staff to trick them into\nrevealing credentials, which is a classic example of social engineering.",
+    "explanation": "The attacker manipulates the user by impersonating trusted support staff to trick them into revealing credentials, which is a classic example of social engineering.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7269,7 +7231,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "VM escape occurs when malicious code running inside a virtual machine breaks out of the VM\nboundary and executes on the underlying host system. A memory overflow caused by a plug-in\nthat enables code execution on the host directly represents this scenario, as it allows the guest\nto compromise the hypervisor or host environment.",
+    "explanation": "VM escape occurs when malicious code running inside a virtual machine breaks out of the VM boundary and executes on the underlying host system. A memory overflow caused by a plug-in that enables code execution on the host directly represents this scenario, as it allows the guest to compromise the hypervisor or host environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7285,7 +7247,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following best describes the purpose of using deception technologies in a security\nstrategy?",
+    "question": "Which of the following best describes the purpose of using deception technologies in a security strategy?",
     "choices": [
       {
         "key": "A",
@@ -7307,7 +7269,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Deception technologies are designed to intentionally attract attackers to decoy systems,\ncredentials, or data that appear valuable. By interacting with these controlled environments,\nattackers reveal their techniques, tools, and intent, allowing defenders to gather high-quality\nthreat intelligence and improve detection and response capabilities.",
+    "explanation": "Deception technologies are designed to intentionally attract attackers to decoy systems, credentials, or data that appear valuable. By interacting with these controlled environments, attackers reveal their techniques, tools, and intent, allowing defenders to gather high-quality threat intelligence and improve detection and response capabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7323,7 +7285,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A security analyst develops a threat model based on the recent news that Company A is suing\nCompany B. An investigation reveals that Company B told one of their employees to get a job at\nCompany A in order to steal proprietary information.\nWhich of the following should the security analyst identify as the most likely threat associated\nwith this incident?",
+    "question": "A security analyst develops a threat model based on the recent news that Company A is suing Company B. An investigation reveals that Company B told one of their employees to get a job at Company A in order to steal proprietary information.\nWhich of the following should the security analyst identify as the most likely threat associated with this incident?",
     "choices": [
       {
         "key": "A",
@@ -7345,7 +7307,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Corporate espionage involves the intentional theft of proprietary or confidential business\ninformation by a competitor. In this scenario, Company B deliberately placed an employee\ninside Company A to steal sensitive information, which directly aligns with corporate espionage.",
+    "explanation": "Corporate espionage involves the intentional theft of proprietary or confidential business information by a competitor. In this scenario, Company B deliberately placed an employee inside Company A to steal sensitive information, which directly aligns with corporate espionage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7361,7 +7323,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A user experiences the following issues while using their computer:\n• Slower than normal performance while browsing the web • Unexpected account lockouts •\nReceiving error messages when attempting to access web pages\nWhich of the following attacks do these issues indicate?",
+    "question": "A user experiences the following issues while using their computer:\n• Slower than normal performance while browsing the web • Unexpected account lockouts • Receiving error messages when attempting to access web pages Which of the following attacks do these issues indicate?",
     "choices": [
       {
         "key": "A",
@@ -7383,7 +7345,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A brute-force attack involves repeatedly attempting different password combinations to gain\naccess to an account. Continuous authentication attempts can trigger account lockouts due to\nsecurity policies that lock accounts after multiple failed login attempts. These repeated attempts\ncan also generate system or web access errors and may slow browsing performance due to the\nincreased authentication traffic and security checks being triggered.",
+    "explanation": "A brute-force attack involves repeatedly attempting different password combinations to gain access to an account. Continuous authentication attempts can trigger account lockouts due to security policies that lock accounts after multiple failed login attempts. These repeated attempts can also generate system or web access errors and may slow browsing performance due to the increased authentication traffic and security checks being triggered.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7399,7 +7361,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following explains how a supply chain service provider could introduce a security\nvulnerability into an organization?",
+    "question": "Which of the following explains how a supply chain service provider could introduce a security vulnerability into an organization?",
     "choices": [
       {
         "key": "A",
@@ -7421,7 +7383,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Supply chain service providers often require privileged or administrative access to the systems\nthey manage or support. Because they interact with multiple client environments and maintain\nelevated permissions, they become attractive targets for attackers. If a provider is compromised,\nattackers can leverage that trusted access to infiltrate the organization's systems, introducing\nvulnerabilities and enabling unauthorized access.",
+    "explanation": "Supply chain service providers often require privileged or administrative access to the systems they manage or support. Because they interact with multiple client environments and maintain elevated permissions, they become attractive targets for attackers. If a provider is compromised, attackers can leverage that trusted access to infiltrate the organization's systems, introducing vulnerabilities and enabling unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7437,7 +7399,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "multi",
-    "question": "A company performed an assessment of its security posture and found a lack of controls to\nadequately protect from exploitation legacy systems at manufacturing sites.\nWhich of the following controls should be set up for this type of environment? (Choose two.)",
+    "question": "A company performed an assessment of its security posture and found a lack of controls to adequately protect from exploitation legacy systems at manufacturing sites.\nWhich of the following controls should be set up for this type of environment? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -7468,7 +7430,7 @@ export const domain2Questions = [
       "A",
       "D"
     ],
-    "explanation": "Segmentation isolates legacy manufacturing systems from the rest of the network, limiting\ncommunication paths and reducing the risk that attackers can reach or laterally move to these\nvulnerable systems. This containment approach is commonly used when legacy systems cannot\nsupport modern security updates.\nA jump server provides a controlled and monitored access point for administrators who need to\nmanage legacy systems. By forcing administrative access through a hardened intermediary\nsystem, the organization can enforce authentication controls, logging, and monitoring while\npreventing direct access to vulnerable systems.",
+    "explanation": "Segmentation isolates legacy manufacturing systems from the rest of the network, limiting communication paths and reducing the risk that attackers can reach or laterally move to these vulnerable systems. This containment approach is commonly used when legacy systems cannot support modern security updates.\nA jump server provides a controlled and monitored access point for administrators who need to manage legacy systems. By forcing administrative access through a hardened intermediary system, the organization can enforce authentication controls, logging, and monitoring while preventing direct access to vulnerable systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7484,7 +7446,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following vulnerabilities will lead to a successful attack that injects <IMG src='http://\nattackersite.net/mycode.sh'> into a web application?",
+    "question": "Which of the following vulnerabilities will lead to a successful attack that injects <IMG src='http:// attackersite.net/mycode.sh'> into a web application?",
     "choices": [
       {
         "key": "A",
@@ -7506,7 +7468,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Cross-site scripting occurs when a web application fails to properly validate or sanitize user\ninput, allowing attackers to inject malicious client-side code into web pages viewed by other\nusers. Injecting an HTML tag such as an image element that loads content from a malicious site\nis a common XSS technique.\nWhen the page renders, the browser processes the injected code, which can execute attacker-\ncontrolled scripts or retrieve malicious resources.",
+    "explanation": "Cross-site scripting occurs when a web application fails to properly validate or sanitize user input, allowing attackers to inject malicious client-side code into web pages viewed by other users. Injecting an HTML tag such as an image element that loads content from a malicious site is a common XSS technique.\nWhen the page renders, the browser processes the injected code, which can execute attacker- controlled scripts or retrieve malicious resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7522,7 +7484,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A nation-state attacker gains access to the email accounts of several journalists by\ncompromising a website that the journalists frequently use.\nWhich of the following types of attacks describes this example?",
+    "question": "A nation-state attacker gains access to the email accounts of several journalists by compromising a website that the journalists frequently use.\nWhich of the following types of attacks describes this example?",
     "choices": [
       {
         "key": "A",
@@ -7544,7 +7506,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering-hole attack occurs when attackers compromise a website that is commonly visited\nby a specific group of targets. Instead of directly attacking the victims, the attacker infects or\nmanipulates the trusted site so that when the intended targets visit it, their systems or accounts\ncan be compromised. This technique is often used by advanced threat actors to target particular\norganizations or individuals.",
+    "explanation": "A watering-hole attack occurs when attackers compromise a website that is commonly visited by a specific group of targets. Instead of directly attacking the victims, the attacker infects or manipulates the trusted site so that when the intended targets visit it, their systems or accounts can be compromised. This technique is often used by advanced threat actors to target particular organizations or individuals.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7560,7 +7522,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A security administrator wants to determine it the company's social engineering training is\neffective.\nWhich of the following should the administrator do to complete this task?",
+    "question": "A security administrator wants to determine it the company's social engineering training is effective.\nWhich of the following should the administrator do to complete this task?",
     "choices": [
       {
         "key": "A",
@@ -7582,7 +7544,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Conducting a phishing campaign simulates a real social engineering attack against employees\nto measure how they respond. By tracking metrics such as how many users click malicious links\nor report the email, the organization can objectively evaluate whether the social engineering\ntraining has improved employee awareness and behavior.",
+    "explanation": "Conducting a phishing campaign simulates a real social engineering attack against employees to measure how they respond. By tracking metrics such as how many users click malicious links or report the email, the organization can objectively evaluate whether the social engineering training has improved employee awareness and behavior.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7598,7 +7560,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "An employee asks a security analyst to scan a suspicious email that contains a risk to a file on a\nfile-sharing site. The analyst determines that the file is safe after downloading and scanning the\nfile with antivirus software.\nWhen the employee opens the file, their device is infected with ransomware.\nWhich of the following steps should the analyst have taken?",
+    "question": "An employee asks a security analyst to scan a suspicious email that contains a risk to a file on a file-sharing site. The analyst determines that the file is safe after downloading and scanning the file with antivirus software.\nWhen the employee opens the file, their device is infected with ransomware.\nWhich of the following steps should the analyst have taken?",
     "choices": [
       {
         "key": "A",
@@ -7620,7 +7582,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Executing the file in a sandbox allows the analyst to observe the behavior of the file in an\nisolated environment without risking the production system. Sandboxing detects malicious\nactions such as ransomware behavior, including attempts to encrypt files, modify system\nprocesses, or contact command-and-control servers. This behavioral analysis can reveal threats\nthat traditional antivirus scanning may miss.",
+    "explanation": "Executing the file in a sandbox allows the analyst to observe the behavior of the file in an isolated environment without risking the production system. Sandboxing detects malicious actions such as ransomware behavior, including attempts to encrypt files, modify system processes, or contact command-and-control servers. This behavioral analysis can reveal threats that traditional antivirus scanning may miss.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7636,7 +7598,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "multi",
-    "question": "A security analyst assesses the deployment of a security appliance. The security appliance\nmust perform the following functions.\n• The appliance should monitor all traffic to and from the internet. • The appliance should\nmonitor all east-west traffic inside the data center • The appliance should be able to detect and\nblock malicious lateral movement. • The appliance network interface is bandwidth-limited to\n1G.\nWhich of the following should the security analyst implement for a compliant and scalable\ndeployment? (Choose two.)",
+    "question": "A security analyst assesses the deployment of a security appliance. The security appliance must perform the following functions.\n• The appliance should monitor all traffic to and from the internet. • The appliance should monitor all east-west traffic inside the data center • The appliance should be able to detect and block malicious lateral movement. • The appliance network interface is bandwidth-limited to 1G.\nWhich of the following should the security analyst implement for a compliant and scalable deployment? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -7667,7 +7629,7 @@ export const domain2Questions = [
       "E",
       "F"
     ],
-    "explanation": "Configuring API integrations between the appliance and network devices allows the appliance to\ninstruct switches, routers, or firewalls to block or filter malicious traffic once threats such as\nlateral movement are detected. This approach enables enforcement across the network without\nrequiring all traffic to pass directly through the appliance, supporting scalability.\nSetting up a network tap and sending connection metadata to the appliance allows the\nappliance to monitor both north-south and east-west traffic without being placed inline. Because\nthe appliance interface is limited to 1Gbps, sending metadata instead of full traffic ensures\nvisibility while avoiding bandwidth limitations and maintaining scalable monitoring.",
+    "explanation": "Configuring API integrations between the appliance and network devices allows the appliance to instruct switches, routers, or firewalls to block or filter malicious traffic once threats such as lateral movement are detected. This approach enables enforcement across the network without requiring all traffic to pass directly through the appliance, supporting scalability.\nSetting up a network tap and sending connection metadata to the appliance allows the appliance to monitor both north-south and east-west traffic without being placed inline. Because the appliance interface is limited to 1Gbps, sending metadata instead of full traffic ensures visibility while avoiding bandwidth limitations and maintaining scalable monitoring.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7683,7 +7645,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize\nthe existing security infrastructure and address issues with legacy software and assets.\nWhich of the following should the CISO use to determine the scope of the legacy infrastructure\nand develop a risk-based approach to modernization?",
+    "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets.\nWhich of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
     "choices": [
       {
         "key": "A",
@@ -7705,7 +7667,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "CIS benchmarks provide industry-recognized configuration and security best practices for\noperating systems, applications, and network devices. By comparing existing systems against\nthese benchmarks, an organization can identify outdated or insecure configurations associated\nwith legacy infrastructure. This assessment helps determine the scope of modernization efforts\nand supports a risk-based approach by highlighting areas that require remediation or upgrades.",
+    "explanation": "CIS benchmarks provide industry-recognized configuration and security best practices for operating systems, applications, and network devices. By comparing existing systems against these benchmarks, an organization can identify outdated or insecure configurations associated with legacy infrastructure. This assessment helps determine the scope of modernization efforts and supports a risk-based approach by highlighting areas that require remediation or upgrades.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7721,7 +7683,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "An attacker forces an internal company employee to inject malware into corporate systems\nunder threat of publishing the employee's sensitive personal files.\nWhich of the following best describes the attacker's motivation in this type of attack?",
+    "question": "An attacker forces an internal company employee to inject malware into corporate systems under threat of publishing the employee's sensitive personal files.\nWhich of the following best describes the attacker's motivation in this type of attack?",
     "choices": [
       {
         "key": "A",
@@ -7743,7 +7705,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Blackmail occurs when an attacker threatens to expose sensitive or damaging information about\na victim unless the victim complies with certain demands. In this scenario, the attacker coerces\nthe employee into installing malware by threatening to publish the employee's private files,\nwhich is a classic form of coercion through blackmail.",
+    "explanation": "Blackmail occurs when an attacker threatens to expose sensitive or damaging information about a victim unless the victim complies with certain demands. In this scenario, the attacker coerces the employee into installing malware by threatening to publish the employee's private files, which is a classic form of coercion through blackmail.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7759,7 +7721,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following security threats aims to compromise a website that multiple employees\nfrequently visit?",
+    "question": "Which of the following security threats aims to compromise a website that multiple employees frequently visit?",
     "choices": [
       {
         "key": "A",
@@ -7781,7 +7743,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A watering hole attack targets a website that a specific group of users frequently visits and\ncompromises it to infect those users when they access the site.",
+    "explanation": "A watering hole attack targets a website that a specific group of users frequently visits and compromises it to infect those users when they access the site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7819,7 +7781,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Unknown USB devices can be malicious, so they should not be connected to any system.\nSubmitting the device to the security team allows it to be handled safely using proper forensic\nand security procedures.",
+    "explanation": "Unknown USB devices can be malicious, so they should not be connected to any system.\nSubmitting the device to the security team allows it to be handled safely using proper forensic and security procedures.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7835,7 +7797,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following best describes a threat actor who can coordinate a cyberattack to disable\nsensors and execute kinetic effects?",
+    "question": "Which of the following best describes a threat actor who can coordinate a cyberattack to disable sensors and execute kinetic effects?",
     "choices": [
       {
         "key": "A",
@@ -7857,7 +7819,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A nation-state actor has the resources, expertise, and strategic capability to conduct advanced\ncyberattacks that can impact physical systems, including disabling sensors and enabling kinetic\neffects.",
+    "explanation": "A nation-state actor has the resources, expertise, and strategic capability to conduct advanced cyberattacks that can impact physical systems, including disabling sensors and enabling kinetic effects.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7873,7 +7835,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "While analyzing SIEM alerts for a company WAR an incident response analyst observes the\nfollowing:\nhttps://corporate-A.com/loadimage?filename=../../../etc/ https://corporate-\nA.com/loadimage?filename=../../../etc/passwd https://corporate-\nA.com/loadimage?filename=../../../etc/passwd\nWhich of the following best describes the observed behavior?",
+    "question": "While analyzing SIEM alerts for a company WAR an incident response analyst observes the following:\nhttps://corporate-A.com/loadimage?filename=../../../etc/ https://corporate- A.com/loadimage?filename=../../../etc/passwd https://corporate- A.com/loadimage?filename=../../../etc/passwd Which of the following best describes the observed behavior?",
     "choices": [
       {
         "key": "A",
@@ -7895,7 +7857,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The use of sequences like \"../../../\" indicates attempts to navigate outside the intended directory\nstructure to access restricted files such as /etc/passwd, which is characteristic of a directory\ntraversal attack.",
+    "explanation": "The use of sequences like \"../../../\" indicates attempts to navigate outside the intended directory structure to access restricted files such as /etc/passwd, which is characteristic of a directory traversal attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7911,7 +7873,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security technician determines that no additional patches can be applied to an application and\nthe risks of operating as such must be accepted. Additionally, only a limited number of network\nservices should utilize the application.\nWhich of the following best describes this type of mitigation?",
+    "question": "A security technician determines that no additional patches can be applied to an application and the risks of operating as such must be accepted. Additionally, only a limited number of network services should utilize the application.\nWhich of the following best describes this type of mitigation?",
     "choices": [
       {
         "key": "A",
@@ -7933,7 +7895,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Isolation limits exposure by restricting the application's interaction to only necessary services,\nreducing risk when patching is no longer possible.",
+    "explanation": "Isolation limits exposure by restricting the application's interaction to only necessary services, reducing risk when patching is no longer possible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7949,7 +7911,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A security analyst receives an alert that an employee has clicked on a phishing email and\nexposed their credentials.\nWhich of the following should the analyst do?",
+    "question": "A security analyst receives an alert that an employee has clicked on a phishing email and exposed their credentials.\nWhich of the following should the analyst do?",
     "choices": [
       {
         "key": "A",
@@ -7971,7 +7933,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Locking the compromised account immediately prevents attackers from using the exposed\ncredentials to gain unauthorized access, containing the incident quickly.",
+    "explanation": "Locking the compromised account immediately prevents attackers from using the exposed credentials to gain unauthorized access, containing the incident quickly.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8009,7 +7971,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RTOS-based systems often have limited protections and may be vulnerable to code injection,\nallowing attackers to execute malicious code directly on embedded or real-time systems.",
+    "explanation": "RTOS-based systems often have limited protections and may be vulnerable to code injection, allowing attackers to execute malicious code directly on embedded or real-time systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8025,7 +7987,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "After a cybersecurity event, a company audits its enterprise VoIP system to find ways to reduce\nits attack surface. The company has a flat network.\nWhich of the following changes should a security administrator implement to reduce the attack\nsurface on the VoIP system?",
+    "question": "After a cybersecurity event, a company audits its enterprise VoIP system to find ways to reduce its attack surface. The company has a flat network.\nWhich of the following changes should a security administrator implement to reduce the attack surface on the VoIP system?",
     "choices": [
       {
         "key": "A",
@@ -8047,7 +8009,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Placing the VoIP system in its own VLAN segments it from the rest of the flat network, limiting\nexposure and reducing the attack surface by restricting access to only necessary traffic.",
+    "explanation": "Placing the VoIP system in its own VLAN segments it from the rest of the flat network, limiting exposure and reducing the attack surface by restricting access to only necessary traffic.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8085,7 +8047,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly sanitized and constrained,\npreventing malicious input such as SQL commands from being executed against a database.",
+    "explanation": "Input validation ensures that user-supplied data is properly sanitized and constrained, preventing malicious input such as SQL commands from being executed against a database.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8101,7 +8063,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "While a school district is performing state testing, a security analyst notices that all internet\nservices are unavailable. The analyst discovers that ARP poisoning is occurring on the network\nand then terminates access for the host.\nWhich of the following is most likely responsible for this malicious activity?",
+    "question": "While a school district is performing state testing, a security analyst notices that all internet services are unavailable. The analyst discovers that ARP poisoning is occurring on the network and then terminates access for the host.\nWhich of the following is most likely responsible for this malicious activity?",
     "choices": [
       {
         "key": "A",
@@ -8123,7 +8085,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "ARP poisoning is a relatively simple attack that can be executed with readily available tools,\nmaking it most likely associated with an unskilled attacker rather than advanced or credential-\nbased threats.",
+    "explanation": "ARP poisoning is a relatively simple attack that can be executed with readily available tools, making it most likely associated with an unskilled attacker rather than advanced or credential- based threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8139,7 +8101,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A security analyst discovers an application written in C that does not properly validate the length\nof user input before copying it into a fixed-size array. To which of the following is the application\nvulnerable?",
+    "question": "A security analyst discovers an application written in C that does not properly validate the length of user input before copying it into a fixed-size array. To which of the following is the application vulnerable?",
     "choices": [
       {
         "key": "A",
@@ -8161,7 +8123,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Failing to validate input length when copying data into a fixed-size array can overwrite adjacent\nmemory, which is characteristic of a buffer overflow vulnerability.",
+    "explanation": "Failing to validate input length when copying data into a fixed-size array can overwrite adjacent memory, which is characteristic of a buffer overflow vulnerability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8177,7 +8139,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following is the most appropriate reason for a server technician to disable unused\nports and services on an externally facing DNS server?",
+    "question": "Which of the following is the most appropriate reason for a server technician to disable unused ports and services on an externally facing DNS server?",
     "choices": [
       {
         "key": "A",
@@ -8199,7 +8161,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Disabling unused ports and services removes unnecessary entry points, reducing the attack\nsurface and minimizing opportunities for exploitation.",
+    "explanation": "Disabling unused ports and services removes unnecessary entry points, reducing the attack surface and minimizing opportunities for exploitation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8215,7 +8177,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without\ndisrupting current connectivity while transitioning to DNSSEC. Given the following company\nservers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20\nWhich of the following should the security administrator do?",
+    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20 Which of the following should the security administrator do?",
     "choices": [
       {
         "key": "A",
@@ -8237,7 +8199,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "DNSSEC can require DNS traffic over both UDP and TCP on port 53. Updating the DNS rule to\nallow both protocols to the DNS server enables DNSSEC testing without disrupting existing\nDNS connectivity.",
+    "explanation": "DNSSEC can require DNS traffic over both UDP and TCP on port 53. Updating the DNS rule to allow both protocols to the DNS server enables DNSSEC testing without disrupting existing DNS connectivity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8253,7 +8215,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A new appliance is deployed with hardened settings. The security team wants to prevent a\ndecrease in its security posture over time.\nWhich of the following will best help achieve this goal?",
+    "question": "A new appliance is deployed with hardened settings. The security team wants to prevent a decrease in its security posture over time.\nWhich of the following will best help achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -8275,7 +8237,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Monitoring configuration ensures that any changes to the hardened baseline are detected over\ntime, helping maintain the intended security posture by identifying drift or unauthorized\nmodifications.",
+    "explanation": "Monitoring configuration ensures that any changes to the hardened baseline are detected over time, helping maintain the intended security posture by identifying drift or unauthorized modifications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8291,7 +8253,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following best explains how open service ports increase an organization's attack\nsurface?",
+    "question": "Which of the following best explains how open service ports increase an organization's attack surface?",
     "choices": [
       {
         "key": "A",
@@ -8313,13 +8275,13 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Open service ports expose running services, and if those services are unnecessary or\nimproperly secured, they provide entry points that attackers can exploit to gain unauthorized\naccess.",
+    "explanation": "Open service ports expose running services, and if those services are unnecessary or improperly secured, they provide entry points that attackers can exploit to gain unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p369",
     "needsReview": true,
-    "inferenceConfidence": 0.692,
+    "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8329,7 +8291,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following vulnerability types exploits missing safeguards when processing multiple,\nduplicate, and concurrent requests?",
+    "question": "Which of the following vulnerability types exploits missing safeguards when processing multiple, duplicate, and concurrent requests?",
     "choices": [
       {
         "key": "A",
@@ -8351,7 +8313,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A race condition occurs when multiple concurrent requests are processed without\nproper synchronization, allowing attackers to exploit timing issues and bypass safeguards.",
+    "explanation": "A race condition occurs when multiple concurrent requests are processed without proper synchronization, allowing attackers to exploit timing issues and bypass safeguards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8367,7 +8329,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "Which of the following phishing-resistant authentication methods reduce the chances of\nsuccessful social engineering attacks? (Choose two.)",
+    "question": "Which of the following phishing-resistant authentication methods reduce the chances of successful social engineering attacks? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -8398,7 +8360,7 @@ export const domain2Questions = [
       "C",
       "E"
     ],
-    "explanation": "Passwordless authentication removes reliance on passwords, reducing susceptibility to\nphishing. Security keys use cryptographic authentication tied to specific domains, making them\nresistant to phishing and social engineering attacks.",
+    "explanation": "Passwordless authentication removes reliance on passwords, reducing susceptibility to phishing. Security keys use cryptographic authentication tied to specific domains, making them resistant to phishing and social engineering attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8414,7 +8376,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "Which of the following is an adversary leveraging when they inject malicious code into regular\nvendor updates?",
+    "question": "Which of the following is an adversary leveraging when they inject malicious code into regular vendor updates?",
     "choices": [
       {
         "key": "A",
@@ -8436,7 +8398,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Injecting malicious code into vendor updates compromises the trusted distribution process,\nwhich is characteristic of a supply chain attack.",
+    "explanation": "Injecting malicious code into vendor updates compromises the trusted distribution process, which is characteristic of a supply chain attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8452,7 +8414,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A Chief Executive Officer (CEO) receives an email that states a pending bonus payment for\nemployees is awaiting CEO approval.\nWhen the CEO hovers over the sender display name, they find the email was sent from an\nexternal domain.\nWhich of the following social engineering attacks best describes this scenario?",
+    "question": "A Chief Executive Officer (CEO) receives an email that states a pending bonus payment for employees is awaiting CEO approval.\nWhen the CEO hovers over the sender display name, they find the email was sent from an external domain.\nWhich of the following social engineering attacks best describes this scenario?",
     "choices": [
       {
         "key": "A",
@@ -8474,7 +8436,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Whaling is a targeted phishing attack aimed at senior executives or high-profile individuals. The\nmessage is crafted around executive-level authority, such as approving employee bonus\npayments, to trick the CEO into taking action.",
+    "explanation": "Whaling is a targeted phishing attack aimed at senior executives or high-profile individuals. The message is crafted around executive-level authority, such as approving employee bonus payments, to trick the CEO into taking action.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8490,7 +8452,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A security administrator's supervisor wants their credentials reset because of concern about a\npotential cyberattack.\nWhich of the following motivators does this describe?",
+    "question": "A security administrator's supervisor wants their credentials reset because of concern about a potential cyberattack.\nWhich of the following motivators does this describe?",
     "choices": [
       {
         "key": "A",
@@ -8512,7 +8474,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Fear is the motivator when action is driven by concern about a possible threat or negative\noutcome. Resetting credentials because of worry about a potential cyberattack reflects a fear-\nbased response.",
+    "explanation": "Fear is the motivator when action is driven by concern about a possible threat or negative outcome. Resetting credentials because of worry about a potential cyberattack reflects a fear- based response.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8528,7 +8490,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Security analysts perform a network discovery scan on the production environment and find\n2,000 desktops and laptops are present on the network. The company previously documented\nonly 1,500 devices in use.\nWhich of the following presents the most critical risk to the company?",
+    "question": "Security analysts perform a network discovery scan on the production environment and find 2,000 desktops and laptops are present on the network. The company previously documented only 1,500 devices in use.\nWhich of the following presents the most critical risk to the company?",
     "choices": [
       {
         "key": "A",
@@ -8550,7 +8512,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A large number of undocumented devices indicates weak asset inventory and possible\nunauthorized endpoints on the network. These unmanaged devices may lack required security\ncontrols, increasing the risk that sensitive company information could be exposed, accessed, or\nexfiltrated.",
+    "explanation": "A large number of undocumented devices indicates weak asset inventory and possible unauthorized endpoints on the network. These unmanaged devices may lack required security controls, increasing the risk that sensitive company information could be exposed, accessed, or exfiltrated.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8566,7 +8528,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following describes when a user installs an unauthorized application by bypassing\nthe authorized application store and installing a binary file?",
+    "question": "Which of the following describes when a user installs an unauthorized application by bypassing the authorized application store and installing a binary file?",
     "choices": [
       {
         "key": "A",
@@ -8588,7 +8550,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sideloading is the installation of an application from outside the authorized or official application\nstore, often by manually installing a binary package.",
+    "explanation": "Sideloading is the installation of an application from outside the authorized or official application store, often by manually installing a binary package.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8604,7 +8566,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A group of attackers launches a DDoS attack against a financial institution. This attack takes\ndown the institution's public website and online banking services for several hours. The group\ndoes not steal any data or demand a ransom.\nWhich of the following motivations is most likely behind this attack?",
+    "question": "A group of attackers launches a DDoS attack against a financial institution. This attack takes down the institution's public website and online banking services for several hours. The group does not steal any data or demand a ransom.\nWhich of the following motivations is most likely behind this attack?",
     "choices": [
       {
         "key": "A",
@@ -8626,7 +8588,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A DDoS attack is intended to overwhelm services and make them unavailable to legitimate\nusers. Since no data was stolen and no ransom was demanded, the primary motivation is\ndisrupting the institution's services.",
+    "explanation": "A DDoS attack is intended to overwhelm services and make them unavailable to legitimate users. Since no data was stolen and no ransom was demanded, the primary motivation is disrupting the institution's services.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8642,7 +8604,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following explains how regular patching helps mitigate risks when securing an\nenterprise environment?",
+    "question": "Which of the following explains how regular patching helps mitigate risks when securing an enterprise environment?",
     "choices": [
       {
         "key": "A",
@@ -8664,7 +8626,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Regular patching reduces risk by fixing known software vulnerabilities before attackers can\nexploit them in the enterprise environment.",
+    "explanation": "Regular patching reduces risk by fixing known software vulnerabilities before attackers can exploit them in the enterprise environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8702,7 +8664,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The highest priority is the vulnerability with the highest severity score on an internet-facing\nserver. This combination creates the greatest exposure and risk, so it should be patched first.",
+    "explanation": "The highest priority is the vulnerability with the highest severity score on an internet-facing server. This combination creates the greatest exposure and risk, so it should be patched first.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8740,7 +8702,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Insecure protocols enabled on a network device represent a configuration weakness. Turning\nthem off is a hardening action that remediates device misconfigurations.",
+    "explanation": "Insecure protocols enabled on a network device represent a configuration weakness. Turning them off is a hardening action that remediates device misconfigurations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8756,7 +8718,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "An attacker floods an organization's VoIP phone system with thousands of requests. This\ncauses legitimate calls to drop or fail to connect. Analysis shows the attacker faked internal\nextensions to trick users into answering calls and sharing sensitive information.\nWhich of the following types of attacks has the attacker used in this incident? (Choose two.)",
+    "question": "An attacker floods an organization's VoIP phone system with thousands of requests. This causes legitimate calls to drop or fail to connect. Analysis shows the attacker faked internal extensions to trick users into answering calls and sharing sensitive information.\nWhich of the following types of attacks has the attacker used in this incident? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -8788,7 +8750,7 @@ export const domain2Questions = [
       "D",
       "E"
     ],
-    "explanation": "The attacker used SIP spoofing by faking internal VoIP extensions, vishing by tricking users\nover phone calls into sharing sensitive information, and a denial-of-service attack by flooding the\nVoIP system with requests that caused legitimate calls to fail.",
+    "explanation": "The attacker used SIP spoofing by faking internal VoIP extensions, vishing by tricking users over phone calls into sharing sensitive information, and a denial-of-service attack by flooding the VoIP system with requests that caused legitimate calls to fail.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8804,7 +8766,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following describes the purpose of a Common Vulnerabilities and Exposure (CVE)\ndatabase?",
+    "question": "Which of the following describes the purpose of a Common Vulnerabilities and Exposure (CVE) database?",
     "choices": [
       {
         "key": "A",
@@ -8826,7 +8788,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The CVE database provides a standardized public catalog of identified cybersecurity\nvulnerabilities, giving each vulnerability a unique identifier so organizations, vendors, and\nsecurity tools can consistently reference and track it.",
+    "explanation": "The CVE database provides a standardized public catalog of identified cybersecurity vulnerabilities, giving each vulnerability a unique identifier so organizations, vendors, and security tools can consistently reference and track it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8864,7 +8826,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is significant because it breaks the isolation between the virtual machine and the\nunderlying host. This can allow malicious code inside a guest VM to access or affect the host\nsystem or other guest machines.",
+    "explanation": "VM escape is significant because it breaks the isolation between the virtual machine and the underlying host. This can allow malicious code inside a guest VM to access or affect the host system or other guest machines.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8880,7 +8842,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A user reports to the security team that they opened a phishing email. The security team\nobserves multiple computers on the network are experiencing the blue screen of death (BSOD).\nWhich of the following is the most likely cause?",
+    "question": "A user reports to the security team that they opened a phishing email. The security team observes multiple computers on the network are experiencing the blue screen of death (BSOD).\nWhich of the following is the most likely cause?",
     "choices": [
       {
         "key": "A",
@@ -8902,7 +8864,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An attachment-based worm can be delivered through a phishing email and then self-propagate\nacross the network. The fact that multiple computers are affected after the email was opened\nindicates malware spreading beyond the initial system, which is characteristic of a worm.",
+    "explanation": "An attachment-based worm can be delivered through a phishing email and then self-propagate across the network. The fact that multiple computers are affected after the email was opened indicates malware spreading beyond the initial system, which is characteristic of a worm.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8940,7 +8902,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Removable devices can carry malware directly into systems, including isolated or air-gapped\nenvironments that do not have internet access. This makes them a common attack vector for\nbypassing network-based defenses.",
+    "explanation": "Removable devices can carry malware directly into systems, including isolated or air-gapped environments that do not have internet access. This makes them a common attack vector for bypassing network-based defenses.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8978,7 +8940,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A proxy can terminate and inspect encrypted sessions at the network edge, allowing security\ntools to view traffic contents before forwarding it. This is commonly used for TLS/SSL inspection\nand web traffic monitoring.",
+    "explanation": "A proxy can terminate and inspect encrypted sessions at the network edge, allowing security tools to view traffic contents before forwarding it. This is commonly used for TLS/SSL inspection and web traffic monitoring.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8994,7 +8956,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following is a reason a large language model (LLM) in training mode responds with\ndifferent output for the same input prompts?",
+    "question": "Which of the following is a reason a large language model (LLM) in training mode responds with different output for the same input prompts?",
     "choices": [
       {
         "key": "A",
@@ -9016,7 +8978,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hallucinations can cause an LLM to generate inconsistent or inaccurate responses, even when\ngiven the same prompt. This happens because LLM outputs are probabilistic and may vary\ndepending on model behavior during generation or training-related conditions.",
+    "explanation": "Hallucinations can cause an LLM to generate inconsistent or inaccurate responses, even when given the same prompt. This happens because LLM outputs are probabilistic and may vary depending on model behavior during generation or training-related conditions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9054,7 +9016,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A brute-force password-cracking attempt is a threat because it is a malicious action that can\nexploit weak authentication and potentially compromise a user account.",
+    "explanation": "A brute-force password-cracking attempt is a threat because it is a malicious action that can exploit weak authentication and potentially compromise a user account.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9070,7 +9032,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A security analyst needs to analyze the pattern of a threat actor to document the steps used in\nan incident.\nWhich of the following is best suited for this exercise?",
+    "question": "A security analyst needs to analyze the pattern of a threat actor to document the steps used in an incident.\nWhich of the following is best suited for this exercise?",
     "choices": [
       {
         "key": "A",
@@ -9092,7 +9054,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MITRE ATT&CK documents adversary behavior through tactics and techniques, making it well\nsuited for mapping the sequence of actions a threat actor used during an incident.",
+    "explanation": "MITRE ATT&CK documents adversary behavior through tactics and techniques, making it well suited for mapping the sequence of actions a threat actor used during an incident.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9108,7 +9070,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "multi",
-    "question": "Which of the following will best help a security analyst implement and maintain a cloud services\npolicy to reduce the likelihood of vulnerabilities being introduced by users or shadow IT?\n(Choose two.)",
+    "question": "Which of the following will best help a security analyst implement and maintain a cloud services policy to reduce the likelihood of vulnerabilities being introduced by users or shadow IT?\n(Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -9139,7 +9101,7 @@ export const domain2Questions = [
       "A",
       "F"
     ],
-    "explanation": "Least privilege limits users to only the permissions and cloud services required for their roles,\nreducing unauthorized deployment or configuration of services. Application allow listing restricts\nusers to approved applications and services, helping prevent shadow IT and reducing the\nintroduction of unapproved or vulnerable software.",
+    "explanation": "Least privilege limits users to only the permissions and cloud services required for their roles, reducing unauthorized deployment or configuration of services. Application allow listing restricts users to approved applications and services, helping prevent shadow IT and reducing the introduction of unapproved or vulnerable software.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9155,7 +9117,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "Which of the following best describes the type of threat actor motivated by a philosophical\ncause?",
+    "question": "Which of the following best describes the type of threat actor motivated by a philosophical cause?",
     "choices": [
       {
         "key": "A",
@@ -9177,7 +9139,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A hacktivist is primarily motivated by ideological, political, social, or philosophical causes. Such\nactors use cyberattacks to promote a belief, draw attention to an issue, or disrupt organizations\nthey oppose.",
+    "explanation": "A hacktivist is primarily motivated by ideological, political, social, or philosophical causes. Such actors use cyberattacks to promote a belief, draw attention to an issue, or disrupt organizations they oppose.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9193,7 +9155,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A vendor prepares to release a patch for a previously unknown vulnerability that is now being\nactively exploited in the wild.\nWhich of the following best describes this vulnerability?",
+    "question": "A vendor prepares to release a patch for a previously unknown vulnerability that is now being actively exploited in the wild.\nWhich of the following best describes this vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -9215,7 +9177,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A zero-day vulnerability is a previously unknown security flaw for which an effective patch was\nnot available when attackers began exploiting it. Active exploitation before the vendor can\nrelease a fix is characteristic of a zero-day vulnerability.",
+    "explanation": "A zero-day vulnerability is a previously unknown security flaw for which an effective patch was not available when attackers began exploiting it. Active exploitation before the vendor can release a fix is characteristic of a zero-day vulnerability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],

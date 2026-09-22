@@ -9,77 +9,77 @@ export const UNSUPPORTED_QUESTIONS = [
     "id": "q0003",
     "number": 3,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "HOTSPOT (Drag and Drop is not supported)\nYou are a security administrator investigating a potential infection on a network.\nINSTRUCTIONS\nClick on each host and firewall. Review all logs to determine which host originated the infection\nand then identify if each remaining host is clean or infected.\nIf at any time you would like to bring back the initial state of the simulation, please click the\nRese",
+    "question": "HOTSPOT (Drag and Drop is not supported) You are a security administrator investigating a potential infection on a network.\nINSTRUCTIONS Click on each host and firewall. Review all logs to determine which host originated the infection and then identify if each remaining host is clean or infected.\nIf at any time you would like to bring back the initial state of the simulation, please click the Rese",
     "source": "SY0-701_en.pdf#p3"
   },
   {
     "id": "q0103",
     "number": 103,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION\nA systems administrator is configuring a site-to-site VPN between two branch offices. Some of\nthe settings have already been configured correctly. The systems administrator has been\nprovided the following requirements as part of completing the configuration:\n• Most secure algorithms should be selected\n• All traffic should be encrypted over the VPN\n• A secret password will be used to aut",
+    "question": "SIMULATION A systems administrator is configuring a site-to-site VPN between two branch offices. Some of the settings have already been configured correctly. The systems administrator has been provided the following requirements as part of completing the configuration:\n• Most secure algorithms should be selected\n• All traffic should be encrypted over the VPN\n• A secret password will be used to aut",
     "source": "SY0-701_en.pdf#p40"
   },
   {
     "id": "q0114",
     "number": 114,
     "reason": "only 0 parsed choice(s)",
-    "question": "The security team has been asked to only enable host A (10.2.2.7) and host B (10.3.9.9) to the\nnew isolated network segment (10.9.8.14) that provides access to legacy devices. Access from\nall other hosts should be blocked.\nWhich of the following entries would need to be added on the firewall?\nA.\nB.\nC.\nD.",
+    "question": "The security team has been asked to only enable host A (10.2.2.7) and host B (10.3.9.9) to the new isolated network segment (10.9.8.14) that provides access to legacy devices. Access from all other hosts should be blocked.\nWhich of the following entries would need to be added on the firewall?\nA.\nB.\nC.\nD.",
     "source": "SY0-701_en.pdf#p52"
   },
   {
     "id": "q0115",
     "number": 115,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION\nA security analyst is creating the first draft of a network diagram for the company's new\ncustomer-facing payment application that will be hosted by a third-party cloud service provider.\nINSTRUCTIONS\nClick the ? to select the appropriate icons to create a secure, redundant web application. Then\nuse the dropdown menu to select the appropriate subnet type. Every space in the diagram must\n",
+    "question": "SIMULATION A security analyst is creating the first draft of a network diagram for the company's new customer-facing payment application that will be hosted by a third-party cloud service provider.\nINSTRUCTIONS Click the ? to select the appropriate icons to create a secure, redundant web application. Then use the dropdown menu to select the appropriate subnet type. Every space in the diagram must ",
     "source": "SY0-701_en.pdf#p53"
   },
   {
     "id": "q0255",
     "number": 255,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "HOTSPOT (Drag and Drop is not supported)\nA security architect is tasked with designing a highly resilient, business-critical application. The\napplication SLA is 99.999%.\nINSTRUCTIONS\nSelect the network, power, and server components for the appropriate locations to achieve\napplication resiliency.\nA component should be selected for each location, and components may be selected more than\nonce.\nIf at ",
+    "question": "HOTSPOT (Drag and Drop is not supported) A security architect is tasked with designing a highly resilient, business-critical application. The application SLA is 99.999%.\nINSTRUCTIONS Select the network, power, and server components for the appropriate locations to achieve application resiliency.\nA component should be selected for each location, and components may be selected more than once.\nIf at ",
     "source": "SY0-701_en.pdf#p113"
   },
   {
     "id": "q0526",
     "number": 526,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "HOTSPOT (Drag and Drop is not supported)\nAn organization has learned that its data is being exchanged on the dark web. The CIO has\nrequested that you investigate and implement the most secure solution to protect employee\naccounts.\nINSTRUCTIONS\nReview the data to identify weak security practices and provide the most appropriate security\nsolution to meet the CIO's requirements.\nIf at any time you wo",
+    "question": "HOTSPOT (Drag and Drop is not supported) An organization has learned that its data is being exchanged on the dark web. The CIO has requested that you investigate and implement the most secure solution to protect employee accounts.\nINSTRUCTIONS Review the data to identify weak security practices and provide the most appropriate security solution to meet the CIO's requirements.\nIf at any time you wo",
     "source": "SY0-701_en.pdf#p223"
   },
   {
     "id": "q0679",
     "number": 679,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION\nA recent black-box penetration test of http://example.com discovered that external website\nvulnerabilities exist, such as directory traversals, cross-site scripting, cross-site forgery, and\ninsecure protocols. You are tasked with reducing the attack space and enabling secure\nprotocols.\nINSTRUCTIONS\nPart 1 Use the drop-down menus to select the appropriate technologies tor each location t",
+    "question": "SIMULATION A recent black-box penetration test of http://example.com discovered that external website vulnerabilities exist, such as directory traversals, cross-site scripting, cross-site forgery, and insecure protocols. You are tasked with reducing the attack space and enabling secure protocols.\nINSTRUCTIONS Part 1 Use the drop-down menus to select the appropriate technologies tor each location t",
     "source": "SY0-701_en.pdf#p284"
   },
   {
     "id": "q0684",
     "number": 684,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION\nYou are a security operations analyst for a healthcare provider. Your main job function is to\ncompare current, high-fidelity threat intelligence feeds to activity occurring on a web server and\nelectronic medical record (EMR) server.\nINSTRUCTIONS\nClick on each threat intelligence feed and console connection to:\n• Review the appropriate threat intelligence feed\n• Determine if your servers",
+    "question": "SIMULATION You are a security operations analyst for a healthcare provider. Your main job function is to compare current, high-fidelity threat intelligence feeds to activity occurring on a web server and electronic medical record (EMR) server.\nINSTRUCTIONS Click on each threat intelligence feed and console connection to:\n• Review the appropriate threat intelligence feed\n• Determine if your servers",
     "source": "SY0-701_en.pdf#p290"
   },
   {
     "id": "q0731",
     "number": 731,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "DRAG DROP (Drag and Drop is not supported)\nA security engineer is setting up passwordless authentication for the first time.\nINSTRUCTIONS\nDrag and drop the MINIMUM set of commands to set this up and verify that it works.\nCommands may only be used once, and not all will be used.\nIf at any time you would like to bring back the initial state of the simulation, please click the\nReset All button.\nSelec",
+    "question": "DRAG DROP (Drag and Drop is not supported) A security engineer is setting up passwordless authentication for the first time.\nINSTRUCTIONS Drag and drop the MINIMUM set of commands to set this up and verify that it works.\nCommands may only be used once, and not all will be used.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\nSelec",
     "source": "SY0-701_en.pdf#p310"
   },
   {
     "id": "q0852",
     "number": 852,
     "reason": "dropped by correction: Source corruption: the PDF pairs this stem (migrating to a single integrated authentication solution) with four choices belonging to a different question about anomalous user behaviour, then supplies an explanation rationalising the mismatch. q0970 is the intact copy of the same question (choices: FIDO2 passkeys / SMS OTP / SAML federation / PKI smart cards, key A). Unanswerable as printed.",
-    "question": "A software company currently secures access using a combination of traditional\nusername/password configurations and one-time passwords for MFA. However, employees still\nstruggle to maintain both a password manager and the authenticator application. The company\nwants to migrate to a single, integrated authentication solution that is more secure and provides\na smoother login experience for its emplo",
+    "question": "A software company currently secures access using a combination of traditional username/password configurations and one-time passwords for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its emplo",
     "source": "SY0-701_en.pdf#p360"
   },
   {
     "id": "q0955",
     "number": 955,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "HOTSPOT (Drag and Drop is not supported)\nThe CEO has reported that employees are receiving an email from someone claiming to be the\nCEO and requesting a gift card be sent urgently via email.\nINSTRUCTIONS\nExamine the email message and use the drop-down menus to determine whether each section\nis suspicious or not.\nIf at any time you would like to bring back the initial state of the simulation, pleas",
+    "question": "HOTSPOT (Drag and Drop is not supported) The CEO has reported that employees are receiving an email from someone claiming to be the CEO and requesting a gift card be sent urgently via email.\nINSTRUCTIONS Examine the email message and use the drop-down menus to determine whether each section is suspicious or not.\nIf at any time you would like to bring back the initial state of the simulation, pleas",
     "source": "SY0-701_en.pdf#p400"
   }
 ];

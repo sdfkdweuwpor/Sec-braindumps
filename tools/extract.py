@@ -85,6 +85,35 @@ def normalize(text, where=""):
     return text.strip()
 
 
+SENTENCE_END = re.compile(r"[.!?:;]['\")\]]?$")
+BULLET_START = re.compile(r"^[\u2022\u25cf\u25aa\u25e6-]\s")
+
+
+def unwrap(text):
+    """Rejoin lines the PDF hard-wrapped, keeping deliberate breaks.
+
+    The source wraps prose at a fixed column, so a stem arrives as
+    "...installation of a RADIUS\nserver?" and renders with a break mid
+    sentence. A line is joined to the one above unless that line ended a
+    sentence, or either line is a bullet -- which keeps requirement lists and
+    the scenario/question split intact.
+    """
+    lines = [l for l in text.split("\n")]
+    out = []
+    for line in lines:
+        if not line.strip():
+            out.append("")
+            continue
+        if (out and out[-1].strip()
+                and not SENTENCE_END.search(out[-1].strip())
+                and not BULLET_START.match(line.strip())
+                and not out[-1].strip().endswith(":")):
+            out[-1] = out[-1].rstrip() + " " + line.strip()
+        else:
+            out.append(line.strip())
+    return "\n".join(out).strip()
+
+
 def load_lines():
     """Return [(line, page_number)] with page furniture removed."""
     import pdfplumber
@@ -150,11 +179,11 @@ def parse_block(num, page, body):
         else:
             stem.append(line)
 
-    qtext = normalize("\n".join(stem), f"q{num} stem")
-    parsed_choices = [{"key": k, "text": normalize(t, f"q{num} choice {k}")}
+    qtext = unwrap(normalize("\n".join(stem), f"q{num} stem"))
+    parsed_choices = [{"key": k, "text": unwrap(normalize(t, f"q{num} choice {k}"))}
                       for k, t in choices]
     correct = re.findall(r"[A-H]", answer or "")
-    exp = normalize("\n".join(explanation), f"q{num} explanation") or None
+    exp = unwrap(normalize("\n".join(explanation), f"q{num} explanation")) or None
     # A duplicated "Explanation:" header appears inside a few bodies.
     if exp:
         exp = re.sub(r"^Explanation:\s*", "", exp).strip() or None

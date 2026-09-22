@@ -46,7 +46,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following is the most likely to be used to document risks, responsible parties, and\nthresholds?",
+    "question": "Which of the following is the most likely to be used to document risks, responsible parties, and thresholds?",
     "choices": [
       {
         "key": "A",
@@ -84,7 +84,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following agreement types defines the time frame in which a vendor needs to\nrespond?",
+    "question": "Which of the following agreement types defines the time frame in which a vendor needs to respond?",
     "choices": [
       {
         "key": "A",
@@ -122,7 +122,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An administrator at a small business notices an increase in support calls from employees who\nreceive a blocked page message after trying to navigate to a spoofed website.\nWhich of the following should the administrator do?",
+    "question": "An administrator at a small business notices an increase in support calls from employees who receive a blocked page message after trying to navigate to a spoofed website.\nWhich of the following should the administrator do?",
     "choices": [
       {
         "key": "A",
@@ -160,7 +160,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following teams is best suited to determine whether a company has systems that\ncan be exploited by a potential, identified vulnerability?",
+    "question": "Which of the following teams is best suited to determine whether a company has systems that can be exploited by a potential, identified vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -198,7 +198,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company is reviewing options to enforce user logins after several account takeovers. The\nfollowing conditions must be met as part of the solution:\n• Allow employees to work remotely or from assigned offices around the world.\n• Provide a seamless login experience.\n• Limit the amount of equipment required.\nWhich of the following best meets these conditions?",
+    "question": "A company is reviewing options to enforce user logins after several account takeovers. The following conditions must be met as part of the solution:\n• Allow employees to work remotely or from assigned offices around the world.\n• Provide a seamless login experience.\n• Limit the amount of equipment required.\nWhich of the following best meets these conditions?",
     "choices": [
       {
         "key": "A",
@@ -236,7 +236,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following best describes the risk present after controls and mitigating factors have\nbeen applied?",
+    "question": "Which of the following best describes the risk present after controls and mitigating factors have been applied?",
     "choices": [
       {
         "key": "A",
@@ -274,7 +274,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A city municipality lost its primary data center when a tornado hit the facility.\nWhich of the following should the city staff use immediately after the disaster to handle essential\npublic services?",
+    "question": "A city municipality lost its primary data center when a tornado hit the facility.\nWhich of the following should the city staff use immediately after the disaster to handle essential public services?",
     "choices": [
       {
         "key": "A",
@@ -312,7 +312,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following addresses individual rights such as the right to be informed, the right of\naccess, and the right to be forgotten?",
+    "question": "Which of the following addresses individual rights such as the right to be informed, the right of access, and the right to be forgotten?",
     "choices": [
       {
         "key": "A",
@@ -350,7 +350,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A third-party vendor is moving a particular application to the end-of-life stage at the end of the\ncurrent year.\nWhich of the following is the most critical risk if the company chooses to continue running the\napplication?",
+    "question": "A third-party vendor is moving a particular application to the end-of-life stage at the end of the current year.\nWhich of the following is the most critical risk if the company chooses to continue running the application?",
     "choices": [
       {
         "key": "A",
@@ -388,7 +388,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "multi",
-    "question": "A security analyst at an organization observed several user logins from outside the\norganization's network. The analyst determined that these logins were not performed by\nindividuals within the organization.\nWhich of the following recommendations would reduce the likelihood of future attacks? (Choose\ntwo.)",
+    "question": "A security analyst at an organization observed several user logins from outside the organization's network. The analyst determined that these logins were not performed by individuals within the organization.\nWhich of the following recommendations would reduce the likelihood of future attacks? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -435,7 +435,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following will a global company doing business in the European Union need to be\nconcerned with to avoid legal privacy implications?",
+    "question": "Which of the following will a global company doing business in the European Union need to be concerned with to avoid legal privacy implications?",
     "choices": [
       {
         "key": "A",
@@ -457,7 +457,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The General Data Protection Regulation governs how organizations collect, process, store, and\nprotect personal data of individuals in the European Union. Any global company doing business\nin the EU must comply with its privacy and data protection requirements to avoid legal and\nregulatory penalties.",
+    "explanation": "The General Data Protection Regulation governs how organizations collect, process, store, and protect personal data of individuals in the European Union. Any global company doing business in the EU must comply with its privacy and data protection requirements to avoid legal and regulatory penalties.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -511,7 +511,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A security analyst is evaluating a SaaS application that the human resources department would\nlike to implement. The analyst requests a SOC 2 report from the SaaS vendor.\nWhich of the following processes is the analyst most likely conducting?",
+    "question": "A security analyst is evaluating a SaaS application that the human resources department would like to implement. The analyst requests a SOC 2 report from the SaaS vendor.\nWhich of the following processes is the analyst most likely conducting?",
     "choices": [
       {
         "key": "A",
@@ -587,7 +587,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following should an internal auditor check for first when conducting an audit of the\norganization's risk management program?",
+    "question": "Which of the following should an internal auditor check for first when conducting an audit of the organization's risk management program?",
     "choices": [
       {
         "key": "A",
@@ -609,7 +609,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Policies and procedures form the foundation of an organization's risk management program.\nThey establish the framework and guidelines for managing risks across the organization,\nincluding roles, responsibilities, and the approach for identifying, assessing, and mitigating risks.\nWithout well-defined policies and procedures, it would be challenging to assess other areas of\nrisk management effectively, as they are all built upon these foundational documents.\nAsset management, vulnerability assessment, and business impact analysis are critical\ncomponents of a risk management program, but they should follow a review of policies and\nprocedures. These documents set the standards and processes that the organization uses to\nmanage assets, assess vulnerabilities, and conduct impact analyses.",
+    "explanation": "Policies and procedures form the foundation of an organization's risk management program.\nThey establish the framework and guidelines for managing risks across the organization, including roles, responsibilities, and the approach for identifying, assessing, and mitigating risks.\nWithout well-defined policies and procedures, it would be challenging to assess other areas of risk management effectively, as they are all built upon these foundational documents.\nAsset management, vulnerability assessment, and business impact analysis are critical components of a risk management program, but they should follow a review of policies and procedures. These documents set the standards and processes that the organization uses to manage assets, assess vulnerabilities, and conduct impact analyses.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -622,10 +622,10 @@ export const domain5Questions = [
   {
     "id": "q0128",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "An organization maintains intellectual property that it wants to protect.\nWhich of the following concepts would be most beneficial to add to the company's security\nawareness training program?",
+    "question": "An organization maintains intellectual property that it wants to protect.\nWhich of the following concepts would be most beneficial to add to the company's security awareness training program?",
     "choices": [
       {
         "key": "A",
@@ -647,13 +647,13 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Insider threats pose a significant risk to intellectual property, as insiders often have access to\nsensitive information and may attempt to misuse it. Training employees to recognize signs of\ninsider threats, along with implementing monitoring and reporting protocols, helps protect\nintellectual property from theft or unauthorized disclosure by employees or other trusted\nindividuals within the organization.",
+    "explanation": "Insider threats pose a significant risk to intellectual property, as insiders often have access to sensitive information and may attempt to misuse it. Training employees to recognize signs of insider threats, along with implementing monitoring and reporting protocols, helps protect intellectual property from theft or unauthorized disclosure by employees or other trusted individuals within the organization.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p60",
     "needsReview": true,
-    "inferenceConfidence": 0.321,
+    "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -685,7 +685,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A data inventory provides a comprehensive overview of what data the organization holds, where\nit is stored, and its sensitivity. This information is crucial for assessing the potential impact of a\ndata breach, as it allows the DPO to identify which data would be affected and the associated\nrisks. Additionally, it aids in compliance with data protection regulations by ensuring that\nsensitive data is adequately managed and protected.",
+    "explanation": "A data inventory provides a comprehensive overview of what data the organization holds, where it is stored, and its sensitivity. This information is crucial for assessing the potential impact of a data breach, as it allows the DPO to identify which data would be affected and the associated risks. Additionally, it aids in compliance with data protection regulations by ensuring that sensitive data is adequately managed and protected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -701,7 +701,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "For which of the following reasons would a systems administrator leverage a 3DES hash from\nan installer file that is posted on a vendor's website?",
+    "question": "For which of the following reasons would a systems administrator leverage a 3DES hash from an installer file that is posted on a vendor's website?",
     "choices": [
       {
         "key": "A",
@@ -723,7 +723,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hash (such as one generated using 3DES) is used to verify that the file has not been altered\nor corrupted during download. By comparing the hash of the downloaded file with the one\nprovided by the vendor, the administrator can confirm the file's integrity.",
+    "explanation": "A hash (such as one generated using 3DES) is used to verify that the file has not been altered or corrupted during download. By comparing the hash of the downloaded file with the one provided by the vendor, the administrator can confirm the file's integrity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -739,7 +739,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "After failing an audit twice, an organization has been ordered by a government regulatory\nagency to pay fines.\nWhich of the following causes this action?",
+    "question": "After failing an audit twice, an organization has been ordered by a government regulatory agency to pay fines.\nWhich of the following causes this action?",
     "choices": [
       {
         "key": "A",
@@ -761,7 +761,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failure to meet regulatory standards or requirements (non-compliance) can result in fines and\npenalties imposed by a government regulatory agency.\nWhen an organization does not comply with mandated regulations or fails audits, it may face\nfinancial repercussions to enforce adherence to required standards.",
+    "explanation": "Failure to meet regulatory standards or requirements (non-compliance) can result in fines and penalties imposed by a government regulatory agency.\nWhen an organization does not comply with mandated regulations or fails audits, it may face financial repercussions to enforce adherence to required standards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -777,7 +777,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following consequences would a retail chain most likely face from customers in the\nevent the retailer is non-compliant with PCI DSS?",
+    "question": "Which of the following consequences would a retail chain most likely face from customers in the event the retailer is non-compliant with PCI DSS?",
     "choices": [
       {
         "key": "A",
@@ -799,7 +799,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "While fines, sanctions, and contractual impacts are possible outcomes from regulatory bodies or\npayment processors, reputational damage is the primary consequence directly impacting\ncustomers. If customers learn that the retailer failed to protect their payment information, their\ntrust in the brand may erode, potentially leading to a loss of business and harm to the retailer's\nreputation.",
+    "explanation": "While fines, sanctions, and contractual impacts are possible outcomes from regulatory bodies or payment processors, reputational damage is the primary consequence directly impacting customers. If customers learn that the retailer failed to protect their payment information, their trust in the brand may erode, potentially leading to a loss of business and harm to the retailer's reputation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -815,7 +815,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "An employee emailed a new systems administrator a malicious web link and convinced the\nadministrator to change the email server's password. The employee used this access to remove\nthe mailboxes of key personnel.\nWhich of the following security awareness concepts would help prevent this threat in the future?",
+    "question": "An employee emailed a new systems administrator a malicious web link and convinced the administrator to change the email server's password. The employee used this access to remove the mailboxes of key personnel.\nWhich of the following security awareness concepts would help prevent this threat in the future?",
     "choices": [
       {
         "key": "A",
@@ -837,7 +837,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In this scenario, the employee used a form of social engineering by sending a malicious link and\npersuading the administrator to take unauthorized actions. Training employees to recognize\nphishing attempts and other social engineering tactics would help them identify and avoid\nsuspicious requests, reducing the likelihood of falling victim to similar threats in the future.",
+    "explanation": "In this scenario, the employee used a form of social engineering by sending a malicious link and persuading the administrator to take unauthorized actions. Training employees to recognize phishing attempts and other social engineering tactics would help them identify and avoid suspicious requests, reducing the likelihood of falling victim to similar threats in the future.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -853,7 +853,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following is the primary purpose of a service that tracks log-ins and time spent\nusing the service?",
+    "question": "Which of the following is the primary purpose of a service that tracks log-ins and time spent using the service?",
     "choices": [
       {
         "key": "A",
@@ -875,7 +875,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Accounting involves tracking and recording user activities, such as log-ins and time spent using\na service. This information can be used for auditing, billing, usage analysis, and ensuring\ncompliance with policies. Accounting is one of the components of the AAA model\n(Authentication, Authorization, and Accounting).",
+    "explanation": "Accounting involves tracking and recording user activities, such as log-ins and time spent using a service. This information can be used for auditing, billing, usage analysis, and ensuring compliance with policies. Accounting is one of the components of the AAA model (Authentication, Authorization, and Accounting).",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -891,7 +891,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A company processes and stores sensitive data on its own systems.\nWhich of the following steps should the company take first to ensure compliance with privacy\nregulations?",
+    "question": "A company processes and stores sensitive data on its own systems.\nWhich of the following steps should the company take first to ensure compliance with privacy regulations?",
     "choices": [
       {
         "key": "A",
@@ -929,7 +929,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "An organization is required to provide assurance that its controls are properly designed and\noperating effectively.\nWhich of the following reports will best achieve the objective?",
+    "question": "An organization is required to provide assurance that its controls are properly designed and operating effectively.\nWhich of the following reports will best achieve the objective?",
     "choices": [
       {
         "key": "A",
@@ -951,7 +951,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An independent audit provides an unbiased assessment of the organization's controls, verifying\nthat they are properly designed and operating effectively. Such audits often result in formal\nreports, such as SOC (Service Organization Control) reports, which are specifically designed to\ngive assurance to stakeholders regarding the effectiveness of controls.",
+    "explanation": "An independent audit provides an unbiased assessment of the organization's controls, verifying that they are properly designed and operating effectively. Such audits often result in formal reports, such as SOC (Service Organization Control) reports, which are specifically designed to give assurance to stakeholders regarding the effectiveness of controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -967,7 +967,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following organizational documents is most often used to establish and\ncommunicate expectations associated with integrity and ethical behavior within an organization?",
+    "question": "Which of the following organizational documents is most often used to establish and communicate expectations associated with integrity and ethical behavior within an organization?",
     "choices": [
       {
         "key": "A",
@@ -989,7 +989,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is commonly used to establish and communicate the\norganization's expectations regarding acceptable behavior, integrity, and ethical conduct. It\noutlines guidelines for appropriate use of company resources and sets standards for employees\nto follow, promoting a secure and ethical work environment.",
+    "explanation": "An Acceptable Use Policy (AUP) is commonly used to establish and communicate the organization's expectations regarding acceptable behavior, integrity, and ethical conduct. It outlines guidelines for appropriate use of company resources and sets standards for employees to follow, promoting a secure and ethical work environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1005,7 +1005,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following describes the procedures a penetration tester must follow while\nconducting a test?",
+    "question": "Which of the following describes the procedures a penetration tester must follow while conducting a test?",
     "choices": [
       {
         "key": "A",
@@ -1027,7 +1027,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The rules of engagement outline the specific procedures, scope, and limitations that a\npenetration tester must follow during testing. These rules define acceptable activities, testing\nboundaries, reporting requirements, and guidelines to ensure the test is conducted ethically,\nsafely, and in alignment with organizational expectations.",
+    "explanation": "The rules of engagement outline the specific procedures, scope, and limitations that a penetration tester must follow during testing. These rules define acceptable activities, testing boundaries, reporting requirements, and guidelines to ensure the test is conducted ethically, safely, and in alignment with organizational expectations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1065,7 +1065,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A partially known environment penetration test, also known as a \"gray box\" test, is where the\ntester has limited information about the target, such as basic device details provided by the\norganization. This type of test simulates an attack by someone with some insider knowledge,\nallowing for a more realistic assessment of security vulnerabilities than an unknown\nenvironment test but with less detailed information than a fully known environment test.",
+    "explanation": "A partially known environment penetration test, also known as a \"gray box\" test, is where the tester has limited information about the target, such as basic device details provided by the organization. This type of test simulates an attack by someone with some insider knowledge, allowing for a more realistic assessment of security vulnerabilities than an unknown environment test but with less detailed information than a fully known environment test.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1081,7 +1081,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A security analyst has determined that a security breach would have a financial impact of\n$15,000 and is expected to occur twice within a three-year period.\nWhich of the following is the ALE for this risk?",
+    "question": "A security analyst has determined that a security breach would have a financial impact of $15,000 and is expected to occur twice within a three-year period.\nWhich of the following is the ALE for this risk?",
     "choices": [
       {
         "key": "A",
@@ -1103,7 +1103,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Annualized Loss Expectancy (ALE) is calculated by multiplying the Single Loss Expectancy\n(SLE) by the Annualized Rate of Occurrence (ARO). In this case:\n• SLE (Single Loss Expectancy) = $15,000\n• ARO (Annualized Rate of Occurrence) = 2 occurrences / 3 years = 0.67 per year\nALE = SLE × ARO = $15,000 × 0.67 ≈ $10,000",
+    "explanation": "The Annualized Loss Expectancy (ALE) is calculated by multiplying the Single Loss Expectancy (SLE) by the Annualized Rate of Occurrence (ARO). In this case:\n• SLE (Single Loss Expectancy) = $15,000\n• ARO (Annualized Rate of Occurrence) = 2 occurrences / 3 years = 0.67 per year ALE = SLE × ARO = $15,000 × 0.67 ≈ $10,000",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1119,7 +1119,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A systems administrator discovers a system that is no longer receiving support from the vendor.\nHowever, this system and its environment are critical to running the business, cannot be\nmodified, and must stay online.\nWhich of the following risk treatments is the most appropriate in this situation?",
+    "question": "A systems administrator discovers a system that is no longer receiving support from the vendor.\nHowever, this system and its environment are critical to running the business, cannot be modified, and must stay online.\nWhich of the following risk treatments is the most appropriate in this situation?",
     "choices": [
       {
         "key": "A",
@@ -1141,7 +1141,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When a system is critical, cannot be modified, and must stay online despite no longer receiving\nvendor support, the most appropriate risk treatment is to accept the risk. This decision\nacknowledges the potential vulnerabilities but continues operation due to the system's\nimportance. Additional compensating controls, such as network isolation, monitoring, and\nbackup procedures, may be implemented to help mitigate associated risks while accepting them\nas part of the business necessity.",
+    "explanation": "When a system is critical, cannot be modified, and must stay online despite no longer receiving vendor support, the most appropriate risk treatment is to accept the risk. This decision acknowledges the potential vulnerabilities but continues operation due to the system's importance. Additional compensating controls, such as network isolation, monitoring, and backup procedures, may be implemented to help mitigate associated risks while accepting them as part of the business necessity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1157,7 +1157,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "A security officer is implementing a security awareness program and is placing security-themed\nposters around the building and is assigning online user training.\nWhich of the following would the security officer most likely implement?",
+    "question": "A security officer is implementing a security awareness program and is placing security-themed posters around the building and is assigning online user training.\nWhich of the following would the security officer most likely implement?",
     "choices": [
       {
         "key": "A",
@@ -1179,7 +1179,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In a security awareness program, a phishing campaign is often implemented alongside other\nawareness activities, such as security-themed posters and online user training. Phishing\nsimulations help users recognize and respond correctly to phishing attempts, reinforcing the\ntraining's effectiveness. This practical exercise increases awareness about social engineering\nattacks, making it a suitable component of a comprehensive security awareness program.",
+    "explanation": "In a security awareness program, a phishing campaign is often implemented alongside other awareness activities, such as security-themed posters and online user training. Phishing simulations help users recognize and respond correctly to phishing attempts, reinforcing the training's effectiveness. This practical exercise increases awareness about social engineering attacks, making it a suitable component of a comprehensive security awareness program.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1195,7 +1195,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "An employee clicks a malicious link in an email that appears to be from the company's Chief\nExecutive Officer. The employee's computer is infected with ransomware that encrypts the\ncompany's files.\nWhich of the following is the most effective way for the company to prevent similar incidents in\nthe future?",
+    "question": "An employee clicks a malicious link in an email that appears to be from the company's Chief Executive Officer. The employee's computer is infected with ransomware that encrypts the company's files.\nWhich of the following is the most effective way for the company to prevent similar incidents in the future?",
     "choices": [
       {
         "key": "A",
@@ -1217,7 +1217,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Security awareness training is the most effective way to prevent similar incidents, as it educates\nemployees on how to recognize and respond to phishing emails and other social engineering\nattacks. By training employees to spot suspicious links and emails, especially those that appear\nto be from high-level executives, the company can reduce the likelihood of employees falling\nvictim to such attacks in the future.",
+    "explanation": "Security awareness training is the most effective way to prevent similar incidents, as it educates employees on how to recognize and respond to phishing emails and other social engineering attacks. By training employees to spot suspicious links and emails, especially those that appear to be from high-level executives, the company can reduce the likelihood of employees falling victim to such attacks in the future.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1233,7 +1233,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following would a security administrator use to comply with a secure baseline\nduring a patch update?",
+    "question": "Which of the following would a security administrator use to comply with a secure baseline during a patch update?",
     "choices": [
       {
         "key": "A",
@@ -1255,7 +1255,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A Standard Operating Procedure (SOP) is used to ensure that patch updates and other security\npractices are carried out in a consistent, secure, and compliant manner, adhering to the\norganization's secure baseline. SOPs provide step-by-step instructions and guidelines for\nperforming tasks like patching, ensuring that all actions taken are in line with established\nsecurity standards and compliance requirements.",
+    "explanation": "A Standard Operating Procedure (SOP) is used to ensure that patch updates and other security practices are carried out in a consistent, secure, and compliant manner, adhering to the organization's secure baseline. SOPs provide step-by-step instructions and guidelines for performing tasks like patching, ensuring that all actions taken are in line with established security standards and compliance requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1271,7 +1271,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Due to a cyberattack, a company's IT systems were not operational for an extended period of\ntime. The company wants to measure how quickly the systems must be restored in order to\nminimize business disruption.\nWhich of the following would the company most likely use?",
+    "question": "Due to a cyberattack, a company's IT systems were not operational for an extended period of time. The company wants to measure how quickly the systems must be restored in order to minimize business disruption.\nWhich of the following would the company most likely use?",
     "choices": [
       {
         "key": "A",
@@ -1297,7 +1297,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Recovery Time Objective (RTO) refers to the maximum acceptable amount of time that an\nIT system can be down after an incident before causing significant disruption to the business.\nThis metric is used to set restoration goals and minimize business impact. RTO helps the\ncompany define how quickly the systems need to be restored to resume normal operations.",
+    "explanation": "The Recovery Time Objective (RTO) refers to the maximum acceptable amount of time that an IT system can be down after an incident before causing significant disruption to the business.\nThis metric is used to set restoration goals and minimize business impact. RTO helps the company define how quickly the systems need to be restored to resume normal operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1313,7 +1313,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following should a security team use to document persistent vulnerabilities with\nrelated recommendations?",
+    "question": "Which of the following should a security team use to document persistent vulnerabilities with related recommendations?",
     "choices": [
       {
         "key": "A",
@@ -1335,7 +1335,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A risk register is a document used to track and manage risks, including persistent vulnerabilities.\nIt includes details about each vulnerability, its potential impact, the likelihood of its occurrence,\nand recommendations for mitigating or managing the risk. The risk register serves as a tool to\nprioritize and address ongoing security issues systematically.",
+    "explanation": "A risk register is a document used to track and manage risks, including persistent vulnerabilities.\nIt includes details about each vulnerability, its potential impact, the likelihood of its occurrence, and recommendations for mitigating or managing the risk. The risk register serves as a tool to prioritize and address ongoing security issues systematically.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1373,7 +1373,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When performing a risk assessment on new software, the company needs to evaluate the\npotential vulnerabilities within the software. Identifying software vulnerabilities helps assess the\npotential security risks, such as possible exploits or weaknesses that could be exploited by\nattackers. This is a critical part of the risk assessment process to ensure that the software does\nnot introduce security threats to the company's environment.",
+    "explanation": "When performing a risk assessment on new software, the company needs to evaluate the potential vulnerabilities within the software. Identifying software vulnerabilities helps assess the potential security risks, such as possible exploits or weaknesses that could be exploited by attackers. This is a critical part of the risk assessment process to ensure that the software does not introduce security threats to the company's environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1389,7 +1389,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A new employee accessed an unauthorized website. An investigation found that the employee\nviolated the company's rules.\nWhich of the following did the employee violate?",
+    "question": "A new employee accessed an unauthorized website. An investigation found that the employee violated the company's rules.\nWhich of the following did the employee violate?",
     "choices": [
       {
         "key": "A",
@@ -1411,7 +1411,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is a set of rules that define what is acceptable behavior\nregarding the use of company resources, including the internet. If the employee accessed an\nunauthorized website, this action would likely violate the company's AUP, which outlines the\nproper and prohibited uses of the company's network, devices, and other resources.",
+    "explanation": "An Acceptable Use Policy (AUP) is a set of rules that define what is acceptable behavior regarding the use of company resources, including the internet. If the employee accessed an unauthorized website, this action would likely violate the company's AUP, which outlines the proper and prohibited uses of the company's network, devices, and other resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1427,7 +1427,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A company filed a complaint with its IT service provider after the company discovered the\nservice provider's external audit team had access to some of the company's confidential\ninformation.\nWhich of the following is the most likely reason the company filed the complaint?",
+    "question": "A company filed a complaint with its IT service provider after the company discovered the service provider's external audit team had access to some of the company's confidential information.\nWhich of the following is the most likely reason the company filed the complaint?",
     "choices": [
       {
         "key": "A",
@@ -1449,7 +1449,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legally binding contract that ensures confidential\ninformation shared between two parties is not disclosed to unauthorized third parties. In this\ncase, the company likely filed a complaint because the external audit team, which was part of\nthe service provider, had access to the company's confidential information without the proper\nNDA in place, potentially violating confidentiality agreements.",
+    "explanation": "A Non-Disclosure Agreement (NDA) is a legally binding contract that ensures confidential information shared between two parties is not disclosed to unauthorized third parties. In this case, the company likely filed a complaint because the external audit team, which was part of the service provider, had access to the company's confidential information without the proper NDA in place, potentially violating confidentiality agreements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1460,12 +1460,50 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0264",
+    "domain": 5,
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
+    "type": "single",
+    "question": "A company captures log-in details and reviews them each week to identify conditions such as excessive log-in attempts and frequent lockouts.\nWhich of the following should a security analyst recommend to improve security compliance monitoring?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Including the date and person who reviewed the information in a report"
+      },
+      {
+        "key": "B",
+        "text": "Adding automated alerting when anomalies occur"
+      },
+      {
+        "key": "C",
+        "text": "Requiring a statement each week that no exceptions were noted"
+      },
+      {
+        "key": "D",
+        "text": "Masking the username in a report to protect privacy"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Automated alerting when anomalies occur is a crucial recommendation for improving security compliance monitoring. This approach ensures that suspicious activities, such as excessive login attempts and frequent lockouts, are immediately detected and flagged for further investigation, reducing the risk of undetected security threats. Automated alerts improve response times and reduce the need for manual monitoring, enhancing overall security posture.",
+    "explanationSource": "pdf",
+    "incorrectExplanations": {},
+    "references": [],
+    "source": "SY0-701_en.pdf#p119",
+    "needsReview": true,
+    "inferenceConfidence": 0.545,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0280",
     "domain": 5,
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A customer has a contract with a CSP and wants to identify which controls should be\nimplemented in the IaaS enclave.\nWhich of the following is most likely to contain this information?",
+    "question": "A customer has a contract with a CSP and wants to identify which controls should be implemented in the IaaS enclave.\nWhich of the following is most likely to contain this information?",
     "choices": [
       {
         "key": "A",
@@ -1487,7 +1525,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A responsibility matrix (also known as a RACI matrix) is the most likely document to contain\ninformation about which security controls should be implemented in the IaaS (Infrastructure as a\nService) enclave. It outlines the specific responsibilities of the customer and the cloud service\nprovider (CSP) regarding security and compliance, helping to clarify which party is responsible\nfor various controls and tasks within the environment.",
+    "explanation": "A responsibility matrix (also known as a RACI matrix) is the most likely document to contain information about which security controls should be implemented in the IaaS (Infrastructure as a Service) enclave. It outlines the specific responsibilities of the customer and the cloud service provider (CSP) regarding security and compliance, helping to clarify which party is responsible for various controls and tasks within the environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1503,7 +1541,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following testing techniques uses both defensive and offensive testing\nmethodologies with developers to securely build key applications and software?",
+    "question": "Which of the following testing techniques uses both defensive and offensive testing methodologies with developers to securely build key applications and software?",
     "choices": [
       {
         "key": "A",
@@ -1525,7 +1563,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Yellow team testing is a security testing technique that combines both defensive and offensive\nmethodologies with developers to ensure secure coding practices and the identification of\nvulnerabilities early in the development process. This collaborative approach helps developers\nunderstand both how to defend against attacks and how attackers might exploit weaknesses,\nleading to more secure applications.",
+    "explanation": "Yellow team testing is a security testing technique that combines both defensive and offensive methodologies with developers to ensure secure coding practices and the identification of vulnerabilities early in the development process. This collaborative approach helps developers understand both how to defend against attacks and how attackers might exploit weaknesses, leading to more secure applications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1541,7 +1579,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Various company stakeholders meet to discuss roles and responsibilities in the event of a\nsecurity breach that would affect offshore offices.\nWhich of the following is this an example of?",
+    "question": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore offices.\nWhich of the following is this an example of?",
     "choices": [
       {
         "key": "A",
@@ -1563,7 +1601,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a type of simulation where stakeholders discuss their roles,\nresponsibilities, and procedures in response to a hypothetical situation, such as a security\nbreach. The goal of this exercise is to test how well the team coordinates and responds to the\nincident without actually executing the actions in a real environment. It helps ensure that\neveryone understands their responsibilities and can react effectively when an actual breach\noccurs.",
+    "explanation": "A tabletop exercise is a type of simulation where stakeholders discuss their roles, responsibilities, and procedures in response to a hypothetical situation, such as a security breach. The goal of this exercise is to test how well the team coordinates and responds to the incident without actually executing the actions in a real environment. It helps ensure that everyone understands their responsibilities and can react effectively when an actual breach occurs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1579,7 +1617,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following should a company use to provide proof of external network security\ntesting?",
+    "question": "Which of the following should a company use to provide proof of external network security testing?",
     "choices": [
       {
         "key": "A",
@@ -1601,7 +1639,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A third-party attestation is the most appropriate way to provide proof of external network\nsecurity testing. This attestation is typically performed by an independent, external party (e.g.,\nan audit firm or security vendor) that assesses and verifies the security measures of an\norganization's network. The attestation provides official confirmation that external security\ntesting, such as vulnerability assessments or penetration tests, has been conducted and that\nthe organization meets the required security standards.",
+    "explanation": "A third-party attestation is the most appropriate way to provide proof of external network security testing. This attestation is typically performed by an independent, external party (e.g., an audit firm or security vendor) that assesses and verifies the security measures of an organization's network. The attestation provides official confirmation that external security testing, such as vulnerability assessments or penetration tests, has been conducted and that the organization meets the required security standards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1617,7 +1655,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following steps in the risk management process involves establishing the scope\nand potential risks involved with a project?",
+    "question": "Which of the following steps in the risk management process involves establishing the scope and potential risks involved with a project?",
     "choices": [
       {
         "key": "A",
@@ -1639,7 +1677,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk identification is the step in the risk management process where the scope of the project is\ndefined, and potential risks are identified. This step involves gathering information to understand\nthe environment and context of the project, as well as the risks that could affect its success or\nsecurity. It helps to outline what can go wrong and what risks need to be considered in\nsubsequent stages of the risk management process.",
+    "explanation": "Risk identification is the step in the risk management process where the scope of the project is defined, and potential risks are identified. This step involves gathering information to understand the environment and context of the project, as well as the risks that could affect its success or security. It helps to outline what can go wrong and what risks need to be considered in subsequent stages of the risk management process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1655,7 +1693,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following would be the greatest concern for a company that is aware of the\nconsequences of non-compliance with government regulations?",
+    "question": "Which of the following would be the greatest concern for a company that is aware of the consequences of non-compliance with government regulations?",
     "choices": [
       {
         "key": "A",
@@ -1677,7 +1715,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sanctions would be the greatest concern for a company that is aware of the consequences of\nnon-compliance with government regulations. Sanctions can include financial penalties,\nrestrictions on business operations, or other legal consequences that can significantly impact\nthe company's ability to operate and its financial stability. Companies that fail to comply with\ngovernment regulations, especially those related to data protection, financial reporting, or\nindustry-specific laws, can face severe sanctions from regulatory bodies.",
+    "explanation": "Sanctions would be the greatest concern for a company that is aware of the consequences of non-compliance with government regulations. Sanctions can include financial penalties, restrictions on business operations, or other legal consequences that can significantly impact the company's ability to operate and its financial stability. Companies that fail to comply with government regulations, especially those related to data protection, financial reporting, or industry-specific laws, can face severe sanctions from regulatory bodies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1715,7 +1753,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An NDA (Non-Disclosure Agreement) is a legal document that restricts individuals from sharing\nproprietary or confidential information they have access to during their employment. Employees\nsign this agreement to prevent the disclosure of sensitive company information after leaving the\norganization. Violation of an NDA can result in legal consequences, including lawsuits.",
+    "explanation": "An NDA (Non-Disclosure Agreement) is a legal document that restricts individuals from sharing proprietary or confidential information they have access to during their employment. Employees sign this agreement to prevent the disclosure of sensitive company information after leaving the organization. Violation of an NDA can result in legal consequences, including lawsuits.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1731,7 +1769,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company is considering an expansion of access controls for an application that contractors\nand internal employees use to reduce costs.\nWhich of the following risk elements should the implementation team understand before\ngranting access to the application?",
+    "question": "A company is considering an expansion of access controls for an application that contractors and internal employees use to reduce costs.\nWhich of the following risk elements should the implementation team understand before granting access to the application?",
     "choices": [
       {
         "key": "A",
@@ -1753,7 +1791,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk appetite refers to the level of risk an organization is willing to accept in pursuit of its\nobjectives.\nWhen granting access to an application, especially to both contractors and internal employees,\nthe implementation team needs to assess how much risk the organization is willing to tolerate\nregarding potential unauthorized access, data breaches, or misuse of the application.\nUnderstanding the company's risk appetite helps in designing access controls that align with its\nrisk management strategy.",
+    "explanation": "Risk appetite refers to the level of risk an organization is willing to accept in pursuit of its objectives.\nWhen granting access to an application, especially to both contractors and internal employees, the implementation team needs to assess how much risk the organization is willing to tolerate regarding potential unauthorized access, data breaches, or misuse of the application.\nUnderstanding the company's risk appetite helps in designing access controls that align with its risk management strategy.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1769,7 +1807,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following is the act of proving to a customer that software developers are trained\non secure coding?",
+    "question": "Which of the following is the act of proving to a customer that software developers are trained on secure coding?",
     "choices": [
       {
         "key": "A",
@@ -1791,7 +1829,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Attestation is the act of formally declaring or providing evidence that certain conditions or\nrequirements have been met. In this context, it involves proving to a customer that software\ndevelopers are trained on secure coding practices. This can be achieved through\ndocumentation, certifications, or other official declarations demonstrating compliance with\nsecure coding standards.",
+    "explanation": "Attestation is the act of formally declaring or providing evidence that certain conditions or requirements have been met. In this context, it involves proving to a customer that software developers are trained on secure coding practices. This can be achieved through documentation, certifications, or other official declarations demonstrating compliance with secure coding standards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1807,7 +1845,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An organization is developing a security program that conveys the responsibilities associated\nwith the general operation of systems and software within the organization.\nWhich of the following documents would most likely communicate these expectations?",
+    "question": "An organization is developing a security program that conveys the responsibilities associated with the general operation of systems and software within the organization.\nWhich of the following documents would most likely communicate these expectations?",
     "choices": [
       {
         "key": "A",
@@ -1829,7 +1867,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) outlines the responsibilities and expectations for employees\nand users regarding the use of systems, software, and other organizational resources. It\nspecifies the appropriate and prohibited behaviors to ensure secure and proper operation of\nthese systems. This policy communicates general operational responsibilities and helps enforce\ncompliance with organizational security standards.",
+    "explanation": "An Acceptable Use Policy (AUP) outlines the responsibilities and expectations for employees and users regarding the use of systems, software, and other organizational resources. It specifies the appropriate and prohibited behaviors to ensure secure and proper operation of these systems. This policy communicates general operational responsibilities and helps enforce compliance with organizational security standards.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1867,7 +1905,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A procedure is a document that provides step-by-step instructions on how to accomplish a\nspecific technical security task. It is detailed and actionable, ensuring consistency and clarity in\ntask execution. Procedures are essential for tasks like configuring firewalls, applying patches, or\nimplementing encryption.",
+    "explanation": "A procedure is a document that provides step-by-step instructions on how to accomplish a specific technical security task. It is detailed and actionable, ensuring consistency and clarity in task execution. Procedures are essential for tasks like configuring firewalls, applying patches, or implementing encryption.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1883,7 +1921,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company is aware of a given security risk related to a specific market segment. The business\nchooses not to accept responsibility and target their services to a different market segment.\nWhich of the following describes this risk management strategy?",
+    "question": "A company is aware of a given security risk related to a specific market segment. The business chooses not to accept responsibility and target their services to a different market segment.\nWhich of the following describes this risk management strategy?",
     "choices": [
       {
         "key": "A",
@@ -1905,7 +1943,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The company's decision to change its target market to eliminate exposure to a specific security\nrisk is an example of risk avoidance. This strategy involves modifying plans, processes, or\nbusiness models to eliminate the potential for a particular risk to occur, rather than mitigating or\ntransferring it. By targeting a different market segment, the company effectively avoids the\nidentified risk.",
+    "explanation": "The company's decision to change its target market to eliminate exposure to a specific security risk is an example of risk avoidance. This strategy involves modifying plans, processes, or business models to eliminate the potential for a particular risk to occur, rather than mitigating or transferring it. By targeting a different market segment, the company effectively avoids the identified risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1921,7 +1959,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "The internal audit team determines a software application is no longer in scope for external\nreporting requirements.\nWhich of the following will confirm that the application is no longer applicable?",
+    "question": "The internal audit team determines a software application is no longer in scope for external reporting requirements.\nWhich of the following will confirm that the application is no longer applicable?",
     "choices": [
       {
         "key": "A",
@@ -1959,7 +1997,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "For an upcoming product launch, a company hires a marketing agency whose owner is a close\nrelative of the Chief Executive Officer.\nWhich of the following did the company violate?",
+    "question": "For an upcoming product launch, a company hires a marketing agency whose owner is a close relative of the Chief Executive Officer.\nWhich of the following did the company violate?",
     "choices": [
       {
         "key": "A",
@@ -1981,7 +2019,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A conflict of interest policy ensures that decisions are made in the best interests of the company\nand not influenced by personal relationships or benefits. Hiring a marketing agency owned by a\nclose relative of the CEO without appropriate disclosures or procedures would violate such a\npolicy, as it creates a potential bias or unfair advantage.",
+    "explanation": "A conflict of interest policy ensures that decisions are made in the best interests of the company and not influenced by personal relationships or benefits. Hiring a marketing agency owned by a close relative of the CEO without appropriate disclosures or procedures would violate such a policy, as it creates a potential bias or unfair advantage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1997,7 +2035,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following is the most important element when defining effective security\ngovernance?",
+    "question": "Which of the following is the most important element when defining effective security governance?",
     "choices": [
       {
         "key": "A",
@@ -2019,7 +2057,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Effective security governance requires clear assignment of roles and responsibilities to ensure\naccountability and proper management of security controls. Defining roles such as data owners\n(who make decisions), controllers (who implement decisions), and custodians (who handle day-\nto-day operations) is essential for ensuring security policies and procedures are effectively\nmanaged and enforced. This alignment is critical for a cohesive security framework.",
+    "explanation": "Effective security governance requires clear assignment of roles and responsibilities to ensure accountability and proper management of security controls. Defining roles such as data owners (who make decisions), controllers (who implement decisions), and custodians (who handle day- to-day operations) is essential for ensuring security policies and procedures are effectively managed and enforced. This alignment is critical for a cohesive security framework.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2035,7 +2073,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A company has yearly engagements with a service provider. The general terms and conditions\nare the same for all engagements. The company wants to simplify the process and revisit the\ngeneral terms every three years.\nWhich of the following documents would provide the best way to set the general terms?",
+    "question": "A company has yearly engagements with a service provider. The general terms and conditions are the same for all engagements. The company wants to simplify the process and revisit the general terms every three years.\nWhich of the following documents would provide the best way to set the general terms?",
     "choices": [
       {
         "key": "A",
@@ -2057,7 +2095,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Master Service Agreement (MSA) establishes the general terms and conditions governing the\nrelationship between a company and a service provider. It is designed for long-term use,\nallowing individual engagements (e.g., statements of work) to reference the MSA instead of\nredefining the terms repeatedly. Revisiting the MSA every three years simplifies the process\nwhile maintaining flexibility for yearly engagements.",
+    "explanation": "A Master Service Agreement (MSA) establishes the general terms and conditions governing the relationship between a company and a service provider. It is designed for long-term use, allowing individual engagements (e.g., statements of work) to reference the MSA instead of redefining the terms repeatedly. Revisiting the MSA every three years simplifies the process while maintaining flexibility for yearly engagements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2073,7 +2111,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "While updating the security awareness training, a security analyst wants to address issues\ncreated if vendors' email accounts are compromised.\nWhich of the following recommendations should the security analyst include in the training?",
+    "question": "While updating the security awareness training, a security analyst wants to address issues created if vendors' email accounts are compromised.\nWhich of the following recommendations should the security analyst include in the training?",
     "choices": [
       {
         "key": "A",
@@ -2095,7 +2133,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compromised vendor email accounts can be used to send phishing emails or fraudulent\nrequests that appear legitimate. Employees should be trained to recognize and scrutinize\nunexpected requests even when they come from familiar email addresses, as this is a common\ntactic in phishing and business email compromise (BEC) attacks. This recommendation directly\naddresses the risk posed by compromised vendor accounts.",
+    "explanation": "Compromised vendor email accounts can be used to send phishing emails or fraudulent requests that appear legitimate. Employees should be trained to recognize and scrutinize unexpected requests even when they come from familiar email addresses, as this is a common tactic in phishing and business email compromise (BEC) attacks. This recommendation directly addresses the risk posed by compromised vendor accounts.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2111,7 +2149,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "The number of tickets the help desk has been receiving has increased recently due to\nnumerous false-positive phishing reports.\nWhich of the following would be best to help to reduce the false positives?",
+    "question": "The number of tickets the help desk has been receiving has increased recently due to numerous false-positive phishing reports.\nWhich of the following would be best to help to reduce the false positives?",
     "choices": [
       {
         "key": "A",
@@ -2133,7 +2171,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Improving security awareness training helps employees better understand and identify\nlegitimate phishing attempts, reducing the number of false-positive reports. Enhanced training\ncan teach staff to recognize key indicators of phishing emails and report only those that warrant\ninvestigation, decreasing the workload for the help desk.",
+    "explanation": "Improving security awareness training helps employees better understand and identify legitimate phishing attempts, reducing the number of false-positive reports. Enhanced training can teach staff to recognize key indicators of phishing emails and report only those that warrant investigation, decreasing the workload for the help desk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2149,7 +2187,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "After a series of account compromises and credential misuse, a company hires a security\nmanager to develop a security program.\nWhich of the following steps should the security manager take first to increase security\nawareness?",
+    "question": "After a series of account compromises and credential misuse, a company hires a security manager to develop a security program.\nWhich of the following steps should the security manager take first to increase security awareness?",
     "choices": [
       {
         "key": "A",
@@ -2171,13 +2209,13 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The first step in increasing security awareness should be to update policies and handbooks to\nensure that all employees are aware of the new procedures and security expectations. Clear,\ndocumented policies provide a foundation for employees to understand their roles and\nresponsibilities regarding security. Once the policies are in place, the company can implement\nadditional strategies like training, newsletters, or phishing campaigns to reinforce these\npractices.",
+    "explanation": "The first step in increasing security awareness should be to update policies and handbooks to ensure that all employees are aware of the new procedures and security expectations. Clear, documented policies provide a foundation for employees to understand their roles and responsibilities regarding security. Once the policies are in place, the company can implement additional strategies like training, newsletters, or phishing campaigns to reinforce these practices.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p165",
     "needsReview": true,
-    "inferenceConfidence": 0.692,
+    "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2187,7 +2225,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A company wants to prevent proprietary and confidential company information from being\nshared to outsiders.\nWhich of the following would this best describe?",
+    "question": "A company wants to prevent proprietary and confidential company information from being shared to outsiders.\nWhich of the following would this best describe?",
     "choices": [
       {
         "key": "A",
@@ -2209,7 +2247,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legal contract that restricts parties from disclosing\nproprietary or confidential information to unauthorized individuals or organizations, making it the\nmost suitable option for protecting sensitive company data.",
+    "explanation": "A Non-Disclosure Agreement (NDA) is a legal contract that restricts parties from disclosing proprietary or confidential information to unauthorized individuals or organizations, making it the most suitable option for protecting sensitive company data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2225,7 +2263,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "The physical security team at a company receives reports that employees are not displaying\ntheir badges. The team also observes employees tailgating at controlled entrances.\nWhich of the following topics will the security team most likely emphasize in upcoming security\ntraining?",
+    "question": "The physical security team at a company receives reports that employees are not displaying their badges. The team also observes employees tailgating at controlled entrances.\nWhich of the following topics will the security team most likely emphasize in upcoming security training?",
     "choices": [
       {
         "key": "A",
@@ -2247,13 +2285,13 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Situational awareness training helps employees recognize and respond appropriately to\nphysical security threats, such as tailgating and failure to display ID badges, promoting\nadherence to security protocols in controlled areas.",
+    "explanation": "Situational awareness training helps employees recognize and respond appropriately to physical security threats, such as tailgating and failure to display ID badges, promoting adherence to security protocols in controlled areas.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p172",
     "needsReview": true,
-    "inferenceConfidence": 0.476,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2263,7 +2301,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following should an organization use to ensure that it can review the controls and\nperformance of a service provider or vendor?",
+    "question": "Which of the following should an organization use to ensure that it can review the controls and performance of a service provider or vendor?",
     "choices": [
       {
         "key": "A",
@@ -2285,7 +2323,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A right-to-audit clause gives an organization the legal ability to inspect and verify a service\nprovider's or vendor's controls, processes, and compliance with contractual obligations,\nensuring transparency and accountability.",
+    "explanation": "A right-to-audit clause gives an organization the legal ability to inspect and verify a service provider's or vendor's controls, processes, and compliance with contractual obligations, ensuring transparency and accountability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2301,7 +2339,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following is used to calculate the impact to an organization per cybersecurity\nincident?",
+    "question": "Which of the following is used to calculate the impact to an organization per cybersecurity incident?",
     "choices": [
       {
         "key": "A",
@@ -2323,7 +2361,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Single Loss Expectancy (SLE) represents the monetary loss an organization expects from a\nsingle cybersecurity incident, helping quantify the financial impact of individual events.",
+    "explanation": "Single Loss Expectancy (SLE) represents the monetary loss an organization expects from a single cybersecurity incident, helping quantify the financial impact of individual events.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2361,7 +2399,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Under GDPR, the data controller determines the purposes and means of processing personal\ndata. The retail company, which collects and manages customer data, is responsible for\ncomplying with data deletion requests and thus acts as the data controller.",
+    "explanation": "Under GDPR, the data controller determines the purposes and means of processing personal data. The retail company, which collects and manages customer data, is responsible for complying with data deletion requests and thus acts as the data controller.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2399,7 +2437,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An acceptable use policy is a managerial directive that formally defines required behaviors and\nrules for system use. It directs employees on what is and isn't allowed, making it a classic\nexample of a directive control.",
+    "explanation": "An acceptable use policy is a managerial directive that formally defines required behaviors and rules for system use. It directs employees on what is and isn't allowed, making it a classic example of a directive control.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2437,7 +2475,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A qualitative risk analysis uses descriptive scales (e.g., high, medium, low) to prioritize risks\nbased on their likelihood and impact, rather than numeric calculations.",
+    "explanation": "A qualitative risk analysis uses descriptive scales (e.g., high, medium, low) to prioritize risks based on their likelihood and impact, rather than numeric calculations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2453,7 +2491,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "While a user reviews their email, a host gets infected by malware that came from an external\nhard drive plugged into the host. The malware steals all the user's credentials stored in the\nbrowser.\nWhich of the following training topics should the user review to prevent this situation from\nreoccurring?",
+    "question": "While a user reviews their email, a host gets infected by malware that came from an external hard drive plugged into the host. The malware steals all the user's credentials stored in the browser.\nWhich of the following training topics should the user review to prevent this situation from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -2475,7 +2513,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Training on removable media security teaches users how to safely handle USB drives and\nexternal storage, including scanning for malware and using company-approved devices, directly\naddressing the infection vector in this scenario.",
+    "explanation": "Training on removable media security teaches users how to safely handle USB drives and external storage, including scanning for malware and using company-approved devices, directly addressing the infection vector in this scenario.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2491,7 +2529,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A company's leadership team wants to ensure employees only print business-related\ndocuments on company printers.\nWhich of the following documents should the company add this directive to?",
+    "question": "A company's leadership team wants to ensure employees only print business-related documents on company printers.\nWhich of the following documents should the company add this directive to?",
     "choices": [
       {
         "key": "A",
@@ -2513,7 +2551,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An acceptable use policy defines permitted and prohibited activities for using organizational\nresources, such as specifying that company printers may only be used for business-related\ndocuments. This ensures employees understand and agree to the printing restriction.",
+    "explanation": "An acceptable use policy defines permitted and prohibited activities for using organizational resources, such as specifying that company printers may only be used for business-related documents. This ensures employees understand and agree to the printing restriction.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2529,7 +2567,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A vendor salesperson is a personal friend of a company's Chief Financial Officer (CFO). The\ncompany recently made a large purchase from the vendor, which was directly approved by the\nCFO.\nWhich of the following best describes this situation?",
+    "question": "A vendor salesperson is a personal friend of a company's Chief Financial Officer (CFO). The company recently made a large purchase from the vendor, which was directly approved by the CFO.\nWhich of the following best describes this situation?",
     "choices": [
       {
         "key": "A",
@@ -2555,7 +2593,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When the CFO's personal relationship with the vendor could improperly influence\n(or appear to influence) company purchasing decisions, it creates a conflict of interest. The CFO\nshould disclose the relationship and recuse themselves from the approval process.",
+    "explanation": "When the CFO's personal relationship with the vendor could improperly influence (or appear to influence) company purchasing decisions, it creates a conflict of interest. The CFO should disclose the relationship and recuse themselves from the approval process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2571,7 +2609,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "The board of a company needs to tell the leadership team which activities are too risky to\nundertake during business operations.\nWhich of the following risk management strategies does the board need to explain to the\nleadership team?",
+    "question": "The board of a company needs to tell the leadership team which activities are too risky to undertake during business operations.\nWhich of the following risk management strategies does the board need to explain to the leadership team?",
     "choices": [
       {
         "key": "A",
@@ -2593,7 +2631,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk tolerance defines the threshold of risk the organization is willing to accept. Activities that\nexceed this threshold are deemed too risky to pursue during normal operations.",
+    "explanation": "Risk tolerance defines the threshold of risk the organization is willing to accept. Activities that exceed this threshold are deemed too risky to pursue during normal operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2609,7 +2647,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following would best ensure a controlled version release of a new software\napplication?",
+    "question": "Which of the following would best ensure a controlled version release of a new software application?",
     "choices": [
       {
         "key": "A",
@@ -2631,7 +2669,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Change management procedures establish formal processes for planning, approving, testing,\nand documenting software releases, ensuring new versions are deployed in a controlled,\nauditable manner.",
+    "explanation": "Change management procedures establish formal processes for planning, approving, testing, and documenting software releases, ensuring new versions are deployed in a controlled, auditable manner.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2647,7 +2685,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "An attorney prints confidential documents to a copier in an office space near multiple\nworkstations and a reception desk.\nWhen the attorney goes to the copier to retrieve the documents, the documents are missing.\nWhich of the following would best prevent this from reoccurring?",
+    "question": "An attorney prints confidential documents to a copier in an office space near multiple workstations and a reception desk.\nWhen the attorney goes to the copier to retrieve the documents, the documents are missing.\nWhich of the following would best prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -2669,7 +2707,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Requiring users to authenticate at the copier before a print job is released (often called pull-\nprinting) ensures that confidential documents are only printed when the authorized person is\nphysically present - preventing documents from being left unattended.",
+    "explanation": "Requiring users to authenticate at the copier before a print job is released (often called pull- printing) ensures that confidential documents are only printed when the authorized person is physically present - preventing documents from being left unattended.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2685,7 +2723,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "According to various privacy rules and regulations, users have the power to request that all data\npertaining to them is deleted. This is known as:",
+    "question": "According to various privacy rules and regulations, users have the power to request that all data pertaining to them is deleted. This is known as:",
     "choices": [
       {
         "key": "A",
@@ -2707,7 +2745,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Privacy regulations such as the EU's GDPR grant individuals the \"right to be forgotten\" (also\ncalled the right of erasure), enabling them to request deletion of all personal data that an\norganization holds about them.",
+    "explanation": "Privacy regulations such as the EU's GDPR grant individuals the \"right to be forgotten\" (also called the right of erasure), enabling them to request deletion of all personal data that an organization holds about them.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2745,7 +2783,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Downloading publicly available website content without exploiting vulnerabilities or interacting\nwith private systems is passive reconnaissance - collecting information from external sources\nwithout direct intrusion.",
+    "explanation": "Downloading publicly available website content without exploiting vulnerabilities or interacting with private systems is passive reconnaissance - collecting information from external sources without direct intrusion.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2761,7 +2799,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following actions must an organization take to comply with a person's request for\nthe right to be forgotten?",
+    "question": "Which of the following actions must an organization take to comply with a person's request for the right to be forgotten?",
     "choices": [
       {
         "key": "A",
@@ -2783,7 +2821,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The \"right to be forgotten\" (right of erasure) requires that organizations delete or permanently\nremove all personal data related to the individual from their systems and backups, not merely\nobfuscate or encrypt it.",
+    "explanation": "The \"right to be forgotten\" (right of erasure) requires that organizations delete or permanently remove all personal data related to the individual from their systems and backups, not merely obfuscate or encrypt it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2799,7 +2837,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "A government agency requires publicly traded organizations to report cyber breaches within a\ndesignated time period. By law, these reports are made public.\nWhich of the following could cause loss of existing and future business for an organization after\nreports are published?",
+    "question": "A government agency requires publicly traded organizations to report cyber breaches within a designated time period. By law, these reports are made public.\nWhich of the following could cause loss of existing and future business for an organization after reports are published?",
     "choices": [
       {
         "key": "A",
@@ -2821,7 +2859,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Public disclosure of a breach can undermine customer and partner trust in an organization's\nability to protect data - directly leading to loss of existing contracts and deterring future\nbusiness. Reputational damage persists long after fines or oversight actions and most impacts\nrevenue relationships.",
+    "explanation": "Public disclosure of a breach can undermine customer and partner trust in an organization's ability to protect data - directly leading to loss of existing contracts and deterring future business. Reputational damage persists long after fines or oversight actions and most impacts revenue relationships.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2859,7 +2897,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Recovery Time Objective (RTO) specifies the maximum acceptable duration that a system\nor service can be unavailable following a disruption, directly defining tolerated downtime limits.",
+    "explanation": "The Recovery Time Objective (RTO) specifies the maximum acceptable duration that a system or service can be unavailable following a disruption, directly defining tolerated downtime limits.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2875,7 +2913,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An auditor notices that, before logging into the firewall, an employee opens a document in a\nshared folder that contains administrative credentials.\nWhich of the following should the auditor recommend implementing?",
+    "question": "An auditor notices that, before logging into the firewall, an employee opens a document in a shared folder that contains administrative credentials.\nWhich of the following should the auditor recommend implementing?",
     "choices": [
       {
         "key": "A",
@@ -2897,7 +2935,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Password management solutions securely store and manage credentials, preventing risky\npractices like keeping administrative credentials in shared folders, which can lead to\nunauthorized access.",
+    "explanation": "Password management solutions securely store and manage credentials, preventing risky practices like keeping administrative credentials in shared folders, which can lead to unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2935,7 +2973,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Completing audits in a banking environment is primarily driven by regulatory requirements to\nensure compliance with laws and financial regulations.",
+    "explanation": "Completing audits in a banking environment is primarily driven by regulatory requirements to ensure compliance with laws and financial regulations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2973,7 +3011,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The most likely benefit of conducting an internal audit is the identification of control gaps,\nallowing the organization to remediate weaknesses before they can be exploited.",
+    "explanation": "The most likely benefit of conducting an internal audit is the identification of control gaps, allowing the organization to remediate weaknesses before they can be exploited.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2989,7 +3027,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure\nthat it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
+    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure that it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
     "choices": [
       {
         "key": "A",
@@ -3011,7 +3049,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Management review is a key step in the change management process, ensuring that proposed\nchanges are properly evaluated for security and business impact before implementation.",
+    "explanation": "Management review is a key step in the change management process, ensuring that proposed changes are properly evaluated for security and business impact before implementation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3049,7 +3087,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Purchasing an insurance policy is a risk transfer strategy, as the financial impact of a risk is\nshifted from the company to the insurance provider.",
+    "explanation": "Purchasing an insurance policy is a risk transfer strategy, as the financial impact of a risk is shifted from the company to the insurance provider.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3065,7 +3103,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A security analyst is reviewing the security of a SaaS application that the company intends to\npurchase.\nWhich of the following documentations should the security analyst request from the SaaS\napplication vendor?",
+    "question": "A security analyst is reviewing the security of a SaaS application that the company intends to purchase.\nWhich of the following documentations should the security analyst request from the SaaS application vendor?",
     "choices": [
       {
         "key": "A",
@@ -3087,7 +3125,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A third-party audit report (such as a SOC 2 or ISO 27001 certification) provides independent\nvalidation of the vendor's security controls and assurance of its security posture.",
+    "explanation": "A third-party audit report (such as a SOC 2 or ISO 27001 certification) provides independent validation of the vendor's security controls and assurance of its security posture.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3125,7 +3163,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A thorough analysis of the supply chain helps ensure that all hardware is sourced from\nlegitimate, certified vendors, reducing the risk of acquiring counterfeit equipment.",
+    "explanation": "A thorough analysis of the supply chain helps ensure that all hardware is sourced from legitimate, certified vendors, reducing the risk of acquiring counterfeit equipment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3141,7 +3179,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "After completing onboarding at a company and reviewing the company's handbooks and AUP\nan employee downloads an unapproved application on a company desktop.\nWhich of the following is the best course of action tor the company to take?",
+    "question": "After completing onboarding at a company and reviewing the company's handbooks and AUP an employee downloads an unapproved application on a company desktop.\nWhich of the following is the best course of action tor the company to take?",
     "choices": [
       {
         "key": "A",
@@ -3163,7 +3201,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Focused training helps the employee understand the risks and policies regarding software\ninstallation, reinforcing compliance and reducing the likelihood of future violations without being\noverly punitive.",
+    "explanation": "Focused training helps the employee understand the risks and policies regarding software installation, reinforcing compliance and reducing the likelihood of future violations without being overly punitive.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3179,7 +3217,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "An organization has published a list of domains that end users are not authorized to visit on\ncompany devices in order to mitigate data loss or installation or malicious code. A security\nanalyst observes multiple successful attempts to reach a new suspicious domain from an end\nuser's workstation.\nWhich of the following options can best prevent future access to unauthorized domains?",
+    "question": "An organization has published a list of domains that end users are not authorized to visit on company devices in order to mitigate data loss or installation or malicious code. A security analyst observes multiple successful attempts to reach a new suspicious domain from an end user's workstation.\nWhich of the following options can best prevent future access to unauthorized domains?",
     "choices": [
       {
         "key": "A",
@@ -3201,7 +3239,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Updating the proxy filters will block access to the new suspicious domain at the network level,\neffectively preventing users from reaching unauthorized or malicious websites in the future.",
+    "explanation": "Updating the proxy filters will block access to the new suspicious domain at the network level, effectively preventing users from reaching unauthorized or malicious websites in the future.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3217,7 +3255,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following is the best way to remove personal data from a social media account that\nis no longer being used?",
+    "question": "Which of the following is the best way to remove personal data from a social media account that is no longer being used?",
     "choices": [
       {
         "key": "A",
@@ -3239,7 +3277,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Exercising the right to be forgotten compels the provider to erase your stored personal data\nfrom its systems; simply deleting the app, resetting a device, or even closing the account may\nleave data retained in backups or archives.",
+    "explanation": "Exercising the right to be forgotten compels the provider to erase your stored personal data from its systems; simply deleting the app, resetting a device, or even closing the account may leave data retained in backups or archives.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3255,7 +3293,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following prevents unauthorized modifications to internal processes, assets, and\nsecurity controls?",
+    "question": "Which of the following prevents unauthorized modifications to internal processes, assets, and security controls?",
     "choices": [
       {
         "key": "A",
@@ -3277,7 +3315,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A formal change management process requires every alteration to be requested, reviewed,\napproved, documented, and tested before deployment. That governance gate keeps internal\nprocesses, assets, and security controls from being modified ad hoc or by unauthorized\npersonnel, ensuring integrity and auditability of all changes.",
+    "explanation": "A formal change management process requires every alteration to be requested, reviewed, approved, documented, and tested before deployment. That governance gate keeps internal processes, assets, and security controls from being modified ad hoc or by unauthorized personnel, ensuring integrity and auditability of all changes.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3315,7 +3353,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is a catalog of identified risks and their details; for each entry you track signals\nthat a risk is materializing. Those measurable signals are key risk indicators (KRIs) - thresholds\nor metrics (e.g., failed logins/day, patch backlog age) tied to a specific risk so you can spot\nescalation early and trigger the planned response. Continuous assessment, appetite, and\nculture are program-level concepts, not individual register fields.",
+    "explanation": "A risk register is a catalog of identified risks and their details; for each entry you track signals that a risk is materializing. Those measurable signals are key risk indicators (KRIs) - thresholds or metrics (e.g., failed logins/day, patch backlog age) tied to a specific risk so you can spot escalation early and trigger the planned response. Continuous assessment, appetite, and culture are program-level concepts, not individual register fields.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3331,7 +3369,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company's security team is reviewing its business continuity plan and must determine the\namount of time needed for operations to resume after a disaster.\nWhich of the following describes the time frame the security team is trying to determine?",
+    "question": "A company's security team is reviewing its business continuity plan and must determine the amount of time needed for operations to resume after a disaster.\nWhich of the following describes the time frame the security team is trying to determine?",
     "choices": [
       {
         "key": "A",
@@ -3353,7 +3391,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RTO is the maximum acceptable downtime: the target window within which systems and\noperations must be restored after a disruption.\nWhen the team asks \"how long until we're back up?\", they're defining the RTO.",
+    "explanation": "RTO is the maximum acceptable downtime: the target window within which systems and operations must be restored after a disruption.\nWhen the team asks \"how long until we're back up?\", they're defining the RTO.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3369,7 +3407,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure\nmodels?",
+    "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure models?",
     "choices": [
       {
         "key": "A",
@@ -3391,7 +3429,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "IaC stores infrastructure definitions as version-controlled code, so every change is reviewable,\nauditable, and repeatable. You can spin up identical, securely preconfigured environments from\nthe same template, eliminating drift and undocumented tweaks that plague traditional, manually\nbuilt infrastructure. This consistency and traceability are what make IaC the more secure choice.",
+    "explanation": "IaC stores infrastructure definitions as version-controlled code, so every change is reviewable, auditable, and repeatable. You can spin up identical, securely preconfigured environments from the same template, eliminating drift and undocumented tweaks that plague traditional, manually built infrastructure. This consistency and traceability are what make IaC the more secure choice.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3407,7 +3445,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following agreements defines response time, escalation points, and performance\nmetrics?",
+    "question": "Which of the following agreements defines response time, escalation points, and performance metrics?",
     "choices": [
       {
         "key": "A",
@@ -3429,7 +3467,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An SLA spells out exactly how fast a provider must respond and resolve issues, what thresholds\nand KPIs will be measured (uptime, throughput, MTTR), and when/whom to escalate to if those\ntargets aren't met, making it the formal document for response times, escalation paths, and\nperformance metrics.",
+    "explanation": "An SLA spells out exactly how fast a provider must respond and resolve issues, what thresholds and KPIs will be measured (uptime, throughput, MTTR), and when/whom to escalate to if those targets aren't met, making it the formal document for response times, escalation paths, and performance metrics.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3467,7 +3505,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An NDA legally binds parties to keep specified information secret, directly enforcing the\nconfidentiality pillar of security by prohibiting unauthorized disclosure of protected data.",
+    "explanation": "An NDA legally binds parties to keep specified information secret, directly enforcing the confidentiality pillar of security by prohibiting unauthorized disclosure of protected data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3483,7 +3521,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "During an assessment, an organization provides a penetration tester with a website URL and\nlogin credentials. However, the tester does not have access to the source code.\nWhich of the following describes the type of test being performed?",
+    "question": "During an assessment, an organization provides a penetration tester with a website URL and login credentials. However, the tester does not have access to the source code.\nWhich of the following describes the type of test being performed?",
     "choices": [
       {
         "key": "A",
@@ -3505,7 +3543,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The tester has some internal knowledge (valid credentials and target URL) but lacks full visibility\ninto the application internals/source code. That limited insight falls squarely into gray/partially\nknown testing, which blends external attacker perspective with select insider information to\nfocus efforts efficiently.",
+    "explanation": "The tester has some internal knowledge (valid credentials and target URL) but lacks full visibility into the application internals/source code. That limited insight falls squarely into gray/partially known testing, which blends external attacker perspective with select insider information to focus efforts efficiently.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3521,7 +3559,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "An administrator investigating an incident is concerned about the downtime of a critical server\ndue to a failed drive.\nWhich of the following would the administrator use to estimate the time needed to fix the issue?",
+    "question": "An administrator investigating an incident is concerned about the downtime of a critical server due to a failed drive.\nWhich of the following would the administrator use to estimate the time needed to fix the issue?",
     "choices": [
       {
         "key": "A",
@@ -3543,7 +3581,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MTTR (Mean Time to Repair) measures the average time required to repair a failed component\nor system and restore it to full functionality, making it the correct metric for estimating downtime\ndue to a failed drive.",
+    "explanation": "MTTR (Mean Time to Repair) measures the average time required to repair a failed component or system and restore it to full functionality, making it the correct metric for estimating downtime due to a failed drive.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3581,7 +3619,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tailgating into a facility during a red-team exercise is a form of physical penetration testing,\nwhere security is evaluated by attempting to bypass physical access controls.",
+    "explanation": "Tailgating into a facility during a red-team exercise is a form of physical penetration testing, where security is evaluated by attempting to bypass physical access controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3619,7 +3657,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A one-time risk assessment is performed for unique events such as decommissioning an\napplication, to evaluate potential security or compliance impacts before the system is retired.",
+    "explanation": "A one-time risk assessment is performed for unique events such as decommissioning an application, to evaluate potential security or compliance impacts before the system is retired.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3657,7 +3695,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failing to comply with right-to-be-forgotten regulations, such as GDPR requirements, can lead\nto legal penalties and fines from regulatory authorities.",
+    "explanation": "Failing to comply with right-to-be-forgotten regulations, such as GDPR requirements, can lead to legal penalties and fines from regulatory authorities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3695,7 +3733,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Annual Loss Expectancy (ALE) estimates the yearly financial impact of a risk, helping the\norganization compare the potential cost of ransomware incidents against the cost of licensing\nthe prevention solution.",
+    "explanation": "Annual Loss Expectancy (ALE) estimates the yearly financial impact of a risk, helping the organization compare the potential cost of ransomware incidents against the cost of licensing the prevention solution.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3733,7 +3771,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Recovery Point Objective (RPO) defines the maximum acceptable amount of data loss in\nterms of time, directly influencing how frequently backups must be performed.",
+    "explanation": "The Recovery Point Objective (RPO) defines the maximum acceptable amount of data loss in terms of time, directly influencing how frequently backups must be performed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3749,7 +3787,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "After completing an annual external penetration test, a company receives the following\nguidance:\n• Decommission two unused web servers currently exposed to the internet.\n• Close 18 open and unused ports found on their existing production web servers.\n• Remove company email addresses and contact info from public domain registration records.\nWhich of the following security practices best describes these recommendations?",
+    "question": "After completing an annual external penetration test, a company receives the following guidance:\n• Decommission two unused web servers currently exposed to the internet.\n• Close 18 open and unused ports found on their existing production web servers.\n• Remove company email addresses and contact info from public domain registration records.\nWhich of the following security practices best describes these recommendations?",
     "choices": [
       {
         "key": "A",
@@ -3771,7 +3809,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Attack surface reduction involves minimizing the number of exploitable points, such as unused\nservers, open ports, and publicly exposed contact information, that attackers could target.",
+    "explanation": "Attack surface reduction involves minimizing the number of exploitable points, such as unused servers, open ports, and publicly exposed contact information, that attackers could target.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3787,7 +3825,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "An administrator is estimating the cost associated with an attack that could result in the\nreplacement of a physical server.\nWhich of the following processes is the administrator performing?",
+    "question": "An administrator is estimating the cost associated with an attack that could result in the replacement of a physical server.\nWhich of the following processes is the administrator performing?",
     "choices": [
       {
         "key": "A",
@@ -3809,7 +3847,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Quantitative risk analysis assigns a monetary value to potential losses, such as the cost of\nreplacing a physical server after an attack.",
+    "explanation": "Quantitative risk analysis assigns a monetary value to potential losses, such as the cost of replacing a physical server after an attack.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3825,7 +3863,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following teams combines both offensive and defensive testing techniques to\nprotect an organization's critical systems?",
+    "question": "Which of the following teams combines both offensive and defensive testing techniques to protect an organization's critical systems?",
     "choices": [
       {
         "key": "A",
@@ -3847,7 +3885,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A Purple team combines both offensive (Red team) and defensive (Blue team) security\ntechniques to improve an organization's overall security posture through collaborative testing\nand defense.",
+    "explanation": "A Purple team combines both offensive (Red team) and defensive (Blue team) security techniques to improve an organization's overall security posture through collaborative testing and defense.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3863,7 +3901,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following best describes the practice of researching laws and regulations related to\ninformation security operations within a specific industry?",
+    "question": "Which of the following best describes the practice of researching laws and regulations related to information security operations within a specific industry?",
     "choices": [
       {
         "key": "A",
@@ -3885,7 +3923,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Due diligence is the practice of researching and understanding relevant laws and regulations to\nensure that information security operations comply with legal and regulatory requirements for a\nspecific industry.",
+    "explanation": "Due diligence is the practice of researching and understanding relevant laws and regulations to ensure that information security operations comply with legal and regulatory requirements for a specific industry.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3901,7 +3939,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following outlines the configuration, maintenance, and security roles between a\ncloud service provider and the customer?",
+    "question": "Which of the following outlines the configuration, maintenance, and security roles between a cloud service provider and the customer?",
     "choices": [
       {
         "key": "A",
@@ -3923,7 +3961,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A responsibility matrix clearly defines and outlines the division of configuration, maintenance,\nand security roles between a cloud service provider and the customer.",
+    "explanation": "A responsibility matrix clearly defines and outlines the division of configuration, maintenance, and security roles between a cloud service provider and the customer.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3961,7 +3999,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A service-level agreement (SLA) formally defines measurable performance targets - such as 97\n% server and network uptime - that the provider commits to meet.",
+    "explanation": "A service-level agreement (SLA) formally defines measurable performance targets - such as 97 % server and network uptime - that the provider commits to meet.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3977,7 +4015,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "A company receives an alert that a network device vendor, which is widely used in the\nenterprise, has been banned by the government.\nWhich of the following will the company's general counsel most likely be concerned with during\na hardware refresh of these devices?",
+    "question": "A company receives an alert that a network device vendor, which is widely used in the enterprise, has been banned by the government.\nWhich of the following will the company's general counsel most likely be concerned with during a hardware refresh of these devices?",
     "choices": [
       {
         "key": "A",
@@ -3999,7 +4037,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The ban represents a government-imposed sanction; the general counsel must ensure the\nhardware refresh avoids any continued use or procurement of the sanctioned vendor's devices\nto remain legally compliant.",
+    "explanation": "The ban represents a government-imposed sanction; the general counsel must ensure the hardware refresh avoids any continued use or procurement of the sanctioned vendor's devices to remain legally compliant.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4015,7 +4053,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "An organization knows its single loss expectancy.\nWhich of the following does the organization need in order to determine its annualized loss\nexpectancy?",
+    "question": "An organization knows its single loss expectancy.\nWhich of the following does the organization need in order to determine its annualized loss expectancy?",
     "choices": [
       {
         "key": "A",
@@ -4037,13 +4075,13 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Annualized loss expectancy is derived by multiplying the single loss expectancy by the\nannualized rate of occurrence (ARO), which expresses how often the loss is expected to occur\nin a year.",
+    "explanation": "Annualized loss expectancy is derived by multiplying the single loss expectancy by the annualized rate of occurrence (ARO), which expresses how often the loss is expected to occur in a year.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p296",
     "needsReview": true,
-    "inferenceConfidence": 0.941,
+    "inferenceConfidence": 0.962,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4075,7 +4113,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Internal audit teams assess whether the organization is complying with its established policies,\nensuring controls are followed and effective.",
+    "explanation": "Internal audit teams assess whether the organization is complying with its established policies, ensuring controls are followed and effective.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4091,7 +4129,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "multi",
-    "question": "Which of the following metrics are used to calculate the risk rating in a matrix format? (Choose\ntwo.)",
+    "question": "Which of the following metrics are used to calculate the risk rating in a matrix format? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4122,7 +4160,7 @@ export const domain5Questions = [
       "A",
       "D"
     ],
-    "explanation": "A risk matrix evaluates overall risk by plotting the likelihood of an event occurring against the\nimpact it would have, producing a clear risk rating for decision-making.",
+    "explanation": "A risk matrix evaluates overall risk by plotting the likelihood of an event occurring against the impact it would have, producing a clear risk rating for decision-making.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4138,7 +4176,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A penetration tester gained access to a server room by dressing as an engineer from a known\nthird-party vendor.\nWhich of the following types of penetration tests was performed?",
+    "question": "A penetration tester gained access to a server room by dressing as an engineer from a known third-party vendor.\nWhich of the following types of penetration tests was performed?",
     "choices": [
       {
         "key": "A",
@@ -4160,7 +4198,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "This test evaluates the effectiveness of physical security controls by attempting to gain\nunauthorized access to a secure area through impersonation and social engineering, rather\nthan exploiting technical systems or configurations.",
+    "explanation": "This test evaluates the effectiveness of physical security controls by attempting to gain unauthorized access to a secure area through impersonation and social engineering, rather than exploiting technical systems or configurations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4176,7 +4214,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A Chief Information Security Officer has decided that purchasing insurance when the ALE of\nexpected incidents exceeds $1 million is the most cost-effective approach.\nWhich of the following does the $1 million represent?",
+    "question": "A Chief Information Security Officer has decided that purchasing insurance when the ALE of expected incidents exceeds $1 million is the most cost-effective approach.\nWhich of the following does the $1 million represent?",
     "choices": [
       {
         "key": "A",
@@ -4198,7 +4236,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The $1 million represents a predefined trigger point at which a specific risk response is initiated,\nindicating the level at which the organization decides to take action by transferring the risk\nthrough insurance.",
+    "explanation": "The $1 million represents a predefined trigger point at which a specific risk response is initiated, indicating the level at which the organization decides to take action by transferring the risk through insurance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4236,7 +4274,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk assessment conducted on a yearly basis is performed at regular, predefined intervals,\nwhich characterizes it as a recurring assessment rather than a one-time, ad hoc, or continuous\nactivity.",
+    "explanation": "A risk assessment conducted on a yearly basis is performed at regular, predefined intervals, which characterizes it as a recurring assessment rather than a one-time, ad hoc, or continuous activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4252,7 +4290,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following will best ensure a controlled version release of a new software\napplication?",
+    "question": "Which of the following will best ensure a controlled version release of a new software application?",
     "choices": [
       {
         "key": "A",
@@ -4274,7 +4312,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Change management procedures enforce formal review, approval, testing, and scheduling of\nsoftware changes, ensuring releases are controlled, documented, and deployed in an orderly\nmanner.",
+    "explanation": "Change management procedures enforce formal review, approval, testing, and scheduling of software changes, ensuring releases are controlled, documented, and deployed in an orderly manner.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4290,7 +4328,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A security analyst estimates that a small security incident will cost $10,000 and will occur twice\nper year. The analyst recommends a budget of $20,000 for next year.\nWhich of the following does the $10,000 represent?",
+    "question": "A security analyst estimates that a small security incident will cost $10,000 and will occur twice per year. The analyst recommends a budget of $20,000 for next year.\nWhich of the following does the $10,000 represent?",
     "choices": [
       {
         "key": "A",
@@ -4312,7 +4350,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The $10,000 represents the expected cost of a single occurrence of the incident, which is the\nsingle loss expectancy.",
+    "explanation": "The $10,000 represents the expected cost of a single occurrence of the incident, which is the single loss expectancy.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4328,7 +4366,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following techniques is used to assess the effectiveness of security controls that\nare designed to protect a system from unauthorized access?",
+    "question": "Which of the following techniques is used to assess the effectiveness of security controls that are designed to protect a system from unauthorized access?",
     "choices": [
       {
         "key": "A",
@@ -4350,7 +4388,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A penetration test evaluates the effectiveness of security controls by simulating real-world\nattacks against a system. Security professionals attempt to bypass defenses and gain\nunauthorized access in the same way an attacker would. This approach directly tests whether\nexisting controls such as authentication, access restrictions, and network defenses successfully\nprevent unauthorized access.",
+    "explanation": "A penetration test evaluates the effectiveness of security controls by simulating real-world attacks against a system. Security professionals attempt to bypass defenses and gain unauthorized access in the same way an attacker would. This approach directly tests whether existing controls such as authentication, access restrictions, and network defenses successfully prevent unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4388,7 +4426,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a continuity of operations plan, the frequency of backups is determined by the recovery point\nobjective (RPO). The RPO defines the maximum acceptable amount of data loss measured in\ntime. Backup schedules are therefore designed to meet this objective, ensuring that data can be\nrestored to a point that satisfies the organization's tolerance for data loss during a disruption.",
+    "explanation": "In a continuity of operations plan, the frequency of backups is determined by the recovery point objective (RPO). The RPO defines the maximum acceptable amount of data loss measured in time. Backup schedules are therefore designed to meet this objective, ensuring that data can be restored to a point that satisfies the organization's tolerance for data loss during a disruption.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4404,7 +4442,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following risk management strategies is being used when a Chief Information\nSecurity Officer ignores known vulnerabilities identified during a risk assessment?",
+    "question": "Which of the following risk management strategies is being used when a Chief Information Security Officer ignores known vulnerabilities identified during a risk assessment?",
     "choices": [
       {
         "key": "A",
@@ -4426,7 +4464,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk acceptance occurs when an organization acknowledges the existence of a risk but decides\nnot to take action to reduce or eliminate it. The decision is typically based on factors such as\ncost, operational impact, or the perceived likelihood and impact of the threat. By knowingly\nignoring identified vulnerabilities after a risk assessment, the organization is choosing to accept\nthe associated risk.",
+    "explanation": "Risk acceptance occurs when an organization acknowledges the existence of a risk but decides not to take action to reduce or eliminate it. The decision is typically based on factors such as cost, operational impact, or the perceived likelihood and impact of the threat. By knowingly ignoring identified vulnerabilities after a risk assessment, the organization is choosing to accept the associated risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4442,7 +4480,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following describes how a risk event might affect operations and limit the overall\nrisk score?",
+    "question": "Which of the following describes how a risk event might affect operations and limit the overall risk score?",
     "choices": [
       {
         "key": "A",
@@ -4464,7 +4502,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Impact describes the extent to which a risk event would affect business operations if it occurs. It\nmeasures the potential consequences such as service disruption, financial loss, reputational\ndamage, or operational limitations. In risk calculations, impact determines how severe the\noutcome of the event would be and therefore influences the overall risk score when combined\nwith the likelihood of occurrence.",
+    "explanation": "Impact describes the extent to which a risk event would affect business operations if it occurs. It measures the potential consequences such as service disruption, financial loss, reputational damage, or operational limitations. In risk calculations, impact determines how severe the outcome of the event would be and therefore influences the overall risk score when combined with the likelihood of occurrence.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4480,7 +4518,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following is a reason an organization performs a self-assessment of their security\npractices?",
+    "question": "Which of the following is a reason an organization performs a self-assessment of their security practices?",
     "choices": [
       {
         "key": "A",
@@ -4502,7 +4540,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A self-assessment allows an organization to internally evaluate its security practices, controls,\nand processes to identify weaknesses, gaps, and areas that require improvement. By reviewing\nits own security posture, the organization can proactively address vulnerabilities, strengthen\ncontrols, and improve overall security before issues are exploited or discovered during external\nreviews.",
+    "explanation": "A self-assessment allows an organization to internally evaluate its security practices, controls, and processes to identify weaknesses, gaps, and areas that require improvement. By reviewing its own security posture, the organization can proactively address vulnerabilities, strengthen controls, and improve overall security before issues are exploited or discovered during external reviews.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4518,7 +4556,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company performs risk analysis on its equipment and estimates it will experience about ten\nincidents over a five-year period.\nWhich of the following is the correct ARO for the equipment?",
+    "question": "A company performs risk analysis on its equipment and estimates it will experience about ten incidents over a five-year period.\nWhich of the following is the correct ARO for the equipment?",
     "choices": [
       {
         "key": "A",
@@ -4540,7 +4578,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the expected number of times a risk event occurs in\none year. If ten incidents are expected over a five-year period, the annual rate is calculated by\ndividing the total incidents by the number of years. This results in two incidents per year.",
+    "explanation": "Annualized Rate of Occurrence represents the expected number of times a risk event occurs in one year. If ten incidents are expected over a five-year period, the annual rate is calculated by dividing the total incidents by the number of years. This results in two incidents per year.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4578,7 +4616,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An MOU generally outlines mutual understanding and intentions without being legally binding,\nwhereas an SOW defines specific deliverables, scope, and obligations and is typically legally\nbinding.",
+    "explanation": "An MOU generally outlines mutual understanding and intentions without being legally binding, whereas an SOW defines specific deliverables, scope, and obligations and is typically legally binding.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4616,7 +4654,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Passive reconnaissance gathers information without directly interacting with the target systems,\nsuch as collecting publicly available data from the internet using automated tools.",
+    "explanation": "Passive reconnaissance gathers information without directly interacting with the target systems, such as collecting publicly available data from the internet using automated tools.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4632,7 +4670,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "An IT security director performs a security assessment on a vendor but fails to disclose that the\ndirector's spouse is a high-level executive with the vendor.\nWhich of the following best explains why the director should have disclosed this fact?",
+    "question": "An IT security director performs a security assessment on a vendor but fails to disclose that the director's spouse is a high-level executive with the vendor.\nWhich of the following best explains why the director should have disclosed this fact?",
     "choices": [
       {
         "key": "A",
@@ -4654,7 +4692,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A personal relationship with a vendor executive can influence objectivity and decision-making,\ncreating a conflict of interest that must be disclosed to maintain transparency and integrity in the\nassessment.",
+    "explanation": "A personal relationship with a vendor executive can influence objectivity and decision-making, creating a conflict of interest that must be disclosed to maintain transparency and integrity in the assessment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4670,7 +4708,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "multi",
-    "question": "A business analyst develops a questionnaire to interview key stakeholders about business\npriorities in case of a cybersecurity incident.\nWhich of the following are most likely the stakeholders' priorities? (Choose two.)",
+    "question": "A business analyst develops a questionnaire to interview key stakeholders about business priorities in case of a cybersecurity incident.\nWhich of the following are most likely the stakeholders' priorities? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4701,7 +4739,7 @@ export const domain5Questions = [
       "E",
       "F"
     ],
-    "explanation": "Stakeholders prioritize how quickly systems must be restored after an incident, which is defined\nby the recovery time objective. They also need to understand which IT assets support critical\nbusiness processes in order to prioritize recovery efforts effectively.",
+    "explanation": "Stakeholders prioritize how quickly systems must be restored after an incident, which is defined by the recovery time objective. They also need to understand which IT assets support critical business processes in order to prioritize recovery efforts effectively.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4717,7 +4755,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "A company processes personal data from customers in multiple countries.\nWhich of the following actions is most critical for maintaining legal compliance with global\nprivacy regulations?",
+    "question": "A company processes personal data from customers in multiple countries.\nWhich of the following actions is most critical for maintaining legal compliance with global privacy regulations?",
     "choices": [
       {
         "key": "A",
@@ -4739,7 +4777,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data Processing Agreements establish legal obligations for how third-party vendors handle\npersonal data, ensuring compliance with global privacy regulations when data is shared or\nprocessed externally.",
+    "explanation": "Data Processing Agreements establish legal obligations for how third-party vendors handle personal data, ensuring compliance with global privacy regulations when data is shared or processed externally.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4777,7 +4815,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is used to document identified risks, evaluate their impact and likelihood, and\ntrack mitigation efforts to manage those risks effectively over time.",
+    "explanation": "A risk register is used to document identified risks, evaluate their impact and likelihood, and track mitigation efforts to manage those risks effectively over time.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4793,7 +4831,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A company prepares for an upcoming regulatory audit. The company wants to perform a gap\nanalysis in the most cost-effective way.\nWhich of the following will help the company achieve this goal?",
+    "question": "A company prepares for an upcoming regulatory audit. The company wants to perform a gap analysis in the most cost-effective way.\nWhich of the following will help the company achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -4815,13 +4853,13 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An internal self-assessment allows the organization to compare current controls against\nregulatory requirements and identify gaps without the higher cost of external engagements.",
+    "explanation": "An internal self-assessment allows the organization to compare current controls against regulatory requirements and identify gaps without the higher cost of external engagements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p355",
     "needsReview": true,
-    "inferenceConfidence": 0.706,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4831,7 +4869,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "Which of the following scenarios is a warning sign specific to insider threats that should be\nincluded in a company's security awareness training?",
+    "question": "Which of the following scenarios is a warning sign specific to insider threats that should be included in a company's security awareness training?",
     "choices": [
       {
         "key": "A",
@@ -4853,7 +4891,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sharing unique credentials is a clear insider threat warning sign because it violates access\ncontrol policies and can lead to unauthorized access using legitimate accounts.",
+    "explanation": "Sharing unique credentials is a clear insider threat warning sign because it violates access control policies and can lead to unauthorized access using legitimate accounts.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4869,7 +4907,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following best represents how frequently an incident is expected to happen each\nyear?",
+    "question": "Which of the following best represents how frequently an incident is expected to happen each year?",
     "choices": [
       {
         "key": "A",
@@ -4891,7 +4929,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the estimated frequency with which a specific threat\nor incident is expected to occur within a year.",
+    "explanation": "Annualized Rate of Occurrence represents the estimated frequency with which a specific threat or incident is expected to occur within a year.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4907,7 +4945,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following risk analysis attributes measures the chance that a vulnerability will be\nexploited?",
+    "question": "Which of the following risk analysis attributes measures the chance that a vulnerability will be exploited?",
     "choices": [
       {
         "key": "A",
@@ -4929,7 +4967,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Likelihood represents the probability that a vulnerability will be exploited, indicating how likely it\nis that a threat event will occur.",
+    "explanation": "Likelihood represents the probability that a vulnerability will be exploited, indicating how likely it is that a threat event will occur.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4945,7 +4983,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "A large organization has stable, well-established operations regarding its employee work hours,\nlocations, and tasks. The large number of employees makes individual, close monitoring\nimpractical. The organization wants to automate the detection of possible security breaches.\nWhich of the following is the best way to detect activities outside of normal operations?",
+    "question": "A large organization has stable, well-established operations regarding its employee work hours, locations, and tasks. The large number of employees makes individual, close monitoring impractical. The organization wants to automate the detection of possible security breaches.\nWhich of the following is the best way to detect activities outside of normal operations?",
     "choices": [
       {
         "key": "A",
@@ -4967,7 +5005,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Anomalous behavior recognition establishes a baseline of normal user and system activity and\nautomatically detects deviations, enabling identification of potential security breaches at scale.",
+    "explanation": "Anomalous behavior recognition establishes a baseline of normal user and system activity and automatically detects deviations, enabling identification of potential security breaches at scale.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4983,7 +5021,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following best explains the purpose of establishing the rules of engagement before\nconducting a third-party penetration test?",
+    "question": "Which of the following best explains the purpose of establishing the rules of engagement before conducting a third-party penetration test?",
     "choices": [
       {
         "key": "A",
@@ -5005,7 +5043,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Rules of engagement define the scope, methods, and boundaries of the penetration test in\nadvance, ensuring the assessment is conducted safely, legally, and without unintended\ndisruption.",
+    "explanation": "Rules of engagement define the scope, methods, and boundaries of the penetration test in advance, ensuring the assessment is conducted safely, legally, and without unintended disruption.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5021,7 +5059,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following will oversee a cybersecurity program and provide guidance on risk\nappetite for an organization?",
+    "question": "Which of the following will oversee a cybersecurity program and provide guidance on risk appetite for an organization?",
     "choices": [
       {
         "key": "A",
@@ -5043,13 +5081,13 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The board of directors provides strategic oversight of the cybersecurity program and sets the\norganization's risk appetite, guiding how risk is managed at a high level.",
+    "explanation": "The board of directors provides strategic oversight of the cybersecurity program and sets the organization's risk appetite, guiding how risk is managed at a high level.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p364",
     "needsReview": true,
-    "inferenceConfidence": 0.833,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5059,7 +5097,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A company asks a vendor to help its internal red team with a penetration test without providing\ntoo much detail about the infrastructure.\nWhich of the following penetration testing methods does this scenario describe?",
+    "question": "A company asks a vendor to help its internal red team with a penetration test without providing too much detail about the infrastructure.\nWhich of the following penetration testing methods does this scenario describe?",
     "choices": [
       {
         "key": "A",
@@ -5081,7 +5119,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A partially-known environment provides limited information to the testers, simulating a scenario\nwhere some knowledge is available but not full visibility into the infrastructure.",
+    "explanation": "A partially-known environment provides limited information to the testers, simulating a scenario where some knowledge is available but not full visibility into the infrastructure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5097,7 +5135,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "An organization wants to hire a third-party company to perform a vulnerability assessment on\nthe organization's internal systems.\nWhich of the following will best ensure confidentiality of the results and provide a legally binding\ndocument?",
+    "question": "An organization wants to hire a third-party company to perform a vulnerability assessment on the organization's internal systems.\nWhich of the following will best ensure confidentiality of the results and provide a legally binding document?",
     "choices": [
       {
         "key": "A",
@@ -5119,7 +5157,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A non-disclosure agreement legally binds the third party to protect the confidentiality of sensitive\ninformation, including assessment results.",
+    "explanation": "A non-disclosure agreement legally binds the third party to protect the confidentiality of sensitive information, including assessment results.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5135,7 +5173,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "A security engineer must set up new resources in the cloud. The company wants to make sure\nall settings are secure and consistent across every instance before the company promotes the\nnew resources to production.\nWhich of the following is the best way for the security engineer to meet these requirements?",
+    "question": "A security engineer must set up new resources in the cloud. The company wants to make sure all settings are secure and consistent across every instance before the company promotes the new resources to production.\nWhich of the following is the best way for the security engineer to meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -5157,7 +5195,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A saved setup file with predefined parameters supports infrastructure as code and configuration\ntemplates. This ensures cloud resources are deployed with secure, repeatable, and consistent\nsettings before being promoted to production.",
+    "explanation": "A saved setup file with predefined parameters supports infrastructure as code and configuration templates. This ensures cloud resources are deployed with secure, repeatable, and consistent settings before being promoted to production.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5173,7 +5211,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following is the primary purpose of a service that tracks logins and time spent\nusing the service?",
+    "question": "Which of the following is the primary purpose of a service that tracks logins and time spent using the service?",
     "choices": [
       {
         "key": "A",
@@ -5195,7 +5233,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Accounting tracks user activity, such as login events, session duration, and resource usage. It\nprovides an audit trail of what users did and how long they used the service.",
+    "explanation": "Accounting tracks user activity, such as login events, session duration, and resource usage. It provides an audit trail of what users did and how long they used the service.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5233,7 +5271,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Passive reconnaissance focuses on gathering information through publicly available sources\nand OSINT methods without intrusive testing or payload injection. This approach is used to\nlearn about the target while minimizing direct interaction and detection risk.",
+    "explanation": "Passive reconnaissance focuses on gathering information through publicly available sources and OSINT methods without intrusive testing or payload injection. This approach is used to learn about the target while minimizing direct interaction and detection risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5249,7 +5287,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "An organization authorizes system deployment on the network after reducing the number of\nCategory 1 vulnerabilities to zero.\nWhich of the following is this scenario an example of?",
+    "question": "An organization authorizes system deployment on the network after reducing the number of Category 1 vulnerabilities to zero.\nWhich of the following is this scenario an example of?",
     "choices": [
       {
         "key": "A",
@@ -5271,7 +5309,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk tolerance defines the acceptable level of risk an organization is willing to allow before\napproving an activity. Authorizing deployment only after Category 1 vulnerabilities are reduced\nto zero shows the organization's defined threshold for acceptable risk.",
+    "explanation": "Risk tolerance defines the acceptable level of risk an organization is willing to allow before approving an activity. Authorizing deployment only after Category 1 vulnerabilities are reduced to zero shows the organization's defined threshold for acceptable risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5309,7 +5347,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An acceptable use policy defines how users are permitted to use organizational systems,\nnetworks, applications, and data. It establishes acceptable and prohibited actions to guide\nproper system use.",
+    "explanation": "An acceptable use policy defines how users are permitted to use organizational systems, networks, applications, and data. It establishes acceptable and prohibited actions to guide proper system use.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5347,7 +5385,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data leaks are most likely to cause reputational damage because they expose sensitive\ninformation and can reduce customer, partner, and public trust in the company.",
+    "explanation": "Data leaks are most likely to cause reputational damage because they expose sensitive information and can reduce customer, partner, and public trust in the company.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5363,7 +5401,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A company wants to use new Wi-Fi-enabled environmental sensors in order to automatically\ncollect metrics.\nWhich of the following will the security team most likely do?",
+    "question": "A company wants to use new Wi-Fi-enabled environmental sensors in order to automatically collect metrics.\nWhich of the following will the security team most likely do?",
     "choices": [
       {
         "key": "A",
@@ -5401,7 +5439,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A security team identifies a vulnerability in an application that the developers will not be able to\npatch for six months.\nWhich of the following should the security team use to document this vulnerability?",
+    "question": "A security team identifies a vulnerability in an application that the developers will not be able to patch for six months.\nWhich of the following should the security team use to document this vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -5423,7 +5461,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register documents known risks, including vulnerabilities that cannot be remediated\nimmediately. It allows the organization to track ownership, severity, impact, mitigation plans, and\nthe accepted timeline until remediation is possible.",
+    "explanation": "A risk register documents known risks, including vulnerabilities that cannot be remediated immediately. It allows the organization to track ownership, severity, impact, mitigation plans, and the accepted timeline until remediation is possible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5439,7 +5477,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A security analyst determines that a security breach will have a financial impact of $15,000 and\nis expected to occur twice within a three-year period.\nWhich of the following is the ALE for this risk?",
+    "question": "A security analyst determines that a security breach will have a financial impact of $15,000 and is expected to occur twice within a three-year period.\nWhich of the following is the ALE for this risk?",
     "choices": [
       {
         "key": "A",
@@ -5461,7 +5499,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "15 000 × 2 ÷ 3 = 10 000\nAnnualized loss expectancy is calculated by multiplying the single-loss expectancy by the\nannualized rate of occurrence. A $15,000 impact occurring twice in three years equals an\nannual expected loss of $10,000.",
+    "explanation": "15 000 × 2 ÷ 3 = 10 000 Annualized loss expectancy is calculated by multiplying the single-loss expectancy by the annualized rate of occurrence. A $15,000 impact occurring twice in three years equals an annual expected loss of $10,000.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5477,7 +5515,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An administrator develops a document that includes a series of steps about configuration,\nmanagement, and maintenance processes for the network.\nWhich of the following describes this document?",
+    "question": "An administrator develops a document that includes a series of steps about configuration, management, and maintenance processes for the network.\nWhich of the following describes this document?",
     "choices": [
       {
         "key": "A",
@@ -5499,7 +5537,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Procedures provide step-by-step instructions for performing specific tasks, such as configuring,\nmanaging, and maintaining network systems.",
+    "explanation": "Procedures provide step-by-step instructions for performing specific tasks, such as configuring, managing, and maintaining network systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5537,7 +5575,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compliance attestation uses assessment results to confirm whether a third party meets required\nsecurity, regulatory, or contractual controls. It provides formal evidence that the vendor's risk\nposture and compliance status have been reviewed.",
+    "explanation": "Compliance attestation uses assessment results to confirm whether a third party meets required security, regulatory, or contractual controls. It provides formal evidence that the vendor's risk posture and compliance status have been reviewed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5553,7 +5591,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An organization wants to increase its awareness of the company's ongoing security efforts. The\nfollowing data points should be captured and consolidated for executive review:\n• Change in yearly security budget\n• Changes in help desk ticket queue\n• Scalability\n• Time to resolve critical issues\n• Rate of administrators' onboarding/offboarding\nWhich of the following is the best way to enable the organization to capture these data points\nand promote awareness?",
+    "question": "An organization wants to increase its awareness of the company's ongoing security efforts. The following data points should be captured and consolidated for executive review:\n• Change in yearly security budget\n• Changes in help desk ticket queue\n• Scalability\n• Time to resolve critical issues\n• Rate of administrators' onboarding/offboarding Which of the following is the best way to enable the organization to capture these data points and promote awareness?",
     "choices": [
       {
         "key": "A",
@@ -5575,7 +5613,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A dashboard is the best way to consolidate security metrics from multiple areas and present\nthem in a clear, ongoing view for executive review. It promotes awareness by showing trends,\noperational status, and key performance indicators in one centralized location.",
+    "explanation": "A dashboard is the best way to consolidate security metrics from multiple areas and present them in a clear, ongoing view for executive review. It promotes awareness by showing trends, operational status, and key performance indicators in one centralized location.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5591,7 +5629,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following actions would provide an independent assessment of a vendor's\ncybersecurity posture?",
+    "question": "Which of the following actions would provide an independent assessment of a vendor's cybersecurity posture?",
     "choices": [
       {
         "key": "A",
@@ -5613,7 +5651,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Cybersecurity attestations, such as independent audit or assurance reports, provide third-party\nvalidation of a vendor's security controls and cybersecurity posture. This is stronger than relying\nonly on vendor-provided self-assessments or internally generated reports.",
+    "explanation": "Cybersecurity attestations, such as independent audit or assurance reports, provide third-party validation of a vendor's security controls and cybersecurity posture. This is stronger than relying only on vendor-provided self-assessments or internally generated reports.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5629,7 +5667,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following describes a commitment to maintain service availability at or above a\nnegotiated level to avoid penalties?",
+    "question": "Which of the following describes a commitment to maintain service availability at or above a negotiated level to avoid penalties?",
     "choices": [
       {
         "key": "A",
@@ -5651,7 +5689,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A service-level agreement is a formal commitment between a provider and customer that\ndefines expected service availability, performance targets, and penalties or remedies if the\nnegotiated level is not met.",
+    "explanation": "A service-level agreement is a formal commitment between a provider and customer that defines expected service availability, performance targets, and penalties or remedies if the negotiated level is not met.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5667,7 +5705,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An external security assessment report indicates a high click rate on suspicious emails. The\nChief Intelligence Security Officer (CISO) must reduce this behavior.\nWhich of the following should the CISO do first?",
+    "question": "An external security assessment report indicates a high click rate on suspicious emails. The Chief Intelligence Security Officer (CISO) must reduce this behavior.\nWhich of the following should the CISO do first?",
     "choices": [
       {
         "key": "A",
@@ -5689,7 +5727,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A phishing awareness campaign directly addresses the high click rate by training users to\nrecognize suspicious emails, identify common phishing indicators, and respond appropriately.\nSecurity awareness training is the most immediate and relevant control for reducing phishing-\nrelated user behavior.",
+    "explanation": "A phishing awareness campaign directly addresses the high click rate by training users to recognize suspicious emails, identify common phishing indicators, and respond appropriately.\nSecurity awareness training is the most immediate and relevant control for reducing phishing- related user behavior.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5705,7 +5743,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "The IT team in a company wants to make sure that login requests for all remote employees are\nstored for compliance purposes.\nWhich of the following concepts is the IT team implementing?",
+    "question": "The IT team in a company wants to make sure that login requests for all remote employees are stored for compliance purposes.\nWhich of the following concepts is the IT team implementing?",
     "choices": [
       {
         "key": "A",
@@ -5727,7 +5765,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Accounting records and tracks user activities, such as login attempts, session details, and\naccess events. Storing remote employee login requests for compliance and auditing purposes is\nan example of accounting within the AAA security framework.",
+    "explanation": "Accounting records and tracks user activities, such as login attempts, session details, and access events. Storing remote employee login requests for compliance and auditing purposes is an example of accounting within the AAA security framework.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5743,7 +5781,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A security analyst must select a metric to determine the required investment in technology\nbased on past availability incidents.\nWhich of the following is the most relevant value to help select technology that mitigates risk\nand considers reliability?",
+    "question": "A security analyst must select a metric to determine the required investment in technology based on past availability incidents.\nWhich of the following is the most relevant value to help select technology that mitigates risk and considers reliability?",
     "choices": [
       {
         "key": "A",
@@ -5765,7 +5803,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Mean Time Between Failures (MTBF) measures the average operating time between system or\ncomponent failures. It is directly related to reliability and helps an organization evaluate\ntechnologies based on historical availability and failure patterns.",
+    "explanation": "Mean Time Between Failures (MTBF) measures the average operating time between system or component failures. It is directly related to reliability and helps an organization evaluate technologies based on historical availability and failure patterns.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5781,7 +5819,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "As part of a third-party risk program, which of the following should most likely be in place to\navoid subcontracting?",
+    "question": "As part of a third-party risk program, which of the following should most likely be in place to avoid subcontracting?",
     "choices": [
       {
         "key": "A",
@@ -5803,7 +5841,7 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A statement of work defines the specific scope, responsibilities, deliverables, and conditions for\nthe contracted work. It can explicitly require the third party to perform the work directly and\nprohibit subcontracting without prior authorization.",
+    "explanation": "A statement of work defines the specific scope, responsibilities, deliverables, and conditions for the contracted work. It can explicitly require the third party to perform the work directly and prohibit subcontracting without prior authorization.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5819,7 +5857,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following best assesses the compliance level of in-place IT processes and assets\nagainst a certification a company is pursuing?",
+    "question": "Which of the following best assesses the compliance level of in-place IT processes and assets against a certification a company is pursuing?",
     "choices": [
       {
         "key": "A",
@@ -5841,7 +5879,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A gap analysis compares the organization's current IT processes, controls, and assets against\nthe requirements of a target certification or standard. It identifies areas that already comply and\nhighlights deficiencies that must be addressed before certification.",
+    "explanation": "A gap analysis compares the organization's current IT processes, controls, and assets against the requirements of a target certification or standard. It identifies areas that already comply and highlights deficiencies that must be addressed before certification.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],

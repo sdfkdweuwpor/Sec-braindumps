@@ -8,7 +8,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
-    "question": "To improve the security at a data center, a security administrator implements a CCTV system\nand posts several signs about the possibility of being filmed.\nWhich of the following best describe these types of controls? (Choose two.)",
+    "question": "To improve the security at a data center, a security administrator implements a CCTV system and posts several signs about the possibility of being filmed.\nWhich of the following best describe these types of controls? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -55,7 +55,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following security concepts is accomplished with the installation of a RADIUS\nserver?",
+    "question": "Which of the following security concepts is accomplished with the installation of a RADIUS server?",
     "choices": [
       {
         "key": "A",
@@ -93,7 +93,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "After creating a contract for IT contractors, the human resources department changed several\nclauses. The contract has gone through three revisions.\nWhich of the following processes should the human resources department follow to track\nrevisions?",
+    "question": "After creating a contract for IT contractors, the human resources department changed several clauses. The contract has gone through three revisions.\nWhich of the following processes should the human resources department follow to track revisions?",
     "choices": [
       {
         "key": "A",
@@ -131,7 +131,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A company wants to ensure that the software it develops will not be tampered with after the final\nversion is completed.\nWhich of the following should the company most likely use?",
+    "question": "A company wants to ensure that the software it develops will not be tampered with after the final version is completed.\nWhich of the following should the company most likely use?",
     "choices": [
       {
         "key": "A",
@@ -169,7 +169,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
-    "question": "A network team segmented a critical, end-of-life server to a VLAN that can only be reached by\nspecific devices but cannot be reached by the perimeter network.\nWhich of the following best describe the controls the team implemented? (Choose two.)",
+    "question": "A network team segmented a critical, end-of-life server to a VLAN that can only be reached by specific devices but cannot be reached by the perimeter network.\nWhich of the following best describe the controls the team implemented? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -220,7 +220,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A threat actor was able to use a username and password to log in to a stolen company mobile\ndevice.\nWhich of the following provides the best solution to increase mobile data security on all\nemployees' company mobile devices?",
+    "question": "A threat actor was able to use a username and password to log in to a stolen company mobile device.\nWhich of the following provides the best solution to increase mobile data security on all employees' company mobile devices?",
     "choices": [
       {
         "key": "A",
@@ -258,7 +258,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A software development team asked a security administrator to recommend techniques that\nshould be used to reduce the chances of the software being reverse engineered.\nWhich of the following should the security administrator recommend?",
+    "question": "A software development team asked a security administrator to recommend techniques that should be used to reduce the chances of the software being reverse engineered.\nWhich of the following should the security administrator recommend?",
     "choices": [
       {
         "key": "A",
@@ -296,7 +296,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following most likely describes why a security engineer would configure all\noutbound emails to use S/MIME digital signatures?",
+    "question": "Which of the following most likely describes why a security engineer would configure all outbound emails to use S/MIME digital signatures?",
     "choices": [
       {
         "key": "A",
@@ -334,7 +334,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following considerations is the most important regarding cryptography used in an\nIoT device?",
+    "question": "Which of the following considerations is the most important regarding cryptography used in an IoT device?",
     "choices": [
       {
         "key": "A",
@@ -372,7 +372,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "A hosting provider needs to prove that its security controls have been in place over the last six\nmonths and have sufficiently protected customer data.\nWhich of the following would provide the best proof that the hosting provider has met the\nrequirements?",
+    "question": "A hosting provider needs to prove that its security controls have been in place over the last six months and have sufficiently protected customer data.\nWhich of the following would provide the best proof that the hosting provider has met the requirements?",
     "choices": [
       {
         "key": "A",
@@ -448,7 +448,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An administrator is installing an LDAP browser tool in order to view objects in the corporate\nLDAP directory. Secure connections to the LDAP server are required.\nWhen the browser connects to the server, certificate errors are being displayed, and then the\nconnection is terminated.\nWhich of the following is the most likely solution?",
+    "question": "An administrator is installing an LDAP browser tool in order to view objects in the corporate LDAP directory. Secure connections to the LDAP server are required.\nWhen the browser connects to the server, certificate errors are being displayed, and then the connection is terminated.\nWhich of the following is the most likely solution?",
     "choices": [
       {
         "key": "A",
@@ -486,7 +486,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an\nexternal host that includes the following:\n... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags\n[DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header\nTCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 >\n2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq\n97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
+    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an external host that includes the following:\n... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
     "choices": [
       {
         "key": "A",
@@ -528,7 +528,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "During a penetration test, a flaw in the internal PKI was exploited to gain domain administrator\nrights using specially crafted certificates.\nWhich of the following remediation tasks should be completed as part of the cleanup phase?",
+    "question": "During a penetration test, a flaw in the internal PKI was exploited to gain domain administrator rights using specially crafted certificates.\nWhich of the following remediation tasks should be completed as part of the cleanup phase?",
     "choices": [
       {
         "key": "A",
@@ -613,7 +613,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "During an annual review of the system design, an engineer identified a few issues with the\ncurrently released design.\nWhich of the following should be performed next according to best practices?",
+    "question": "During an annual review of the system design, an engineer identified a few issues with the currently released design.\nWhich of the following should be performed next according to best practices?",
     "choices": [
       {
         "key": "A",
@@ -651,7 +651,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "A security team is addressing a risk associated with the attack surface of the organization's web\napplication over port 443. Currently, no advanced network security capabilities are in place.\nWhich of the following would be best to set up? (Choose two.)",
+    "question": "A security team is addressing a risk associated with the attack surface of the organization's web application over port 443. Currently, no advanced network security capabilities are in place.\nWhich of the following would be best to set up? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -736,7 +736,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following would a systems administrator follow when upgrading the firmware of an\norganization's router?",
+    "question": "Which of the following would a systems administrator follow when upgrading the firmware of an organization's router?",
     "choices": [
       {
         "key": "A",
@@ -758,7 +758,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A maintenance window is a pre-scheduled period when system or network changes, updates, or\nrepairs are performed. By using a designated maintenance window, a systems administrator\ncan minimize disruption to the organization's operations, as this window is typically chosen\nduring a time when network usage is lower, reducing the impact on users.",
+    "explanation": "A maintenance window is a pre-scheduled period when system or network changes, updates, or repairs are performed. By using a designated maintenance window, a systems administrator can minimize disruption to the organization's operations, as this window is typically chosen during a time when network usage is lower, reducing the impact on users.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -774,7 +774,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A database administrator is updating the company's SQL database, which stores credit card\ninformation for pending purchases.\nWhich of the following is the best method to secure the data against a potential breach?",
+    "question": "A database administrator is updating the company's SQL database, which stores credit card information for pending purchases.\nWhich of the following is the best method to secure the data against a potential breach?",
     "choices": [
       {
         "key": "A",
@@ -796,7 +796,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization replaces sensitive data, like credit card information, with a unique identifier (token)\nthat has no exploitable value outside of a specific context. This approach is widely used to\nsecure payment card information and reduces the risk of exposure in case of a breach, as the\nactual credit card data is not stored in the database.",
+    "explanation": "Tokenization replaces sensitive data, like credit card information, with a unique identifier (token) that has no exploitable value outside of a specific context. This approach is widely used to secure payment card information and reduces the risk of exposure in case of a breach, as the actual credit card data is not stored in the database.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -812,7 +812,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following techniques would attract the attention of a malicious attacker in an insider\nthreat scenario?",
+    "question": "Which of the following techniques would attract the attention of a malicious attacker in an insider threat scenario?",
     "choices": [
       {
         "key": "A",
@@ -834,13 +834,13 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A file with a name like \"salaries\" suggests sensitive information, which would likely draw the\nattention of an insider threat looking for valuable or confidential data. This technique is often\nused as part of a honeypot strategy to monitor and detect suspicious activity by insiders\nattempting unauthorized access.",
+    "explanation": "A file with a name like \"salaries\" suggests sensitive information, which would likely draw the attention of an insider threat looking for valuable or confidential data. This technique is often used as part of a honeypot strategy to monitor and detect suspicious activity by insiders attempting unauthorized access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p60",
     "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -872,7 +872,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Full disk encryption (FDE) secures data at rest by encrypting the entire storage drive, ensuring\nthat data is protected when the system is powered off or if the drive is accessed without\nauthorization. This approach is commonly used to protect sensitive data stored on devices like\nlaptops, servers, and storage media.",
+    "explanation": "Full disk encryption (FDE) secures data at rest by encrypting the entire storage drive, ensuring that data is protected when the system is powered off or if the drive is accessed without authorization. This approach is commonly used to protect sensitive data stored on devices like laptops, servers, and storage media.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -935,7 +935,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following is the best way to securely store an encryption key for a data set in a\nmanner that allows multiple entities to access the key when needed?",
+    "question": "Which of the following is the best way to securely store an encryption key for a data set in a manner that allows multiple entities to access the key when needed?",
     "choices": [
       {
         "key": "A",
@@ -957,7 +957,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Key escrow involves storing the encryption key with a trusted third party or system that securely\nretains the key and grants access to authorized entities as needed. This approach ensures that\nmultiple authorized parties can access the key in a controlled and secure manner, making it a\nreliable solution for shared access requirements.",
+    "explanation": "Key escrow involves storing the encryption key with a trusted third party or system that securely retains the key and grants access to authorized entities as needed. This approach ensures that multiple authorized parties can access the key in a controlled and secure manner, making it a reliable solution for shared access requirements.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -973,7 +973,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following security concepts is being followed when implementing a product that\noffers protection against DDoS attacks?",
+    "question": "Which of the following security concepts is being followed when implementing a product that offers protection against DDoS attacks?",
     "choices": [
       {
         "key": "A",
@@ -995,7 +995,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "DDoS (Distributed Denial of Service) attacks aim to overwhelm resources and make services\nunavailable to legitimate users. By implementing protection against DDoS attacks, the\norganization is focusing on maintaining the availability of its services, ensuring that they remain\naccessible even in the face of such attacks.",
+    "explanation": "DDoS (Distributed Denial of Service) attacks aim to overwhelm resources and make services unavailable to legitimate users. By implementing protection against DDoS attacks, the organization is focusing on maintaining the availability of its services, ensuring that they remain accessible even in the face of such attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1011,7 +1011,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following attacks exploits a potential vulnerability as a result of using weak\ncryptographic algorithms?",
+    "question": "Which of the following attacks exploits a potential vulnerability as a result of using weak cryptographic algorithms?",
     "choices": [
       {
         "key": "A",
@@ -1033,7 +1033,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Weak cryptographic algorithms make it easier for attackers to crack passwords by using\ntechniques such as brute-force or dictionary attacks.\nWhen encryption algorithms are weak, they produce predictable patterns or can be processed\nfaster, allowing attackers to break the encryption and recover sensitive information, such as\npasswords, more easily.",
+    "explanation": "Weak cryptographic algorithms make it easier for attackers to crack passwords by using techniques such as brute-force or dictionary attacks.\nWhen encryption algorithms are weak, they produce predictable patterns or can be processed faster, allowing attackers to break the encryption and recover sensitive information, such as passwords, more easily.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1071,7 +1071,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Bollards are physical barriers that prevent unauthorized vehicle access to certain areas, helping\nto protect a facility by physically blocking entry. Unlike detection-focused controls like video\nsurveillance, alarms, and motion sensors, bollards serve as a proactive, preventive measure by\nstopping threats before they can reach the facility.",
+    "explanation": "Bollards are physical barriers that prevent unauthorized vehicle access to certain areas, helping to protect a facility by physically blocking entry. Unlike detection-focused controls like video surveillance, alarms, and motion sensors, bollards serve as a proactive, preventive measure by stopping threats before they can reach the facility.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1087,7 +1087,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following is most likely to be used as a just-in-time reference document within a\nsecurity operations center?",
+    "question": "Which of the following is most likely to be used as a just-in-time reference document within a security operations center?",
     "choices": [
       {
         "key": "A",
@@ -1109,7 +1109,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A playbook provides step-by-step procedures for responding to specific types of security\nincidents, making it an essential just-in-time reference during active incidents. SOC analysts rely\non playbooks to quickly access instructions and guidance for consistent and effective response\nactions.",
+    "explanation": "A playbook provides step-by-step procedures for responding to specific types of security incidents, making it an essential just-in-time reference during active incidents. SOC analysts rely on playbooks to quickly access instructions and guidance for consistent and effective response actions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1125,7 +1125,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Several customers want an organization to verify its security controls are operating effectively\nand have requested an independent opinion.\nWhich of the following is the most efficient way to address these requests?",
+    "question": "Several customers want an organization to verify its security controls are operating effectively and have requested an independent opinion.\nWhich of the following is the most efficient way to address these requests?",
     "choices": [
       {
         "key": "A",
@@ -1147,7 +1147,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A third-party attestation report, such as a SOC 2 report, is an independent assessment of the\norganization's security controls conducted by an external auditor. This report provides clients\nwith the assurance they need without requiring each client to conduct their own audit or the\norganization to perform separate assessments, making it both efficient and credible.",
+    "explanation": "A third-party attestation report, such as a SOC 2 report, is an independent assessment of the organization's security controls conducted by an external auditor. This report provides clients with the assurance they need without requiring each client to conduct their own audit or the organization to perform separate assessments, making it both efficient and credible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1163,7 +1163,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An administrator is installing an SSL certificate on a new system. During testing, errors indicate\nthat the certificate is not trusted. The administrator has verified with the issuing CA and has\nvalidated the private key.\nWhich of the following should the administrator check for next?",
+    "question": "An administrator is installing an SSL certificate on a new system. During testing, errors indicate that the certificate is not trusted. The administrator has verified with the issuing CA and has validated the private key.\nWhich of the following should the administrator check for next?",
     "choices": [
       {
         "key": "A",
@@ -1185,7 +1185,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "If the certificate is not trusted, it's often because the root certificate (or intermediate certificate)\nfrom the issuing Certificate Authority (CA) is not installed or not recognized by the system. The\nroot certificate verifies the chain of trust, and without it, the SSL certificate may not be trusted by\nthe system or browser. Installing the root and any necessary intermediate certificates should\nresolve the trust issue.",
+    "explanation": "If the certificate is not trusted, it's often because the root certificate (or intermediate certificate) from the issuing Certificate Authority (CA) is not installed or not recognized by the system. The root certificate verifies the chain of trust, and without it, the SSL certificate may not be trusted by the system or browser. Installing the root and any necessary intermediate certificates should resolve the trust issue.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1201,7 +1201,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A new security regulation was announced that will take effect in the coming year. A company\nmust comply with it to remain in business.\nWhich of the following activities should the company perform next?",
+    "question": "A new security regulation was announced that will take effect in the coming year. A company must comply with it to remain in business.\nWhich of the following activities should the company perform next?",
     "choices": [
       {
         "key": "A",
@@ -1223,7 +1223,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A gap analysis will help the company identify the differences between its current security\npractices and the requirements of the new regulation. This analysis provides a clear\nunderstanding of what needs to be addressed to achieve compliance, allowing the company to\nprioritize and implement necessary changes before the regulation takes effect.",
+    "explanation": "A gap analysis will help the company identify the differences between its current security practices and the requirements of the new regulation. This analysis provides a clear understanding of what needs to be addressed to achieve compliance, allowing the company to prioritize and implement necessary changes before the regulation takes effect.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1239,7 +1239,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An accountant is transferring information to a bank over FTP.\nWhich of the following mitigations should the accountant use to protect the confidentiality of the\ndata?",
+    "question": "An accountant is transferring information to a bank over FTP.\nWhich of the following mitigations should the accountant use to protect the confidentiality of the data?",
     "choices": [
       {
         "key": "A",
@@ -1261,7 +1261,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Encrypting the data ensures that it remains confidential and protected from\nunauthorized access during transfer. Standard FTP does not provide secure transmission, so\nadding encryption—such as using FTPS (FTP Secure) or SFTP (SSH File Transfer Protocol)—\nwill safeguard the data by making it unreadable to anyone intercepting the transfer.",
+    "explanation": "Encrypting the data ensures that it remains confidential and protected from unauthorized access during transfer. Standard FTP does not provide secure transmission, so adding encryption—such as using FTPS (FTP Secure) or SFTP (SSH File Transfer Protocol)— will safeguard the data by making it unreadable to anyone intercepting the transfer.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1277,7 +1277,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following cryptographic methods is preferred for securing communications with\nlimited computing resources?",
+    "question": "Which of the following cryptographic methods is preferred for securing communications with limited computing resources?",
     "choices": [
       {
         "key": "A",
@@ -1310,44 +1310,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0177",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "Which of the following is the best way to validate the integrity and availability of a disaster\nrecovery site?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Lead a simulated failover."
-      },
-      {
-        "key": "B",
-        "text": "Conduct a tabletop exercise."
-      },
-      {
-        "key": "C",
-        "text": "Periodically test the generators."
-      },
-      {
-        "key": "D",
-        "text": "Develop requirements for database encryption."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A simulated failover involves switching operations from the primary site to the disaster recovery\nsite, testing the systems, applications, and processes in a real-world scenario. This approach\nvalidates that the disaster recovery site can support operations effectively, ensuring both\nintegrity and availability in the event of an actual disaster.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p80",
-    "needsReview": true,
-    "inferenceConfidence": 0.429,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0183",
     "domain": 1,
     "objective": "1.4",
@@ -1375,7 +1337,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Masking is a technique used to obscure sensitive data, such as account numbers, in order to\nprevent unauthorized access to the full details. By applying masking to the cardholder data in\nthe logs, only part of the account number would be visible, limiting the exposure of sensitive\ninformation and thus reducing the potential impact of the error. This approach allows for secure\nhandling of data in scenarios where the information needs to be referenced but not fully\nexposed.",
+    "explanation": "Masking is a technique used to obscure sensitive data, such as account numbers, in order to prevent unauthorized access to the full details. By applying masking to the cardholder data in the logs, only part of the account number would be visible, limiting the exposure of sensitive information and thus reducing the potential impact of the error. This approach allows for secure handling of data in scenarios where the information needs to be referenced but not fully exposed.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1391,7 +1353,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A penetration tester enters an office building at the same time as a group of employees despite\nnot having an access badge.\nWhich of the following attack types is the penetration tester performing?",
+    "question": "A penetration tester enters an office building at the same time as a group of employees despite not having an access badge.\nWhich of the following attack types is the penetration tester performing?",
     "choices": [
       {
         "key": "A",
@@ -1413,7 +1375,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Tailgating is a social engineering technique where an unauthorized person gains access to a\nrestricted area by following closely behind authorized individuals without their knowledge or\nconsent. In this scenario, the penetration tester enters the office building at the same time as a\ngroup of employees despite not having an access badge, which exemplifies tailgating.",
+    "explanation": "Tailgating is a social engineering technique where an unauthorized person gains access to a restricted area by following closely behind authorized individuals without their knowledge or consent. In this scenario, the penetration tester enters the office building at the same time as a group of employees despite not having an access badge, which exemplifies tailgating.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1429,7 +1391,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "When trying to access an internal website, an employee reports that a prompt displays, stating\nthat the site is insecure.\nWhich of the following certificate types is the site most likely using?",
+    "question": "When trying to access an internal website, an employee reports that a prompt displays, stating that the site is insecure.\nWhich of the following certificate types is the site most likely using?",
     "choices": [
       {
         "key": "A",
@@ -1451,7 +1413,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A self-signed certificate is not issued by a trusted certificate authority, which often causes\nbrowsers to flag it as insecure.\nWhen accessing a site with a self-signed certificate, users typically receive a warning about the\nsite's security since the certificate cannot be automatically trusted, making it likely that the\ninternal website is using a self-signed certificate.",
+    "explanation": "A self-signed certificate is not issued by a trusted certificate authority, which often causes browsers to flag it as insecure.\nWhen accessing a site with a self-signed certificate, users typically receive a warning about the site's security since the certificate cannot be automatically trusted, making it likely that the internal website is using a self-signed certificate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1467,7 +1429,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following would most likely be deployed to obtain and analyze attacker activity and\ntechniques?",
+    "question": "Which of the following would most likely be deployed to obtain and analyze attacker activity and techniques?",
     "choices": [
       {
         "key": "A",
@@ -1489,7 +1451,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A honeypot is a decoy system or network resource designed to attract attackers and observe\ntheir activity. It is intentionally left vulnerable to capture and analyze attacker behavior,\ntechniques, and tools, providing valuable insights into potential threats without risking actual\nproduction systems. This makes it the ideal choice for studying attacker tactics and patterns.",
+    "explanation": "A honeypot is a decoy system or network resource designed to attract attackers and observe their activity. It is intentionally left vulnerable to capture and analyze attacker behavior, techniques, and tools, providing valuable insights into potential threats without risking actual production systems. This makes it the ideal choice for studying attacker tactics and patterns.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1527,7 +1489,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Certificate Revocation List (CRL) should be updated when a private key is compromised.\nThe CRL is a list of certificates that have been revoked by the issuing Certificate Authority (CA)\nand are no longer trusted. Updating the CRL ensures that clients and systems know the\nprevious certificate is no longer valid, preventing it from being trusted even if the key has been\ncompromised.",
+    "explanation": "The Certificate Revocation List (CRL) should be updated when a private key is compromised.\nThe CRL is a list of certificates that have been revoked by the issuing Certificate Authority (CA) and are no longer trusted. Updating the CRL ensures that clients and systems know the previous certificate is no longer valid, preventing it from being trusted even if the key has been compromised.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1543,7 +1505,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following is a compensating control for providing user access to a high-risk\nwebsite?",
+    "question": "Which of the following is a compensating control for providing user access to a high-risk website?",
     "choices": [
       {
         "key": "A",
@@ -1565,7 +1527,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Enabling threat prevention features on the firewall is a compensating control that adds a layer of\nsecurity when accessing a high-risk website. This approach helps to detect and block malicious\nactivities associated with the website by scanning for threats, malicious code, and suspicious\ntraffic patterns, thereby mitigating potential risks without completely restricting access.",
+    "explanation": "Enabling threat prevention features on the firewall is a compensating control that adds a layer of security when accessing a high-risk website. This approach helps to detect and block malicious activities associated with the website by scanning for threats, malicious code, and suspicious traffic patterns, thereby mitigating potential risks without completely restricting access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1581,7 +1543,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "An organization needs to determine how many employees are accessing the building each day\nin order to configure the proper access controls.\nWhich of the following control types best meets this requirement?",
+    "question": "An organization needs to determine how many employees are accessing the building each day in order to configure the proper access controls.\nWhich of the following control types best meets this requirement?",
     "choices": [
       {
         "key": "A",
@@ -1603,7 +1565,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A detective control is used to identify and record events or actions after they occur. In this case,\ntracking the number of employees accessing the building each day is a detective control, as it\ninvolves monitoring and logging access to gather data for configuring appropriate access\ncontrols. This helps the organization assess usage patterns to adjust security measures\naccordingly.",
+    "explanation": "A detective control is used to identify and record events or actions after they occur. In this case, tracking the number of employees accessing the building each day is a detective control, as it involves monitoring and logging access to gather data for configuring appropriate access controls. This helps the organization assess usage patterns to adjust security measures accordingly.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1619,7 +1581,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following should be used to ensure an attacker is unable to read the contents of a\nmobile device's drive if the device is lost?",
+    "question": "Which of the following should be used to ensure an attacker is unable to read the contents of a mobile device's drive if the device is lost?",
     "choices": [
       {
         "key": "A",
@@ -1641,7 +1603,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full Disk Encryption (FDE) ensures that all data on a mobile device's drive is encrypted, making\nit unreadable without the proper decryption key. If the device is lost or stolen, the data remains\nprotected because the contents of the drive are encrypted and cannot be accessed without the\nappropriate credentials. This is the most effective method to protect the data in case of device\nloss.",
+    "explanation": "Full Disk Encryption (FDE) ensures that all data on a mobile device's drive is encrypted, making it unreadable without the proper decryption key. If the device is lost or stolen, the data remains protected because the contents of the drive are encrypted and cannot be accessed without the appropriate credentials. This is the most effective method to protect the data in case of device loss.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1657,7 +1619,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A company discovers suspicious transactions that were entered into the company's database\nand attached to a user account that was created as a trap for malicious activity.\nWhich of the following is the user account an example of?",
+    "question": "A company discovers suspicious transactions that were entered into the company's database and attached to a user account that was created as a trap for malicious activity.\nWhich of the following is the user account an example of?",
     "choices": [
       {
         "key": "A",
@@ -1679,7 +1641,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A honeytoken is a piece of data or a user account intentionally created to act as a trap for\nmalicious activity. It is designed to attract and detect unauthorized access or suspicious\ntransactions, as in this scenario where suspicious transactions were linked to a user account set\nup as a trap.\nWhen an attacker interacts with the honeytoken, it can alert administrators to potential malicious\nactivity.",
+    "explanation": "A honeytoken is a piece of data or a user account intentionally created to act as a trap for malicious activity. It is designed to attract and detect unauthorized access or suspicious transactions, as in this scenario where suspicious transactions were linked to a user account set up as a trap.\nWhen an attacker interacts with the honeytoken, it can alert administrators to potential malicious activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1695,7 +1657,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the\nspecific objectives within the compliance framework that the vendor's services meet. The vendor\nprovided a report and a signed letter stating that the services meet 17 of the 21 objectives.\nWhich of the following did the vendor provide to the CIO?",
+    "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives.\nWhich of the following did the vendor provide to the CIO?",
     "choices": [
       {
         "key": "A",
@@ -1717,7 +1679,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An attestation of compliance is a statement or document, often signed by a third party or the\nvendor themselves, confirming that specific objectives within a compliance framework are being\nmet. In this case, the vendor provided a report and a signed letter stating that their services\nmeet 17 of the 21 objectives, which aligns with an attestation of compliance. This document\ntypically summarizes the vendor's compliance status and is used to assure customers that the\nvendor adheres to certain standards or regulations.",
+    "explanation": "An attestation of compliance is a statement or document, often signed by a third party or the vendor themselves, confirming that specific objectives within a compliance framework are being met. In this case, the vendor provided a report and a signed letter stating that their services meet 17 of the 21 objectives, which aligns with an attestation of compliance. This document typically summarizes the vendor's compliance status and is used to assure customers that the vendor adheres to certain standards or regulations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1733,7 +1695,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "An alert references attacks associated with a zero-day exploit. An analyst places a bastion host\nin the network to reduce the risk of the exploit.\nWhich of the following types of controls is the analyst implementing?",
+    "question": "An alert references attacks associated with a zero-day exploit. An analyst places a bastion host in the network to reduce the risk of the exploit.\nWhich of the following types of controls is the analyst implementing?",
     "choices": [
       {
         "key": "A",
@@ -1755,7 +1717,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A compensating control is a security measure implemented to mitigate risks when the primary\ncontrol (e.g., patching the vulnerability) is not immediately feasible. In this case, placing a\nbastion host in the network to reduce the risk of a zero-day exploit is a compensating control. It\nprovides an additional layer of security, helping to protect the network from exploitation until the\nvulnerability can be properly addressed (e.g., through a patch or fix).",
+    "explanation": "A compensating control is a security measure implemented to mitigate risks when the primary control (e.g., patching the vulnerability) is not immediately feasible. In this case, placing a bastion host in the network to reduce the risk of a zero-day exploit is a compensating control. It provides an additional layer of security, helping to protect the network from exploitation until the vulnerability can be properly addressed (e.g., through a patch or fix).",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1793,7 +1755,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "When the security administrator implements encryption on all hard drives, the primary goal is to\nprotect the confidentiality of the data. Encryption ensures that only authorized users can access\nthe data, as it is transformed into an unreadable format without the proper decryption key. This\nprotects sensitive information from unauthorized access, even if the physical hard drive is lost or\nstolen.",
+    "explanation": "When the security administrator implements encryption on all hard drives, the primary goal is to protect the confidentiality of the data. Encryption ensures that only authorized users can access the data, as it is transformed into an unreadable format without the proper decryption key. This protects sensitive information from unauthorized access, even if the physical hard drive is lost or stolen.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1809,7 +1771,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following cryptographic solutions is used to hide the fact that communication is\noccurring?",
+    "question": "Which of the following cryptographic solutions is used to hide the fact that communication is occurring?",
     "choices": [
       {
         "key": "A",
@@ -1831,7 +1793,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Steganography is the cryptographic technique used to hide the fact that\ncommunication is occurring. It involves embedding secret data within other non-suspicious data,\nsuch as images, audio, or video files, so that the presence of the hidden message is not\ndetectable. Unlike encryption, which transforms data into unreadable formats, steganography\nhides the very existence of the communication.",
+    "explanation": "Steganography is the cryptographic technique used to hide the fact that communication is occurring. It involves embedding secret data within other non-suspicious data, such as images, audio, or video files, so that the presence of the hidden message is not detectable. Unlike encryption, which transforms data into unreadable formats, steganography hides the very existence of the communication.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1847,7 +1809,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following steps should be taken before mitigating a vulnerability in a production\nserver?",
+    "question": "Which of the following steps should be taken before mitigating a vulnerability in a production server?",
     "choices": [
       {
         "key": "A",
@@ -1869,7 +1831,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Before mitigating a vulnerability in a production server, it is important to refer to the change\nmanagement policy. This policy outlines the necessary procedures for making changes to\nproduction systems, ensuring that changes are thoroughly reviewed, tested, and approved.\nFollowing this policy helps mitigate the risk of introducing additional issues or downtime when\napplying patches or updates to the server.",
+    "explanation": "Before mitigating a vulnerability in a production server, it is important to refer to the change management policy. This policy outlines the necessary procedures for making changes to production systems, ensuring that changes are thoroughly reviewed, tested, and approved.\nFollowing this policy helps mitigate the risk of introducing additional issues or downtime when applying patches or updates to the server.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1885,7 +1847,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following security concepts is accomplished when granting access after an\nindividual has logged into a computer network?",
+    "question": "Which of the following security concepts is accomplished when granting access after an individual has logged into a computer network?",
     "choices": [
       {
         "key": "A",
@@ -1907,7 +1869,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Authorization occurs after an individual has successfully logged into a computer network and is\ngranted access to specific resources or services based on their privileges or roles. It defines\nwhat the authenticated user is allowed to do on the network (e.g., access files, use certain\napplications, etc.).",
+    "explanation": "Authorization occurs after an individual has successfully logged into a computer network and is granted access to specific resources or services based on their privileges or roles. It defines what the authenticated user is allowed to do on the network (e.g., access files, use certain applications, etc.).",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1954,7 +1916,7 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": "Swipe Card: Swipe cards are a common physical security measure that allows controlled\naccess to specific areas. They are assigned to authorized individuals and can be tracked or\ndeactivated if lost or stolen.\nBiometric Scanner: Biometric scanners, such as fingerprint or iris scanners, provide robust\nsecurity by verifying unique physical characteristics of a person. They are highly effective in\npreventing unauthorized access as biometric data is difficult to replicate.",
+    "explanation": "Swipe Card: Swipe cards are a common physical security measure that allows controlled access to specific areas. They are assigned to authorized individuals and can be tracked or deactivated if lost or stolen.\nBiometric Scanner: Biometric scanners, such as fingerprint or iris scanners, provide robust security by verifying unique physical characteristics of a person. They are highly effective in preventing unauthorized access as biometric data is difficult to replicate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -1970,7 +1932,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A security analyst notices unusual behavior on the network. The IDS on the network was not\nable to detect the activities.\nWhich of the following should the security analyst use to help the IDS detect such attacks in the\nfuture?",
+    "question": "A security analyst notices unusual behavior on the network. The IDS on the network was not able to detect the activities.\nWhich of the following should the security analyst use to help the IDS detect such attacks in the future?",
     "choices": [
       {
         "key": "A",
@@ -1992,7 +1954,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Signatures are predefined patterns or rules used by an Intrusion Detection System (IDS) to\nidentify known malicious activities or attacks. If the IDS was unable to detect unusual behavior,\nthe security analyst can create or update signatures based on the characteristics of the\nobserved activity. This ensures the IDS can recognize and flag similar activities in the future,\nimproving its effectiveness in detecting such attacks.",
+    "explanation": "Signatures are predefined patterns or rules used by an Intrusion Detection System (IDS) to identify known malicious activities or attacks. If the IDS was unable to detect unusual behavior, the security analyst can create or update signatures based on the characteristics of the observed activity. This ensures the IDS can recognize and flag similar activities in the future, improving its effectiveness in detecting such attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2030,7 +1992,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An EDR (Endpoint Detection and Response) solution is a technical security control that focuses\non monitoring, detecting, and responding to threats on endpoint devices such as desktops,\nlaptops, and servers. It provides real-time visibility, threat detection, and automated responses\nto mitigate security incidents, making it a part of the technical security category.",
+    "explanation": "An EDR (Endpoint Detection and Response) solution is a technical security control that focuses on monitoring, detecting, and responding to threats on endpoint devices such as desktops, laptops, and servers. It provides real-time visibility, threat detection, and automated responses to mitigate security incidents, making it a part of the technical security category.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2046,7 +2008,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A security analyst created a fake account and saved the password in a non-readily accessible\ndirectory in a spreadsheet. An alert was also configured to notify the security team if the\nspreadsheet is opened.\nWhich of the following best describes the deception method being deployed?",
+    "question": "A security analyst created a fake account and saved the password in a non-readily accessible directory in a spreadsheet. An alert was also configured to notify the security team if the spreadsheet is opened.\nWhich of the following best describes the deception method being deployed?",
     "choices": [
       {
         "key": "A",
@@ -2068,7 +2030,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A honeyfile is a decoy file created to detect unauthorized access or suspicious activities. In this\ncase, the security analyst set up a fake account and saved its password in a hidden\nspreadsheet, configuring an alert to trigger if the file is accessed. This approach aims to deceive\npotential attackers and monitor their behavior, making it a clear example of using a honeyfile.",
+    "explanation": "A honeyfile is a decoy file created to detect unauthorized access or suspicious activities. In this case, the security analyst set up a fake account and saved its password in a hidden spreadsheet, configuring an alert to trigger if the file is accessed. This approach aims to deceive potential attackers and monitor their behavior, making it a clear example of using a honeyfile.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2106,7 +2068,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A version control tool is specifically designed to track changes to code, configurations, and other\nfiles. It allows teams to monitor modifications, revert to previous versions if needed, and\ncollaborate effectively while maintaining a history of changes. For tracking modifications to code\nused in building new virtual servers, tools like Git or Subversion would be the most appropriate\nchoice.",
+    "explanation": "A version control tool is specifically designed to track changes to code, configurations, and other files. It allows teams to monitor modifications, revert to previous versions if needed, and collaborate effectively while maintaining a history of changes. For tracking modifications to code used in building new virtual servers, tools like Git or Subversion would be the most appropriate choice.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2144,7 +2106,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A CRL (Certificate Revocation List) is a list published by a Certificate Authority (CA) that\ncontains information about certificates that have been revoked or are no longer valid. This list\nhelps systems verify the status of a certificate and ensures that expired or compromised\ncertificates are not trusted.",
+    "explanation": "A CRL (Certificate Revocation List) is a list published by a Certificate Authority (CA) that contains information about certificates that have been revoked or are no longer valid. This list helps systems verify the status of a certificate and ensures that expired or compromised certificates are not trusted.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2182,7 +2144,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A CSR (Certificate Signing Request) is required to create a new SSL certificate. It is a file that\ncontains the public key and identifying information (such as domain name and organization\ndetails) that the administrator submits to a Certificate Authority (CA). The CA uses this\ninformation to generate and issue a new SSL certificate.",
+    "explanation": "A CSR (Certificate Signing Request) is required to create a new SSL certificate. It is a file that contains the public key and identifying information (such as domain name and organization details) that the administrator submits to a Certificate Authority (CA). The CA uses this information to generate and issue a new SSL certificate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2198,7 +2160,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure\nthat it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
+    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure that it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
     "choices": [
       {
         "key": "A",
@@ -2220,7 +2182,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Before implementing a design change, backout planning is crucial to ensure the organization\ncan quickly revert to a stable state if the change causes issues, including security vulnerabilities.\nBackout planning involves identifying the steps and resources needed to undo the change\nsafely and efficiently, minimizing disruptions and maintaining security.",
+    "explanation": "Before implementing a design change, backout planning is crucial to ensure the organization can quickly revert to a stable state if the change causes issues, including security vulnerabilities.\nBackout planning involves identifying the steps and resources needed to undo the change safely and efficiently, minimizing disruptions and maintaining security.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2236,7 +2198,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "An organization designs an inbound firewall with a fail-open configuration while implementing a\nwebsite.\nWhich of the following would the organization consider to be the highest priority?",
+    "question": "An organization designs an inbound firewall with a fail-open configuration while implementing a website.\nWhich of the following would the organization consider to be the highest priority?",
     "choices": [
       {
         "key": "A",
@@ -2258,7 +2220,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A fail-open configuration prioritizes availability, ensuring that services remain accessible even if\nthe firewall encounters an issue. This approach minimizes downtime for critical resources, such\nas a website, but may temporarily compromise other aspects of security like confidentiality or\nintegrity. This configuration is often chosen when maintaining access is of utmost importance.",
+    "explanation": "A fail-open configuration prioritizes availability, ensuring that services remain accessible even if the firewall encounters an issue. This approach minimizes downtime for critical resources, such as a website, but may temporarily compromise other aspects of security like confidentiality or integrity. This configuration is often chosen when maintaining access is of utmost importance.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2296,7 +2258,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique fixed-size value (hash) based on the contents of a file or script. By\ncomparing the current hash of the script with a previously calculated hash, the engineer can\nverify that the script has not been modified. Hashing ensures the integrity of the script without\nencrypting or altering it.",
+    "explanation": "Hashing generates a unique fixed-size value (hash) based on the contents of a file or script. By comparing the current hash of the script with a previously calculated hash, the engineer can verify that the script has not been modified. Hashing ensures the integrity of the script without encrypting or altering it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2334,7 +2296,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption (FDE) encrypts the entire disk, including the operating system, applications,\nand user data. This ensures that all data on the laptop is encrypted, providing strong security\nagainst data theft or unauthorized access if the laptop is lost or stolen. It's the most\ncomprehensive method for securing all information stored on the device.",
+    "explanation": "Full disk encryption (FDE) encrypts the entire disk, including the operating system, applications, and user data. This ensures that all data on the laptop is encrypted, providing strong security against data theft or unauthorized access if the laptop is lost or stolen. It's the most comprehensive method for securing all information stored on the device.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2350,7 +2312,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An organization that handles sensitive information wants to protect the information by using a\nreversible technology.\nWhich of the following best satisfies this requirement?",
+    "question": "An organization that handles sensitive information wants to protect the information by using a reversible technology.\nWhich of the following best satisfies this requirement?",
     "choices": [
       {
         "key": "A",
@@ -2372,7 +2334,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization is a reversible technology that replaces sensitive information (such as credit card\nnumbers or personal data) with a non-sensitive placeholder (a token). The original data can be\nretrieved from the token through a secure process, making tokenization ideal for situations\nwhere sensitive data needs to be protected but still be recoverable in a controlled manner.\nUnlike hashing, which is irreversible, tokenization provides a way to securely protect and\nretrieve sensitive information when necessary.",
+    "explanation": "Tokenization is a reversible technology that replaces sensitive information (such as credit card numbers or personal data) with a non-sensitive placeholder (a token). The original data can be retrieved from the token through a secure process, making tokenization ideal for situations where sensitive data needs to be protected but still be recoverable in a controlled manner.\nUnlike hashing, which is irreversible, tokenization provides a way to securely protect and retrieve sensitive information when necessary.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2388,7 +2350,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "When used with an access control vestibule which of the following would provide the best\nprevention against tailgating?",
+    "question": "When used with an access control vestibule which of the following would provide the best prevention against tailgating?",
     "choices": [
       {
         "key": "A",
@@ -2410,7 +2372,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A security guard actively monitors and enforces access control policies in an access control\nvestibule (mantrap), ensuring that only authorized individuals enter. Unlike PINs, access cards,\nor CCTV (which only record events), a security guard can physically intervene to prevent\ntailgating - where an unauthorized person follows an authorized individual into a restricted area.",
+    "explanation": "A security guard actively monitors and enforces access control policies in an access control vestibule (mantrap), ensuring that only authorized individuals enter. Unlike PINs, access cards, or CCTV (which only record events), a security guard can physically intervene to prevent tailgating - where an unauthorized person follows an authorized individual into a restricted area.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2426,7 +2388,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following solutions would most likely be used in the financial industry to mask\nsensitive data?",
+    "question": "Which of the following solutions would most likely be used in the financial industry to mask sensitive data?",
     "choices": [
       {
         "key": "A",
@@ -2448,7 +2410,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Tokenization replaces sensitive data, such as credit card numbers, with non-sensitive\nequivalents (tokens) that have no exploitable value outside the system. It is widely used in the\nfinancial industry to protect data while maintaining functionality for processing and analysis.",
+    "explanation": "Tokenization replaces sensitive data, such as credit card numbers, with non-sensitive equivalents (tokens) that have no exploitable value outside the system. It is widely used in the financial industry to protect data while maintaining functionality for processing and analysis.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2464,7 +2426,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following security principles most likely requires validation before allowing traffic\nbetween systems?",
+    "question": "Which of the following security principles most likely requires validation before allowing traffic between systems?",
     "choices": [
       {
         "key": "A",
@@ -2486,7 +2448,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Zero Trust architecture is built on the principle of \"never trust, always verify,\" meaning that every\nrequest for resource access must be validated - regardless of where it originates - before any\ntraffic is allowed between systems. This continuous validation requirement distinguishes Zero\nTrust from other models.",
+    "explanation": "Zero Trust architecture is built on the principle of \"never trust, always verify,\" meaning that every request for resource access must be validated - regardless of where it originates - before any traffic is allowed between systems. This continuous validation requirement distinguishes Zero Trust from other models.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2524,7 +2486,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data masking replaces real PII with realistic but fictional values in non-production environments,\nensuring testers can't view or disclose actual sensitive information.",
+    "explanation": "Data masking replaces real PII with realistic but fictional values in non-production environments, ensuring testers can't view or disclose actual sensitive information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2562,7 +2524,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A digital signature provides cryptographic proof of origin, preventing the sender from denying\nthey authored and sent the email - this is the essence of non-repudiation.",
+    "explanation": "A digital signature provides cryptographic proof of origin, preventing the sender from denying they authored and sent the email - this is the essence of non-repudiation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2600,7 +2562,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A firewall is a technical control enforced by hardware or software to monitor and filter network\ntraffic, distinguishing it from physical (e.g., fence, security guard) or administrative (e.g., policy)\ncontrols.",
+    "explanation": "A firewall is a technical control enforced by hardware or software to monitor and filter network traffic, distinguishing it from physical (e.g., fence, security guard) or administrative (e.g., policy) controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2616,7 +2578,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following control types involves restricting IP connectivity to a router's web\nmanagement interface to protect it from being exploited by a vulnerability?",
+    "question": "Which of the following control types involves restricting IP connectivity to a router's web management interface to protect it from being exploited by a vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -2638,7 +2600,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Restricting IP access to the router's management interface proactively blocks unauthorized\nattempts to exploit vulnerabilities, making it a preventive control.",
+    "explanation": "Restricting IP access to the router's management interface proactively blocks unauthorized attempts to exploit vulnerabilities, making it a preventive control.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2685,7 +2647,7 @@ export const domain1Questions = [
       "B",
       "F"
     ],
-    "explanation": "A host-based intrusion prevention system actively monitors and blocks malicious behavior on\nthe endpoint (preventive control) while also alerting or logging suspicious events (detective\ncontrol).",
+    "explanation": "A host-based intrusion prevention system actively monitors and blocks malicious behavior on the endpoint (preventive control) while also alerting or logging suspicious events (detective control).",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2701,7 +2663,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following is the best physical security measure that prevents unauthorized vehicles\nfrom entering a data center while still allowing foot traffic?",
+    "question": "Which of the following is the best physical security measure that prevents unauthorized vehicles from entering a data center while still allowing foot traffic?",
     "choices": [
       {
         "key": "A",
@@ -2723,7 +2685,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Retractable bollards provide a strong physical barrier to stop unauthorized vehicles while\nremaining low enough (or lowered) to let pedestrians pass freely, making them ideal for\ncontrolling vehicle access without impeding foot traffic.",
+    "explanation": "Retractable bollards provide a strong physical barrier to stop unauthorized vehicles while remaining low enough (or lowered) to let pedestrians pass freely, making them ideal for controlling vehicle access without impeding foot traffic.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2770,7 +2732,7 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": "Full disk encryption ensures that all data on the device remains confidential if the device is lost\nor stolen. Endpoint protection (antivirus/EDR) continuously defends against malware, exploits,\nand other active threats,\ndirectly hardening the device against attacks.",
+    "explanation": "Full disk encryption ensures that all data on the device remains confidential if the device is lost or stolen. Endpoint protection (antivirus/EDR) continuously defends against malware, exploits, and other active threats, directly hardening the device against attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2786,7 +2748,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An analyst identifies that multiple users have the same passwords, but the hashes appear to be\ncompletely different.\nWhich of the following most likely explains this issue?",
+    "question": "An analyst identifies that multiple users have the same passwords, but the hashes appear to be completely different.\nWhich of the following most likely explains this issue?",
     "choices": [
       {
         "key": "A",
@@ -2808,7 +2770,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Salting appends a unique random value to each user's password before hashing, so identical\npasswords produce different hash values and resist rainbow-table attacks.",
+    "explanation": "Salting appends a unique random value to each user's password before hashing, so identical passwords produce different hash values and resist rainbow-table attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2824,7 +2786,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A Chief Security Officer signs off on a request to allow inbound SMB and RDP from the internet\nto a single VLAN.\nWhich of the following is the most likely explanation for this activity?",
+    "question": "A Chief Security Officer signs off on a request to allow inbound SMB and RDP from the internet to a single VLAN.\nWhich of the following is the most likely explanation for this activity?",
     "choices": [
       {
         "key": "A",
@@ -2846,7 +2808,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Opening both SMB and RDP from the Internet into a dedicated VLAN is not a standard practice\nfor production services or a simple jump host (which would only require RDP/SSH). Instead,\nexposing these services in a controlled network segment is characteristic of a honeynet,\ndesigned to lure, observe, and analyze attacker behavior against file-sharing and remote-\naccess services.",
+    "explanation": "Opening both SMB and RDP from the Internet into a dedicated VLAN is not a standard practice for production services or a simple jump host (which would only require RDP/SSH). Instead, exposing these services in a controlled network segment is characteristic of a honeynet, designed to lure, observe, and analyze attacker behavior against file-sharing and remote- access services.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2884,7 +2846,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A self-signed certificate is created and signed by the issuing organization itself rather than by an\nexternal Certificate Authority, making it an internally generated certificate.",
+    "explanation": "A self-signed certificate is created and signed by the issuing organization itself rather than by an external Certificate Authority, making it an internally generated certificate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2922,7 +2884,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing is used to confirm file integrity by generating a unique fixed-length value for the file; any\nchange in the file alters the hash value, indicating integrity has been compromised.",
+    "explanation": "Hashing is used to confirm file integrity by generating a unique fixed-length value for the file; any change in the file alters the hash value, indicating integrity has been compromised.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -2960,7 +2922,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A self-signed certificate is not trusted by browsers because it is not issued by a recognized\ncertificate authority, leading to certificate warnings when users connect over HTTPS.",
+    "explanation": "A self-signed certificate is not trusted by browsers because it is not issued by a recognized certificate authority, leading to certificate warnings when users connect over HTTPS.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3007,7 +2969,7 @@ export const domain1Questions = [
       "B",
       "F"
     ],
-    "explanation": "HIPS (Host-based Intrusion Prevention System) is a preventive control because it actively\nblocks or prevents malicious activities on a host.\nIt is also a detective control, as it monitors and detects suspicious activities or policy violations\non the host system.",
+    "explanation": "HIPS (Host-based Intrusion Prevention System) is a preventive control because it actively blocks or prevents malicious activities on a host.\nIt is also a detective control, as it monitors and detects suspicious activities or policy violations on the host system.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3045,7 +3007,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Effective change management includes having a backout plan, so that if a patch or change fails,\nsystems can be restored to their previous, stable state.",
+    "explanation": "Effective change management includes having a backout plan, so that if a patch or change fails, systems can be restored to their previous, stable state.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3061,7 +3023,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following attacks exploits a potential vulnerability as a result of direct access to a\nsystem using weak cryptographic algorithms?",
+    "question": "Which of the following attacks exploits a potential vulnerability as a result of direct access to a system using weak cryptographic algorithms?",
     "choices": [
       {
         "key": "A",
@@ -3083,7 +3045,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Password cracking attacks exploit weak cryptographic algorithms by attempting to guess or\ndecrypt passwords through direct access to systems or password hashes, making use of\nvulnerabilities in the cryptography.",
+    "explanation": "Password cracking attacks exploit weak cryptographic algorithms by attempting to guess or decrypt passwords through direct access to systems or password hashes, making use of vulnerabilities in the cryptography.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3099,7 +3061,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A security team installs an IPS on an organization's network and needs to configure the system\nto detect and prevent specific network attacks.\nWhich of the following settings should the team configure first within the IPS?",
+    "question": "A security team installs an IPS on an organization's network and needs to configure the system to detect and prevent specific network attacks.\nWhich of the following settings should the team configure first within the IPS?",
     "choices": [
       {
         "key": "A",
@@ -3121,7 +3083,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Packet inspection is the core functionality of an IPS, as it enables the system to analyze\nnetwork traffic against signatures and anomalies to detect and prevent specific attacks.",
+    "explanation": "Packet inspection is the core functionality of an IPS, as it enables the system to analyze network traffic against signatures and anomalies to detect and prevent specific attacks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3137,7 +3099,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following is used to monitor suspicious traffic in real time between multiple systems\nwithin an organization?",
+    "question": "Which of the following is used to monitor suspicious traffic in real time between multiple systems within an organization?",
     "choices": [
       {
         "key": "A",
@@ -3159,7 +3121,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "NetFlow captures and analyzes real-time traffic flow data across multiple systems, enabling\ndetection of suspicious patterns and anomalies.",
+    "explanation": "NetFlow captures and analyzes real-time traffic flow data across multiple systems, enabling detection of suspicious patterns and anomalies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3197,7 +3159,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing applies mathematical algorithms to transform passwords into unique, fixed-length\nvalues, ensuring the original password cannot be reversed from the hash.",
+    "explanation": "Hashing applies mathematical algorithms to transform passwords into unique, fixed-length values, ensuring the original password cannot be reversed from the hash.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3213,7 +3175,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following techniques can be used to remove sensitive information from database\nrecords while still providing sufficient data to perform testing?",
+    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following techniques can be used to remove sensitive information from database records while still providing sufficient data to perform testing?",
     "choices": [
       {
         "key": "A",
@@ -3235,7 +3197,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Obfuscation masks or scrambles sensitive data elements, allowing realistic but anonymized\nrecords to be used for testing without exposing actual customer information.",
+    "explanation": "Obfuscation masks or scrambles sensitive data elements, allowing realistic but anonymized records to be used for testing without exposing actual customer information.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3273,7 +3235,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Full disk encryption secures all data on a laptop's storage, ensuring it remains protected and\ninaccessible if the device is lost or stolen.",
+    "explanation": "Full disk encryption secures all data on a laptop's storage, ensuring it remains protected and inaccessible if the device is lost or stolen.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3311,7 +3273,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Bollards serve as a robust physical barrier designed to withstand and absorb the kinetic impact\nof a vehicle, thereby preventing unauthorized vehicular access or accidental collisions that could\ncause structural damage or endanger personnel.",
+    "explanation": "Bollards serve as a robust physical barrier designed to withstand and absorb the kinetic impact of a vehicle, thereby preventing unauthorized vehicular access or accidental collisions that could cause structural damage or endanger personnel.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3349,7 +3311,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Mobile Device Management (MDM) on Corporate-Owned, Personally Enabled (COPE) devices\nenforces application control policies, helping prevent the installation and use of unsupported or\nunauthorized applications.",
+    "explanation": "Mobile Device Management (MDM) on Corporate-Owned, Personally Enabled (COPE) devices enforces application control policies, helping prevent the installation and use of unsupported or unauthorized applications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3360,50 +3322,12 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0619",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "Which of the following security concepts is being followed when applying encryption to sensitive\ndata?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Confidentiality"
-      },
-      {
-        "key": "B",
-        "text": "Non-repudiation"
-      },
-      {
-        "key": "C",
-        "text": "Availability"
-      },
-      {
-        "key": "D",
-        "text": "Integrity"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Encryption ensures confidentiality by protecting sensitive data from unauthorized access,\nallowing only authorized parties with the correct decryption key to read it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p262",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0620",
     "domain": 1,
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following cryptographic solutions would allow an organization to recover encrypted\ndata after a key becomes corrupted or is deleted?",
+    "question": "Which of the following cryptographic solutions would allow an organization to recover encrypted data after a key becomes corrupted or is deleted?",
     "choices": [
       {
         "key": "A",
@@ -3425,7 +3349,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Key escrow securely stores encryption keys with a trusted third party or internal authority,\nenabling recovery of encrypted data if the original key is lost or corrupted.",
+    "explanation": "Key escrow securely stores encryption keys with a trusted third party or internal authority, enabling recovery of encrypted data if the original key is lost or corrupted.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3441,7 +3365,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A company makes a change during the appropriate change window, but the unsuccessful\nchange extends beyond the scheduled time and impacts customers.\nWhich of the following would prevent this from reoccurring?",
+    "question": "A company makes a change during the appropriate change window, but the unsuccessful change extends beyond the scheduled time and impacts customers.\nWhich of the following would prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -3463,7 +3387,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A backout plan provides predefined steps to revert a change if it fails or causes issues,\nminimizing downtime and preventing extended customer impact.",
+    "explanation": "A backout plan provides predefined steps to revert a change if it fails or causes issues, minimizing downtime and preventing extended customer impact.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3479,7 +3403,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following should be deployed on an externally facing web server in order to\nestablish an encrypted connection?",
+    "question": "Which of the following should be deployed on an externally facing web server in order to establish an encrypted connection?",
     "choices": [
       {
         "key": "A",
@@ -3501,7 +3425,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A public key is deployed on the web server within its digital certificate, allowing clients to\nestablish an encrypted session by securely exchanging a symmetric key through asymmetric\nencryption.",
+    "explanation": "A public key is deployed on the web server within its digital certificate, allowing clients to establish an encrypted session by securely exchanging a symmetric key through asymmetric encryption.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3539,7 +3463,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hashing creates a unique fixed-length value based on the data, allowing verification of integrity\nby comparing the hash before and after transit to detect any modifications.",
+    "explanation": "Hashing creates a unique fixed-length value based on the data, allowing verification of integrity by comparing the hash before and after transit to detect any modifications.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3555,7 +3479,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following would an organization most likely use to minimize the loss of data on a\nfile server in the event that data needs to be restored due to loss of the primary server?",
+    "question": "Which of the following would an organization most likely use to minimize the loss of data on a file server in the event that data needs to be restored due to loss of the primary server?",
     "choices": [
       {
         "key": "A",
@@ -3577,7 +3501,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Journaling records changes to files in real time, enabling quick restoration of the most recent\ndata in case of primary server failure, thereby minimizing potential data loss.",
+    "explanation": "Journaling records changes to files in real time, enabling quick restoration of the most recent data in case of primary server failure, thereby minimizing potential data loss.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3615,7 +3539,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A maintenance window is a scheduled period agreed upon in advance during which updates or\nchanges can be made without disrupting normal business operations.",
+    "explanation": "A maintenance window is a scheduled period agreed upon in advance during which updates or changes can be made without disrupting normal business operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3653,7 +3577,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A SIEM alert is a detective control because it identifies and reports suspicious or malicious\nactivity after it occurs, enabling further investigation and response.",
+    "explanation": "A SIEM alert is a detective control because it identifies and reports suspicious or malicious activity after it occurs, enabling further investigation and response.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3691,7 +3615,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Escrow refers to a trusted third party securely holding a copy of the decryption key, allowing\nrecovery of encrypted data if the original key is lost.",
+    "explanation": "Escrow refers to a trusted third party securely holding a copy of the decryption key, allowing recovery of encrypted data if the original key is lost.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3707,7 +3631,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following should a technician perform to verify the integrity of a file transferred from\none device to another?",
+    "question": "Which of the following should a technician perform to verify the integrity of a file transferred from one device to another?",
     "choices": [
       {
         "key": "A",
@@ -3729,7 +3653,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique value for file contents, allowing technicians to verify file integrity by\ncomparing hashes before and after transfer to ensure the file was not altered.",
+    "explanation": "Hashing generates a unique value for file contents, allowing technicians to verify file integrity by comparing hashes before and after transfer to ensure the file was not altered.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3767,7 +3691,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A deterrent security control is intended to discourage or discourage potential attackers from\nattempting unauthorized actions. Perimeter fencing visibly establishes a physical boundary\naround a facility and signals that the area is protected and monitored. This presence\ndiscourages unauthorized individuals from attempting to enter the property.",
+    "explanation": "A deterrent security control is intended to discourage or discourage potential attackers from attempting unauthorized actions. Perimeter fencing visibly establishes a physical boundary around a facility and signals that the area is protected and monitored. This presence discourages unauthorized individuals from attempting to enter the property.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3783,7 +3707,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following non-production sites is an operational mirror of the primary data center\nand is ready for use if the primary data center experiences an outage?",
+    "question": "Which of the following non-production sites is an operational mirror of the primary data center and is ready for use if the primary data center experiences an outage?",
     "choices": [
       {
         "key": "A",
@@ -3805,7 +3729,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hot site is a fully operational mirror of the primary data center, maintained in real time and\nready to take over operations immediately if the primary site experiences an outage.",
+    "explanation": "A hot site is a fully operational mirror of the primary data center, maintained in real time and ready to take over operations immediately if the primary site experiences an outage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3821,7 +3745,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A Chief Security Officer signs off on a request to allow inbound SMB and RDP from the internet\nto a single VLAN.\nWhich of the following is the most likely explanation for this activity?",
+    "question": "A Chief Security Officer signs off on a request to allow inbound SMB and RDP from the internet to a single VLAN.\nWhich of the following is the most likely explanation for this activity?",
     "choices": [
       {
         "key": "A",
@@ -3843,7 +3767,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Exposing high-value targets like SMB and RDP to the internet on an isolated VLAN is\ncharacteristic of a honeynet, allowing the security team to lure and observe attackers while\nkeeping production systems protected.",
+    "explanation": "Exposing high-value targets like SMB and RDP to the internet on an isolated VLAN is characteristic of a honeynet, allowing the security team to lure and observe attackers while keeping production systems protected.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3859,7 +3783,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following technologies assists in passively verifying the expired status of a digital\ncertificate?",
+    "question": "Which of the following technologies assists in passively verifying the expired status of a digital certificate?",
     "choices": [
       {
         "key": "A",
@@ -3881,7 +3805,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A Certificate Revocation List (CRL) is downloaded and checked locally, allowing passive\nverification of whether a certificate is expired or revoked without querying an online responder.",
+    "explanation": "A Certificate Revocation List (CRL) is downloaded and checked locally, allowing passive verification of whether a certificate is expired or revoked without querying an online responder.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3897,7 +3821,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following cryptographic solutions best protects the confidentiality and integrity of\ndata?",
+    "question": "Which of the following cryptographic solutions best protects the confidentiality and integrity of data?",
     "choices": [
       {
         "key": "A",
@@ -3919,7 +3843,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A digital certificate enables both encryption (confidentiality) and digital signatures (integrity),\nproviding strong cryptographic protection for data.",
+    "explanation": "A digital certificate enables both encryption (confidentiality) and digital signatures (integrity), providing strong cryptographic protection for data.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3935,7 +3859,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "Which of the following security measures should database servers containing passwords\nutilize? (Choose two.)",
+    "question": "Which of the following security measures should database servers containing passwords utilize? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3966,7 +3890,7 @@ export const domain1Questions = [
       "E",
       "F"
     ],
-    "explanation": "Password databases should store passwords using a secure one-way transformation to prevent\nrecovery, which is achieved by hashing. They should also be placed in an isolated network\nsegment to limit access and reduce exposure, which is achieved through segmentation.",
+    "explanation": "Password databases should store passwords using a secure one-way transformation to prevent recovery, which is achieved by hashing. They should also be placed in an isolated network segment to limit access and reduce exposure, which is achieved through segmentation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -3982,7 +3906,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "Which of the following are examples of operational controls that would be appropriate to\nimplement in an environment where financial processing activities occur? (Choose two.)",
+    "question": "Which of the following are examples of operational controls that would be appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4013,7 +3937,7 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Dual control ensures that no single individual can complete sensitive financial transactions\nalone, reducing the risk of fraud and error through enforced separation of duties. Mandatory\nvacations help detect fraudulent activity by requiring employees to step away from their roles,\nincreasing the likelihood that unauthorized or improper actions are discovered during their\nabsence.",
+    "explanation": "Dual control ensures that no single individual can complete sensitive financial transactions alone, reducing the risk of fraud and error through enforced separation of duties. Mandatory vacations help detect fraudulent activity by requiring employees to step away from their roles, increasing the likelihood that unauthorized or improper actions are discovered during their absence.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4060,7 +3984,7 @@ export const domain1Questions = [
       "A",
       "B"
     ],
-    "explanation": "A security guard provides an active physical presence that deters vandalism through direct\nobservation and the ability to intervene or report incidents immediately.\nLighting increases visibility in the affected area, discouraging vandalism by reducing\nconcealment and increasing the likelihood of identification.",
+    "explanation": "A security guard provides an active physical presence that deters vandalism through direct observation and the ability to intervene or report incidents immediately.\nLighting increases visibility in the affected area, discouraging vandalism by reducing concealment and increasing the likelihood of identification.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4076,7 +4000,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "Which of the following are examples of operational controls that are appropriate to implement in\nan environment where financial processing activities occur? (Choose two.)",
+    "question": "Which of the following are examples of operational controls that are appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4107,7 +4031,7 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Dual control is an operational control that requires two authorized individuals to participate in\nsensitive financial processes, reducing the risk of fraud or error. Mandatory vacations are an\noperational control used to detect fraudulent activity by ensuring duties are periodically\nperformed by others, which increases the likelihood of uncovering irregularities in financial\noperations.",
+    "explanation": "Dual control is an operational control that requires two authorized individuals to participate in sensitive financial processes, reducing the risk of fraud or error. Mandatory vacations are an operational control used to detect fraudulent activity by ensuring duties are periodically performed by others, which increases the likelihood of uncovering irregularities in financial operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4145,7 +4069,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Before making any modification to a critical system, the change must follow the organization's\nformal change management process. Submitting a change management request ensures the\nchange is documented, reviewed, approved, and scheduled appropriately to minimize risk and\nservice disruption. This process also allows stakeholders to assess potential impacts and plan\ntesting and rollback procedures before applying the patch.",
+    "explanation": "Before making any modification to a critical system, the change must follow the organization's formal change management process. Submitting a change management request ensures the change is documented, reviewed, approved, and scheduled appropriately to minimize risk and service disruption. This process also allows stakeholders to assess potential impacts and plan testing and rollback procedures before applying the patch.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4183,7 +4107,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Access badges enforce controlled physical access to the data center by allowing only\nauthorized personnel to enter secured areas. By restricting entry at doors and checkpoints\nthrough authentication mechanisms such as badge readers, unauthorized individuals are\nprevented from gaining physical access to critical infrastructure, thereby stopping potential\nattacks before they occur.",
+    "explanation": "Access badges enforce controlled physical access to the data center by allowing only authorized personnel to enter secured areas. By restricting entry at doors and checkpoints through authentication mechanisms such as badge readers, unauthorized individuals are prevented from gaining physical access to critical infrastructure, thereby stopping potential attacks before they occur.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4221,7 +4145,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Asymmetric encryption uses a key pair consisting of a public key and a private key. The public\nkey can be openly shared, while the private key remains secret with the owner. This design\nallows two parties to securely exchange data without first sharing a private secret, because data\nencrypted with the public key can only be decrypted by the corresponding private key. This\nenables secure communication and key exchange over untrusted networks.",
+    "explanation": "Asymmetric encryption uses a key pair consisting of a public key and a private key. The public key can be openly shared, while the private key remains secret with the owner. This design allows two parties to securely exchange data without first sharing a private secret, because data encrypted with the public key can only be decrypted by the corresponding private key. This enables secure communication and key exchange over untrusted networks.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4259,7 +4183,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Hashing protects stored passwords by transforming the original password into a fixed-length\ncryptographic hash value using a one-way algorithm. The original password cannot feasibly be\nderived from the hash. During authentication, the entered password is hashed and compared to\nthe stored hash, ensuring the actual password is never stored or exposed in plaintext.",
+    "explanation": "Hashing protects stored passwords by transforming the original password into a fixed-length cryptographic hash value using a one-way algorithm. The original password cannot feasibly be derived from the hash. During authentication, the entered password is hashed and compared to the stored hash, ensuring the actual password is never stored or exposed in plaintext.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4297,7 +4221,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hashing uses a one-way cryptographic function that converts data into a fixed-length hash\nvalue. Any change to the original data results in a different hash value, allowing verification that\nthe data has not been altered. Because the process cannot be reversed to recover the original\ninput, it provides assurance of data integrity.",
+    "explanation": "Hashing uses a one-way cryptographic function that converts data into a fixed-length hash value. Any change to the original data results in a different hash value, allowing verification that the data has not been altered. Because the process cannot be reversed to recover the original input, it provides assurance of data integrity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4313,7 +4237,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following should be used to ensure that a new software release has not been\nmodified before reaching the user?",
+    "question": "Which of the following should be used to ensure that a new software release has not been modified before reaching the user?",
     "choices": [
       {
         "key": "A",
@@ -4335,7 +4259,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique, fixed-length digest of the original software package using a one-\nway cryptographic function. The developer publishes the expected hash value, and users\ncompute the hash of the downloaded file and compare it to the published value. If the values\nmatch, it confirms the software has not been altered during distribution, ensuring integrity.",
+    "explanation": "Hashing generates a unique, fixed-length digest of the original software package using a one- way cryptographic function. The developer publishes the expected hash value, and users compute the hash of the downloaded file and compare it to the published value. If the values match, it confirms the software has not been altered during distribution, ensuring integrity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4351,7 +4275,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following will most likely lead an organization to revise its change management\npolicy?",
+    "question": "Which of the following will most likely lead an organization to revise its change management policy?",
     "choices": [
       {
         "key": "A",
@@ -4373,7 +4297,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Migrating software to a cloud environment that allows more flexible and frequent updates can\nchange how software releases, patches, and configuration changes are performed. This shift\noften requires organizations to revise their change management policy to accommodate faster\ndeployment cycles, automation, and continuous updates typical in cloud environments.",
+    "explanation": "Migrating software to a cloud environment that allows more flexible and frequent updates can change how software releases, patches, and configuration changes are performed. This shift often requires organizations to revise their change management policy to accommodate faster deployment cycles, automation, and continuous updates typical in cloud environments.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4389,7 +4313,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
-    "question": "Which of the following would be the best ways to ensure only authorized personnel can access\na secure facility? (Choose two.)",
+    "question": "Which of the following would be the best ways to ensure only authorized personnel can access a secure facility? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4420,7 +4344,7 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Badge access enforces authentication before entry by requiring individuals to present\nauthorized credentials to gain access to the facility. This ensures that only personnel with\napproved access rights can unlock and enter secured areas.\nAn access control vestibule, also known as a mantrap, is a physical security mechanism that\ncontrols entry by allowing only one individual through a secured space at a time after\nauthentication. This prevents tailgating and ensures that only verified individuals can proceed\ninto the secure facility.",
+    "explanation": "Badge access enforces authentication before entry by requiring individuals to present authorized credentials to gain access to the facility. This ensures that only personnel with approved access rights can unlock and enter secured areas.\nAn access control vestibule, also known as a mantrap, is a physical security mechanism that controls entry by allowing only one individual through a secured space at a time after authentication. This prevents tailgating and ensures that only verified individuals can proceed into the secure facility.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4436,7 +4360,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following security concepts ensures that a sender cannot falsely deny having sent\na message?",
+    "question": "Which of the following security concepts ensures that a sender cannot falsely deny having sent a message?",
     "choices": [
       {
         "key": "A",
@@ -4458,7 +4382,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Non-repudiation ensures that a sender cannot deny having performed an action such as\nsending a message. It is typically achieved through mechanisms like digital signatures and\ncryptographic proof that uniquely bind the sender to the transmitted data. This provides\nverifiable evidence of the origin of the message.",
+    "explanation": "Non-repudiation ensures that a sender cannot deny having performed an action such as sending a message. It is typically achieved through mechanisms like digital signatures and cryptographic proof that uniquely bind the sender to the transmitted data. This provides verifiable evidence of the origin of the message.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4474,7 +4398,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "An organization with an on-site workforce is transitioning to a hybrid remote and on-site work\nenvironment. Remote workers will only use organization-provided devices with strict endpoint\nsecurity. Connection to the organization's network will be restricted to VPN access.\nWhich of the following practices will be most beneficial for the organization when handling\nsensitive data?",
+    "question": "An organization with an on-site workforce is transitioning to a hybrid remote and on-site work environment. Remote workers will only use organization-provided devices with strict endpoint security. Connection to the organization's network will be restricted to VPN access.\nWhich of the following practices will be most beneficial for the organization when handling sensitive data?",
     "choices": [
       {
         "key": "A",
@@ -4496,7 +4420,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Disabling the use of external USB storage devices helps prevent sensitive organizational data\nfrom being copied to removable media that could be lost, stolen, or used to exfiltrate information\noutside the organization's control. In a hybrid work environment where employees handle\nsensitive data remotely, restricting removable storage reduces the risk of unauthorized data\ntransfer and leakage.",
+    "explanation": "Disabling the use of external USB storage devices helps prevent sensitive organizational data from being copied to removable media that could be lost, stolen, or used to exfiltrate information outside the organization's control. In a hybrid work environment where employees handle sensitive data remotely, restricting removable storage reduces the risk of unauthorized data transfer and leakage.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4512,7 +4436,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "An organization plans to increase security controls for devices that connect to its internal\nnetwork. The additional security control must perform port-based authentication as part of the\nconnection process Which of the following should the organization implement?",
+    "question": "An organization plans to increase security controls for devices that connect to its internal network. The additional security control must perform port-based authentication as part of the connection process Which of the following should the organization implement?",
     "choices": [
       {
         "key": "A",
@@ -4534,7 +4458,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "802.1X provides port-based network access control, requiring devices to authenticate before\ngaining access to the network.",
+    "explanation": "802.1X provides port-based network access control, requiring devices to authenticate before gaining access to the network.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4550,7 +4474,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A company processes a large volume of business-to-business transactions and prioritizes data\nconfidentiality over transaction availability. The company's firewall administrator must configure\na new hardware-based firewall to replace the current one.\nWhich of the following should the administrator do to best align with the company requirements\nin case a security event occurs?",
+    "question": "A company processes a large volume of business-to-business transactions and prioritizes data confidentiality over transaction availability. The company's firewall administrator must configure a new hardware-based firewall to replace the current one.\nWhich of the following should the administrator do to best align with the company requirements in case a security event occurs?",
     "choices": [
       {
         "key": "A",
@@ -4572,7 +4496,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Fail-closed mode ensures that if a failure or security event occurs, all traffic is blocked,\npreventing unauthorized access and protecting data confidentiality.",
+    "explanation": "Fail-closed mode ensures that if a failure or security event occurs, all traffic is blocked, preventing unauthorized access and protecting data confidentiality.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4610,7 +4534,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a Zero Trust architecture, the policy engine evaluates each access request independently\nusing current context and policies, ensuring decisions are made without relying on prior trust or\nprevious access approvals.",
+    "explanation": "In a Zero Trust architecture, the policy engine evaluates each access request independently using current context and policies, ensuring decisions are made without relying on prior trust or previous access approvals.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4626,7 +4550,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A systems administrator uses deception techniques to help detect and study attacks within a\nnetwork. The administrator deploys a document filled with fake passwords and customer\npayment information.\nWhich of the following techniques is the administrator using?",
+    "question": "A systems administrator uses deception techniques to help detect and study attacks within a network. The administrator deploys a document filled with fake passwords and customer payment information.\nWhich of the following techniques is the administrator using?",
     "choices": [
       {
         "key": "A",
@@ -4648,7 +4572,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A honeyfile is a decoy file containing fake sensitive information designed to attract attackers and\ntrigger alerts when accessed, helping detect and study malicious activity.",
+    "explanation": "A honeyfile is a decoy file containing fake sensitive information designed to attract attackers and trigger alerts when accessed, helping detect and study malicious activity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4664,7 +4588,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "Which of the following are the most important considerations when encrypting data? (Choose\ntwo.)",
+    "question": "Which of the following are the most important considerations when encrypting data? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4695,7 +4619,7 @@ export const domain1Questions = [
       "B",
       "D"
     ],
-    "explanation": "The strength of encryption depends primarily on the algorithm used and the key length, as these\ndetermine how resistant the encryption is to attacks and how difficult it is to break.",
+    "explanation": "The strength of encryption depends primarily on the algorithm used and the key length, as these determine how resistant the encryption is to attacks and how difficult it is to break.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4733,7 +4657,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Zero Trust requires continuous verification of identity and context for every access request,\nensuring access is granted only after ongoing validation rather than relying on a single initial\nauthentication or perimeter defenses.",
+    "explanation": "Zero Trust requires continuous verification of identity and context for every access request, ensuring access is granted only after ongoing validation rather than relying on a single initial authentication or perimeter defenses.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4771,7 +4695,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data masking irreversibly alters sensitive data to hide it, whereas tokenization replaces data\nwith tokens that can be mapped back to the original values through a secure tokenization\nsystem, making it reversible.",
+    "explanation": "Data masking irreversibly alters sensitive data to hide it, whereas tokenization replaces data with tokens that can be mapped back to the original values through a secure tokenization system, making it reversible.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4809,7 +4733,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Change management involves formally reviewing, approving, and implementing changes\nthrough a controlled process, such as applying an update after receiving approval from a\ngoverning board.",
+    "explanation": "Change management involves formally reviewing, approving, and implementing changes through a controlled process, such as applying an update after receiving approval from a governing board.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4825,7 +4749,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "An energy provider identifies a critical vulnerability in a control system that could lead to\noperational downtime.\nWhich of the following is the most likely reason this vulnerability is considered high priority\ndespite no known exploits?",
+    "question": "An energy provider identifies a critical vulnerability in a control system that could lead to operational downtime.\nWhich of the following is the most likely reason this vulnerability is considered high priority despite no known exploits?",
     "choices": [
       {
         "key": "A",
@@ -4847,7 +4771,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Vulnerabilities in control systems are prioritized based on potential impact, and the possibility of\ndisrupting essential services like energy delivery makes the risk critical even without known\nexploits.",
+    "explanation": "Vulnerabilities in control systems are prioritized based on potential impact, and the possibility of disrupting essential services like energy delivery makes the risk critical even without known exploits.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4863,7 +4787,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
-    "question": "An organization must implement security measures to prevent unauthorized vehicle access to a\ndata center.\nWhich of the following will best meet this requirement and provide adequate security? (Choose\ntwo.)",
+    "question": "An organization must implement security measures to prevent unauthorized vehicle access to a data center.\nWhich of the following will best meet this requirement and provide adequate security? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -4894,7 +4818,7 @@ export const domain1Questions = [
       "A",
       "C"
     ],
-    "explanation": "Bollards physically block vehicles from approaching or ramming the facility, while fencing\nestablishes a secure perimeter that prevents unauthorized vehicle entry.",
+    "explanation": "Bollards physically block vehicles from approaching or ramming the facility, while fencing establishes a secure perimeter that prevents unauthorized vehicle entry.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4910,7 +4834,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following is a consideration when patching mission-critical network edge routers for\na critical vulnerability?",
+    "question": "Which of the following is a consideration when patching mission-critical network edge routers for a critical vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -4932,7 +4856,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Redundancy ensures that traffic can be rerouted to backup routers during patching, allowing\nupdates to be applied without disrupting critical network operations.",
+    "explanation": "Redundancy ensures that traffic can be rerouted to backup routers during patching, allowing updates to be applied without disrupting critical network operations.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -4948,7 +4872,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "A penetration tester examined the security posture of a company. The tester completed the\nfollowing:\n• Checked the locks on perimeter doors\n• Located blind spots on security cameras\n• Attempted to open secured server rack doors\nWhich of the following describes the type of test the penetration tester most likely conducted?",
+    "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n• Checked the locks on perimeter doors\n• Located blind spots on security cameras\n• Attempted to open secured server rack doors Which of the following describes the type of test the penetration tester most likely conducted?",
     "choices": [
       {
         "key": "A",
@@ -4970,7 +4894,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The tester evaluated physical security controls such as locks, cameras, and server rack access,\nwhich characterizes a physical penetration test.",
+    "explanation": "The tester evaluated physical security controls such as locks, cameras, and server rack access, which characterizes a physical penetration test.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5008,7 +4932,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Confidentiality ensures that sensitive information is accessible only to authorized individuals and\nis protected from unauthorized disclosure.",
+    "explanation": "Confidentiality ensures that sensitive information is accessible only to authorized individuals and is protected from unauthorized disclosure.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5024,7 +4948,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following best explains why using an appropriate algorithm is critical for digital\nsignatures?",
+    "question": "Which of the following best explains why using an appropriate algorithm is critical for digital signatures?",
     "choices": [
       {
         "key": "A",
@@ -5046,13 +4970,13 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Digital signatures rely on appropriate algorithms to validate the sender's identity and ensure the\nintegrity of the message, confirming that the content has not been altered.",
+    "explanation": "Digital signatures rely on appropriate algorithms to validate the sender's identity and ensure the integrity of the message, confirming that the content has not been altered.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
     "source": "SY0-701_en.pdf#p371",
     "needsReview": true,
-    "inferenceConfidence": 0.667,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5062,7 +4986,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following impact analysis metrics will best estimate the average operational\navailability of an asset?",
+    "question": "Which of the following impact analysis metrics will best estimate the average operational availability of an asset?",
     "choices": [
       {
         "key": "A",
@@ -5084,7 +5008,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Mean Time Between Failures measures the average time a system operates without failure,\nwhich is directly used to estimate operational availability.",
+    "explanation": "Mean Time Between Failures measures the average time a system operates without failure, which is directly used to estimate operational availability.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5122,7 +5046,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Salting adds unique random data to each password before hashing, preventing attackers from\nusing precomputed hash tables like rainbow tables to crack multiple passwords efficiently.",
+    "explanation": "Salting adds unique random data to each password before hashing, preventing attackers from using precomputed hash tables like rainbow tables to crack multiple passwords efficiently.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5138,7 +5062,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A penetration tester, who did not have an access badge, managed to follow a group of\nemployees through multiple badged-access doors and into the data center without being\nstopped. The tester mentions this finding during the after-action review with the Chief\nInformation Security Officer (CISO).\nWhich of the following issues should the CISO address as a result of this finding?",
+    "question": "A penetration tester, who did not have an access badge, managed to follow a group of employees through multiple badged-access doors and into the data center without being stopped. The tester mentions this finding during the after-action review with the Chief Information Security Officer (CISO).\nWhich of the following issues should the CISO address as a result of this finding?",
     "choices": [
       {
         "key": "A",
@@ -5160,7 +5084,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Following employees through secured doors without authorization is tailgating, a form of social\nengineering that exploits human behavior rather than technical controls.",
+    "explanation": "Following employees through secured doors without authorization is tailgating, a form of social engineering that exploits human behavior rather than technical controls.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5198,7 +5122,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Trusted Platform Module securely stores cryptographic keys in hardware and performs\ncryptographic operations, protecting keys from exposure and tampering.",
+    "explanation": "A Trusted Platform Module securely stores cryptographic keys in hardware and performs cryptographic operations, protecting keys from exposure and tampering.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5214,7 +5138,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A company informs employees when they can update their company-owned devices with the\nnewest software.\nWhich of the following does this scenario best describe?",
+    "question": "A company informs employees when they can update their company-owned devices with the newest software.\nWhich of the following does this scenario best describe?",
     "choices": [
       {
         "key": "A",
@@ -5236,7 +5160,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Change management defines how updates, modifications, or deployments are planned,\ncommunicated, approved, and scheduled. Informing employees when company-owned devices\ncan be updated with new software is part of managing and controlling organizational change.",
+    "explanation": "Change management defines how updates, modifications, or deployments are planned, communicated, approved, and scheduled. Informing employees when company-owned devices can be updated with new software is part of managing and controlling organizational change.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5252,7 +5176,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "An engineer submits a change request for a software update to the change advisory board\n(CAB). The CAB rejects the request, despite the change request including technical\nrequirements.\nWhich of the following is most likely missing from the request?",
+    "question": "An engineer submits a change request for a software update to the change advisory board (CAB). The CAB rejects the request, despite the change request including technical requirements.\nWhich of the following is most likely missing from the request?",
     "choices": [
       {
         "key": "A",
@@ -5274,7 +5198,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A change request should include a rollback strategy so the organization can restore the\nprevious stable state if the software update fails or causes unexpected issues. The CAB\ncommonly requires this risk-control detail before approving production changes.",
+    "explanation": "A change request should include a rollback strategy so the organization can restore the previous stable state if the software update fails or causes unexpected issues. The CAB commonly requires this risk-control detail before approving production changes.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5312,7 +5236,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An access control list prevents unauthorized access by explicitly allowing or denying traffic or\nuser permissions before access is granted.",
+    "explanation": "An access control list prevents unauthorized access by explicitly allowing or denying traffic or user permissions before access is granted.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5328,7 +5252,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A security administrator at a large company with standardized processes receives a request\nfrom an operations engineer for a major system migration.\nWhich of the following should the administrator do first?",
+    "question": "A security administrator at a large company with standardized processes receives a request from an operations engineer for a major system migration.\nWhich of the following should the administrator do first?",
     "choices": [
       {
         "key": "A",
@@ -5350,7 +5274,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A major system migration should follow the organization's formal change management process.\nSubmitting the configuration to the change advisory board ensures the change is reviewed,\nassessed for risk, approved, and scheduled before implementation.",
+    "explanation": "A major system migration should follow the organization's formal change management process.\nSubmitting the configuration to the change advisory board ensures the change is reviewed, assessed for risk, approved, and scheduled before implementation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5388,7 +5312,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A change management process documents and tracks approved changes, including asset\nupdates. This creates measurable data that can be used to build KPIs for monitoring change\nactivity, compliance, and operational effectiveness.",
+    "explanation": "A change management process documents and tracks approved changes, including asset updates. This creates measurable data that can be used to build KPIs for monitoring change activity, compliance, and operational effectiveness.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5404,7 +5328,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "In order to maintain system stability, a company's software developers cannot merge updates\ninto the code base without supervisor approval.\nWhich of the following is the best description of this practice?",
+    "question": "In order to maintain system stability, a company's software developers cannot merge updates into the code base without supervisor approval.\nWhich of the following is the best description of this practice?",
     "choices": [
       {
         "key": "A",
@@ -5426,7 +5350,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Change management controls how updates are reviewed, approved, and introduced into a code\nbase or production environment. Requiring supervisor approval before merging code helps\nmaintain stability by ensuring changes are authorized before implementation.",
+    "explanation": "Change management controls how updates are reviewed, approved, and introduced into a code base or production environment. Requiring supervisor approval before merging code helps maintain stability by ensuring changes are authorized before implementation.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5442,7 +5366,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Following a security review, an organization must ensure users verify their identities against the\ncompany's identity services with individual credentials leveraging WPA2-enterprise for wireless\naccess.\nWhich of the following configuration steps correctly applies RADIUS in this environment?",
+    "question": "Following a security review, an organization must ensure users verify their identities against the company's identity services with individual credentials leveraging WPA2-enterprise for wireless access.\nWhich of the following configuration steps correctly applies RADIUS in this environment?",
     "choices": [
       {
         "key": "A",
@@ -5464,7 +5388,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "WPA2-Enterprise uses 802.1X authentication with a RADIUS server to validate each user's\nindividual credentials. Integrating RADIUS with the corporate directory allows users to\nauthenticate against centralized identity services for wireless access.",
+    "explanation": "WPA2-Enterprise uses 802.1X authentication with a RADIUS server to validate each user's individual credentials. Integrating RADIUS with the corporate directory allows users to authenticate against centralized identity services for wireless access.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5502,7 +5426,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Confidentiality ensures that data is protected from unauthorized access and is only available to\nusers, systems, or processes that are permitted to view it.",
+    "explanation": "Confidentiality ensures that data is protected from unauthorized access and is only available to users, systems, or processes that are permitted to view it.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5518,7 +5442,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An organization pilots a web service using a self-signed certificate to share confidential\ninformation. The next day, employees notice the service's appearance is different and the self-\nsigned certificate is no longer associated with the web portal.\nWhich of the following is the most likely type of malicious activity occurring?",
+    "question": "An organization pilots a web service using a self-signed certificate to share confidential information. The next day, employees notice the service's appearance is different and the self- signed certificate is no longer associated with the web portal.\nWhich of the following is the most likely type of malicious activity occurring?",
     "choices": [
       {
         "key": "A",
@@ -5540,7 +5464,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An on-path attack occurs when an attacker intercepts and potentially alters communications\nbetween users and a service. The changed appearance of the web portal and replacement of\nthe expected certificate indicate that traffic may be redirected or intercepted by an attacker\npresenting a different site or certificate.",
+    "explanation": "An on-path attack occurs when an attacker intercepts and potentially alters communications between users and a service. The changed appearance of the web portal and replacement of the expected certificate indicate that traffic may be redirected or intercepted by an attacker presenting a different site or certificate.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5556,7 +5480,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following requirements best describes a business concern within operational\ntechnology (OT) systems versus information technology (IT) systems?",
+    "question": "Which of the following requirements best describes a business concern within operational technology (OT) systems versus information technology (IT) systems?",
     "choices": [
       {
         "key": "A",
@@ -5578,7 +5502,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Operational technology systems often control physical processes and equipment, so\nenvironmental requirements such as temperature, humidity, dust, vibration, and safety\nconditions are major business concerns. These concerns are typically more critical in OT\nenvironments than in traditional IT systems.",
+    "explanation": "Operational technology systems often control physical processes and equipment, so environmental requirements such as temperature, humidity, dust, vibration, and safety conditions are major business concerns. These concerns are typically more critical in OT environments than in traditional IT systems.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5616,7 +5540,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Digital signatures verify the sender's identity and prove that the message was not altered after\nsigning. This supports non-repudiation because the sender cannot reasonably deny having sent\nthe signed email.",
+    "explanation": "Digital signatures verify the sender's identity and prove that the message was not altered after signing. This supports non-repudiation because the sender cannot reasonably deny having sent the signed email.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5654,7 +5578,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Key escrow stores a copy of decryption keys with a trusted party or secure recovery system.\nThis helps ensure encrypted data can still be recovered if the original keys are lost, damaged, or\nunavailable.",
+    "explanation": "Key escrow stores a copy of decryption keys with a trusted party or secure recovery system.\nThis helps ensure encrypted data can still be recovered if the original keys are lost, damaged, or unavailable.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5670,7 +5594,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An organization discovers its product's internal specifications were posted on internet forums\nand social media.\nWhich of the following should the organization use to manage such incidents?",
+    "question": "An organization discovers its product's internal specifications were posted on internet forums and social media.\nWhich of the following should the organization use to manage such incidents?",
     "choices": [
       {
         "key": "A",
@@ -5692,7 +5616,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Classification helps define the sensitivity level of information and the handling requirements for\nprotecting it. Internal product specifications should be classified appropriately so the\norganization can identify exposure, prioritize response actions, and manage the incident\naccording to the data's sensitivity.",
+    "explanation": "Classification helps define the sensitivity level of information and the handling requirements for protecting it. Internal product specifications should be classified appropriately so the organization can identify exposure, prioritize response actions, and manage the incident according to the data's sensitivity.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5708,7 +5632,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following is used as a control on physical and digital assets and serves as a signal\nfor employees to identify security requirements when accessing and manipulating data?",
+    "question": "Which of the following is used as a control on physical and digital assets and serves as a signal for employees to identify security requirements when accessing and manipulating data?",
     "choices": [
       {
         "key": "A",
@@ -5730,7 +5654,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Labeling identifies the classification and handling requirements of physical and digital assets.\nSecurity labels signal to employees how data should be accessed, stored, shared, and\notherwise handled according to organizational security policies.",
+    "explanation": "Labeling identifies the classification and handling requirements of physical and digital assets.\nSecurity labels signal to employees how data should be accessed, stored, shared, and otherwise handled according to organizational security policies.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5746,7 +5670,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following is the most likely reason a bank would implement a change freeze on\ncritical systems during a major holiday?",
+    "question": "Which of the following is the most likely reason a bank would implement a change freeze on critical systems during a major holiday?",
     "choices": [
       {
         "key": "A",
@@ -5768,7 +5692,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A change freeze reduces the risk that configuration changes, software updates, or deployments\nwill introduce failures during a period of high customer activity. For a bank, maintaining service\navailability during a major holiday is critical because an outage could affect large numbers of\ncustomers and financial transactions.",
+    "explanation": "A change freeze reduces the risk that configuration changes, software updates, or deployments will introduce failures during a period of high customer activity. For a bank, maintaining service availability during a major holiday is critical because an outage could affect large numbers of customers and financial transactions.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5784,7 +5708,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A systems administrator attempts to make a change to an enterprise system, but the change is\nnot successful.\nWhich of the following change elements should the administrator use next?",
+    "question": "A systems administrator attempts to make a change to an enterprise system, but the change is not successful.\nWhich of the following change elements should the administrator use next?",
     "choices": [
       {
         "key": "A",
@@ -5806,7 +5730,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A backout plan defines the steps required to restore the system to its previous stable state when\na change fails. Using it minimizes disruption and helps return the enterprise system to normal\noperation quickly.",
+    "explanation": "A backout plan defines the steps required to restore the system to its previous stable state when a change fails. Using it minimizes disruption and helps return the enterprise system to normal operation quickly.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5822,7 +5746,7 @@ export const domain1Questions = [
     "objective": "1.3",
     "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Which of the following is an advantage of providing an external penetration tester with some\ninformation about the network rather than no information?",
+    "question": "Which of the following is an advantage of providing an external penetration tester with some information about the network rather than no information?",
     "choices": [
       {
         "key": "A",
@@ -5844,7 +5768,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Providing limited information enables the penetration tester to focus effort on important systems,\nnetwork segments, or applications instead of spending significant time on reconnaissance. This\ncan make the assessment more efficient and produce more relevant findings for critical\ncomponents.",
+    "explanation": "Providing limited information enables the penetration tester to focus effort on important systems, network segments, or applications instead of spending significant time on reconnaissance. This can make the assessment more efficient and produce more relevant findings for critical components.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
@@ -5860,7 +5784,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Security controls in a data center are being reviewed to ensure data is properly protected and\nthat human life considerations are included.\nWhich of the following best describes how the controls should be set up?",
+    "question": "Security controls in a data center are being reviewed to ensure data is properly protected and that human life considerations are included.\nWhich of the following best describes how the controls should be set up?",
     "choices": [
       {
         "key": "A",
@@ -5882,7 +5806,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Safety controls should fail open when human life is a consideration. During emergencies or\nsystem failures, mechanisms such as physical access controls should allow people to exit safely\nrather than remain locked and potentially endanger occupants.",
+    "explanation": "Safety controls should fail open when human life is a consideration. During emergencies or system failures, mechanisms such as physical access controls should allow people to exit safely rather than remain locked and potentially endanger occupants.",
     "explanationSource": "pdf",
     "incorrectExplanations": {},
     "references": [],
