@@ -5735,12 +5735,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the expected number of times a risk event occurs in one year. If ten incidents are expected over a five-year period, the annual rate is calculated by dividing the total incidents by the number of years. This results in two incidents per year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised rate of occurrence is how many times the event is expected in a single year. Ten incidents across five years is ten divided by five, which gives two per year.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Five is the number of years in the observation period, not a rate.",
+      "C": "Ten is the total incidents across the whole period, which has not yet been annualised.",
+      "D": "Fifty is ten multiplied by five, which inverts the calculation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p342",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5773,12 +5777,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An MOU generally outlines mutual understanding and intentions without being legally binding, whereas an SOW defines specific deliverables, scope, and obligations and is typically legally binding.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An MOU records mutual intent and cooperation and is generally not enforceable. A statement of work defines concrete deliverables, scope and obligations, and is a binding commitment about what will actually be produced.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "This inverts the roles. An SOW details the engagement work; an MOU establishes the relationship.",
+      "C": "Both documents are normally signed by all parties. Signature requirements are not the distinguishing feature.",
+      "D": "This reverses the detail level. An SOW is the highly detailed one; an MOU is high-level."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5811,13 +5819,59 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Passive reconnaissance gathers information without directly interacting with the target systems, such as collecting publicly available data from the internet using automated tools.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Passive reconnaissance collects information without sending anything to the target. Automated tools harvesting public sources — registries, certificate logs, social media, job adverts — leave no trace in the company's own logs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Calling employees to extract information is social engineering, and it interacts directly with the target.",
+      "B": "A ping sweep sends packets to the company's network and appears in its logs, making it active.",
+      "D": "Poisoning a DNS cache is an attack, not reconnaissance of any kind."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0811",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A staff member finds a USB drive in the office's parking lot.\nWhich of the following should the staff member do?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Notify the file owner after reviewing the contents of the drive."
+      },
+      {
+        "key": "B",
+        "text": "Use an air-gapped system to open the files without exposing the network."
+      },
+      {
+        "key": "C",
+        "text": "Wipe the drive immediately using a secure method."
+      },
+      {
+        "key": "D",
+        "text": "Submit the device to the security team without connecting it."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A USB drive left in a car park is a classic bait technique, and connecting it to anything risks executing whatever it carries. Handing it to the security team unconnected preserves it for safe forensic examination and keeps every system out of harm's way.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing the contents means connecting the drive, which is exactly the action the attack depends on.",
+      "B": "An air-gapped system limits spread but the staff member is not equipped to analyse it, and the drive may attack the host firmware itself.",
+      "C": "Wiping the drive destroys evidence of what may be a targeted attack on the organisation."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p345",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5849,12 +5903,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A personal relationship with a vendor executive can influence objectivity and decision-making, creating a conflict of interest that must be disclosed to maintain transparency and integrity in the assessment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A close personal relationship with a vendor executive could reasonably be seen to compromise the director's objectivity when assessing that vendor. Disclosure is required because the appearance of bias is itself the problem, whatever the actual findings.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Rules of engagement define the scope and limits of a security test. They govern method, not impartiality.",
+      "B": "A right-to-audit clause grants the ability to inspect a vendor. It concerns authority, not independence.",
+      "C": "Due diligence is the investigation performed before entering a relationship. The failing here is lack of disclosure, not lack of investigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5896,12 +5954,17 @@ export const domain5Questions = [
       "E",
       "F"
     ],
-    "explanation": "Stakeholders prioritize how quickly systems must be restored after an incident, which is defined by the recovery time objective. They also need to understand which IT assets support critical business processes in order to prioritize recovery efforts effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Business stakeholders care about getting back to work. The recovery time objective tells them how quickly each system must return, and knowing which assets underpin which business processes is what lets recovery be sequenced by business priority rather than technical convenience.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Return on investment on cybersecurity is a budgeting conversation, not an incident priority.",
+      "B": "Annualised rate of occurrence statistics are a risk analysis input rather than a business priority during recovery.",
+      "C": "Risk management strategies and plans are governance artefacts. Stakeholders want outcomes, not the methodology.",
+      "D": "An annualised loss expectancy report quantifies expected loss over a year. It informs investment decisions, not recovery sequencing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.927,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5934,12 +5997,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data Processing Agreements establish legal obligations for how third-party vendors handle personal data, ensuring compliance with global privacy regulations when data is shared or processed externally.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once personal data is handed to a third party, the organisation remains accountable for it. A data processing agreement is the contractual instrument that binds the vendor to defined purposes, security measures and breach obligations, which is what regulators require before such transfers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypted local servers protect data technically but say nothing about vendors who also process it, and local storage can itself breach transfer rules.",
+      "B": "A data privacy officer reviewing contracts is a role, and valuable, but the agreements themselves are what create the legal obligation.",
+      "D": "Strong passwords and firewalls are baseline security controls. They are necessary but not what global privacy regulation turns on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p353",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
     "keyCorrected": false

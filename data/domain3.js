@@ -6183,8 +6183,8 @@ export const domain3Questions = [
   {
     "id": "q0802",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A company deploys a new server that a client must be able to access at all times.\nWhich of the following will support this availability requirement?",
     "choices": [
@@ -6208,13 +6208,59 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer distributes incoming client requests across multiple servers or service instances. This ensures that if one server becomes overloaded or fails, traffic can be redirected to other available servers. By preventing a single point of failure and balancing workload across systems, it helps maintain continuous access to the service and supports high availability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access at all times means a single server cannot be the only path. A load balancer spreads requests across a pool and health-checks each member, removing any that fails, so the service stays reachable through the survivors.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A proxy server mediates requests, usually outbound from clients. It does not add redundancy for an inbound service.",
+      "B": "A jump server is a controlled entry point for administrative access. It serves administrators, not clients.",
+      "C": "Geographic restrictions block traffic by location. That reduces availability deliberately."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p341",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0805",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "An organization plans to increase security controls for devices that connect to its internal network. The additional security control must perform port-based authentication as part of the connection process Which of the following should the organization implement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "EDR"
+      },
+      {
+        "key": "B",
+        "text": "SASE"
+      },
+      {
+        "key": "C",
+        "text": "802.1X"
+      },
+      {
+        "key": "D",
+        "text": "WPA3"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "802.1X is the standard for port-based network access control. A device must authenticate to the switch port or access point before any traffic is allowed, which is precisely the requirement stated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detects and responds to malicious activity on an endpoint. It does not gate network admission.",
+      "B": "SASE delivers networking and security from the cloud for remote users. It is not a port-based control on the internal network.",
+      "D": "WPA3 secures wireless connections. It is wireless-only and is an encryption and authentication standard rather than port-based access control."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p343",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6246,13 +6292,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Connecting an ICS network to an enterprise network increases exposure to external threats, making it more susceptible to exploitation that can disrupt critical industrial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Industrial control systems were designed for isolated networks with little authentication or encryption and cannot usually be patched. Bridging them to the enterprise network exposes that fragility to everything reaching the corporate environment, and a successful exploit disrupts physical operations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Increased need for authentication describes a control you would add. It is a consequence to manage, not the security implication itself.",
+      "C": "Network congestion is a performance concern rather than a security one.",
+      "D": "Unsupported enterprise tools is a vague concern; the real problem is that the ICS devices themselves become reachable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0827",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "Which of the following explains the difference between data masking and data tokenization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Data masking is typically a non-reversible process, while data tokenization is reversible"
+      },
+      {
+        "key": "B",
+        "text": "Data masking uses encryption, while data tokenization replaces data with null values"
+      },
+      {
+        "key": "C",
+        "text": "Data masking uses one-to-one data mapping, while data tokenization uses one-to-many data mapping"
+      },
+      {
+        "key": "D",
+        "text": "Data masking implements a random function, while data tokenization implements a pseudo-random function •"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The practical difference is reversibility. Masking permanently alters or hides the value so the original cannot be recovered, while tokenisation swaps it for a token that a secure vault can exchange back for the real data when legitimately needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking does not use encryption, and tokenisation substitutes meaningful tokens rather than null values.",
+      "C": "Neither technique is defined by one-to-one versus one-to-many mapping; that describes token generation strategies within tokenisation.",
+      "D": "Randomness is an implementation detail of how substitute values are produced, not the distinction between the two approaches."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p351",
+    "needsReview": false,
+    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6284,13 +6376,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In cloud shared responsibility models, customers are always responsible for their data and how it is managed and protected, regardless of the cloud service model.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The shared responsibility model shifts different layers to the provider depending on the service model, but the customer's own data is never transferred. Classifying, protecting and governing that data remains the customer's responsibility under IaaS, PaaS and SaaS alike.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identity and account management for the customer's users is a customer responsibility in every model.",
+      "C": "The physical network infrastructure is wholly the provider's responsibility. It is not shared.",
+      "D": "Endpoint security belongs to the customer, since the provider has no visibility into devices connecting to the service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p351",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0834",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "After a cybersecurity event, a company audits its enterprise VoIP system to find ways to reduce its attack surface. The company has a flat network.\nWhich of the following changes should a security administrator implement to reduce the attack surface on the VoIP system?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configure the VoIP system to send logs to a central location."
+      },
+      {
+        "key": "B",
+        "text": "Place the VoIP system in its own VLAN."
+      },
+      {
+        "key": "C",
+        "text": "Implement remote VoIP phone registration."
+      },
+      {
+        "key": "D",
+        "text": "Change the default credentials of VoIP phones."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "On a flat network the VoIP system shares a broadcast domain with everything else, so any compromised workstation can reach it directly. Placing it in its own VLAN restricts the paths into it to what is explicitly permitted, which is the structural reduction in attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sending logs to a central location improves visibility and investigation. It detects rather than reduces exposure.",
+      "C": "Remote phone registration extends reach to more networks, which enlarges the attack surface.",
+      "D": "Changing default credentials is essential hardening and should be done, but it secures the phones rather than reducing the system's exposure on a flat network."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p354",
+    "needsReview": false,
+    "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
   },

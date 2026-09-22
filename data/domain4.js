@@ -10594,12 +10594,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data retention policies define how long data should be kept and when it must be securely destroyed. Following these policies during asset decommissioning ensures sensitive information is not retained longer than necessary and is properly eliminated to prevent unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Retention policy defines both how long data must be kept and when it must go. At decommissioning, following it ensures anything past its retention period is securely destroyed rather than travelling out of the organisation on a discarded drive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Backing up all data before disposal contradicts retention, which requires expired data to be destroyed rather than copied.",
+      "C": "Retaining employee access to old files after hardware is recycled is not a goal of retention policy and would be a security failure.",
+      "D": "Keeping all customer data indefinitely in case it is needed is precisely what retention policy prohibits."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10632,12 +10636,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Firewall logs record network traffic flows, including outbound connections from a host to external IP addresses, which can confirm whether a connection to the specified IP was established.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The command attempts an outbound download from a specific address. Firewall logs record every connection crossing the boundary with source, destination and outcome, which is what confirms whether the connection actually completed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "System event logs record operating system events. They may show PowerShell running without showing whether the network connection succeeded.",
+      "B": "EDR logs would show the process and its attempted network activity, which is genuinely useful, but the authoritative record of an established connection crossing the perimeter is the firewall.",
+      "D": "Application logs record activity inside a business application. PowerShell reaching out does not pass through one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10670,12 +10678,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SCAP standardizes how vulnerability and configuration data is formatted and shared, allowing different security tools to interoperate and exchange information consistently across vendors.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SCAP defines common formats and languages for expressing configuration and vulnerability information. Because every compliant tool speaks the same language, scanners, benchmarks and reporting systems from different vendors can exchange data and work together.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Baselines are content that may be expressed in SCAP format. The benefit being asked about is the standardisation itself, not any particular baseline.",
+      "B": "Consolidated reporting layouts help communication, but SCAP is a machine-readable data standard rather than a presentation format.",
+      "D": "SCAP is a technical specification, not an international compliance standard, and it does not reduce breach cost directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10708,12 +10720,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A bug bounty program invites external security researchers to identify and report vulnerabilities in an organization's systems, often in exchange for rewards, improving overall security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Inviting the wider security community to find and report vulnerabilities in public-facing systems, typically with rewards, is a bug bounty programme. The defining feature is that participation is open rather than contracted.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
+      "C": "Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure programme.",
+      "D": "Third-party information sharing exchanges threat intelligence between organisations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p348",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10746,12 +10762,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "OSINT involves gathering information from publicly available sources such as websites, social media, and public records to identify potential security exposures and threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "OSINT is the systematic collection of publicly available information — websites, social media, registries, public records — to understand what an organisation has exposed. Finding those exposures without touching the target is its common use.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Monitoring internal systems and traffic uses your own telemetry. Internal data is by definition not open source.",
+      "B": "Installing security patches is remediation work.",
+      "D": "Encrypting and storing data securely is a data protection control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10759,8 +10779,8 @@ export const domain4Questions = [
   {
     "id": "q0825",
     "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security analyst must recover files from a USB drive associated with a ransomware attack.\nWhich of the following tools will help the analyst securely retrieve the files?",
     "choices": [
@@ -10784,12 +10804,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A sandboxing environment allows the analyst to safely access and recover files from the USB drive in an isolated environment, preventing potential malware from affecting production systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The drive is associated with ransomware, so connecting it to a production system risks re-infection. A sandbox gives an isolated environment where the media can be mounted and files extracted while anything malicious stays contained.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An intrusion prevention system inspects network traffic. It has no role in recovering files from removable media.",
+      "C": "A file integrity management tool detects changes to protected files. It monitors rather than recovers.",
+      "D": "A static code analysis tool reads source code for defects. It does not retrieve files."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10797,8 +10821,8 @@ export const domain4Questions = [
   {
     "id": "q0826",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A security engineer receives reports of unauthorized devices on the organization's network.\nWhich of the following best describes a secure and effective way to mitigate the risks?",
     "choices": [
@@ -10822,12 +10846,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing 802.1X with device certificates ensures only authenticated devices can connect, and endpoint security checks verify compliance with security policies before granting network access, effectively mitigating unauthorized device risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The strongest answer combines identity and posture. 802.1X with device certificates means only devices holding a trusted certificate can authenticate at all, and endpoint security checks then confirm the device meets policy before it is allowed onto the network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocking wireless only leaves wired ports open, and verifying against a baseline without strong device authentication is easily spoofed.",
+      "B": "Accepting handshakes from a static set of IP addresses is trivially bypassed, since an attacker on the local network can assume an allowed address.",
+      "D": "Redirecting everything to guest Wi-Fi and waiting for an analyst does not scale and leaves legitimate devices unable to work."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10860,13 +10888,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Automated ticket creation integrates alerts from security tools into an IT service management system, ensuring incidents are logged and assigned to the appropriate security team for response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Automated ticket creation takes alerts arriving from email protection and the MSSP and opens a record in the service management system, routed to the security team. That converts a stream of notifications into tracked, assigned work without manual re-keying.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Automated compliance monitoring checks configuration against standards. It reports on compliance state, not alert handling.",
+      "C": "Automated vulnerability scans discover weaknesses. They generate findings rather than routing alerts.",
+      "D": "Automated indicator sharing exchanges threat intelligence between organisations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.316,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0830",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A security analyst receives an alert that an employee has clicked on a phishing email and exposed their credentials.\nWhich of the following should the analyst do?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Notify all employees about the phishing attack and instruct them to avoid suspicious emails"
+      },
+      {
+        "key": "B",
+        "text": "Wait for the confirmation from the employee before making any changes to their account."
+      },
+      {
+        "key": "C",
+        "text": "Reimage the employee's workstation to ensure no malware is present."
+      },
+      {
+        "key": "D",
+        "text": "Lock the employee's account to prevent further unauthorized access."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The credentials are already exposed, so the attacker may be using them right now. Locking the account immediately cuts off that access, which is containment — the priority before investigation or remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Notifying all employees is useful awareness follow-up, but it does nothing about the credentials already in an attacker's hands.",
+      "B": "Waiting for confirmation from the employee gives the attacker more time with working credentials.",
+      "C": "Reimaging the workstation addresses possible malware and may well be needed, but it leaves the exposed credentials usable from anywhere."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p352",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10898,12 +10972,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Processing user-uploaded files in an isolated environment such as a sandbox limits access to system resources, preventing malicious files from impacting the main system even if they exploit vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot know in advance what a user-supplied file will do. Processing uploads in an isolated environment with limited access to system resources means that even a file exploiting a genuine vulnerability is confined and cannot reach the wider system.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Static code analysis examines your own source code. It is not a malware scanner for arbitrary uploaded files.",
+      "C": "Code signing validates software from known publishers. Users uploading arbitrary files have no signing keys you trust.",
+      "D": "Full disk encryption protects stored data from someone with physical access. It does nothing about malicious content being processed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false

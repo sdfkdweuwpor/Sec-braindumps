@@ -6647,51 +6647,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A watering hole attack targets a website that a specific group of users frequently visits and compromises it to infect those users when they access the site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rather than attacking the employees directly, the attacker poisons a site they already trust and visit, letting the victims deliver themselves. Compromising a frequently visited destination to reach a specific group is a watering hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Supply chain compromise reaches you through a vendor or component you procure, not a website you browse.",
+      "B": "Typosquatting registers a lookalike domain for users who mistype. Here the genuine site is compromised.",
+      "D": "Impersonation is assuming a trusted identity to manipulate a person."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p342",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0811",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A staff member finds a USB drive in the office's parking lot.\nWhich of the following should the staff member do?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Notify the file owner after reviewing the contents of the drive."
-      },
-      {
-        "key": "B",
-        "text": "Use an air-gapped system to open the files without exposing the network."
-      },
-      {
-        "key": "C",
-        "text": "Wipe the drive immediately using a secure method."
-      },
-      {
-        "key": "D",
-        "text": "Submit the device to the security team without connecting it."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Unknown USB devices can be malicious, so they should not be connected to any system.\nSubmitting the device to the security team allows it to be handled safely using proper forensic and security procedures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6723,12 +6689,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A nation-state actor has the resources, expertise, and strategic capability to conduct advanced cyberattacks that can impact physical systems, including disabling sensors and enabling kinetic effects.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Disabling sensors to enable physical, kinetic consequences requires deep knowledge of operational technology, long-term access and a strategic objective. Only a nation-state has the resources, patience and motive for that class of operation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider has access but rarely the coordinated capability or strategic intent to produce kinetic effects.",
+      "B": "Hacktivists seek publicity using accessible techniques. Physical destruction would undermine most causes and is beyond their means.",
+      "C": "Organised criminals pursue profit. Kinetic effects generate no revenue and attract overwhelming law enforcement attention."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6761,12 +6731,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The use of sequences like \"../../../\" indicates attempts to navigate outside the intended directory structure to access restricted files such as /etc/passwd, which is characteristic of a directory traversal attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The repeated ../ sequences are attempts to climb out of the intended directory and read an arbitrary system file. Escaping the web root this way to reach /etc/passwd is directory traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Credential replay reuses captured authentication material. No credentials appear in these requests.",
+      "C": "A brute-force attack tries many values until one works. These are crafted path requests, not guesses at a secret.",
+      "D": "Resource exhaustion consumes capacity until a service fails. Three requests consume nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p346",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6799,51 +6773,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Isolation limits exposure by restricting the application's interaction to only necessary services, reducing risk when patching is no longer possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The application cannot be patched and must keep running, so the remaining lever is restricting what it can talk to. Isolation confines it to a minimal set of necessary services, shrinking both what can reach it and what it could reach if compromised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching is explicitly unavailable — no further patches exist for this application.",
+      "B": "Segmentation divides the network into zones and is closely related, but the question describes restricting the application itself to a limited number of services, which is isolation.",
+      "D": "Monitoring reveals attacks in progress. It provides visibility without reducing exposure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0830",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A security analyst receives an alert that an employee has clicked on a phishing email and exposed their credentials.\nWhich of the following should the analyst do?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Notify all employees about the phishing attack and instruct them to avoid suspicious emails"
-      },
-      {
-        "key": "B",
-        "text": "Wait for the confirmation from the employee before making any changes to their account."
-      },
-      {
-        "key": "C",
-        "text": "Reimage the employee's workstation to ensure no malware is present."
-      },
-      {
-        "key": "D",
-        "text": "Lock the employee's account to prevent further unauthorized access."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Locking the compromised account immediately prevents attackers from using the exposed credentials to gain unauthorized access, containing the incident quickly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6875,51 +6815,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RTOS-based systems often have limited protections and may be vulnerable to code injection, allowing attackers to execute malicious code directly on embedded or real-time systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Real-time operating systems typically run with minimal memory protection, few exploit mitigations and often a single privilege level. That makes injecting and executing code directly against them both feasible and immediately effective.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A DDoS floods a target to exhaust it. It denies availability rather than exploiting an RTOS vulnerability.",
+      "C": "Brute force guesses credentials. Many RTOS devices have no interactive login to attack.",
+      "D": "Cross-site scripting requires a browser rendering a web page. An RTOS controlling a device has none."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0834",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "After a cybersecurity event, a company audits its enterprise VoIP system to find ways to reduce its attack surface. The company has a flat network.\nWhich of the following changes should a security administrator implement to reduce the attack surface on the VoIP system?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Configure the VoIP system to send logs to a central location."
-      },
-      {
-        "key": "B",
-        "text": "Place the VoIP system in its own VLAN."
-      },
-      {
-        "key": "C",
-        "text": "Implement remote VoIP phone registration."
-      },
-      {
-        "key": "D",
-        "text": "Change the default credentials of VoIP phones."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Placing the VoIP system in its own VLAN segments it from the rest of the flat network, limiting exposure and reducing the attack surface by restricting access to only necessary traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
-    "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
   },

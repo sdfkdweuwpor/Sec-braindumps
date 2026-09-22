@@ -33821,8 +33821,8 @@
   {
     "id": "q0802",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A company deploys a new server that a client must be able to access at all times.\nWhich of the following will support this availability requirement?",
     "choices": [
@@ -33846,12 +33846,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer distributes incoming client requests across multiple servers or service instances. This ensures that if one server becomes overloaded or fails, traffic can be redirected to other available servers. By preventing a single point of failure and balancing workload across systems, it helps maintain continuous access to the service and supports high availability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access at all times means a single server cannot be the only path. A load balancer spreads requests across a pool and health-checks each member, removing any that fails, so the service stays reachable through the survivors.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A proxy server mediates requests, usually outbound from clients. It does not add redundancy for an inbound service.",
+      "B": "A jump server is a controlled entry point for administrative access. It serves administrators, not clients.",
+      "C": "Geographic restrictions block traffic by location. That reduces availability deliberately."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p341",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33884,12 +33888,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the expected number of times a risk event occurs in one year. If ten incidents are expected over a five-year period, the annual rate is calculated by dividing the total incidents by the number of years. This results in two incidents per year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised rate of occurrence is how many times the event is expected in a single year. Ten incidents across five years is ten divided by five, which gives two per year.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Five is the number of years in the observation period, not a rate.",
+      "C": "Ten is the total incidents across the whole period, which has not yet been annualised.",
+      "D": "Fifty is ten multiplied by five, which inverts the calculation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p342",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33922,21 +33930,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "A watering hole attack targets a website that a specific group of users frequently visits and compromises it to infect those users when they access the site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rather than attacking the employees directly, the attacker poisons a site they already trust and visit, letting the victims deliver themselves. Compromising a frequently visited destination to reach a specific group is a watering hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Supply chain compromise reaches you through a vendor or component you procure, not a website you browse.",
+      "B": "Typosquatting registers a lookalike domain for users who mistype. Here the genuine site is compromised.",
+      "D": "Impersonation is assuming a trusted identity to manipulate a person."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p342",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0805",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
     "question": "An organization plans to increase security controls for devices that connect to its internal network. The additional security control must perform port-based authentication as part of the connection process Which of the following should the organization implement?",
     "choices": [
@@ -33960,12 +33972,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "802.1X provides port-based network access control, requiring devices to authenticate before gaining access to the network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "802.1X is the standard for port-based network access control. A device must authenticate to the switch port or access point before any traffic is allowed, which is precisely the requirement stated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detects and responds to malicious activity on an endpoint. It does not gate network admission.",
+      "B": "SASE delivers networking and security from the cloud for remote users. It is not a port-based control on the internal network.",
+      "D": "WPA3 secures wireless connections. It is wireless-only and is an encryption and authentication standard rather than port-based access control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33998,12 +34014,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Fail-closed mode ensures that if a failure or security event occurs, all traffic is blocked, preventing unauthorized access and protecting data confidentiality.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The company has explicitly ranked confidentiality above availability. Fail-closed means that when the firewall fails, traffic stops rather than flowing uninspected — accepting an outage in order to guarantee nothing passes unchecked.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A DENY ALL rule at the end of the ACL is standard practice for normal operation. It does not govern what happens when the device itself fails.",
+      "C": "Prioritising business-critical traffic favours availability, which is the opposite of the stated preference.",
+      "D": "Rate limiting between interfaces manages congestion. It is a performance control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34036,12 +34056,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "An MOU generally outlines mutual understanding and intentions without being legally binding, whereas an SOW defines specific deliverables, scope, and obligations and is typically legally binding.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An MOU records mutual intent and cooperation and is generally not enforceable. A statement of work defines concrete deliverables, scope and obligations, and is a binding commitment about what will actually be produced.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "This inverts the roles. An SOW details the engagement work; an MOU establishes the relationship.",
+      "C": "Both documents are normally signed by all parties. Signature requirements are not the distinguishing feature.",
+      "D": "This reverses the detail level. An SOW is the highly detailed one; an MOU is high-level."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34074,12 +34098,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Connecting an ICS network to an enterprise network increases exposure to external threats, making it more susceptible to exploitation that can disrupt critical industrial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Industrial control systems were designed for isolated networks with little authentication or encryption and cannot usually be patched. Bridging them to the enterprise network exposes that fragility to everything reaching the corporate environment, and a successful exploit disrupts physical operations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Increased need for authentication describes a control you would add. It is a consequence to manage, not the security implication itself.",
+      "C": "Network congestion is a performance concern rather than a security one.",
+      "D": "Unsupported enterprise tools is a vague concern; the real problem is that the ICS devices themselves become reachable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34112,12 +34140,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Passive reconnaissance gathers information without directly interacting with the target systems, such as collecting publicly available data from the internet using automated tools.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Passive reconnaissance collects information without sending anything to the target. Automated tools harvesting public sources — registries, certificate logs, social media, job adverts — leave no trace in the company's own logs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Calling employees to extract information is social engineering, and it interacts directly with the target.",
+      "B": "A ping sweep sends packets to the company's network and appears in its logs, making it active.",
+      "D": "Poisoning a DNS cache is an attack, not reconnaissance of any kind."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34150,21 +34182,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Data retention policies define how long data should be kept and when it must be securely destroyed. Following these policies during asset decommissioning ensures sensitive information is not retained longer than necessary and is properly eliminated to prevent unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Retention policy defines both how long data must be kept and when it must go. At decommissioning, following it ensures anything past its retention period is securely destroyed rather than travelling out of the organisation on a discarded drive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Backing up all data before disposal contradicts retention, which requires expired data to be destroyed rather than copied.",
+      "C": "Retaining employee access to old files after hardware is recycled is not a goal of retention policy and would be a security failure.",
+      "D": "Keeping all customer data indefinitely in case it is needed is precisely what retention policy prohibits."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p344",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0811",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "A staff member finds a USB drive in the office's parking lot.\nWhich of the following should the staff member do?",
     "choices": [
@@ -34188,12 +34224,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Unknown USB devices can be malicious, so they should not be connected to any system.\nSubmitting the device to the security team allows it to be handled safely using proper forensic and security procedures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A USB drive left in a car park is a classic bait technique, and connecting it to anything risks executing whatever it carries. Handing it to the security team unconnected preserves it for safe forensic examination and keeps every system out of harm's way.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing the contents means connecting the drive, which is exactly the action the attack depends on.",
+      "B": "An air-gapped system limits spread but the staff member is not equipped to analyse it, and the drive may attack the host firmware itself.",
+      "C": "Wiping the drive destroys evidence of what may be a targeted attack on the organisation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34226,12 +34266,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Firewall logs record network traffic flows, including outbound connections from a host to external IP addresses, which can confirm whether a connection to the specified IP was established.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The command attempts an outbound download from a specific address. Firewall logs record every connection crossing the boundary with source, destination and outcome, which is what confirms whether the connection actually completed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "System event logs record operating system events. They may show PowerShell running without showing whether the network connection succeeded.",
+      "B": "EDR logs would show the process and its attempted network activity, which is genuinely useful, but the authoritative record of an established connection crossing the perimeter is the firewall.",
+      "D": "Application logs record activity inside a business application. PowerShell reaching out does not pass through one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34264,12 +34308,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A nation-state actor has the resources, expertise, and strategic capability to conduct advanced cyberattacks that can impact physical systems, including disabling sensors and enabling kinetic effects.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Disabling sensors to enable physical, kinetic consequences requires deep knowledge of operational technology, long-term access and a strategic objective. Only a nation-state has the resources, patience and motive for that class of operation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider has access but rarely the coordinated capability or strategic intent to produce kinetic effects.",
+      "B": "Hacktivists seek publicity using accessible techniques. Physical destruction would undermine most causes and is beyond their means.",
+      "C": "Organised criminals pursue profit. Kinetic effects generate no revenue and attract overwhelming law enforcement attention."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p345",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34302,12 +34350,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "In a Zero Trust architecture, the policy engine evaluates each access request independently using current context and policies, ensuring decisions are made without relying on prior trust or previous access approvals.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In Zero Trust the policy engine evaluates every request afresh against current identity, device state and context. Nothing is inherited from a previous approval, which is what removes the implicit trust the model exists to eliminate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Applying default permissions broadly is exactly the standing trust Zero Trust rejects.",
+      "C": "Assigning permissions based on previous activity means inheriting from prior events, which contradicts the model.",
+      "D": "Machine learning may inform risk scoring, but the policy engine's defining role is per-request evaluation, not handling unknown roles."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p346",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34340,12 +34392,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The use of sequences like \"../../../\" indicates attempts to navigate outside the intended directory structure to access restricted files such as /etc/passwd, which is characteristic of a directory traversal attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The repeated ../ sequences are attempts to climb out of the intended directory and read an arbitrary system file. Escaping the web root this way to reach /etc/passwd is directory traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Credential replay reuses captured authentication material. No credentials appear in these requests.",
+      "C": "A brute-force attack tries many values until one works. These are crafted path requests, not guesses at a secret.",
+      "D": "Resource exhaustion consumes capacity until a service fails. Three requests consume nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p346",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34378,12 +34434,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A personal relationship with a vendor executive can influence objectivity and decision-making, creating a conflict of interest that must be disclosed to maintain transparency and integrity in the assessment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A close personal relationship with a vendor executive could reasonably be seen to compromise the director's objectivity when assessing that vendor. Disclosure is required because the appearance of bias is itself the problem, whatever the actual findings.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Rules of engagement define the scope and limits of a security test. They govern method, not impartiality.",
+      "B": "A right-to-audit clause grants the ability to inspect a vendor. It concerns authority, not independence.",
+      "C": "Due diligence is the investigation performed before entering a relationship. The failing here is lack of disclosure, not lack of investigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34416,12 +34476,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A honeyfile is a decoy file containing fake sensitive information designed to attract attackers and trigger alerts when accessed, helping detect and study malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeyfile is a decoy document seeded with fake sensitive content and wired to alert on access. Because nobody has a legitimate reason to open it, any interaction is a reliable signal of an intruder or a curious insider.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeytoken is a piece of fake data such as a bogus credential or record whose use signals compromise. Close, but the artefact here is a file.",
+      "B": "A honeypot is a whole decoy system or service rather than a document on a real one.",
+      "D": "A honeynet is an entire decoy network of systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34454,12 +34518,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "SCAP standardizes how vulnerability and configuration data is formatted and shared, allowing different security tools to interoperate and exchange information consistently across vendors.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SCAP defines common formats and languages for expressing configuration and vulnerability information. Because every compliant tool speaks the same language, scanners, benchmarks and reporting systems from different vendors can exchange data and work together.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Baselines are content that may be expressed in SCAP format. The benefit being asked about is the standardisation itself, not any particular baseline.",
+      "B": "Consolidated reporting layouts help communication, but SCAP is a machine-readable data standard rather than a presentation format.",
+      "D": "SCAP is a technical specification, not an international compliance standard, and it does not reduce breach cost directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34492,12 +34560,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A bug bounty program invites external security researchers to identify and report vulnerabilities in an organization's systems, often in exchange for rewards, improving overall security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Inviting the wider security community to find and report vulnerabilities in public-facing systems, typically with rewards, is a bug bounty programme. The defining feature is that participation is open rather than contracted.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
+      "C": "Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure programme.",
+      "D": "Third-party information sharing exchanges threat intelligence between organisations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p348",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34539,12 +34611,17 @@
       "B",
       "D"
     ],
-    "explanation": "The strength of encryption depends primarily on the algorithm used and the key length, as these determine how resistant the encryption is to attacks and how difficult it is to break.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption strength comes down to the algorithm and the key length. A sound modern algorithm resists known cryptanalysis, and sufficient key length makes brute force computationally infeasible — get either wrong and the rest of the implementation cannot save it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to read without cryptographic strength. It is a separate, weaker technique.",
+      "C": "Data masking hides parts of a value for display. It is not encryption.",
+      "E": "Tokenisation substitutes values with surrogates held in a vault. Again a different protection model.",
+      "F": "Salting is specific to password hashing, adding randomness to defeat precomputed tables."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p348",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34586,12 +34663,17 @@
       "E",
       "F"
     ],
-    "explanation": "Stakeholders prioritize how quickly systems must be restored after an incident, which is defined by the recovery time objective. They also need to understand which IT assets support critical business processes in order to prioritize recovery efforts effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Business stakeholders care about getting back to work. The recovery time objective tells them how quickly each system must return, and knowing which assets underpin which business processes is what lets recovery be sequenced by business priority rather than technical convenience.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Return on investment on cybersecurity is a budgeting conversation, not an incident priority.",
+      "B": "Annualised rate of occurrence statistics are a risk analysis input rather than a business priority during recovery.",
+      "C": "Risk management strategies and plans are governance artefacts. Stakeholders want outcomes, not the methodology.",
+      "D": "An annualised loss expectancy report quantifies expected loss over a year. It informs investment decisions, not recovery sequencing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.927,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34624,12 +34706,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Isolation limits exposure by restricting the application's interaction to only necessary services, reducing risk when patching is no longer possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The application cannot be patched and must keep running, so the remaining lever is restricting what it can talk to. Isolation confines it to a minimal set of necessary services, shrinking both what can reach it and what it could reach if compromised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching is explicitly unavailable — no further patches exist for this application.",
+      "B": "Segmentation divides the network into zones and is closely related, but the question describes restricting the application itself to a limited number of services, which is isolation.",
+      "D": "Monitoring reveals attacks in progress. It provides visibility without reducing exposure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34662,12 +34748,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Zero Trust requires continuous verification of identity and context for every access request, ensuring access is granted only after ongoing validation rather than relying on a single initial authentication or perimeter defenses.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Zero Trust replaces one-time authentication with continuous evaluation. Every request is validated against current identity, device posture and context, so access is granted moment by moment rather than for the duration of a session.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Strong network boundaries describe the perimeter model Zero Trust was created to replace.",
+      "B": "Verifying identity once at session start is exactly the implicit trust Zero Trust removes.",
+      "D": "Prioritising perimeter defence is again the traditional castle-and-moat approach."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34700,12 +34790,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "OSINT involves gathering information from publicly available sources such as websites, social media, and public records to identify potential security exposures and threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "OSINT is the systematic collection of publicly available information — websites, social media, registries, public records — to understand what an organisation has exposed. Finding those exposures without touching the target is its common use.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Monitoring internal systems and traffic uses your own telemetry. Internal data is by definition not open source.",
+      "B": "Installing security patches is remediation work.",
+      "D": "Encrypting and storing data securely is a data protection control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34713,8 +34807,8 @@
   {
     "id": "q0825",
     "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security analyst must recover files from a USB drive associated with a ransomware attack.\nWhich of the following tools will help the analyst securely retrieve the files?",
     "choices": [
@@ -34738,12 +34832,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A sandboxing environment allows the analyst to safely access and recover files from the USB drive in an isolated environment, preventing potential malware from affecting production systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The drive is associated with ransomware, so connecting it to a production system risks re-infection. A sandbox gives an isolated environment where the media can be mounted and files extracted while anything malicious stays contained.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An intrusion prevention system inspects network traffic. It has no role in recovering files from removable media.",
+      "C": "A file integrity management tool detects changes to protected files. It monitors rather than recovers.",
+      "D": "A static code analysis tool reads source code for defects. It does not retrieve files."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34751,8 +34849,8 @@
   {
     "id": "q0826",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A security engineer receives reports of unauthorized devices on the organization's network.\nWhich of the following best describes a secure and effective way to mitigate the risks?",
     "choices": [
@@ -34776,21 +34874,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing 802.1X with device certificates ensures only authenticated devices can connect, and endpoint security checks verify compliance with security policies before granting network access, effectively mitigating unauthorized device risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The strongest answer combines identity and posture. 802.1X with device certificates means only devices holding a trusted certificate can authenticate at all, and endpoint security checks then confirm the device meets policy before it is allowed onto the network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocking wireless only leaves wired ports open, and verifying against a baseline without strong device authentication is easily spoofed.",
+      "B": "Accepting handshakes from a static set of IP addresses is trivially bypassed, since an attacker on the local network can assume an allowed address.",
+      "D": "Redirecting everything to guest Wi-Fi and waiting for an analyst does not scale and leaves legitimate devices unable to work."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p350",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0827",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
     "question": "Which of the following explains the difference between data masking and data tokenization?",
     "choices": [
@@ -34814,12 +34916,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Data masking irreversibly alters sensitive data to hide it, whereas tokenization replaces data with tokens that can be mapped back to the original values through a secure tokenization system, making it reversible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The practical difference is reversibility. Masking permanently alters or hides the value so the original cannot be recovered, while tokenisation swaps it for a token that a secure vault can exchange back for the real data when legitimately needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking does not use encryption, and tokenisation substitutes meaningful tokens rather than null values.",
+      "C": "Neither technique is defined by one-to-one versus one-to-many mapping; that describes token generation strategies within tokenisation.",
+      "D": "Randomness is an implementation detail of how substitute values are produced, not the distinction between the two approaches."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p351",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34852,12 +34958,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "In cloud shared responsibility models, customers are always responsible for their data and how it is managed and protected, regardless of the cloud service model.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The shared responsibility model shifts different layers to the provider depending on the service model, but the customer's own data is never transferred. Classifying, protecting and governing that data remains the customer's responsibility under IaaS, PaaS and SaaS alike.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identity and account management for the customer's users is a customer responsibility in every model.",
+      "C": "The physical network infrastructure is wholly the provider's responsibility. It is not shared.",
+      "D": "Endpoint security belongs to the customer, since the provider has no visibility into devices connecting to the service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p351",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34890,21 +35000,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Automated ticket creation integrates alerts from security tools into an IT service management system, ensuring incidents are logged and assigned to the appropriate security team for response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Automated ticket creation takes alerts arriving from email protection and the MSSP and opens a record in the service management system, routed to the security team. That converts a stream of notifications into tracked, assigned work without manual re-keying.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Automated compliance monitoring checks configuration against standards. It reports on compliance state, not alert handling.",
+      "C": "Automated vulnerability scans discover weaknesses. They generate findings rather than routing alerts.",
+      "D": "Automated indicator sharing exchanges threat intelligence between organisations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.316,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0830",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security analyst receives an alert that an employee has clicked on a phishing email and exposed their credentials.\nWhich of the following should the analyst do?",
     "choices": [
@@ -34928,12 +35042,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Locking the compromised account immediately prevents attackers from using the exposed credentials to gain unauthorized access, containing the incident quickly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The credentials are already exposed, so the attacker may be using them right now. Locking the account immediately cuts off that access, which is containment — the priority before investigation or remediation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Notifying all employees is useful awareness follow-up, but it does nothing about the credentials already in an attacker's hands.",
+      "B": "Waiting for confirmation from the employee gives the attacker more time with working credentials.",
+      "C": "Reimaging the workstation addresses possible malware and may well be needed, but it leaves the exposed credentials usable from anywhere."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -34966,12 +35084,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "RTOS-based systems often have limited protections and may be vulnerable to code injection, allowing attackers to execute malicious code directly on embedded or real-time systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Real-time operating systems typically run with minimal memory protection, few exploit mitigations and often a single privilege level. That makes injecting and executing code directly against them both feasible and immediately effective.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A DDoS floods a target to exhaust it. It denies availability rather than exploiting an RTOS vulnerability.",
+      "C": "Brute force guesses credentials. Many RTOS devices have no interactive login to attack.",
+      "D": "Cross-site scripting requires a browser rendering a web page. An RTOS controlling a device has none."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p352",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35004,12 +35126,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Change management involves formally reviewing, approving, and implementing changes through a controlled process, such as applying an update after receiving approval from a governing board.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Change management means a modification is requested, reviewed, approved and then implemented in a controlled way. Applying an update only after a governing board has granted approval is that process working as intended.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Setting a new password for a user is routine account administration, not a change to a system requiring approval.",
+      "C": "A penetration test before deploying a patch is a security assessment. Testing may be part of the process but it is not the process.",
+      "D": "Auditing equipment and reporting the list is an inventory activity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p353",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35042,21 +35168,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data Processing Agreements establish legal obligations for how third-party vendors handle personal data, ensuring compliance with global privacy regulations when data is shared or processed externally.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once personal data is handed to a third party, the organisation remains accountable for it. A data processing agreement is the contractual instrument that binds the vendor to defined purposes, security measures and breach obligations, which is what regulators require before such transfers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypted local servers protect data technically but say nothing about vendors who also process it, and local storage can itself breach transfer rules.",
+      "B": "A data privacy officer reviewing contracts is a role, and valuable, but the agreements themselves are what create the legal obligation.",
+      "D": "Strong passwords and firewalls are baseline security controls. They are necessary but not what global privacy regulation turns on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p353",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0834",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
     "question": "After a cybersecurity event, a company audits its enterprise VoIP system to find ways to reduce its attack surface. The company has a flat network.\nWhich of the following changes should a security administrator implement to reduce the attack surface on the VoIP system?",
     "choices": [
@@ -35080,12 +35210,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Placing the VoIP system in its own VLAN segments it from the rest of the flat network, limiting exposure and reducing the attack surface by restricting access to only necessary traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "On a flat network the VoIP system shares a broadcast domain with everything else, so any compromised workstation can reach it directly. Placing it in its own VLAN restricts the paths into it to what is explicitly permitted, which is the structural reduction in attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sending logs to a central location improves visibility and investigation. It detects rather than reduces exposure.",
+      "C": "Remote phone registration extends reach to more networks, which enlarges the attack surface.",
+      "D": "Changing default credentials is essential hardening and should be done, but it secures the phones rather than reducing the system's exposure on a flat network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35118,12 +35252,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Processing user-uploaded files in an isolated environment such as a sandbox limits access to system resources, preventing malicious files from impacting the main system even if they exploit vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot know in advance what a user-supplied file will do. Processing uploads in an isolated environment with limited access to system resources means that even a file exploiting a genuine vulnerability is confined and cannot reach the wider system.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Static code analysis examines your own source code. It is not a malware scanner for arbitrary uploaded files.",
+      "C": "Code signing validates software from known publishers. Users uploading arbitrary files have no signing keys you trust.",
+      "D": "Full disk encryption protects stored data from someone with physical access. It does nothing about malicious content being processed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false

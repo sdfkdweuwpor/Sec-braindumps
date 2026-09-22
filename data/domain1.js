@@ -4758,44 +4758,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0805",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "An organization plans to increase security controls for devices that connect to its internal network. The additional security control must perform port-based authentication as part of the connection process Which of the following should the organization implement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "EDR"
-      },
-      {
-        "key": "B",
-        "text": "SASE"
-      },
-      {
-        "key": "C",
-        "text": "802.1X"
-      },
-      {
-        "key": "D",
-        "text": "WPA3"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "802.1X provides port-based network access control, requiring devices to authenticate before gaining access to the network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0806",
     "domain": 1,
     "objective": "1.2",
@@ -4823,12 +4785,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Fail-closed mode ensures that if a failure or security event occurs, all traffic is blocked, preventing unauthorized access and protecting data confidentiality.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The company has explicitly ranked confidentiality above availability. Fail-closed means that when the firewall fails, traffic stops rather than flowing uninspected — accepting an outage in order to guarantee nothing passes unchecked.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A DENY ALL rule at the end of the ACL is standard practice for normal operation. It does not govern what happens when the device itself fails.",
+      "C": "Prioritising business-critical traffic favours availability, which is the opposite of the stated preference.",
+      "D": "Rate limiting between interfaces manages congestion. It is a performance control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p343",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4861,12 +4827,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a Zero Trust architecture, the policy engine evaluates each access request independently using current context and policies, ensuring decisions are made without relying on prior trust or previous access approvals.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In Zero Trust the policy engine evaluates every request afresh against current identity, device state and context. Nothing is inherited from a previous approval, which is what removes the implicit trust the model exists to eliminate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Applying default permissions broadly is exactly the standing trust Zero Trust rejects.",
+      "C": "Assigning permissions based on previous activity means inheriting from prior events, which contradicts the model.",
+      "D": "Machine learning may inform risk scoring, but the policy engine's defining role is per-request evaluation, not handling unknown roles."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p346",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4899,12 +4869,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A honeyfile is a decoy file containing fake sensitive information designed to attract attackers and trigger alerts when accessed, helping detect and study malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeyfile is a decoy document seeded with fake sensitive content and wired to alert on access. Because nobody has a legitimate reason to open it, any interaction is a reliable signal of an intruder or a curious insider.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeytoken is a piece of fake data such as a bogus credential or record whose use signals compromise. Close, but the artefact here is a file.",
+      "B": "A honeypot is a whole decoy system or service rather than a document on a real one.",
+      "D": "A honeynet is an entire decoy network of systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p347",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4946,12 +4920,17 @@ export const domain1Questions = [
       "B",
       "D"
     ],
-    "explanation": "The strength of encryption depends primarily on the algorithm used and the key length, as these determine how resistant the encryption is to attacks and how difficult it is to break.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption strength comes down to the algorithm and the key length. A sound modern algorithm resists known cryptanalysis, and sufficient key length makes brute force computationally infeasible — get either wrong and the rest of the implementation cannot save it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes data harder to read without cryptographic strength. It is a separate, weaker technique.",
+      "C": "Data masking hides parts of a value for display. It is not encryption.",
+      "E": "Tokenisation substitutes values with surrogates held in a vault. Again a different protection model.",
+      "F": "Salting is specific to password hashing, adding randomness to defeat precomputed tables."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p348",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4984,51 +4963,17 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Zero Trust requires continuous verification of identity and context for every access request, ensuring access is granted only after ongoing validation rather than relying on a single initial authentication or perimeter defenses.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Zero Trust replaces one-time authentication with continuous evaluation. Every request is validated against current identity, device posture and context, so access is granted moment by moment rather than for the duration of a session.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Strong network boundaries describe the perimeter model Zero Trust was created to replace.",
+      "B": "Verifying identity once at session start is exactly the implicit trust Zero Trust removes.",
+      "D": "Prioritising perimeter defence is again the traditional castle-and-moat approach."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p349",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0827",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "Which of the following explains the difference between data masking and data tokenization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Data masking is typically a non-reversible process, while data tokenization is reversible"
-      },
-      {
-        "key": "B",
-        "text": "Data masking uses encryption, while data tokenization replaces data with null values"
-      },
-      {
-        "key": "C",
-        "text": "Data masking uses one-to-one data mapping, while data tokenization uses one-to-many data mapping"
-      },
-      {
-        "key": "D",
-        "text": "Data masking implements a random function, while data tokenization implements a pseudo-random function •"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Data masking irreversibly alters sensitive data to hide it, whereas tokenization replaces data with tokens that can be mapped back to the original values through a secure tokenization system, making it reversible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p351",
-    "needsReview": true,
-    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5060,12 +5005,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Change management involves formally reviewing, approving, and implementing changes through a controlled process, such as applying an update after receiving approval from a governing board.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Change management means a modification is requested, reviewed, approved and then implemented in a controlled way. Applying an update only after a governing board has granted approval is that process working as intended.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Setting a new password for a user is routine account administration, not a change to a system requiring approval.",
+      "C": "A penetration test before deploying a patch is a security assessment. Testing may be part of the process but it is not the process.",
+      "D": "Auditing equipment and reporting the list is an inventory activity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p353",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false

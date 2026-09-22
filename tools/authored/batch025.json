@@ -1,0 +1,241 @@
+{
+"q0802": {"objective":"3.4",
+ "explanation":"Access at all times means a single server cannot be the only path. A load balancer spreads requests across a pool and health-checks each member, removing any that fails, so the service stays reachable through the survivors.",
+ "incorrect":{
+  "A":"A proxy server mediates requests, usually outbound from clients. It does not add redundancy for an inbound service.",
+  "B":"A jump server is a controlled entry point for administrative access. It serves administrators, not clients.",
+  "C":"Geographic restrictions block traffic by location. That reduces availability deliberately."}},
+
+"q0803": {"objective":"5.2",
+ "explanation":"Annualised rate of occurrence is how many times the event is expected in a single year. Ten incidents across five years is ten divided by five, which gives two per year.",
+ "incorrect":{
+  "B":"Five is the number of years in the observation period, not a rate.",
+  "C":"Ten is the total incidents across the whole period, which has not yet been annualised.",
+  "D":"Fifty is ten multiplied by five, which inverts the calculation."}},
+
+"q0804": {"objective":"2.2",
+ "explanation":"Rather than attacking the employees directly, the attacker poisons a site they already trust and visit, letting the victims deliver themselves. Compromising a frequently visited destination to reach a specific group is a watering hole attack.",
+ "incorrect":{
+  "A":"Supply chain compromise reaches you through a vendor or component you procure, not a website you browse.",
+  "B":"Typosquatting registers a lookalike domain for users who mistype. Here the genuine site is compromised.",
+  "D":"Impersonation is assuming a trusted identity to manipulate a person."}},
+
+"q0805": {"objective":"3.2",
+ "explanation":"802.1X is the standard for port-based network access control. A device must authenticate to the switch port or access point before any traffic is allowed, which is precisely the requirement stated.",
+ "incorrect":{
+  "A":"EDR detects and responds to malicious activity on an endpoint. It does not gate network admission.",
+  "B":"SASE delivers networking and security from the cloud for remote users. It is not a port-based control on the internal network.",
+  "D":"WPA3 secures wireless connections. It is wireless-only and is an encryption and authentication standard rather than port-based access control."}},
+
+"q0806": {"objective":"1.2",
+ "explanation":"The company has explicitly ranked confidentiality above availability. Fail-closed means that when the firewall fails, traffic stops rather than flowing uninspected — accepting an outage in order to guarantee nothing passes unchecked.",
+ "incorrect":{
+  "B":"A DENY ALL rule at the end of the ACL is standard practice for normal operation. It does not govern what happens when the device itself fails.",
+  "C":"Prioritising business-critical traffic favours availability, which is the opposite of the stated preference.",
+  "D":"Rate limiting between interfaces manages congestion. It is a performance control."}},
+
+"q0807": {"objective":"5.3",
+ "explanation":"An MOU records mutual intent and cooperation and is generally not enforceable. A statement of work defines concrete deliverables, scope and obligations, and is a binding commitment about what will actually be produced.",
+ "incorrect":{
+  "B":"This inverts the roles. An SOW details the engagement work; an MOU establishes the relationship.",
+  "C":"Both documents are normally signed by all parties. Signature requirements are not the distinguishing feature.",
+  "D":"This reverses the detail level. An SOW is the highly detailed one; an MOU is high-level."}},
+
+"q0808": {"objective":"3.1",
+ "explanation":"Industrial control systems were designed for isolated networks with little authentication or encryption and cannot usually be patched. Bridging them to the enterprise network exposes that fragility to everything reaching the corporate environment, and a successful exploit disrupts physical operations.",
+ "incorrect":{
+  "A":"Increased need for authentication describes a control you would add. It is a consequence to manage, not the security implication itself.",
+  "C":"Network congestion is a performance concern rather than a security one.",
+  "D":"Unsupported enterprise tools is a vague concern; the real problem is that the ICS devices themselves become reachable."}},
+
+"q0809": {"objective":"5.5",
+ "explanation":"Passive reconnaissance collects information without sending anything to the target. Automated tools harvesting public sources — registries, certificate logs, social media, job adverts — leave no trace in the company's own logs.",
+ "incorrect":{
+  "A":"Calling employees to extract information is social engineering, and it interacts directly with the target.",
+  "B":"A ping sweep sends packets to the company's network and appears in its logs, making it active.",
+  "D":"Poisoning a DNS cache is an attack, not reconnaissance of any kind."}},
+
+"q0810": {"objective":"4.2",
+ "explanation":"Retention policy defines both how long data must be kept and when it must go. At decommissioning, following it ensures anything past its retention period is securely destroyed rather than travelling out of the organisation on a discarded drive.",
+ "incorrect":{
+  "B":"Backing up all data before disposal contradicts retention, which requires expired data to be destroyed rather than copied.",
+  "C":"Retaining employee access to old files after hardware is recycled is not a goal of retention policy and would be a security failure.",
+  "D":"Keeping all customer data indefinitely in case it is needed is precisely what retention policy prohibits."}},
+
+"q0811": {"objective":"5.6",
+ "explanation":"A USB drive left in a car park is a classic bait technique, and connecting it to anything risks executing whatever it carries. Handing it to the security team unconnected preserves it for safe forensic examination and keeps every system out of harm's way.",
+ "incorrect":{
+  "A":"Reviewing the contents means connecting the drive, which is exactly the action the attack depends on.",
+  "B":"An air-gapped system limits spread but the staff member is not equipped to analyse it, and the drive may attack the host firmware itself.",
+  "C":"Wiping the drive destroys evidence of what may be a targeted attack on the organisation."}},
+
+"q0812": {"objective":"4.9",
+ "explanation":"The command attempts an outbound download from a specific address. Firewall logs record every connection crossing the boundary with source, destination and outcome, which is what confirms whether the connection actually completed.",
+ "incorrect":{
+  "A":"System event logs record operating system events. They may show PowerShell running without showing whether the network connection succeeded.",
+  "B":"EDR logs would show the process and its attempted network activity, which is genuinely useful, but the authoritative record of an established connection crossing the perimeter is the firewall.",
+  "D":"Application logs record activity inside a business application. PowerShell reaching out does not pass through one."}},
+
+"q0813": {"objective":"2.1",
+ "explanation":"Disabling sensors to enable physical, kinetic consequences requires deep knowledge of operational technology, long-term access and a strategic objective. Only a nation-state has the resources, patience and motive for that class of operation.",
+ "incorrect":{
+  "A":"An insider has access but rarely the coordinated capability or strategic intent to produce kinetic effects.",
+  "B":"Hacktivists seek publicity using accessible techniques. Physical destruction would undermine most causes and is beyond their means.",
+  "C":"Organised criminals pursue profit. Kinetic effects generate no revenue and attract overwhelming law enforcement attention."}},
+
+"q0814": {"objective":"1.2",
+ "explanation":"In Zero Trust the policy engine evaluates every request afresh against current identity, device state and context. Nothing is inherited from a previous approval, which is what removes the implicit trust the model exists to eliminate.",
+ "incorrect":{
+  "A":"Applying default permissions broadly is exactly the standing trust Zero Trust rejects.",
+  "C":"Assigning permissions based on previous activity means inheriting from prior events, which contradicts the model.",
+  "D":"Machine learning may inform risk scoring, but the policy engine's defining role is per-request evaluation, not handling unknown roles."}},
+
+"q0815": {"objective":"2.4",
+ "explanation":"The repeated ../ sequences are attempts to climb out of the intended directory and read an arbitrary system file. Escaping the web root this way to reach /etc/passwd is directory traversal.",
+ "incorrect":{
+  "A":"Credential replay reuses captured authentication material. No credentials appear in these requests.",
+  "C":"A brute-force attack tries many values until one works. These are crafted path requests, not guesses at a secret.",
+  "D":"Resource exhaustion consumes capacity until a service fails. Three requests consume nothing."}},
+
+"q0816": {"objective":"5.3",
+ "explanation":"A close personal relationship with a vendor executive could reasonably be seen to compromise the director's objectivity when assessing that vendor. Disclosure is required because the appearance of bias is itself the problem, whatever the actual findings.",
+ "incorrect":{
+  "A":"Rules of engagement define the scope and limits of a security test. They govern method, not impartiality.",
+  "B":"A right-to-audit clause grants the ability to inspect a vendor. It concerns authority, not independence.",
+  "C":"Due diligence is the investigation performed before entering a relationship. The failing here is lack of disclosure, not lack of investigation."}},
+
+"q0817": {"objective":"1.2",
+ "explanation":"A honeyfile is a decoy document seeded with fake sensitive content and wired to alert on access. Because nobody has a legitimate reason to open it, any interaction is a reliable signal of an intruder or a curious insider.",
+ "incorrect":{
+  "A":"A honeytoken is a piece of fake data such as a bogus credential or record whose use signals compromise. Close, but the artefact here is a file.",
+  "B":"A honeypot is a whole decoy system or service rather than a document on a real one.",
+  "D":"A honeynet is an entire decoy network of systems."}},
+
+"q0818": {"objective":"4.3",
+ "explanation":"SCAP defines common formats and languages for expressing configuration and vulnerability information. Because every compliant tool speaks the same language, scanners, benchmarks and reporting systems from different vendors can exchange data and work together.",
+ "incorrect":{
+  "A":"Baselines are content that may be expressed in SCAP format. The benefit being asked about is the standardisation itself, not any particular baseline.",
+  "B":"Consolidated reporting layouts help communication, but SCAP is a machine-readable data standard rather than a presentation format.",
+  "D":"SCAP is a technical specification, not an international compliance standard, and it does not reduce breach cost directly."}},
+
+"q0819": {"objective":"4.3",
+ "explanation":"Inviting the wider security community to find and report vulnerabilities in public-facing systems, typically with rewards, is a bug bounty programme. The defining feature is that participation is open rather than contracted.",
+ "incorrect":{
+  "B":"Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
+  "C":"Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure programme.",
+  "D":"Third-party information sharing exchanges threat intelligence between organisations."}},
+
+"q0820": {"objective":"1.4",
+ "explanation":"Encryption strength comes down to the algorithm and the key length. A sound modern algorithm resists known cryptanalysis, and sufficient key length makes brute force computationally infeasible — get either wrong and the rest of the implementation cannot save it.",
+ "incorrect":{
+  "A":"Obfuscation makes data harder to read without cryptographic strength. It is a separate, weaker technique.",
+  "C":"Data masking hides parts of a value for display. It is not encryption.",
+  "E":"Tokenisation substitutes values with surrogates held in a vault. Again a different protection model.",
+  "F":"Salting is specific to password hashing, adding randomness to defeat precomputed tables."}},
+
+"q0821": {"objective":"5.2",
+ "explanation":"Business stakeholders care about getting back to work. The recovery time objective tells them how quickly each system must return, and knowing which assets underpin which business processes is what lets recovery be sequenced by business priority rather than technical convenience.",
+ "incorrect":{
+  "A":"Return on investment on cybersecurity is a budgeting conversation, not an incident priority.",
+  "B":"Annualised rate of occurrence statistics are a risk analysis input rather than a business priority during recovery.",
+  "C":"Risk management strategies and plans are governance artefacts. Stakeholders want outcomes, not the methodology.",
+  "D":"An annualised loss expectancy report quantifies expected loss over a year. It informs investment decisions, not recovery sequencing."}},
+
+"q0822": {"objective":"2.5",
+ "explanation":"The application cannot be patched and must keep running, so the remaining lever is restricting what it can talk to. Isolation confines it to a minimal set of necessary services, shrinking both what can reach it and what it could reach if compromised.",
+ "incorrect":{
+  "A":"Patching is explicitly unavailable — no further patches exist for this application.",
+  "B":"Segmentation divides the network into zones and is closely related, but the question describes restricting the application itself to a limited number of services, which is isolation.",
+  "D":"Monitoring reveals attacks in progress. It provides visibility without reducing exposure."}},
+
+"q0823": {"objective":"1.2",
+ "explanation":"Zero Trust replaces one-time authentication with continuous evaluation. Every request is validated against current identity, device posture and context, so access is granted moment by moment rather than for the duration of a session.",
+ "incorrect":{
+  "A":"Strong network boundaries describe the perimeter model Zero Trust was created to replace.",
+  "B":"Verifying identity once at session start is exactly the implicit trust Zero Trust removes.",
+  "D":"Prioritising perimeter defence is again the traditional castle-and-moat approach."}},
+
+"q0824": {"objective":"4.3",
+ "explanation":"OSINT is the systematic collection of publicly available information — websites, social media, registries, public records — to understand what an organisation has exposed. Finding those exposures without touching the target is its common use.",
+ "incorrect":{
+  "A":"Monitoring internal systems and traffic uses your own telemetry. Internal data is by definition not open source.",
+  "B":"Installing security patches is remediation work.",
+  "D":"Encrypting and storing data securely is a data protection control."}},
+
+"q0825": {"objective":"4.8",
+ "explanation":"The drive is associated with ransomware, so connecting it to a production system risks re-infection. A sandbox gives an isolated environment where the media can be mounted and files extracted while anything malicious stays contained.",
+ "incorrect":{
+  "B":"An intrusion prevention system inspects network traffic. It has no role in recovering files from removable media.",
+  "C":"A file integrity management tool detects changes to protected files. It monitors rather than recovers.",
+  "D":"A static code analysis tool reads source code for defects. It does not retrieve files."}},
+
+"q0826": {"objective":"4.6",
+ "explanation":"The strongest answer combines identity and posture. 802.1X with device certificates means only devices holding a trusted certificate can authenticate at all, and endpoint security checks then confirm the device meets policy before it is allowed onto the network.",
+ "incorrect":{
+  "A":"Blocking wireless only leaves wired ports open, and verifying against a baseline without strong device authentication is easily spoofed.",
+  "B":"Accepting handshakes from a static set of IP addresses is trivially bypassed, since an attacker on the local network can assume an allowed address.",
+  "D":"Redirecting everything to guest Wi-Fi and waiting for an analyst does not scale and leaves legitimate devices unable to work."}},
+
+"q0827": {"objective":"3.3",
+ "explanation":"The practical difference is reversibility. Masking permanently alters or hides the value so the original cannot be recovered, while tokenisation swaps it for a token that a secure vault can exchange back for the real data when legitimately needed.",
+ "incorrect":{
+  "B":"Masking does not use encryption, and tokenisation substitutes meaningful tokens rather than null values.",
+  "C":"Neither technique is defined by one-to-one versus one-to-many mapping; that describes token generation strategies within tokenisation.",
+  "D":"Randomness is an implementation detail of how substitute values are produced, not the distinction between the two approaches."}},
+
+"q0828": {"objective":"3.1",
+ "explanation":"The shared responsibility model shifts different layers to the provider depending on the service model, but the customer's own data is never transferred. Classifying, protecting and governing that data remains the customer's responsibility under IaaS, PaaS and SaaS alike.",
+ "incorrect":{
+  "B":"Identity and account management for the customer's users is a customer responsibility in every model.",
+  "C":"The physical network infrastructure is wholly the provider's responsibility. It is not shared.",
+  "D":"Endpoint security belongs to the customer, since the provider has no visibility into devices connecting to the service."}},
+
+"q0829": {"objective":"4.7",
+ "explanation":"Automated ticket creation takes alerts arriving from email protection and the MSSP and opens a record in the service management system, routed to the security team. That converts a stream of notifications into tracked, assigned work without manual re-keying.",
+ "incorrect":{
+  "A":"Automated compliance monitoring checks configuration against standards. It reports on compliance state, not alert handling.",
+  "C":"Automated vulnerability scans discover weaknesses. They generate findings rather than routing alerts.",
+  "D":"Automated indicator sharing exchanges threat intelligence between organisations."}},
+
+"q0830": {"objective":"4.8",
+ "explanation":"The credentials are already exposed, so the attacker may be using them right now. Locking the account immediately cuts off that access, which is containment — the priority before investigation or remediation.",
+ "incorrect":{
+  "A":"Notifying all employees is useful awareness follow-up, but it does nothing about the credentials already in an attacker's hands.",
+  "B":"Waiting for confirmation from the employee gives the attacker more time with working credentials.",
+  "C":"Reimaging the workstation addresses possible malware and may well be needed, but it leaves the exposed credentials usable from anywhere."}},
+
+"q0831": {"objective":"2.3",
+ "explanation":"Real-time operating systems typically run with minimal memory protection, few exploit mitigations and often a single privilege level. That makes injecting and executing code directly against them both feasible and immediately effective.",
+ "incorrect":{
+  "B":"A DDoS floods a target to exhaust it. It denies availability rather than exploiting an RTOS vulnerability.",
+  "C":"Brute force guesses credentials. Many RTOS devices have no interactive login to attack.",
+  "D":"Cross-site scripting requires a browser rendering a web page. An RTOS controlling a device has none."}},
+
+"q0832": {"objective":"1.3",
+ "explanation":"Change management means a modification is requested, reviewed, approved and then implemented in a controlled way. Applying an update only after a governing board has granted approval is that process working as intended.",
+ "incorrect":{
+  "B":"Setting a new password for a user is routine account administration, not a change to a system requiring approval.",
+  "C":"A penetration test before deploying a patch is a security assessment. Testing may be part of the process but it is not the process.",
+  "D":"Auditing equipment and reporting the list is an inventory activity."}},
+
+"q0833": {"objective":"5.4",
+ "explanation":"Once personal data is handed to a third party, the organisation remains accountable for it. A data processing agreement is the contractual instrument that binds the vendor to defined purposes, security measures and breach obligations, which is what regulators require before such transfers.",
+ "incorrect":{
+  "A":"Encrypted local servers protect data technically but say nothing about vendors who also process it, and local storage can itself breach transfer rules.",
+  "B":"A data privacy officer reviewing contracts is a role, and valuable, but the agreements themselves are what create the legal obligation.",
+  "D":"Strong passwords and firewalls are baseline security controls. They are necessary but not what global privacy regulation turns on."}},
+
+"q0834": {"objective":"3.2",
+ "explanation":"On a flat network the VoIP system shares a broadcast domain with everything else, so any compromised workstation can reach it directly. Placing it in its own VLAN restricts the paths into it to what is explicitly permitted, which is the structural reduction in attack surface.",
+ "incorrect":{
+  "A":"Sending logs to a central location improves visibility and investigation. It detects rather than reduces exposure.",
+  "C":"Remote phone registration extends reach to more networks, which enlarges the attack surface.",
+  "D":"Changing default credentials is essential hardening and should be done, but it secures the phones rather than reducing the system's exposure on a flat network."}},
+
+"q0835": {"objective":"4.1",
+ "explanation":"You cannot know in advance what a user-supplied file will do. Processing uploads in an isolated environment with limited access to system resources means that even a file exploiting a genuine vulnerability is confined and cannot reach the wider system.",
+ "incorrect":{
+  "B":"Static code analysis examines your own source code. It is not a malware scanner for arbitrary uploaded files.",
+  "C":"Code signing validates software from known publishers. Users uploading arbitrary files have no signing keys you trust.",
+  "D":"Full disk encryption protects stored data from someone with physical access. It does nothing about malicious content being processed."}}
+}
