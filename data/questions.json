@@ -7731,9 +7731,9 @@
   },
   {
     "id": "q0185",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
+    "domain": 2,
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "A penetration tester enters an office building at the same time as a group of employees despite not having an access badge.\nWhich of the following attack types is the penetration tester performing?",
     "choices": [
@@ -7757,12 +7757,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Tailgating is a social engineering technique where an unauthorized person gains access to a restricted area by following closely behind authorized individuals without their knowledge or consent. In this scenario, the penetration tester enters the office building at the same time as a group of employees despite not having an access badge, which exemplifies tailgating.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tailgating is following an authorised person through a controlled door so their badge opens it for you. Walking in alongside a group is the textbook version — it exploits politeness and the fact that one badge swipe holds the door for several people.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shoulder surfing is watching someone enter a password or PIN. It steals information by observation rather than gaining physical entry.",
+      "C": "RFID cloning copies the data from a legitimate badge onto another card. That requires capturing a badge first, and the tester has no badge at all.",
+      "D": "Forgery is producing a counterfeit document or credential. Again it means presenting something fake, whereas the tester presented nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p83",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7795,12 +7799,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "SIEM (Security Information and Event Management) systems aggregate and analyze log data from various devices across a network, enabling the collection, correlation, and analysis of security-related events. SIEM provides a consolidated report of activities, helping to identify potential security incidents by correlating data from multiple sources, which enhances visibility and response capabilities across the network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A SIEM collects log data from firewalls, servers, endpoints and applications, normalises the differing formats and presents them together. Producing one consolidated view and report across many device types is its defining capability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS inspects traffic and blocks recognised attacks. It reports on what it sees at its own position in the network, not on other devices.",
+      "B": "DLP watches for sensitive data leaving the organisation. It reports on data movement, a single narrow slice of activity.",
+      "D": "A firewall logs the connections it permits and denies. It is one of the sources feeding the consolidated report, not the thing producing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7833,21 +7841,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a widely used standard that provides a numerical score reflecting the severity of a vulnerability. Organizations use CVSS scores to prioritize vulnerabilities based on their potential impact and exploitability, which helps in assessing which vulnerabilities need urgent remediation. This approach enables systematic vulnerability prioritization based on quantifiable metrics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what lets an organisation rank a backlog of findings consistently. Prioritisation needs a common yardstick, and CVSS exists to provide one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Exposure factor is the proportion of an asset's value lost in an incident. It is a risk-calculation input used in ALE, not a vulnerability ranking.",
+      "C": "CVE is the naming catalogue that gives each vulnerability a unique identifier. The identifier carries no severity information at all.",
+      "D": "Industry impact is genuine context that should adjust priorities, but it is a qualitative consideration layered on top of a score rather than the primary basis for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0188",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "An organization needs to monitor its users' activities in order to prevent insider threats.\nWhich of the following solutions would help the organization achieve this goal?",
     "choices": [
@@ -7871,12 +7883,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Behavioral analytics involves monitoring and analyzing user behaviors to detect unusual or suspicious patterns that may indicate insider threats. By establishing a baseline of normal behavior, behavioral analytics solutions can identify deviations that could signal potential malicious or risky activities by users, helping to prevent insider threats. This approach is effective in detecting unauthorized actions that traditional access control or identity management systems might miss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Insiders use legitimate credentials, so nothing they do looks unauthorised to an access control. Behavioural analytics learns what normal activity looks like for each user and flags the deviation — unusual hours, unusual systems, unusual data volumes — which is the only signal an insider actually produces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Access control lists define who may reach what. They limit damage but generate no visibility into how granted access is used.",
+      "C": "Identity and access management governs provisioning and permissions. It decides what access exists rather than monitoring its use.",
+      "D": "A network intrusion detection system looks for attack patterns in traffic. An insider browsing systems they are permitted to reach produces entirely ordinary traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.367,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7909,21 +7925,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack where attackers impersonate a trusted entity over the phone to obtain sensitive information, such as credit card details. In this case, the attacker spoofed the company's main phone number on the caller ID to gain the customer's trust, making it likely that the customer is the target of a vishing attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Vishing is phishing carried out by voice call. The spoofed caller ID showing the company's real main number is the trust-building element, and the goal — extracting card details by impersonating a trusted organisation — is classic voice phishing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Phishing is the general category, and in exam usage it means the email form. The channel here is specifically a phone call.",
+      "B": "Whaling targets a senior executive as the victim. The victim here is an ordinary customer.",
+      "C": "Smishing is phishing over SMS. No text message is involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p85",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0190",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "A security analyst is reviewing logs to identify the destination of command-and-control traffic originating from a compromised device within the on-premises network.\nWhich of the following is the best log to review?",
     "choices": [
@@ -7947,12 +7967,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Firewall logs are ideal for identifying the destination of command-and-control (C2) traffic because they log all inbound and outbound connections, including IP addresses, ports, and protocols used. By reviewing firewall logs, a security analyst can trace where the compromised device is attempting to send data and potentially identify the external command-and-control server, aiding in the containment of the threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Command and control traffic leaves the network to reach the attacker's server, so it must cross the firewall. Firewall logs record the source, destination address, port and protocol of every connection, which is precisely the destination information the analyst needs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IDS logs record traffic matching attack signatures. C2 beacons are often designed to look like ordinary traffic and may never trigger a signature.",
+      "B": "Antivirus logs record files detected on hosts. They may name the malware but say nothing about where it connects.",
+      "D": "Application logs record activity inside a particular application. Malware communicating out does not pass through the business application's log."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p85",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7985,12 +8009,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A self-signed certificate is not issued by a trusted certificate authority, which often causes browsers to flag it as insecure.\nWhen accessing a site with a self-signed certificate, users typically receive a warning about the site's security since the certificate cannot be automatically trusted, making it likely that the internal website is using a self-signed certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A self-signed certificate is not issued by an authority the browser already trusts, so the chain of trust cannot be built and the browser warns the user. Internal sites are the most common place to find them, because organisations avoid paying for public certificates on private hostnames.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wildcard certificate covers subdomains of one domain. If issued by a trusted CA it produces no warning; a mismatch would give a name error, not an insecure-site prompt.",
+      "B": "A root of trust is the anchor certificate a CA signs with. Sites are not issued root certificates.",
+      "C": "A third-party certificate comes from a public CA already in the browser's trust store, which is exactly the case that does not warn."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8023,12 +8051,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A honeypot is a decoy system or network resource designed to attract attackers and observe their activity. It is intentionally left vulnerable to capture and analyze attacker behavior, techniques, and tools, providing valuable insights into potential threats without risking actual production systems. This makes it the ideal choice for studying attacker tactics and patterns.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeypot is a deliberately exposed decoy with no production role. Because nobody has a legitimate reason to touch it, everything it records is attacker activity — which makes it the tool for studying real techniques safely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A firewall permits or denies traffic at a boundary. It logs decisions but captures nothing about what an attacker would do once inside.",
+      "B": "An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
+      "D": "A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8061,12 +8093,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a discussion-based exercise where participants walk through different scenarios to better understand and familiarize themselves with the incident response process.\nThis type of exercise allows teams to review roles, procedures, and potential responses to various incidents in a low-stress environment, enhancing preparedness and coordination.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise gathers the response team to talk through a scenario against the written plan. Its value is that everyone rehearses their role and finds the gaps in the process while nothing is actually on fire — familiarisation rather than technical validation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Rules of engagement for red and blue teams are agreed before an exercise, in a planning document. That is a scoping step, not the purpose of a tabletop.",
+      "C": "Determining the impact of an actual breach happens during a live incident, using real telemetry. A tabletop deals in hypotheticals.",
+      "D": "Running parallel investigations is operational work requiring real tooling and evidence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.452,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8099,12 +8135,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The Certificate Revocation List (CRL) should be updated when a private key is compromised.\nThe CRL is a list of certificates that have been revoked by the issuing Certificate Authority (CA) and are no longer trusted. Updating the CRL ensures that clients and systems know the previous certificate is no longer valid, preventing it from being trusted even if the key has been compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A stolen private key means the old certificate must no longer be trusted by anyone, even though it has not expired. Publishing it on the certificate revocation list is how the CA tells the world to reject it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SCEP is a protocol for enrolling devices and issuing certificates automatically. It handles provisioning, not revocation.",
+      "C": "OCSP is the protocol clients use to ask about a certificate's status in real time. It reports revocation that has already been recorded, so the CRL or its database has to be updated first.",
+      "D": "A CSR requests a new certificate. That step has already happened — a replacement has been issued."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p87",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8112,8 +8152,8 @@
   {
     "id": "q0195",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "Which of the following organizational documents is most often used to establish and communicate expectations associated with integrity and ethical behavior within an organization?",
     "choices": [
@@ -8137,12 +8177,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is commonly used to establish and communicate the organization's expectations regarding acceptable behavior, integrity, and ethical conduct. It outlines guidelines for appropriate use of company resources and sets standards for employees to follow, promoting a secure and ethical work environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy tells staff what is and is not appropriate when using company systems, and is the document organisations use to state expectations about integrity and conduct. It is usually signed at onboarding for exactly that reason.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An SLA commits a provider to measurable service levels. It governs performance between organisations, not employee behaviour.",
+      "C": "A EULA sets out the terms under which software may be used. It is between a vendor and a user about the product.",
+      "D": "An MOA is a formal statement of intent between organisations. It describes cooperation, not internal conduct."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p87",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8175,21 +8219,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Data sovereignty refers to the principle that data is subject to the laws and regulations of the country where it originated, regardless of where it is stored. This concept ensures that data complies with the legal requirements of its country of origin, even when stored or processed across borders.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty is the principle that data stays subject to the laws of the country it came from, wherever it is subsequently stored. That is how an organisation determines which global regulations apply to a data set independently of hosting location.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Geographic dispersion spreads infrastructure across locations for resilience. It is an availability strategy with no legal meaning.",
+      "C": "Geographic restrictions block access based on location. They are a control you might apply in order to comply, not the concept that determines what applies.",
+      "D": "Data segmentation separates data into distinct stores or zones. It affects architecture rather than jurisdiction."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0197",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 2,
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "multi",
     "question": "An organization's web servers host an online ordering system. The organization discovers that the servers are vulnerable to a malicious JavaScript injection, which could allow attackers to access customer payment information.\nWhich of the following mitigation strategies would be most effective for preventing an attack on the organization's web servers? (Choose two.)",
     "choices": [
@@ -8222,21 +8270,26 @@
       "A",
       "D"
     ],
-    "explanation": "Regularly updating server software and applying patches addresses known vulnerabilities, reducing the risk of exploitation through unpatched flaws.\nA web-application firewall (WAF) is particularly effective against malicious injections, as it monitors and filters HTTP traffic to block injection attempts, such as JavaScript injections.\nTogether, these strategies provide robust protection against attacks targeting the web servers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers address the injection directly. A web application firewall inspects HTTP requests and blocks script injection attempts before they reach the application, while keeping server software patched removes the known flaws that make the servers exploitable in the first place.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Strong password policies protect accounts against guessing. Injection needs no account at all.",
+      "C": "Encrypting data at rest and in transit protects it from interception and theft of storage. An injected script runs with the application's own access, so encryption does not stop it.",
+      "E": "Regular vulnerability scans find weaknesses. Finding is not preventing — the fix has to follow.",
+      "F": "Removing payment information reduces what an attacker gains, which limits impact. The servers remain just as vulnerable to the injection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0198",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following tools is best for logging and monitoring in a cloud environment?",
     "choices": [
@@ -8260,12 +8313,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A Security Information and Event Management (SIEM) system is best suited for logging and monitoring in a cloud environment. SIEM tools collect, aggregate, and analyze log data from multiple sources within the environment, providing real-time monitoring, alerts, and analysis of security events. This centralized approach helps identify potential security incidents across cloud resources effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cloud environments generate logs from many services, accounts and regions at once. A SIEM ingests all of it, normalises the differing formats and correlates across them, which is what makes centralised logging and monitoring workable at cloud scale.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS blocks malicious traffic inline at a network point. It is a preventive control, and it monitors traffic rather than logs.",
+      "B": "FIM alerts when protected files are modified. It covers one narrow signal on individual hosts.",
+      "C": "NAC decides whether a device may join a network. It is an admission control with no logging or monitoring role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8298,14 +8355,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The attacker altered something during the update process itself, so the system accepted attacker-controlled content as part of a trusted change. A malicious update is that category of vulnerability — the update path becomes the way in.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A race condition exploits the timing gap between checking a condition and acting on it. Here the field was substituted as part of the update rather than through a timing window.",
+      "B": "Memory injection writes code into a running process's memory. This attack modified a database field during an update, not process memory.",
+      "D": "Side loading installs an application from outside an official store. It applies to devices and apps, not database updates."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -8336,12 +8397,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Privileged Access Management (PAM) is the best way to secure shared, privileged accounts like a backup account, especially in cases of Single Sign-On (SSO) failure. PAM solutions provide strict controls over access to sensitive accounts, enforce logging and monitoring, and often include features like session recording and access expiration. This approach ensures that access to the backup account remains secure even when other authentication methods, like SSO, are unavailable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A shared privileged account is the hardest kind to control, because nobody owns it and everyone knows the password. Privileged access management vaults the credential, brokers each session, records who used it and when, and keeps working when SSO is unavailable because it is a separate control plane.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RAS is remote access service — a way to connect to a network. It provides connectivity, not credential control.",
+      "B": "EAP is an authentication framework used inside network access protocols. It does not manage shared account credentials.",
+      "C": "SAML federates authentication to an identity provider. Since the scenario is an SSO failure, depending on the same federation is exactly what cannot be relied on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8374,12 +8439,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Preservation is the process in digital forensics that ensures the integrity of evidence by maintaining it in its original, unaltered state. This involves safeguarding data against modification or tampering throughout the investigation process, ensuring that the evidence remains reliable and admissible in court if needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Preservation is the forensic discipline of keeping evidence in an unaltered state — write-blocking, hashing the image, and documenting handling so the data can be shown to be the same as when collected. Integrity of evidence is what it exists to guarantee.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation. It governs disclosure, not integrity.",
+      "C": "Acquisition is the act of collecting the evidence. Integrity has to be maintained through acquisition and everything after it, which is preservation's job.",
+      "D": "Containment is an incident response step that limits ongoing damage. It happens alongside forensics but is not about evidence handling."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8412,12 +8481,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Firewall and network logs are the most efficient sources for identifying large outbound data transfers, as they record all traffic leaving the network. By examining these logs for significant data flows to unfamiliar or external IP addresses or domains, the security team can determine where the data was exfiltrated and potentially identify the destination of the exfiltrated data. This approach directly targets the incident's key indicators: large data transfer and external communication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "30GB leaving the network has to cross the perimeter, so the firewall and network logs hold both halves of the answer: which internal host sent it and which external address received it. A single query for large outbound flows surfaces both efficiently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IPS and IDS logs record reconnaissance and signature matches. Scanning activity is a different phase and will not show the bulk transfer or its destination.",
+      "C": "Endpoint and application logs might show a file-sharing tool running, but that assumes a specific method and covers only the source, never the destination.",
+      "D": "Vulnerability scans and automated reports describe weaknesses that exist. They explain how an attacker might have got in, not what left or where it went."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8425,8 +8498,8 @@
   {
     "id": "q0203",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following describes the procedures a penetration tester must follow while conducting a test?",
     "choices": [
@@ -8450,21 +8523,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "The rules of engagement outline the specific procedures, scope, and limitations that a penetration tester must follow during testing. These rules define acceptable activities, testing boundaries, reporting requirements, and guidelines to ensure the test is conducted ethically, safely, and in alignment with organizational expectations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rules of engagement define exactly how a penetration test must be conducted — scope, permitted techniques, testing windows, escalation contacts and what is off limits. They are agreed before testing starts and are what keep the engagement lawful and safe.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Rules of acceptance is not a recognised term in this context. Acceptance criteria belong to project delivery.",
+      "C": "Rules of understanding is not a standard document either; it echoes memorandum of understanding, which is an agreement between organisations.",
+      "D": "Rules of execution is likewise not a recognised penetration testing artefact."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0204",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security analyst wants to better understand the behavior of users and devices in order to gain visibility into potential malicious activities. The analyst needs a control to detect when actions deviate from a common baseline.\nWhich of the following should the analyst use?",
     "choices": [
@@ -8488,12 +8565,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Endpoint Detection and Response (EDR) solutions provide visibility into the behavior of users and devices, monitoring for deviations from established baselines. EDR tools are designed to detect suspicious activities by continuously analyzing endpoint behaviors, which helps identify potential threats, including malicious activities, that may otherwise go unnoticed. This is particularly useful for spotting deviations from normal patterns and enhancing security response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "EDR continuously records process, file and network behaviour on endpoints and compares it against expected patterns, so it surfaces activity that deviates from the baseline rather than matching a known signature. Detecting behavioural deviation is exactly what the analyst asked for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An intrusion prevention system blocks traffic matching known attack patterns. It is signature-driven and sits on the network, not on the endpoint.",
+      "B": "A sandbox detonates a suspicious file in isolation to observe it. It analyses individual samples rather than ongoing user and device behaviour.",
+      "D": "Antivirus matches files against known malware signatures. It detects known bad rather than unusual."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8526,12 +8607,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Data retention refers to the practice of keeping copies or backups of data for a specific period, even after the original devices have been disposed of or destroyed. In this case, the legal department requires a backup to be maintained from devices that have been shredded and recycled, ensuring that necessary data is preserved in compliance with legal or regulatory requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The devices themselves are gone, yet the legal department still requires the information to exist. Keeping data for a defined period to satisfy legal or regulatory obligations, independent of the hardware it once lived on, is data retention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Certification here means a certificate of destruction — the third party's proof that the devices were destroyed. That documents the disposal, not the surviving backup.",
+      "C": "Sanitisation removes data while leaving the medium reusable. These drives were shredded, so they were not sanitised.",
+      "D": "Destruction is what happened to the devices. The requirement being described concerns what is kept, not what was destroyed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8564,12 +8649,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Memory injection attacks are particularly dangerous for systems running a Real-Time Operating System (RTOS) because these systems often have limited resources and strict timing requirements, making them more susceptible to disruptions caused by injected code. Memory injection can compromise the system's integrity, allowing an attacker to alter its operation or cause it to behave unpredictably.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A real-time operating system typically runs with minimal memory protection, no modern exploit mitigations and often a single privilege level, so writing code directly into its memory is both feasible and immediately effective. Memory injection is the realistic compromise path for that class of system.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting requires a web browser rendering a page. An RTOS controlling a device has no browser.",
+      "C": "A replay attack resends captured valid traffic. It may cause an RTOS device to repeat an action but does not compromise the system itself.",
+      "D": "Ransomware encrypts files and demands payment. An RTOS often has no conventional file system or user to extort."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.471,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8602,12 +8691,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Unskilled attackers, often referred to as \"script kiddies,\" are more likely to deface websites for attention or to make a public statement rather than for financial gain or political motivations.\nDefacing a high-profile music group's website aligns with the typical goals of an unskilled attacker seeking notoriety or a sense of accomplishment by exploiting visible and relatively simple vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Website defacement is loud, public and delivers no money or intelligence — its payoff is attention. That matches the unskilled attacker, who uses readily available tools and is motivated by notoriety rather than profit or strategy.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Organised crime is motivated by money. Defacing a band's site generates none and draws exactly the attention criminals avoid.",
+      "C": "Nation-states pursue espionage and strategic disruption, quietly. A music group has nothing of state interest.",
+      "D": "An insider threat acts from within the organisation. Nothing suggests the attacker had legitimate access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8615,8 +8708,8 @@
   {
     "id": "q0208",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security architect wants to prevent employees from receiving malicious attachments by email.\nWhich of the following functions should the chosen solution do?",
     "choices": [
@@ -8640,12 +8733,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Scanning email traffic inline enables the security solution to inspect attachments and other content in real-time as emails are received. This allows the system to detect and block malicious attachments before they reach employees, effectively preventing potential security incidents caused by harmful email attachments. This approach is essential for identifying and neutralizing threats within email content directly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "To stop an attachment reaching an inbox, the solution has to sit in the mail flow and hold the message while it inspects it. Inline scanning does exactly that — the email is examined and blocked before delivery rather than after.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IP reputation data blocks mail from known-bad senders. It is a useful first filter but says nothing about the attachment when the sender is unknown or compromised.",
+      "B": "Tapping and monitoring the feed gives a copy of the traffic for analysis. By the time it detects something, the original has already been delivered.",
+      "D": "SPF records verify that a sending server is authorised for the domain. That fights spoofing, not malicious attachments from legitimately authorised senders."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8678,21 +8775,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Detection is the first stage in the incident response process. It involves identifying potential security incidents through alerts, monitoring, and analysis to determine if an incident has occurred. Effective detection is crucial as it initiates the response process, allowing the team to assess the situation and proceed with containment and other response steps.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Of the activities offered, detection comes first: something must be noticed before anyone can declare an incident, verify it or contain it. Note that the full CompTIA process begins with preparation, which happens before any incident exists and is not among these options.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Declaration is the formal decision that an incident is underway. It can only follow detection and initial assessment.",
+      "C": "Containment limits the damage once the incident is confirmed. It is several steps later.",
+      "D": "Verification confirms that what was detected is genuine rather than a false positive. It necessarily comes after detection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0210",
-    "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following is the main consideration when a legacy system that is a critical part of a company's infrastructure cannot be replaced?",
     "choices": [
@@ -8716,12 +8817,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "When a legacy system that is critical to a company's infrastructure cannot be replaced, the primary consideration is that it may become a single point of failure. This is because legacy systems are often difficult to support, lack redundancy, and may no longer receive updates, making them vulnerable. Ensuring that this critical system is protected from failure is essential to maintain continuity and reduce the risk of operational disruptions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An irreplaceable legacy system that the business depends on concentrates risk in one unsupported component. If it fails there is no vendor to call, no patch to apply and often no second instance, so the overriding consideration is that it has become a single point of failure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource provisioning is about allocating capacity. It is an operational concern rather than the risk the system represents.",
+      "B": "Cost is why the system has not been replaced. It explains the situation instead of describing the consequence.",
+      "D": "Complexity makes the system hard to maintain and understand. It contributes to the problem but the critical exposure is loss of the system entirely."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8754,12 +8859,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Enabling threat prevention features on the firewall is a compensating control that adds a layer of security when accessing a high-risk website. This approach helps to detect and block malicious activities associated with the website by scanning for threats, malicious code, and suspicious traffic patterns, thereby mitigating potential risks without completely restricting access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The business needs access to the site, so the primary control — simply blocking it — cannot be used. Turning on threat prevention at the firewall substitutes a different control that reduces the same risk, which is what makes it compensating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Capturing all web traffic in a SIEM gives visibility after the fact. It is detective, and it reduces no risk at the moment of access.",
+      "C": "Allowing traffic from any port to that destination widens the exposure. That is the opposite of a control.",
+      "D": "Blocking the website on endpoint protection is the primary control being worked around. The requirement is to permit access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8801,12 +8910,17 @@
       "A",
       "B"
     ],
-    "explanation": "In a Corporate-Owned, Personally-Enabled (COPE) mobile device management policy, the organization provides devices that employees can use for both work and personal purposes.\nRemote wiping ensures that the organization can remove sensitive data if the device is lost, stolen, or if the employee leaves the organization. Data encryption protects sensitive data on the device, ensuring security for both corporate and personal use. These controls are essential for securing organizational data on devices used in a COPE model.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "COPE devices are company property carrying company data, so the organisation must be able to protect that data. Encryption keeps it unreadable if the device is lost, and remote wipe lets the organisation destroy it when the device goes missing or the employee leaves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "An eight-character password requirement is weak by current guidance and is an arbitrary detail rather than a core COPE control.",
+      "D": "Data usage caps manage cellular cost. That is a billing concern, not device security.",
+      "E": "Employee data ownership contradicts the model — COPE means the organisation owns the device.",
+      "F": "Personal application store access is the 'personally enabled' convenience. It expands the attack surface rather than securing anything."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8839,12 +8953,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "The log entry GET ../../../../etc/passwd indicates a directory traversal attack. Directory traversal is an attack technique that attempts to access files and directories outside the web server's root directory by using sequences like ../ to move up the directory tree. In this case, the attacker is attempting to reach the /etc/ passwd file, which typically contains user account information on Unix-based systems. This type of attack can allow unauthorized access to sensitive files on the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The repeated ../ sequences are an attempt to climb out of the web root and reach an arbitrary file on the filesystem — here /etc/passwd. Escaping the intended directory this way is directory traversal, also called path traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privilege escalation gains higher rights than those already held. This request is reading a file with whatever rights the web server already has.",
+      "B": "Credential replay reuses captured authentication material. No credentials appear in the request.",
+      "C": "Brute force tries many values until one works. This is a single crafted request, not repeated guessing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p95",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8877,21 +8995,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "A partially known environment penetration test, also known as a \"gray box\" test, is where the tester has limited information about the target, such as basic device details provided by the organization. This type of test simulates an attack by someone with some insider knowledge, allowing for a more realistic assessment of security vulnerabilities than an unknown environment test but with less detailed information than a fully known environment test.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Giving the tester some information but not full internal detail is a partially known environment, often called grey box. It models an attacker who has done reconnaissance or has limited insider knowledge, which is usually the most realistic and time-efficient scenario.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An unknown environment, or black box, means the tester is told nothing and must discover everything. Basic device information has been provided.",
+      "C": "Integrated testing combines offensive and defensive teams working together. It describes how teams cooperate, not how much information is shared.",
+      "D": "A known environment, or white box, gives the tester full documentation, architecture and often source or credentials. Basic details fall well short of that."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p95",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0215",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "Which of the following should a security team do first before a new web server goes live?",
     "choices": [
@@ -8915,12 +9037,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Before a new web server goes live, the first step should be to harden the virtual host. Hardening involves securing the server by disabling unnecessary services, configuring permissions, and applying best practices to minimize vulnerabilities. This foundational step reduces the attack surface and ensures the server is secure before additional security measures, such as WAF rules, intrusion detection, or patch management, are applied.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hardening removes what should not be there in the first place — default accounts, unnecessary services, weak configuration — and shrinks the attack surface everything else has to defend. Doing it before go-live is cheapest and means the later controls protect a smaller target.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "WAF rules protect the application from malicious requests. They are valuable, but layering them over an unhardened host leaves the underlying weaknesses in place.",
+      "C": "Network intrusion detection alerts on suspicious traffic. Detection assumes an attack is already underway.",
+      "D": "Patch management is part of hardening and must certainly be done, but hardening is the broader first step that includes it along with configuration and service reduction."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8953,12 +9079,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool can be used to securely erase all data on a hard drive without physically damaging it, making it suitable for repurposing. Wiping overwrites the data on the drive multiple times, ensuring that previously stored information cannot be recovered. This approach allows the hard drive to be reused safely, as opposed to degaussing or physical destruction, which renders the drive unusable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. That combination — unrecoverable data, reusable hardware — is exactly what repurposing requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys the magnetic structure of the platters. It is thorough and permanent, and it renders the drive unusable.",
+      "B": "A drive shredder physically destroys the device. Nothing is left to repurpose.",
+      "C": "A retention platform stores data for a required period. It is a storage system, not a sanitisation method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8991,12 +9121,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection is an attack technique where an attacker includes unexpected characters or SQL code in a request to manipulate a database query, aiming to gain unauthorized access to data or execute additional database commands. This form of injection targets vulnerabilities in applications that don't properly validate input, allowing attackers to interact with underlying database systems maliciously.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Submitting unexpected characters so that input is interpreted as database syntax rather than data is SQL injection. Quotes, semicolons and comment markers break out of the intended query and let the attacker read or alter what the underlying database holds.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
+      "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
+      "C": "Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9029,12 +9163,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The Annualized Loss Expectancy (ALE) is calculated by multiplying the Single Loss Expectancy (SLE) by the Annualized Rate of Occurrence (ARO). In this case:\n• SLE (Single Loss Expectancy) = $15,000\n• ARO (Annualized Rate of Occurrence) = 2 occurrences / 3 years = 0.67 per year ALE = SLE × ARO = $15,000 × 0.67 ≈ $10,000",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualised rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
+      "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualising it.",
+      "D": "$30,000 is two full losses, which would be the total across the three years rather than the annual figure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p97",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

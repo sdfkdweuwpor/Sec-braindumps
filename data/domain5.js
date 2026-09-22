@@ -1312,8 +1312,8 @@ export const domain5Questions = [
   {
     "id": "q0195",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "Which of the following organizational documents is most often used to establish and communicate expectations associated with integrity and ethical behavior within an organization?",
     "choices": [
@@ -1337,12 +1337,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is commonly used to establish and communicate the organization's expectations regarding acceptable behavior, integrity, and ethical conduct. It outlines guidelines for appropriate use of company resources and sets standards for employees to follow, promoting a secure and ethical work environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy tells staff what is and is not appropriate when using company systems, and is the document organisations use to state expectations about integrity and conduct. It is usually signed at onboarding for exactly that reason.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An SLA commits a provider to measurable service levels. It governs performance between organisations, not employee behaviour.",
+      "C": "A EULA sets out the terms under which software may be used. It is between a vendor and a user about the product.",
+      "D": "An MOA is a formal statement of intent between organisations. It describes cooperation, not internal conduct."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p87",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1350,8 +1354,8 @@ export const domain5Questions = [
   {
     "id": "q0203",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following describes the procedures a penetration tester must follow while conducting a test?",
     "choices": [
@@ -1375,12 +1379,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The rules of engagement outline the specific procedures, scope, and limitations that a penetration tester must follow during testing. These rules define acceptable activities, testing boundaries, reporting requirements, and guidelines to ensure the test is conducted ethically, safely, and in alignment with organizational expectations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rules of engagement define exactly how a penetration test must be conducted — scope, permitted techniques, testing windows, escalation contacts and what is off limits. They are agreed before testing starts and are what keep the engagement lawful and safe.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Rules of acceptance is not a recognised term in this context. Acceptance criteria belong to project delivery.",
+      "C": "Rules of understanding is not a standard document either; it echoes memorandum of understanding, which is an agreement between organisations.",
+      "D": "Rules of execution is likewise not a recognised penetration testing artefact."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1413,12 +1421,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A partially known environment penetration test, also known as a \"gray box\" test, is where the tester has limited information about the target, such as basic device details provided by the organization. This type of test simulates an attack by someone with some insider knowledge, allowing for a more realistic assessment of security vulnerabilities than an unknown environment test but with less detailed information than a fully known environment test.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Giving the tester some information but not full internal detail is a partially known environment, often called grey box. It models an attacker who has done reconnaissance or has limited insider knowledge, which is usually the most realistic and time-efficient scenario.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An unknown environment, or black box, means the tester is told nothing and must discover everything. Basic device information has been provided.",
+      "C": "Integrated testing combines offensive and defensive teams working together. It describes how teams cooperate, not how much information is shared.",
+      "D": "A known environment, or white box, gives the tester full documentation, architecture and often source or credentials. Basic details fall well short of that."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p95",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1451,12 +1463,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Annualized Loss Expectancy (ALE) is calculated by multiplying the Single Loss Expectancy (SLE) by the Annualized Rate of Occurrence (ARO). In this case:\n• SLE (Single Loss Expectancy) = $15,000\n• ARO (Annualized Rate of Occurrence) = 2 occurrences / 3 years = 0.67 per year ALE = SLE × ARO = $15,000 × 0.67 ≈ $10,000",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualised rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
+      "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualising it.",
+      "D": "$30,000 is two full losses, which would be the total across the three years rather than the annual figure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p97",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

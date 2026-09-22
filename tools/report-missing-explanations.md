@@ -1,12 +1,11 @@
 # Questions with no explanation in the source PDF
 
-18 of 974 extracted questions.
+17 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0199 | 2 | 2.3 | During a SQL update of a database, a temporary field that was created was replaced by an attacker in order to  |
 | q0220 | 4 | 4.3 | A company discovered its data was advertised for sale on the dark web. During the initial investigation, the c |
 | q0221 | 3 | 3.4 | Which of the following would be the best solution to deploy a low-cost standby site that includes hardware and |
 | q0228 | 2 | 2.3 | Which of the following types of vulnerabilities is primarily caused by improper use and management of cryptogr |

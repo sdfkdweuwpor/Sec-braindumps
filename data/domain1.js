@@ -1318,44 +1318,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0185",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "A penetration tester enters an office building at the same time as a group of employees despite not having an access badge.\nWhich of the following attack types is the penetration tester performing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Tailgating"
-      },
-      {
-        "key": "B",
-        "text": "Shoulder surfing"
-      },
-      {
-        "key": "C",
-        "text": "RFID cloning"
-      },
-      {
-        "key": "D",
-        "text": "Forgery"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Tailgating is a social engineering technique where an unauthorized person gains access to a restricted area by following closely behind authorized individuals without their knowledge or consent. In this scenario, the penetration tester enters the office building at the same time as a group of employees despite not having an access badge, which exemplifies tailgating.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p83",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0191",
     "domain": 1,
     "objective": "1.4",
@@ -1383,12 +1345,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A self-signed certificate is not issued by a trusted certificate authority, which often causes browsers to flag it as insecure.\nWhen accessing a site with a self-signed certificate, users typically receive a warning about the site's security since the certificate cannot be automatically trusted, making it likely that the internal website is using a self-signed certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A self-signed certificate is not issued by an authority the browser already trusts, so the chain of trust cannot be built and the browser warns the user. Internal sites are the most common place to find them, because organisations avoid paying for public certificates on private hostnames.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wildcard certificate covers subdomains of one domain. If issued by a trusted CA it produces no warning; a mismatch would give a name error, not an insecure-site prompt.",
+      "B": "A root of trust is the anchor certificate a CA signs with. Sites are not issued root certificates.",
+      "C": "A third-party certificate comes from a public CA already in the browser's trust store, which is exactly the case that does not warn."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1421,12 +1387,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A honeypot is a decoy system or network resource designed to attract attackers and observe their activity. It is intentionally left vulnerable to capture and analyze attacker behavior, techniques, and tools, providing valuable insights into potential threats without risking actual production systems. This makes it the ideal choice for studying attacker tactics and patterns.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeypot is a deliberately exposed decoy with no production role. Because nobody has a legitimate reason to touch it, everything it records is attacker activity — which makes it the tool for studying real techniques safely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A firewall permits or denies traffic at a boundary. It logs decisions but captures nothing about what an attacker would do once inside.",
+      "B": "An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
+      "D": "A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1459,12 +1429,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Certificate Revocation List (CRL) should be updated when a private key is compromised.\nThe CRL is a list of certificates that have been revoked by the issuing Certificate Authority (CA) and are no longer trusted. Updating the CRL ensures that clients and systems know the previous certificate is no longer valid, preventing it from being trusted even if the key has been compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A stolen private key means the old certificate must no longer be trusted by anyone, even though it has not expired. Publishing it on the certificate revocation list is how the CA tells the world to reject it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SCEP is a protocol for enrolling devices and issuing certificates automatically. It handles provisioning, not revocation.",
+      "C": "OCSP is the protocol clients use to ask about a certificate's status in real time. It reports revocation that has already been recorded, so the CRL or its database has to be updated first.",
+      "D": "A CSR requests a new certificate. That step has already happened — a replacement has been issued."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p87",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1497,12 +1471,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Enabling threat prevention features on the firewall is a compensating control that adds a layer of security when accessing a high-risk website. This approach helps to detect and block malicious activities associated with the website by scanning for threats, malicious code, and suspicious traffic patterns, thereby mitigating potential risks without completely restricting access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The business needs access to the site, so the primary control — simply blocking it — cannot be used. Turning on threat prevention at the firewall substitutes a different control that reduces the same risk, which is what makes it compensating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Capturing all web traffic in a SIEM gives visibility after the fact. It is detective, and it reduces no risk at the moment of access.",
+      "C": "Allowing traffic from any port to that destination widens the exposure. That is the opposite of a control.",
+      "D": "Blocking the website on endpoint protection is the primary control being worked around. The requirement is to permit access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false

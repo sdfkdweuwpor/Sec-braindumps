@@ -1498,44 +1498,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0188",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "An organization needs to monitor its users' activities in order to prevent insider threats.\nWhich of the following solutions would help the organization achieve this goal?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Behavioral analytics"
-      },
-      {
-        "key": "B",
-        "text": "Access control lists"
-      },
-      {
-        "key": "C",
-        "text": "Identity and access management"
-      },
-      {
-        "key": "D",
-        "text": "Network intrusion detection system"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Behavioral analytics involves monitoring and analyzing user behaviors to detect unusual or suspicious patterns that may indicate insider threats. By establishing a baseline of normal behavior, behavioral analytics solutions can identify deviations that could signal potential malicious or risky activities by users, helping to prevent insider threats. This approach is effective in detecting unauthorized actions that traditional access control or identity management systems might miss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
-    "inferenceConfidence": 0.367,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0196",
     "domain": 3,
     "objective": "3.3",
@@ -1563,136 +1525,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Data sovereignty refers to the principle that data is subject to the laws and regulations of the country where it originated, regardless of where it is stored. This concept ensures that data complies with the legal requirements of its country of origin, even when stored or processed across borders.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty is the principle that data stays subject to the laws of the country it came from, wherever it is subsequently stored. That is how an organisation determines which global regulations apply to a data set independently of hosting location.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Geographic dispersion spreads infrastructure across locations for resilience. It is an availability strategy with no legal meaning.",
+      "C": "Geographic restrictions block access based on location. They are a control you might apply in order to comply, not the concept that determines what applies.",
+      "D": "Data segmentation separates data into distinct stores or zones. It affects architecture rather than jurisdiction."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0197",
+    "id": "q0210",
     "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "multi",
-    "question": "An organization's web servers host an online ordering system. The organization discovers that the servers are vulnerable to a malicious JavaScript injection, which could allow attackers to access customer payment information.\nWhich of the following mitigation strategies would be most effective for preventing an attack on the organization's web servers? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Regularly updating server software and patches"
-      },
-      {
-        "key": "B",
-        "text": "Implementing strong password policies"
-      },
-      {
-        "key": "C",
-        "text": "Encrypting sensitive data at rest and in transit"
-      },
-      {
-        "key": "D",
-        "text": "Utilizing a web-application firewall"
-      },
-      {
-        "key": "E",
-        "text": "Performing regular vulnerability scans"
-      },
-      {
-        "key": "F",
-        "text": "Removing payment information from the servers"
-      }
-    ],
-    "correct": [
-      "A",
-      "D"
-    ],
-    "explanation": "Regularly updating server software and applying patches addresses known vulnerabilities, reducing the risk of exploitation through unpatched flaws.\nA web-application firewall (WAF) is particularly effective against malicious injections, as it monitors and filters HTTP traffic to block injection attempts, such as JavaScript injections.\nTogether, these strategies provide robust protection against attacks targeting the web servers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p88",
-    "needsReview": true,
-    "inferenceConfidence": 0.684,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0198",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following tools is best for logging and monitoring in a cloud environment?",
+    "question": "Which of the following is the main consideration when a legacy system that is a critical part of a company's infrastructure cannot be replaced?",
     "choices": [
       {
         "key": "A",
-        "text": "IPS"
+        "text": "Resource provisioning"
       },
       {
         "key": "B",
-        "text": "FIM"
+        "text": "Cost"
       },
       {
         "key": "C",
-        "text": "NAC"
+        "text": "Single point of failure"
       },
       {
         "key": "D",
-        "text": "SIEM"
+        "text": "Complexity"
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": "A Security Information and Event Management (SIEM) system is best suited for logging and monitoring in a cloud environment. SIEM tools collect, aggregate, and analyze log data from multiple sources within the environment, providing real-time monitoring, alerts, and analysis of security events. This centralized approach helps identify potential security incidents across cloud resources effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An irreplaceable legacy system that the business depends on concentrates risk in one unsupported component. If it fails there is no vendor to call, no patch to apply and often no second instance, so the overriding consideration is that it has become a single point of failure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource provisioning is about allocating capacity. It is an operational concern rather than the risk the system represents.",
+      "B": "Cost is why the system has not been replaced. It explains the situation instead of describing the consequence.",
+      "D": "Complexity makes the system hard to maintain and understand. It contributes to the problem but the critical exposure is loss of the system entirely."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0215",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "Which of the following should a security team do first before a new web server goes live?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Harden the virtual host."
-      },
-      {
-        "key": "B",
-        "text": "Create WAF rules."
-      },
-      {
-        "key": "C",
-        "text": "Enable network intrusion detection."
-      },
-      {
-        "key": "D",
-        "text": "Apply patch management."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Before a new web server goes live, the first step should be to harden the virtual host. Hardening involves securing the server by disabling unnecessary services, configuring permissions, and applying best practices to minimize vulnerabilities. This foundational step reduces the attack surface and ensures the server is secure before additional security measures, such as WAF rules, intrusion detection, or patch management, are applied.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
+    "source": "SY0-701_en.pdf#p93",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },

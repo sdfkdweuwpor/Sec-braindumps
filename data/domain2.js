@@ -1189,6 +1189,48 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0185",
+    "domain": 2,
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "type": "single",
+    "question": "A penetration tester enters an office building at the same time as a group of employees despite not having an access badge.\nWhich of the following attack types is the penetration tester performing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Tailgating"
+      },
+      {
+        "key": "B",
+        "text": "Shoulder surfing"
+      },
+      {
+        "key": "C",
+        "text": "RFID cloning"
+      },
+      {
+        "key": "D",
+        "text": "Forgery"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Tailgating is following an authorised person through a controlled door so their badge opens it for you. Walking in alongside a group is the textbook version — it exploits politeness and the fact that one badge swipe holds the door for several people.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shoulder surfing is watching someone enter a password or PIN. It steals information by observation rather than gaining physical entry.",
+      "C": "RFID cloning copies the data from a legitimate badge onto another card. That requires capturing a badge first, and the tester has no badge at all.",
+      "D": "Forgery is producing a counterfeit document or credential. Again it means presenting something fake, whereas the tester presented nothing."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p83",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0189",
     "domain": 2,
     "objective": "2.2",
@@ -1216,51 +1258,69 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Vishing (voice phishing) is a social engineering attack where attackers impersonate a trusted entity over the phone to obtain sensitive information, such as credit card details. In this case, the attacker spoofed the company's main phone number on the caller ID to gain the customer's trust, making it likely that the customer is the target of a vishing attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Vishing is phishing carried out by voice call. The spoofed caller ID showing the company's real main number is the trust-building element, and the goal — extracting card details by impersonating a trusted organisation — is classic voice phishing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Phishing is the general category, and in exam usage it means the email form. The channel here is specifically a phone call.",
+      "B": "Whaling targets a senior executive as the victim. The victim here is an ordinary customer.",
+      "C": "Smishing is phishing over SMS. No text message is involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p85",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0190",
+    "id": "q0197",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "A security analyst is reviewing logs to identify the destination of command-and-control traffic originating from a compromised device within the on-premises network.\nWhich of the following is the best log to review?",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "type": "multi",
+    "question": "An organization's web servers host an online ordering system. The organization discovers that the servers are vulnerable to a malicious JavaScript injection, which could allow attackers to access customer payment information.\nWhich of the following mitigation strategies would be most effective for preventing an attack on the organization's web servers? (Choose two.)",
     "choices": [
       {
         "key": "A",
-        "text": "IDS"
+        "text": "Regularly updating server software and patches"
       },
       {
         "key": "B",
-        "text": "Antivirus"
+        "text": "Implementing strong password policies"
       },
       {
         "key": "C",
-        "text": "Firewall"
+        "text": "Encrypting sensitive data at rest and in transit"
       },
       {
         "key": "D",
-        "text": "Application"
+        "text": "Utilizing a web-application firewall"
+      },
+      {
+        "key": "E",
+        "text": "Performing regular vulnerability scans"
+      },
+      {
+        "key": "F",
+        "text": "Removing payment information from the servers"
       }
     ],
     "correct": [
-      "C"
+      "A",
+      "D"
     ],
-    "explanation": "Firewall logs are ideal for identifying the destination of command-and-control (C2) traffic because they log all inbound and outbound connections, including IP addresses, ports, and protocols used. By reviewing firewall logs, a security analyst can trace where the compromised device is attempting to send data and potentially identify the external command-and-control server, aiding in the containment of the threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers address the injection directly. A web application firewall inspects HTTP requests and blocks script injection attempts before they reach the application, while keeping server software patched removes the known flaws that make the servers exploitable in the first place.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Strong password policies protect accounts against guessing. Injection needs no account at all.",
+      "C": "Encrypting data at rest and in transit protects it from interception and theft of storage. An injected script runs with the application's own access, so encryption does not stop it.",
+      "E": "Regular vulnerability scans find weaknesses. Finding is not preventing — the fix has to follow.",
+      "F": "Removing payment information reduces what an attacker gains, which limits impact. The servers remain just as vulnerable to the injection."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p85",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
+    "source": "SY0-701_en.pdf#p88",
+    "needsReview": false,
+    "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1292,51 +1352,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The attacker altered something during the update process itself, so the system accepted attacker-controlled content as part of a trusted change. A malicious update is that category of vulnerability — the update path becomes the way in.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A race condition exploits the timing gap between checking a condition and acting on it. Here the field was substituted as part of the update rather than through a timing window.",
+      "B": "Memory injection writes code into a running process's memory. This attack modified a database field during an update, not process memory.",
+      "D": "Side loading installs an application from outside an official store. It applies to devices and apps, not database updates."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0204",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A security analyst wants to better understand the behavior of users and devices in order to gain visibility into potential malicious activities. The analyst needs a control to detect when actions deviate from a common baseline.\nWhich of the following should the analyst use?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Intrusion prevention system"
-      },
-      {
-        "key": "B",
-        "text": "Sandbox"
-      },
-      {
-        "key": "C",
-        "text": "Endpoint detection and response"
-      },
-      {
-        "key": "D",
-        "text": "Antivirus"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Endpoint Detection and Response (EDR) solutions provide visibility into the behavior of users and devices, monitoring for deviations from established baselines. EDR tools are designed to detect suspicious activities by continuously analyzing endpoint behaviors, which helps identify potential threats, including malicious activities, that may otherwise go unnoticed. This is particularly useful for spotting deviations from normal patterns and enhancing security response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1368,12 +1394,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Memory injection attacks are particularly dangerous for systems running a Real-Time Operating System (RTOS) because these systems often have limited resources and strict timing requirements, making them more susceptible to disruptions caused by injected code. Memory injection can compromise the system's integrity, allowing an attacker to alter its operation or cause it to behave unpredictably.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A real-time operating system typically runs with minimal memory protection, no modern exploit mitigations and often a single privilege level, so writing code directly into its memory is both feasible and immediately effective. Memory injection is the realistic compromise path for that class of system.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting requires a web browser rendering a page. An RTOS controlling a device has no browser.",
+      "C": "A replay attack resends captured valid traffic. It may cause an RTOS device to repeat an action but does not compromise the system itself.",
+      "D": "Ransomware encrypts files and demands payment. An RTOS often has no conventional file system or user to extort."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.471,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1406,12 +1436,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Unskilled attackers, often referred to as \"script kiddies,\" are more likely to deface websites for attention or to make a public statement rather than for financial gain or political motivations.\nDefacing a high-profile music group's website aligns with the typical goals of an unskilled attacker seeking notoriety or a sense of accomplishment by exploiting visible and relatively simple vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Website defacement is loud, public and delivers no money or intelligence — its payoff is attention. That matches the unskilled attacker, who uses readily available tools and is motivated by notoriety rather than profit or strategy.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Organised crime is motivated by money. Defacing a band's site generates none and draws exactly the attention criminals avoid.",
+      "C": "Nation-states pursue espionage and strategic disruption, quietly. A music group has nothing of state interest.",
+      "D": "An insider threat acts from within the organisation. Nothing suggests the attacker had legitimate access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1444,12 +1478,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The log entry GET ../../../../etc/passwd indicates a directory traversal attack. Directory traversal is an attack technique that attempts to access files and directories outside the web server's root directory by using sequences like ../ to move up the directory tree. In this case, the attacker is attempting to reach the /etc/ passwd file, which typically contains user account information on Unix-based systems. This type of attack can allow unauthorized access to sensitive files on the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The repeated ../ sequences are an attempt to climb out of the web root and reach an arbitrary file on the filesystem — here /etc/passwd. Escaping the intended directory this way is directory traversal, also called path traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privilege escalation gains higher rights than those already held. This request is reading a file with whatever rights the web server already has.",
+      "B": "Credential replay reuses captured authentication material. No credentials appear in the request.",
+      "C": "Brute force tries many values until one works. This is a single crafted request, not repeated guessing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p95",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1482,12 +1520,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection is an attack technique where an attacker includes unexpected characters or SQL code in a request to manipulate a database query, aiming to gain unauthorized access to data or execute additional database commands. This form of injection targets vulnerabilities in applications that don't properly validate input, allowing attackers to interact with underlying database systems maliciously.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Submitting unexpected characters so that input is interpreted as database syntax rather than data is SQL injection. Quotes, semicolons and comment markers break out of the intended query and let the attacker read or alter what the underlying database holds.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
+      "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
+      "C": "Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

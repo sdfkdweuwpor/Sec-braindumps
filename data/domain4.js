@@ -2457,12 +2457,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SIEM (Security Information and Event Management) systems aggregate and analyze log data from various devices across a network, enabling the collection, correlation, and analysis of security-related events. SIEM provides a consolidated report of activities, helping to identify potential security incidents by correlating data from multiple sources, which enhances visibility and response capabilities across the network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A SIEM collects log data from firewalls, servers, endpoints and applications, normalises the differing formats and presents them together. Producing one consolidated view and report across many device types is its defining capability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS inspects traffic and blocks recognised attacks. It reports on what it sees at its own position in the network, not on other devices.",
+      "B": "DLP watches for sensitive data leaving the organisation. It reports on data movement, a single narrow slice of activity.",
+      "D": "A firewall logs the connections it permits and denies. It is one of the sources feeding the consolidated report, not the thing producing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2495,13 +2499,101 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a widely used standard that provides a numerical score reflecting the severity of a vulnerability. Organizations use CVSS scores to prioritize vulnerabilities based on their potential impact and exploitability, which helps in assessing which vulnerabilities need urgent remediation. This approach enables systematic vulnerability prioritization based on quantifiable metrics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what lets an organisation rank a backlog of findings consistently. Prioritisation needs a common yardstick, and CVSS exists to provide one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Exposure factor is the proportion of an asset's value lost in an incident. It is a risk-calculation input used in ALE, not a vulnerability ranking.",
+      "C": "CVE is the naming catalogue that gives each vulnerability a unique identifier. The identifier carries no severity information at all.",
+      "D": "Industry impact is genuine context that should adjust priorities, but it is a qualitative consideration layered on top of a score rather than the primary basis for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0188",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An organization needs to monitor its users' activities in order to prevent insider threats.\nWhich of the following solutions would help the organization achieve this goal?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Behavioral analytics"
+      },
+      {
+        "key": "B",
+        "text": "Access control lists"
+      },
+      {
+        "key": "C",
+        "text": "Identity and access management"
+      },
+      {
+        "key": "D",
+        "text": "Network intrusion detection system"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Insiders use legitimate credentials, so nothing they do looks unauthorised to an access control. Behavioural analytics learns what normal activity looks like for each user and flags the deviation — unusual hours, unusual systems, unusual data volumes — which is the only signal an insider actually produces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Access control lists define who may reach what. They limit damage but generate no visibility into how granted access is used.",
+      "C": "Identity and access management governs provisioning and permissions. It decides what access exists rather than monitoring its use.",
+      "D": "A network intrusion detection system looks for attack patterns in traffic. An insider browsing systems they are permitted to reach produces entirely ordinary traffic."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p84",
+    "needsReview": false,
+    "inferenceConfidence": 0.367,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0190",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "type": "single",
+    "question": "A security analyst is reviewing logs to identify the destination of command-and-control traffic originating from a compromised device within the on-premises network.\nWhich of the following is the best log to review?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IDS"
+      },
+      {
+        "key": "B",
+        "text": "Antivirus"
+      },
+      {
+        "key": "C",
+        "text": "Firewall"
+      },
+      {
+        "key": "D",
+        "text": "Application"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Command and control traffic leaves the network to reach the attacker's server, so it must cross the firewall. Firewall logs record the source, destination address, port and protocol of every connection, which is precisely the destination information the analyst needs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IDS logs record traffic matching attack signatures. C2 beacons are often designed to look like ordinary traffic and may never trigger a signature.",
+      "B": "Antivirus logs record files detected on hosts. They may name the malware but say nothing about where it connects.",
+      "D": "Application logs record activity inside a particular application. Malware communicating out does not pass through the business application's log."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p85",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2533,13 +2625,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a discussion-based exercise where participants walk through different scenarios to better understand and familiarize themselves with the incident response process.\nThis type of exercise allows teams to review roles, procedures, and potential responses to various incidents in a low-stress environment, enhancing preparedness and coordination.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise gathers the response team to talk through a scenario against the written plan. Its value is that everyone rehearses their role and finds the gaps in the process while nothing is actually on fire — familiarisation rather than technical validation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Rules of engagement for red and blue teams are agreed before an exercise, in a planning document. That is a scoping step, not the purpose of a tabletop.",
+      "C": "Determining the impact of an actual breach happens during a live incident, using real telemetry. A tabletop deals in hypotheticals.",
+      "D": "Running parallel investigations is operational work requiring real tooling and evidence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.452,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0198",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "Which of the following tools is best for logging and monitoring in a cloud environment?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IPS"
+      },
+      {
+        "key": "B",
+        "text": "FIM"
+      },
+      {
+        "key": "C",
+        "text": "NAC"
+      },
+      {
+        "key": "D",
+        "text": "SIEM"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Cloud environments generate logs from many services, accounts and regions at once. A SIEM ingests all of it, normalises the differing formats and correlates across them, which is what makes centralised logging and monitoring workable at cloud scale.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS blocks malicious traffic inline at a network point. It is a preventive control, and it monitors traffic rather than logs.",
+      "B": "FIM alerts when protected files are modified. It covers one narrow signal on individual hosts.",
+      "C": "NAC decides whether a device may join a network. It is an admission control with no logging or monitoring role."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p89",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2571,12 +2709,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Privileged Access Management (PAM) is the best way to secure shared, privileged accounts like a backup account, especially in cases of Single Sign-On (SSO) failure. PAM solutions provide strict controls over access to sensitive accounts, enforce logging and monitoring, and often include features like session recording and access expiration. This approach ensures that access to the backup account remains secure even when other authentication methods, like SSO, are unavailable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A shared privileged account is the hardest kind to control, because nobody owns it and everyone knows the password. Privileged access management vaults the credential, brokers each session, records who used it and when, and keeps working when SSO is unavailable because it is a separate control plane.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RAS is remote access service — a way to connect to a network. It provides connectivity, not credential control.",
+      "B": "EAP is an authentication framework used inside network access protocols. It does not manage shared account credentials.",
+      "C": "SAML federates authentication to an identity provider. Since the scenario is an SSO failure, depending on the same federation is exactly what cannot be relied on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2609,12 +2751,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Preservation is the process in digital forensics that ensures the integrity of evidence by maintaining it in its original, unaltered state. This involves safeguarding data against modification or tampering throughout the investigation process, ensuring that the evidence remains reliable and admissible in court if needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Preservation is the forensic discipline of keeping evidence in an unaltered state — write-blocking, hashing the image, and documenting handling so the data can be shown to be the same as when collected. Integrity of evidence is what it exists to guarantee.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation. It governs disclosure, not integrity.",
+      "C": "Acquisition is the act of collecting the evidence. Integrity has to be maintained through acquisition and everything after it, which is preservation's job.",
+      "D": "Containment is an incident response step that limits ongoing damage. It happens alongside forensics but is not about evidence handling."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2647,13 +2793,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Firewall and network logs are the most efficient sources for identifying large outbound data transfers, as they record all traffic leaving the network. By examining these logs for significant data flows to unfamiliar or external IP addresses or domains, the security team can determine where the data was exfiltrated and potentially identify the destination of the exfiltrated data. This approach directly targets the incident's key indicators: large data transfer and external communication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "30GB leaving the network has to cross the perimeter, so the firewall and network logs hold both halves of the answer: which internal host sent it and which external address received it. A single query for large outbound flows surfaces both efficiently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IPS and IDS logs record reconnaissance and signature matches. Scanning activity is a different phase and will not show the bulk transfer or its destination.",
+      "C": "Endpoint and application logs might show a file-sharing tool running, but that assumes a specific method and covers only the source, never the destination.",
+      "D": "Vulnerability scans and automated reports describe weaknesses that exist. They explain how an attacker might have got in, not what left or where it went."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0204",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security analyst wants to better understand the behavior of users and devices in order to gain visibility into potential malicious activities. The analyst needs a control to detect when actions deviate from a common baseline.\nWhich of the following should the analyst use?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Intrusion prevention system"
+      },
+      {
+        "key": "B",
+        "text": "Sandbox"
+      },
+      {
+        "key": "C",
+        "text": "Endpoint detection and response"
+      },
+      {
+        "key": "D",
+        "text": "Antivirus"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "EDR continuously records process, file and network behaviour on endpoints and compares it against expected patterns, so it surfaces activity that deviates from the baseline rather than matching a known signature. Detecting behavioural deviation is exactly what the analyst asked for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An intrusion prevention system blocks traffic matching known attack patterns. It is signature-driven and sits on the network, not on the endpoint.",
+      "B": "A sandbox detonates a suspicious file in isolation to observe it. It analyses individual samples rather than ongoing user and device behaviour.",
+      "D": "Antivirus matches files against known malware signatures. It detects known bad rather than unusual."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p91",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2685,12 +2877,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data retention refers to the practice of keeping copies or backups of data for a specific period, even after the original devices have been disposed of or destroyed. In this case, the legal department requires a backup to be maintained from devices that have been shredded and recycled, ensuring that necessary data is preserved in compliance with legal or regulatory requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The devices themselves are gone, yet the legal department still requires the information to exist. Keeping data for a defined period to satisfy legal or regulatory obligations, independent of the hardware it once lived on, is data retention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Certification here means a certificate of destruction — the third party's proof that the devices were destroyed. That documents the disposal, not the surviving backup.",
+      "C": "Sanitisation removes data while leaving the medium reusable. These drives were shredded, so they were not sanitised.",
+      "D": "Destruction is what happened to the devices. The requirement being described concerns what is kept, not what was destroyed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2698,8 +2894,8 @@ export const domain4Questions = [
   {
     "id": "q0208",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security architect wants to prevent employees from receiving malicious attachments by email.\nWhich of the following functions should the chosen solution do?",
     "choices": [
@@ -2723,12 +2919,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Scanning email traffic inline enables the security solution to inspect attachments and other content in real-time as emails are received. This allows the system to detect and block malicious attachments before they reach employees, effectively preventing potential security incidents caused by harmful email attachments. This approach is essential for identifying and neutralizing threats within email content directly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "To stop an attachment reaching an inbox, the solution has to sit in the mail flow and hold the message while it inspects it. Inline scanning does exactly that — the email is examined and blocked before delivery rather than after.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IP reputation data blocks mail from known-bad senders. It is a useful first filter but says nothing about the attachment when the sender is unknown or compromised.",
+      "B": "Tapping and monitoring the feed gives a copy of the traffic for analysis. By the time it detects something, the original has already been delivered.",
+      "D": "SPF records verify that a sending server is authorised for the domain. That fights spoofing, not malicious attachments from legitimately authorised senders."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2761,51 +2961,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Detection is the first stage in the incident response process. It involves identifying potential security incidents through alerts, monitoring, and analysis to determine if an incident has occurred. Effective detection is crucial as it initiates the response process, allowing the team to assess the situation and proceed with containment and other response steps.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Of the activities offered, detection comes first: something must be noticed before anyone can declare an incident, verify it or contain it. Note that the full CompTIA process begins with preparation, which happens before any incident exists and is not among these options.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Declaration is the formal decision that an incident is underway. It can only follow detection and initial assessment.",
+      "C": "Containment limits the damage once the incident is confirmed. It is several steps later.",
+      "D": "Verification confirms that what was detected is genuine rather than a false positive. It necessarily comes after detection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0210",
-    "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
-    "type": "single",
-    "question": "Which of the following is the main consideration when a legacy system that is a critical part of a company's infrastructure cannot be replaced?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Resource provisioning"
-      },
-      {
-        "key": "B",
-        "text": "Cost"
-      },
-      {
-        "key": "C",
-        "text": "Single point of failure"
-      },
-      {
-        "key": "D",
-        "text": "Complexity"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "When a legacy system that is critical to a company's infrastructure cannot be replaced, the primary consideration is that it may become a single point of failure. This is because legacy systems are often difficult to support, lack redundancy, and may no longer receive updates, making them vulnerable. Ensuring that this critical system is protected from failure is essential to maintain continuity and reduce the risk of operational disruptions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p93",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2846,13 +3012,60 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "In a Corporate-Owned, Personally-Enabled (COPE) mobile device management policy, the organization provides devices that employees can use for both work and personal purposes.\nRemote wiping ensures that the organization can remove sensitive data if the device is lost, stolen, or if the employee leaves the organization. Data encryption protects sensitive data on the device, ensuring security for both corporate and personal use. These controls are essential for securing organizational data on devices used in a COPE model.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "COPE devices are company property carrying company data, so the organisation must be able to protect that data. Encryption keeps it unreadable if the device is lost, and remote wipe lets the organisation destroy it when the device goes missing or the employee leaves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "An eight-character password requirement is weak by current guidance and is an arbitrary detail rather than a core COPE control.",
+      "D": "Data usage caps manage cellular cost. That is a billing concern, not device security.",
+      "E": "Employee data ownership contradicts the model — COPE means the organisation owns the device.",
+      "F": "Personal application store access is the 'personally enabled' convenience. It expands the attack surface rather than securing anything."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0215",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "Which of the following should a security team do first before a new web server goes live?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Harden the virtual host."
+      },
+      {
+        "key": "B",
+        "text": "Create WAF rules."
+      },
+      {
+        "key": "C",
+        "text": "Enable network intrusion detection."
+      },
+      {
+        "key": "D",
+        "text": "Apply patch management."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Hardening removes what should not be there in the first place — default accounts, unnecessary services, weak configuration — and shrinks the attack surface everything else has to defend. Doing it before go-live is cheapest and means the later controls protect a smaller target.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "WAF rules protect the application from malicious requests. They are valuable, but layering them over an unhardened host leaves the underlying weaknesses in place.",
+      "C": "Network intrusion detection alerts on suspicious traffic. Detection assumes an attack is already underway.",
+      "D": "Patch management is part of hardening and must certainly be done, but hardening is the broader first step that includes it along with configuration and service reduction."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p96",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2884,12 +3097,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool can be used to securely erase all data on a hard drive without physically damaging it, making it suitable for repurposing. Wiping overwrites the data on the drive multiple times, ensuring that previously stored information cannot be recovered. This approach allows the hard drive to be reused safely, as opposed to degaussing or physical destruction, which renders the drive unusable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. That combination — unrecoverable data, reusable hardware — is exactly what repurposing requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys the magnetic structure of the platters. It is thorough and permanent, and it renders the drive unusable.",
+      "B": "A drive shredder physically destroys the device. Nothing is left to repurpose.",
+      "C": "A retention platform stores data for a required period. It is a storage system, not a sanitisation method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
