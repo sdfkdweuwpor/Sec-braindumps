@@ -23,6 +23,14 @@ KEY_CORRECTIONS = {
               "review' appears nowhere in the objectives.",
               "CompTIA SY0-701 objective 1.3 component list; Professor Messer "
               "1.3 Change Management."),
+    "q0263": (["D"], ["A"],
+              "Duplicate of q0465, which keys A. The discriminator is "
+              "'low-cost': cheap IoT hardware in infrastructure carries "
+              "supply-chain risk (unvetted manufacturers, firmware backdoors, "
+              "no patch support). 'Storage of data' is a generic IoT concern "
+              "not specific to cost.",
+              "SY0-701 objective 3.1 IoT architecture considerations; "
+              "corroborating exam discussion agrees on 'Country of origin'."),
 }
 
 # qid -> reason. Removed from the shipped bank entirely.
@@ -38,12 +46,4 @@ DROPPED = {
 
 # Conflicts checked against outside sources without reaching a confident
 # answer. Left exactly as the PDF has them and reported every run.
-UNRESOLVED = {
-    ("q0263", "q0465"):
-        "Low-cost IoT devices in infrastructure environments: q0263 keys D "
-        "(Storage of data), q0465 keys A (Country of origin). Outside sources "
-        "conflict -- 'country of origin' is the supply-chain reading that the "
-        "words 'low-cost' point at, but at least one published answer set "
-        "gives 'storage of data'. Both copies left untouched pending your "
-        "call.",
-}
+UNRESOLVED = {}

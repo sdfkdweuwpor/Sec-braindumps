@@ -2129,7 +2129,7 @@ export const domain3Questions = [
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
     "explanation": "Storage of data is a significant security concern when installing and using low-cost IoT (Internet\nof Things) devices in infrastructure environments. Many low-cost IoT devices may not have\nrobust security measures in place to protect the data they collect or transmit. This data could be\nsensitive, such as operational metrics or user data, and if not properly secured, it could be\nvulnerable to theft, unauthorized access, or misuse.",
     "explanationSource": "pdf",
@@ -2139,7 +2139,7 @@ export const domain3Questions = [
     "needsReview": true,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0265",
