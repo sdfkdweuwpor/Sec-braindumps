@@ -10987,6 +10987,90 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0836",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following should an organization implement to avoid unnecessary liability after the end of a legal contract obligation with a third party?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Data encryption"
+      },
+      {
+        "key": "B",
+        "text": "Data classification"
+      },
+      {
+        "key": "C",
+        "text": "Data retention"
+      },
+      {
+        "key": "D",
+        "text": "Data inventory"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Once the contract ends, any third-party data still held is pure liability — it can be breached, subpoenaed or fall foul of privacy rules, with no business reason for keeping it. A retention policy defines when that data must be destroyed, so it does not linger past its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data encryption protects data while you hold it. It reduces breach impact without addressing whether you should still have it.",
+      "B": "Data classification assigns sensitivity levels and handling rules. It governs protection, not lifespan.",
+      "D": "A data inventory records what you hold and where. It tells you the data exists; retention tells you when it must go."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p354",
+    "needsReview": false,
+    "inferenceConfidence": 0.357,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0841",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "A security engineer must deploy a sensor to actively monitor a closed network. The company's enterprise SIEM is located in the cloud, and there is a strict policy against connecting this network to the internet.\nWhich of the following will best address these requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Place the sensor on the edge router of the closed network, open port 22 on the management interface, and create a secure connection to the cloud SIEM while using an Implicit deny rule to restrict traffic."
+      },
+      {
+        "key": "B",
+        "text": "Connect the sensor to the closed network router's span port, install a one-way data diode, and pass traffic to the sensor on the enterprise network for inclusion in the enterprise log data."
+      },
+      {
+        "key": "C",
+        "text": "Install a log server on the closed network, point all network and system logs to the log server, and perform weekly manual audits of the logs to meet regulatory compliance objectives."
+      },
+      {
+        "key": "D",
+        "text": "Install the sensor on the internal closed network, add a firewall to the sensor stack, and connect the firewall to the corporate ISP while using strict ACLs to prevent egress traffic. •"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The closed network must stay isolated but its telemetry has to reach a cloud SIEM. A span port copies traffic to the sensor without affecting the network, and a one-way data diode physically permits data out while making inbound connections impossible — visibility with the isolation intact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Opening port 22 to the cloud creates exactly the internet connection the policy forbids, whatever rules sit around it.",
+      "C": "A local log server with weekly manual audits gives no active monitoring and never reaches the enterprise SIEM.",
+      "D": "Connecting a firewall on the closed network to the corporate ISP breaches the isolation policy regardless of how strict the ACLs are."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p356",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0843",
     "domain": 4,
     "objective": "4.8",
@@ -11014,13 +11098,101 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Chain of custody ensures that forensic evidence is properly documented, tracked, and handled from collection through analysis to maintain its integrity and admissibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the documented record of every person who handled each piece of evidence, when and why. Maintaining that unbroken trail is what allows the evidence to be shown as unaltered and therefore admissible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterwards.",
+      "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation.",
+      "D": "Forensic tabletop exercises rehearse process in discussion. They do not handle real evidence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.722,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0846",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "A new security team must develop necessary security program elements.\nWhich of the following steps should the security team take first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Create a playbook."
+      },
+      {
+        "key": "B",
+        "text": "Develop an AUP."
+      },
+      {
+        "key": "C",
+        "text": "Build an asset inventory."
+      },
+      {
+        "key": "D",
+        "text": "Hold a tabletop exercise."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "You cannot protect what you do not know you have. An asset inventory establishes what systems, devices and data exist, and every later activity — risk assessment, patching, monitoring, incident response — depends on that visibility.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A playbook gives step-by-step response guidance for a specific situation. It presumes you know what you are defending.",
+      "B": "An acceptable use policy governs user conduct. Important, but it protects nothing until you know the estate.",
+      "D": "A tabletop exercise rehearses a response plan that does not exist yet."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p358",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0849",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "An energy provider identifies a critical vulnerability in a control system that could lead to operational downtime.\nWhich of the following is the most likely reason this vulnerability is considered high priority despite no known exploits?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The system already has antivirus protection."
+      },
+      {
+        "key": "B",
+        "text": "The vulnerability could disrupt essential services."
+      },
+      {
+        "key": "C",
+        "text": "The control system is exposed to the public internet."
+      },
+      {
+        "key": "D",
+        "text": "The vulnerability has a CVSS score below 7.0."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Prioritisation weighs impact as well as exploitability. A control system failure in an energy provider stops essential service delivery with potential safety and regulatory consequences, so the consequence alone justifies high priority even with no exploit yet published.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Existing antivirus protection would be an argument for lowering priority, and control systems rarely support it anyway.",
+      "C": "Public internet exposure would raise priority further, but the question states the concern exists despite no known exploits, pointing at impact rather than reachability.",
+      "D": "A CVSS score below 7.0 would ordinarily reduce priority, which contradicts treating it as high."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p359",
+    "needsReview": false,
+    "inferenceConfidence": 0.2,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11052,12 +11224,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compression reduces the storage size of logs, allowing more data to remain in fast, accessible live storage for a longer period, which supports quicker search performance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The requirement is to keep 90 days searchable in fast storage. Compression shrinks the footprint so that full retention period fits on live media, preserving search speed instead of pushing older data to slow archive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Deduplication removes redundant copies. Log entries are largely unique, so the saving is small.",
+      "B": "Archiving moves data to slower, cheaper storage — the opposite of keeping it live and quickly searchable.",
+      "C": "Aggregation combines events into summaries, which loses the detail investigations depend on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p360",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11090,51 +11266,101 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "EDR logs provide detailed visibility into endpoint activity, including process execution, script behavior, and command-line actions, making them most effective for identifying malicious PowerShell activity and potential system compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "PowerShell activity happens on the endpoint, and EDR records process creation, parent-child relationships, command lines and what the script subsequently did. That depth is what reveals whether the execution was an attempted compromise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SNMP logs report device health and performance metrics. They capture no process activity.",
+      "B": "Firewall logs show connections crossing the boundary. They would confirm an outbound call but not what the script did locally.",
+      "D": "IPS logs record traffic matching attack signatures. Legitimate-looking outbound HTTP from PowerShell may match nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p360",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0860",
+    "id": "q0863",
     "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company uses its backups to recover from a ransomware attack.\nWhich of the following best guarantees that the backups are not infected?",
+    "question": "Which of the following is the most appropriate reason for a server technician to disable unused ports and services on an externally facing DNS server?",
     "choices": [
       {
         "key": "A",
-        "text": "Immutability"
+        "text": "To reduce the need for patching"
       },
       {
         "key": "B",
-        "text": "Destruction"
+        "text": "To block ports not currently blocked by the network firewall"
       },
       {
         "key": "C",
-        "text": "Sanitization"
+        "text": "To conserve system memory"
       },
       {
         "key": "D",
-        "text": "Retention"
+        "text": "To limit the attack surface area"
       }
     ],
     "correct": [
-      "A"
+      "D"
     ],
-    "explanation": "Immutability ensures backups cannot be altered or encrypted after creation, preventing ransomware from infecting them and preserving clean recovery points.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every listening port and running service is a way in that must be patched, configured and monitored. On an externally facing server that exposure is maximal, so disabling what is not needed removes those entry points entirely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reducing patching effort is a welcome side effect, but the security reason is removing exploitable exposure rather than saving work.",
+      "B": "Duplicating firewall blocks is defence in depth, but the server should be hardened regardless of what the firewall does.",
+      "C": "Conserving memory is a performance benefit, not a security one."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
+    "source": "SY0-701_en.pdf#p364",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0864",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20 Which of the following should the security administrator do?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Insert the following rule above rule #1:"
+      },
+      {
+        "key": "B",
+        "text": "Replace rule #1 with the following:"
+      },
+      {
+        "key": "C",
+        "text": "Replace rule #2 with the following:"
+      },
+      {
+        "key": "D",
+        "text": "Insert the following rule between rule #2 and rule #3:"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "DNSSEC responses carry signatures and keys that frequently exceed what fits in a UDP datagram, so resolvers fall back to TCP on port 53. Replacing the existing DNS rule so it permits both UDP and TCP to the DNS server allows DNSSEC to be tested while ordinary DNS keeps working.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Inserting a rule above rule 1 changes evaluation order for traffic the first rule was written to handle, which risks disrupting existing connectivity.",
+      "B": "Replacing rule 1 modifies the wrong rule — rule 1 governs different traffic, not DNS to the DNS server.",
+      "D": "Placing the rule after rule 2 means the existing DNS rule matches first, so the new permission never takes effect."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p365",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11166,12 +11392,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Branch protection enforces controls such as required approvals, code reviews, and testing before changes can be merged into the production branch, preventing direct, unreviewed commits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The failure is code reaching production without review or testing. Branch protection enforces those requirements at the repository — no direct commits to the protected branch, mandatory reviews and passing checks before a merge — so the gate cannot be skipped.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Regression testing verifies existing functionality still works. It is one check that branch protection can require, not the control preventing unreviewed commits.",
+      "C": "An impact assessment evaluates the consequences of a change. It informs approval rather than enforcing it.",
+      "D": "Static analysis finds defects in code. Again a useful check to require, but it does not stop someone committing directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11179,8 +11409,8 @@ export const domain4Questions = [
   {
     "id": "q0869",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "Which of the following is a security benefit of an effective IT asset tracking system?",
     "choices": [
@@ -11204,13 +11434,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An effective asset tracking system provides visibility into all authorized devices, making it easier to detect unknown or unmanaged devices that could pose security risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An asset tracking system establishes what should be on the network. Anything appearing that is not in the inventory stands out immediately as unauthorised or unmanaged, which is visibility no other control provides as directly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preventing data exfiltration is DLP's function. Asset tracking records devices rather than inspecting data.",
+      "C": "Automated root cause analysis is far beyond what an inventory does. It records what exists, not why something happened.",
+      "D": "Backup and recovery procedures are a separate discipline, informed by the inventory but not ensured by it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p367",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.52,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0870",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security engineer must create detections for file staging techniques on web-facing servers.\nThe company implements multiple tools and is most concerned about intellectual property theft.\nWhich of the following tools does the company most likely use?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "EDR for indicator detections based on process names"
+      },
+      {
+        "key": "B",
+        "text": "DLP for scanning and identification on endpoints"
+      },
+      {
+        "key": "C",
+        "text": "SOAR for web crawling plugins and data validation"
+      },
+      {
+        "key": "D",
+        "text": "IPS for cleartext traffic inspection of network payloads"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "File staging means collecting intellectual property into one place before exfiltrating it. DLP is the tool that understands content, so it can recognise sensitive files appearing somewhere they should not be and alert on the staging itself.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detections based on process names identify known malicious tooling. Staging often uses ordinary utilities and legitimate file operations.",
+      "C": "SOAR orchestrates and automates response workflows. It acts on detections rather than producing content-aware ones.",
+      "D": "An IPS inspecting cleartext payloads sees data in transit at the network. Staging happens on the server before anything is sent, and modern traffic is encrypted anyway."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p368",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },

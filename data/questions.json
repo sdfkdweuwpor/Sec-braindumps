@@ -35268,9 +35268,9 @@
   },
   {
     "id": "q0836",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "Which of the following should an organization implement to avoid unnecessary liability after the end of a legal contract obligation with a third party?",
     "choices": [
@@ -35294,12 +35294,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data retention policies ensure data is only kept for the required period and then properly disposed of, reducing unnecessary legal liability after contractual obligations end.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once the contract ends, any third-party data still held is pure liability — it can be breached, subpoenaed or fall foul of privacy rules, with no business reason for keeping it. A retention policy defines when that data must be destroyed, so it does not linger past its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data encryption protects data while you hold it. It reduces breach impact without addressing whether you should still have it.",
+      "B": "Data classification assigns sensitivity levels and handling rules. It governs protection, not lifespan.",
+      "D": "A data inventory records what you hold and where. It tells you the data exists; retention tells you when it must go."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35332,12 +35336,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Using multiple cloud service providers introduces platform diversity, reducing the risk of a single point of failure and ensuring continued access to critical resources if one provider experiences an outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Using more than one cloud provider means no single provider's outage, breach or regional failure can take the application down. That deliberate avoidance of dependence on one platform is platform diversity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Load balancing across providers is technically possible but complex, and reducing overhead is not the security reason for the design.",
+      "C": "Parallel processing runs work concurrently for performance. It is not what multiple providers deliver.",
+      "D": "A hot site is a recovery facility. Selecting one is a different strategy from spreading across cloud providers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35370,12 +35378,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is used to document identified risks, evaluate their impact and likelihood, and track mitigation efforts to manage those risks effectively over time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk register is the living record of identified risks — each with its owner, likelihood, impact, threshold and agreed treatment — so risks stay visible and tracked rather than being rediscovered each cycle.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "No document mitigates anything automatically. The register records decisions; people and controls implement them.",
+      "C": "Penetration testing produces findings that feed the register. It is not replaced by it.",
+      "D": "Compliance reports may draw on the register, but generating them is not its purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35408,12 +35420,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "An internal self-assessment allows the organization to compare current controls against regulatory requirements and identify gaps without the higher cost of external engagements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A gap analysis compares current controls against the requirements the audit will test. Doing that internally uses staff who already know the environment and costs nothing beyond their time, which makes it the cheapest way to find the gaps before the auditor does.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Active reconnaissance probes systems for information. It is an attack technique, not a compliance comparison.",
+      "C": "A red team penetration test simulates a determined attacker. It is expensive and tests defences rather than control coverage against a standard.",
+      "D": "A tabletop exercise rehearses incident response. It measures readiness to respond, not compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35446,21 +35462,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly sanitized and constrained, preventing malicious input such as SQL commands from being executed against a database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Input validation constrains user-supplied data to what the application actually expects, so text containing SQL syntax is rejected before it can reach the database interpreter. Removing that path is what prevents injection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DNS hijacking redirects name resolution. It happens at the network or registrar level, nowhere near application input.",
+      "B": "A time-of-check to time-of-use flaw is a timing race between validating something and using it. Validating harder does not close the window.",
+      "D": "Sideloading installs software from outside an official store. It is a device and distribution concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p356",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0841",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "A security engineer must deploy a sensor to actively monitor a closed network. The company's enterprise SIEM is located in the cloud, and there is a strict policy against connecting this network to the internet.\nWhich of the following will best address these requirements?",
     "choices": [
@@ -35484,12 +35504,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A data diode enables one-way data transfer from the closed network to the enterprise network, allowing monitoring data to be sent to the SIEM without exposing the closed network to inbound connections or internet access, preserving isolation while enabling visibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The closed network must stay isolated but its telemetry has to reach a cloud SIEM. A span port copies traffic to the sensor without affecting the network, and a one-way data diode physically permits data out while making inbound connections impossible — visibility with the isolation intact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Opening port 22 to the cloud creates exactly the internet connection the policy forbids, whatever rules sit around it.",
+      "C": "A local log server with weekly manual audits gives no active monitoring and never reaches the enterprise SIEM.",
+      "D": "Connecting a firewall on the closed network to the corporate ISP breaches the isolation policy regardless of how strict the ACLs are."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p356",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35522,12 +35546,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Sharing unique credentials is a clear insider threat warning sign because it violates access control policies and can lead to unauthorized access using legitimate accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sharing unique credentials destroys accountability — actions can no longer be attributed to an individual — and it is a deliberate violation of access control policy. That makes it a specific insider-threat indicator worth teaching staff to recognise and report.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IT employee upgrading an encryption library is routine maintenance and good practice.",
+      "C": "A finance user scrutinising a reimbursement form is exactly the control doing its job.",
+      "D": "Logging in abroad outside normal hours is an anomalous access indicator, but it is usually explained by travel rather than signalling an insider."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35560,12 +35588,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Chain of custody ensures that forensic evidence is properly documented, tracked, and handled from collection through analysis to maintain its integrity and admissibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the documented record of every person who handled each piece of evidence, when and why. Maintaining that unbroken trail is what allows the evidence to be shown as unaltered and therefore admissible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterwards.",
+      "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation.",
+      "D": "Forensic tabletop exercises rehearse process in discussion. They do not handle real evidence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.722,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35598,12 +35630,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "ARP poisoning is a relatively simple attack that can be executed with readily available tools, making it most likely associated with an unskilled attacker rather than advanced or credential- based threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ARP poisoning tools are free and require no real understanding, and taking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points squarely at an unskilled attacker, typically a student.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
+      "C": "Credential stuffing replays breached username and password pairs against a login. It is a technique, not a threat actor.",
+      "D": "DMARC failure is an email authentication result, neither an actor nor related to ARP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35636,21 +35672,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the estimated frequency with which a specific threat or incident is expected to occur within a year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised rate of occurrence is the expected number of times an event happens in a year. It is the frequency term that turns a single loss figure into an annual one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RTO is the maximum tolerable downtime after an incident. It is a recovery target.",
+      "B": "ALE is the annual monetary loss, calculated by multiplying SLE by ARO.",
+      "C": "SLE is the monetary loss from one occurrence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0846",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "A new security team must develop necessary security program elements.\nWhich of the following steps should the security team take first?",
     "choices": [
@@ -35674,12 +35714,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Building an asset inventory establishes visibility into all systems, devices, and data within the environment, which is foundational for identifying risks and developing effective security controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot protect what you do not know you have. An asset inventory establishes what systems, devices and data exist, and every later activity — risk assessment, patching, monitoring, incident response — depends on that visibility.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A playbook gives step-by-step response guidance for a specific situation. It presumes you know what you are defending.",
+      "B": "An acceptable use policy governs user conduct. Important, but it protects nothing until you know the estate.",
+      "D": "A tabletop exercise rehearses a response plan that does not exist yet."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35712,12 +35756,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Likelihood represents the probability that a vulnerability will be exploited, indicating how likely it is that a threat event will occur.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Likelihood is the probability that a threat will actually materialise against a vulnerability. Combined with impact it produces the risk rating, and it is specifically the chance side of that calculation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Exposure factor is the percentage of an asset's value lost if the event occurs. It quantifies damage, not chance.",
+      "B": "Impact measures how badly the organisation is affected. Again the consequence side.",
+      "C": "Severity is generally used for the overall rating or the seriousness of a finding rather than its probability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35750,21 +35798,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "Failing to validate input length when copying data into a fixed-size array can overwrite adjacent memory, which is characteristic of a buffer overflow vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Copying unvalidated input into a fixed-size array in C lets data run past the end of the allocation and overwrite adjacent memory. That is the textbook buffer overflow, and it can lead to crashes or attacker-controlled execution.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sideloading installs an application from outside an official store. It is unrelated to memory handling.",
+      "B": "SQL injection manipulates database queries through input. No database is involved.",
+      "D": "Cross-site scripting injects script that runs in a browser. C applications do not render web pages to other users."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p359",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0849",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "An energy provider identifies a critical vulnerability in a control system that could lead to operational downtime.\nWhich of the following is the most likely reason this vulnerability is considered high priority despite no known exploits?",
     "choices": [
@@ -35788,12 +35840,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Vulnerabilities in control systems are prioritized based on potential impact, and the possibility of disrupting essential services like energy delivery makes the risk critical even without known exploits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Prioritisation weighs impact as well as exploitability. A control system failure in an energy provider stops essential service delivery with potential safety and regulatory consequences, so the consequence alone justifies high priority even with no exploit yet published.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Existing antivirus protection would be an argument for lowering priority, and control systems rarely support it anyway.",
+      "C": "Public internet exposure would raise priority further, but the question states the concern exists despite no known exploits, pointing at impact rather than reachability.",
+      "D": "A CVSS score below 7.0 would ordinarily reduce priority, which contradicts treating it as high."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p359",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.2,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35826,12 +35882,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Compression reduces the storage size of logs, allowing more data to remain in fast, accessible live storage for a longer period, which supports quicker search performance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The requirement is to keep 90 days searchable in fast storage. Compression shrinks the footprint so that full retention period fits on live media, preserving search speed instead of pushing older data to slow archive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Deduplication removes redundant copies. Log entries are largely unique, so the saving is small.",
+      "B": "Archiving moves data to slower, cheaper storage — the opposite of keeping it live and quickly searchable.",
+      "C": "Aggregation combines events into summaries, which loses the detail investigations depend on."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p360",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35864,12 +35924,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "EDR logs provide detailed visibility into endpoint activity, including process execution, script behavior, and command-line actions, making them most effective for identifying malicious PowerShell activity and potential system compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "PowerShell activity happens on the endpoint, and EDR records process creation, parent-child relationships, command lines and what the script subsequently did. That depth is what reveals whether the execution was an attempted compromise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SNMP logs report device health and performance metrics. They capture no process activity.",
+      "B": "Firewall logs show connections crossing the boundary. They would confirm an outbound call but not what the script did locally.",
+      "D": "IPS logs record traffic matching attack signatures. Legitimate-looking outbound HTTP from PowerShell may match nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p360",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35902,12 +35966,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Rerouting tasks to other processors provides fault tolerance, ensuring workloads continue processing even if a component fails, which supports system resilience and rapid recovery.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Resilience in a parallel processing system means the loss of one processor does not stop the work. Rerouting tasks to the remaining processors keeps the workload moving and lets recovery happen without an outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A backup system running only off hours provides no protection during the working day, when failures matter most.",
+      "C": "Limiting the number of processors reduces both capacity and redundancy, making failure more damaging.",
+      "D": "Journaling records changes to aid troubleshooting and recovery of data. It helps after the fact rather than keeping processing alive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35940,12 +36008,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Anomalous behavior recognition establishes a baseline of normal user and system activity and automatically detects deviations, enabling identification of potential security breaches at scale.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Stable, well-established patterns make a reliable baseline, and anomalous behaviour recognition compares ongoing activity against it automatically. That scales to a large workforce in a way individual monitoring cannot.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Insider threat monitoring names the concern rather than the detection method, and typically implies focused attention on specific individuals.",
+      "C": "Social engineering detection addresses manipulation attempts against staff, which is a different threat.",
+      "D": "Operational security policies state what staff should do. Policies define expectations; they detect nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -35953,8 +36025,8 @@
   {
     "id": "q0855",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following best explains the purpose of establishing the rules of engagement before conducting a third-party penetration test?",
     "choices": [
@@ -35978,12 +36050,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Rules of engagement define the scope, methods, and boundaries of the penetration test in advance, ensuring the assessment is conducted safely, legally, and without unintended disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rules of engagement set out in advance what the testers may do, to which systems, when, and what is out of bounds. Agreeing that beforehand keeps the test lawful, prevents unintended disruption and gives both sides a shared definition of success.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Pricing structures belong in the commercial contract, not the rules of engagement.",
+      "C": "Ownership of test results is a contractual matter usually settled in the master agreement.",
+      "D": "Penalties for missed deadlines are a service-level or contractual concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.632,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36025,12 +36101,17 @@
       "A",
       "C"
     ],
-    "explanation": "Bollards physically block vehicles from approaching or ramming the facility, while fencing establishes a secure perimeter that prevents unauthorized vehicle entry.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers stop vehicles. Fencing establishes the perimeter and denies casual vehicle approach, and bollards provide the reinforced barrier at entrances and building faces that stops a vehicle being driven at the structure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
+      "D": "Lighting improves visibility and deters. It presents no barrier.",
+      "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
+      "F": "Cameras record what happened. Detective rather than preventive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p362",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36063,21 +36144,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is fully operational with real-time data replication and identical systems, allowing immediate failover with minimal downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is precisely what defines it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery site is the generic umbrella term covering hot, warm and cold. It specifies no readiness level.",
+      "C": "A cold site has space and power but no equipment or data, taking days or weeks to bring up.",
+      "D": "A warm site has hardware and connectivity but data must be restored at failover, so recovery takes hours."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p362",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.944,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0858",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following is a consideration when patching mission-critical network edge routers for a critical vulnerability?",
     "choices": [
@@ -36101,21 +36186,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Redundancy ensures that traffic can be rerouted to backup routers during patching, allowing updates to be applied without disrupting critical network operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Patching an edge router means rebooting it, which drops every connection crossing it. Redundancy is what makes that acceptable — traffic reroutes through a peer while the first device is patched, so a critical fix does not require an outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Physical location affects who can access the device and how quickly staff can reach it. It is logistics rather than the patching consideration.",
+      "C": "Scalability is about handling growth in load. It does not govern whether a patch can be applied safely.",
+      "D": "Cost is a general factor in any work, but it does not determine whether a critical patch can be applied without disruption."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.143,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0859",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n• Checked the locks on perimeter doors\n• Located blind spots on security cameras\n• Attempted to open secured server rack doors Which of the following describes the type of test the penetration tester most likely conducted?",
     "choices": [
@@ -36139,21 +36228,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "The tester evaluated physical security controls such as locks, cameras, and server rack access, which characterizes a physical penetration test.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every activity listed — testing door locks, finding camera blind spots, trying server rack doors — probes physical barriers and surveillance rather than systems or networks. That is a physical penetration test.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defensive describes the blue team's role of protecting and detecting. A tester attacking controls is not defending.",
+      "C": "A compliance assessment checks controls against a standard using documentation and configuration review, not by trying doors.",
+      "D": "Offensive describes the general posture of penetration testing. The question asks for the specific type, which is physical."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0860",
-    "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A company uses its backups to recover from a ransomware attack.\nWhich of the following best guarantees that the backups are not infected?",
     "choices": [
@@ -36177,12 +36270,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Immutability ensures backups cannot be altered or encrypted after creation, preventing ransomware from infecting them and preserving clean recovery points.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Ransomware deliberately seeks out and encrypts backups so victims have no choice but to pay. Immutable backups cannot be modified or deleted for a defined period once written, so a clean recovery point survives even when the attacker has administrative access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Destruction removes data at end of life. It has nothing to do with protecting backups.",
+      "C": "Sanitisation renders data unrecoverable from media, again a disposal activity.",
+      "D": "Retention defines how long backups are kept. Keeping an encrypted backup longer does not make it usable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36215,12 +36312,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The board of directors provides strategic oversight of the cybersecurity program and sets the organization's risk appetite, guiding how risk is managed at a high level.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The board holds ultimate accountability for the organisation, so it provides oversight of the security programme and decides how much risk the organisation is willing to accept. Setting risk appetite is a governance decision at that level.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Government regulators impose external requirements. They do not set an individual organisation's appetite.",
+      "C": "Steering committees coordinate delivery and advise. They operate below the board and within the appetite it sets.",
+      "D": "Data owners make decisions about specific data sets, not about organisation-wide risk appetite."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36253,21 +36354,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Confidentiality ensures that sensitive information is accessible only to authorized individuals and is protected from unauthorized disclosure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality is the principle that information is accessible only to those authorised to see it. Preventing unauthorised disclosure is its definition within the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered without authorisation.",
+      "B": "Availability means systems and data are accessible when needed.",
+      "C": "Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0863",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "Which of the following is the most appropriate reason for a server technician to disable unused ports and services on an externally facing DNS server?",
     "choices": [
@@ -36291,21 +36396,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Disabling unused ports and services removes unnecessary entry points, reducing the attack surface and minimizing opportunities for exploitation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every listening port and running service is a way in that must be patched, configured and monitored. On an externally facing server that exposure is maximal, so disabling what is not needed removes those entry points entirely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reducing patching effort is a welcome side effect, but the security reason is removing exploitable exposure rather than saving work.",
+      "B": "Duplicating firewall blocks is defence in depth, but the server should be hardened regardless of what the firewall does.",
+      "C": "Conserving memory is a performance benefit, not a security one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0864",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20 Which of the following should the security administrator do?",
     "choices": [
@@ -36329,12 +36438,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "DNSSEC can require DNS traffic over both UDP and TCP on port 53. Updating the DNS rule to allow both protocols to the DNS server enables DNSSEC testing without disrupting existing DNS connectivity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "DNSSEC responses carry signatures and keys that frequently exceed what fits in a UDP datagram, so resolvers fall back to TCP on port 53. Replacing the existing DNS rule so it permits both UDP and TCP to the DNS server allows DNSSEC to be tested while ordinary DNS keeps working.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Inserting a rule above rule 1 changes evaluation order for traffic the first rule was written to handle, which risks disrupting existing connectivity.",
+      "B": "Replacing rule 1 modifies the wrong rule — rule 1 governs different traffic, not DNS to the DNS server.",
+      "D": "Placing the rule after rule 2 means the existing DNS rule matches first, so the new permission never takes effect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p365",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36367,12 +36480,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Monitoring configuration ensures that any changes to the hardened baseline are detected over time, helping maintain the intended security posture by identifying drift or unauthorized modifications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hardened appliance degrades through configuration drift — small changes accumulating over months. Monitoring the configuration against the hardened baseline detects that drift as it happens, so the posture can be restored before it matters.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Logging retention determines how long records are kept. It supports investigation without detecting drift.",
+      "C": "Least privilege limits what accounts can do. It reduces who can change the configuration but does not reveal changes that occur.",
+      "D": "Network segmentation limits reachability. It protects the appliance's surroundings rather than its settings."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36405,12 +36522,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Branch protection enforces controls such as required approvals, code reviews, and testing before changes can be merged into the production branch, preventing direct, unreviewed commits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The failure is code reaching production without review or testing. Branch protection enforces those requirements at the repository — no direct commits to the protected branch, mandatory reviews and passing checks before a merge — so the gate cannot be skipped.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Regression testing verifies existing functionality still works. It is one check that branch protection can require, not the control preventing unreviewed commits.",
+      "C": "An impact assessment evaluates the consequences of a change. It informs approval rather than enforcing it.",
+      "D": "Static analysis finds defects in code. Again a useful check to require, but it does not stop someone committing directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36443,12 +36564,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "In a hybrid cloud model, customers retain responsibility for managing their infrastructure configurations and deployments, including versioning infrastructure-as-code used to provision and maintain resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Under any cloud model the customer owns what it builds and configures. Infrastructure-as-code definitions are the customer's own artefacts, so versioning, reviewing and securing them is entirely their responsibility.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "PaaS identity and access management is largely provided and operated by the platform, though the customer configures its own users within it.",
+      "C": "Utility uptime — power and cooling at the facility — is wholly the provider's responsibility.",
+      "D": "SaaS scaling is handled by the provider as part of delivering the service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36481,12 +36606,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A partially-known environment provides limited information to the testers, simulating a scenario where some knowledge is available but not full visibility into the infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Giving testers some information but withholding full infrastructure detail is a partially known environment, often called grey box. It balances realism against efficiency by letting them skip pure discovery without handing over everything.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Passive reconnaissance is an information-gathering technique within a test, not the engagement type.",
+      "C": "Integrated testing has offensive and defensive teams deliberately working together throughout.",
+      "D": "Defensive testing is not a recognised penetration testing category; defence is the blue team's role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p367",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.773,
     "needsExplanation": false,
     "keyCorrected": false
@@ -36494,8 +36623,8 @@
   {
     "id": "q0869",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "Which of the following is a security benefit of an effective IT asset tracking system?",
     "choices": [
@@ -36519,21 +36648,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "An effective asset tracking system provides visibility into all authorized devices, making it easier to detect unknown or unmanaged devices that could pose security risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An asset tracking system establishes what should be on the network. Anything appearing that is not in the inventory stands out immediately as unauthorised or unmanaged, which is visibility no other control provides as directly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preventing data exfiltration is DLP's function. Asset tracking records devices rather than inspecting data.",
+      "C": "Automated root cause analysis is far beyond what an inventory does. It records what exists, not why something happened.",
+      "D": "Backup and recovery procedures are a separate discipline, informed by the inventory but not ensured by it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p367",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.52,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0870",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security engineer must create detections for file staging techniques on web-facing servers.\nThe company implements multiple tools and is most concerned about intellectual property theft.\nWhich of the following tools does the company most likely use?",
     "choices": [
@@ -36557,12 +36690,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Data loss prevention tools monitor and detect sensitive data such as intellectual property on endpoints and servers, identifying staging or unauthorized movement of files before exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File staging means collecting intellectual property into one place before exfiltrating it. DLP is the tool that understands content, so it can recognise sensitive files appearing somewhere they should not be and alert on the staging itself.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detections based on process names identify known malicious tooling. Staging often uses ordinary utilities and legitimate file operations.",
+      "C": "SOAR orchestrates and automates response workflows. It acts on detections rather than producing content-aware ones.",
+      "D": "An IPS inspecting cleartext payloads sees data in transit at the network. Staging happens on the server before anything is sent, and modern traffic is encrypted anyway."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p368",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false

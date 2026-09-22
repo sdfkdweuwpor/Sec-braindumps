@@ -5020,44 +5020,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0849",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "An energy provider identifies a critical vulnerability in a control system that could lead to operational downtime.\nWhich of the following is the most likely reason this vulnerability is considered high priority despite no known exploits?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "The system already has antivirus protection."
-      },
-      {
-        "key": "B",
-        "text": "The vulnerability could disrupt essential services."
-      },
-      {
-        "key": "C",
-        "text": "The control system is exposed to the public internet."
-      },
-      {
-        "key": "D",
-        "text": "The vulnerability has a CVSS score below 7.0."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Vulnerabilities in control systems are prioritized based on potential impact, and the possibility of disrupting essential services like energy delivery makes the risk critical even without known exploits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p359",
-    "needsReview": true,
-    "inferenceConfidence": 0.2,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0856",
     "domain": 1,
     "objective": "1.2",
@@ -5094,89 +5056,18 @@ export const domain1Questions = [
       "A",
       "C"
     ],
-    "explanation": "Bollards physically block vehicles from approaching or ramming the facility, while fencing establishes a secure perimeter that prevents unauthorized vehicle entry.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two layers stop vehicles. Fencing establishes the perimeter and denies casual vehicle approach, and bollards provide the reinforced barrier at entrances and building faces that stops a vehicle being driven at the structure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
+      "D": "Lighting improves visibility and deters. It presents no barrier.",
+      "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
+      "F": "Cameras record what happened. Detective rather than preventive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p362",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0858",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "Which of the following is a consideration when patching mission-critical network edge routers for a critical vulnerability?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Redundancy"
-      },
-      {
-        "key": "B",
-        "text": "Physical location"
-      },
-      {
-        "key": "C",
-        "text": "Scalability"
-      },
-      {
-        "key": "D",
-        "text": "Cost"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Redundancy ensures that traffic can be rerouted to backup routers during patching, allowing updates to be applied without disrupting critical network operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
-    "inferenceConfidence": 0.143,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0859",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n• Checked the locks on perimeter doors\n• Located blind spots on security cameras\n• Attempted to open secured server rack doors Which of the following describes the type of test the penetration tester most likely conducted?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Defensive"
-      },
-      {
-        "key": "B",
-        "text": "Physical"
-      },
-      {
-        "key": "C",
-        "text": "Compliance"
-      },
-      {
-        "key": "D",
-        "text": "Offensive"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "The tester evaluated physical security controls such as locks, cameras, and server rack access, which characterizes a physical penetration test.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p363",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5208,12 +5099,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Confidentiality ensures that sensitive information is accessible only to authorized individuals and is protected from unauthorized disclosure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidentiality is the principle that information is accessible only to those authorised to see it. Preventing unauthorised disclosure is its definition within the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered without authorisation.",
+      "B": "Availability means systems and data are accessible when needed.",
+      "C": "Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

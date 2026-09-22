@@ -6433,44 +6433,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0836",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following should an organization implement to avoid unnecessary liability after the end of a legal contract obligation with a third party?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Data encryption"
-      },
-      {
-        "key": "B",
-        "text": "Data classification"
-      },
-      {
-        "key": "C",
-        "text": "Data retention"
-      },
-      {
-        "key": "D",
-        "text": "Data inventory"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Data retention policies ensure data is only kept for the required period and then properly disposed of, reducing unnecessary legal liability after contractual obligations end.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p354",
-    "needsReview": true,
-    "inferenceConfidence": 0.357,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0837",
     "domain": 3,
     "objective": "3.4",
@@ -6498,89 +6460,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Using multiple cloud service providers introduces platform diversity, reducing the risk of a single point of failure and ensuring continued access to critical resources if one provider experiences an outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Using more than one cloud provider means no single provider's outage, breach or regional failure can take the application down. That deliberate avoidance of dependence on one platform is platform diversity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Load balancing across providers is technically possible but complex, and reducing overhead is not the security reason for the design.",
+      "C": "Parallel processing runs work concurrently for performance. It is not what multiple providers deliver.",
+      "D": "A hot site is a recovery facility. Selecting one is a different strategy from spreading across cloud providers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0841",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
-    "type": "single",
-    "question": "A security engineer must deploy a sensor to actively monitor a closed network. The company's enterprise SIEM is located in the cloud, and there is a strict policy against connecting this network to the internet.\nWhich of the following will best address these requirements?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Place the sensor on the edge router of the closed network, open port 22 on the management interface, and create a secure connection to the cloud SIEM while using an Implicit deny rule to restrict traffic."
-      },
-      {
-        "key": "B",
-        "text": "Connect the sensor to the closed network router's span port, install a one-way data diode, and pass traffic to the sensor on the enterprise network for inclusion in the enterprise log data."
-      },
-      {
-        "key": "C",
-        "text": "Install a log server on the closed network, point all network and system logs to the log server, and perform weekly manual audits of the logs to meet regulatory compliance objectives."
-      },
-      {
-        "key": "D",
-        "text": "Install the sensor on the internal closed network, add a firewall to the sensor stack, and connect the firewall to the corporate ISP while using strict ACLs to prevent egress traffic. •"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A data diode enables one-way data transfer from the closed network to the enterprise network, allowing monitoring data to be sent to the SIEM without exposing the closed network to inbound connections or internet access, preserving isolation while enabling visibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p356",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0846",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "single",
-    "question": "A new security team must develop necessary security program elements.\nWhich of the following steps should the security team take first?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Create a playbook."
-      },
-      {
-        "key": "B",
-        "text": "Develop an AUP."
-      },
-      {
-        "key": "C",
-        "text": "Build an asset inventory."
-      },
-      {
-        "key": "D",
-        "text": "Hold a tabletop exercise."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Building an asset inventory establishes visibility into all systems, devices, and data within the environment, which is foundational for identifying risks and developing effective security controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6612,12 +6502,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Rerouting tasks to other processors provides fault tolerance, ensuring workloads continue processing even if a component fails, which supports system resilience and rapid recovery.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Resilience in a parallel processing system means the loss of one processor does not stop the work. Rerouting tasks to the remaining processors keeps the workload moving and lets recovery happen without an outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A backup system running only off hours provides no protection during the working day, when failures matter most.",
+      "C": "Limiting the number of processors reduces both capacity and redundancy, making failure more damaging.",
+      "D": "Journaling records changes to aid troubleshooting and recovery of data. It helps after the fact rather than keeping processing alive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6650,13 +6544,101 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hot site is fully operational with real-time data replication and identical systems, allowing immediate failover with minimal downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is precisely what defines it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery site is the generic umbrella term covering hot, warm and cold. It specifies no readiness level.",
+      "C": "A cold site has space and power but no equipment or data, taking days or weeks to bring up.",
+      "D": "A warm site has hardware and connectivity but data must be restored at failover, so recovery takes hours."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p362",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.944,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0858",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following is a consideration when patching mission-critical network edge routers for a critical vulnerability?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Redundancy"
+      },
+      {
+        "key": "B",
+        "text": "Physical location"
+      },
+      {
+        "key": "C",
+        "text": "Scalability"
+      },
+      {
+        "key": "D",
+        "text": "Cost"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Patching an edge router means rebooting it, which drops every connection crossing it. Redundancy is what makes that acceptable — traffic reroutes through a peer while the first device is patched, so a critical fix does not require an outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Physical location affects who can access the device and how quickly staff can reach it. It is logistics rather than the patching consideration.",
+      "C": "Scalability is about handling growth in load. It does not govern whether a patch can be applied safely.",
+      "D": "Cost is a general factor in any work, but it does not determine whether a critical patch can be applied without disruption."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p363",
+    "needsReview": false,
+    "inferenceConfidence": 0.143,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0860",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "A company uses its backups to recover from a ransomware attack.\nWhich of the following best guarantees that the backups are not infected?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Immutability"
+      },
+      {
+        "key": "B",
+        "text": "Destruction"
+      },
+      {
+        "key": "C",
+        "text": "Sanitization"
+      },
+      {
+        "key": "D",
+        "text": "Retention"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Ransomware deliberately seeks out and encrypts backups so victims have no choice but to pay. Immutable backups cannot be modified or deleted for a defined period once written, so a clean recovery point survives even when the attacker has administrative access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Destruction removes data at end of life. It has nothing to do with protecting backups.",
+      "C": "Sanitisation renders data unrecoverable from media, again a disposal activity.",
+      "D": "Retention defines how long backups are kept. Keeping an encrypted backup longer does not make it usable."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p363",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6688,51 +6670,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a hybrid cloud model, customers retain responsibility for managing their infrastructure configurations and deployments, including versioning infrastructure-as-code used to provision and maintain resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Under any cloud model the customer owns what it builds and configures. Infrastructure-as-code definitions are the customer's own artefacts, so versioning, reviewing and securing them is entirely their responsibility.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "PaaS identity and access management is largely provided and operated by the platform, though the customer configures its own users within it.",
+      "C": "Utility uptime — power and cooling at the facility — is wholly the provider's responsibility.",
+      "D": "SaaS scaling is handled by the provider as part of delivering the service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0870",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "A security engineer must create detections for file staging techniques on web-facing servers.\nThe company implements multiple tools and is most concerned about intellectual property theft.\nWhich of the following tools does the company most likely use?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "EDR for indicator detections based on process names"
-      },
-      {
-        "key": "B",
-        "text": "DLP for scanning and identification on endpoints"
-      },
-      {
-        "key": "C",
-        "text": "SOAR for web crawling plugins and data validation"
-      },
-      {
-        "key": "D",
-        "text": "IPS for cleartext traffic inspection of network payloads"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Data loss prevention tools monitor and detect sensitive data such as intellectual property on endpoints and servers, identifying staging or unauthorized movement of files before exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p368",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },

@@ -6039,12 +6039,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is used to document identified risks, evaluate their impact and likelihood, and track mitigation efforts to manage those risks effectively over time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk register is the living record of identified risks — each with its owner, likelihood, impact, threshold and agreed treatment — so risks stay visible and tracked rather than being rediscovered each cycle.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "No document mitigates anything automatically. The register records decisions; people and controls implement them.",
+      "C": "Penetration testing produces findings that feed the register. It is not replaced by it.",
+      "D": "Compliance reports may draw on the register, but generating them is not its purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6077,12 +6081,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An internal self-assessment allows the organization to compare current controls against regulatory requirements and identify gaps without the higher cost of external engagements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A gap analysis compares current controls against the requirements the audit will test. Doing that internally uses staff who already know the environment and costs nothing beyond their time, which makes it the cheapest way to find the gaps before the auditor does.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Active reconnaissance probes systems for information. It is an attack technique, not a compliance comparison.",
+      "C": "A red team penetration test simulates a determined attacker. It is expensive and tests defences rather than control coverage against a standard.",
+      "D": "A tabletop exercise rehearses incident response. It measures readiness to respond, not compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p355",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6115,12 +6123,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sharing unique credentials is a clear insider threat warning sign because it violates access control policies and can lead to unauthorized access using legitimate accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sharing unique credentials destroys accountability — actions can no longer be attributed to an individual — and it is a deliberate violation of access control policy. That makes it a specific insider-threat indicator worth teaching staff to recognise and report.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IT employee upgrading an encryption library is routine maintenance and good practice.",
+      "C": "A finance user scrutinising a reimbursement form is exactly the control doing its job.",
+      "D": "Logging in abroad outside normal hours is an anomalous access indicator, but it is usually explained by travel rather than signalling an insider."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6153,12 +6165,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Annualized Rate of Occurrence represents the estimated frequency with which a specific threat or incident is expected to occur within a year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised rate of occurrence is the expected number of times an event happens in a year. It is the frequency term that turns a single loss figure into an annual one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RTO is the maximum tolerable downtime after an incident. It is a recovery target.",
+      "B": "ALE is the annual monetary loss, calculated by multiplying SLE by ARO.",
+      "C": "SLE is the monetary loss from one occurrence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6191,12 +6207,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Likelihood represents the probability that a vulnerability will be exploited, indicating how likely it is that a threat event will occur.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Likelihood is the probability that a threat will actually materialise against a vulnerability. Combined with impact it produces the risk rating, and it is specifically the chance side of that calculation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Exposure factor is the percentage of an asset's value lost if the event occurs. It quantifies damage, not chance.",
+      "B": "Impact measures how badly the organisation is affected. Again the consequence side.",
+      "C": "Severity is generally used for the overall rating or the seriousness of a finding rather than its probability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p358",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6229,12 +6249,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Anomalous behavior recognition establishes a baseline of normal user and system activity and automatically detects deviations, enabling identification of potential security breaches at scale.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Stable, well-established patterns make a reliable baseline, and anomalous behaviour recognition compares ongoing activity against it automatically. That scales to a large workforce in a way individual monitoring cannot.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Insider threat monitoring names the concern rather than the detection method, and typically implies focused attention on specific individuals.",
+      "C": "Social engineering detection addresses manipulation attempts against staff, which is a different threat.",
+      "D": "Operational security policies state what staff should do. Policies define expectations; they detect nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6242,8 +6266,8 @@ export const domain5Questions = [
   {
     "id": "q0855",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following best explains the purpose of establishing the rules of engagement before conducting a third-party penetration test?",
     "choices": [
@@ -6267,13 +6291,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Rules of engagement define the scope, methods, and boundaries of the penetration test in advance, ensuring the assessment is conducted safely, legally, and without unintended disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rules of engagement set out in advance what the testers may do, to which systems, when, and what is out of bounds. Agreeing that beforehand keeps the test lawful, prevents unintended disruption and gives both sides a shared definition of success.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Pricing structures belong in the commercial contract, not the rules of engagement.",
+      "C": "Ownership of test results is a contractual matter usually settled in the master agreement.",
+      "D": "Penalties for missed deadlines are a service-level or contractual concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p361",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.632,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0859",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n• Checked the locks on perimeter doors\n• Located blind spots on security cameras\n• Attempted to open secured server rack doors Which of the following describes the type of test the penetration tester most likely conducted?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Defensive"
+      },
+      {
+        "key": "B",
+        "text": "Physical"
+      },
+      {
+        "key": "C",
+        "text": "Compliance"
+      },
+      {
+        "key": "D",
+        "text": "Offensive"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Every activity listed — testing door locks, finding camera blind spots, trying server rack doors — probes physical barriers and surveillance rather than systems or networks. That is a physical penetration test.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defensive describes the blue team's role of protecting and detecting. A tester attacking controls is not defending.",
+      "C": "A compliance assessment checks controls against a standard using documentation and configuration review, not by trying doors.",
+      "D": "Offensive describes the general posture of penetration testing. The question asks for the specific type, which is physical."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p363",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6305,12 +6375,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The board of directors provides strategic oversight of the cybersecurity program and sets the organization's risk appetite, guiding how risk is managed at a high level.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The board holds ultimate accountability for the organisation, so it provides oversight of the security programme and decides how much risk the organisation is willing to accept. Setting risk appetite is a governance decision at that level.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Government regulators impose external requirements. They do not set an individual organisation's appetite.",
+      "C": "Steering committees coordinate delivery and advise. They operate below the board and within the appetite it sets.",
+      "D": "Data owners make decisions about specific data sets, not about organisation-wide risk appetite."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6343,12 +6417,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A partially-known environment provides limited information to the testers, simulating a scenario where some knowledge is available but not full visibility into the infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Giving testers some information but withholding full infrastructure detail is a partially known environment, often called grey box. It balances realism against efficiency by letting them skip pure discovery without handing over everything.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Passive reconnaissance is an information-gathering technique within a test, not the engagement type.",
+      "C": "Integrated testing has offensive and defensive teams deliberately working together throughout.",
+      "D": "Defensive testing is not a recognised penetration testing category; defence is the blue team's role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p367",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.773,
     "needsExplanation": false,
     "keyCorrected": false

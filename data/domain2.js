@@ -6857,12 +6857,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly sanitized and constrained, preventing malicious input such as SQL commands from being executed against a database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Input validation constrains user-supplied data to what the application actually expects, so text containing SQL syntax is rejected before it can reach the database interpreter. Removing that path is what prevents injection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DNS hijacking redirects name resolution. It happens at the network or registrar level, nowhere near application input.",
+      "B": "A time-of-check to time-of-use flaw is a timing race between validating something and using it. Validating harder does not close the window.",
+      "D": "Sideloading installs software from outside an official store. It is a device and distribution concern."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p356",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6895,12 +6899,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "ARP poisoning is a relatively simple attack that can be executed with readily available tools, making it most likely associated with an unskilled attacker rather than advanced or credential- based threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ARP poisoning tools are free and require no real understanding, and taking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points squarely at an unskilled attacker, typically a student.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
+      "C": "Credential stuffing replays breached username and password pairs against a login. It is a technique, not a threat actor.",
+      "D": "DMARC failure is an email authentication result, neither an actor nor related to ARP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p357",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6933,89 +6941,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Failing to validate input length when copying data into a fixed-size array can overwrite adjacent memory, which is characteristic of a buffer overflow vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Copying unvalidated input into a fixed-size array in C lets data run past the end of the allocation and overwrite adjacent memory. That is the textbook buffer overflow, and it can lead to crashes or attacker-controlled execution.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sideloading installs an application from outside an official store. It is unrelated to memory handling.",
+      "B": "SQL injection manipulates database queries through input. No database is involved.",
+      "D": "Cross-site scripting injects script that runs in a browser. C applications do not render web pages to other users."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p359",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0863",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "Which of the following is the most appropriate reason for a server technician to disable unused ports and services on an externally facing DNS server?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To reduce the need for patching"
-      },
-      {
-        "key": "B",
-        "text": "To block ports not currently blocked by the network firewall"
-      },
-      {
-        "key": "C",
-        "text": "To conserve system memory"
-      },
-      {
-        "key": "D",
-        "text": "To limit the attack surface area"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Disabling unused ports and services removes unnecessary entry points, reducing the attack surface and minimizing opportunities for exploitation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p364",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0864",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20 Which of the following should the security administrator do?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Insert the following rule above rule #1:"
-      },
-      {
-        "key": "B",
-        "text": "Replace rule #1 with the following:"
-      },
-      {
-        "key": "C",
-        "text": "Replace rule #2 with the following:"
-      },
-      {
-        "key": "D",
-        "text": "Insert the following rule between rule #2 and rule #3:"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "DNSSEC can require DNS traffic over both UDP and TCP on port 53. Updating the DNS rule to allow both protocols to the DNS server enables DNSSEC testing without disrupting existing DNS connectivity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p365",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7047,12 +6983,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Monitoring configuration ensures that any changes to the hardened baseline are detected over time, helping maintain the intended security posture by identifying drift or unauthorized modifications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hardened appliance degrades through configuration drift — small changes accumulating over months. Monitoring the configuration against the hardened baseline detects that drift as it happens, so the posture can be restored before it matters.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Logging retention determines how long records are kept. It supports investigation without detecting drift.",
+      "C": "Least privilege limits what accounts can do. It reduces who can change the configuration but does not reveal changes that occur.",
+      "D": "Network segmentation limits reachability. It protects the appliance's surroundings rather than its settings."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p366",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
