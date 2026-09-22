@@ -3274,12 +3274,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An acceptable use policy defines permitted and prohibited activities for using organizational resources, such as specifying that company printers may only be used for business-related documents. This ensures employees understand and agree to the printing restriction.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Restricting company printers to business documents is a rule about how employees may use company resources, which is precisely what an acceptable use policy contains. It is also the document staff sign, so the directive becomes enforceable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An information security policy states the organisation's high-level security intent. It is too abstract for a specific usage rule.",
+      "B": "A data classification policy defines sensitivity levels and handling requirements. It governs the data, not the printer.",
+      "C": "A business continuity plan covers keeping operations running through disruption. It has no bearing on everyday resource use."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p186",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.848,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3316,12 +3320,17 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When the CFO's personal relationship with the vendor could improperly influence (or appear to influence) company purchasing decisions, it creates a conflict of interest. The CFO should disclose the relationship and recuse themselves from the approval process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The CFO approved a large purchase from a company whose salesperson is a personal friend. Whether or not the decision was improper, the personal relationship could reasonably be seen to influence it, which is the definition of a conflict of interest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Rules of engagement define the scope and limits of a security test. They are unrelated to procurement.",
+      "C": "Due diligence is the investigation performed before entering a relationship. The problem is not lack of investigation but lack of independence.",
+      "D": "Contractual impact refers to consequences arising under an agreement. No contract term has been breached by the relationship itself.",
+      "E": "Reputational damage is a possible consequence if this becomes public. It is an outcome, not the situation being described."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p189",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.697,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3354,13 +3363,101 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk tolerance defines the threshold of risk the organization is willing to accept. Activities that exceed this threshold are deemed too risky to pursue during normal operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Risk tolerance is the level of risk the organisation is prepared to bear, which by definition marks the line beyond which an activity is too risky. Communicating where that line sits is exactly what the board needs to explain.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk assessment evaluates individual risks. It measures them rather than setting the threshold they are judged against.",
+      "B": "Risk acceptance is the decision to live with a particular risk. It is one treatment applied case by case.",
+      "C": "A risk register records identified risks and their treatments. It is the document, not the governing threshold."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p190",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.739,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0450",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Which of the following policies outlines what employees can and cannot do on company-issued devices?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Acceptable use"
+      },
+      {
+        "key": "B",
+        "text": "Data classification"
+      },
+      {
+        "key": "C",
+        "text": "Change management"
+      },
+      {
+        "key": "D",
+        "text": "Business continuity"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "An acceptable use policy is the document that states what employees may and may not do with company-issued equipment. It is written for users, signed by them, and is the reference point when conduct is questioned.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A data classification policy defines sensitivity levels and how each must be handled. It governs information, not device conduct.",
+      "C": "Change management governs how modifications to systems are approved and applied.",
+      "D": "A business continuity plan covers keeping operations running through disruption."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p195",
+    "needsReview": false,
+    "inferenceConfidence": 0.556,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0453",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Which of the following does a user often agree to when logging in to a domain?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "AUP"
+      },
+      {
+        "key": "B",
+        "text": "MAC"
+      },
+      {
+        "key": "C",
+        "text": "EULA"
+      },
+      {
+        "key": "D",
+        "text": "EAP"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Domain logon banners commonly present the acceptable use policy and require acknowledgement before access is granted. Agreeing to the organisation's rules of use at sign-in is what the user is consenting to.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MAC is mandatory access control, an access control model. It is not something a user agrees to.",
+      "C": "A EULA is the licence agreement for a piece of software, accepted at installation rather than at domain logon.",
+      "D": "EAP is an authentication framework used within network access protocols. It is a protocol, not an agreement."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p196",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

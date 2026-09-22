@@ -3146,8 +3146,8 @@ export const domain3Questions = [
   {
     "id": "q0424",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "An organization wants to increase an application's resiliency by configuring access to multiple servers in the organization's geographically dispersed environment.\nWhich of the following best describes this architecture?",
     "choices": [
@@ -3171,21 +3171,67 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A load-balanced architecture distributes incoming application traffic across multiple servers, potentially in different geographic locations, to optimize resource use, improve response times, and provide redundancy if any single server fails.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Configuring access to multiple servers so requests are shared between them, with unhealthy ones removed automatically, is load balancing. Spreading those servers geographically extends the same idea so a whole site can be lost without the application going down.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containerised describes how an application is packaged to run on a shared kernel. It concerns deployment, not distributing requests across servers.",
+      "B": "Multitenant means several customers share one instance. It is an efficiency model and concentrates rather than distributes risk.",
+      "D": "Virtualised means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p184",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0426",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following can prevent unauthorized viewing or disclosure of PII?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Masking"
+      },
+      {
+        "key": "B",
+        "text": "RBAC"
+      },
+      {
+        "key": "C",
+        "text": "Tokenization"
+      },
+      {
+        "key": "D",
+        "text": "Filtering"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Test data should look realistic without being real. Masking replaces the actual personal information with plausible substitute values, so the engineer can exercise the application fully while no genuine PII exists in the non-production environment to view or leak.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RBAC limits who can reach the data. The engineer legitimately needs access, and the real PII would still be sitting there.",
+      "C": "Tokenisation substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
+      "D": "Filtering restricts which records are returned. Fewer real records is still real PII."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p185",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0431",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
     "question": "An organization decides that most employees will work remotely. The existing VPN solution does not have adequate bandwidth, and the content filtering proxy is on premises.\nWhich of the following strategies will enable the business to securely achieve its objective while also being prepared to quickly scale for growth?",
     "choices": [
@@ -3209,12 +3255,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Secure Access Service Edge (SASE) solution delivers VPN, firewall, and content-filtering functions from the cloud, eliminating on-premises bottlenecks and easily scaling as remote usage grows when agents are deployed to endpoints.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SASE delivers VPN, firewalling and content filtering from the provider's cloud rather than from your data centre, so neither the VPN concentrator nor the on-premises proxy remains a bottleneck. Capacity scales with the service as the remote workforce grows.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A larger circuit and a NAT policy still funnel every remote user through the same on-premises devices. It buys time rather than removing the constraint.",
+      "C": "SOAR automates security response workflows. It improves incident handling and does nothing for remote access capacity.",
+      "D": "A secondary VPN and proxy at the disaster recovery site adds redundancy, not capacity, and doubles the hardware to maintain."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p187",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3247,12 +3297,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer distributes traffic across multiple, redundant systems and can automatically detect and reroute around a failed node. This active–active approach preserves the running system state and minimizes downtime far more efficiently than standby sites or periodic backups.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Load balancing across redundant active systems means that when one fails the others are already running and serving traffic. There is no restore step and no standby to bring up, which is why it maintains operation most efficiently at the moment of failure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hybrid cloud describes where workloads run. It is an architecture choice rather than a failure-handling mechanism.",
+      "B": "A cold site has space and power but no running systems. Recovery takes days.",
+      "C": "A full backup restores data after a failure. Restoration is slow and everything since the backup is lost."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p188",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3285,12 +3339,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data sovereignty concerns the legal and regulatory requirements governing data where it physically resides. Storing data at rest outside a country's borders subjects it to the foreign jurisdiction's laws, making this the key data sovereignty issue.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty concerns which country's laws govern data, which becomes a live question the moment the data physically resides somewhere other than its origin. Data at rest outside a country's borders is the situation the principle exists to address.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "How other countries classify their public data is a classification question, not a jurisdictional one over your data.",
+      "B": "Personally identifiable data while travelling concerns a person moving, not where data is stored.",
+      "C": "Health data shared between doctors in other nations raises privacy and transfer issues, but the sovereignty concept turns on where the data rests rather than who reads it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p192",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3323,51 +3381,17 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "802.1X enforces port-based authentication before assigning a device to a VLAN, ensuring only authorized users can join internal networks and preventing guests from accessing protected segments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The question asks specifically for better network authentication. 802.1X requires each device to authenticate before the switch or access point places it on any VLAN, so an unauthenticated guest simply cannot land on an internal segment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "VLAN ACLs restrict traffic between VLANs. That would contain the problem but is filtering, not authentication.",
+      "B": "A captive portal presents terms or a shared code to guests. It gates the guest network without authenticating devices to internal VLANs.",
+      "C": "DNSSEC signs DNS responses to prevent forgery. It has nothing to do with network access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p192",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0450",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following policies outlines what employees can and cannot do on company-issued devices?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Acceptable use"
-      },
-      {
-        "key": "B",
-        "text": "Data classification"
-      },
-      {
-        "key": "C",
-        "text": "Change management"
-      },
-      {
-        "key": "D",
-        "text": "Business continuity"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "An acceptable use policy defines the permitted and prohibited behaviors for employees when using company-issued devices, ensuring clear guidelines on what activities are allowed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p195",
-    "needsReview": true,
-    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3399,51 +3423,17 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption transforms data into ciphertext before transmission, ensuring that intercepted information remains unreadable to unauthorized parties and thus securing data in transit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data in transit is exposed to anyone able to observe the network path. Encryption converts it to ciphertext before it leaves, so interception yields nothing usable — which is why it is the standard protection for that state.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Obfuscation makes data harder to interpret without genuine cryptographic strength. A determined interceptor reverses it.",
+      "C": "Permission restrictions control who may access data in a system. They do not travel with it across a network.",
+      "D": "Hashing detects whether data changed. It provides integrity, not confidentiality, and cannot be reversed by the legitimate recipient either."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p195",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0453",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "Which of the following does a user often agree to when logging in to a domain?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "AUP"
-      },
-      {
-        "key": "B",
-        "text": "MAC"
-      },
-      {
-        "key": "C",
-        "text": "EULA"
-      },
-      {
-        "key": "D",
-        "text": "EAP"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "When users log in to a corporate domain, they're typically presented with an acceptable use policy outlining the rules and responsibilities for system use before gaining access. This ensures they agree to organizational guidelines up front.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p196",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

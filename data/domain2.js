@@ -3336,12 +3336,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Ransomware encrypts a user's files (displaying garbled text) and demands payment to restore access, matching the behavior described.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Files become unreadable and a message demands payment to get them back. Encrypting data and extorting the victim for the key is ransomware, and the company-wide instruction to disconnect is the standard containment response to stop it spreading.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A Trojan disguises itself as something benign to gain execution. That may well be how this arrived, but it describes the delivery, not the payload behaviour.",
+      "B": "A worm spreads itself automatically between hosts without user action. This required the employee to open an attachment.",
+      "D": "A virus attaches itself to files and spreads when they are run. It does not characteristically demand payment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p186",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3374,12 +3378,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A race condition occurs when an attacker exploits the timing window between operations, modifying the temporary field before the update completes, to alter the intended logic and gain unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker exploited the timing window between the temporary field being written and the update completing. Interfering in that gap between a value being set and being used is a race condition, specifically a time-of-check to time-of-use flaw.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Memory injection writes code into a running process's address space. The attack here manipulated a database field, not process memory.",
+      "C": "A malicious update means the update package itself is hostile. Here a legitimate update was subverted mid-flight.",
+      "D": "Side loading installs software from outside an official store. It is unrelated to database operations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p189",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3412,59 +3420,25 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attacker impersonated a trusted vendor via email to redirect funds to their own account, a hallmark of business email compromise. This social engineering tactic exploits legitimate business processes to fraudulently transfer money.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Someone posing as a known vendor redirected a legitimate payment to an attacker-controlled account, and the real vendor then chased the missing money. Abusing a trusted business relationship over email to divert funds is business email compromise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A phishing campaign is broad and usually aims at credentials or malware. This was a targeted fraud against an existing supplier relationship.",
+      "B": "Data exfiltration is the theft of information. Money was taken, not data.",
+      "C": "Pretext calling is social engineering by telephone. The requests arrived as messages."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p189",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.526,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0439",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A systems administrator wants to use a technical solution to explicitly define file permissions for the entire team.\nWhich of the following should the administrator implement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "ACL"
-      },
-      {
-        "key": "B",
-        "text": "Monitoring"
-      },
-      {
-        "key": "C",
-        "text": "Isolation"
-      },
-      {
-        "key": "D",
-        "text": "HIPS"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "An Access Control List (ACL) is a technical mechanism that explicitly assigns read, write, and execute permissions to specific users or groups for each file, providing granular control over file access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p190",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0441",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A security analyst receives an alert from a front-end web server connected to a database back end. The alert contains the following logs:\nWhich of the following attacks is occurring?",
     "choices": [
@@ -3488,12 +3462,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The log shows classic SQL injection techniques—tautology (1=1), comment injection ('--), and a time-based payload (dbms_lock.sleep(20)), all indicative of an SQL injection attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The log shows a tautology to make a condition always true, a comment marker to truncate the rest of the query, and a time-delay function to confirm execution blind. All three are SQL injection techniques — attacker input being interpreted as database code.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow writes past an allocated memory region. It targets memory handling, not query parsing.",
+      "B": "A brute-force attack tries many credentials until one works. These are crafted single requests, not repeated guesses.",
+      "D": "A replay attack resends previously captured valid traffic. This payload is newly constructed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p191",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3526,12 +3504,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An insider threat involves a trusted individual within the organization, such as a systems administrator, misusing their legitimate access to carry out malicious actions, like overwriting a supervisor's permissions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A systems administrator abusing their legitimate privileged access to act maliciously is the textbook insider threat. The access was granted for the job; the harm comes from how it was used.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Shadow IT is unsanctioned technology adopted for convenience. It is careless rather than deliberate.",
+      "B": "An unskilled attacker is an external actor using commodity tools. This person already has full administrative rights.",
+      "D": "A hacktivist attacks to advance a cause. No ideological motive is described."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p197",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

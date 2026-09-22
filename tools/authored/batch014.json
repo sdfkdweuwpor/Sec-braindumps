@@ -1,0 +1,242 @@
+{
+"q0424": {"objective":"3.4",
+ "explanation":"Configuring access to multiple servers so requests are shared between them, with unhealthy ones removed automatically, is load balancing. Spreading those servers geographically extends the same idea so a whole site can be lost without the application going down.",
+ "incorrect":{
+  "A":"Containerised describes how an application is packaged to run on a shared kernel. It concerns deployment, not distributing requests across servers.",
+  "B":"Multitenant means several customers share one instance. It is an efficiency model and concentrates rather than distributes risk.",
+  "D":"Virtualised means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."}},
+
+"q0425": {"objective":"4.5",
+ "explanation":"The management team specifically asked for server authentication. SPF publishes in DNS which mail servers are permitted to send for the domain, so a receiving system can verify the sending server is legitimate and is less likely to treat the message as spam.",
+ "incorrect":{
+  "B":"DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail and providing reporting. It is the policy layer above, and it needs SPF in place first.",
+  "C":"XDR correlates detection and response data across endpoints and networks. It is a security operations platform with no role in mail authentication.",
+  "D":"DNSSEC signs DNS responses so they cannot be forged. It protects the integrity of DNS itself, not the authorisation of mail servers."}},
+
+"q0426": {"objective":"3.3",
+ "explanation":"Test data should look realistic without being real. Masking replaces the actual personal information with plausible substitute values, so the engineer can exercise the application fully while no genuine PII exists in the non-production environment to view or leak.",
+ "incorrect":{
+  "B":"RBAC limits who can reach the data. The engineer legitimately needs access, and the real PII would still be sitting there.",
+  "C":"Tokenisation substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
+  "D":"Filtering restricts which records are returned. Fewer real records is still real PII."}},
+
+"q0427": {"objective":"1.2",
+ "explanation":"A digital signature is created with the sender's private key, which only they hold. Anyone can verify it with the matching public key, so the sender cannot credibly deny having sent the message — that is non-repudiation.",
+ "incorrect":{
+  "B":"Confidentiality means keeping content from unauthorised readers. A signed email is still readable by anyone unless it is also encrypted.",
+  "C":"Integrity means the message was not altered, which the signature does also prove. But the question asks specifically about denying authorship.",
+  "D":"Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterwards."}},
+
+"q0428": {"objective":"5.1",
+ "explanation":"Restricting company printers to business documents is a rule about how employees may use company resources, which is precisely what an acceptable use policy contains. It is also the document staff sign, so the directive becomes enforceable.",
+ "incorrect":{
+  "A":"An information security policy states the organisation's high-level security intent. It is too abstract for a specific usage rule.",
+  "B":"A data classification policy defines sensitivity levels and handling requirements. It governs the data, not the printer.",
+  "C":"A business continuity plan covers keeping operations running through disruption. It has no bearing on everyday resource use."}},
+
+"q0429": {"objective":"2.4",
+ "explanation":"Files become unreadable and a message demands payment to get them back. Encrypting data and extorting the victim for the key is ransomware, and the company-wide instruction to disconnect is the standard containment response to stop it spreading.",
+ "incorrect":{
+  "A":"A Trojan disguises itself as something benign to gain execution. That may well be how this arrived, but it describes the delivery, not the payload behaviour.",
+  "B":"A worm spreads itself automatically between hosts without user action. This required the employee to open an attachment.",
+  "D":"A virus attaches itself to files and spreads when they are run. It does not characteristically demand payment."}},
+
+"q0430": {"objective":"1.1",
+ "explanation":"Technical controls are implemented in hardware or software and act automatically. A firewall evaluates traffic against rules and permits or denies it without human involvement, which is exactly that category.",
+ "incorrect":{
+  "A":"A security guard is a person acting on the physical environment, making it a physical control.",
+  "B":"A policy is a documented management instrument, making it managerial.",
+  "C":"A fence is a physical barrier."}},
+
+"q0431": {"objective":"3.2",
+ "explanation":"SASE delivers VPN, firewalling and content filtering from the provider's cloud rather than from your data centre, so neither the VPN concentrator nor the on-premises proxy remains a bottleneck. Capacity scales with the service as the remote workforce grows.",
+ "incorrect":{
+  "B":"A larger circuit and a NAT policy still funnel every remote user through the same on-premises devices. It buys time rather than removing the constraint.",
+  "C":"SOAR automates security response workflows. It improves incident handling and does nothing for remote access capacity.",
+  "D":"A secondary VPN and proxy at the disaster recovery site adds redundancy, not capacity, and doubles the hardware to maintain."}},
+
+"q0432": {"objective":"4.4",
+ "explanation":"Any single system can be checked directly in its own logs. The reason to go to a SIEM is that it has normalised events from everywhere and can link them, revealing a pattern that spans multiple hosts and would be invisible from any one of them.",
+ "incorrect":{
+  "A":"Password reset attempts can be read from the directory or authentication server's own logs.",
+  "B":"DDoS monitoring is better served by network flow data and the perimeter devices experiencing the traffic.",
+  "C":"Assessing the scope of a privacy breach uses a SIEM as one input, but it is an investigative goal rather than the characteristic reason to review SIEM logs."}},
+
+"q0433": {"objective":"4.4",
+ "explanation":"Alert fatigue comes from volume, most of it noise. Tuning the rules — raising thresholds, suppressing known-benign patterns, refining conditions — reduces false positives so the alerts that remain are worth an analyst's attention.",
+ "incorrect":{
+  "A":"Penetration testing assesses whether systems can be breached. It generates findings rather than reducing alerts.",
+  "B":"Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
+  "D":"Log aggregation collects more data into one place. Without tuning it tends to increase the volume of alerts."}},
+
+"q0434": {"objective":"3.4",
+ "explanation":"Load balancing across redundant active systems means that when one fails the others are already running and serving traffic. There is no restore step and no standby to bring up, which is why it maintains operation most efficiently at the moment of failure.",
+ "incorrect":{
+  "A":"Hybrid cloud describes where workloads run. It is an architecture choice rather than a failure-handling mechanism.",
+  "B":"A cold site has space and power but no running systems. Recovery takes days.",
+  "C":"A full backup restores data after a failure. Restoration is slow and everything since the backup is lost."}},
+
+"q0435": {"objective":"2.3",
+ "explanation":"The attacker exploited the timing window between the temporary field being written and the update completing. Interfering in that gap between a value being set and being used is a race condition, specifically a time-of-check to time-of-use flaw.",
+ "incorrect":{
+  "B":"Memory injection writes code into a running process's address space. The attack here manipulated a database field, not process memory.",
+  "C":"A malicious update means the update package itself is hostile. Here a legitimate update was subverted mid-flight.",
+  "D":"Side loading installs software from outside an official store. It is unrelated to database operations."}},
+
+"q0436": {"objective":"2.2",
+ "explanation":"Someone posing as a known vendor redirected a legitimate payment to an attacker-controlled account, and the real vendor then chased the missing money. Abusing a trusted business relationship over email to divert funds is business email compromise.",
+ "incorrect":{
+  "A":"A phishing campaign is broad and usually aims at credentials or malware. This was a targeted fraud against an existing supplier relationship.",
+  "B":"Data exfiltration is the theft of information. Money was taken, not data.",
+  "C":"Pretext calling is social engineering by telephone. The requests arrived as messages."}},
+
+"q0437": {"objective":"5.3",
+ "explanation":"The CFO approved a large purchase from a company whose salesperson is a personal friend. Whether or not the decision was improper, the personal relationship could reasonably be seen to influence it, which is the definition of a conflict of interest.",
+ "incorrect":{
+  "A":"Rules of engagement define the scope and limits of a security test. They are unrelated to procurement.",
+  "C":"Due diligence is the investigation performed before entering a relationship. The problem is not lack of investigation but lack of independence.",
+  "D":"Contractual impact refers to consequences arising under an agreement. No contract term has been breached by the relationship itself.",
+  "E":"Reputational damage is a possible consequence if this becomes public. It is an outcome, not the situation being described."}},
+
+"q0438": {"objective":"5.2",
+ "explanation":"Risk tolerance is the level of risk the organisation is prepared to bear, which by definition marks the line beyond which an activity is too risky. Communicating where that line sits is exactly what the board needs to explain.",
+ "incorrect":{
+  "A":"A risk assessment evaluates individual risks. It measures them rather than setting the threshold they are judged against.",
+  "B":"Risk acceptance is the decision to live with a particular risk. It is one treatment applied case by case.",
+  "C":"A risk register records identified risks and their treatments. It is the document, not the governing threshold."}},
+
+"q0439": {"objective":"4.6",
+ "explanation":"An access control list attached to a file or directory names the users and groups and states exactly what each may do. Explicitly defining permissions per principal is what an ACL provides, and it is a technical mechanism rather than a policy statement.",
+ "incorrect":{
+  "B":"Monitoring observes what happens. It reports on access rather than defining it.",
+  "C":"Isolation separates a system from others. It restricts reachability, not file-level permissions.",
+  "D":"HIPS blocks malicious behaviour on a host. It defends the system rather than assigning permissions."}},
+
+"q0440": {"objective":"4.2",
+ "explanation":"Supply chain compromise happens before the hardware arrives, so the controls have to sit at the point of purchase. Reviewing the acquisition process lets the company vet suppliers, specify secure shipping and verify integrity on receipt — everything downstream is already too late.",
+ "incorrect":{
+  "A":"Sanitisation procedures govern how data is removed at end of life. That is the opposite end of the asset lifecycle.",
+  "C":"Change management governs modifications to systems already in service.",
+  "D":"Asset tracking records what the organisation owns. It tells you the server exists, not whether it arrived compromised."}},
+
+"q0441": {"objective":"2.4",
+ "explanation":"The log shows a tautology to make a condition always true, a comment marker to truncate the rest of the query, and a time-delay function to confirm execution blind. All three are SQL injection techniques — attacker input being interpreted as database code.",
+ "incorrect":{
+  "A":"A buffer overflow writes past an allocated memory region. It targets memory handling, not query parsing.",
+  "B":"A brute-force attack tries many credentials until one works. These are crafted single requests, not repeated guesses.",
+  "D":"A replay attack resends previously captured valid traffic. This payload is newly constructed."}},
+
+"q0442": {"objective":"1.1",
+ "explanation":"Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+ "incorrect":{
+  "A":"Corrective controls restore normal operation after an incident. Nothing has happened yet.",
+  "B":"Physical controls act on the physical environment. This is a configuration on a network device.",
+  "D":"Managerial controls are policies, assessments and oversight. This is a technical restriction."}},
+
+"q0443": {"objective":"3.3",
+ "explanation":"Data sovereignty concerns which country's laws govern data, which becomes a live question the moment the data physically resides somewhere other than its origin. Data at rest outside a country's borders is the situation the principle exists to address.",
+ "incorrect":{
+  "A":"How other countries classify their public data is a classification question, not a jurisdictional one over your data.",
+  "B":"Personally identifiable data while travelling concerns a person moving, not where data is stored.",
+  "C":"Health data shared between doctors in other nations raises privacy and transfer issues, but the sovereignty concept turns on where the data rests rather than who reads it."}},
+
+"q0444": {"objective":"4.1",
+ "explanation":"Code signing attaches a digital signature created with the developer's private key. Anyone installing the application can verify that signature and know the binaries are exactly what was published and have not been altered since — cryptographic assurance of integrity.",
+ "incorrect":{
+  "A":"Secure cookies protect session tokens in a browser. They concern session security, not application integrity.",
+  "B":"Input validation checks data supplied to the running application. It protects behaviour, not the distributed artefact.",
+  "C":"Static analysis finds defects in the source during development. It improves quality without proving the shipped binary is unmodified."}},
+
+"q0445": {"objective":"3.2",
+ "explanation":"The question asks specifically for better network authentication. 802.1X requires each device to authenticate before the switch or access point places it on any VLAN, so an unauthenticated guest simply cannot land on an internal segment.",
+ "incorrect":{
+  "A":"VLAN ACLs restrict traffic between VLANs. That would contain the problem but is filtering, not authentication.",
+  "B":"A captive portal presents terms or a shared code to guests. It gates the guest network without authenticating devices to internal VLANs.",
+  "C":"DNSSEC signs DNS responses to prevent forgery. It has nothing to do with network access."}},
+
+"q0446": {"objective":"4.6",
+ "explanation":"The problem is which devices are connecting, not who is connecting. Conditional access evaluates device state — enrolled, managed, compliant — as part of the access decision, so an unmanaged personal laptop is refused even with valid credentials.",
+ "incorrect":{
+  "A":"Multifactor authentication strengthens proof of identity. The employees are legitimate users; the issue is the hardware they are using.",
+  "C":"A cloud access security broker governs how cloud applications are used and what data moves. It is broader and not primarily a device admission control.",
+  "D":"DLP watches for sensitive data leaving the organisation. It may limit damage but does not stop the connection."}},
+
+"q0447": {"objective":"1.1",
+ "explanation":"A host-based intrusion prevention system does two things at once. It blocks malicious behaviour on the endpoint, which is preventive, and it records and alerts on what it saw, which is detective. Both functions are inherent to the product.",
+ "incorrect":{
+  "A":"Directive controls instruct people how to behave. Software issues no instructions to staff.",
+  "C":"Physical controls act on the physical environment.",
+  "D":"Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
+  "E":"Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."}},
+
+"q0448": {"objective":"1.2",
+ "explanation":"Retractable bollards are a vehicle barrier. Raised they physically stop a car from reaching the building, and because they are spaced posts rather than a wall, pedestrians walk straight between them — which is exactly the combination required.",
+ "incorrect":{
+  "A":"An access control vestibule controls people passing through a doorway one at a time. It does not stop vehicles.",
+  "B":"Fencing blocks vehicles but also blocks pedestrians unless gated, which reintroduces a controlled opening.",
+  "C":"Video surveillance records what happens. It is detective and stops nothing."}},
+
+"q0449": {"objective":"4.1",
+ "explanation":"Hardening an end user device means protecting what is on it and what runs on it. Full disk encryption makes the stored data unreadable if the device is lost, and endpoint protection defends the running system against malware and exploitation.",
+ "incorrect":{
+  "B":"Group-level permissions govern what users may access on shared resources. That is access management rather than device hardening.",
+  "C":"Account lockout limits password guessing against an account. It protects the credential, not the device.",
+  "E":"A proxy server filters outbound web traffic at the network. It is a network control sitting off the device.",
+  "F":"Segmentation divides the network into zones. Again a network measure rather than hardening the endpoint itself."}},
+
+"q0450": {"objective":"5.1",
+ "explanation":"An acceptable use policy is the document that states what employees may and may not do with company-issued equipment. It is written for users, signed by them, and is the reference point when conduct is questioned.",
+ "incorrect":{
+  "B":"A data classification policy defines sensitivity levels and how each must be handled. It governs information, not device conduct.",
+  "C":"Change management governs how modifications to systems are approved and applied.",
+  "D":"A business continuity plan covers keeping operations running through disruption."}},
+
+"q0451": {"objective":"4.9",
+ "explanation":"An unreachable site means the connection is not completing, so the first question is whether something is blocking it. Firewall logs show whether the outbound attempts were permitted, denied or dropped, which immediately separates a network policy problem from an application one.",
+ "incorrect":{
+  "B":"IDS logs record traffic matching attack signatures. A blocked connection is not an attack and may produce no IDS entry at all.",
+  "C":"Application logs record activity inside an application. If the connection never arrives, the application has nothing to log.",
+  "D":"System logs record operating system events. They would show a local failure, not a boundary device dropping traffic."}},
+
+"q0452": {"objective":"3.3",
+ "explanation":"Data in transit is exposed to anyone able to observe the network path. Encryption converts it to ciphertext before it leaves, so interception yields nothing usable — which is why it is the standard protection for that state.",
+ "incorrect":{
+  "B":"Obfuscation makes data harder to interpret without genuine cryptographic strength. A determined interceptor reverses it.",
+  "C":"Permission restrictions control who may access data in a system. They do not travel with it across a network.",
+  "D":"Hashing detects whether data changed. It provides integrity, not confidentiality, and cannot be reversed by the legitimate recipient either."}},
+
+"q0453": {"objective":"5.1",
+ "explanation":"Domain logon banners commonly present the acceptable use policy and require acknowledgement before access is granted. Agreeing to the organisation's rules of use at sign-in is what the user is consenting to.",
+ "incorrect":{
+  "B":"MAC is mandatory access control, an access control model. It is not something a user agrees to.",
+  "C":"A EULA is the licence agreement for a piece of software, accepted at installation rather than at domain logon.",
+  "D":"EAP is an authentication framework used within network access protocols. It is a protocol, not an agreement."}},
+
+"q0454": {"objective":"4.5",
+ "explanation":"The requirement spans two channels — email and removable media — and turns on the content being protected health information. Data loss prevention inspects content wherever it moves and enforces policy, which is the only control here that can recognise PHI and block it in both places.",
+ "incorrect":{
+  "B":"A centralised web proxy governs web traffic. It sees neither email attachments nor writes to a USB drive.",
+  "C":"Secure protocols protect data in transit from interception. They do nothing to stop an authorised user sending it somewhere they should not.",
+  "D":"EDR detects and responds to malicious activity on endpoints. It looks for threats, not for sensitive content leaving."}},
+
+"q0455": {"objective":"4.6",
+ "explanation":"The administrative passwords existed somewhere they could be read and leaked. A password vault stores privileged credentials encrypted, releases them only through controlled checkout, and supports automatic rotation — so there is no static plaintext copy to steal.",
+ "incorrect":{
+  "A":"Password management is the general discipline. The question asks what should be used, and the vault is the specific control.",
+  "B":"Password complexity makes credentials harder to guess. A leaked password is disclosed, not guessed.",
+  "C":"A password policy states the rules. A policy does not itself protect the stored credentials."}},
+
+"q0456": {"objective":"2.1",
+ "explanation":"A systems administrator abusing their legitimate privileged access to act maliciously is the textbook insider threat. The access was granted for the job; the harm comes from how it was used.",
+ "incorrect":{
+  "A":"Shadow IT is unsanctioned technology adopted for convenience. It is careless rather than deliberate.",
+  "B":"An unskilled attacker is an external actor using commodity tools. This person already has full administrative rights.",
+  "D":"A hacktivist attacks to advance a cause. No ideological motive is described."}},
+
+"q0457": {"objective":"4.8",
+ "explanation":"A tabletop exercise takes the team through a specific scenario against the actual plan, so everyone rehearses their role, the decision points and the handoffs. Preparing for a particular incident type is exactly what it is designed for.",
+ "incorrect":{
+  "A":"Situational awareness is general alertness to surroundings and context. It is a broad training topic rather than scenario rehearsal.",
+  "B":"A risk assessment identifies and evaluates risks. It helps decide which scenarios matter but does not prepare the team to execute.",
+  "C":"Root cause analysis determines why an incident happened. It occurs after the event."}}
+}

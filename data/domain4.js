@@ -5568,12 +5568,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SPF (Sender Policy Framework) lets the domain owner specify which mail servers are authorized to send email on its behalf. Publishing an SPF record in DNS helps recipient mail systems verify the sending server's legitimacy, reducing the chance that legitimate messages are marked as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The management team specifically asked for server authentication. SPF publishes in DNS which mail servers are permitted to send for the domain, so a receiving system can verify the sending server is legitimate and is less likely to treat the message as spam.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail and providing reporting. It is the policy layer above, and it needs SPF in place first.",
+      "C": "XDR correlates detection and response data across endpoints and networks. It is a security operations platform with no role in mail authentication.",
+      "D": "DNSSEC signs DNS responses so they cannot be forged. It protects the integrity of DNS itself, not the authorisation of mail servers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p185",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5606,12 +5610,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A SIEM's primary value is aggregating and correlating log data from numerous systems to identify patterns or anomalies that span multiple hosts, enabling detection of coordinated or sophisticated attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Any single system can be checked directly in its own logs. The reason to go to a SIEM is that it has normalised events from everywhere and can link them, revealing a pattern that spans multiple hosts and would be invisible from any one of them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Password reset attempts can be read from the directory or authentication server's own logs.",
+      "B": "DDoS monitoring is better served by network flow data and the perimeter devices experiencing the traffic.",
+      "C": "Assessing the scope of a privacy breach uses a SIEM as one input, but it is an investigative goal rather than the characteristic reason to review SIEM logs."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p188",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5619,8 +5627,8 @@ export const domain4Questions = [
   {
     "id": "q0433",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following would help reduce alert fatigue?",
     "choices": [
@@ -5644,13 +5652,59 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Adjusting and refining detection rules reduces false positives and irrelevant alerts, ensuring that security teams receive only meaningful notifications and thereby minimizing alert fatigue.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Alert fatigue comes from volume, most of it noise. Tuning the rules — raising thresholds, suppressing known-benign patterns, refining conditions — reduces false positives so the alerts that remain are worth an analyst's attention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration testing assesses whether systems can be breached. It generates findings rather than reducing alerts.",
+      "B": "Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
+      "D": "Log aggregation collects more data into one place. Without tuning it tends to increase the volume of alerts."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p188",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.471,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0439",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A systems administrator wants to use a technical solution to explicitly define file permissions for the entire team.\nWhich of the following should the administrator implement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "ACL"
+      },
+      {
+        "key": "B",
+        "text": "Monitoring"
+      },
+      {
+        "key": "C",
+        "text": "Isolation"
+      },
+      {
+        "key": "D",
+        "text": "HIPS"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "An access control list attached to a file or directory names the users and groups and states exactly what each may do. Explicitly defining permissions per principal is what an ACL provides, and it is a technical mechanism rather than a policy statement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Monitoring observes what happens. It reports on access rather than defining it.",
+      "C": "Isolation separates a system from others. It restricts reachability, not file-level permissions.",
+      "D": "HIPS blocks malicious behaviour on a host. It defends the system rather than assigning permissions."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p190",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5682,12 +5736,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Reviewing the acquisition process allows the company to vet vendors, enforce secure procurement controls, and verify hardware integrity before servers enter the environment, directly mitigating supply chain compromise risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Supply chain compromise happens before the hardware arrives, so the controls have to sit at the point of purchase. Reviewing the acquisition process lets the company vet suppliers, specify secure shipping and verify integrity on receipt — everything downstream is already too late.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sanitisation procedures govern how data is removed at end of life. That is the opposite end of the asset lifecycle.",
+      "C": "Change management governs modifications to systems already in service.",
+      "D": "Asset tracking records what the organisation owns. It tells you the server exists, not whether it arrived compromised."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p191",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5720,12 +5778,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Code signing uses digital signatures to verify that an application's binaries haven't been altered since they were signed, providing cryptographic assurance of the software's integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a digital signature created with the developer's private key. Anyone installing the application can verify that signature and know the binaries are exactly what was published and have not been altered since — cryptographic assurance of integrity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure cookies protect session tokens in a browser. They concern session security, not application integrity.",
+      "B": "Input validation checks data supplied to the running application. It protects behaviour, not the distributed artefact.",
+      "C": "Static analysis finds defects in the source during development. It improves quality without proving the shipped binary is unmodified."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p192",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.762,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5733,8 +5795,8 @@ export const domain4Questions = [
   {
     "id": "q0446",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A company recently set up a system for employees to access their files remotely. However, the IT team has noticed that some employees are using personal devices to access the system.\nWhich of the following security techniques could help mitigate the risk of unauthorized connections by personal devices?",
     "choices": [
@@ -5758,13 +5820,69 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Conditional Access lets you enforce device-based requirements, such as requiring devices to be enrolled, compliant, or managed, before granting access. By blocking or limiting connections from unmanaged personal devices, it prevents unauthorized endpoints from reaching the company's remote file system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The problem is which devices are connecting, not who is connecting. Conditional access evaluates device state — enrolled, managed, compliant — as part of the access decision, so an unmanaged personal laptop is refused even with valid credentials.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Multifactor authentication strengthens proof of identity. The employees are legitimate users; the issue is the hardware they are using.",
+      "C": "A cloud access security broker governs how cloud applications are used and what data moves. It is broader and not primarily a device admission control.",
+      "D": "DLP watches for sensitive data leaving the organisation. It may limit damage but does not stop the connection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p193",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.692,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0449",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "multi",
+    "question": "Which of the following are the best methods for hardening end user devices? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Full disk encryption"
+      },
+      {
+        "key": "B",
+        "text": "Group-level permissions"
+      },
+      {
+        "key": "C",
+        "text": "Account lockout"
+      },
+      {
+        "key": "D",
+        "text": "Endpoint protection"
+      },
+      {
+        "key": "E",
+        "text": "Proxy server"
+      },
+      {
+        "key": "F",
+        "text": "Segmentation"
+      }
+    ],
+    "correct": [
+      "A",
+      "D"
+    ],
+    "explanation": "Hardening an end user device means protecting what is on it and what runs on it. Full disk encryption makes the stored data unreadable if the device is lost, and endpoint protection defends the running system against malware and exploitation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Group-level permissions govern what users may access on shared resources. That is access management rather than device hardening.",
+      "C": "Account lockout limits password guessing against an account. It protects the credential, not the device.",
+      "E": "A proxy server filters outbound web traffic at the network. It is a network control sitting off the device.",
+      "F": "Segmentation divides the network into zones. Again a network measure rather than hardening the endpoint itself."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p194",
+    "needsReview": false,
+    "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5796,12 +5914,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When a site is unreachable, the first step is to verify whether network traffic is being blocked.\nFirewall logs will show if connection attempts to the external site are being denied or dropped, pinpointing whether the firewall is preventing access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An unreachable site means the connection is not completing, so the first question is whether something is blocking it. Firewall logs show whether the outbound attempts were permitted, denied or dropped, which immediately separates a network policy problem from an application one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IDS logs record traffic matching attack signatures. A blocked connection is not an attack and may produce no IDS entry at all.",
+      "C": "Application logs record activity inside an application. If the connection never arrives, the application has nothing to log.",
+      "D": "System logs record operating system events. They would show a local failure, not a boundary device dropping traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p195",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.879,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5834,12 +5956,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data Loss Prevention (DLP) solutions inspect content in motion and at rest, across email, web uploads, removable media, and more, and enforce policies to block or quarantine protected health information (PHI) from being transmitted to unapproved destinations. By deploying DLP agents on both servers and endpoints, the organization gains granular control over where sensitive data can flow, effectively preventing PH from being emailed or copied to unauthorized external media.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The requirement spans two channels — email and removable media — and turns on the content being protected health information. Data loss prevention inspects content wherever it moves and enforces policy, which is the only control here that can recognise PHI and block it in both places.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A centralised web proxy governs web traffic. It sees neither email attachments nor writes to a USB drive.",
+      "C": "Secure protocols protect data in transit from interception. They do nothing to stop an authorised user sending it somewhere they should not.",
+      "D": "EDR detects and responds to malicious activity on endpoints. It looks for threats, not for sensitive content leaving."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p196",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5872,12 +5998,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A centralized password vault securely stores and manages privileged credentials, encrypting them at rest, controlling access, and enabling strong rotation policies, so administrative passwords are never exposed in plaintext and can't be leaked online.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The administrative passwords existed somewhere they could be read and leaked. A password vault stores privileged credentials encrypted, releases them only through controlled checkout, and supports automatic rotation — so there is no static plaintext copy to steal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Password management is the general discipline. The question asks what should be used, and the vault is the specific control.",
+      "B": "Password complexity makes credentials harder to guess. A leaked password is disclosed, not guessed.",
+      "C": "A password policy states the rules. A policy does not itself protect the stored credentials."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p196",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5910,12 +6040,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A tabletop exercise walks the security team through a realistic incident scenario in a low-stakes environment, allowing them to practice roles, decisions, and coordination before a real event occurs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise takes the team through a specific scenario against the actual plan, so everyone rehearses their role, the decision points and the handoffs. Preparing for a particular incident type is exactly what it is designed for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Situational awareness is general alertness to surroundings and context. It is a broad training topic rather than scenario rehearsal.",
+      "B": "A risk assessment identifies and evaluates risks. It helps decide which scenarios matter but does not prepare the team to execute.",
+      "C": "Root cause analysis determines why an incident happened. It occurs after the event."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p197",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false

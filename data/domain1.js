@@ -2630,48 +2630,10 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0426",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following can prevent unauthorized viewing or disclosure of PII?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Masking"
-      },
-      {
-        "key": "B",
-        "text": "RBAC"
-      },
-      {
-        "key": "C",
-        "text": "Tokenization"
-      },
-      {
-        "key": "D",
-        "text": "Filtering"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Data masking replaces real PII with realistic but fictional values in non-production environments, ensuring testers can't view or disclose actual sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p185",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0427",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
     "question": "A user sends an email that includes a digital signature for validation.\nWhich of the following security concepts would ensure a user cannot deny they sent the email?",
     "choices": [
@@ -2695,12 +2657,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A digital signature provides cryptographic proof of origin, preventing the sender from denying they authored and sent the email - this is the essence of non-repudiation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A digital signature is created with the sender's private key, which only they hold. Anyone can verify it with the matching public key, so the sender cannot credibly deny having sent the message — that is non-repudiation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Confidentiality means keeping content from unauthorised readers. A signed email is still readable by anyone unless it is also encrypted.",
+      "C": "Integrity means the message was not altered, which the signature does also prove. But the question asks specifically about denying authorship.",
+      "D": "Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p186",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2733,12 +2699,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A firewall is a technical control enforced by hardware or software to monitor and filter network traffic, distinguishing it from physical (e.g., fence, security guard) or administrative (e.g., policy) controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Technical controls are implemented in hardware or software and act automatically. A firewall evaluates traffic against rules and permits or denies it without human involvement, which is exactly that category.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A security guard is a person acting on the physical environment, making it a physical control.",
+      "B": "A policy is a documented management instrument, making it managerial.",
+      "C": "A fence is a physical barrier."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p187",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2771,12 +2741,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Restricting IP access to the router's management interface proactively blocks unauthorized attempts to exploit vulnerabilities, making it a preventive control.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Corrective controls restore normal operation after an incident. Nothing has happened yet.",
+      "B": "Physical controls act on the physical environment. This is a configuration on a network device.",
+      "D": "Managerial controls are policies, assessments and oversight. This is a technical restriction."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p191",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2818,12 +2792,17 @@ export const domain1Questions = [
       "B",
       "F"
     ],
-    "explanation": "A host-based intrusion prevention system actively monitors and blocks malicious behavior on the endpoint (preventive control) while also alerting or logging suspicious events (detective control).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A host-based intrusion prevention system does two things at once. It blocks malicious behaviour on the endpoint, which is preventive, and it records and alerts on what it saw, which is detective. Both functions are inherent to the product.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Directive controls instruct people how to behave. Software issues no instructions to staff.",
+      "C": "Physical controls act on the physical environment.",
+      "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
+      "E": "Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p193",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2856,60 +2835,17 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Retractable bollards provide a strong physical barrier to stop unauthorized vehicles while remaining low enough (or lowered) to let pedestrians pass freely, making them ideal for controlling vehicle access without impeding foot traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Retractable bollards are a vehicle barrier. Raised they physically stop a car from reaching the building, and because they are spaced posts rather than a wall, pedestrians walk straight between them — which is exactly the combination required.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An access control vestibule controls people passing through a doorway one at a time. It does not stop vehicles.",
+      "B": "Fencing blocks vehicles but also blocks pedestrians unless gated, which reintroduces a controlled opening.",
+      "C": "Video surveillance records what happens. It is detective and stops nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p194",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.938,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0449",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "multi",
-    "question": "Which of the following are the best methods for hardening end user devices? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Full disk encryption"
-      },
-      {
-        "key": "B",
-        "text": "Group-level permissions"
-      },
-      {
-        "key": "C",
-        "text": "Account lockout"
-      },
-      {
-        "key": "D",
-        "text": "Endpoint protection"
-      },
-      {
-        "key": "E",
-        "text": "Proxy server"
-      },
-      {
-        "key": "F",
-        "text": "Segmentation"
-      }
-    ],
-    "correct": [
-      "A",
-      "D"
-    ],
-    "explanation": "Full disk encryption ensures that all data on the device remains confidential if the device is lost or stolen. Endpoint protection (antivirus/EDR) continuously defends against malware, exploits, and other active threats, directly hardening the device against attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p194",
-    "needsReview": true,
-    "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
   },
