@@ -1,6 +1,7 @@
 import { el } from '../dom.js';
 import * as store from '../store.js';
 import * as stats from '../stats.js';
+import { readinessCard } from '../components.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -59,6 +60,10 @@ export async function renderHome(view, { navigate }) {
       ? `${o.answered} answered · ${Math.round(o.accuracy * 100)}% lifetime accuracy · ${o.unseen} of ${o.total} still unseen`
       : `${o.total} questions in the bank. Nothing answered yet — start anywhere.`,
   ]));
+
+  if (o.answered) {
+    view.append(readinessCard(stats.readiness(ALL_QUESTIONS, attempts), { compact: true }));
+  }
 
   // --- Build your own -------------------------------------------------
   view.append(modeCard({

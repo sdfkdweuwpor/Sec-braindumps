@@ -224,4 +224,5 @@ export function emptyPoolReason(config, ctx) {
   return 'No questions match these filters.';
 }
 
+export { COVERAGE_TARGET } from './stats.js';
 export { DOMAINS, OBJECTIVES, ALL_QUESTIONS, QUESTIONS_BY_ID };
