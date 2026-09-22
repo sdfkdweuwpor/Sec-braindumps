@@ -6963,12 +6963,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Cybersecurity attestations, such as independent audit or assurance reports, provide third-party validation of a vendor's security controls and cybersecurity posture. This is stronger than relying only on vendor-provided self-assessments or internally generated reports.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Independence means the assessment did not come from the vendor's own staff. Attestations such as SOC 2 or ISO 27001 are produced by an external auditor examining the vendor's controls, which is what makes them credible evidence rather than self-report.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A questionnaire completed by the vendor's management is self-assessment by definition.",
+      "B": "A vulnerability scan report produced by the vendor's own team is again internally generated.",
+      "C": "Threat intelligence findings reported by the vendor tell you about threats they observed, not about their own control posture."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p398",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6976,8 +6980,8 @@ export const domain5Questions = [
   {
     "id": "q0953",
     "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "Which of the following describes a commitment to maintain service availability at or above a negotiated level to avoid penalties?",
     "choices": [
@@ -7001,21 +7005,109 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A service-level agreement is a formal commitment between a provider and customer that defines expected service availability, performance targets, and penalties or remedies if the negotiated level is not met.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement is the contractual commitment stating the availability level a provider must meet and the penalties or remedies that apply if they miss it. The link between a negotiated level and financial consequence is what makes it an SLA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A service-level objective is the internal target a provider aims for. It carries no contractual penalty.",
+      "C": "ARO is the annualised rate of occurrence, a risk frequency measure.",
+      "D": "ALE is the annualised loss expectancy, a monetary risk calculation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p399",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.861,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0954",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "Which of the following is a brute-force attempt to crack a user password?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Vulnerability"
+      },
+      {
+        "key": "B",
+        "text": "Threat"
+      },
+      {
+        "key": "C",
+        "text": "Asset"
+      },
+      {
+        "key": "D",
+        "text": "Risk"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A threat is a potential action or event that could cause harm. Someone attempting to brute-force a password is that action, as distinct from the weakness it targets or the asset it endangers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability is the weakness being exploited — here a weak or unprotected password.",
+      "C": "An asset is the thing of value, such as the account or the data behind it.",
+      "D": "Risk is the combination of threat, vulnerability and impact, expressed as likelihood of loss."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p400",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0956",
+    "domain": 5,
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
+    "type": "single",
+    "question": "Which of the following should an organization implement to address privacy concerns for a website that collects personal information?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "User opt-out"
+      },
+      {
+        "key": "B",
+        "text": "Browser history expiration"
+      },
+      {
+        "key": "C",
+        "text": "Cache-clearing option"
+      },
+      {
+        "key": "D",
+        "text": "Restricted cookies"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Privacy regulation turns on consent and individual control. Offering users a way to opt out of collection, processing or sharing gives them that control directly, which is the substantive privacy measure rather than a technical browser setting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Browser history expiration is a client-side setting. It does not affect what the site has already collected and stored.",
+      "C": "A cache-clearing option likewise only affects the user's local machine.",
+      "D": "Restricted cookies limit tracking somewhat, but they are one narrow technical measure rather than addressing consent for personal information generally."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p401",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0960",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "An external security assessment report indicates a high click rate on suspicious emails. The Chief Intelligence Security Officer (CISO) must reduce this behavior.\nWhich of the following should the CISO do first?",
     "choices": [
@@ -7039,89 +7131,17 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A phishing awareness campaign directly addresses the high click rate by training users to recognize suspicious emails, identify common phishing indicators, and respond appropriately.\nSecurity awareness training is the most immediate and relevant control for reducing phishing- related user behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A high click rate is a behaviour problem, and the fastest lever on behaviour is targeted awareness. A phishing campaign teaches staff the indicators and measures whether the rate falls, which is the first and most directly relevant action.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Updating the acceptable use policy changes what the document says. Staff who click suspicious links are not consulting policy first.",
+      "B": "A password manager helps with credential hygiene. It does not stop someone clicking a malicious link.",
+      "C": "Warning letters punish individuals without teaching anyone what to look for, and they discourage people from reporting mistakes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p403",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0961",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "The IT team in a company wants to make sure that login requests for all remote employees are stored for compliance purposes.\nWhich of the following concepts is the IT team implementing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Authorization"
-      },
-      {
-        "key": "B",
-        "text": "Availability"
-      },
-      {
-        "key": "C",
-        "text": "Authentication"
-      },
-      {
-        "key": "D",
-        "text": "Accounting"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Accounting records and tracks user activities, such as login attempts, session details, and access events. Storing remote employee login requests for compliance and auditing purposes is an example of accounting within the AAA security framework.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p403",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0962",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "A security analyst must select a metric to determine the required investment in technology based on past availability incidents.\nWhich of the following is the most relevant value to help select technology that mitigates risk and considers reliability?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "MTBF"
-      },
-      {
-        "key": "B",
-        "text": "RTO"
-      },
-      {
-        "key": "C",
-        "text": "ALE"
-      },
-      {
-        "key": "D",
-        "text": "RPO"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Mean Time Between Failures (MTBF) measures the average operating time between system or component failures. It is directly related to reliability and helps an organization evaluate technologies based on historical availability and failure patterns.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p404",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7153,12 +7173,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A statement of work defines the specific scope, responsibilities, deliverables, and conditions for the contracted work. It can explicitly require the third party to perform the work directly and prohibit subcontracting without prior authorization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A statement of work defines exactly what will be done, by whom and under what conditions. It is the instrument that can require the contracted party to perform the work themselves and prohibit subcontracting without prior written approval.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An NDA restricts disclosure of confidential information. It says nothing about who performs the work.",
+      "B": "An SLA commits the provider to measurable service levels.",
+      "D": "An MOU is a non-binding statement of intent and cannot impose enforceable delivery conditions."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p408",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7166,8 +7190,8 @@ export const domain5Questions = [
   {
     "id": "q0974",
     "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "Which of the following best assesses the compliance level of in-place IT processes and assets against a certification a company is pursuing?",
     "choices": [
@@ -7191,13 +7215,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A gap analysis compares the organization's current IT processes, controls, and assets against the requirements of a target certification or standard. It identifies areas that already comply and highlights deficiencies that must be addressed before certification.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A gap analysis compares the current state of processes, controls and assets against the requirements of the certification being pursued, producing a list of what already complies and what does not. That comparison against a defined standard is exactly what is being asked for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business impact analysis determines how badly the organisation suffers when a function is lost.",
+      "C": "A risk assessment evaluates threats and their likelihood and impact. It measures risk rather than compliance with a standard.",
+      "D": "Risk analysis is the evaluation step within that process, again measuring risk rather than certification readiness."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p408",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.63,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0980",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "Which of the following is an advantage of providing an external penetration tester with some information about the network rather than no information?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "It allows the tester to attack workstations as well as servers."
+      },
+      {
+        "key": "B",
+        "text": "It eliminates the need for further internal vulnerability assessments."
+      },
+      {
+        "key": "C",
+        "text": "It allows the test results to be more effective as they will focus on critical components."
+      },
+      {
+        "key": "D",
+        "text": "It ensures the discovery of all vulnerabilities that exist on the network."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Time spent on discovery is time not spent testing. Giving the tester some information lets them skip straight to the systems that matter, so the engagement produces deeper findings on critical components within the same budget.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Which systems are in scope is set by the rules of engagement, not by how much information is shared.",
+      "B": "An external test never removes the need for internal assessment; they examine different exposure.",
+      "D": "No test discovers every vulnerability. Claiming complete coverage is never accurate."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p411",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   }

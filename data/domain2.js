@@ -7514,8 +7514,8 @@ export const domain2Questions = [
   {
     "id": "q0946",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A user reports to the security team that they opened a phishing email. The security team observes multiple computers on the network are experiencing the blue screen of death (BSOD).\nWhich of the following is the most likely cause?",
     "choices": [
@@ -7539,12 +7539,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An attachment-based worm can be delivered through a phishing email and then self-propagate across the network. The fact that multiple computers are affected after the email was opened indicates malware spreading beyond the initial system, which is characteristic of a worm.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One user opened an attachment and then multiple machines crashed. Spreading from the initial host to others without further user action is self-propagation, which is what distinguishes a worm from a virus.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A browser-based virus would arrive through web browsing, not an email attachment, and would not spread itself across the network.",
+      "C": "A virus requires a user to run the infected file on each machine. It does not propagate on its own.",
+      "D": "A browser-based worm propagates through web technologies. The stated vector here is an email attachment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p397",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7577,51 +7581,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Removable devices can carry malware directly into systems, including isolated or air-gapped environments that do not have internet access. This makes them a common attack vector for bypassing network-based defenses.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Removable media carries code physically, so it reaches systems that have no network path at all. That is what makes it uniquely dangerous — air-gapped and isolated environments defended entirely by network controls have nothing standing in its way.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Being shared between systems without scanning is a contributing practice rather than the reason the vector works.",
+      "C": "Removable devices do not rely on encrypted transfer protocols; they present as storage.",
+      "D": "Modern operating systems do not default removable media to read-only, and read-only access would still allow malicious files to be copied off."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p397",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0948",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A security engineer needs to view encrypted traffic at the edge of the network.\nWhich of the following tools is best for this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Proxy"
-      },
-      {
-        "key": "B",
-        "text": "Firewall"
-      },
-      {
-        "key": "C",
-        "text": "Endpoint detection and response (EDR)"
-      },
-      {
-        "key": "D",
-        "text": "Data loss prevention (DLP)"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A proxy can terminate and inspect encrypted sessions at the network edge, allowing security tools to view traffic contents before forwarding it. This is commonly used for TLS/SSL inspection and web traffic monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p397",
-    "needsReview": true,
-    "inferenceConfidence": 0.593,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7653,89 +7623,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hallucinations can cause an LLM to generate inconsistent or inaccurate responses, even when given the same prompt. This happens because LLM outputs are probabilistic and may vary depending on model behavior during generation or training-related conditions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Large language models generate output probabilistically, so the same prompt can produce different answers, and some of those answers are confidently wrong. That variability and fabrication is what the term hallucination describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Injection means crafting input to manipulate the model's instructions. It requires a deliberate adversarial prompt.",
+      "C": "Bias is systematic skew in outputs reflecting the training data. It produces consistently slanted answers rather than varying ones.",
+      "D": "Evasion is an attack technique aimed at avoiding detection by a model."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p398",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0954",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "Which of the following is a brute-force attempt to crack a user password?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Vulnerability"
-      },
-      {
-        "key": "B",
-        "text": "Threat"
-      },
-      {
-        "key": "C",
-        "text": "Asset"
-      },
-      {
-        "key": "D",
-        "text": "Risk"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A brute-force password-cracking attempt is a threat because it is a malicious action that can exploit weak authentication and potentially compromise a user account.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p400",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0957",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A security analyst needs to analyze the pattern of a threat actor to document the steps used in an incident.\nWhich of the following is best suited for this exercise?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "MITRE Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK)"
-      },
-      {
-        "key": "B",
-        "text": "Questionnaires"
-      },
-      {
-        "key": "C",
-        "text": "Open Worldwide Application Security Project (OWASP) Top 10"
-      },
-      {
-        "key": "D",
-        "text": "Diamond Model of Intrusion Analysis"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "MITRE ATT&CK documents adversary behavior through tactics and techniques, making it well suited for mapping the sequence of actions a threat actor used during an incident.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p402",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7776,12 +7674,17 @@ export const domain2Questions = [
       "A",
       "F"
     ],
-    "explanation": "Least privilege limits users to only the permissions and cloud services required for their roles, reducing unauthorized deployment or configuration of services. Application allow listing restricts users to approved applications and services, helping prevent shadow IT and reducing the introduction of unapproved or vulnerable software.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Shadow IT starts when users can provision or install whatever they like. Least privilege removes the permissions to stand up unapproved cloud services, and an application allow list ensures only vetted software runs — together closing both routes by which users introduce unmanaged risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A trusted platform module stores cryptographic keys in hardware on a device. It has no bearing on cloud service policy.",
+      "C": "Jailbreaking is a vulnerability, not a control.",
+      "D": "An access control list governs access to a specific resource. It is narrower than the permission model least privilege describes.",
+      "E": "File integrity monitoring detects changes to protected files. It is detective and does not prevent unapproved services."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p408",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.338,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7814,12 +7717,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A hacktivist is primarily motivated by ideological, political, social, or philosophical causes. Such actors use cyberattacks to promote a belief, draw attention to an issue, or disrupt organizations they oppose.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hacktivist attacks in service of a belief — political, social or philosophical — rather than for money or intelligence. The cause is the payoff, and attacks are chosen for the attention they bring to it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat is defined by their position inside the organisation, usually acting on grievance or personal gain.",
+      "B": "Nation-states act for strategic advantage: espionage, disruption, positioning.",
+      "D": "Organised crime is motivated by profit above all else."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p409",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7852,13 +7759,59 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A zero-day vulnerability is a previously unknown security flaw for which an effective patch was not available when attackers began exploiting it. Active exploitation before the vendor can release a fix is characteristic of a zero-day vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day is a flaw that was unknown to the vendor and had no patch available when attackers began exploiting it. Active exploitation preceding the fix is the defining characteristic, which is exactly the situation described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection is a well-known vulnerability class with established defences.",
+      "C": "A race condition is a timing flaw between a check and its use. It describes a defect type rather than the patch timeline.",
+      "D": "Use after free is a specific memory management defect, again a category rather than a disclosure state."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p410",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0981",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "type": "single",
+    "question": "A user's account is flagged for accessing internal servers from multiple countries within a 30- minute period. The user reports they were at the office during that time.\nWhich of the following does this activity most likely indicate?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The user's credentials are being used in a scheduled automation tool."
+      },
+      {
+        "key": "B",
+        "text": "The user's VPN connection is cycling through regional endpoints."
+      },
+      {
+        "key": "C",
+        "text": "The user's credentials are actually shared credentials, and it is a false positive."
+      },
+      {
+        "key": "D",
+        "text": "The user's credentials are compromised and are being used by an attacker."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Logins from several countries within half an hour describe a journey nobody can make, and the user confirms they were in the office throughout. Impossible travel with the legitimate user accounted for points squarely at someone else using their credentials.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A scheduled automation tool would run from consistent, known infrastructure rather than rotating through multiple countries.",
+      "B": "A VPN cycling through regional endpoints is possible in principle, but the user would be aware of it and it would not accompany access to internal servers this way.",
+      "C": "Shared credentials would explain concurrent use, but the user states they were at the office and nothing suggests the account is shared."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p411",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   }

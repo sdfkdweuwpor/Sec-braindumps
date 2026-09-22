@@ -5702,82 +5702,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0950",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "An organization discovers its product's internal specifications were posted on internet forums and social media.\nWhich of the following should the organization use to manage such incidents?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Classification"
-      },
-      {
-        "key": "B",
-        "text": "Encoding"
-      },
-      {
-        "key": "C",
-        "text": "Compliance"
-      },
-      {
-        "key": "D",
-        "text": "Obfuscation"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Classification helps define the sensitivity level of information and the handling requirements for protecting it. Internal product specifications should be classified appropriately so the organization can identify exposure, prioritize response actions, and manage the incident according to the data's sensitivity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p398",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0965",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "Which of the following is used as a control on physical and digital assets and serves as a signal for employees to identify security requirements when accessing and manipulating data?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Obfuscation"
-      },
-      {
-        "key": "B",
-        "text": "Encryption"
-      },
-      {
-        "key": "C",
-        "text": "Labeling"
-      },
-      {
-        "key": "D",
-        "text": "Masking"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Labeling identifies the classification and handling requirements of physical and digital assets.\nSecurity labels signal to employees how data should be accessed, stored, shared, and otherwise handled according to organizational security policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p405",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0969",
     "domain": 1,
     "objective": "1.3",
@@ -5805,12 +5729,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A change freeze reduces the risk that configuration changes, software updates, or deployments will introduce failures during a period of high customer activity. For a bank, maintaining service availability during a major holiday is critical because an outage could affect large numbers of customers and financial transactions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Changes are the most common cause of self-inflicted outages, and a holiday is when customer transaction volume peaks and support staffing is thinnest. Freezing changes removes that self-inflicted risk precisely when an outage would affect the most people.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Enabling staff to take leave is a scheduling convenience rather than the reason for a formal freeze on critical systems.",
+      "B": "Heightened attack levels would argue for more patching, not less change.",
+      "C": "Reduced third-party support is a genuine contributing factor, but the outcome the bank is protecting is customer-facing availability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p406",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5843,51 +5771,17 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A backout plan defines the steps required to restore the system to its previous stable state when a change fails. Using it minimizes disruption and helps return the enterprise system to normal operation quickly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The change has failed, so the priority is returning the system to its previous working state. The backout plan is the pre-agreed set of steps for doing exactly that, which is why change management requires one before approval.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Testing results are produced before implementation to predict the outcome. They do not help once the change has already failed.",
+      "C": "Impact analysis assesses what a change might affect. It informs approval beforehand.",
+      "D": "Ownership approval authorises the change. That step is already complete."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p409",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0980",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "Which of the following is an advantage of providing an external penetration tester with some information about the network rather than no information?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "It allows the tester to attack workstations as well as servers."
-      },
-      {
-        "key": "B",
-        "text": "It eliminates the need for further internal vulnerability assessments."
-      },
-      {
-        "key": "C",
-        "text": "It allows the test results to be more effective as they will focus on critical components."
-      },
-      {
-        "key": "D",
-        "text": "It ensures the discovery of all vulnerabilities that exist on the network."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Providing limited information enables the penetration tester to focus effort on important systems, network segments, or applications instead of spending significant time on reconnaissance. This can make the assessment more efficient and produce more relevant findings for critical components.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p411",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5919,12 +5813,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Safety controls should fail open when human life is a consideration. During emergencies or system failures, mechanisms such as physical access controls should allow people to exit safely rather than remain locked and potentially endanger occupants.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When human life is at stake the control must not trap anyone. Safety controls fail open so that doors release and people can evacuate during a power failure or system fault, accepting a security compromise in exchange for not endangering occupants.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Remote access points failing closed is sensible for security, but it does not address the human life consideration the question raises.",
+      "B": "Logging controls failing open would mean losing the audit trail during a failure, which is the wrong default.",
+      "D": "Logical security controls failing closed is correct practice generally, but again it is not the life-safety principle being asked about."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p411",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

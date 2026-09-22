@@ -12477,13 +12477,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data sanitization is primarily performed during recovery to ensure affected systems, storage, or media are cleaned before being restored to normal operation. This helps prevent compromised or residual data from reintroducing risk after an incident.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery is where affected systems and media are cleaned and returned to service. Sanitising them at that point ensures residual malicious data or artefacts are not carried back into production alongside the restored systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Lessons learned reviews the response after everything is resolved. Nothing technical is performed.",
+      "B": "Preparation happens before any incident, building plans, tooling and training.",
+      "C": "Containment limits the spread while the incident is live. Sanitising at that stage would destroy evidence still needed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p396",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0948",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security engineer needs to view encrypted traffic at the edge of the network.\nWhich of the following tools is best for this task?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Proxy"
+      },
+      {
+        "key": "B",
+        "text": "Firewall"
+      },
+      {
+        "key": "C",
+        "text": "Endpoint detection and response (EDR)"
+      },
+      {
+        "key": "D",
+        "text": "Data loss prevention (DLP)"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Encrypted traffic cannot be read in flight. A proxy terminates the TLS session at the edge, inspects the plaintext, then re-encrypts it onward — which is the standard mechanism for giving security tools visibility into encrypted web traffic.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A firewall filters by address, port and increasingly by application, but it does not terminate TLS to reveal contents.",
+      "C": "EDR sees activity on the endpoint, where data is already decrypted, but it is not at the network edge.",
+      "D": "DLP inspects content for sensitive data. It needs something like a proxy to decrypt the traffic first."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p397",
+    "needsReview": false,
+    "inferenceConfidence": 0.593,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12515,21 +12561,67 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Sanitizing or wiping removes accessible data, degaussing is effective for magnetic hard drives, and shredding provides physical destruction. Using these disposal methods ensures data on SSDs and HDDs cannot be recovered after the drives are retired.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SSDs and HDDs fail differently, so no single method covers both. Wiping addresses accessible data, degaussing works on magnetic platters, and shredding physically destroys what remains — applying them together is what guarantees nothing is recoverable from either drive type.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Three overwrite passes is reasonable for magnetic disks but unreliable on SSDs, where wear levelling leaves blocks the overwrite never reaches.",
+      "C": "Smashing with a hammer is uncontrolled and frequently leaves chips or platter fragments large enough to recover data from.",
+      "D": "A consumer magnet is nowhere near strong enough to degauss a drive, and it has no effect at all on flash memory."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p399",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0957",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A security analyst needs to analyze the pattern of a threat actor to document the steps used in an incident.\nWhich of the following is best suited for this exercise?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "MITRE Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK)"
+      },
+      {
+        "key": "B",
+        "text": "Questionnaires"
+      },
+      {
+        "key": "C",
+        "text": "Open Worldwide Application Security Project (OWASP) Top 10"
+      },
+      {
+        "key": "D",
+        "text": "Diamond Model of Intrusion Analysis"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "MITRE ATT&CK catalogues adversary tactics and techniques observed in real intrusions, so an analyst can map each action taken during an incident to a named technique. That produces a structured, comparable record of the steps the actor used.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Questionnaires gather information from people. They document opinions, not adversary behaviour.",
+      "C": "The OWASP Top 10 lists common web application risks. It covers vulnerability classes rather than attacker sequences.",
+      "D": "The Diamond Model is a genuine intrusion analysis framework, but it relates adversary, capability, infrastructure and victim rather than documenting a step-by-step technique sequence."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p402",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0959",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security administrator investigates an actively compromised server.\nWhich of the following should the administrator do first to preserve the current state of the server?",
     "choices": [
@@ -12553,13 +12645,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A bit-level copy creates a forensic image of the server's storage, preserving allocated data, deleted data, file-system metadata, and unallocated space for later analysis without altering the original evidence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Preserving the state means capturing everything before it changes. A bit-level forensic image copies allocated data, deleted data, slack space and filesystem metadata exactly as they stand, which nothing else on the list achieves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Packet captures record traffic in flight. They preserve network activity, not the server's state.",
+      "B": "Vulnerability scans probe the system, which alters it and produces findings rather than evidence.",
+      "C": "Automated reports summarise existing data. They preserve nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p402",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0961",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "The IT team in a company wants to make sure that login requests for all remote employees are stored for compliance purposes.\nWhich of the following concepts is the IT team implementing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Authorization"
+      },
+      {
+        "key": "B",
+        "text": "Availability"
+      },
+      {
+        "key": "C",
+        "text": "Authentication"
+      },
+      {
+        "key": "D",
+        "text": "Accounting"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Accounting is the third element of AAA: recording what authenticated users did. Storing login requests for later audit and compliance review is accounting data being retained for exactly that purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Authorisation decides what an authenticated user may do.",
+      "B": "Availability means systems are reachable when needed.",
+      "C": "Authentication proves identity at the point of access. The logging of those events afterwards is accounting."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p403",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12591,13 +12729,106 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Chain of custody documents how evidence is collected, handled, transferred, stored, and accessed throughout an investigation. Maintaining it preserves the integrity and traceability of evidence and helps demonstrate that the evidence has not been altered or improperly handled.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the unbroken documented record of who handled each item of evidence, when, and what they did with it. Without it the evidence can be challenged as altered, which undermines the entire investigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Change management governs how system modifications are approved and applied.",
+      "B": "Availability means systems are reachable when needed. It is not an evidentiary property.",
+      "D": "Reporting communicates findings at the end. It depends on the evidence being sound in the first place."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p404",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0964",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A new startup hires 100 remote and local developers. The startup is concerned with protecting its intellectual property. They ask the security team to ensure the IAM configuration is strong but flexible enough to account for remote workers.\nWhich of the following will ensure secure access and quick onboarding for new hires?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Implementing LDAP with a cloud directory"
+      },
+      {
+        "key": "B",
+        "text": "Provisioning software MFA"
+      },
+      {
+        "key": "C",
+        "text": "Issuing hardware TOTP tokens"
+      },
+      {
+        "key": "D",
+        "text": "Deploying an IPSec VPN tunnel"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A cloud directory integrated over LDAP gives one central identity store that both local and remote developers authenticate against. New hires are provisioned once and immediately have consistent access everywhere, which is what delivers both security and fast onboarding.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Software MFA strengthens authentication but presumes a directory already exists to authenticate against.",
+      "C": "Hardware TOTP tokens must be procured, shipped and replaced, which is the opposite of quick onboarding for remote staff.",
+      "D": "An IPSec VPN provides network access. It is a connectivity control rather than an identity and access management configuration."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p404",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0968",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following is the best way to sanitize an SSD to prevent the exposure of sensitive data while allowing the drive to be reused?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Secure erasing"
+      },
+      {
+        "key": "B",
+        "text": "Degaussing"
+      },
+      {
+        "key": "C",
+        "text": "Formatting"
+      },
+      {
+        "key": "D",
+        "text": "File wiping"
+      },
+      {
+        "key": "E",
+        "text": "Encrypting"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "SSDs use wear levelling, so a conventional overwrite never touches every physical block. The drive's built-in secure erase command instructs the controller to purge all storage cells including spare blocks, rendering data unrecoverable while the drive stays usable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Degaussing destroys magnetic fields. Flash memory stores charge, not magnetism, so it has no effect.",
+      "C": "Formatting rebuilds the filesystem structure and leaves the underlying data intact.",
+      "D": "File wiping overwrites specific files, which on an SSD may leave earlier copies in blocks the controller has remapped.",
+      "E": "Encrypting protects data going forward but leaves previously written plaintext on the drive unless crypto-erase is used."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p406",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12629,12 +12860,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "FIDO2 passkeys provide passwordless, phishing-resistant authentication using public-key cryptography and can integrate with built-in device biometrics. This removes the need to manage separate passwords and authenticator-generated codes while improving both security and the employee login experience.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "FIDO2 passkeys replace both the password and the separate authenticator code with a single device-held credential unlocked by biometrics. Authentication becomes passwordless, phishing-resistant through domain binding, and simpler for the user — which satisfies every stated requirement at once.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SMS one-time passwords are weaker than the app-based codes already in use and are vulnerable to SIM swapping.",
+      "C": "SAML federation gives single sign-on across applications, which helps convenience but leaves the password and second factor in place.",
+      "D": "PKI with smart cards is strong but requires issuing and maintaining physical cards and readers, which worsens rather than smooths the experience."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p407",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12667,50 +12902,58 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Acquisition is the forensic investigation stage in which data is collected and forensic images are created from storage media or other digital sources. The goal is to obtain an accurate copy of the original evidence for subsequent examination and analysis.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Acquisition is the stage where evidence is collected, which for digital media means creating a forensically sound image of the original. Everything after it works from that copy so the original stays untouched.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preservation keeps evidence unaltered from that point onward. It protects what acquisition has captured.",
+      "C": "Reporting documents findings at the end of the investigation.",
+      "D": "E-discovery is the legal process of identifying and producing electronically stored information for litigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p407",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0981",
+    "id": "q0979",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A user's account is flagged for accessing internal servers from multiple countries within a 30- minute period. The user reports they were at the office during that time.\nWhich of the following does this activity most likely indicate?",
+    "question": "Which of the following best explains the purpose of a tabletop exercise?",
     "choices": [
       {
         "key": "A",
-        "text": "The user's credentials are being used in a scheduled automation tool."
+        "text": "To help identify weaknesses in existing response plans"
       },
       {
         "key": "B",
-        "text": "The user's VPN connection is cycling through regional endpoints."
+        "text": "To perform a live cyberattack on production systems"
       },
       {
         "key": "C",
-        "text": "The user's credentials are actually shared credentials, and it is a false positive."
+        "text": "To prevent security incidents from occurring"
       },
       {
         "key": "D",
-        "text": "The user's credentials are compromised and are being used by an attacker."
+        "text": "To reduce the need for follow-up documentation"
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
-    "explanation": "Logins from multiple countries within a very short period indicate impossible travel, a common sign of credential compromise. Since the user confirms being at the office, the activity strongly suggests an attacker is using the account from other locations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise walks the team through a scenario in discussion, and what it produces is a list of unclear responsibilities, missing contacts and steps that do not work. Exposing those weaknesses while nothing is actually on fire is its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Performing a live attack on production is a penetration test or red team exercise, not a discussion-based one.",
+      "C": "No exercise prevents incidents; it improves how well you handle them.",
+      "D": "Tabletops generate follow-up documentation — findings and plan revisions — rather than reducing it."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p411",
-    "needsReview": true,
+    "source": "SY0-701_en.pdf#p410",
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12743,12 +12986,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SAML is an open standard designed for federated identity and web-based single sign-on. It allows organizations to exchange authentication and authorization information between independent identity providers and service providers without requiring continuous synchronization of user accounts across separate directories.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SAML is an open standard, so it ties the organisation to no single vendor. It is built for federation between independent identity and service providers, and it passes assertions at sign-in rather than requiring directories to be kept in sync — satisfying all three requirements.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "OAuth is an authorisation framework issuing access tokens. It delegates permissions rather than federating authentication.",
+      "C": "OpenID Connect does provide federated authentication and is a close contender, but SAML is the established enterprise federation standard for web SSO across independent directories.",
+      "D": "LDAP is a directory protocol. Using it across organisations would require exactly the account synchronisation the requirements rule out."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p412",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12756,8 +13003,8 @@ export const domain4Questions = [
   {
     "id": "q0984",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "A popular, third-party cryptographic library receives a security advisory. A company's security manager directs the security team to determine if their new human resources application contains the affected library.\nWhich of the following should the security team use?",
     "choices": [
@@ -12781,12 +13028,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Software composition analysis identifies third-party and open-source components used within an application and compares them against known vulnerability information. It is therefore the appropriate method for determining whether the HR application contains the affected cryptographic library.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Software composition analysis inventories the third-party and open-source components inside an application and matches them against known vulnerability data. Determining whether a specific library is present in the HR application is precisely what it does.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Root cause analysis determines why an incident happened. No incident has occurred.",
+      "B": "A dynamic analysis scan tests the running application for exploitable behaviour. It would not enumerate which libraries are compiled in.",
+      "D": "A penetration test attempts to breach the application. It might exploit the flaw but is a slow and indirect way to answer an inventory question."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p412",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.65,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12794,8 +13045,8 @@ export const domain4Questions = [
   {
     "id": "q0985",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "A security administrator receives an email regarding a newly disclosed exploit. The administrator is unsure if the exploit is affecting the company.\nWhich of the following actions should the security administrator take?",
     "choices": [
@@ -12819,12 +13070,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A vulnerability scan can determine whether systems within the organization contain the vulnerability associated with the newly disclosed exploit. This provides a safe, systematic way to identify affected assets and determine whether remediation is required.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The question is whether the organisation's systems carry the vulnerable component. A vulnerability scan checks versions and configurations across the estate and reports which hosts match, answering that safely and systematically.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing packet captures shows traffic that occurred. It would only help if the exploit had already been attempted.",
+      "B": "Running proof-of-concept code against production systems risks causing the very damage you are investigating.",
+      "C": "Security dashboards summarise existing alerts. A newly disclosed exploit that has not been used against you generates none."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p413",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false

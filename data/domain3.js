@@ -7273,40 +7273,44 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0956",
+    "id": "q0950",
     "domain": 3,
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following should an organization implement to address privacy concerns for a website that collects personal information?",
+    "question": "An organization discovers its product's internal specifications were posted on internet forums and social media.\nWhich of the following should the organization use to manage such incidents?",
     "choices": [
       {
         "key": "A",
-        "text": "User opt-out"
+        "text": "Classification"
       },
       {
         "key": "B",
-        "text": "Browser history expiration"
+        "text": "Encoding"
       },
       {
         "key": "C",
-        "text": "Cache-clearing option"
+        "text": "Compliance"
       },
       {
         "key": "D",
-        "text": "Restricted cookies"
+        "text": "Obfuscation"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Providing a user opt-out mechanism allows individuals to control whether their personal information is collected, processed, or shared, directly addressing privacy and consent concerns.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Managing an exposure incident starts with knowing how sensitive the leaked material is. Classification assigns that sensitivity in advance along with handling rules, so the organisation can judge severity, notification obligations and response priority when something appears publicly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Encoding transforms data into a different representation for transport or storage. It is not a security control.",
+      "C": "Compliance is meeting external requirements. It is an obligation rather than a management tool for this.",
+      "D": "Obfuscation makes content harder to interpret. It might protect the specifications beforehand but does not manage the incident."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p401",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "source": "SY0-701_en.pdf#p398",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7338,51 +7342,101 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Each company combines its existing private cloud with the newly created public cloud environment, resulting in a hybrid cloud architecture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Each company now runs a private cloud alongside a shared public cloud deployment, and the two are used together for the project. Combining private and public cloud in one architecture is by definition hybrid.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A community cloud is shared infrastructure serving several organisations with common requirements. This is a public deployment, not a shared community platform.",
+      "B": "Public alone ignores the private clouds each company continues to operate.",
+      "C": "Private alone ignores the new public deployment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p402",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0964",
+    "id": "q0962",
     "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A new startup hires 100 remote and local developers. The startup is concerned with protecting its intellectual property. They ask the security team to ensure the IAM configuration is strong but flexible enough to account for remote workers.\nWhich of the following will ensure secure access and quick onboarding for new hires?",
+    "question": "A security analyst must select a metric to determine the required investment in technology based on past availability incidents.\nWhich of the following is the most relevant value to help select technology that mitigates risk and considers reliability?",
     "choices": [
       {
         "key": "A",
-        "text": "Implementing LDAP with a cloud directory"
+        "text": "MTBF"
       },
       {
         "key": "B",
-        "text": "Provisioning software MFA"
+        "text": "RTO"
       },
       {
         "key": "C",
-        "text": "Issuing hardware TOTP tokens"
+        "text": "ALE"
       },
       {
         "key": "D",
-        "text": "Deploying an IPSec VPN tunnel"
+        "text": "RPO"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Integrating LDAP with a cloud directory provides centralized identity and access management for both local and remote employees. It enables consistent authentication, centralized account provisioning, and efficient onboarding while allowing developers to securely access organizational resources from different locations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The decision is about reliability based on past availability incidents. Mean time between failures expresses how long equipment typically runs before failing, which is the metric that lets competing technologies be compared on how often they will let you down.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RTO is the maximum tolerable downtime. It is a business target rather than a property of a technology.",
+      "C": "ALE is a monetary risk figure. It helps justify spend overall but does not compare product reliability.",
+      "D": "RPO concerns acceptable data loss, which is unrelated to component failure rates."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p404",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0965",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "Which of the following is used as a control on physical and digital assets and serves as a signal for employees to identify security requirements when accessing and manipulating data?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Obfuscation"
+      },
+      {
+        "key": "B",
+        "text": "Encryption"
+      },
+      {
+        "key": "C",
+        "text": "Labeling"
+      },
+      {
+        "key": "D",
+        "text": "Masking"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A label attached to an asset states its classification and therefore the handling rules that apply. It is the visible signal that tells an employee how a given document, drive or system must be accessed, stored and shared.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Obfuscation makes content harder to interpret. It conceals rather than signals.",
+      "B": "Encryption protects the content itself. It does not communicate handling requirements.",
+      "D": "Masking hides parts of a value for display."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p405",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7414,12 +7468,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Load balancing distributes incoming traffic across multiple available servers. Using both the primary and standby servers to process requests immediately increases the environment's capacity to handle higher traffic volumes while reducing the workload on any single server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The standby server is sitting idle. Placing a load balancer in front and sending traffic to both immediately doubles the capacity available, without rebuilding anything or changing how the servers work.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Automated failover keeps the standby idle until the primary fails. It improves availability but adds no capacity.",
+      "C": "Clustering makes servers act as one logical unit, which is more complex to set up than simply balancing across two existing hosts.",
+      "D": "Containers change how applications are packaged and deployed. That is a re-architecture, not the simplest immediate step."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p405",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7452,54 +7510,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A web application firewall (WAF) filters and blocks malicious HTTP/HTTPS requests before they reach the web application. It can detect and mitigate application-layer attacks that generate large volumes of harmful requests and cause website performance problems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attack arrived as a flood of malicious application-layer requests. A web application firewall inspects each HTTP request against attack patterns and rate rules and drops the malicious ones before they reach the application, which is what would have prevented the impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IPSec encrypts and authenticates network traffic between endpoints. It does not inspect web request content.",
+      "B": "TLS encrypts the connection. Malicious requests arrive perfectly well over TLS.",
+      "C": "SDN manages network connectivity programmatically. It is an architecture rather than an application-layer defence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p406",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0968",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following is the best way to sanitize an SSD to prevent the exposure of sensitive data while allowing the drive to be reused?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Secure erasing"
-      },
-      {
-        "key": "B",
-        "text": "Degaussing"
-      },
-      {
-        "key": "C",
-        "text": "Formatting"
-      },
-      {
-        "key": "D",
-        "text": "File wiping"
-      },
-      {
-        "key": "E",
-        "text": "Encrypting"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Secure erasing is the appropriate sanitization method for an SSD because it removes stored data across the drive, including areas that normal file deletion or formatting may not reliably clear, while keeping the device usable for reuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p406",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7532,50 +7552,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Platform diversity reduces the risk of a single vulnerability or exploit compromising the entire environment.\nWhen different technologies, operating systems, or platforms are used, an attack that successfully affects one technology may not affect other components, improving overall resilience.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "If every system runs the same technology, one vulnerability in it exposes the entire estate at once. Platform diversity means an exploit that works against one product leaves the systems running something else untouched, so a single flaw cannot take everything down.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A longer vendor relationship is a commercial benefit of concentration, which is the opposite of diversity.",
+      "C": "Economies of scale come from buying more of the same thing, again the opposite of diversity.",
+      "D": "Easier upgrades from having more options is a procurement convenience rather than the security rationale."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p410",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0979",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "single",
-    "question": "Which of the following best explains the purpose of a tabletop exercise?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To help identify weaknesses in existing response plans"
-      },
-      {
-        "key": "B",
-        "text": "To perform a live cyberattack on production systems"
-      },
-      {
-        "key": "C",
-        "text": "To prevent security incidents from occurring"
-      },
-      {
-        "key": "D",
-        "text": "To reduce the need for follow-up documentation"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A tabletop exercise is a discussion-based simulation used to evaluate how effectively personnel would respond to a hypothetical incident. It helps reveal gaps, unclear responsibilities, communication issues, and other weaknesses in existing incident response and business continuity plans.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p410",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

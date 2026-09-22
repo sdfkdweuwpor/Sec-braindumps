@@ -1,0 +1,283 @@
+{
+"q0945": {"objective":"4.8",
+ "explanation":"Recovery is where affected systems and media are cleaned and returned to service. Sanitising them at that point ensures residual malicious data or artefacts are not carried back into production alongside the restored systems.",
+ "incorrect":{
+  "A":"Lessons learned reviews the response after everything is resolved. Nothing technical is performed.",
+  "B":"Preparation happens before any incident, building plans, tooling and training.",
+  "C":"Containment limits the spread while the incident is live. Sanitising at that stage would destroy evidence still needed."}},
+
+"q0946": {"objective":"2.4",
+ "explanation":"One user opened an attachment and then multiple machines crashed. Spreading from the initial host to others without further user action is self-propagation, which is what distinguishes a worm from a virus.",
+ "incorrect":{
+  "B":"A browser-based virus would arrive through web browsing, not an email attachment, and would not spread itself across the network.",
+  "C":"A virus requires a user to run the infected file on each machine. It does not propagate on its own.",
+  "D":"A browser-based worm propagates through web technologies. The stated vector here is an email attachment."}},
+
+"q0947": {"objective":"2.2",
+ "explanation":"Removable media carries code physically, so it reaches systems that have no network path at all. That is what makes it uniquely dangerous — air-gapped and isolated environments defended entirely by network controls have nothing standing in its way.",
+ "incorrect":{
+  "A":"Being shared between systems without scanning is a contributing practice rather than the reason the vector works.",
+  "C":"Removable devices do not rely on encrypted transfer protocols; they present as storage.",
+  "D":"Modern operating systems do not default removable media to read-only, and read-only access would still allow malicious files to be copied off."}},
+
+"q0948": {"objective":"4.5",
+ "explanation":"Encrypted traffic cannot be read in flight. A proxy terminates the TLS session at the edge, inspects the plaintext, then re-encrypts it onward — which is the standard mechanism for giving security tools visibility into encrypted web traffic.",
+ "incorrect":{
+  "B":"A firewall filters by address, port and increasingly by application, but it does not terminate TLS to reveal contents.",
+  "C":"EDR sees activity on the endpoint, where data is already decrypted, but it is not at the network edge.",
+  "D":"DLP inspects content for sensitive data. It needs something like a proxy to decrypt the traffic first."}},
+
+"q0949": {"objective":"5.3",
+ "explanation":"Independence means the assessment did not come from the vendor's own staff. Attestations such as SOC 2 or ISO 27001 are produced by an external auditor examining the vendor's controls, which is what makes them credible evidence rather than self-report.",
+ "incorrect":{
+  "A":"A questionnaire completed by the vendor's management is self-assessment by definition.",
+  "B":"A vulnerability scan report produced by the vendor's own team is again internally generated.",
+  "C":"Threat intelligence findings reported by the vendor tell you about threats they observed, not about their own control posture."}},
+
+"q0950": {"objective":"3.3",
+ "explanation":"Managing an exposure incident starts with knowing how sensitive the leaked material is. Classification assigns that sensitivity in advance along with handling rules, so the organisation can judge severity, notification obligations and response priority when something appears publicly.",
+ "incorrect":{
+  "B":"Encoding transforms data into a different representation for transport or storage. It is not a security control.",
+  "C":"Compliance is meeting external requirements. It is an obligation rather than a management tool for this.",
+  "D":"Obfuscation makes content harder to interpret. It might protect the specifications beforehand but does not manage the incident."}},
+
+"q0951": {"objective":"2.3",
+ "explanation":"Large language models generate output probabilistically, so the same prompt can produce different answers, and some of those answers are confidently wrong. That variability and fabrication is what the term hallucination describes.",
+ "incorrect":{
+  "B":"Injection means crafting input to manipulate the model's instructions. It requires a deliberate adversarial prompt.",
+  "C":"Bias is systematic skew in outputs reflecting the training data. It produces consistently slanted answers rather than varying ones.",
+  "D":"Evasion is an attack technique aimed at avoiding detection by a model."}},
+
+"q0952": {"objective":"4.2",
+ "explanation":"SSDs and HDDs fail differently, so no single method covers both. Wiping addresses accessible data, degaussing works on magnetic platters, and shredding physically destroys what remains — applying them together is what guarantees nothing is recoverable from either drive type.",
+ "incorrect":{
+  "B":"Three overwrite passes is reasonable for magnetic disks but unreliable on SSDs, where wear levelling leaves blocks the overwrite never reaches.",
+  "C":"Smashing with a hammer is uncontrolled and frequently leaves chips or platter fragments large enough to recover data from.",
+  "D":"A consumer magnet is nowhere near strong enough to degauss a drive, and it has no effect at all on flash memory."}},
+
+"q0953": {"objective":"5.3",
+ "explanation":"A service-level agreement is the contractual commitment stating the availability level a provider must meet and the penalties or remedies that apply if they miss it. The link between a negotiated level and financial consequence is what makes it an SLA.",
+ "incorrect":{
+  "B":"A service-level objective is the internal target a provider aims for. It carries no contractual penalty.",
+  "C":"ARO is the annualised rate of occurrence, a risk frequency measure.",
+  "D":"ALE is the annualised loss expectancy, a monetary risk calculation."}},
+
+"q0954": {"objective":"5.2",
+ "explanation":"A threat is a potential action or event that could cause harm. Someone attempting to brute-force a password is that action, as distinct from the weakness it targets or the asset it endangers.",
+ "incorrect":{
+  "A":"A vulnerability is the weakness being exploited — here a weak or unprotected password.",
+  "C":"An asset is the thing of value, such as the account or the data behind it.",
+  "D":"Risk is the combination of threat, vulnerability and impact, expressed as likelihood of loss."}},
+
+"q0956": {"objective":"5.4",
+ "explanation":"Privacy regulation turns on consent and individual control. Offering users a way to opt out of collection, processing or sharing gives them that control directly, which is the substantive privacy measure rather than a technical browser setting.",
+ "incorrect":{
+  "B":"Browser history expiration is a client-side setting. It does not affect what the site has already collected and stored.",
+  "C":"A cache-clearing option likewise only affects the user's local machine.",
+  "D":"Restricted cookies limit tracking somewhat, but they are one narrow technical measure rather than addressing consent for personal information generally."}},
+
+"q0957": {"objective":"4.8",
+ "explanation":"MITRE ATT&CK catalogues adversary tactics and techniques observed in real intrusions, so an analyst can map each action taken during an incident to a named technique. That produces a structured, comparable record of the steps the actor used.",
+ "incorrect":{
+  "B":"Questionnaires gather information from people. They document opinions, not adversary behaviour.",
+  "C":"The OWASP Top 10 lists common web application risks. It covers vulnerability classes rather than attacker sequences.",
+  "D":"The Diamond Model is a genuine intrusion analysis framework, but it relates adversary, capability, infrastructure and victim rather than documenting a step-by-step technique sequence."}},
+
+"q0958": {"objective":"3.1",
+ "explanation":"Each company now runs a private cloud alongside a shared public cloud deployment, and the two are used together for the project. Combining private and public cloud in one architecture is by definition hybrid.",
+ "incorrect":{
+  "A":"A community cloud is shared infrastructure serving several organisations with common requirements. This is a public deployment, not a shared community platform.",
+  "B":"Public alone ignores the private clouds each company continues to operate.",
+  "C":"Private alone ignores the new public deployment."}},
+
+"q0959": {"objective":"4.8",
+ "explanation":"Preserving the state means capturing everything before it changes. A bit-level forensic image copies allocated data, deleted data, slack space and filesystem metadata exactly as they stand, which nothing else on the list achieves.",
+ "incorrect":{
+  "A":"Packet captures record traffic in flight. They preserve network activity, not the server's state.",
+  "B":"Vulnerability scans probe the system, which alters it and produces findings rather than evidence.",
+  "C":"Automated reports summarise existing data. They preserve nothing."}},
+
+"q0960": {"objective":"5.6",
+ "explanation":"A high click rate is a behaviour problem, and the fastest lever on behaviour is targeted awareness. A phishing campaign teaches staff the indicators and measures whether the rate falls, which is the first and most directly relevant action.",
+ "incorrect":{
+  "A":"Updating the acceptable use policy changes what the document says. Staff who click suspicious links are not consulting policy first.",
+  "B":"A password manager helps with credential hygiene. It does not stop someone clicking a malicious link.",
+  "C":"Warning letters punish individuals without teaching anyone what to look for, and they discourage people from reporting mistakes."}},
+
+"q0961": {"objective":"4.6",
+ "explanation":"Accounting is the third element of AAA: recording what authenticated users did. Storing login requests for later audit and compliance review is accounting data being retained for exactly that purpose.",
+ "incorrect":{
+  "A":"Authorisation decides what an authenticated user may do.",
+  "B":"Availability means systems are reachable when needed.",
+  "C":"Authentication proves identity at the point of access. The logging of those events afterwards is accounting."}},
+
+"q0962": {"objective":"3.4",
+ "explanation":"The decision is about reliability based on past availability incidents. Mean time between failures expresses how long equipment typically runs before failing, which is the metric that lets competing technologies be compared on how often they will let you down.",
+ "incorrect":{
+  "B":"RTO is the maximum tolerable downtime. It is a business target rather than a property of a technology.",
+  "C":"ALE is a monetary risk figure. It helps justify spend overall but does not compare product reliability.",
+  "D":"RPO concerns acceptable data loss, which is unrelated to component failure rates."}},
+
+"q0963": {"objective":"4.8",
+ "explanation":"Chain of custody is the unbroken documented record of who handled each item of evidence, when, and what they did with it. Without it the evidence can be challenged as altered, which undermines the entire investigation.",
+ "incorrect":{
+  "A":"Change management governs how system modifications are approved and applied.",
+  "B":"Availability means systems are reachable when needed. It is not an evidentiary property.",
+  "D":"Reporting communicates findings at the end. It depends on the evidence being sound in the first place."}},
+
+"q0964": {"objective":"4.6",
+ "explanation":"A cloud directory integrated over LDAP gives one central identity store that both local and remote developers authenticate against. New hires are provisioned once and immediately have consistent access everywhere, which is what delivers both security and fast onboarding.",
+ "incorrect":{
+  "B":"Software MFA strengthens authentication but presumes a directory already exists to authenticate against.",
+  "C":"Hardware TOTP tokens must be procured, shipped and replaced, which is the opposite of quick onboarding for remote staff.",
+  "D":"An IPSec VPN provides network access. It is a connectivity control rather than an identity and access management configuration."}},
+
+"q0965": {"objective":"3.3",
+ "explanation":"A label attached to an asset states its classification and therefore the handling rules that apply. It is the visible signal that tells an employee how a given document, drive or system must be accessed, stored and shared.",
+ "incorrect":{
+  "A":"Obfuscation makes content harder to interpret. It conceals rather than signals.",
+  "B":"Encryption protects the content itself. It does not communicate handling requirements.",
+  "D":"Masking hides parts of a value for display."}},
+
+"q0966": {"objective":"3.4",
+ "explanation":"The standby server is sitting idle. Placing a load balancer in front and sending traffic to both immediately doubles the capacity available, without rebuilding anything or changing how the servers work.",
+ "incorrect":{
+  "A":"Automated failover keeps the standby idle until the primary fails. It improves availability but adds no capacity.",
+  "C":"Clustering makes servers act as one logical unit, which is more complex to set up than simply balancing across two existing hosts.",
+  "D":"Containers change how applications are packaged and deployed. That is a re-architecture, not the simplest immediate step."}},
+
+"q0967": {"objective":"3.2",
+ "explanation":"The attack arrived as a flood of malicious application-layer requests. A web application firewall inspects each HTTP request against attack patterns and rate rules and drops the malicious ones before they reach the application, which is what would have prevented the impact.",
+ "incorrect":{
+  "A":"IPSec encrypts and authenticates network traffic between endpoints. It does not inspect web request content.",
+  "B":"TLS encrypts the connection. Malicious requests arrive perfectly well over TLS.",
+  "C":"SDN manages network connectivity programmatically. It is an architecture rather than an application-layer defence."}},
+
+"q0968": {"objective":"4.2",
+ "explanation":"SSDs use wear levelling, so a conventional overwrite never touches every physical block. The drive's built-in secure erase command instructs the controller to purge all storage cells including spare blocks, rendering data unrecoverable while the drive stays usable.",
+ "incorrect":{
+  "B":"Degaussing destroys magnetic fields. Flash memory stores charge, not magnetism, so it has no effect.",
+  "C":"Formatting rebuilds the filesystem structure and leaves the underlying data intact.",
+  "D":"File wiping overwrites specific files, which on an SSD may leave earlier copies in blocks the controller has remapped.",
+  "E":"Encrypting protects data going forward but leaves previously written plaintext on the drive unless crypto-erase is used."}},
+
+"q0969": {"objective":"1.3",
+ "explanation":"Changes are the most common cause of self-inflicted outages, and a holiday is when customer transaction volume peaks and support staffing is thinnest. Freezing changes removes that self-inflicted risk precisely when an outage would affect the most people.",
+ "incorrect":{
+  "A":"Enabling staff to take leave is a scheduling convenience rather than the reason for a formal freeze on critical systems.",
+  "B":"Heightened attack levels would argue for more patching, not less change.",
+  "C":"Reduced third-party support is a genuine contributing factor, but the outcome the bank is protecting is customer-facing availability."}},
+
+"q0970": {"objective":"4.6",
+ "explanation":"FIDO2 passkeys replace both the password and the separate authenticator code with a single device-held credential unlocked by biometrics. Authentication becomes passwordless, phishing-resistant through domain binding, and simpler for the user — which satisfies every stated requirement at once.",
+ "incorrect":{
+  "B":"SMS one-time passwords are weaker than the app-based codes already in use and are vulnerable to SIM swapping.",
+  "C":"SAML federation gives single sign-on across applications, which helps convenience but leaves the password and second factor in place.",
+  "D":"PKI with smart cards is strong but requires issuing and maintaining physical cards and readers, which worsens rather than smooths the experience."}},
+
+"q0971": {"objective":"4.8",
+ "explanation":"Acquisition is the stage where evidence is collected, which for digital media means creating a forensically sound image of the original. Everything after it works from that copy so the original stays untouched.",
+ "incorrect":{
+  "B":"Preservation keeps evidence unaltered from that point onward. It protects what acquisition has captured.",
+  "C":"Reporting documents findings at the end of the investigation.",
+  "D":"E-discovery is the legal process of identifying and producing electronically stored information for litigation."}},
+
+"q0972": {"objective":"5.3",
+ "explanation":"A statement of work defines exactly what will be done, by whom and under what conditions. It is the instrument that can require the contracted party to perform the work themselves and prohibit subcontracting without prior written approval.",
+ "incorrect":{
+  "A":"An NDA restricts disclosure of confidential information. It says nothing about who performs the work.",
+  "B":"An SLA commits the provider to measurable service levels.",
+  "D":"An MOU is a non-binding statement of intent and cannot impose enforceable delivery conditions."}},
+
+"q0973": {"objective":"2.5",
+ "explanation":"Shadow IT starts when users can provision or install whatever they like. Least privilege removes the permissions to stand up unapproved cloud services, and an application allow list ensures only vetted software runs — together closing both routes by which users introduce unmanaged risk.",
+ "incorrect":{
+  "B":"A trusted platform module stores cryptographic keys in hardware on a device. It has no bearing on cloud service policy.",
+  "C":"Jailbreaking is a vulnerability, not a control.",
+  "D":"An access control list governs access to a specific resource. It is narrower than the permission model least privilege describes.",
+  "E":"File integrity monitoring detects changes to protected files. It is detective and does not prevent unapproved services."}},
+
+"q0974": {"objective":"5.4",
+ "explanation":"A gap analysis compares the current state of processes, controls and assets against the requirements of the certification being pursued, producing a list of what already complies and what does not. That comparison against a defined standard is exactly what is being asked for.",
+ "incorrect":{
+  "A":"A business impact analysis determines how badly the organisation suffers when a function is lost.",
+  "C":"A risk assessment evaluates threats and their likelihood and impact. It measures risk rather than compliance with a standard.",
+  "D":"Risk analysis is the evaluation step within that process, again measuring risk rather than certification readiness."}},
+
+"q0975": {"objective":"1.3",
+ "explanation":"The change has failed, so the priority is returning the system to its previous working state. The backout plan is the pre-agreed set of steps for doing exactly that, which is why change management requires one before approval.",
+ "incorrect":{
+  "B":"Testing results are produced before implementation to predict the outcome. They do not help once the change has already failed.",
+  "C":"Impact analysis assesses what a change might affect. It informs approval beforehand.",
+  "D":"Ownership approval authorises the change. That step is already complete."}},
+
+"q0976": {"objective":"2.1",
+ "explanation":"A hacktivist attacks in service of a belief — political, social or philosophical — rather than for money or intelligence. The cause is the payoff, and attacks are chosen for the attention they bring to it.",
+ "incorrect":{
+  "A":"An insider threat is defined by their position inside the organisation, usually acting on grievance or personal gain.",
+  "B":"Nation-states act for strategic advantage: espionage, disruption, positioning.",
+  "D":"Organised crime is motivated by profit above all else."}},
+
+"q0977": {"objective":"2.3",
+ "explanation":"A zero-day is a flaw that was unknown to the vendor and had no patch available when attackers began exploiting it. Active exploitation preceding the fix is the defining characteristic, which is exactly the situation described.",
+ "incorrect":{
+  "B":"SQL injection is a well-known vulnerability class with established defences.",
+  "C":"A race condition is a timing flaw between a check and its use. It describes a defect type rather than the patch timeline.",
+  "D":"Use after free is a specific memory management defect, again a category rather than a disclosure state."}},
+
+"q0978": {"objective":"3.4",
+ "explanation":"If every system runs the same technology, one vulnerability in it exposes the entire estate at once. Platform diversity means an exploit that works against one product leaves the systems running something else untouched, so a single flaw cannot take everything down.",
+ "incorrect":{
+  "B":"A longer vendor relationship is a commercial benefit of concentration, which is the opposite of diversity.",
+  "C":"Economies of scale come from buying more of the same thing, again the opposite of diversity.",
+  "D":"Easier upgrades from having more options is a procurement convenience rather than the security rationale."}},
+
+"q0979": {"objective":"4.8",
+ "explanation":"A tabletop exercise walks the team through a scenario in discussion, and what it produces is a list of unclear responsibilities, missing contacts and steps that do not work. Exposing those weaknesses while nothing is actually on fire is its purpose.",
+ "incorrect":{
+  "B":"Performing a live attack on production is a penetration test or red team exercise, not a discussion-based one.",
+  "C":"No exercise prevents incidents; it improves how well you handle them.",
+  "D":"Tabletops generate follow-up documentation — findings and plan revisions — rather than reducing it."}},
+
+"q0980": {"objective":"5.5",
+ "explanation":"Time spent on discovery is time not spent testing. Giving the tester some information lets them skip straight to the systems that matter, so the engagement produces deeper findings on critical components within the same budget.",
+ "incorrect":{
+  "A":"Which systems are in scope is set by the rules of engagement, not by how much information is shared.",
+  "B":"An external test never removes the need for internal assessment; they examine different exposure.",
+  "D":"No test discovers every vulnerability. Claiming complete coverage is never accurate."}},
+
+"q0981": {"objective":"2.4",
+ "explanation":"Logins from several countries within half an hour describe a journey nobody can make, and the user confirms they were in the office throughout. Impossible travel with the legitimate user accounted for points squarely at someone else using their credentials.",
+ "incorrect":{
+  "A":"A scheduled automation tool would run from consistent, known infrastructure rather than rotating through multiple countries.",
+  "B":"A VPN cycling through regional endpoints is possible in principle, but the user would be aware of it and it would not accompany access to internal servers this way.",
+  "C":"Shared credentials would explain concurrent use, but the user states they were at the office and nothing suggests the account is shared."}},
+
+"q0982": {"objective":"1.1",
+ "explanation":"When human life is at stake the control must not trap anyone. Safety controls fail open so that doors release and people can evacuate during a power failure or system fault, accepting a security compromise in exchange for not endangering occupants.",
+ "incorrect":{
+  "A":"Remote access points failing closed is sensible for security, but it does not address the human life consideration the question raises.",
+  "B":"Logging controls failing open would mean losing the audit trail during a failure, which is the wrong default.",
+  "D":"Logical security controls failing closed is correct practice generally, but again it is not the life-safety principle being asked about."}},
+
+"q0983": {"objective":"4.6",
+ "explanation":"SAML is an open standard, so it ties the organisation to no single vendor. It is built for federation between independent identity and service providers, and it passes assertions at sign-in rather than requiring directories to be kept in sync — satisfying all three requirements.",
+ "incorrect":{
+  "B":"OAuth is an authorisation framework issuing access tokens. It delegates permissions rather than federating authentication.",
+  "C":"OpenID Connect does provide federated authentication and is a close contender, but SAML is the established enterprise federation standard for web SSO across independent directories.",
+  "D":"LDAP is a directory protocol. Using it across organisations would require exactly the account synchronisation the requirements rule out."}},
+
+"q0984": {"objective":"4.3",
+ "explanation":"Software composition analysis inventories the third-party and open-source components inside an application and matches them against known vulnerability data. Determining whether a specific library is present in the HR application is precisely what it does.",
+ "incorrect":{
+  "A":"Root cause analysis determines why an incident happened. No incident has occurred.",
+  "B":"A dynamic analysis scan tests the running application for exploitable behaviour. It would not enumerate which libraries are compiled in.",
+  "D":"A penetration test attempts to breach the application. It might exploit the flaw but is a slow and indirect way to answer an inventory question."}},
+
+"q0985": {"objective":"4.3",
+ "explanation":"The question is whether the organisation's systems carry the vulnerable component. A vulnerability scan checks versions and configurations across the estate and reports which hosts match, answering that safely and systematically.",
+ "incorrect":{
+  "A":"Reviewing packet captures shows traffic that occurred. It would only help if the exploit had already been attempted.",
+  "B":"Running proof-of-concept code against production systems risks causing the very damage you are investigating.",
+  "C":"Security dashboards summarise existing alerts. A newly disclosed exploit that has not been used against you generates none."}}
+}
