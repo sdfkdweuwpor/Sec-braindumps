@@ -5315,51 +5315,59 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk assessment conducted on a yearly basis is performed at regular, predefined intervals, which characterizes it as a recurring assessment rather than a one-time, ad hoc, or continuous activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An assessment performed every year runs on a fixed, predefined schedule. That regular cadence is what makes it recurring, as distinct from being triggered by an event or running without interruption.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Ad hoc means performed as needed, in response to a specific trigger, with no set schedule.",
+      "C": "One time means performed once for a discrete purpose, such as decommissioning a system.",
+      "D": "Continuous means monitoring without interruption rather than at intervals."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p314",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0740",
+    "id": "q0742",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "Which of the following will best ensure a controlled version release of a new software application?",
+    "question": "An attacker pretending to be from the help desk calls a user. The attacker asks the user to verify a password in order to fix a technical issue.\nWhich of the following security awareness topics does this scenario best describe?",
     "choices": [
       {
         "key": "A",
-        "text": "Business continuity planning"
+        "text": "Brand impersonation"
       },
       {
         "key": "B",
-        "text": "Quantified risk analysis"
+        "text": "Operational security"
       },
       {
         "key": "C",
-        "text": "Static code analysis"
+        "text": "Social engineering"
       },
       {
         "key": "D",
-        "text": "Change management procedures"
+        "text": "Insider threat"
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": "Change management procedures enforce formal review, approval, testing, and scheduling of software changes, ensuring releases are controlled, documented, and deployed in an orderly manner.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker exploits the user's trust in the help desk rather than any technical weakness, persuading them to hand over a password. Manipulating a person into divulging information is social engineering.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Brand impersonation mimics a company's identity to outsiders, typically through a fake site or message. This is an internal role being impersonated by phone.",
+      "B": "Operational security is the practice of not exposing sensitive information through everyday activity. It names the failing rather than the attack.",
+      "D": "An insider threat comes from someone within the organisation. The caller is external."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
-    "inferenceConfidence": 0.357,
+    "needsReview": false,
+    "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5391,13 +5399,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The $10,000 represents the expected cost of a single occurrence of the incident, which is the single loss expectancy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Single loss expectancy is the cost of one occurrence. Here $10,000 is what one incident costs, and multiplying it by the annualised rate of two gives the $20,000 annualised loss expectancy behind the budget.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "ARO is how often the event occurs per year, which is two in this scenario.",
+      "C": "ALE is the annual total, which is the $20,000 figure.",
+      "D": "RPO is how much data loss is tolerable after an incident. It is not a monetary measure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p319",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0766",
+    "domain": 5,
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "type": "single",
+    "question": "Which of the following explains how a supply chain service provider could introduce a security vulnerability into an organization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Delaying hardware shipments needed for system upgrades"
+      },
+      {
+        "key": "B",
+        "text": "Outsourcing customer service operations to a foreign call center"
+      },
+      {
+        "key": "C",
+        "text": "Failing to encrypt data stored on the organization's internal database"
+      },
+      {
+        "key": "D",
+        "text": "Having privileged access to client systems and becoming a target for attackers"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Service providers typically hold privileged access across many client environments, which makes them a high-value target. Compromising one provider gives an attacker trusted, elevated access into every organisation it serves — that concentration of access is the vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Delayed hardware shipments affect project timelines. It is an availability and planning problem, not a security vulnerability.",
+      "B": "Outsourcing customer service abroad raises data handling and privacy considerations rather than introducing a technical vulnerability.",
+      "C": "Failing to encrypt the organisation's own internal database is the organisation's own control failure, not something the provider introduced."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p326",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },

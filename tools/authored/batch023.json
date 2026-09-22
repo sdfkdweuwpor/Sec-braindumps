@@ -1,0 +1,244 @@
+{
+"q0734": {"objective":"4.8",
+ "explanation":"A tabletop exercise puts the team through a realistic scenario in a meeting, produces a documented record of how they performed, and can be organised and completed in days. That combination of assessment plus formal output in a short time is exactly what management asked for.",
+ "incorrect":{
+  "A":"Requesting formal action plans from IT managers produces paperwork about intentions. It tests nobody's actual readiness.",
+  "B":"A bug bounty finds technical vulnerabilities in systems. It says nothing about how the team would respond to an incident.",
+  "D":"An external consultant gives an independent view but takes weeks or months and assesses processes rather than exercising the team."}},
+
+"q0735": {"objective":"3.3",
+ "explanation":"Full disk encryption protects what is written to the workstation's storage, so the volume is unreadable when the machine is off or the drive is removed. Stored data that is not moving or being processed is data at rest.",
+ "incorrect":{
+  "A":"Masking obscures parts of a value for display. It is applied within applications rather than to a whole disk.",
+  "B":"Data in transit is data crossing a network, protected by TLS or IPSec.",
+  "C":"Obfuscation makes data harder to interpret without genuine cryptographic strength.",
+  "E":"Data sovereignty is the legal principle about which country's laws govern data. It is not a protection strategy."}},
+
+"q0736": {"objective":"2.4",
+ "explanation":"One username and password being presented from many unrelated addresses means the credentials were obtained elsewhere and are now being reused. Replaying captured credentials against a service is a credential replay attack.",
+ "incorrect":{
+  "A":"Cross-site scripting injects script that runs in a browser. It has nothing to do with repeated logins.",
+  "C":"A distributed denial of service floods a target to exhaust it. These are authentication attempts, not volumetric traffic.",
+  "D":"SQL injection manipulates database queries through input. The attempts here are ordinary logins with a valid credential pair."}},
+
+"q0737": {"objective":"5.2",
+ "explanation":"An assessment performed every year runs on a fixed, predefined schedule. That regular cadence is what makes it recurring, as distinct from being triggered by an event or running without interruption.",
+ "incorrect":{
+  "B":"Ad hoc means performed as needed, in response to a specific trigger, with no set schedule.",
+  "C":"One time means performed once for a discrete purpose, such as decommissioning a system.",
+  "D":"Continuous means monitoring without interruption rather than at intervals."}},
+
+"q0738": {"objective":"2.1",
+ "explanation":"Multiple zero-days is the giveaway. Finding or buying several unknown vulnerabilities takes resources and patience that only a well-funded state programme has, and government research organisations holding intellectual property are precisely the target such programmes pursue.",
+ "incorrect":{
+  "B":"Hacktivists want publicity for a cause and typically use readily available techniques. Stealth theft of IP advances no message.",
+  "C":"An unskilled attacker uses commodity tools against easy targets. They cannot source zero-days.",
+  "D":"An insider already has access and needs no exploit at all, let alone several unknown ones."}},
+
+"q0739": {"objective":"2.4",
+ "explanation":"Input lag and cursor irregularities while typing credentials point at software intercepting keystrokes between the keyboard and the application. A keylogger captures each keystroke as it is entered, and the interception overhead is what the user perceives as lag.",
+ "incorrect":{
+  "B":"A rootkit hides an attacker's presence at a privileged level. It is designed to be invisible rather than to disturb typing.",
+  "C":"A worm spreads itself across hosts. Propagation affects the network, not local input behaviour.",
+  "D":"A denial of service makes a service unavailable. The banking site is loading and usable."}},
+
+"q0740": {"objective":"1.3",
+ "explanation":"A controlled release means the version reaching production has been reviewed, approved, tested and scheduled, with a way back if it fails. Change management procedures impose exactly that sequence.",
+ "incorrect":{
+  "A":"Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline.",
+  "B":"Quantified risk analysis puts monetary values on risk. It informs decisions without governing releases.",
+  "C":"Static code analysis finds defects in source code. It improves quality before release without controlling how the release is made."}},
+
+"q0741": {"objective":"2.2",
+ "explanation":"An air gap removes every network path, so data can only move physically. Removable media is how updates and files legitimately cross that gap, which makes it the one channel available to carry data out as well.",
+ "incorrect":{
+  "A":"A bastion host is a controlled gateway between networks. Its existence would mean the network is not air-gapped.",
+  "B":"Unsecured Bluetooth is a short-range wireless path and a genuine concern, but it is far less common than USB media in these environments.",
+  "C":"An unpatched OS is a vulnerability that could be exploited once an attacker has a path. It is not itself a route out."}},
+
+"q0742": {"objective":"5.6",
+ "explanation":"The attacker exploits the user's trust in the help desk rather than any technical weakness, persuading them to hand over a password. Manipulating a person into divulging information is social engineering.",
+ "incorrect":{
+  "A":"Brand impersonation mimics a company's identity to outsiders, typically through a fake site or message. This is an internal role being impersonated by phone.",
+  "B":"Operational security is the practice of not exposing sensitive information through everyday activity. It names the failing rather than the attack.",
+  "D":"An insider threat comes from someone within the organisation. The caller is external."}},
+
+"q0743": {"objective":"4.9",
+ "explanation":"The application worked until a security update was applied, so the likely cause is a new rule now blocking traffic that was previously allowed. IPS and IDS logs show exactly what is being dropped or reset and why, which confirms or eliminates that cause fastest.",
+ "incorrect":{
+  "A":"Proxy logs cover outbound web browsing. They would only help if the application is reached over the web proxy.",
+  "C":"SIEM logs aggregate everything, which makes them comprehensive but slower to interrogate for a specific blocking decision.",
+  "D":"DNS logs show name resolution. A blocked connection to a correctly resolved address leaves DNS looking healthy."}},
+
+"q0744": {"objective":"3.3",
+ "explanation":"Data loaded into memory and being actively processed is data in use, and it is the hardest state to protect because it must be in plaintext for the processor to work with it. Hardware memory encryption exists specifically to close that gap.",
+ "incorrect":{
+  "B":"Data at rest is stored data, protected by disk or database encryption.",
+  "C":"Data in transit is data crossing a network, protected by TLS or IPSec.",
+  "D":"Data sovereignty is a legal principle about jurisdiction, not a data state."}},
+
+"q0745": {"objective":"3.4",
+ "explanation":"An extended outage outlasts batteries and may outlast fuel supplies. A hot site is a separate, fully operational facility on different power, so operations move there and continue regardless of how long the primary site stays dark.",
+ "incorrect":{
+  "B":"A UPS runs on batteries for minutes. It bridges the gap to a generator rather than covering an extended outage.",
+  "C":"Snapshots preserve data state for recovery. They keep nothing running.",
+  "D":"SOAR automates security response workflows. It has no bearing on power."}},
+
+"q0746": {"objective":"3.1",
+ "explanation":"Systems that must not reach the internet at all are air-gapped — no physical or logical connection exists to any external network. The absence of a path is what guarantees the requirement rather than relying on a rule.",
+ "incorrect":{
+  "B":"Serverless runs code on provider-managed infrastructure, which is inherently internet-connected.",
+  "C":"Isolated is close in meaning but broader and less precise; the standard term for complete network separation is air-gapped.",
+  "D":"Segmented means divided into controlled zones. Paths still exist between them, governed rather than absent."}},
+
+"q0747": {"objective":"3.1",
+ "explanation":"Purpose-built devices running fixed firmware, critical to production, with almost no vendor support and no realistic patching path, are embedded systems. Segmenting and monitoring them closely is the standard treatment precisely because they cannot be fixed.",
+ "incorrect":{
+  "A":"Workstations run general-purpose operating systems with active vendor support and routine patching.",
+  "C":"A core router is critical, but network vendors provide firmware updates and support contracts for them.",
+  "D":"A DNS server runs maintained software that is patched like any other server."}},
+
+"q0748": {"objective":"4.9",
+ "explanation":"The content is encrypted, so the analyst needs everything around it: destination address and reputation, port, protocol behaviour, packet sizes and timing regularity. A packet capture supplies all of that, and beaconing patterns are visible even when the payload is not.",
+ "incorrect":{
+  "A":"Application logs record activity inside a business application. Malware communicating out does not pass through it.",
+  "B":"Vulnerability scans identify weaknesses that exist. They say nothing about traffic currently leaving.",
+  "C":"Endpoint logs help identify which process is responsible and are a valuable second step, but they do not characterise the traffic itself."}},
+
+"q0749": {"objective":"5.2",
+ "explanation":"Single loss expectancy is the cost of one occurrence. Here $10,000 is what one incident costs, and multiplying it by the annualised rate of two gives the $20,000 annualised loss expectancy behind the budget.",
+ "incorrect":{
+  "A":"ARO is how often the event occurs per year, which is two in this scenario.",
+  "C":"ALE is the annual total, which is the $20,000 figure.",
+  "D":"RPO is how much data loss is tolerable after an incident. It is not a monetary measure."}},
+
+"q0750": {"objective":"4.1",
+ "explanation":"Every listed precaution protects the device while it is running and connected, yet data was still lost — which points at offline physical access to the hardware during travel. Full disk encryption is the control that renders a seized or cloned drive unreadable.",
+ "incorrect":{
+  "A":"Data sanitisation removes data from media at end of life. It is a disposal control.",
+  "B":"A WAF protects a hosted web application from inbound attacks. It has no bearing on travelling laptops.",
+  "D":"Split tunnelling sends some traffic outside the VPN. It weakens protection rather than strengthening it."}},
+
+"q0751": {"objective":"2.3",
+ "explanation":"VM escape means code inside a guest breaking the isolation boundary and executing on the host. A plug-in triggering a memory overflow that yields code execution on the host is precisely that crossing from guest to hypervisor.",
+ "incorrect":{
+  "A":"Command injection on the virtualisation web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
+  "C":"Unauthenticated API requests are an access control failure on the management plane, again not an escape from a guest.",
+  "D":"A crafted packet crashing hypervisor services is a denial of service. It disrupts rather than executing code on the host."}},
+
+"q0752": {"objective":"1.2",
+ "explanation":"Deception technologies — honeypots, honeyfiles, honeytokens — exist to attract an attacker into a controlled environment where everything they do is recorded. The value is the intelligence about their tools and techniques, gathered without risk to real systems.",
+ "incorrect":{
+  "A":"Preventing malware installation is the job of endpoint protection. Deception does not block anything.",
+  "B":"Blocking external traffic before it reaches critical systems describes a firewall. Deception invites interaction rather than refusing it.",
+  "D":"Monitoring privileged accounts for insider threats is user behaviour analytics. A honeytoken can contribute, but intelligence gathering is the broader purpose."}},
+
+"q0753": {"objective":"2.1",
+ "explanation":"A competitor deliberately planted an employee to steal proprietary information. Theft of trade secrets by a rival for commercial advantage is corporate espionage, and the placement of an insider is the method rather than the motive.",
+ "incorrect":{
+  "A":"Personal financial gain would mean the employee acted for their own profit. They were directed by Company B.",
+  "B":"Supply chain access means compromise reaching you through a vendor or component. No supplier is involved.",
+  "C":"Shadow IT is unsanctioned technology adopted for convenience. This is deliberate theft."}},
+
+"q0754": {"objective":"1.1",
+ "explanation":"Operational controls are executed by people through process. Dual control requires two authorised individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
+ "incorrect":{
+  "A":"Key escrow is a technical control for recovering encryption keys.",
+  "B":"Tokenisation is a technical data protection technique.",
+  "E":"Access badge readers are physical controls.",
+  "F":"Biometrics is a physical or technical authentication control rather than a process."}},
+
+"q0755": {"objective":"3.4",
+ "explanation":"Reliability of the firewall itself means surviving the failure of one device. Clustering runs multiple firewalls as a single logical unit with state shared between them, so if one fails another continues processing traffic without dropping sessions.",
+ "incorrect":{
+  "A":"A proxy server mediates requests. It does not make the firewall resilient.",
+  "B":"Microservices is an application architecture pattern. It is unrelated to network appliances.",
+  "D":"A load balancer distributes traffic across servers. It improves the availability of what sits behind the firewall rather than of the firewall itself."}},
+
+"q0756": {"objective":"4.8",
+ "explanation":"Preserving logs, images and communications because litigation or regulatory action is anticipated is a legal hold. It suspends routine deletion and retention policies so relevant material survives long enough to be collected.",
+ "incorrect":{
+  "A":"Chain of custody documents who handled evidence after it is collected. Preservation comes first.",
+  "B":"Root cause analysis determines why the incident happened.",
+  "D":"Containment limits the damage while the incident is live. Preservation is about evidence, not spread."}},
+
+"q0757": {"objective":"3.3",
+ "explanation":"Data sovereignty means data is subject to the laws of the jurisdiction it sits in. The challenge it creates is practical and legal at once: an organisation operating across borders must ensure each data set is stored and processed only where the applicable law permits.",
+ "incorrect":{
+  "A":"Encrypting local backups is a data protection control. It addresses confidentiality regardless of location.",
+  "B":"Preventing accidental deletion is a data integrity and availability concern.",
+  "D":"Managing latency in content delivery networks is a performance problem, even though it also involves geography."}},
+
+"q0758": {"objective":"1.3",
+ "explanation":"Even an urgent patch on a critical system is a change, and change management exists to ensure it is reviewed, approved, tested and scheduled with a backout plan. Submitting the request is the first step because everything else depends on that approval.",
+ "incorrect":{
+  "A":"Testing in production, even after hours, is testing on the live system. Testing belongs in a non-production environment and only after approval.",
+  "C":"Removing the application from the allow list would break it. That is unrelated to patching.",
+  "D":"Requesting an exception avoids the process rather than following it, and there is no reason to bypass change control for a planned patch."}},
+
+"q0759": {"objective":"4.7",
+ "explanation":"Escalation is rule-driven and time-sensitive, which makes it ideal for automation. The system can watch severity and elapsed time and route the ticket upward the moment a threshold is crossed, without depending on someone noticing.",
+ "incorrect":{
+  "A":"Notification is also commonly automated, but it only tells people something happened. Escalation is what ensures the correct level of attention.",
+  "B":"Creation opens the ticket. It starts the process rather than governing how much attention the incident receives.",
+  "C":"Closure ends the ticket, and automating it risks closing things that were never properly resolved."}},
+
+"q0760": {"objective":"1.2",
+ "explanation":"Access badges enforce who may physically enter, so an unauthorised person is stopped at the door rather than recorded walking through it. Stopping the act before it happens is what makes this the preventive control.",
+ "incorrect":{
+  "A":"Video surveillance records what occurred. It is detective, and deterrent where visible.",
+  "C":"Infrared sensors detect movement and raise an alert. Again detection rather than prevention.",
+  "D":"Flood lights improve visibility and discourage intruders, which is deterrent."}},
+
+"q0761": {"objective":"3.3",
+ "explanation":"Sovereignty turns on where data physically resides. A cloud repository may place it in a provider region outside the permitted jurisdiction, and multiregion backup replication deliberately copies it to other countries — both put data under foreign legal authority without anyone intending it.",
+ "incorrect":{
+  "A":"DLP labelling classifies data for policy enforcement. It affects handling, not location.",
+  "B":"File metadata manipulation changes descriptive attributes. It does not move data across borders.",
+  "C":"Unencrypted data at rest is a confidentiality weakness. It may compound a sovereignty breach but does not cause one.",
+  "D":"Tokenising database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."}},
+
+"q0762": {"objective":"2.4",
+ "explanation":"Unexpected account lockouts are the telling symptom — something is repeatedly submitting wrong credentials until the lockout policy trips. The sustained authentication attempts also load the systems involved, which accounts for the slowness and errors.",
+ "incorrect":{
+  "A":"A virus infects files and spreads. It would not produce account lockouts.",
+  "B":"A keylogger captures keystrokes silently. Stolen credentials would be correct, so no lockouts would occur.",
+  "C":"Ransomware encrypts files and demands payment. Its presence is unmistakable and unrelated to lockouts."}},
+
+"q0763": {"objective":"4.5",
+ "explanation":"Port 23 is Telnet, which carries credentials and session data in plaintext, and port 25 is unencrypted SMTP. Both transmit without protection, which is exactly what an insecure-protocol policy targets.",
+ "incorrect":{
+  "A":"Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
+  "D":"Port 443 is HTTPS, encrypted web traffic.",
+  "E":"Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
+  "F":"Port 993 is IMAP over TLS.",
+  "G":"Port 995 is POP3 over TLS."}},
+
+"q0764": {"objective":"1.4",
+ "explanation":"Asymmetric encryption uses a public key anyone may hold and a private key only the owner has. Because the public key can be shared openly, two parties who have never met can exchange data securely without first establishing a shared secret — which is the problem symmetric encryption cannot solve alone.",
+ "incorrect":{
+  "A":"Identical keys for encryption and decryption describes symmetric encryption, which is the opposite arrangement.",
+  "B":"A shared secret key is again symmetric. Asymmetric encryption actually requires more keys, not fewer.",
+  "C":"Asymmetric encryption is substantially slower than symmetric, which is why it is used to establish a symmetric session key rather than to encrypt bulk data."}},
+
+"q0765": {"objective":"1.4",
+ "explanation":"Passwords should never be recoverable, even by the system holding them. Hashing applies a one-way function so only the digest is stored, and authentication works by hashing the submitted password and comparing digests.",
+ "incorrect":{
+  "A":"Encryption is reversible by anyone with the key, which means a key compromise exposes every password in plaintext.",
+  "C":"Masking hides parts of a value for display. The full value still exists underneath.",
+  "D":"Tokenisation substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."}},
+
+"q0766": {"objective":"5.3",
+ "explanation":"Service providers typically hold privileged access across many client environments, which makes them a high-value target. Compromising one provider gives an attacker trusted, elevated access into every organisation it serves — that concentration of access is the vulnerability.",
+ "incorrect":{
+  "A":"Delayed hardware shipments affect project timelines. It is an availability and planning problem, not a security vulnerability.",
+  "B":"Outsourcing customer service abroad raises data handling and privacy considerations rather than introducing a technical vulnerability.",
+  "C":"Failing to encrypt the organisation's own internal database is the organisation's own control failure, not something the provider introduced."}},
+
+"q0767": {"objective":"4.3",
+ "explanation":"Scan, patch, rescan is the full vulnerability management loop: discover what is exposed, fix it, then prove the fix worked. The closing rescan is what makes it effective, because it catches patches that failed to apply and changes that reintroduced the flaw.",
+ "incorrect":{
+  "A":"Joining an information-sharing organisation improves awareness of threats. Intelligence does not remediate anything by itself.",
+  "C":"A bug bounty finds flaws others missed, which is valuable but supplementary and unpredictable in coverage.",
+  "D":"Patching low-scoring vulnerabilities first inverts prioritisation, leaving the most dangerous issues open longest."}}
+}

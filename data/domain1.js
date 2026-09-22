@@ -4234,10 +4234,94 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0740",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "type": "single",
+    "question": "Which of the following will best ensure a controlled version release of a new software application?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Business continuity planning"
+      },
+      {
+        "key": "B",
+        "text": "Quantified risk analysis"
+      },
+      {
+        "key": "C",
+        "text": "Static code analysis"
+      },
+      {
+        "key": "D",
+        "text": "Change management procedures"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A controlled release means the version reaching production has been reviewed, approved, tested and scheduled, with a way back if it fails. Change management procedures impose exactly that sequence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline.",
+      "B": "Quantified risk analysis puts monetary values on risk. It informs decisions without governing releases.",
+      "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release is made."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p316",
+    "needsReview": false,
+    "inferenceConfidence": 0.357,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0752",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
+    "type": "single",
+    "question": "Which of the following best describes the purpose of using deception technologies in a security strategy?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To prevent malware installation through endpoint protection tools"
+      },
+      {
+        "key": "B",
+        "text": "To block all external traffic before it reaches critical information systems"
+      },
+      {
+        "key": "C",
+        "text": "To lure attackers to controlled environments to collect threat intelligence"
+      },
+      {
+        "key": "D",
+        "text": "To detect insider threats by monitoring privileged user accounts"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Deception technologies — honeypots, honeyfiles, honeytokens — exist to attract an attacker into a controlled environment where everything they do is recorded. The value is the intelligence about their tools and techniques, gathered without risk to real systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Preventing malware installation is the job of endpoint protection. Deception does not block anything.",
+      "B": "Blocking external traffic before it reaches critical systems describes a firewall. Deception invites interaction rather than refusing it.",
+      "D": "Monitoring privileged accounts for insider threats is user behaviour analytics. A honeytoken can contribute, but intelligence gathering is the broader purpose."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p320",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0754",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
     "question": "Which of the following are examples of operational controls that are appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
@@ -4270,12 +4354,17 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Dual control is an operational control that requires two authorized individuals to participate in sensitive financial processes, reducing the risk of fraud or error. Mandatory vacations are an operational control used to detect fraudulent activity by ensuring duties are periodically performed by others, which increases the likelihood of uncovering irregularities in financial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Operational controls are executed by people through process. Dual control requires two authorised individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key escrow is a technical control for recovering encryption keys.",
+      "B": "Tokenisation is a technical data protection technique.",
+      "E": "Access badge readers are physical controls.",
+      "F": "Biometrics is a physical or technical authentication control rather than a process."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p321",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.353,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4308,12 +4397,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Before making any modification to a critical system, the change must follow the organization's formal change management process. Submitting a change management request ensures the change is documented, reviewed, approved, and scheduled appropriately to minimize risk and service disruption. This process also allows stakeholders to assess potential impacts and plan testing and rollback procedures before applying the patch.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Even an urgent patch on a critical system is a change, and change management exists to ensure it is reviewed, approved, tested and scheduled with a backout plan. Submitting the request is the first step because everything else depends on that approval.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Testing in production, even after hours, is testing on the live system. Testing belongs in a non-production environment and only after approval.",
+      "C": "Removing the application from the allow list would break it. That is unrelated to patching.",
+      "D": "Requesting an exception avoids the process rather than following it, and there is no reason to bypass change control for a planned patch."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4346,12 +4439,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Access badges enforce controlled physical access to the data center by allowing only authorized personnel to enter secured areas. By restricting entry at doors and checkpoints through authentication mechanisms such as badge readers, unauthorized individuals are prevented from gaining physical access to critical infrastructure, thereby stopping potential attacks before they occur.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access badges enforce who may physically enter, so an unauthorised person is stopped at the door rather than recorded walking through it. Stopping the act before it happens is what makes this the preventive control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Video surveillance records what occurred. It is detective, and deterrent where visible.",
+      "C": "Infrared sensors detect movement and raise an alert. Again detection rather than prevention.",
+      "D": "Flood lights improve visibility and discourage intruders, which is deterrent."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4384,12 +4481,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Asymmetric encryption uses a key pair consisting of a public key and a private key. The public key can be openly shared, while the private key remains secret with the owner. This design allows two parties to securely exchange data without first sharing a private secret, because data encrypted with the public key can only be decrypted by the corresponding private key. This enables secure communication and key exchange over untrusted networks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Asymmetric encryption uses a public key anyone may hold and a private key only the owner has. Because the public key can be shared openly, two parties who have never met can exchange data securely without first establishing a shared secret — which is the problem symmetric encryption cannot solve alone.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Identical keys for encryption and decryption describes symmetric encryption, which is the opposite arrangement.",
+      "B": "A shared secret key is again symmetric. Asymmetric encryption actually requires more keys, not fewer.",
+      "C": "Asymmetric encryption is substantially slower than symmetric, which is why it is used to establish a symmetric session key rather than to encrypt bulk data."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p325",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4422,12 +4523,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Hashing protects stored passwords by transforming the original password into a fixed-length cryptographic hash value using a one-way algorithm. The original password cannot feasibly be derived from the hash. During authentication, the entered password is hashed and compared to the stored hash, ensuring the actual password is never stored or exposed in plaintext.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Passwords should never be recoverable, even by the system holding them. Hashing applies a one-way function so only the digest is stored, and authentication works by hashing the submitted password and comparing digests.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption is reversible by anyone with the key, which means a key compromise exposes every password in plaintext.",
+      "C": "Masking hides parts of a value for display. The full value still exists underneath.",
+      "D": "Tokenisation substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

@@ -6150,8 +6150,8 @@ export const domain2Questions = [
   {
     "id": "q0736",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A network security analyst monitors the network's IDS. which has flagged unusual activity. The IDS has detected multiple login attempts to a database server within a short period. These attempts come from various IP addresses that are not normally recognized by the network's usual traffic patterns. Each attempt uses the same username and password. Based on the following log output:\nWhich of the following types of network attacks is most likely occurring?",
     "choices": [
@@ -6175,12 +6175,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The repeated use of the same username and password across multiple login attempts from different IP addresses indicates stolen credentials are being reused to gain unauthorized access, which is characteristic of a credential replay attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One username and password being presented from many unrelated addresses means the credentials were obtained elsewhere and are now being reused. Replaying captured credentials against a service is a credential replay attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script that runs in a browser. It has nothing to do with repeated logins.",
+      "C": "A distributed denial of service floods a target to exhaust it. These are authentication attempts, not volumetric traffic.",
+      "D": "SQL injection manipulates database queries through input. The attempts here are ordinary logins with a valid credential pair."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p314",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6213,12 +6217,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state actors have the resources, funding, and advanced capabilities required to discover or acquire multiple zero-day vulnerabilities and commonly target government research organizations to steal intellectual property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multiple zero-days is the giveaway. Finding or buying several unknown vulnerabilities takes resources and patience that only a well-funded state programme has, and government research organisations holding intellectual property are precisely the target such programmes pursue.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hacktivists want publicity for a cause and typically use readily available techniques. Stealth theft of IP advances no message.",
+      "C": "An unskilled attacker uses commodity tools against easy targets. They cannot source zero-days.",
+      "D": "An insider already has access and needs no exploit at all, let alone several unknown ones."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p315",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6251,12 +6259,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A keylogger can interfere with normal input behavior and introduce lag while capturing keystrokes during credential entry, which aligns with the observed cursor issues and delays when typing login information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Input lag and cursor irregularities while typing credentials point at software intercepting keystrokes between the keyboard and the application. A keylogger captures each keystroke as it is entered, and the interception overhead is what the user perceives as lag.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A rootkit hides an attacker's presence at a privileged level. It is designed to be invisible rather than to disturb typing.",
+      "C": "A worm spreads itself across hosts. Propagation affects the network, not local input behaviour.",
+      "D": "A denial of service makes a service unavailable. The banking site is loading and usable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p315",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6289,51 +6301,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Removable devices such as USB drives are commonly used to transfer data into and out of air- gapped networks, making them the most frequent and practical path for data loss in otherwise isolated environments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap removes every network path, so data can only move physically. Removable media is how updates and files legitimately cross that gap, which makes it the one channel available to carry data out as well.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A bastion host is a controlled gateway between networks. Its existence would mean the network is not air-gapped.",
+      "B": "Unsecured Bluetooth is a short-range wireless path and a genuine concern, but it is far less common than USB media in these environments.",
+      "C": "An unpatched OS is a vulnerability that could be exploited once an attacker has a path. It is not itself a route out."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0742",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "An attacker pretending to be from the help desk calls a user. The attacker asks the user to verify a password in order to fix a technical issue.\nWhich of the following security awareness topics does this scenario best describe?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Brand impersonation"
-      },
-      {
-        "key": "B",
-        "text": "Operational security"
-      },
-      {
-        "key": "C",
-        "text": "Social engineering"
-      },
-      {
-        "key": "D",
-        "text": "Insider threat"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "The attacker manipulates the user by impersonating trusted support staff to trick them into revealing credentials, which is a classic example of social engineering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
-    "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6365,50 +6343,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "VM escape occurs when malicious code running inside a virtual machine breaks out of the VM boundary and executes on the underlying host system. A memory overflow caused by a plug-in that enables code execution on the host directly represents this scenario, as it allows the guest to compromise the hypervisor or host environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "VM escape means code inside a guest breaking the isolation boundary and executing on the host. A plug-in triggering a memory overflow that yields code execution on the host is precisely that crossing from guest to hypervisor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Command injection on the virtualisation web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
+      "C": "Unauthenticated API requests are an access control failure on the management plane, again not an escape from a guest.",
+      "D": "A crafted packet crashing hypervisor services is a denial of service. It disrupts rather than executing code on the host."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0752",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following best describes the purpose of using deception technologies in a security strategy?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To prevent malware installation through endpoint protection tools"
-      },
-      {
-        "key": "B",
-        "text": "To block all external traffic before it reaches critical information systems"
-      },
-      {
-        "key": "C",
-        "text": "To lure attackers to controlled environments to collect threat intelligence"
-      },
-      {
-        "key": "D",
-        "text": "To detect insider threats by monitoring privileged user accounts"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Deception technologies are designed to intentionally attract attackers to decoy systems, credentials, or data that appear valuable. By interacting with these controlled environments, attackers reveal their techniques, tools, and intent, allowing defenders to gather high-quality threat intelligence and improve detection and response capabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6441,12 +6385,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Corporate espionage involves the intentional theft of proprietary or confidential business information by a competitor. In this scenario, Company B deliberately placed an employee inside Company A to steal sensitive information, which directly aligns with corporate espionage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A competitor deliberately planted an employee to steal proprietary information. Theft of trade secrets by a rival for commercial advantage is corporate espionage, and the placement of an insider is the method rather than the motive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Personal financial gain would mean the employee acted for their own profit. They were directed by Company B.",
+      "B": "Supply chain access means compromise reaching you through a vendor or component. No supplier is involved.",
+      "C": "Shadow IT is unsanctioned technology adopted for convenience. This is deliberate theft."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6479,51 +6427,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A brute-force attack involves repeatedly attempting different password combinations to gain access to an account. Continuous authentication attempts can trigger account lockouts due to security policies that lock accounts after multiple failed login attempts. These repeated attempts can also generate system or web access errors and may slow browsing performance due to the increased authentication traffic and security checks being triggered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Unexpected account lockouts are the telling symptom — something is repeatedly submitting wrong credentials until the lockout policy trips. The sustained authentication attempts also load the systems involved, which accounts for the slowness and errors.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A virus infects files and spreads. It would not produce account lockouts.",
+      "B": "A keylogger captures keystrokes silently. Stolen credentials would be correct, so no lockouts would occur.",
+      "C": "Ransomware encrypts files and demands payment. Its presence is unmistakable and unrelated to lockouts."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p324",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0766",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following explains how a supply chain service provider could introduce a security vulnerability into an organization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Delaying hardware shipments needed for system upgrades"
-      },
-      {
-        "key": "B",
-        "text": "Outsourcing customer service operations to a foreign call center"
-      },
-      {
-        "key": "C",
-        "text": "Failing to encrypt data stored on the organization's internal database"
-      },
-      {
-        "key": "D",
-        "text": "Having privileged access to client systems and becoming a target for attackers"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Supply chain service providers often require privileged or administrative access to the systems they manage or support. Because they interact with multiple client environments and maintain elevated permissions, they become attractive targets for attackers. If a provider is compromised, attackers can leverage that trusted access to infiltrate the organization's systems, introducing vulnerabilities and enabling unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },

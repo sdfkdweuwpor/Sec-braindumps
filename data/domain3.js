@@ -5568,44 +5568,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0734",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
-    "type": "single",
-    "question": "The management team wants to assess the cybersecurity team's readiness to respond to a threat scenario.\nWhich of the following will adequately assess and formalize a response within a short time?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Send a message to all IT managers and request formal action plans."
-      },
-      {
-        "key": "B",
-        "text": "Create a bug bounty program and assess the findings."
-      },
-      {
-        "key": "C",
-        "text": "Execute a tabletop exercise and document the performance results."
-      },
-      {
-        "key": "D",
-        "text": "Hire an external consultant to independently assess the cybersecurity processes."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A tabletop exercise simulates a threat scenario in a controlled setting, allowing the cybersecurity team to practice response procedures, evaluate readiness, and formally document performance and gaps within a short time frame.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p313",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0735",
     "domain": 3,
     "objective": "3.3",
@@ -5637,12 +5599,17 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Full disk encryption protects data stored on the workstation's storage media, ensuring that information remains confidential when the system is powered off or the storage device is removed, which is protection of data at rest.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption protects what is written to the workstation's storage, so the volume is unreadable when the machine is off or the drive is removed. Stored data that is not moving or being processed is data at rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking obscures parts of a value for display. It is applied within applications rather than to a whole disk.",
+      "B": "Data in transit is data crossing a network, protected by TLS or IPSec.",
+      "C": "Obfuscation makes data harder to interpret without genuine cryptographic strength.",
+      "E": "Data sovereignty is the legal principle about which country's laws govern data. It is not a protection strategy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p313",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.688,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5675,12 +5642,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hardware-level memory encryption protects data while it is actively being processed and stored in system memory, which corresponds to protecting data in use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data loaded into memory and being actively processed is data in use, and it is the hardest state to protect because it must be in plaintext for the processor to work with it. Hardware memory encryption exists specifically to close that gap.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data at rest is stored data, protected by disk or database encryption.",
+      "C": "Data in transit is data crossing a network, protected by TLS or IPSec.",
+      "D": "Data sovereignty is a legal principle about jurisdiction, not a data state."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.972,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5713,12 +5684,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hot site provides a fully operational alternate environment with power, systems, and data already available, allowing the company to continue operations during an extended power outage affecting the primary site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An extended outage outlasts batteries and may outlast fuel supplies. A hot site is a separate, fully operational facility on different power, so operations move there and continue regardless of how long the primary site stays dark.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A UPS runs on batteries for minutes. It bridges the gap to a generator rather than covering an extended outage.",
+      "C": "Snapshots preserve data state for recovery. They keep nothing running.",
+      "D": "SOAR automates security response workflows. It has no bearing on power."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5751,12 +5726,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An air-gapped configuration physically or logically isolates systems from external networks, including the internet, ensuring they cannot communicate outside the controlled environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Systems that must not reach the internet at all are air-gapped — no physical or logical connection exists to any external network. The absence of a path is what guarantees the requirement rather than relying on a rule.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Serverless runs code on provider-managed infrastructure, which is inherently internet-connected.",
+      "C": "Isolated is close in meaning but broader and less precise; the standard term for complete network separation is air-gapped.",
+      "D": "Segmented means divided into controlled zones. Paths still exist between them, governed rather than absent."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5789,59 +5768,25 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Embedded systems are often legacy, purpose-built devices with limited vendor support, are critical to industrial operations, and commonly require network segmentation and close monitoring due to unpatched vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Purpose-built devices running fixed firmware, critical to production, with almost no vendor support and no realistic patching path, are embedded systems. Segmenting and monitoring them closely is the standard treatment precisely because they cannot be fixed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Workstations run general-purpose operating systems with active vendor support and routine patching.",
+      "C": "A core router is critical, but network vendors provide firmware updates and support contracts for them.",
+      "D": "A DNS server runs maintained software that is patched like any other server."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0750",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "An organization experiences data loss after several employees traveled to an area that is well- known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended.\nWhich of the following will best prevent data loss events in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Data sanitization"
-      },
-      {
-        "key": "B",
-        "text": "WAF"
-      },
-      {
-        "key": "C",
-        "text": "FDE"
-      },
-      {
-        "key": "D",
-        "text": "Split tunneling"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Full disk encryption ensures that all data stored on a device is unreadable without proper authentication. If devices are stolen, seized, or accessed offline during travel in high-risk regions, encrypted disks prevent attackers from extracting sensitive data, effectively mitigating data loss from physical compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p319",
-    "needsReview": true,
-    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0755",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A security administrator wants to improve the reliability of the firewall connection at the company's primary data center.\nWhich of the following should the administrator configure?",
     "choices": [
@@ -5865,12 +5810,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A firewall cluster increases reliability by providing high availability and failover between multiple firewall instances. If one firewall fails, another can take over processing traffic, ensuring continuous connectivity at the primary data center.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reliability of the firewall itself means surviving the failure of one device. Clustering runs multiple firewalls as a single logical unit with state shared between them, so if one fails another continues processing traffic without dropping sessions.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A proxy server mediates requests. It does not make the firewall resilient.",
+      "B": "Microservices is an application architecture pattern. It is unrelated to network appliances.",
+      "D": "A load balancer distributes traffic across servers. It improves the availability of what sits behind the firewall rather than of the firewall itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p321",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5903,12 +5852,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data sovereignty refers to the concept that data is subject to the laws and governance structures of the country where it is collected, stored, or processed. Organizations must ensure that data handling practices comply with the legal and regulatory requirements of the jurisdiction where the data resides. This creates challenges when operating across multiple countries because different regions may impose restrictions on where data can be stored or processed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty means data is subject to the laws of the jurisdiction it sits in. The challenge it creates is practical and legal at once: an organisation operating across borders must ensure each data set is stored and processed only where the applicable law permits.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypting local backups is a data protection control. It addresses confidentiality regardless of location.",
+      "B": "Preventing accidental deletion is a data integrity and availability concern.",
+      "D": "Managing latency in content delivery networks is a performance problem, even though it also involves geography."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p322",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5950,12 +5903,17 @@ export const domain3Questions = [
       "E",
       "F"
     ],
-    "explanation": "Using cloud-based repositories can violate data sovereignty requirements if the cloud provider stores or processes data in jurisdictions outside the country or region required by applicable regulations. This may place the data under foreign legal authority, creating compliance issues.\nMultiregion redundancy for backups replicates data across multiple geographic locations. If those backup locations are in different countries or regions than permitted by regulatory or contractual requirements, the organization may violate laws governing where data must remain stored or processed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sovereignty turns on where data physically resides. A cloud repository may place it in a provider region outside the permitted jurisdiction, and multiregion backup replication deliberately copies it to other countries — both put data under foreign legal authority without anyone intending it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DLP labelling classifies data for policy enforcement. It affects handling, not location.",
+      "B": "File metadata manipulation changes descriptive attributes. It does not move data across borders.",
+      "C": "Unencrypted data at rest is a confidentiality weakness. It may compound a sovereignty breach but does not cause one.",
+      "D": "Tokenising database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p324",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.481,
     "needsExplanation": false,
     "keyCorrected": false

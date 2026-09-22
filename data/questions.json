@@ -30884,9 +30884,9 @@
   },
   {
     "id": "q0734",
-    "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "The management team wants to assess the cybersecurity team's readiness to respond to a threat scenario.\nWhich of the following will adequately assess and formalize a response within a short time?",
     "choices": [
@@ -30910,12 +30910,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A tabletop exercise simulates a threat scenario in a controlled setting, allowing the cybersecurity team to practice response procedures, evaluate readiness, and formally document performance and gaps within a short time frame.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise puts the team through a realistic scenario in a meeting, produces a documented record of how they performed, and can be organised and completed in days. That combination of assessment plus formal output in a short time is exactly what management asked for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Requesting formal action plans from IT managers produces paperwork about intentions. It tests nobody's actual readiness.",
+      "B": "A bug bounty finds technical vulnerabilities in systems. It says nothing about how the team would respond to an incident.",
+      "D": "An external consultant gives an independent view but takes weeks or months and assesses processes rather than exercising the team."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p313",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30952,12 +30956,17 @@
     "correct": [
       "D"
     ],
-    "explanation": "Full disk encryption protects data stored on the workstation's storage media, ensuring that information remains confidential when the system is powered off or the storage device is removed, which is protection of data at rest.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption protects what is written to the workstation's storage, so the volume is unreadable when the machine is off or the drive is removed. Stored data that is not moving or being processed is data at rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking obscures parts of a value for display. It is applied within applications rather than to a whole disk.",
+      "B": "Data in transit is data crossing a network, protected by TLS or IPSec.",
+      "C": "Obfuscation makes data harder to interpret without genuine cryptographic strength.",
+      "E": "Data sovereignty is the legal principle about which country's laws govern data. It is not a protection strategy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p313",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.688,
     "needsExplanation": false,
     "keyCorrected": false
@@ -30965,8 +30974,8 @@
   {
     "id": "q0736",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A network security analyst monitors the network's IDS. which has flagged unusual activity. The IDS has detected multiple login attempts to a database server within a short period. These attempts come from various IP addresses that are not normally recognized by the network's usual traffic patterns. Each attempt uses the same username and password. Based on the following log output:\nWhich of the following types of network attacks is most likely occurring?",
     "choices": [
@@ -30990,12 +30999,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The repeated use of the same username and password across multiple login attempts from different IP addresses indicates stolen credentials are being reused to gain unauthorized access, which is characteristic of a credential replay attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One username and password being presented from many unrelated addresses means the credentials were obtained elsewhere and are now being reused. Replaying captured credentials against a service is a credential replay attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script that runs in a browser. It has nothing to do with repeated logins.",
+      "C": "A distributed denial of service floods a target to exhaust it. These are authentication attempts, not volumetric traffic.",
+      "D": "SQL injection manipulates database queries through input. The attempts here are ordinary logins with a valid credential pair."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p314",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31028,12 +31041,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A risk assessment conducted on a yearly basis is performed at regular, predefined intervals, which characterizes it as a recurring assessment rather than a one-time, ad hoc, or continuous activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An assessment performed every year runs on a fixed, predefined schedule. That regular cadence is what makes it recurring, as distinct from being triggered by an event or running without interruption.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Ad hoc means performed as needed, in response to a specific trigger, with no set schedule.",
+      "C": "One time means performed once for a discrete purpose, such as decommissioning a system.",
+      "D": "Continuous means monitoring without interruption rather than at intervals."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p314",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31066,12 +31083,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Nation-state actors have the resources, funding, and advanced capabilities required to discover or acquire multiple zero-day vulnerabilities and commonly target government research organizations to steal intellectual property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multiple zero-days is the giveaway. Finding or buying several unknown vulnerabilities takes resources and patience that only a well-funded state programme has, and government research organisations holding intellectual property are precisely the target such programmes pursue.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hacktivists want publicity for a cause and typically use readily available techniques. Stealth theft of IP advances no message.",
+      "C": "An unskilled attacker uses commodity tools against easy targets. They cannot source zero-days.",
+      "D": "An insider already has access and needs no exploit at all, let alone several unknown ones."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p315",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31104,21 +31125,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "A keylogger can interfere with normal input behavior and introduce lag while capturing keystrokes during credential entry, which aligns with the observed cursor issues and delays when typing login information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Input lag and cursor irregularities while typing credentials point at software intercepting keystrokes between the keyboard and the application. A keylogger captures each keystroke as it is entered, and the interception overhead is what the user perceives as lag.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A rootkit hides an attacker's presence at a privileged level. It is designed to be invisible rather than to disturb typing.",
+      "C": "A worm spreads itself across hosts. Propagation affects the network, not local input behaviour.",
+      "D": "A denial of service makes a service unavailable. The banking site is loading and usable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p315",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0740",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
     "question": "Which of the following will best ensure a controlled version release of a new software application?",
     "choices": [
@@ -31142,12 +31167,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Change management procedures enforce formal review, approval, testing, and scheduling of software changes, ensuring releases are controlled, documented, and deployed in an orderly manner.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A controlled release means the version reaching production has been reviewed, approved, tested and scheduled, with a way back if it fails. Change management procedures impose exactly that sequence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline.",
+      "B": "Quantified risk analysis puts monetary values on risk. It informs decisions without governing releases.",
+      "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release is made."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31180,21 +31209,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Removable devices such as USB drives are commonly used to transfer data into and out of air- gapped networks, making them the most frequent and practical path for data loss in otherwise isolated environments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap removes every network path, so data can only move physically. Removable media is how updates and files legitimately cross that gap, which makes it the one channel available to carry data out as well.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A bastion host is a controlled gateway between networks. Its existence would mean the network is not air-gapped.",
+      "B": "Unsecured Bluetooth is a short-range wireless path and a genuine concern, but it is far less common than USB media in these environments.",
+      "C": "An unpatched OS is a vulnerability that could be exploited once an attacker has a path. It is not itself a route out."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0742",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "An attacker pretending to be from the help desk calls a user. The attacker asks the user to verify a password in order to fix a technical issue.\nWhich of the following security awareness topics does this scenario best describe?",
     "choices": [
@@ -31218,12 +31251,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The attacker manipulates the user by impersonating trusted support staff to trick them into revealing credentials, which is a classic example of social engineering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker exploits the user's trust in the help desk rather than any technical weakness, persuading them to hand over a password. Manipulating a person into divulging information is social engineering.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Brand impersonation mimics a company's identity to outsiders, typically through a fake site or message. This is an internal role being impersonated by phone.",
+      "B": "Operational security is the practice of not exposing sensitive information through everyday activity. It names the failing rather than the attack.",
+      "D": "An insider threat comes from someone within the organisation. The caller is external."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p316",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31231,8 +31268,8 @@
   {
     "id": "q0743",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "Multiple users report that they cannot access a certain application after a recent security update.\nWhich of the following should the security team check first to help find the root cause?",
     "choices": [
@@ -31256,12 +31293,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "After a security update, an IPS or IDS may begin blocking or resetting connections it now identifies as malicious or noncompliant, so reviewing its logs first helps quickly determine whether the update is preventing access to the application.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The application worked until a security update was applied, so the likely cause is a new rule now blocking traffic that was previously allowed. IPS and IDS logs show exactly what is being dropped or reset and why, which confirms or eliminates that cause fastest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Proxy logs cover outbound web browsing. They would only help if the application is reached over the web proxy.",
+      "C": "SIEM logs aggregate everything, which makes them comprehensive but slower to interrogate for a specific blocking decision.",
+      "D": "DNS logs show name resolution. A blocked connection to a correctly resolved address leaves DNS looking healthy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31294,12 +31335,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Hardware-level memory encryption protects data while it is actively being processed and stored in system memory, which corresponds to protecting data in use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data loaded into memory and being actively processed is data in use, and it is the hardest state to protect because it must be in plaintext for the processor to work with it. Hardware memory encryption exists specifically to close that gap.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data at rest is stored data, protected by disk or database encryption.",
+      "C": "Data in transit is data crossing a network, protected by TLS or IPSec.",
+      "D": "Data sovereignty is a legal principle about jurisdiction, not a data state."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.972,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31332,12 +31377,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A hot site provides a fully operational alternate environment with power, systems, and data already available, allowing the company to continue operations during an extended power outage affecting the primary site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An extended outage outlasts batteries and may outlast fuel supplies. A hot site is a separate, fully operational facility on different power, so operations move there and continue regardless of how long the primary site stays dark.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A UPS runs on batteries for minutes. It bridges the gap to a generator rather than covering an extended outage.",
+      "C": "Snapshots preserve data state for recovery. They keep nothing running.",
+      "D": "SOAR automates security response workflows. It has no bearing on power."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31370,12 +31419,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "An air-gapped configuration physically or logically isolates systems from external networks, including the internet, ensuring they cannot communicate outside the controlled environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Systems that must not reach the internet at all are air-gapped — no physical or logical connection exists to any external network. The absence of a path is what guarantees the requirement rather than relying on a rule.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Serverless runs code on provider-managed infrastructure, which is inherently internet-connected.",
+      "C": "Isolated is close in meaning but broader and less precise; the standard term for complete network separation is air-gapped.",
+      "D": "Segmented means divided into controlled zones. Paths still exist between them, governed rather than absent."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31408,12 +31461,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Embedded systems are often legacy, purpose-built devices with limited vendor support, are critical to industrial operations, and commonly require network segmentation and close monitoring due to unpatched vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Purpose-built devices running fixed firmware, critical to production, with almost no vendor support and no realistic patching path, are embedded systems. Segmenting and monitoring them closely is the standard treatment precisely because they cannot be fixed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Workstations run general-purpose operating systems with active vendor support and routine patching.",
+      "C": "A core router is critical, but network vendors provide firmware updates and support contracts for them.",
+      "D": "A DNS server runs maintained software that is patched like any other server."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31446,12 +31503,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Packet captures allow the analyst to examine traffic characteristics such as destination IPs, ports, protocols, timing, and traffic patterns, which helps determine whether encrypted traffic on non-standard ports is indicative of malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The content is encrypted, so the analyst needs everything around it: destination address and reputation, port, protocol behaviour, packet sizes and timing regularity. A packet capture supplies all of that, and beaconing patterns are visible even when the payload is not.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record activity inside a business application. Malware communicating out does not pass through it.",
+      "B": "Vulnerability scans identify weaknesses that exist. They say nothing about traffic currently leaving.",
+      "C": "Endpoint logs help identify which process is responsible and are a valuable second step, but they do not characterise the traffic itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.65,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31484,21 +31545,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "The $10,000 represents the expected cost of a single occurrence of the incident, which is the single loss expectancy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Single loss expectancy is the cost of one occurrence. Here $10,000 is what one incident costs, and multiplying it by the annualised rate of two gives the $20,000 annualised loss expectancy behind the budget.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "ARO is how often the event occurs per year, which is two in this scenario.",
+      "C": "ALE is the annual total, which is the $20,000 figure.",
+      "D": "RPO is how much data loss is tolerable after an incident. It is not a monetary measure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p319",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0750",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "An organization experiences data loss after several employees traveled to an area that is well- known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended.\nWhich of the following will best prevent data loss events in the future?",
     "choices": [
@@ -31522,12 +31587,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption ensures that all data stored on a device is unreadable without proper authentication. If devices are stolen, seized, or accessed offline during travel in high-risk regions, encrypted disks prevent attackers from extracting sensitive data, effectively mitigating data loss from physical compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every listed precaution protects the device while it is running and connected, yet data was still lost — which points at offline physical access to the hardware during travel. Full disk encryption is the control that renders a seized or cloned drive unreadable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data sanitisation removes data from media at end of life. It is a disposal control.",
+      "B": "A WAF protects a hosted web application from inbound attacks. It has no bearing on travelling laptops.",
+      "D": "Split tunnelling sends some traffic outside the VPN. It weakens protection rather than strengthening it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p319",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31560,21 +31629,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "VM escape occurs when malicious code running inside a virtual machine breaks out of the VM boundary and executes on the underlying host system. A memory overflow caused by a plug-in that enables code execution on the host directly represents this scenario, as it allows the guest to compromise the hypervisor or host environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "VM escape means code inside a guest breaking the isolation boundary and executing on the host. A plug-in triggering a memory overflow that yields code execution on the host is precisely that crossing from guest to hypervisor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Command injection on the virtualisation web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
+      "C": "Unauthenticated API requests are an access control failure on the management plane, again not an escape from a guest.",
+      "D": "A crafted packet crashing hypervisor services is a denial of service. It disrupts rather than executing code on the host."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0752",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
     "question": "Which of the following best describes the purpose of using deception technologies in a security strategy?",
     "choices": [
@@ -31598,12 +31671,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Deception technologies are designed to intentionally attract attackers to decoy systems, credentials, or data that appear valuable. By interacting with these controlled environments, attackers reveal their techniques, tools, and intent, allowing defenders to gather high-quality threat intelligence and improve detection and response capabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Deception technologies — honeypots, honeyfiles, honeytokens — exist to attract an attacker into a controlled environment where everything they do is recorded. The value is the intelligence about their tools and techniques, gathered without risk to real systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Preventing malware installation is the job of endpoint protection. Deception does not block anything.",
+      "B": "Blocking external traffic before it reaches critical systems describes a firewall. Deception invites interaction rather than refusing it.",
+      "D": "Monitoring privileged accounts for insider threats is user behaviour analytics. A honeytoken can contribute, but intelligence gathering is the broader purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31636,12 +31713,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Corporate espionage involves the intentional theft of proprietary or confidential business information by a competitor. In this scenario, Company B deliberately placed an employee inside Company A to steal sensitive information, which directly aligns with corporate espionage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A competitor deliberately planted an employee to steal proprietary information. Theft of trade secrets by a rival for commercial advantage is corporate espionage, and the placement of an insider is the method rather than the motive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Personal financial gain would mean the employee acted for their own profit. They were directed by Company B.",
+      "B": "Supply chain access means compromise reaching you through a vendor or component. No supplier is involved.",
+      "C": "Shadow IT is unsanctioned technology adopted for convenience. This is deliberate theft."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p320",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31649,8 +31730,8 @@
   {
     "id": "q0754",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
     "question": "Which of the following are examples of operational controls that are appropriate to implement in an environment where financial processing activities occur? (Choose two.)",
     "choices": [
@@ -31683,12 +31764,17 @@
       "C",
       "D"
     ],
-    "explanation": "Dual control is an operational control that requires two authorized individuals to participate in sensitive financial processes, reducing the risk of fraud or error. Mandatory vacations are an operational control used to detect fraudulent activity by ensuring duties are periodically performed by others, which increases the likelihood of uncovering irregularities in financial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Operational controls are executed by people through process. Dual control requires two authorised individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key escrow is a technical control for recovering encryption keys.",
+      "B": "Tokenisation is a technical data protection technique.",
+      "E": "Access badge readers are physical controls.",
+      "F": "Biometrics is a physical or technical authentication control rather than a process."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p321",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.353,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31696,8 +31782,8 @@
   {
     "id": "q0755",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A security administrator wants to improve the reliability of the firewall connection at the company's primary data center.\nWhich of the following should the administrator configure?",
     "choices": [
@@ -31721,12 +31807,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A firewall cluster increases reliability by providing high availability and failover between multiple firewall instances. If one firewall fails, another can take over processing traffic, ensuring continuous connectivity at the primary data center.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reliability of the firewall itself means surviving the failure of one device. Clustering runs multiple firewalls as a single logical unit with state shared between them, so if one fails another continues processing traffic without dropping sessions.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A proxy server mediates requests. It does not make the firewall resilient.",
+      "B": "Microservices is an application architecture pattern. It is unrelated to network appliances.",
+      "D": "A load balancer distributes traffic across servers. It improves the availability of what sits behind the firewall rather than of the firewall itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p321",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31759,12 +31849,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing a legal hold ensures that all potentially relevant evidence, such as logs, system images, and communications, is preserved and protected from alteration or deletion. This action is taken when litigation or regulatory action is anticipated and is critical for supporting investigations and legal proceedings following a data breach.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Preserving logs, images and communications because litigation or regulatory action is anticipated is a legal hold. It suspends routine deletion and retention policies so relevant material survives long enough to be collected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Chain of custody documents who handled evidence after it is collected. Preservation comes first.",
+      "B": "Root cause analysis determines why the incident happened.",
+      "D": "Containment limits the damage while the incident is live. Preservation is about evidence, not spread."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p322",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31797,12 +31891,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data sovereignty refers to the concept that data is subject to the laws and governance structures of the country where it is collected, stored, or processed. Organizations must ensure that data handling practices comply with the legal and regulatory requirements of the jurisdiction where the data resides. This creates challenges when operating across multiple countries because different regions may impose restrictions on where data can be stored or processed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty means data is subject to the laws of the jurisdiction it sits in. The challenge it creates is practical and legal at once: an organisation operating across borders must ensure each data set is stored and processed only where the applicable law permits.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypting local backups is a data protection control. It addresses confidentiality regardless of location.",
+      "B": "Preventing accidental deletion is a data integrity and availability concern.",
+      "D": "Managing latency in content delivery networks is a performance problem, even though it also involves geography."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p322",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31835,12 +31933,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Before making any modification to a critical system, the change must follow the organization's formal change management process. Submitting a change management request ensures the change is documented, reviewed, approved, and scheduled appropriately to minimize risk and service disruption. This process also allows stakeholders to assess potential impacts and plan testing and rollback procedures before applying the patch.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Even an urgent patch on a critical system is a change, and change management exists to ensure it is reviewed, approved, tested and scheduled with a backout plan. Submitting the request is the first step because everything else depends on that approval.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Testing in production, even after hours, is testing on the live system. Testing belongs in a non-production environment and only after approval.",
+      "C": "Removing the application from the allow list would break it. That is unrelated to patching.",
+      "D": "Requesting an exception avoids the process rather than following it, and there is no reason to bypass change control for a planned patch."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31873,12 +31975,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Ticketing automation is particularly effective for escalation because it can automatically apply predefined rules based on severity, priority, or response time thresholds. If an incident is not addressed within the required timeframe or meets specific criticality criteria, the system automatically escalates the ticket to higher support tiers or management, ensuring timely attention and appropriate response according to service level agreements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Escalation is rule-driven and time-sensitive, which makes it ideal for automation. The system can watch severity and elapsed time and route the ticket upward the moment a threshold is crossed, without depending on someone noticing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Notification is also commonly automated, but it only tells people something happened. Escalation is what ensures the correct level of attention.",
+      "B": "Creation opens the ticket. It starts the process rather than governing how much attention the incident receives.",
+      "C": "Closure ends the ticket, and automating it risks closing things that were never properly resolved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31911,12 +32017,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Access badges enforce controlled physical access to the data center by allowing only authorized personnel to enter secured areas. By restricting entry at doors and checkpoints through authentication mechanisms such as badge readers, unauthorized individuals are prevented from gaining physical access to critical infrastructure, thereby stopping potential attacks before they occur.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access badges enforce who may physically enter, so an unauthorised person is stopped at the door rather than recorded walking through it. Stopping the act before it happens is what makes this the preventive control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Video surveillance records what occurred. It is detective, and deterrent where visible.",
+      "C": "Infrared sensors detect movement and raise an alert. Again detection rather than prevention.",
+      "D": "Flood lights improve visibility and discourage intruders, which is deterrent."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31958,12 +32068,17 @@
       "E",
       "F"
     ],
-    "explanation": "Using cloud-based repositories can violate data sovereignty requirements if the cloud provider stores or processes data in jurisdictions outside the country or region required by applicable regulations. This may place the data under foreign legal authority, creating compliance issues.\nMultiregion redundancy for backups replicates data across multiple geographic locations. If those backup locations are in different countries or regions than permitted by regulatory or contractual requirements, the organization may violate laws governing where data must remain stored or processed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sovereignty turns on where data physically resides. A cloud repository may place it in a provider region outside the permitted jurisdiction, and multiregion backup replication deliberately copies it to other countries — both put data under foreign legal authority without anyone intending it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DLP labelling classifies data for policy enforcement. It affects handling, not location.",
+      "B": "File metadata manipulation changes descriptive attributes. It does not move data across borders.",
+      "C": "Unencrypted data at rest is a confidentiality weakness. It may compound a sovereignty breach but does not cause one.",
+      "D": "Tokenising database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p324",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.481,
     "needsExplanation": false,
     "keyCorrected": false
@@ -31996,12 +32111,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A brute-force attack involves repeatedly attempting different password combinations to gain access to an account. Continuous authentication attempts can trigger account lockouts due to security policies that lock accounts after multiple failed login attempts. These repeated attempts can also generate system or web access errors and may slow browsing performance due to the increased authentication traffic and security checks being triggered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Unexpected account lockouts are the telling symptom — something is repeatedly submitting wrong credentials until the lockout policy trips. The sustained authentication attempts also load the systems involved, which accounts for the slowness and errors.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A virus infects files and spreads. It would not produce account lockouts.",
+      "B": "A keylogger captures keystrokes silently. Stolen credentials would be correct, so no lockouts would occur.",
+      "C": "Ransomware encrypts files and demands payment. Its presence is unmistakable and unrelated to lockouts."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p324",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32047,12 +32166,18 @@
       "B",
       "C"
     ],
-    "explanation": "Port 23 is used by Telnet, which transmits authentication credentials and session data in plaintext. Because it lacks encryption, it is considered insecure and should be blocked to prevent credential interception and session hijacking.\nPort 25 is used for SMTP message transfer and is commonly exploited for unauthenticated mail relay and spam transmission. Without additional protections such as authenticated or encrypted mail submission services, it is considered insecure and is often blocked on internal networks to reduce abuse and exposure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port 23 is Telnet, which carries credentials and session data in plaintext, and port 25 is unencrypted SMTP. Both transmit without protection, which is exactly what an insecure-protocol policy targets.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
+      "D": "Port 443 is HTTPS, encrypted web traffic.",
+      "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
+      "F": "Port 993 is IMAP over TLS.",
+      "G": "Port 995 is POP3 over TLS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p325",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32085,12 +32210,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Asymmetric encryption uses a key pair consisting of a public key and a private key. The public key can be openly shared, while the private key remains secret with the owner. This design allows two parties to securely exchange data without first sharing a private secret, because data encrypted with the public key can only be decrypted by the corresponding private key. This enables secure communication and key exchange over untrusted networks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Asymmetric encryption uses a public key anyone may hold and a private key only the owner has. Because the public key can be shared openly, two parties who have never met can exchange data securely without first establishing a shared secret — which is the problem symmetric encryption cannot solve alone.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Identical keys for encryption and decryption describes symmetric encryption, which is the opposite arrangement.",
+      "B": "A shared secret key is again symmetric. Asymmetric encryption actually requires more keys, not fewer.",
+      "C": "Asymmetric encryption is substantially slower than symmetric, which is why it is used to establish a symmetric session key rather than to encrypt bulk data."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p325",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32123,21 +32252,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Hashing protects stored passwords by transforming the original password into a fixed-length cryptographic hash value using a one-way algorithm. The original password cannot feasibly be derived from the hash. During authentication, the entered password is hashed and compared to the stored hash, ensuring the actual password is never stored or exposed in plaintext.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Passwords should never be recoverable, even by the system holding them. Hashing applies a one-way function so only the digest is stored, and authentication works by hashing the submitted password and comparing digests.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption is reversible by anyone with the key, which means a key compromise exposes every password in plaintext.",
+      "C": "Masking hides parts of a value for display. The full value still exists underneath.",
+      "D": "Tokenisation substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0766",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 5,
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "Which of the following explains how a supply chain service provider could introduce a security vulnerability into an organization?",
     "choices": [
@@ -32161,12 +32294,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Supply chain service providers often require privileged or administrative access to the systems they manage or support. Because they interact with multiple client environments and maintain elevated permissions, they become attractive targets for attackers. If a provider is compromised, attackers can leverage that trusted access to infiltrate the organization's systems, introducing vulnerabilities and enabling unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Service providers typically hold privileged access across many client environments, which makes them a high-value target. Compromising one provider gives an attacker trusted, elevated access into every organisation it serves — that concentration of access is the vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Delayed hardware shipments affect project timelines. It is an availability and planning problem, not a security vulnerability.",
+      "B": "Outsourcing customer service abroad raises data handling and privacy considerations rather than introducing a technical vulnerability.",
+      "C": "Failing to encrypt the organisation's own internal database is the organisation's own control failure, not something the provider introduced."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32199,12 +32336,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A scan-patch-scan process reduces vulnerabilities by continuously identifying security weaknesses through vulnerability scanning, applying patches or remediation to address the discovered issues, and then rescanning to verify that the vulnerabilities have been properly resolved. This systematic cycle ensures vulnerabilities are discovered, mitigated, and validated, making it an effective operational method for reducing overall exposure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Scan, patch, rescan is the full vulnerability management loop: discover what is exposed, fix it, then prove the fix worked. The closing rescan is what makes it effective, because it catches patches that failed to apply and changes that reintroduced the flaw.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Joining an information-sharing organisation improves awareness of threats. Intelligence does not remediate anything by itself.",
+      "C": "A bug bounty finds flaws others missed, which is valuable but supplementary and unpredictable in coverage.",
+      "D": "Patching low-scoring vulnerabilities first inverts prioritisation, leaving the most dangerous issues open longest."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false

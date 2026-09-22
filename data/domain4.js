@@ -9660,10 +9660,52 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0743",
+    "id": "q0734",
     "domain": 4,
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "The management team wants to assess the cybersecurity team's readiness to respond to a threat scenario.\nWhich of the following will adequately assess and formalize a response within a short time?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Send a message to all IT managers and request formal action plans."
+      },
+      {
+        "key": "B",
+        "text": "Create a bug bounty program and assess the findings."
+      },
+      {
+        "key": "C",
+        "text": "Execute a tabletop exercise and document the performance results."
+      },
+      {
+        "key": "D",
+        "text": "Hire an external consultant to independently assess the cybersecurity processes."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A tabletop exercise puts the team through a realistic scenario in a meeting, produces a documented record of how they performed, and can be organised and completed in days. That combination of assessment plus formal output in a short time is exactly what management asked for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Requesting formal action plans from IT managers produces paperwork about intentions. It tests nobody's actual readiness.",
+      "B": "A bug bounty finds technical vulnerabilities in systems. It says nothing about how the team would respond to an incident.",
+      "D": "An external consultant gives an independent view but takes weeks or months and assesses processes rather than exercising the team."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p313",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0743",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "Multiple users report that they cannot access a certain application after a recent security update.\nWhich of the following should the security team check first to help find the root cause?",
     "choices": [
@@ -9687,12 +9729,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "After a security update, an IPS or IDS may begin blocking or resetting connections it now identifies as malicious or noncompliant, so reviewing its logs first helps quickly determine whether the update is preventing access to the application.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The application worked until a security update was applied, so the likely cause is a new rule now blocking traffic that was previously allowed. IPS and IDS logs show exactly what is being dropped or reset and why, which confirms or eliminates that cause fastest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Proxy logs cover outbound web browsing. They would only help if the application is reached over the web proxy.",
+      "C": "SIEM logs aggregate everything, which makes them comprehensive but slower to interrogate for a specific blocking decision.",
+      "D": "DNS logs show name resolution. A blocked connection to a correctly resolved address leaves DNS looking healthy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p317",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9725,13 +9771,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Packet captures allow the analyst to examine traffic characteristics such as destination IPs, ports, protocols, timing, and traffic patterns, which helps determine whether encrypted traffic on non-standard ports is indicative of malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The content is encrypted, so the analyst needs everything around it: destination address and reputation, port, protocol behaviour, packet sizes and timing regularity. A packet capture supplies all of that, and beaconing patterns are visible even when the payload is not.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record activity inside a business application. Malware communicating out does not pass through it.",
+      "B": "Vulnerability scans identify weaknesses that exist. They say nothing about traffic currently leaving.",
+      "C": "Endpoint logs help identify which process is responsible and are a valuable second step, but they do not characterise the traffic itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p318",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.65,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0750",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "An organization experiences data loss after several employees traveled to an area that is well- known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended.\nWhich of the following will best prevent data loss events in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Data sanitization"
+      },
+      {
+        "key": "B",
+        "text": "WAF"
+      },
+      {
+        "key": "C",
+        "text": "FDE"
+      },
+      {
+        "key": "D",
+        "text": "Split tunneling"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Every listed precaution protects the device while it is running and connected, yet data was still lost — which points at offline physical access to the hardware during travel. Full disk encryption is the control that renders a seized or cloned drive unreadable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data sanitisation removes data from media at end of life. It is a disposal control.",
+      "B": "A WAF protects a hosted web application from inbound attacks. It has no bearing on travelling laptops.",
+      "D": "Split tunnelling sends some traffic outside the VPN. It weakens protection rather than strengthening it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p319",
+    "needsReview": false,
+    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9763,12 +9855,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Enforcing a legal hold ensures that all potentially relevant evidence, such as logs, system images, and communications, is preserved and protected from alteration or deletion. This action is taken when litigation or regulatory action is anticipated and is critical for supporting investigations and legal proceedings following a data breach.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Preserving logs, images and communications because litigation or regulatory action is anticipated is a legal hold. It suspends routine deletion and retention policies so relevant material survives long enough to be collected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Chain of custody documents who handled evidence after it is collected. Preservation comes first.",
+      "B": "Root cause analysis determines why the incident happened.",
+      "D": "Containment limits the damage while the incident is live. Preservation is about evidence, not spread."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p322",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9801,12 +9897,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Ticketing automation is particularly effective for escalation because it can automatically apply predefined rules based on severity, priority, or response time thresholds. If an incident is not addressed within the required timeframe or meets specific criticality criteria, the system automatically escalates the ticket to higher support tiers or management, ensuring timely attention and appropriate response according to service level agreements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Escalation is rule-driven and time-sensitive, which makes it ideal for automation. The system can watch severity and elapsed time and route the ticket upward the moment a threshold is crossed, without depending on someone noticing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Notification is also commonly automated, but it only tells people something happened. Escalation is what ensures the correct level of attention.",
+      "B": "Creation opens the ticket. It starts the process rather than governing how much attention the incident receives.",
+      "C": "Closure ends the ticket, and automating it risks closing things that were never properly resolved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p323",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9852,12 +9952,18 @@ export const domain4Questions = [
       "B",
       "C"
     ],
-    "explanation": "Port 23 is used by Telnet, which transmits authentication credentials and session data in plaintext. Because it lacks encryption, it is considered insecure and should be blocked to prevent credential interception and session hijacking.\nPort 25 is used for SMTP message transfer and is commonly exploited for unauthenticated mail relay and spam transmission. Without additional protections such as authenticated or encrypted mail submission services, it is considered insecure and is often blocked on internal networks to reduce abuse and exposure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port 23 is Telnet, which carries credentials and session data in plaintext, and port 25 is unencrypted SMTP. Both transmit without protection, which is exactly what an insecure-protocol policy targets.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
+      "D": "Port 443 is HTTPS, encrypted web traffic.",
+      "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
+      "F": "Port 993 is IMAP over TLS.",
+      "G": "Port 995 is POP3 over TLS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p325",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9890,12 +9996,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A scan-patch-scan process reduces vulnerabilities by continuously identifying security weaknesses through vulnerability scanning, applying patches or remediation to address the discovered issues, and then rescanning to verify that the vulnerabilities have been properly resolved. This systematic cycle ensures vulnerabilities are discovered, mitigated, and validated, making it an effective operational method for reducing overall exposure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Scan, patch, rescan is the full vulnerability management loop: discover what is exposed, fix it, then prove the fix worked. The closing rescan is what makes it effective, because it catches patches that failed to apply and changes that reintroduced the flaw.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Joining an information-sharing organisation improves awareness of threats. Intelligence does not remediate anything by itself.",
+      "C": "A bug bounty finds flaws others missed, which is valuable but supplementary and unpredictable in coverage.",
+      "D": "Patching low-scoring vulnerabilities first inverts prioritisation, leaving the most dangerous issues open longest."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p326",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
