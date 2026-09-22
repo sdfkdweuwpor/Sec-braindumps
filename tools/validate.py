@@ -126,13 +126,32 @@ def main():
     # A duplicated question whose two copies disagree on the answer is proof
     # that one of the two keys is wrong. Free bad-key detection.
     byid = {q["id"]: q for q in qs}
+
+    def keyed_text(q):
+        """The TEXT of the correct answers, normalised.
+
+        Comparing letters is wrong: two questions can share a stem while
+        offering completely different choices, so 'both key C' means nothing.
+        An earlier version of this check compared letters and produced a bad
+        correction on q0513.
+        """
+        by_key = {c["key"]: c["text"] for c in q["choices"]}
+        return sorted(norm(by_key.get(k, "")) for k in q["correct"])
+
+    def same_choice_set(a, b):
+        return (sorted(norm(c["text"]) for c in a["choices"])
+                == sorted(norm(c["text"]) for c in b["choices"]))
+
     conflicts = []
     for x, y, r in uniq:
-        ax, ay = sorted(byid[x]["correct"]), sorted(byid[y]["correct"])
+        qx, qy = byid[x], byid[y]
         tag = ""
-        if ax != ay:
-            conflicts.append((x, y, r, ax, ay))
-            tag = f"   <-- ANSWER CONFLICT {''.join(ax)} vs {''.join(ay)}"
+        if not same_choice_set(qx, qy):
+            tag = "   (same stem, different choices - not comparable)"
+        elif keyed_text(qx) != keyed_text(qy):
+            ax, ay = keyed_text(qx), keyed_text(qy)
+            conflicts.append((x, y, r, qx["correct"], qy["correct"]))
+            tag = f"   <-- ANSWER CONFLICT {qx['correct']} vs {qy['correct']}"
         print(f"     {x} ~ {y}  ({r}){tag}")
     if conflicts:
         err(f"{len(conflicts)} duplicated question(s) whose copies disagree on the "

@@ -17,20 +17,18 @@ KEY_CORRECTIONS = {
               "implied.",
               "Professor Messer SY0-701 2.1 Threat Actors; corroborating "
               "flashcard/discussion sources agree on 'Unskilled attacker'."),
-    "q0513": (["A"], ["C"],
-              "Duplicate of q0342, which keys C. SY0-701 objective 1.3 lists "
-              "'Backout plan' explicitly as a change-management step; 'Board "
-              "review' appears nowhere in the objectives.",
-              "CompTIA SY0-701 objective 1.3 component list; Professor Messer "
-              "1.3 Change Management."),
     "q0263": (["D"], ["A"],
-              "Duplicate of q0465, which keys A. The discriminator is "
-              "'low-cost': cheap IoT hardware in infrastructure carries "
-              "supply-chain risk (unvetted manufacturers, firmware backdoors, "
-              "no patch support). 'Storage of data' is a generic IoT concern "
-              "not specific to cost.",
-              "SY0-701 objective 3.1 IoT architecture considerations; "
-              "corroborating exam discussion agrees on 'Country of origin'."),
+              "The discriminator is 'low-cost': cheap IoT hardware in "
+              "infrastructure carries supply-chain risk from unvetted "
+              "manufacturers. 'Storage of data' is a generic IoT concern not "
+              "specific to cost. NOTE: this was originally justified as a "
+              "duplicate-key conflict with q0465, which was wrong -- q0465 "
+              "shares the stem but offers different choices. The correction "
+              "stands on the reasoning below, not on that comparison.",
+              "SY0-701 objective 3.1 IoT architecture considerations, plus "
+              "corroborating exam discussion. Supporting signal: q0465 poses "
+              "the same stem and keys 'Counterfeit products' -- also a "
+              "supply-chain answer, not a data-storage one."),
 }
 
 # qid -> reason. Removed from the shipped bank entirely.
@@ -46,4 +44,14 @@ DROPPED = {
 
 # Conflicts checked against outside sources without reaching a confident
 # answer. Left exactly as the PDF has them and reported every run.
-UNRESOLVED = {}
+UNRESOLVED = {
+    ("q0342", "q0513"):
+        "Same stem, different choices, so the two are not really duplicates. "
+        "q0342 keys C (Backout planning), which objective 1.3 lists "
+        "explicitly. q0513 offers Management review / Load testing / "
+        "Maintenance notifications / Procedure updates and keys A "
+        "(Management review), which maps to the objective's 'approval "
+        "process'. Both left as the PDF has them. An earlier correction "
+        "here wrongly rewrote q0513's key by comparing answer letters "
+        "across differing choice sets; it has been reverted.",
+}

@@ -3891,7 +3891,7 @@ export const domain5Questions = [
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
     "explanation": "Management review is a key step in the change management process, ensuring that proposed changes are properly evaluated for security and business impact before implementation.",
     "explanationSource": "pdf",
@@ -3901,7 +3901,7 @@ export const domain5Questions = [
     "needsReview": true,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
-    "keyCorrected": true
+    "keyCorrected": false
   },
   {
     "id": "q0521",
