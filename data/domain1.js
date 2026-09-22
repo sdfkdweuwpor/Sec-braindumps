@@ -2573,13 +2573,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Zero Trust architecture is built on the principle of \"never trust, always verify,\" meaning that every request for resource access must be validated - regardless of where it originates - before any traffic is allowed between systems. This continuous validation requirement distinguishes Zero Trust from other models.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Zero Trust removes any assumption of trust based on network location, so every request between systems is authenticated and authorised on its own merits. That continuous per-request validation is what the question describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Policy enforcement is the mechanism that applies a decision. Zero Trust is the principle that demands the decision be made every time.",
+      "B": "Authentication proves identity at a point in time. Zero Trust requires it repeatedly and adds authorisation and context.",
+      "D": "Confidentiality means keeping data from unauthorised parties. It is a goal rather than a validation principle."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p177",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0410",
+    "domain": 1,
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
+    "type": "single",
+    "question": "Which of the following is a directive managerial control?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Acceptable use policy"
+      },
+      {
+        "key": "B",
+        "text": "Log-in warning banner"
+      },
+      {
+        "key": "C",
+        "text": "Master service agreement"
+      },
+      {
+        "key": "D",
+        "text": "No trespassing sign"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Two axes are being tested. An acceptable use policy is managerial because it is a documented governance instrument, and directive because it tells people what they must and must not do. Only the AUP is both.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A log-in warning banner is directive in effect but is implemented in software, making it a technical control.",
+      "C": "A master service agreement is a commercial contract between organisations, not an internal control directing staff behaviour.",
+      "D": "A no trespassing sign is directive but physical, since it acts on the physical environment rather than through management process."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p179",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },

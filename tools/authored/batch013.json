@@ -1,0 +1,242 @@
+{
+"q0390": {"objective":"4.2",
+ "explanation":"The banks are regulated, so they must be able to prove to a regulator that data was destroyed correctly at the right time. A certificate of destruction is that documented evidence, and without it the disposal cannot be demonstrated no matter how thoroughly it was performed.",
+ "incorrect":{
+  "A":"Encryption protects the data while it is being stored. It is important during the retention period but says nothing about disposal.",
+  "B":"Classification determines how sensitive the data is and therefore how it must be handled. It drives the retention rule rather than evidencing the destruction.",
+  "D":"Procurement is how the service was purchased. It sits at the start of the relationship, not the end of the data's life."}},
+
+"q0391": {"objective":"5.6",
+ "explanation":"Unbadged staff and tailgating are lapses in day-to-day vigilance rather than falling for a scam. Situational awareness training teaches people to notice their physical surroundings — to wear and check badges, and to challenge someone following them through a controlled door.",
+ "incorrect":{
+  "A":"Social engineering training covers manipulation by an attacker. Nobody is being tricked here; staff are simply being careless.",
+  "C":"Phishing training addresses fraudulent messages. These are physical access failures.",
+  "D":"The acceptable use policy governs how systems are used. It is a document rather than the awareness topic that changes this behaviour."}},
+
+"q0392": {"objective":"2.1",
+ "explanation":"A hacktivist attacks to advance a cause, so the payoff is the statement rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
+ "incorrect":{
+  "A":"Financial gain is the motivation of organised crime.",
+  "B":"Espionage is the motivation of nation-states and competitors seeking information.",
+  "D":"Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."}},
+
+"q0393": {"objective":"4.1",
+ "explanation":"Injection succeeds because user-supplied text reaches an interpreter as code. Input validation checks data against what is actually expected and rejects anything else, removing the mechanism the attack relies on at its source.",
+ "incorrect":{
+  "A":"Authentication proves who a user is. An authenticated user can still submit a malicious payload.",
+  "B":"Secure cookies protect session tokens from theft. They defend the session, not the input path.",
+  "C":"Static code analysis finds the flaw during development. It is valuable but it is a discovery technique, not a control running in production."}},
+
+"q0394": {"objective":"4.1",
+ "explanation":"Hardening starts by removing what should not be there, and every open port that nothing needs is an entry point requiring patching and monitoring. Closing unnecessary service ports shrinks the attack surface before anything else is layered on.",
+ "incorrect":{
+  "B":"Updating software fixes known defects and is essential, but a fully patched server still exposes every unnecessary service it is running.",
+  "C":"Adding the device to an ACL controls who may reach it. That is access control rather than securing the server itself.",
+  "D":"Upgrading the OS version is a lifecycle activity. A newly deployed server should already be on a supported release."}},
+
+"q0395": {"objective":"4.8",
+ "explanation":"Understanding what the malware actually does requires running it and watching. A sandbox gives an isolated environment where it can execute safely, and packet captures record everything it tries to communicate — together that yields behaviour no static examination would reveal.",
+ "incorrect":{
+  "A":"Reviewing blocked command-and-control addresses tells you where it wanted to connect. That is one artefact, not an analysis of the sample.",
+  "B":"Analysing application logs for persistence assumes the malware already ran on a production host, which is what you are trying to avoid.",
+  "C":"Vulnerability scanning identifies which systems could be affected. That is impact assessment, not analysis of the malware itself."}},
+
+"q0396": {"objective":"4.6",
+ "explanation":"Least privilege grants exactly the permissions a role requires to function and nothing beyond. The wording matters — the aim is that the user can effectively do the job while carrying no surplus rights that could be abused or stolen.",
+ "incorrect":{
+  "A":"Changing default passwords removes well-known credentials. It is basic hardening and says nothing about which permissions an account holds.",
+  "C":"Enforcing baseline configurations keeps system settings at a known-good standard. It governs machines rather than user entitlements.",
+  "D":"Network segmentation limits which systems can reach each other. It restricts network paths, not a user's permissions within a system."}},
+
+"q0397": {"objective":"2.2",
+ "explanation":"The attacker is assuming the chief executive's identity to make an unusual request seem authoritative. Pretending to be a trusted individual so the target complies is impersonation, and the gift-card ask is its best-known form.",
+ "incorrect":{
+  "A":"A watering-hole attack compromises a website the target group already visits. No website is involved.",
+  "B":"Disinformation is false information spread to mislead a population. This is targeted fraud against one employee.",
+  "C":"Phishing is the broader category of fraudulent messaging, and by SMS it would be smishing. The question asks what type of attack this is, and impersonation is the precise technique."}},
+
+"q0398": {"objective":"2.2",
+ "explanation":"The message comes from the executive's genuine corporate account, targets an employee who can act on it, and asks for financial information plus a change of contact details so future correspondence is diverted. That combination is business email compromise.",
+ "incorrect":{
+  "B":"Phishing is the general category. BEC is the specific variant using a real or spoofed executive account to drive a financial action.",
+  "C":"Brand impersonation mimics a company's identity to outsiders. Here an internal account is being used directly.",
+  "D":"Pretexting is the invented justification inside the message. It is a technique within the attack rather than the attack vector."}},
+
+"q0399": {"objective":"5.3",
+ "explanation":"A right-to-audit clause is the contractual term that entitles the customer to inspect the provider's controls, processes and evidence. Without it the provider is under no obligation to let anyone look, however much the customer wants assurance.",
+ "incorrect":{
+  "A":"A service-level agreement commits the provider to measurable performance. It defines outcomes without granting inspection rights.",
+  "B":"A memorandum of agreement records cooperation between parties. It is typically non-binding and confers no audit rights.",
+  "D":"Supply chain analysis maps supplier dependencies and risk. It is an activity the customer performs, not a contractual entitlement."}},
+
+"q0400": {"objective":"5.2",
+ "explanation":"Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is precisely what SLE expresses.",
+ "incorrect":{
+  "B":"ALE is the annualised figure — SLE multiplied by how often the event is expected each year. It aggregates rather than describing one incident.",
+  "C":"ARO is the annualised rate of occurrence, a frequency. It says how often, not how much.",
+  "D":"An SLA is a service-level agreement, a contractual commitment. It is not a risk calculation at all."}},
+
+"q0401": {"objective":"5.4",
+ "explanation":"Under GDPR the controller decides why and how personal data is processed, and carries the obligation to honour data subject rights such as erasure. A retailer collecting and managing its own customer data is making those decisions, so it is the controller.",
+ "incorrect":{
+  "A":"A processor handles data on the controller's behalf under instruction — a payment gateway or hosting provider, for example.",
+  "C":"The data subject is the individual the data is about. That is the customer making the request.",
+  "D":"Data custodian is an internal operational role responsible for maintaining data. It is not a GDPR legal designation."}},
+
+"q0402": {"objective":"4.5",
+ "explanation":"A web filter blocks by category, so if malicious sites are getting through, the categorisation is either out of date or the malicious category is not being blocked. Reviewing how sites are classified and which categories are denied is the configuration item that governs the outcome.",
+ "incorrect":{
+  "A":"An intrusion prevention system inspects traffic for attack patterns. It is a different control, not a setting within the web filter.",
+  "C":"Encryption protects traffic in transit. It can complicate inspection, but it is not the filtering configuration being asked about.",
+  "D":"The DNS service resolves names. DNS filtering is a related control, but the administrator has deployed web filtering and it is those settings that need review."}},
+
+"q0403": {"objective":"2.4",
+ "explanation":"Successful logins from Chicago and then Rome minutes apart describe a journey no person could make. Impossible travel is the indicator for exactly that geographic and temporal contradiction, and it strongly suggests the credentials are being used by someone else.",
+ "incorrect":{
+  "B":"Account lockout follows repeated failed attempts. These logins succeeded.",
+  "C":"Blocked content indicates a filter refused a request. Nothing was blocked here.",
+  "D":"Concurrent session usage means one account active in several places at once. Close, but the defining evidence here is the physically impossible distance in the time available."}},
+
+"q0404": {"objective":"4.8",
+ "explanation":"Containment is the phase that stops the incident spreading while the organisation works out what to do — isolating hosts, cutting connectivity, disabling accounts. Its explicit purpose is to limit damage and disruption rather than to eliminate the cause.",
+ "incorrect":{
+  "A":"Recovery restores systems to normal service. It happens after the threat has been removed.",
+  "C":"Preparation happens before any incident, building plans, tooling and training.",
+  "D":"Analysis determines what happened and how far it reached. It informs containment rather than performing it."}},
+
+"q0405": {"objective":"1.2",
+ "explanation":"Zero Trust removes any assumption of trust based on network location, so every request between systems is authenticated and authorised on its own merits. That continuous per-request validation is what the question describes.",
+ "incorrect":{
+  "A":"Policy enforcement is the mechanism that applies a decision. Zero Trust is the principle that demands the decision be made every time.",
+  "B":"Authentication proves identity at a point in time. Zero Trust requires it repeatedly and adds authorisation and context.",
+  "D":"Confidentiality means keeping data from unauthorised parties. It is a goal rather than a validation principle."}},
+
+"q0406": {"objective":"5.3",
+ "explanation":"A memorandum of agreement is the formal document setting out how two organisations will collaborate, including how jointly developed intellectual property may be used and disclosed. Sharing that IP with unauthorised companies breaches those agreed terms.",
+ "incorrect":{
+  "A":"An SLA commits a provider to measurable service performance. There is no service level at issue.",
+  "B":"An AUP governs how employees use company systems. It is internal and does not bind a partner organisation.",
+  "C":"An SOW defines the tasks and deliverables of a specific engagement. It scopes work rather than governing IP rights in a joint venture."}},
+
+"q0407": {"objective":"2.1",
+ "explanation":"Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT.",
+ "incorrect":{
+  "A":"An unskilled attacker is an external actor using commodity tools. The employee is neither external nor attacking.",
+  "B":"A hacktivist attacks to advance a cause. Nothing ideological is happening.",
+  "D":"Supply chain risk comes from a compromised vendor or component reaching you through trusted channels. The employee installed this directly."}},
+
+"q0408": {"objective":"4.8",
+ "explanation":"Root cause analysis establishes why the incident was possible — the underlying weakness rather than the symptom that was cleaned up. Determining that before closure is what allows the organisation to fix the condition rather than await a repeat.",
+ "incorrect":{
+  "B":"Detection is the first stage, noticing that something is happening.",
+  "C":"E-discovery is the legal process of producing electronically stored information for litigation.",
+  "D":"Lessons learned is the wider review phase that root cause analysis feeds into. The question asks for the activity determining the reason, which is specifically root cause analysis."}},
+
+"q0409": {"objective":"3.2",
+ "explanation":"Segmentation divides the network into zones with controlled paths between them, so a compromise in one zone cannot reach another. Establishing those security zones is the structural benefit — it converts one flat blast radius into several small ones.",
+ "incorrect":{
+  "A":"End-to-end encryption protects data in transit. Segmentation controls reachability, not confidentiality of traffic.",
+  "B":"Resource utilisation may improve slightly from reduced broadcast traffic. That is a performance side effect.",
+  "C":"Endpoint protection runs on hosts. Segmentation operates on the network between them.",
+  "D":"Configuration enforcement keeps systems at a defined baseline. It is a separate discipline."}},
+
+"q0410": {"objective":"1.1",
+ "explanation":"Two axes are being tested. An acceptable use policy is managerial because it is a documented governance instrument, and directive because it tells people what they must and must not do. Only the AUP is both.",
+ "incorrect":{
+  "B":"A log-in warning banner is directive in effect but is implemented in software, making it a technical control.",
+  "C":"A master service agreement is a commercial contract between organisations, not an internal control directing staff behaviour.",
+  "D":"A no trespassing sign is directive but physical, since it acts on the physical environment rather than through management process."}},
+
+"q0411": {"objective":"3.1",
+ "explanation":"If the network has no need to talk to anything outside, removing the connection entirely removes the leak path. An air gap means no physical or logical link exists, so there is no channel for data to travel over.",
+ "incorrect":{
+  "B":"Containerisation isolates applications on a shared kernel. The host still has network connectivity.",
+  "C":"Virtualisation runs multiple guests on one host. The virtual machines remain networked.",
+  "D":"Decentralisation spreads systems and authority across locations. It adds connections rather than removing them."}},
+
+"q0412": {"objective":"4.3",
+ "explanation":"Static analysis reads the code without running it, reporting the flaws it finds. Because nothing is executed there is no exploitation and no risk to a running system — identification without attack.",
+ "incorrect":{
+  "A":"A penetration test deliberately exploits vulnerabilities to prove they are real.",
+  "C":"Dynamic analysis runs the application and exercises it with input. It actively probes a live system.",
+  "D":"A bug bounty invites external researchers to find and usually demonstrate vulnerabilities, which means exploiting them."}},
+
+"q0413": {"objective":"2.3",
+ "explanation":"Reaching the hypervisor means breaking out of the guest that was supposed to contain you. VM escape is the vulnerability class describing exactly that boundary failure between a virtual machine and its host.",
+ "incorrect":{
+  "A":"Cross-site scripting injects script into a web page to run in a user's browser. It is a web application flaw.",
+  "B":"SQL injection manipulates database queries. It reaches data, not the virtualisation layer.",
+  "C":"A race condition exploits timing between a check and its use. It can be a step in an escape chain but is not the vulnerability being described."}},
+
+"q0414": {"objective":"2.1",
+ "explanation":"The attacker's demand is a change in the company's products for environmental reasons, not money. Defacing a site to force an ideological outcome is hacktivism, where the attack is a means of protest.",
+ "incorrect":{
+  "A":"An unskilled attacker defaces for notoriety and makes no substantive demand.",
+  "C":"Organised crime is motivated by profit. No payment is being sought.",
+  "D":"Espionage covertly collects information. This attack is deliberately public."}},
+
+"q0415": {"objective":"3.3",
+ "explanation":"Two complementary layers protect the traffic. TLS certificates establish an encrypted, authenticated channel directly between the client and the cloud storage service, and a VPN wraps the whole network path in an additional encrypted tunnel.",
+ "incorrect":{
+  "B":"WPA2 encrypts the wireless link only. It protects the first hop and nothing beyond the access point.",
+  "C":"HTTPS is HTTP running over TLS, so it is the same mechanism as option A rather than a distinct second control.",
+  "E":"Encryption key management governs how keys are generated, stored and rotated. It supports encryption without itself securing a channel.",
+  "F":"Digital signatures prove origin and integrity. They do not keep the content confidential in transit."}},
+
+"q0416": {"objective":"2.5",
+ "explanation":"Compensating controls have to reduce risk without fixing the underlying gaps in the development process. Platform hardening strips the build hosts back to what is needed, and an application allow list ensures only approved binaries can execute — together they limit both exposure and what an attacker could run.",
+ "incorrect":{
+  "B":"Expanded logging improves visibility after the fact. It is detective rather than protective.",
+  "C":"Network segmentation contains lateral movement, which helps, but it does not protect the development hosts themselves from external threats.",
+  "D":"Access control limits who may reach systems. It is a primary control rather than a compensating one, and the gaps are in the environment's configuration.",
+  "E":"Data encryption protects information at rest and in transit. It does not stop the systems being compromised."}},
+
+"q0417": {"objective":"5.2",
+ "explanation":"Qualitative analysis rates risk with descriptive bands rather than currency. Assigning high, medium or low is the defining characteristic — it ranks risks relative to each other without attempting to calculate a monetary figure.",
+ "incorrect":{
+  "A":"MTTR and MTBF are numeric reliability measures, which makes their use quantitative.",
+  "B":"A risk register is a document for recording risks. It holds either kind of analysis and is not itself a method.",
+  "D":"ALE and ARO are monetary and frequency calculations, which is quantitative analysis by definition."}},
+
+"q0418": {"objective":"3.4",
+ "explanation":"Spreading critical virtual machines across more than one infrastructure provider means no single provider's outage can take everything down, while the organisation's own teams keep control of the workloads. That is a multicloud architecture.",
+ "incorrect":{
+  "B":"SaaS provider diversity concerns using different software services. The question describes virtual machines, which is infrastructure.",
+  "C":"On-premises load balancing distributes traffic within one facility. A site-level failure takes it all out.",
+  "D":"Corporate-owned off-site locations are your own secondary sites. They give geographic diversity but not the provider diversity described."}},
+
+"q0419": {"objective":"5.6",
+ "explanation":"The infection arrived on an external hard drive plugged into the host. Training on removable media and cables covers exactly that — not connecting unknown or unapproved devices, and having them scanned before use — which addresses the actual entry point.",
+ "incorrect":{
+  "A":"Operational security is about not disclosing information that helps an attacker. Nothing was disclosed here.",
+  "C":"Password management would help the user store credentials more safely, but the credentials were stolen by malware after the machine was compromised.",
+  "D":"Social engineering training covers manipulation by an attacker. The user was not persuaded into anything; they attached a device."}},
+
+"q0420": {"objective":"3.2",
+ "explanation":"Confidential servers sitting in the same flat network as workstations means one compromised desktop can reach them directly. Placing them in separate security zones with controlled paths between prevents that lateral movement.",
+ "incorrect":{
+  "A":"Load balancers distribute traffic across servers for capacity and availability. They do not restrict who may connect.",
+  "C":"A VPN encrypts remote access into the network. The attacker is already inside it.",
+  "D":"Proxy servers mediate outbound requests, typically web browsing. They do not govern internal server access."}},
+
+"q0421": {"objective":"4.8",
+ "explanation":"Capturing the messages into a form that cannot subsequently be altered is acquisition — collecting evidence in a forensically sound, write-once manner so its integrity can be demonstrated later.",
+ "incorrect":{
+  "A":"E-discovery is the legal process of identifying and producing electronically stored information for litigation. It is the reason you might do this, not the act.",
+  "C":"A legal hold is the instruction to stop deleting relevant data. It preserves what exists rather than capturing it in a non-alterable format.",
+  "D":"Chain of custody documents who handled the evidence and when. It tracks the evidence after acquisition."}},
+
+"q0422": {"objective":"4.1",
+ "explanation":"A site survey is the on-site assessment of a building's layout, construction materials, interference sources and coverage requirements, carried out specifically to decide where access points should go. In an empty building with no existing infrastructure, that is the starting task.",
+ "incorrect":{
+  "A":"A heat map is an output produced from survey measurements, visualising signal strength across the space. It is a deliverable rather than the task.",
+  "B":"An internal assessment is a general security review term. It does not describe wireless planning.",
+  "C":"Corporate reconnaissance is information gathering about an organisation, usually by an attacker."}},
+
+"q0423": {"objective":"4.3",
+ "explanation":"Remediation is not finished until it is proven. Rescanning confirms the vulnerability no longer appears and that the fix did not introduce something new, closing the loop on the vulnerability management cycle.",
+ "incorrect":{
+  "A":"Classification assigns sensitivity to data. It is unrelated to verifying a fix.",
+  "B":"Archiving stores records for later reference. It preserves history rather than validating remediation.",
+  "D":"Isolation confines a system away from the network. That is a containment measure taken before remediation, not after."}}
+}

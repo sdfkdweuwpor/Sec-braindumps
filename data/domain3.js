@@ -2919,82 +2919,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0402",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious links.\nWhich of the following configuration items does the security administrator need to review?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Intrusion prevention system"
-      },
-      {
-        "key": "B",
-        "text": "Content categorization"
-      },
-      {
-        "key": "C",
-        "text": "Encryption"
-      },
-      {
-        "key": "D",
-        "text": "DNS service"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Content categorization defines how websites are classified (e.g., gambling, malicious, social media) within the web-filtering product. If users are still accessing malicious links, it likely means the categorization settings need to be reviewed or updated to block those sites effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p176",
-    "needsReview": true,
-    "inferenceConfidence": 0.692,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0406",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Company A jointly develops a product with Company B, which is located in a different country.\nCompany A finds out that their intellectual property is being shared with unauthorized companies.\nWhich of the following has been breached?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "SLA"
-      },
-      {
-        "key": "B",
-        "text": "AUP"
-      },
-      {
-        "key": "C",
-        "text": "SOW"
-      },
-      {
-        "key": "D",
-        "text": "MOA"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "A Memorandum of Agreement establishes the formal terms of collaboration between parties, including confidentiality and intellectual property rights. Unauthorized sharing of jointly developed IP constitutes a breach of that agreement.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p178",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0409",
     "domain": 3,
     "objective": "3.2",
@@ -3026,12 +2950,17 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "By dividing a network into distinct security zones, segmentation isolates traffic flows and contains breaches, preventing attackers from moving laterally across the entire environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Segmentation divides the network into zones with controlled paths between them, so a compromise in one zone cannot reach another. Establishing those security zones is the structural benefit — it converts one flat blast radius into several small ones.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "End-to-end encryption protects data in transit. Segmentation controls reachability, not confidentiality of traffic.",
+      "B": "Resource utilisation may improve slightly from reduced broadcast traffic. That is a performance side effect.",
+      "C": "Endpoint protection runs on hosts. Segmentation operates on the network between them.",
+      "D": "Configuration enforcement keeps systems at a defined baseline. It is a separate discipline."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p179",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3064,12 +2993,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Physically isolating a network (air gapping) ensures there is no direct or indirect external connection, effectively preventing any data leakage from the secure environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "If the network has no need to talk to anything outside, removing the connection entirely removes the leak path. An air gap means no physical or logical link exists, so there is no channel for data to travel over.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Containerisation isolates applications on a shared kernel. The host still has network connectivity.",
+      "C": "Virtualisation runs multiple guests on one host. The virtual machines remain networked.",
+      "D": "Decentralisation spreads systems and authority across locations. It adds connections rather than removing them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p179",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3077,8 +3010,8 @@ export const domain3Questions = [
   {
     "id": "q0415",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
     "question": "A company uses a cloud-based server for file storage and wants to ensure the security of its data in transit.\nWhich of the following should the company use to secure this type of communication? (Choose two.)",
     "choices": [
@@ -3111,12 +3044,17 @@ export const domain3Questions = [
       "A",
       "D"
     ],
-    "explanation": "TLS certificates establish an encrypted channel (SSL/TLS) between clients and the cloud server, ensuring all file-transfer traffic is protected in transit.\nA VPN creates a secure, encrypted tunnel over the Internet, adding an additional layer of protection for all network communications with the cloud environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two complementary layers protect the traffic. TLS certificates establish an encrypted, authenticated channel directly between the client and the cloud storage service, and a VPN wraps the whole network path in an additional encrypted tunnel.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "WPA2 encrypts the wireless link only. It protects the first hop and nothing beyond the access point.",
+      "C": "HTTPS is HTTP running over TLS, so it is the same mechanism as option A rather than a distinct second control.",
+      "E": "Encryption key management governs how keys are generated, stored and rotated. It supports encryption without itself securing a channel.",
+      "F": "Digital signatures prove origin and integrity. They do not keep the content confidential in transit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p181",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.391,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3149,12 +3087,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "By distributing critical virtual machines across multiple IaaS providers, a multicloud architecture removes single points of failure and ensures continuity even if one provider experiences an outage, while allowing internal teams to maintain control over deployment and configuration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Spreading critical virtual machines across more than one infrastructure provider means no single provider's outage can take everything down, while the organisation's own teams keep control of the workloads. That is a multicloud architecture.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SaaS provider diversity concerns using different software services. The question describes virtual machines, which is infrastructure.",
+      "C": "On-premises load balancing distributes traffic within one facility. A site-level failure takes it all out.",
+      "D": "Corporate-owned off-site locations are your own secondary sites. They give geographic diversity but not the provider diversity described."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p182",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3187,51 +3129,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "By placing servers and workstations into separate security zones (network segments) with controlled access between them, the organization would prevent a compromised workstation from directly reaching the confidential servers. This isolation stops lateral movement without needing VPNs, proxies, or load balancers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidential servers sitting in the same flat network as workstations means one compromised desktop can reach them directly. Placing them in separate security zones with controlled paths between prevents that lateral movement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Load balancers distribute traffic across servers for capacity and availability. They do not restrict who may connect.",
+      "C": "A VPN encrypts remote access into the network. The attacker is already inside it.",
+      "D": "Proxy servers mediate outbound requests, typically web browsing. They do not govern internal server access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p183",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.955,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0423",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following should a systems administrator do after performing remediation activities?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Classify"
-      },
-      {
-        "key": "B",
-        "text": "Archive"
-      },
-      {
-        "key": "C",
-        "text": "Rescan"
-      },
-      {
-        "key": "D",
-        "text": "Isolate"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "After applying patches or other remediation steps, rescanning verifies that the vulnerabilities have been effectively resolved and ensures no residual issues remain.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p184",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

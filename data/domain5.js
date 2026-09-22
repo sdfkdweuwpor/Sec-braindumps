@@ -2955,8 +2955,8 @@ export const domain5Questions = [
   {
     "id": "q0391",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "The physical security team at a company receives reports that employees are not displaying their badges. The team also observes employees tailgating at controlled entrances.\nWhich of the following topics will the security team most likely emphasize in upcoming security training?",
     "choices": [
@@ -2980,12 +2980,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Situational awareness training helps employees recognize and respond appropriately to physical security threats, such as tailgating and failure to display ID badges, promoting adherence to security protocols in controlled areas.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Unbadged staff and tailgating are lapses in day-to-day vigilance rather than falling for a scam. Situational awareness training teaches people to notice their physical surroundings — to wear and check badges, and to challenge someone following them through a controlled door.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Social engineering training covers manipulation by an attacker. Nobody is being tricked here; staff are simply being careless.",
+      "C": "Phishing training addresses fraudulent messages. These are physical access failures.",
+      "D": "The acceptable use policy governs how systems are used. It is a document rather than the awareness topic that changes this behaviour."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p172",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3018,12 +3022,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A right-to-audit clause gives an organization the legal ability to inspect and verify a service provider's or vendor's controls, processes, and compliance with contractual obligations, ensuring transparency and accountability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A right-to-audit clause is the contractual term that entitles the customer to inspect the provider's controls, processes and evidence. Without it the provider is under no obligation to let anyone look, however much the customer wants assurance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A service-level agreement commits the provider to measurable performance. It defines outcomes without granting inspection rights.",
+      "B": "A memorandum of agreement records cooperation between parties. It is typically non-binding and confers no audit rights.",
+      "D": "Supply chain analysis maps supplier dependencies and risk. It is an activity the customer performs, not a contractual entitlement."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p175",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.96,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3056,12 +3064,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Single Loss Expectancy (SLE) represents the monetary loss an organization expects from a single cybersecurity incident, helping quantify the financial impact of individual events.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is precisely what SLE expresses.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "ALE is the annualised figure — SLE multiplied by how often the event is expected each year. It aggregates rather than describing one incident.",
+      "C": "ARO is the annualised rate of occurrence, a frequency. It says how often, not how much.",
+      "D": "An SLA is a service-level agreement, a contractual commitment. It is not a risk calculation at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p175",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3069,8 +3081,8 @@ export const domain5Questions = [
   {
     "id": "q0401",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "A retail company receives a request to remove a customer's data.\nWhich of the following is the retail company considered under GDPR legislation?",
     "choices": [
@@ -3094,51 +3106,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Under GDPR, the data controller determines the purposes and means of processing personal data. The retail company, which collects and manages customer data, is responsible for complying with data deletion requests and thus acts as the data controller.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Under GDPR the controller decides why and how personal data is processed, and carries the obligation to honour data subject rights such as erasure. A retailer collecting and managing its own customer data is making those decisions, so it is the controller.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A processor handles data on the controller's behalf under instruction — a payment gateway or hosting provider, for example.",
+      "C": "The data subject is the individual the data is about. That is the customer making the request.",
+      "D": "Data custodian is an internal operational role responsible for maintaining data. It is not a GDPR legal designation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p175",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.632,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0410",
+    "id": "q0406",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Which of the following is a directive managerial control?",
+    "question": "Company A jointly develops a product with Company B, which is located in a different country.\nCompany A finds out that their intellectual property is being shared with unauthorized companies.\nWhich of the following has been breached?",
     "choices": [
       {
         "key": "A",
-        "text": "Acceptable use policy"
+        "text": "SLA"
       },
       {
         "key": "B",
-        "text": "Log-in warning banner"
+        "text": "AUP"
       },
       {
         "key": "C",
-        "text": "Master service agreement"
+        "text": "SOW"
       },
       {
         "key": "D",
-        "text": "No trespassing sign"
+        "text": "MOA"
       }
     ],
     "correct": [
-      "A"
+      "D"
     ],
-    "explanation": "An acceptable use policy is a managerial directive that formally defines required behaviors and rules for system use. It directs employees on what is and isn't allowed, making it a classic example of a directive control.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A memorandum of agreement is the formal document setting out how two organisations will collaborate, including how jointly developed intellectual property may be used and disclosed. Sharing that IP with unauthorised companies breaches those agreed terms.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An SLA commits a provider to measurable service performance. There is no service level at issue.",
+      "B": "An AUP governs how employees use company systems. It is internal and does not bind a partner organisation.",
+      "C": "An SOW defines the tasks and deliverables of a specific engagement. It scopes work rather than governing IP rights in a joint venture."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p179",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
+    "source": "SY0-701_en.pdf#p178",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3170,12 +3190,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A qualitative risk analysis uses descriptive scales (e.g., high, medium, low) to prioritize risks based on their likelihood and impact, rather than numeric calculations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Qualitative analysis rates risk with descriptive bands rather than currency. Assigning high, medium or low is the defining characteristic — it ranks risks relative to each other without attempting to calculate a monetary figure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "MTTR and MTBF are numeric reliability measures, which makes their use quantitative.",
+      "B": "A risk register is a document for recording risks. It holds either kind of analysis and is not itself a method.",
+      "D": "ALE and ARO are monetary and frequency calculations, which is quantitative analysis by definition."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p182",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.944,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3208,12 +3232,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Training on removable media security teaches users how to safely handle USB drives and external storage, including scanning for malware and using company-approved devices, directly addressing the infection vector in this scenario.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The infection arrived on an external hard drive plugged into the host. Training on removable media and cables covers exactly that — not connecting unknown or unapproved devices, and having them scanned before use — which addresses the actual entry point.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Operational security is about not disclosing information that helps an attacker. Nothing was disclosed here.",
+      "C": "Password management would help the user store credentials more safely, but the credentials were stolen by malware after the machine was compromised.",
+      "D": "Social engineering training covers manipulation by an attacker. The user was not persuaded into anything; they attached a device."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p182",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.645,
     "needsExplanation": false,
     "keyCorrected": false

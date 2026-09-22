@@ -5064,12 +5064,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Certification provides documented proof that data was destroyed in compliance with regulatory requirements. This is critical for banks to demonstrate adherence to data retention and disposal mandates imposed by regulators.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The banks are regulated, so they must be able to prove to a regulator that data was destroyed correctly at the right time. A certificate of destruction is that documented evidence, and without it the disposal cannot be demonstrated no matter how thoroughly it was performed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption protects the data while it is being stored. It is important during the retention period but says nothing about disposal.",
+      "B": "Classification determines how sensitive the data is and therefore how it must be handled. It drives the retention rule rather than evidencing the destruction.",
+      "D": "Procurement is how the service was purchased. It sits at the start of the relationship, not the end of the data's life."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p171",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5102,21 +5106,67 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly checked before processing, effectively preventing injection attacks such as SQL or command injections by rejecting malicious input.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Injection succeeds because user-supplied text reaches an interpreter as code. Input validation checks data against what is actually expected and rejects anything else, removing the mechanism the attack relies on at its source.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Authentication proves who a user is. An authenticated user can still submit a malicious payload.",
+      "B": "Secure cookies protect session tokens from theft. They defend the session, not the input path.",
+      "C": "Static code analysis finds the flaw during development. It is valuable but it is a discovery technique, not a control running in production."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p173",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.81,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0394",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "Which of the following is the first step to secure a newly deployed server?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Close unnecessary service ports."
+      },
+      {
+        "key": "B",
+        "text": "Update the current version of the software."
+      },
+      {
+        "key": "C",
+        "text": "Add the device to the ACL."
+      },
+      {
+        "key": "D",
+        "text": "Upgrade the OS version."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Hardening starts by removing what should not be there, and every open port that nothing needs is an entry point requiring patching and monitoring. Closing unnecessary service ports shrinks the attack surface before anything else is layered on.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Updating software fixes known defects and is essential, but a fully patched server still exposes every unnecessary service it is running.",
+      "C": "Adding the device to an ACL controls who may reach it. That is access control rather than securing the server itself.",
+      "D": "Upgrading the OS version is a lifecycle activity. A newly deployed server should already be on a supported release."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p173",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0395",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security analyst receives an alert that there was an attempt to download known malware.\nWhich of the following actions would allow the best chance to analyze the malware?",
     "choices": [
@@ -5140,13 +5190,101 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Running the malware in a controlled sandbox environment allows the analyst to safely observe its behavior, including communication, persistence mechanisms, and payload delivery, providing the most comprehensive analysis.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Understanding what the malware actually does requires running it and watching. A sandbox gives an isolated environment where it can execute safely, and packet captures record everything it tries to communicate — together that yields behaviour no static examination would reveal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing blocked command-and-control addresses tells you where it wanted to connect. That is one artefact, not an analysis of the sample.",
+      "B": "Analysing application logs for persistence assumes the malware already ran on a production host, which is what you are trying to avoid.",
+      "C": "Vulnerability scanning identifies which systems could be affected. That is impact assessment, not analysis of the malware itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p173",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0396",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Which of the following should be used to ensure a user has the permissions needed to effectively do an assigned job role?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Changing default passwords"
+      },
+      {
+        "key": "B",
+        "text": "Implementing least privilege"
+      },
+      {
+        "key": "C",
+        "text": "Enforcing baseline configurations"
+      },
+      {
+        "key": "D",
+        "text": "Applying network segmentation"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Least privilege grants exactly the permissions a role requires to function and nothing beyond. The wording matters — the aim is that the user can effectively do the job while carrying no surplus rights that could be abused or stolen.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Changing default passwords removes well-known credentials. It is basic hardening and says nothing about which permissions an account holds.",
+      "C": "Enforcing baseline configurations keeps system settings at a known-good standard. It governs machines rather than user entitlements.",
+      "D": "Network segmentation limits which systems can reach each other. It restricts network paths, not a user's permissions within a system."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p174",
+    "needsReview": false,
+    "inferenceConfidence": 0.294,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0402",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious links.\nWhich of the following configuration items does the security administrator need to review?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Intrusion prevention system"
+      },
+      {
+        "key": "B",
+        "text": "Content categorization"
+      },
+      {
+        "key": "C",
+        "text": "Encryption"
+      },
+      {
+        "key": "D",
+        "text": "DNS service"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A web filter blocks by category, so if malicious sites are getting through, the categorisation is either out of date or the malicious category is not being blocked. Reviewing how sites are classified and which categories are denied is the configuration item that governs the outcome.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An intrusion prevention system inspects traffic for attack patterns. It is a different control, not a setting within the web filter.",
+      "C": "Encryption protects traffic in transit. It can complicate inspection, but it is not the filtering configuration being asked about.",
+      "D": "The DNS service resolves names. DNS filtering is a related control, but the administrator has deployed web filtering and it is those settings that need review."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p176",
+    "needsReview": false,
+    "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5178,12 +5316,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The containment phase focuses on limiting the scope and impact of an incident to prevent further damage or disruption, thereby helping to maintain business continuity during the response process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containment is the phase that stops the incident spreading while the organisation works out what to do — isolating hosts, cutting connectivity, disabling accounts. Its explicit purpose is to limit damage and disruption rather than to eliminate the cause.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores systems to normal service. It happens after the threat has been removed.",
+      "C": "Preparation happens before any incident, building plans, tooling and training.",
+      "D": "Analysis determines what happened and how far it reached. It informs containment rather than performing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p177",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.938,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5216,12 +5358,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Root cause analysis is the process of identifying the fundamental reason an incident occurred, ensuring that underlying issues are addressed before the incident is closed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Root cause analysis establishes why the incident was possible — the underlying weakness rather than the symptom that was cleaned up. Determining that before closure is what allows the organisation to fix the condition rather than await a repeat.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Detection is the first stage, noticing that something is happening.",
+      "C": "E-discovery is the legal process of producing electronically stored information for litigation.",
+      "D": "Lessons learned is the wider review phase that root cause analysis feeds into. The question asks for the activity determining the reason, which is specifically root cause analysis."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p178",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.95,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5254,12 +5400,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Static analysis examines code in a non-running state to uncover vulnerabilities without executing or exploiting them, ensuring you identify issues without actively attacking the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Static analysis reads the code without running it, reporting the flaws it finds. Because nothing is executed there is no exploitation and no risk to a running system — identification without attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A penetration test deliberately exploits vulnerabilities to prove they are real.",
+      "C": "Dynamic analysis runs the application and exercises it with input. It actively probes a live system.",
+      "D": "A bug bounty invites external researchers to find and usually demonstrate vulnerabilities, which means exploiting them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p180",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5292,12 +5442,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Acquisition refers to the process of capturing and preserving digital evidence in a forensically sound, non-alterable format (e.g., bit-for-bit imaging or write-once storage), ensuring the integrity of the emails for later analysis.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Capturing the messages into a form that cannot subsequently be altered is acquisition — collecting evidence in a forensically sound, write-once manner so its integrity can be demonstrated later.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "E-discovery is the legal process of identifying and producing electronically stored information for litigation. It is the reason you might do this, not the act.",
+      "C": "A legal hold is the instruction to stop deleting relevant data. It preserves what exists rather than capturing it in a non-alterable format.",
+      "D": "Chain of custody documents who handled the evidence and when. It tracks the evidence after acquisition."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p183",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5330,13 +5484,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A site survey involves evaluating the physical environment, measuring building materials, interference sources, and coverage requirements, to determine optimal access-point placement.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A site survey is the on-site assessment of a building's layout, construction materials, interference sources and coverage requirements, carried out specifically to decide where access points should go. In an empty building with no existing infrastructure, that is the starting task.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A heat map is an output produced from survey measurements, visualising signal strength across the space. It is a deliverable rather than the task.",
+      "B": "An internal assessment is a general security review term. It does not describe wireless planning.",
+      "C": "Corporate reconnaissance is information gathering about an organisation, usually by an attacker."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p184",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0423",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "Which of the following should a systems administrator do after performing remediation activities?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Classify"
+      },
+      {
+        "key": "B",
+        "text": "Archive"
+      },
+      {
+        "key": "C",
+        "text": "Rescan"
+      },
+      {
+        "key": "D",
+        "text": "Isolate"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Remediation is not finished until it is proven. Rescanning confirms the vulnerability no longer appears and that the fix did not introduce something new, closing the loop on the vulnerability management cycle.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Classification assigns sensitivity to data. It is unrelated to verifying a fix.",
+      "B": "Archiving stores records for later reference. It preserves history rather than validating remediation.",
+      "D": "Isolation confines a system away from the network. That is a containment measure taken before remediation, not after."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p184",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

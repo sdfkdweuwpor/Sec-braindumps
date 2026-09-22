@@ -2990,89 +2990,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hacktivists are typically driven by ideological or political motivations, using hacking to promote or protest specific philosophical beliefs or causes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hacktivist attacks to advance a cause, so the payoff is the statement rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain is the motivation of organised crime.",
+      "B": "Espionage is the motivation of nation-states and competitors seeking information.",
+      "D": "Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p172",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0394",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following is the first step to secure a newly deployed server?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Close unnecessary service ports."
-      },
-      {
-        "key": "B",
-        "text": "Update the current version of the software."
-      },
-      {
-        "key": "C",
-        "text": "Add the device to the ACL."
-      },
-      {
-        "key": "D",
-        "text": "Upgrade the OS version."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p173",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0396",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following should be used to ensure a user has the permissions needed to effectively do an assigned job role?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Changing default passwords"
-      },
-      {
-        "key": "B",
-        "text": "Implementing least privilege"
-      },
-      {
-        "key": "C",
-        "text": "Enforcing baseline configurations"
-      },
-      {
-        "key": "D",
-        "text": "Applying network segmentation"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "The principle of least privilege ensures users are granted only the permissions necessary to perform their specific job functions, minimizing the risk of unauthorized access or actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p174",
-    "needsReview": true,
-    "inferenceConfidence": 0.294,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3104,12 +3032,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Impersonation involves an attacker pretending to be a trusted individual, such as a CEO, to trick someone into taking an action - in this case, purchasing gift cards - often seen in social engineering attacks via text or email.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker is assuming the chief executive's identity to make an unusual request seem authoritative. Pretending to be a trusted individual so the target complies is impersonation, and the gift-card ask is its best-known form.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering-hole attack compromises a website the target group already visits. No website is involved.",
+      "B": "Disinformation is false information spread to mislead a population. This is targeted fraud against one employee.",
+      "C": "Phishing is the broader category of fraudulent messaging, and by SMS it would be smishing. The question asks what type of attack this is, and impersonation is the precise technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p174",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3142,12 +3074,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Business email compromise (BEC) involves the use of a legitimate or spoofed business email account, often from executives, to trick employees into performing unauthorized actions like transferring funds or revealing sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The message comes from the executive's genuine corporate account, targets an employee who can act on it, and asks for financial information plus a change of contact details so future correspondence is diverted. That combination is business email compromise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Phishing is the general category. BEC is the specific variant using a real or spoofed executive account to drive a financial action.",
+      "C": "Brand impersonation mimics a company's identity to outsiders. Here an internal account is being used directly.",
+      "D": "Pretexting is the invented justification inside the message. It is a technique within the attack rather than the attack vector."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p174",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.762,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3180,12 +3116,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs show successful logins from Chicago, IL, and then within minutes, logins from Rome, Italy, followed again by logins from Chicago. The time between these geographically distant logins is too short for physical travel, triggering the \"impossible travel\" alert—an indication of potential credential compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Successful logins from Chicago and then Rome minutes apart describe a journey no person could make. Impossible travel is the indicator for exactly that geographic and temporal contradiction, and it strongly suggests the credentials are being used by someone else.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Account lockout follows repeated failed attempts. These logins succeeded.",
+      "C": "Blocked content indicates a filter refused a request. Nothing was blocked here.",
+      "D": "Concurrent session usage means one account active in several places at once. Close, but the defining evidence here is the physically impossible distance in the time available."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p176",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.917,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3218,12 +3158,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The use of unauthorized software by an internal employee is a classic example of Shadow IT, where unsanctioned applications introduce unvetted security and compliance risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An unskilled attacker is an external actor using commodity tools. The employee is neither external nor attacking.",
+      "B": "A hacktivist attacks to advance a cause. Nothing ideological is happening.",
+      "D": "Supply chain risk comes from a compromised vendor or component reaching you through trusted channels. The employee installed this directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p178",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3256,12 +3200,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "VM escape occurs when an attacker breaks out of a virtual machine's sandbox to interact directly with the underlying hypervisor, granting unauthorized access to the host platform. This is the vulnerability exploited when compromising a hypervisor.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reaching the hypervisor means breaking out of the guest that was supposed to contain you. VM escape is the vulnerability class describing exactly that boundary failure between a virtual machine and its host.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script into a web page to run in a user's browser. It is a web application flaw.",
+      "B": "SQL injection manipulates database queries. It reaches data, not the virtualisation layer.",
+      "C": "A race condition exploits timing between a check and its use. It can be a step in an escape chain but is not the vulnerability being described."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p180",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3294,12 +3242,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A hacktivist uses cyberattacks, such as website defacement, to advance a political or social agenda. In this case, the attacker's demand to remove harmful chemicals reflects an ideological motive, characteristic of hacktivism.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker's demand is a change in the company's products for environmental reasons, not money. Defacing a site to force an ideological outcome is hacktivism, where the attack is a means of protest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An unskilled attacker defaces for notoriety and makes no substantive demand.",
+      "C": "Organised crime is motivated by profit. No payment is being sought.",
+      "D": "Espionage covertly collects information. This attack is deliberately public."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p180",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3341,12 +3293,17 @@ export const domain2Questions = [
       "A",
       "F"
     ],
-    "explanation": "Platform hardening locks down development hosts, removing unnecessary services and closing unused ports, so attackers have fewer vulnerabilities to exploit. An application allow list ensures only approved, vetted software can run in the environment, preventing malicious or untested code from executing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Compensating controls have to reduce risk without fixing the underlying gaps in the development process. Platform hardening strips the build hosts back to what is needed, and an application allow list ensures only approved binaries can execute — together they limit both exposure and what an attacker could run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Expanded logging improves visibility after the fact. It is detective rather than protective.",
+      "C": "Network segmentation contains lateral movement, which helps, but it does not protect the development hosts themselves from external threats.",
+      "D": "Access control limits who may reach systems. It is a primary control rather than a compensating one, and the gaps are in the environment's configuration.",
+      "E": "Data encryption protects information at rest and in transit. It does not stop the systems being compromised."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p181",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.379,
     "needsExplanation": false,
     "keyCorrected": false
