@@ -5921,8 +5921,8 @@ export const domain3Questions = [
   {
     "id": "q0768",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "An organization purchased and configured spare devices for all critical network infrastructure.\nWhich of the following best describes the organization's reason for these actions?",
     "choices": [
@@ -5946,13 +5946,59 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "High availability ensures systems remain operational even when hardware failures occur. By purchasing and configuring spare devices for critical network infrastructure, the organization can quickly replace or fail over to backup equipment if a primary device fails. This minimizes downtime and maintains continuous service availability for critical operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Keeping configured spares for critical infrastructure means a failed device can be swapped or failed over to immediately rather than waiting on procurement. Eliminating that downtime is the definition of designing for high availability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Software-defined networking separates network control from forwarding. It is an architecture, not a reason to buy spare hardware.",
+      "B": "Scalability is the ability to handle more load. Spares sit idle and add no capacity.",
+      "D": "Decentralisation spreads systems and authority across locations. The spares here are at the same site as the primaries."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p327",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0779",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following is a security implication of using SDN over traditional methods?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Network device configuration can be dynamically adjusted to react to a detected security threat."
+      },
+      {
+        "key": "B",
+        "text": "Network alerting and reporting is reduced due to lack of integration with analysis tools."
+      },
+      {
+        "key": "C",
+        "text": "Network intrusion detection results in increased false positives or false negatives."
+      },
+      {
+        "key": "D",
+        "text": "Network infrastructure is outsourced to a third-party vendor better suited to maintaining security."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "SDN centralises network control in a programmable controller, so configuration can be changed by software in seconds. That enables automated security responses — isolating a compromised host, tightening access, rerouting suspect traffic — the moment a threat is detected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SDN integrates readily with analysis tooling through its APIs. Reduced alerting is not a characteristic of it.",
+      "C": "SDN does not inherently change intrusion detection accuracy. Detection quality depends on the sensors and rules.",
+      "D": "SDN is a way of managing your own network programmatically. It is not outsourcing."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p331",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5984,13 +6030,69 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A web application firewall protects web applications by monitoring and filtering HTTP/HTTPS traffic between users and the web server. It can detect and block malicious inputs such as injected scripts that are characteristic of cross-site scripting attacks. By inspecting requests and enforcing rules that prevent malicious code from being delivered to the application, it helps stop XSS attacks before they reach the web server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cross-site scripting arrives as malicious content inside an HTTP request. A web application firewall inspects those requests at the application layer and blocks recognised script injection before it reaches the application.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An NGFW filters traffic at a boundary with application awareness, but it is not specialised in web application attack patterns the way a WAF is.",
+      "B": "A UTM bundles several perimeter security functions. Again general-purpose rather than targeted at web application attacks.",
+      "D": "NAC controls which devices may join a network. It has no visibility into HTTP request content."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p332",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0793",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "multi",
+    "question": "A security analyst must protect customer data that is stored on a network shared drive.\nWhich of the following should the analyst do first to implement protections? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Enable sensitivity labeling."
+      },
+      {
+        "key": "B",
+        "text": "Create a data retention policy."
+      },
+      {
+        "key": "C",
+        "text": "Install additional drives for RAID."
+      },
+      {
+        "key": "D",
+        "text": "Limit access to the shared drive."
+      },
+      {
+        "key": "E",
+        "text": "Encrypt the server hard drives."
+      },
+      {
+        "key": "F",
+        "text": "Mask all customer PII."
+      }
+    ],
+    "correct": [
+      "A",
+      "D"
+    ],
+    "explanation": "Two first steps matter. Sensitivity labelling establishes what the data is and therefore how it must be handled, and limiting access to the share ensures only those who need it can reach it. Together they define and enforce the protection baseline everything else builds on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A data retention policy governs how long data is kept. Important, but it does not protect the data now.",
+      "C": "RAID protects against drive failure. That is availability, not confidentiality.",
+      "E": "Encrypting the server drives protects data at rest and is worth doing, but it does nothing against an authorised user who should not have access to the share.",
+      "F": "Masking all customer PII would destroy the data's usefulness for the business processes that legitimately need it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p337",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6022,12 +6124,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as Code allows infrastructure such as servers, networks, and configurations to be defined and managed through code and automation tools. This approach standardizes server deployments, ensures consistent configurations, and significantly reduces the time required to provision new systems by automating the build and deployment process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code defines servers in version-controlled files that a pipeline applies. Every build comes from the same reviewed definition, which standardises configuration, makes changes auditable and collapses build time from manual hours to a pipeline run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IoT refers to networked embedded devices. It is a category of equipment.",
+      "C": "PaaS provides a managed application platform. It removes server management rather than standardising how servers are built.",
+      "D": "ICS is industrial control systems used in manufacturing and utilities."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p338",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6060,12 +6166,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization allows multiple virtual machines to run on a single physical server by using a hypervisor to separate operating systems and applications. This approach reduces the need for additional physical hardware while maintaining isolation between workloads. It enables secure and efficient deployment of applications, lowers hardware costs, and improves resource utilization within the infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Infrastructure as code standardises how systems are built. It improves consistency without reducing the hardware needed.",
+      "B": "Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
+      "D": "Containerisation is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p341",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false

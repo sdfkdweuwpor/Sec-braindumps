@@ -32353,8 +32353,8 @@
   {
     "id": "q0768",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "An organization purchased and configured spare devices for all critical network infrastructure.\nWhich of the following best describes the organization's reason for these actions?",
     "choices": [
@@ -32378,12 +32378,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "High availability ensures systems remain operational even when hardware failures occur. By purchasing and configuring spare devices for critical network infrastructure, the organization can quickly replace or fail over to backup equipment if a primary device fails. This minimizes downtime and maintains continuous service availability for critical operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Keeping configured spares for critical infrastructure means a failed device can be swapped or failed over to immediately rather than waiting on procurement. Eliminating that downtime is the definition of designing for high availability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Software-defined networking separates network control from forwarding. It is an architecture, not a reason to buy spare hardware.",
+      "B": "Scalability is the ability to handle more load. Spares sit idle and add no capacity.",
+      "D": "Decentralisation spreads systems and authority across locations. The spares here are at the same site as the primaries."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p327",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32416,12 +32420,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A penetration test evaluates the effectiveness of security controls by simulating real-world attacks against a system. Security professionals attempt to bypass defenses and gain unauthorized access in the same way an attacker would. This approach directly tests whether existing controls such as authentication, access restrictions, and network defenses successfully prevent unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Testing whether controls actually stop unauthorised access requires someone to attempt it. A penetration test simulates a real attacker against authentication, access restrictions and network defences, which measures effectiveness rather than mere presence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A risk assessment evaluates likelihood and impact. It reasons about risk without testing whether controls hold.",
+      "C": "A vulnerability scan enumerates known weaknesses. It reports what could be exploited without proving that it can be.",
+      "D": "An internal audit review checks that controls exist and policy is followed. It examines documentation and configuration rather than attacking them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p327",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.316,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32454,12 +32462,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Establishing baselines allows the analyst to understand what normal system behavior looks like in terms of performance, traffic patterns, resource usage, and user activity. Once normal behavior is documented, deviations from this baseline can be identified as abnormal or potentially malicious activity on the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Abnormal only has meaning relative to normal. Establishing a baseline of the server's usual performance, traffic, resource use and account activity is what lets any later deviation be recognised as abnormal rather than merely unfamiliar.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unnecessary ports reduces the attack surface. It is hardening, not detection.",
+      "B": "Patching removes known vulnerabilities. Again preventive rather than a way to spot unusual behaviour.",
+      "D": "Alert tuning refines existing rules to cut false positives. It presumes you already know what normal looks like."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32492,12 +32504,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Hashing uses a one-way cryptographic function that converts data into a fixed-length hash value. Any change to the original data results in a different hash value, allowing verification that the data has not been altered. Because the process cannot be reversed to recover the original input, it provides assurance of data integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing runs data through a one-way function producing a fixed-length digest, and any change to the input produces a completely different output. Comparing digests proves the data is unaltered, which is integrity assurance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
+      "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
+      "D": "Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32505,8 +32521,8 @@
   {
     "id": "q0772",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following will help reduce alert fatigue?",
     "choices": [
@@ -32530,12 +32546,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Rule tuning improves the accuracy of detection systems by refining alerting rules to reduce false positives and irrelevant alerts. By adjusting thresholds, conditions, and filtering logic, security teams can ensure alerts are generated only for meaningful events. This reduces the volume of unnecessary alerts and helps analysts focus on genuine security incidents, thereby reducing alert fatigue.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Alert fatigue comes from volume, most of it noise. Tuning the rules — adjusting thresholds, adding conditions, suppressing known-benign patterns — cuts false positives so what reaches an analyst is worth their attention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration testing assesses whether systems can be breached. It produces findings rather than reducing alerts.",
+      "B": "Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
+      "D": "Log aggregation gathers more data into one place, which tends to increase alert volume without tuning."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.471,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32577,12 +32597,17 @@
       "A",
       "D"
     ],
-    "explanation": "Segmentation isolates legacy manufacturing systems from the rest of the network, limiting communication paths and reducing the risk that attackers can reach or laterally move to these vulnerable systems. This containment approach is commonly used when legacy systems cannot support modern security updates.\nA jump server provides a controlled and monitored access point for administrators who need to manage legacy systems. By forcing administrative access through a hardened intermediary system, the organization can enforce authentication controls, logging, and monitoring while preventing direct access to vulnerable systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Legacy manufacturing systems cannot be patched or run modern agents, so the answer is to control what can reach them. Segmentation isolates them from the wider network, and a jump server gives the engineers who must administer them one controlled, monitored path in.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Antivirus needs an agent and a supported operating system. Legacy industrial equipment typically supports neither.",
+      "C": "An application allow list also requires agent support on the host, which these systems generally lack.",
+      "E": "Patching is unavailable — the vendor no longer issues updates, which is why compensating controls are needed.",
+      "F": "An IDS detects and alerts. Visibility is useful but it protects nothing by itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p329",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.407,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32615,12 +32640,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "In a continuity of operations plan, the frequency of backups is determined by the recovery point objective (RPO). The RPO defines the maximum acceptable amount of data loss measured in time. Backup schedules are therefore designed to meet this objective, ensuring that data can be restored to a point that satisfies the organization's tolerance for data loss during a disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The recovery point objective states how much data the business can afford to lose, expressed as time. Backups must run at least that often, so the RPO dictates the schedule rather than any fixed rule of thumb.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Nightly backups are a common default, but they impose a 24-hour data loss window regardless of whether the business can tolerate it.",
+      "C": "Triggering on 5% data change is arbitrary and ignores how valuable or time-sensitive the changed data is.",
+      "D": "Daily incrementals with weekly fulls is a sensible pattern, but it is an implementation detail chosen to meet an RPO rather than the principle setting frequency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p329",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32653,12 +32682,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Cross-site scripting occurs when a web application fails to properly validate or sanitize user input, allowing attackers to inject malicious client-side code into web pages viewed by other users. Injecting an HTML tag such as an image element that loads content from a malicious site is a common XSS technique.\nWhen the page renders, the browser processes the injected code, which can execute attacker- controlled scripts or retrieve malicious resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An HTML tag supplied as input and then rendered by the browser means the application echoed user content into the page without neutralising it. Injecting markup or script that executes in another user's browser is cross-site scripting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Directory traversal uses path sequences to read files outside the web root. This payload is markup, not a path.",
+      "B": "A buffer overflow writes past an allocated memory region. It targets memory handling, not page rendering.",
+      "C": "SQL injection inserts database syntax to manipulate a query. An image tag means nothing to a database."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32691,12 +32724,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Sender Policy Framework allows a domain owner to specify which mail servers are authorized to send email on behalf of the domain by publishing this information in a DNS record. Receiving mail servers check the sending server's IP address against the domain's SPF record to verify that the email originates from an approved source. This helps prevent spoofing and reduces the likelihood that legitimate emails will be flagged as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Listing the authorised mail servers in DNS is publishing an SPF record. Receiving servers compare the sending address against that record to confirm the mail came from a permitted source, which is what reduces spam classification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail. It comes after SPF exists.",
+      "B": "DLP inspects outbound content for sensitive data. It has no influence on spam scoring.",
+      "C": "DKIM signs messages cryptographically to prove they were not altered. It is complementary but is not the DNS record listing the servers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32729,12 +32766,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Creating a wireless heat map helps determine signal strength and coverage areas throughout the building and around the perimeter. Since the access points will be more powerful, a heat map allows the security team to verify that the wireless signal does not extend excessively outside the building where attackers could attempt unauthorized access. This supports secure placement and power configuration of the access points to minimize signal leakage beyond controlled areas.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "More powerful access points mean the signal reaches further, including outside the building where an attacker could sit in the car park. A heat map shows exactly how far coverage extends so placement and transmit power can be tuned before deployment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IPSec tunnels from access points to the controller protect management traffic. They do nothing about signal spilling outside.",
+      "C": "Enabling WPA2-PSK would downgrade from WPA3, weakening the design rather than improving it.",
+      "D": "Disabling SSH administration is good hardening but addresses management access, not the coverage risk the scenario raises."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32767,21 +32808,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Alert tuning involves adjusting detection rules, thresholds, or filters within a SIEM to reduce unnecessary or inaccurate alerts. By modifying the rules that trigger alerts for the legitimate script, the analyst can prevent the SIEM from incorrectly flagging normal activity as suspicious, thereby reducing false positives and improving the efficiency of incident monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legitimate script triggering alerts is a rule matching too broadly. Alert tuning adjusts the conditions, thresholds or exclusions so that known-good activity stops generating alerts while genuine detections still fire.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "File validation checks that a file is what it claims to be. It does not change SIEM rules.",
+      "C": "File quarantining isolates a suspicious file. Quarantining a legitimate script would break the process it supports.",
+      "D": "Log aggregation collects data from more sources, which increases volume rather than reducing false positives."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p331",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0779",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following is a security implication of using SDN over traditional methods?",
     "choices": [
@@ -32805,12 +32850,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Software-defined networking centralizes network control through a programmable controller, allowing administrators or automated systems to dynamically modify network configurations.\nThis capability enables rapid security responses such as isolating compromised devices, updating access controls, or redirecting suspicious traffic when threats are detected. The programmability and automation of SDN therefore improve the network's ability to react to security incidents in real time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SDN centralises network control in a programmable controller, so configuration can be changed by software in seconds. That enables automated security responses — isolating a compromised host, tightening access, rerouting suspect traffic — the moment a threat is detected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SDN integrates readily with analysis tooling through its APIs. Reduced alerting is not a characteristic of it.",
+      "C": "SDN does not inherently change intrusion detection accuracy. Detection quality depends on the sensors and rules.",
+      "D": "SDN is a way of managing your own network programmatically. It is not outsourcing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p331",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32843,12 +32892,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A web application firewall protects web applications by monitoring and filtering HTTP/HTTPS traffic between users and the web server. It can detect and block malicious inputs such as injected scripts that are characteristic of cross-site scripting attacks. By inspecting requests and enforcing rules that prevent malicious code from being delivered to the application, it helps stop XSS attacks before they reach the web server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cross-site scripting arrives as malicious content inside an HTTP request. A web application firewall inspects those requests at the application layer and blocks recognised script injection before it reaches the application.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An NGFW filters traffic at a boundary with application awareness, but it is not specialised in web application attack patterns the way a WAF is.",
+      "B": "A UTM bundles several perimeter security functions. Again general-purpose rather than targeted at web application attacks.",
+      "D": "NAC controls which devices may join a network. It has no visibility into HTTP request content."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p332",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32881,12 +32934,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A watering-hole attack occurs when attackers compromise a website that is commonly visited by a specific group of targets. Instead of directly attacking the victims, the attacker infects or manipulates the trusted site so that when the intended targets visit it, their systems or accounts can be compromised. This technique is often used by advanced threat actors to target particular organizations or individuals.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rather than attacking the journalists directly, the attacker compromised a site they habitually visit and let the victims come to it. Poisoning a trusted destination used by a specific group is a watering-hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An on-path attack intercepts traffic between two parties. It requires network position rather than compromising a site.",
+      "C": "Typosquatting registers a lookalike domain for users who mistype. The journalists visited the genuine site.",
+      "D": "Brand impersonation mimics an organisation's identity. The real site was used, not an imitation of it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p332",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32919,12 +32976,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Risk acceptance occurs when an organization acknowledges the existence of a risk but decides not to take action to reduce or eliminate it. The decision is typically based on factors such as cost, operational impact, or the perceived likelihood and impact of the threat. By knowingly ignoring identified vulnerabilities after a risk assessment, the organization is choosing to accept the associated risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Knowing about a risk and deciding to take no action is risk acceptance. It is a legitimate treatment when formally decided and documented, though ignoring findings without recording the rationale is acceptance done badly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Transfer shifts the financial consequence to a third party, typically through insurance. Nothing has been shifted.",
+      "B": "Avoid means ceasing the activity that creates the risk. Operations continue unchanged.",
+      "C": "Mitigate means applying controls to reduce likelihood or impact. No control has been applied."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p333",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32957,12 +33018,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Impact describes the extent to which a risk event would affect business operations if it occurs. It measures the potential consequences such as service disruption, financial loss, reputational damage, or operational limitations. In risk calculations, impact determines how severe the outcome of the event would be and therefore influences the overall risk score when combined with the likelihood of occurrence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Impact measures how badly the organisation is affected if the event occurs — the disruption, loss or damage that follows. Combined with likelihood it produces the overall risk score, and a low impact is what limits that score even for a probable event.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Severity is often used loosely as a synonym for the overall rating rather than the specific factor describing operational effect.",
+      "B": "Likelihood is how probable the event is. It is the other axis of the calculation.",
+      "D": "Probability is another word for likelihood, again the frequency side rather than the consequence side."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p333",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -32995,12 +33060,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique, fixed-length digest of the original software package using a one- way cryptographic function. The developer publishes the expected hash value, and users compute the hash of the downloaded file and compare it to the published value. If the values match, it confirms the software has not been altered during distribution, ensuring integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
+      "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
+      "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33033,12 +33102,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Migrating software to a cloud environment that allows more flexible and frequent updates can change how software releases, patches, and configuration changes are performed. This shift often requires organizations to revise their change management policy to accommodate faster deployment cycles, automation, and continuous updates typical in cloud environments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A change management policy written for a traditional environment assumes infrequent, scheduled releases. Moving to a cloud platform built for frequent automated updates breaks those assumptions, so the policy has to be rewritten around faster cycles and automated approval gates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An engineer adding a feature is a change the existing policy already covers.",
+      "B": "A server running at maximum load is a capacity problem, addressed by scaling rather than by revising change policy.",
+      "D": "A legacy server lacking regulatory support drives a remediation or replacement decision, not a change to how changes are managed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33080,21 +33153,26 @@
       "C",
       "D"
     ],
-    "explanation": "Badge access enforces authentication before entry by requiring individuals to present authorized credentials to gain access to the facility. This ensures that only personnel with approved access rights can unlock and enter secured areas.\nAn access control vestibule, also known as a mantrap, is a physical security mechanism that controls entry by allowing only one individual through a secured space at a time after authentication. This prevents tailgating and ensures that only verified individuals can proceed into the secure facility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Badge access authenticates each person at the door so only those with approved credentials get in. An access control vestibule then ensures one authenticated person passes at a time, which closes the tailgating gap a badge alone leaves open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
+      "B": "Video surveillance records who entered. It is detective rather than preventive.",
+      "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
+      "F": "A sensor detects presence or movement and raises an alert."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0787",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "A security administrator wants to determine it the company's social engineering training is effective.\nWhich of the following should the administrator do to complete this task?",
     "choices": [
@@ -33118,12 +33196,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Conducting a phishing campaign simulates a real social engineering attack against employees to measure how they respond. By tracking metrics such as how many users click malicious links or report the email, the organization can objectively evaluate whether the social engineering training has improved employee awareness and behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Effectiveness has to be measured against real behaviour. A simulated phishing campaign puts a realistic lure in front of staff and records who clicks and who reports it, producing objective figures that can be compared before and after training.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeypot attracts attackers to a decoy system. It measures adversary behaviour, not employee awareness.",
+      "B": "A survey measures what people say they would do, which reliably overstates how they actually behave.",
+      "C": "A focus group gathers opinions and impressions. Again self-reported rather than observed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p335",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33156,12 +33238,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Incident response begins with preparation, where policies, procedures, tools, and trained personnel are established to handle security incidents effectively. After preparation, the next steps are detection and analysis, where potential incidents are identified, investigated, and validated to determine their scope and impact before containment and remediation activities begin.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The process begins with preparation — building the plan, tooling and training before anything happens. Detection then identifies a candidate incident, and analysis validates it and establishes scope before any containment begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containment cannot precede detection; you cannot contain what you have not found.",
+      "B": "Lessons learned is the final phase, and this ordering omits preparation entirely.",
+      "C": "Eradication and recovery are late-stage activities that follow containment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p335",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33194,12 +33280,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Non-repudiation ensures that a sender cannot deny having performed an action such as sending a message. It is typically achieved through mechanisms like digital signatures and cryptographic proof that uniquely bind the sender to the transmitted data. This provides verifiable evidence of the origin of the message.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Non-repudiation means the sender cannot credibly deny having sent the message. A digital signature achieves it because only the sender holds the private key that produced it, and anyone can verify that fact independently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confidentiality keeps content from unauthorised readers. It says nothing about who sent it.",
+      "C": "Authorisation determines what an authenticated party may do.",
+      "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33207,8 +33297,8 @@
   {
     "id": "q0790",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "An administrator wants to create a comprehensive list of the technologies used at the company.\nWhich of the following will best help with this task?",
     "choices": [
@@ -33232,21 +33322,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Asset enumeration involves identifying and cataloging all hardware, software, and technologies used within an organization's environment. This process creates an inventory of systems, devices, applications, and services, providing visibility into the organization's technology assets and supporting security management, monitoring, and risk assessment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Asset enumeration systematically discovers and catalogues the hardware, software and services present in the environment. Producing that comprehensive inventory is exactly the task described, and everything else in security depends on it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data deduplication removes redundant copies of data to save storage. It is a storage efficiency technique.",
+      "C": "Dynamic analysis tests a running application for flaws. It examines one application rather than inventorying the estate.",
+      "D": "A vulnerability scan finds weaknesses on hosts it can reach. It produces findings about known systems rather than a complete technology inventory."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0791",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "An employee asks a security analyst to scan a suspicious email that contains a risk to a file on a file-sharing site. The analyst determines that the file is safe after downloading and scanning the file with antivirus software.\nWhen the employee opens the file, their device is infected with ransomware.\nWhich of the following steps should the analyst have taken?",
     "choices": [
@@ -33270,12 +33364,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Executing the file in a sandbox allows the analyst to observe the behavior of the file in an isolated environment without risking the production system. Sandboxing detects malicious actions such as ransomware behavior, including attempts to encrypt files, modify system processes, or contact command-and-control servers. This behavioral analysis can reveal threats that traditional antivirus scanning may miss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Antivirus matches known signatures, so a novel or packed sample passes cleanly. A sandbox runs the file in isolation and watches what it does — encrypting files, contacting command and control — which is the only way to catch behaviour no signature covers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing the file in a code editor works for scripts but reveals nothing about a compiled or packed binary.",
+      "B": "Monitoring connections with netstat means the file is already running on a production machine, which is exactly what went wrong.",
+      "D": "Checking the hash against open sources is a quick and worthwhile step, but a newly generated sample will have no reputation at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33308,21 +33406,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "File integrity monitoring tracks and verifies changes to files and system configurations by monitoring file attributes such as hashes, timestamps, and permissions. It generates alerts when unauthorized or unexpected modifications occur, allowing administrators to detect and investigate changes to protected data or critical system files. This provides visibility and accountability for modifications within the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring records a baseline of file hashes, timestamps and permissions, then checks against it and alerts when something changes. That continuous verification is what gives the administrator a track record of every modification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SPF authorises mail servers to send for a domain. It concerns email, not file changes.",
+      "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
+      "C": "NAC decides which devices may join the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p337",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0793",
-    "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
     "question": "A security analyst must protect customer data that is stored on a network shared drive.\nWhich of the following should the analyst do first to implement protections? (Choose two.)",
     "choices": [
@@ -33355,12 +33457,17 @@
       "A",
       "D"
     ],
-    "explanation": "Sensitivity labeling classifies customer data based on its level of sensitivity, enabling the organization to apply appropriate security controls, handling rules, and monitoring based on the classification of the data.\nLimiting access to the shared drive ensures that only authorized users who require the data for their roles can access it. Enforcing access control reduces the risk of unauthorized exposure of customer information stored on the network share.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two first steps matter. Sensitivity labelling establishes what the data is and therefore how it must be handled, and limiting access to the share ensures only those who need it can reach it. Together they define and enforce the protection baseline everything else builds on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A data retention policy governs how long data is kept. Important, but it does not protect the data now.",
+      "C": "RAID protects against drive failure. That is availability, not confidentiality.",
+      "E": "Encrypting the server drives protects data at rest and is worth doing, but it does nothing against an authorised user who should not have access to the share.",
+      "F": "Masking all customer PII would destroy the data's usefulness for the business processes that legitimately need it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p337",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33393,21 +33500,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as Code allows infrastructure such as servers, networks, and configurations to be defined and managed through code and automation tools. This approach standardizes server deployments, ensures consistent configurations, and significantly reduces the time required to provision new systems by automating the build and deployment process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code defines servers in version-controlled files that a pipeline applies. Every build comes from the same reviewed definition, which standardises configuration, makes changes auditable and collapses build time from manual hours to a pipeline run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IoT refers to networked embedded devices. It is a category of equipment.",
+      "C": "PaaS provides a managed application platform. It removes server management rather than standardising how servers are built.",
+      "D": "ICS is industrial control systems used in manufacturing and utilities."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p338",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0795",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "multi",
     "question": "A security analyst assesses the deployment of a security appliance. The security appliance must perform the following functions.\n• The appliance should monitor all traffic to and from the internet. • The appliance should monitor all east-west traffic inside the data center • The appliance should be able to detect and block malicious lateral movement. • The appliance network interface is bandwidth-limited to 1G.\nWhich of the following should the security analyst implement for a compliant and scalable deployment? (Choose two.)",
     "choices": [
@@ -33440,21 +33551,26 @@
       "E",
       "F"
     ],
-    "explanation": "Configuring API integrations between the appliance and network devices allows the appliance to instruct switches, routers, or firewalls to block or filter malicious traffic once threats such as lateral movement are detected. This approach enables enforcement across the network without requiring all traffic to pass directly through the appliance, supporting scalability.\nSetting up a network tap and sending connection metadata to the appliance allows the appliance to monitor both north-south and east-west traffic without being placed inline. Because the appliance interface is limited to 1Gbps, sending metadata instead of full traffic ensures visibility while avoiding bandwidth limitations and maintaining scalable monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A 1G interface cannot carry all north-south and east-west data centre traffic, so the appliance must see traffic without being in its path. A tap feeding it connection metadata provides visibility at scale, and API integration with the network devices lets it push blocking decisions to equipment that can actually enforce them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "In-line deployment forces every packet through a 1G interface, which becomes an immediate bottleneck and a single point of failure.",
+      "B": "Fail-closed on a bandwidth-limited in-line device would take the data centre down the moment it saturated.",
+      "C": "Restricting console access to a jump box is good management hygiene but addresses neither monitoring coverage nor scalability.",
+      "D": "An IPSec tunnel to the border routers encrypts a management path. It does not provide traffic visibility."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p338",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0796",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets.\nWhich of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
     "choices": [
@@ -33478,12 +33594,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "CIS benchmarks provide industry-recognized configuration and security best practices for operating systems, applications, and network devices. By comparing existing systems against these benchmarks, an organization can identify outdated or insecure configurations associated with legacy infrastructure. This assessment helps determine the scope of modernization efforts and supports a risk-based approach by highlighting areas that require remediation or upgrades.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CIS benchmarks define what a securely configured system looks like for each platform. Measuring the existing estate against them exposes which systems are outdated or misconfigured, producing both the scope of the legacy problem and a severity-ranked basis for prioritising modernisation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Angry IP Scanner discovers live hosts and open ports. It finds what exists without assessing how insecure it is.",
+      "B": "The OWASP Web Security Testing Guide covers testing web applications. It is narrow and does not address infrastructure generally.",
+      "D": "Metasploit is an exploitation framework. It proves individual flaws are exploitable rather than scoping an estate."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p339",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33516,12 +33636,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Access lists control which devices are permitted to connect to a network or environment by allowing or denying traffic based on identifiers such as MAC addresses, IP addresses, or other device attributes. By defining approved devices in the list, the organization ensures that only authorized systems are allowed to access the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access lists enumerate which devices are permitted, matching on identifiers such as MAC or IP address, and deny everything else. Restricting entry to an approved set is exactly what they express.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Remote connection describes how someone reaches the environment. It is not a control that filters devices.",
+      "C": "Screened subnets isolate public-facing services from the internal network. They segment rather than authorise specific devices.",
+      "D": "A centralised proxy mediates outbound requests. It governs what devices may reach, not which devices may connect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p339",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33554,12 +33678,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Blackmail occurs when an attacker threatens to expose sensitive or damaging information about a victim unless the victim complies with certain demands. In this scenario, the attacker coerces the employee into installing malware by threatening to publish the employee's private files, which is a classic form of coercion through blackmail.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker is coercing the employee by threatening to publish damaging personal material unless they comply. Compelling action through threatened exposure is blackmail, and CompTIA lists it as a distinct attacker motivation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain would mean the attacker is seeking money. The demand here is an action, not payment.",
+      "B": "Revenge would mean the attacker is acting out of grievance against the target. Nothing suggests that.",
+      "D": "Espionage is covert collection of information. The attacker is coercing someone into deploying malware."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33592,21 +33720,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "A self-assessment allows an organization to internally evaluate its security practices, controls, and processes to identify weaknesses, gaps, and areas that require improvement. By reviewing its own security posture, the organization can proactively address vulnerabilities, strengthen controls, and improve overall security before issues are exploited or discovered during external reviews.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A self-assessment is the organisation examining its own controls, which lets it find gaps and fix them quietly before an external party or an attacker does. Identifying weaknesses and improvement opportunities is exactly its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Using an objective third party describes an external audit. A self-assessment is by definition not independent.",
+      "C": "Regulatory compliance for a financial disclosure requires independent attestation, which a self-assessment cannot provide.",
+      "D": "Red team penetration tests validate defences through simulated attack. That is a separate technical exercise."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0800",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "An organization with an on-site workforce is transitioning to a hybrid remote and on-site work environment. Remote workers will only use organization-provided devices with strict endpoint security. Connection to the organization's network will be restricted to VPN access.\nWhich of the following practices will be most beneficial for the organization when handling sensitive data?",
     "choices": [
@@ -33630,12 +33762,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Disabling the use of external USB storage devices helps prevent sensitive organizational data from being copied to removable media that could be lost, stolen, or used to exfiltrate information outside the organization's control. In a hybrid work environment where employees handle sensitive data remotely, restricting removable storage reduces the risk of unauthorized data transfer and leakage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every other channel is already controlled — devices are organisation-provided with strict endpoint security, and network access runs through a VPN. The remaining gap is physical: copying sensitive data onto a USB drive bypasses all of it, so disabling external storage closes the one path left open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Time-of-day restrictions limit when people may work. Hybrid working makes rigid hours counterproductive, and they do nothing about data handling.",
+      "C": "Host file integrity monitoring detects changes to system files. That is malware detection, and endpoint security is already described as strict.",
+      "D": "Securing workers' home routers is largely outside the organisation's control, and the VPN already protects traffic crossing those networks."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
@@ -33668,12 +33804,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization allows multiple virtual machines to run on a single physical server by using a hypervisor to separate operating systems and applications. This approach reduces the need for additional physical hardware while maintaining isolation between workloads. It enables secure and efficient deployment of applications, lowers hardware costs, and improves resource utilization within the infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Infrastructure as code standardises how systems are built. It improves consistency without reducing the hardware needed.",
+      "B": "Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
+      "D": "Containerisation is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p341",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false

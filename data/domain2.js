@@ -6478,12 +6478,17 @@ export const domain2Questions = [
       "A",
       "D"
     ],
-    "explanation": "Segmentation isolates legacy manufacturing systems from the rest of the network, limiting communication paths and reducing the risk that attackers can reach or laterally move to these vulnerable systems. This containment approach is commonly used when legacy systems cannot support modern security updates.\nA jump server provides a controlled and monitored access point for administrators who need to manage legacy systems. By forcing administrative access through a hardened intermediary system, the organization can enforce authentication controls, logging, and monitoring while preventing direct access to vulnerable systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Legacy manufacturing systems cannot be patched or run modern agents, so the answer is to control what can reach them. Segmentation isolates them from the wider network, and a jump server gives the engineers who must administer them one controlled, monitored path in.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Antivirus needs an agent and a supported operating system. Legacy industrial equipment typically supports neither.",
+      "C": "An application allow list also requires agent support on the host, which these systems generally lack.",
+      "E": "Patching is unavailable — the vendor no longer issues updates, which is why compensating controls are needed.",
+      "F": "An IDS detects and alerts. Visibility is useful but it protects nothing by itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p329",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.407,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6516,12 +6521,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Cross-site scripting occurs when a web application fails to properly validate or sanitize user input, allowing attackers to inject malicious client-side code into web pages viewed by other users. Injecting an HTML tag such as an image element that loads content from a malicious site is a common XSS technique.\nWhen the page renders, the browser processes the injected code, which can execute attacker- controlled scripts or retrieve malicious resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An HTML tag supplied as input and then rendered by the browser means the application echoed user content into the page without neutralising it. Injecting markup or script that executes in another user's browser is cross-site scripting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Directory traversal uses path sequences to read files outside the web root. This payload is markup, not a path.",
+      "B": "A buffer overflow writes past an allocated memory region. It targets memory handling, not page rendering.",
+      "C": "SQL injection inserts database syntax to manipulate a query. An image tag means nothing to a database."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6554,174 +6563,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering-hole attack occurs when attackers compromise a website that is commonly visited by a specific group of targets. Instead of directly attacking the victims, the attacker infects or manipulates the trusted site so that when the intended targets visit it, their systems or accounts can be compromised. This technique is often used by advanced threat actors to target particular organizations or individuals.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rather than attacking the journalists directly, the attacker compromised a site they habitually visit and let the victims come to it. Poisoning a trusted destination used by a specific group is a watering-hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An on-path attack intercepts traffic between two parties. It requires network position rather than compromising a site.",
+      "C": "Typosquatting registers a lookalike domain for users who mistype. The journalists visited the genuine site.",
+      "D": "Brand impersonation mimics an organisation's identity. The real site was used, not an imitation of it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p332",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0787",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A security administrator wants to determine it the company's social engineering training is effective.\nWhich of the following should the administrator do to complete this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Set up a honeypot."
-      },
-      {
-        "key": "B",
-        "text": "Send out a survey."
-      },
-      {
-        "key": "C",
-        "text": "Set up a focus group."
-      },
-      {
-        "key": "D",
-        "text": "Conduct a phishing campaign"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Conducting a phishing campaign simulates a real social engineering attack against employees to measure how they respond. By tracking metrics such as how many users click malicious links or report the email, the organization can objectively evaluate whether the social engineering training has improved employee awareness and behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p335",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0791",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "An employee asks a security analyst to scan a suspicious email that contains a risk to a file on a file-sharing site. The analyst determines that the file is safe after downloading and scanning the file with antivirus software.\nWhen the employee opens the file, their device is infected with ransomware.\nWhich of the following steps should the analyst have taken?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Review the file in a code editor."
-      },
-      {
-        "key": "B",
-        "text": "Monitor the file connections with netstat -ano."
-      },
-      {
-        "key": "C",
-        "text": "Execute the file in a sandbox."
-      },
-      {
-        "key": "D",
-        "text": "Retrieve the file hash and check with OSINT."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Executing the file in a sandbox allows the analyst to observe the behavior of the file in an isolated environment without risking the production system. Sandboxing detects malicious actions such as ransomware behavior, including attempts to encrypt files, modify system processes, or contact command-and-control servers. This behavioral analysis can reveal threats that traditional antivirus scanning may miss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0795",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "multi",
-    "question": "A security analyst assesses the deployment of a security appliance. The security appliance must perform the following functions.\n• The appliance should monitor all traffic to and from the internet. • The appliance should monitor all east-west traffic inside the data center • The appliance should be able to detect and block malicious lateral movement. • The appliance network interface is bandwidth-limited to 1G.\nWhich of the following should the security analyst implement for a compliant and scalable deployment? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Install the appliance in an in-line mode to ensure comprehensive monitoring."
-      },
-      {
-        "key": "B",
-        "text": "Deploy the appliance in fall-closed mode to ensure higher security."
-      },
-      {
-        "key": "C",
-        "text": "Ensure the appliance console is only accessible from a central jump box."
-      },
-      {
-        "key": "D",
-        "text": "Implement an IPSec tunnel between the appliance and border routers"
-      },
-      {
-        "key": "E",
-        "text": "Configure API integrations between the appliance and network device to filter traffic"
-      },
-      {
-        "key": "F",
-        "text": "Set up a tap and send network connections' metadata to the appliance."
-      }
-    ],
-    "correct": [
-      "E",
-      "F"
-    ],
-    "explanation": "Configuring API integrations between the appliance and network devices allows the appliance to instruct switches, routers, or firewalls to block or filter malicious traffic once threats such as lateral movement are detected. This approach enables enforcement across the network without requiring all traffic to pass directly through the appliance, supporting scalability.\nSetting up a network tap and sending connection metadata to the appliance allows the appliance to monitor both north-south and east-west traffic without being placed inline. Because the appliance interface is limited to 1Gbps, sending metadata instead of full traffic ensures visibility while avoiding bandwidth limitations and maintaining scalable monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p338",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0796",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets.\nWhich of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Angry IP Scanner"
-      },
-      {
-        "key": "B",
-        "text": "OWASP Web Security Testing Guide"
-      },
-      {
-        "key": "C",
-        "text": "CIS benchmarks"
-      },
-      {
-        "key": "D",
-        "text": "Metasploit Framework"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "CIS benchmarks provide industry-recognized configuration and security best practices for operating systems, applications, and network devices. By comparing existing systems against these benchmarks, an organization can identify outdated or insecure configurations associated with legacy infrastructure. This assessment helps determine the scope of modernization efforts and supports a risk-based approach by highlighting areas that require remediation or upgrades.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p339",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6753,12 +6605,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Blackmail occurs when an attacker threatens to expose sensitive or damaging information about a victim unless the victim complies with certain demands. In this scenario, the attacker coerces the employee into installing malware by threatening to publish the employee's private files, which is a classic form of coercion through blackmail.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker is coercing the employee by threatening to publish damaging personal material unless they comply. Compelling action through threatened exposure is blackmail, and CompTIA lists it as a distinct attacker motivation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain would mean the attacker is seeking money. The demand here is an action, not payment.",
+      "B": "Revenge would mean the attacker is acting out of grievance against the target. Nothing suggests that.",
+      "D": "Espionage is covert collection of information. The attacker is coercing someone into deploying malware."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false

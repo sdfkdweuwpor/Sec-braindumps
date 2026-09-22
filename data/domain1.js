@@ -4565,12 +4565,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hashing uses a one-way cryptographic function that converts data into a fixed-length hash value. Any change to the original data results in a different hash value, allowing verification that the data has not been altered. Because the process cannot be reversed to recover the original input, it provides assurance of data integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing runs data through a one-way function producing a fixed-length digest, and any change to the input produces a completely different output. Comparing digests proves the data is unaltered, which is integrity assurance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
+      "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
+      "D": "Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4603,12 +4607,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique, fixed-length digest of the original software package using a one- way cryptographic function. The developer publishes the expected hash value, and users compute the hash of the downloaded file and compare it to the published value. If the values match, it confirms the software has not been altered during distribution, ensuring integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
+      "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
+      "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4641,12 +4649,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Migrating software to a cloud environment that allows more flexible and frequent updates can change how software releases, patches, and configuration changes are performed. This shift often requires organizations to revise their change management policy to accommodate faster deployment cycles, automation, and continuous updates typical in cloud environments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A change management policy written for a traditional environment assumes infrequent, scheduled releases. Moving to a cloud platform built for frequent automated updates breaks those assumptions, so the policy has to be rewritten around faster cycles and automated approval gates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An engineer adding a feature is a change the existing policy already covers.",
+      "B": "A server running at maximum load is a capacity problem, addressed by scaling rather than by revising change policy.",
+      "D": "A legacy server lacking regulatory support drives a remediation or replacement decision, not a change to how changes are managed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4688,12 +4700,17 @@ export const domain1Questions = [
       "C",
       "D"
     ],
-    "explanation": "Badge access enforces authentication before entry by requiring individuals to present authorized credentials to gain access to the facility. This ensures that only personnel with approved access rights can unlock and enter secured areas.\nAn access control vestibule, also known as a mantrap, is a physical security mechanism that controls entry by allowing only one individual through a secured space at a time after authentication. This prevents tailgating and ensures that only verified individuals can proceed into the secure facility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Badge access authenticates each person at the door so only those with approved credentials get in. An access control vestibule then ensures one authenticated person passes at a time, which closes the tailgating gap a badge alone leaves open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
+      "B": "Video surveillance records who entered. It is detective rather than preventive.",
+      "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
+      "F": "A sensor detects presence or movement and raises an alert."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p334",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4726,51 +4743,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Non-repudiation ensures that a sender cannot deny having performed an action such as sending a message. It is typically achieved through mechanisms like digital signatures and cryptographic proof that uniquely bind the sender to the transmitted data. This provides verifiable evidence of the origin of the message.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Non-repudiation means the sender cannot credibly deny having sent the message. A digital signature achieves it because only the sender holds the private key that produced it, and anyone can verify that fact independently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confidentiality keeps content from unauthorised readers. It says nothing about who sent it.",
+      "C": "Authorisation determines what an authenticated party may do.",
+      "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0800",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "An organization with an on-site workforce is transitioning to a hybrid remote and on-site work environment. Remote workers will only use organization-provided devices with strict endpoint security. Connection to the organization's network will be restricted to VPN access.\nWhich of the following practices will be most beneficial for the organization when handling sensitive data?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Configuring time-of-day restrictions to match on-site working hours"
-      },
-      {
-        "key": "B",
-        "text": "Disabling the use of external USB storage devices"
-      },
-      {
-        "key": "C",
-        "text": "Monitoring host file integrity with endpoint antivirus software"
-      },
-      {
-        "key": "D",
-        "text": "Securing workers' home routers through technical controls"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Disabling the use of external USB storage devices helps prevent sensitive organizational data from being copied to removable media that could be lost, stolen, or used to exfiltrate information outside the organization's control. In a hybrid work environment where employees handle sensitive data remotely, restricting removable storage reduces the risk of unauthorized data transfer and leakage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
-    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },

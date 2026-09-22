@@ -5483,12 +5483,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A penetration test evaluates the effectiveness of security controls by simulating real-world attacks against a system. Security professionals attempt to bypass defenses and gain unauthorized access in the same way an attacker would. This approach directly tests whether existing controls such as authentication, access restrictions, and network defenses successfully prevent unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Testing whether controls actually stop unauthorised access requires someone to attempt it. A penetration test simulates a real attacker against authentication, access restrictions and network defences, which measures effectiveness rather than mere presence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A risk assessment evaluates likelihood and impact. It reasons about risk without testing whether controls hold.",
+      "C": "A vulnerability scan enumerates known weaknesses. It reports what could be exploited without proving that it can be.",
+      "D": "An internal audit review checks that controls exist and policy is followed. It examines documentation and configuration rather than attacking them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p327",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.316,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5521,12 +5525,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In a continuity of operations plan, the frequency of backups is determined by the recovery point objective (RPO). The RPO defines the maximum acceptable amount of data loss measured in time. Backup schedules are therefore designed to meet this objective, ensuring that data can be restored to a point that satisfies the organization's tolerance for data loss during a disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The recovery point objective states how much data the business can afford to lose, expressed as time. Backups must run at least that often, so the RPO dictates the schedule rather than any fixed rule of thumb.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Nightly backups are a common default, but they impose a 24-hour data loss window regardless of whether the business can tolerate it.",
+      "C": "Triggering on 5% data change is arbitrary and ignores how valuable or time-sensitive the changed data is.",
+      "D": "Daily incrementals with weekly fulls is a sensible pattern, but it is an implementation detail chosen to meet an RPO rather than the principle setting frequency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p329",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5559,12 +5567,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk acceptance occurs when an organization acknowledges the existence of a risk but decides not to take action to reduce or eliminate it. The decision is typically based on factors such as cost, operational impact, or the perceived likelihood and impact of the threat. By knowingly ignoring identified vulnerabilities after a risk assessment, the organization is choosing to accept the associated risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Knowing about a risk and deciding to take no action is risk acceptance. It is a legitimate treatment when formally decided and documented, though ignoring findings without recording the rationale is acceptance done badly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Transfer shifts the financial consequence to a third party, typically through insurance. Nothing has been shifted.",
+      "B": "Avoid means ceasing the activity that creates the risk. Operations continue unchanged.",
+      "C": "Mitigate means applying controls to reduce likelihood or impact. No control has been applied."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p333",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5597,13 +5609,59 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Impact describes the extent to which a risk event would affect business operations if it occurs. It measures the potential consequences such as service disruption, financial loss, reputational damage, or operational limitations. In risk calculations, impact determines how severe the outcome of the event would be and therefore influences the overall risk score when combined with the likelihood of occurrence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Impact measures how badly the organisation is affected if the event occurs — the disruption, loss or damage that follows. Combined with likelihood it produces the overall risk score, and a low impact is what limits that score even for a probable event.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Severity is often used loosely as a synonym for the overall rating rather than the specific factor describing operational effect.",
+      "B": "Likelihood is how probable the event is. It is the other axis of the calculation.",
+      "D": "Probability is another word for likelihood, again the frequency side rather than the consequence side."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p333",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0787",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A security administrator wants to determine it the company's social engineering training is effective.\nWhich of the following should the administrator do to complete this task?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Set up a honeypot."
+      },
+      {
+        "key": "B",
+        "text": "Send out a survey."
+      },
+      {
+        "key": "C",
+        "text": "Set up a focus group."
+      },
+      {
+        "key": "D",
+        "text": "Conduct a phishing campaign"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Effectiveness has to be measured against real behaviour. A simulated phishing campaign puts a realistic lure in front of staff and records who clicks and who reports it, producing objective figures that can be compared before and after training.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeypot attracts attackers to a decoy system. It measures adversary behaviour, not employee awareness.",
+      "B": "A survey measures what people say they would do, which reliably overstates how they actually behave.",
+      "C": "A focus group gathers opinions and impressions. Again self-reported rather than observed."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p335",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5635,12 +5693,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A self-assessment allows an organization to internally evaluate its security practices, controls, and processes to identify weaknesses, gaps, and areas that require improvement. By reviewing its own security posture, the organization can proactively address vulnerabilities, strengthen controls, and improve overall security before issues are exploited or discovered during external reviews.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A self-assessment is the organisation examining its own controls, which lets it find gaps and fix them quietly before an external party or an attacker does. Identifying weaknesses and improvement opportunities is exactly its purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Using an objective third party describes an external audit. A self-assessment is by definition not independent.",
+      "C": "Regulatory compliance for a financial disclosure requires independent attestation, which a self-assessment cannot provide.",
+      "D": "Red team penetration tests validate defences through simulated attack. That is a separate technical exercise."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p340",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false

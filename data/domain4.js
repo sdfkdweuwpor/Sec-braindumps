@@ -10038,12 +10038,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Establishing baselines allows the analyst to understand what normal system behavior looks like in terms of performance, traffic patterns, resource usage, and user activity. Once normal behavior is documented, deviations from this baseline can be identified as abnormal or potentially malicious activity on the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Abnormal only has meaning relative to normal. Establishing a baseline of the server's usual performance, traffic, resource use and account activity is what lets any later deviation be recognised as abnormal rather than merely unfamiliar.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unnecessary ports reduces the attack surface. It is hardening, not detection.",
+      "B": "Patching removes known vulnerabilities. Again preventive rather than a way to spot unusual behaviour.",
+      "D": "Alert tuning refines existing rules to cut false positives. It presumes you already know what normal looks like."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10051,8 +10055,8 @@ export const domain4Questions = [
   {
     "id": "q0772",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following will help reduce alert fatigue?",
     "choices": [
@@ -10076,12 +10080,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Rule tuning improves the accuracy of detection systems by refining alerting rules to reduce false positives and irrelevant alerts. By adjusting thresholds, conditions, and filtering logic, security teams can ensure alerts are generated only for meaningful events. This reduces the volume of unnecessary alerts and helps analysts focus on genuine security incidents, thereby reducing alert fatigue.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Alert fatigue comes from volume, most of it noise. Tuning the rules — adjusting thresholds, adding conditions, suppressing known-benign patterns — cuts false positives so what reaches an analyst is worth their attention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration testing assesses whether systems can be breached. It produces findings rather than reducing alerts.",
+      "B": "Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
+      "D": "Log aggregation gathers more data into one place, which tends to increase alert volume without tuning."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p328",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.471,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10114,12 +10122,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Sender Policy Framework allows a domain owner to specify which mail servers are authorized to send email on behalf of the domain by publishing this information in a DNS record. Receiving mail servers check the sending server's IP address against the domain's SPF record to verify that the email originates from an approved source. This helps prevent spoofing and reduces the likelihood that legitimate emails will be flagged as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Listing the authorised mail servers in DNS is publishing an SPF record. Receiving servers compare the sending address against that record to confirm the mail came from a permitted source, which is what reduces spam classification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail. It comes after SPF exists.",
+      "B": "DLP inspects outbound content for sensitive data. It has no influence on spam scoring.",
+      "C": "DKIM signs messages cryptographically to prove they were not altered. It is complementary but is not the DNS record listing the servers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10152,12 +10164,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Creating a wireless heat map helps determine signal strength and coverage areas throughout the building and around the perimeter. Since the access points will be more powerful, a heat map allows the security team to verify that the wireless signal does not extend excessively outside the building where attackers could attempt unauthorized access. This supports secure placement and power configuration of the access points to minimize signal leakage beyond controlled areas.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "More powerful access points mean the signal reaches further, including outside the building where an attacker could sit in the car park. A heat map shows exactly how far coverage extends so placement and transmit power can be tuned before deployment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IPSec tunnels from access points to the controller protect management traffic. They do nothing about signal spilling outside.",
+      "C": "Enabling WPA2-PSK would downgrade from WPA3, weakening the design rather than improving it.",
+      "D": "Disabling SSH administration is good hardening but addresses management access, not the coverage risk the scenario raises."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p330",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10190,51 +10206,17 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Alert tuning involves adjusting detection rules, thresholds, or filters within a SIEM to reduce unnecessary or inaccurate alerts. By modifying the rules that trigger alerts for the legitimate script, the analyst can prevent the SIEM from incorrectly flagging normal activity as suspicious, thereby reducing false positives and improving the efficiency of incident monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legitimate script triggering alerts is a rule matching too broadly. Alert tuning adjusts the conditions, thresholds or exclusions so that known-good activity stops generating alerts while genuine detections still fire.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "File validation checks that a file is what it claims to be. It does not change SIEM rules.",
+      "C": "File quarantining isolates a suspicious file. Quarantining a legitimate script would break the process it supports.",
+      "D": "Log aggregation collects data from more sources, which increases volume rather than reducing false positives."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p331",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0779",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "Which of the following is a security implication of using SDN over traditional methods?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Network device configuration can be dynamically adjusted to react to a detected security threat."
-      },
-      {
-        "key": "B",
-        "text": "Network alerting and reporting is reduced due to lack of integration with analysis tools."
-      },
-      {
-        "key": "C",
-        "text": "Network intrusion detection results in increased false positives or false negatives."
-      },
-      {
-        "key": "D",
-        "text": "Network infrastructure is outsourced to a third-party vendor better suited to maintaining security."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Software-defined networking centralizes network control through a programmable controller, allowing administrators or automated systems to dynamically modify network configurations.\nThis capability enables rapid security responses such as isolating compromised devices, updating access controls, or redirecting suspicious traffic when threats are detected. The programmability and automation of SDN therefore improve the network's ability to react to security incidents in real time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p331",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10266,12 +10248,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Incident response begins with preparation, where policies, procedures, tools, and trained personnel are established to handle security incidents effectively. After preparation, the next steps are detection and analysis, where potential incidents are identified, investigated, and validated to determine their scope and impact before containment and remediation activities begin.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The process begins with preparation — building the plan, tooling and training before anything happens. Detection then identifies a candidate incident, and analysis validates it and establishes scope before any containment begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containment cannot precede detection; you cannot contain what you have not found.",
+      "B": "Lessons learned is the final phase, and this ordering omits preparation entirely.",
+      "C": "Eradication and recovery are late-stage activities that follow containment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p335",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10279,8 +10265,8 @@ export const domain4Questions = [
   {
     "id": "q0790",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
     "type": "single",
     "question": "An administrator wants to create a comprehensive list of the technologies used at the company.\nWhich of the following will best help with this task?",
     "choices": [
@@ -10304,13 +10290,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Asset enumeration involves identifying and cataloging all hardware, software, and technologies used within an organization's environment. This process creates an inventory of systems, devices, applications, and services, providing visibility into the organization's technology assets and supporting security management, monitoring, and risk assessment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Asset enumeration systematically discovers and catalogues the hardware, software and services present in the environment. Producing that comprehensive inventory is exactly the task described, and everything else in security depends on it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data deduplication removes redundant copies of data to save storage. It is a storage efficiency technique.",
+      "C": "Dynamic analysis tests a running application for flaws. It examines one application rather than inventorying the estate.",
+      "D": "A vulnerability scan finds weaknesses on hosts it can reach. It produces findings about known systems rather than a complete technology inventory."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p336",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0791",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "An employee asks a security analyst to scan a suspicious email that contains a risk to a file on a file-sharing site. The analyst determines that the file is safe after downloading and scanning the file with antivirus software.\nWhen the employee opens the file, their device is infected with ransomware.\nWhich of the following steps should the analyst have taken?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Review the file in a code editor."
+      },
+      {
+        "key": "B",
+        "text": "Monitor the file connections with netstat -ano."
+      },
+      {
+        "key": "C",
+        "text": "Execute the file in a sandbox."
+      },
+      {
+        "key": "D",
+        "text": "Retrieve the file hash and check with OSINT."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Antivirus matches known signatures, so a novel or packed sample passes cleanly. A sandbox runs the file in isolation and watches what it does — encrypting files, contacting command and control — which is the only way to catch behaviour no signature covers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reviewing the file in a code editor works for scripts but reveals nothing about a compiled or packed binary.",
+      "B": "Monitoring connections with netstat means the file is already running on a production machine, which is exactly what went wrong.",
+      "D": "Checking the hash against open sources is a quick and worthwhile step, but a newly generated sample will have no reputation at all."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p336",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10342,60 +10374,111 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "File integrity monitoring tracks and verifies changes to files and system configurations by monitoring file attributes such as hashes, timestamps, and permissions. It generates alerts when unauthorized or unexpected modifications occur, allowing administrators to detect and investigate changes to protected data or critical system files. This provides visibility and accountability for modifications within the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring records a baseline of file hashes, timestamps and permissions, then checks against it and alerts when something changes. That continuous verification is what gives the administrator a track record of every modification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SPF authorises mail servers to send for a domain. It concerns email, not file changes.",
+      "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
+      "C": "NAC decides which devices may join the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p337",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0793",
+    "id": "q0795",
     "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "multi",
-    "question": "A security analyst must protect customer data that is stored on a network shared drive.\nWhich of the following should the analyst do first to implement protections? (Choose two.)",
+    "question": "A security analyst assesses the deployment of a security appliance. The security appliance must perform the following functions.\n• The appliance should monitor all traffic to and from the internet. • The appliance should monitor all east-west traffic inside the data center • The appliance should be able to detect and block malicious lateral movement. • The appliance network interface is bandwidth-limited to 1G.\nWhich of the following should the security analyst implement for a compliant and scalable deployment? (Choose two.)",
     "choices": [
       {
         "key": "A",
-        "text": "Enable sensitivity labeling."
+        "text": "Install the appliance in an in-line mode to ensure comprehensive monitoring."
       },
       {
         "key": "B",
-        "text": "Create a data retention policy."
+        "text": "Deploy the appliance in fall-closed mode to ensure higher security."
       },
       {
         "key": "C",
-        "text": "Install additional drives for RAID."
+        "text": "Ensure the appliance console is only accessible from a central jump box."
       },
       {
         "key": "D",
-        "text": "Limit access to the shared drive."
+        "text": "Implement an IPSec tunnel between the appliance and border routers"
       },
       {
         "key": "E",
-        "text": "Encrypt the server hard drives."
+        "text": "Configure API integrations between the appliance and network device to filter traffic"
       },
       {
         "key": "F",
-        "text": "Mask all customer PII."
+        "text": "Set up a tap and send network connections' metadata to the appliance."
       }
     ],
     "correct": [
-      "A",
-      "D"
+      "E",
+      "F"
     ],
-    "explanation": "Sensitivity labeling classifies customer data based on its level of sensitivity, enabling the organization to apply appropriate security controls, handling rules, and monitoring based on the classification of the data.\nLimiting access to the shared drive ensures that only authorized users who require the data for their roles can access it. Enforcing access control reduces the risk of unauthorized exposure of customer information stored on the network share.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A 1G interface cannot carry all north-south and east-west data centre traffic, so the appliance must see traffic without being in its path. A tap feeding it connection metadata provides visibility at scale, and API integration with the network devices lets it push blocking decisions to equipment that can actually enforce them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "In-line deployment forces every packet through a 1G interface, which becomes an immediate bottleneck and a single point of failure.",
+      "B": "Fail-closed on a bandwidth-limited in-line device would take the data centre down the moment it saturated.",
+      "C": "Restricting console access to a jump box is good management hygiene but addresses neither monitoring coverage nor scalability.",
+      "D": "An IPSec tunnel to the border routers encrypts a management path. It does not provide traffic visibility."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p337",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
+    "source": "SY0-701_en.pdf#p338",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0796",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets.\nWhich of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Angry IP Scanner"
+      },
+      {
+        "key": "B",
+        "text": "OWASP Web Security Testing Guide"
+      },
+      {
+        "key": "C",
+        "text": "CIS benchmarks"
+      },
+      {
+        "key": "D",
+        "text": "Metasploit Framework"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "CIS benchmarks define what a securely configured system looks like for each platform. Measuring the existing estate against them exposes which systems are outdated or misconfigured, producing both the scope of the legacy problem and a severity-ranked basis for prioritising modernisation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Angry IP Scanner discovers live hosts and open ports. It finds what exists without assessing how insecure it is.",
+      "B": "The OWASP Web Security Testing Guide covers testing web applications. It is narrow and does not address infrastructure generally.",
+      "D": "Metasploit is an exploitation framework. It proves individual flaws are exploitable rather than scoping an estate."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p339",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10427,13 +10510,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Access lists control which devices are permitted to connect to a network or environment by allowing or denying traffic based on identifiers such as MAC addresses, IP addresses, or other device attributes. By defining approved devices in the list, the organization ensures that only authorized systems are allowed to access the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access lists enumerate which devices are permitted, matching on identifiers such as MAC or IP address, and deny everything else. Restricting entry to an approved set is exactly what they express.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Remote connection describes how someone reaches the environment. It is not a control that filters devices.",
+      "C": "Screened subnets isolate public-facing services from the internal network. They segment rather than authorise specific devices.",
+      "D": "A centralised proxy mediates outbound requests. It governs what devices may reach, not which devices may connect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p339",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0800",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "An organization with an on-site workforce is transitioning to a hybrid remote and on-site work environment. Remote workers will only use organization-provided devices with strict endpoint security. Connection to the organization's network will be restricted to VPN access.\nWhich of the following practices will be most beneficial for the organization when handling sensitive data?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configuring time-of-day restrictions to match on-site working hours"
+      },
+      {
+        "key": "B",
+        "text": "Disabling the use of external USB storage devices"
+      },
+      {
+        "key": "C",
+        "text": "Monitoring host file integrity with endpoint antivirus software"
+      },
+      {
+        "key": "D",
+        "text": "Securing workers' home routers through technical controls"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Every other channel is already controlled — devices are organisation-provided with strict endpoint security, and network access runs through a VPN. The remaining gap is physical: copying sensitive data onto a USB drive bypasses all of it, so disabling external storage closes the one path left open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Time-of-day restrictions limit when people may work. Hybrid working makes rigid hours counterproductive, and they do nothing about data handling.",
+      "C": "Host file integrity monitoring detects changes to system files. That is malware detection, and endpoint security is already described as strict.",
+      "D": "Securing workers' home routers is largely outside the organisation's control, and the VPN already protects traffic crossing those networks."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p340",
+    "needsReview": false,
+    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
