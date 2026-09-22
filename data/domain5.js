@@ -1169,59 +1169,67 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In this scenario, the employee used a form of social engineering by sending a malicious link and persuading the administrator to take unauthorized actions. Training employees to recognize phishing attempts and other social engineering tactics would help them identify and avoid suspicious requests, reducing the likelihood of falling victim to similar threats in the future.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The administrator was manipulated by a malicious link and a persuasive request into making a security change. Training people to recognise phishing — unexpected links, urgency, requests to alter credentials — targets exactly the step where this attack succeeded.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Situational awareness training is broader guidance about being alert to surroundings and context. It is useful but does not teach the specific cues that identify a malicious message.",
+      "C": "Password management covers choosing and storing strong passwords. The password here was changed deliberately by the administrator, not guessed or cracked.",
+      "D": "Reviewing email policies documents what is permitted. A policy nobody applies in the moment would not have stopped the administrator acting on the request."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p70",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0168",
+    "id": "q0170",
     "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following is the primary purpose of a service that tracks log-ins and time spent using the service?",
+    "question": "An IT administrator needs to ensure data retention standards are implemented on an enterprise application.\nWhich of the following describes the administrator's role?",
     "choices": [
       {
         "key": "A",
-        "text": "Availability"
+        "text": "Processor"
       },
       {
         "key": "B",
-        "text": "Accounting"
+        "text": "Custodian"
       },
       {
         "key": "C",
-        "text": "Authentication"
+        "text": "Privacy officer"
       },
       {
         "key": "D",
-        "text": "Authorization"
+        "text": "Owner"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": "Accounting involves tracking and recording user activities, such as log-ins and time spent using a service. This information can be used for auditing, billing, usage analysis, and ensuring compliance with policies. Accounting is one of the components of the AAA model (Authentication, Authorization, and Accounting).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The data custodian implements and operates the controls the owner has specified — configuring retention, backups, storage and access on the systems themselves. An administrator putting retention standards into effect on an application is performing exactly that role.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A processor is a GDPR role for an organisation handling personal data on a controller's behalf. It describes an external party rather than an internal administrator.",
+      "C": "A privacy officer oversees the organisation's privacy programme and compliance. They set direction rather than configuring applications.",
+      "D": "The data owner decides what the retention standards should be. The administrator is carrying out that decision, not making it."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p76",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "SY0-701_en.pdf#p77",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0172",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "A company processes and stores sensitive data on its own systems.\nWhich of the following steps should the company take first to ensure compliance with privacy regulations?",
     "choices": [
@@ -1245,14 +1253,18 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Privacy regulations turn on whether personal data is actually protected. Access controls limit who can reach it and encryption protects it if storage or backups are exposed — these are the baseline technical measures regulators expect, and every other step assumes they exist.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Training matters, but training people to follow protections that have not been implemented yet achieves nothing concrete.",
+      "C": "Incident response and disaster recovery plans prepare for failure. They are required, and they come after the data is actually protected.",
+      "D": "Purchasing security software is a means rather than a step. Buying tools without deciding what access and encryption are needed is starting at the wrong end."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.346,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1283,12 +1295,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An independent audit provides an unbiased assessment of the organization's controls, verifying that they are properly designed and operating effectively. Such audits often result in formal reports, such as SOC (Service Organization Control) reports, which are specifically designed to give assurance to stakeholders regarding the effectiveness of controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An independent audit examines both whether controls are designed appropriately and whether they actually operated over a period, and issues a formal report a third party can rely on. Assurance to outside stakeholders is what distinguishes it from internal testing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Red teaming simulates a determined adversary to test detection and response. It probes specific weaknesses rather than assessing the control set as a whole.",
+      "B": "Penetration testing establishes whether systems can be breached at a point in time. It produces technical findings, not assurance about control design and operation.",
+      "D": "A vulnerability assessment enumerates technical weaknesses. It covers a narrow slice of the controls and offers no independent opinion."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p81",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false

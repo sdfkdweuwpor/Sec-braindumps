@@ -964,12 +964,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Social engineering tactics, such as phishing, are commonly used by attackers to trick individuals into revealing their login credentials. By posing as a trusted entity or creating a fake login page, attackers can harvest usernames and passwords directly from unsuspecting users. This method is highly effective and frequently used for credential harvesting.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Credential harvesting collects usernames and passwords at scale, and the cheapest way to get them is to ask. Social engineering — a phishing email leading to a convincing fake login page — has users type their credentials in voluntarily, with no exploitation required.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Supply chain compromise poisons a trusted vendor to reach many victims. It is powerful but slow, expensive and not the typical route to gathering credentials.",
+      "C": "Third-party software is a category of product rather than an attack method. It can introduce risk but does not itself harvest anything.",
+      "D": "A rainbow table reverses password hashes you already possess. It is a cracking technique applied after a breach, not a way of collecting credentials in the first place."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p72",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1002,12 +1006,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attached information shows that the CPU usage is at 99.6% and memory usage is at 97%.\nThese high levels of resource consumption would lead to slow performance and intermittent issues, triggering an alert due to the server's limited ability to handle additional requests.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CPU near 100% and memory at 97% mean the server has nothing left to serve requests with, which produces exactly the reported symptoms of slowness and intermittent availability. Resource consumption is the indicator those figures represent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Concurrent session usage flags one account signed in from several places at once, which suggests credential sharing or compromise. The metrics shown are about the machine, not accounts.",
+      "B": "Network saturation would show as high interface utilisation or packet loss. The evidence points at CPU and memory, which are host resources.",
+      "C": "Account lockout indicates repeated failed authentication. The file server is responding, just slowly, so authentication is not the issue."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p73",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1040,12 +1048,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Network Access Control (NAC) platforms are primarily used to secure access to the organization's network, typically focusing on wired and wireless connections. By implementing NAC, the administrator can control which devices are allowed to connect to the network and enforce security policies, reducing the risk of unauthorized access via the wired network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Network access control authenticates and posture-checks devices as they connect to the LAN, so an unauthorised or non-compliant machine plugged into a wall port is refused or quarantined. The wired attack surface — someone physically connecting to the network — is what it closes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Bluetooth is a short-range peer-to-peer radio link between devices. NAC governs access to the corporate network, not Bluetooth pairing.",
+      "C": "NFC works at a few centimetres for payments and tap-to-pair. It is not a network admission path NAC controls.",
+      "D": "SCADA is industrial control equipment. NAC may protect the network it sits on, but SCADA is a system category rather than an attack surface NAC addresses."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p74",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1078,51 +1090,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The <script> tags in the code suggest a Cross-Site Scripting (XSS) attack, where malicious scripts are injected into web pages viewed by other users. XSS vulnerabilities allow attackers to execute scripts in the context of a user's browser, which can lead to data theft, session hijacking, and other malicious actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Script tags appearing in application logs mean user input containing executable script reached the application. Cross-site scripting is the vulnerability that lets injected script run in another user's browser, where it can steal sessions or act as that user.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection inserts database syntax such as quotes, UNION or OR clauses. The payload here is JavaScript, which a database would not execute.",
+      "C": "A DDoS attack floods a service with traffic. It shows up as volume, not as a crafted payload in a log entry.",
+      "D": "CSRF tricks an authenticated user's browser into submitting a request they did not intend. It abuses an existing session rather than injecting script."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p75",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0174",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A network administrator wants to ensure that network traffic is highly secure while in transit.\nWhich of the following actions best describes the actions the network administrator should take?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Ensure that NAC is enforced on all network segments, and confirm that firewalls have updated policies to block unauthorized traffic."
-      },
-      {
-        "key": "B",
-        "text": "Ensure only TLS and other encrypted protocols are selected for use on the network, and only permit authorized traffic via secure protocols."
-      },
-      {
-        "key": "C",
-        "text": "Configure the perimeter IPS to block inbound HTTPS directory traversal traffic, and verify that signatures are updated on a daily basis."
-      },
-      {
-        "key": "D",
-        "text": "Ensure the EDR software monitors for unauthorized applications that could be used by threat actors, and configure alerts for the security team. •"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Using TLS and other encrypted protocols ensures that data is securely transmitted, protecting it from interception or eavesdropping. By restricting traffic to secure protocols, the administrator can maintain high security for data in transit across the network. This approach directly addresses securing network traffic rather than focusing solely on perimeter or endpoint security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p79",
-    "needsReview": true,
-    "inferenceConfidence": 0.294,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1154,51 +1132,59 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Memory injection techniques allow attackers to inject malicious code directly into a process's memory space, often bypassing traditional file-based detection methods. By operating in- memory, these exploits can evade detection by the operating system and avoid leaving traces on disk, making them harder for antivirus and other security software to identify.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Memory injection writes malicious code straight into the address space of a running, trusted process. Because nothing is written to disk and the code executes under a legitimate process, file-based scanning and normal operating system controls have nothing to inspect.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Firmware vulnerabilities sit below the operating system and are certainly stealthy, but they are flaws in device code rather than a technique for hiding a running exploit.",
+      "B": "Side loading installs an application from outside the official store. The app is a visible file on the device.",
+      "D": "Encrypted payloads hide the content of a file or transmission from inspection. The payload still has to be decrypted and executed somewhere, which is where detection can occur."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p80",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0179",
+    "id": "q0184",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A malicious insider from the marketing team alters records and transfers company funds to a personal account.\nWhich of the following methods would be the best way to secure company records in the future?",
+    "question": "A security analyst attempts to start a company's database server.\nWhen the server starts, the analyst receives an error message indicating the database server did not pass authentication. After reviewing and testing the system, the analyst receives confirmation that the server has been compromised and that attackers have redirected all outgoing database traffic to a server under their control.\nWhich of the following MITRE ATT&CK techniques did the attacker most likely use to redirect database traffic?",
     "choices": [
       {
         "key": "A",
-        "text": "Permission restrictions"
+        "text": "Browser extension"
       },
       {
         "key": "B",
-        "text": "Hashing"
+        "text": "Process injection"
       },
       {
         "key": "C",
-        "text": "Input validation"
+        "text": "Valid accounts"
       },
       {
         "key": "D",
-        "text": "Access control list"
+        "text": "Escape to host"
       }
     ],
     "correct": [
-      "A"
+      "D"
     ],
-    "explanation": "Implementing strict permission restrictions ensures that users can only access the data and functions necessary for their specific roles. By limiting access rights, the company can reduce the risk of unauthorized modifications by restricting sensitive financial records to only those who absolutely need access. Additionally, permission restrictions allow for better monitoring and control over sensitive data, making it harder for malicious insiders to perform unauthorized actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Escape to host is the ATT&CK technique where an attacker breaks out of a container or virtual machine into the underlying host. From the host they control the networking for everything on it, which is what lets them redirect the database server's outgoing traffic wholesale.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Browser extensions establish persistence and steal data inside a user's browser. A database server does not run one.",
+      "B": "Process injection runs malicious code inside a legitimate process on the same machine. It gains execution but does not by itself reroute a host's outbound traffic.",
+      "C": "Valid accounts means logging in with legitimate credentials. That could be how the attacker arrived, but authentication failed here — the redirection is the technique being asked about."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p81",
-    "needsReview": true,
-    "inferenceConfidence": 0.391,
+    "source": "SY0-701_en.pdf#p83",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },

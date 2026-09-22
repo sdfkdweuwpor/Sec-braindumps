@@ -1162,44 +1162,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0154",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "Which of the following strategies should an organization use to efficiently manage and analyze multiple types of logs?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Deploy a SIEM solution"
-      },
-      {
-        "key": "B",
-        "text": "Create custom scripts to aggregate and analyze logs."
-      },
-      {
-        "key": "C",
-        "text": "Implement EDR technology."
-      },
-      {
-        "key": "D",
-        "text": "Install a unified threat management appliance."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A Security Information and Event Management (SIEM) solution centralizes log collection, aggregation, and analysis from various sources. SIEMs provide real-time monitoring, correlation, and alerting on security events, enabling organizations to efficiently manage and analyze logs from diverse systems in a single platform. This approach is highly effective for identifying security incidents and ensuring compliance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p71",
-    "needsReview": true,
-    "inferenceConfidence": 0.9,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0161",
     "domain": 3,
     "objective": "3.3",
@@ -1227,12 +1189,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data \"in use\" refers to data actively being accessed, processed, or modified by an application or system, such as a database server. This is distinct from data \"at rest,\" which is stored but not actively accessed, and data \"in transit,\" which is being transmitted over a network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data in use is data loaded into memory and being actively read, processed or modified — which is the state of records a database server is currently working on. It is the hardest state to protect, because the data must be in plaintext for the processor to work with it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "At rest means stored and not currently being accessed, such as records sitting in a table on disk between queries.",
+      "C": "In transit means moving across a network, for example the query results travelling back to a client.",
+      "D": "Being hashed is an operation applied to data, not one of the three recognised data states."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p74",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1240,8 +1206,8 @@ export const domain3Questions = [
   {
     "id": "q0162",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following architectures is most suitable to provide redundancy for critical business processes?",
     "choices": [
@@ -1265,51 +1231,59 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Cloud-native architectures are designed with scalability, redundancy, and resilience in mind.\nThey leverage the distributed nature of cloud infrastructure, allowing for automatic failover, load balancing, and redundancy across multiple geographic regions. This ensures high availability and continuous operation for critical business processes, even in the event of hardware or regional failures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cloud-native architectures are built on the assumption that individual components fail. Workloads are distributed, health-checked and replaced automatically across availability zones, so redundancy for critical processes comes from the architecture rather than being bolted on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Network-enabled simply means a system is reachable over a network. It describes connectivity, not resilience.",
+      "B": "Server-side describes where processing happens relative to the client. A single server-side system is a classic single point of failure.",
+      "D": "Multitenant means several customers share one instance. It is an efficiency model, and a shared failure affects every tenant at once."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p74",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0167",
+    "id": "q0174",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "Which of the following provides the best protection against unwanted or insecure communications to and from a device?",
+    "question": "A network administrator wants to ensure that network traffic is highly secure while in transit.\nWhich of the following actions best describes the actions the network administrator should take?",
     "choices": [
       {
         "key": "A",
-        "text": "System hardening"
+        "text": "Ensure that NAC is enforced on all network segments, and confirm that firewalls have updated policies to block unauthorized traffic."
       },
       {
         "key": "B",
-        "text": "Host-based firewall"
+        "text": "Ensure only TLS and other encrypted protocols are selected for use on the network, and only permit authorized traffic via secure protocols."
       },
       {
         "key": "C",
-        "text": "Intrusion detection system"
+        "text": "Configure the perimeter IPS to block inbound HTTPS directory traversal traffic, and verify that signatures are updated on a daily basis."
       },
       {
         "key": "D",
-        "text": "Anti-malware software"
+        "text": "Ensure the EDR software monitors for unauthorized applications that could be used by threat actors, and configure alerts for the security team. •"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": "A host-based firewall monitors and controls incoming and outgoing network traffic on a specific device, based on predetermined security rules. It provides protection by blocking unauthorized or potentially harmful communications, ensuring that only trusted traffic can access the device.\nThis helps prevent both inbound and outbound threats at the device level.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Securing traffic in transit means the data itself must be unreadable on the wire. Restricting the network to TLS and other encrypted protocols, and permitting only those, achieves that directly rather than relying on a boundary device to police plaintext traffic.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NAC and firewall policy control who and what may connect. Permitted traffic still crosses the network in whatever form the application sends it, plaintext included.",
+      "C": "A perimeter IPS blocking directory traversal defends web applications against a specific attack class. It inspects traffic rather than protecting it from interception.",
+      "D": "EDR monitoring for unauthorised applications is endpoint security. It says nothing about whether traffic leaving those endpoints is encrypted."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p76",
-    "needsReview": true,
-    "inferenceConfidence": 0.474,
+    "source": "SY0-701_en.pdf#p79",
+    "needsReview": false,
+    "inferenceConfidence": 0.294,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1341,12 +1315,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SASE combines network and security functions, including VPN, software-based firewalls, secure web gateways, and more, into a single cloud-delivered service. It is well-suited for a fully remote workforce as it provides secure, scalable, and redundant access to company resources from any location, while protecting networks and applications against the latest cyberthreats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SASE delivers networking and security together from the cloud — VPN access, a software firewall, secure web gateway and zero trust access as one service. For a fully remote workforce it provides that stack redundantly from provider points of presence, with no data centre to backhaul through.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS inspects and blocks malicious traffic at a point in the network. It is one control, not an architecture, and it provides no VPN.",
+      "B": "A SIEM aggregates and analyses logs. It is a detection platform and grants no access to anything.",
+      "D": "A CASB governs how users interact with cloud applications, enforcing policy on SaaS use. It is narrower than SASE and includes no VPN or firewall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p79",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1379,12 +1357,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A simulated failover involves switching operations from the primary site to the disaster recovery site, testing the systems, applications, and processes in a real-world scenario. This approach validates that the disaster recovery site can support operations effectively, ensuring both integrity and availability in the event of an actual disaster.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A simulated failover actually moves operations to the recovery site, which proves both that the data there is complete and correct and that the site can carry real load. Nothing short of running on it demonstrates both integrity and availability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A tabletop exercise is a discussion of the plan. It tests understanding and finds procedural gaps, but touches no systems.",
+      "C": "Testing generators validates one component of the site's power. It says nothing about whether applications or data actually work there.",
+      "D": "Developing database encryption requirements is a security design activity. It has no bearing on whether the recovery site functions."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p80",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.44,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1417,12 +1399,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A jump host in a shared services security zone is specifically designed to provide secure access to remote environments, such as a cloud environment, while ensuring that access is monitored and controlled. This setup facilitates remote administration by providing a dedicated entry point, allowing administrators to access sensitive network areas through a secure, segmented pathway. This setup minimizes direct exposure to the cloud environment and enhances security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump host is a single hardened, monitored system that administrators connect to first and administer the environment from. Placing it in a shared services zone funnels all administrative access through one controlled, logged choke point instead of exposing management interfaces broadly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An SSH server inside the corporate LAN gives a way in but is not a controlled administrative gateway, and it puts the entry point on the wrong side of the boundary.",
+      "C": "A reverse proxy publishes internal web services to external users. It is for application traffic, not interactive administration.",
+      "D": "MDM with conditional access manages endpoints and the conditions under which they connect. It governs the device, not the administrative path into the cloud environment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p81",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1455,13 +1441,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data sovereignty refers to the concept that data stored outside its country of origin is still subject to the laws and regulations of that original country. This means that, regardless of where the data is physically stored, it remains governed by the legal requirements and privacy standards of its originating country. This concept is essential for ensuring that data complies with national regulations, even in cross-border storage scenarios.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data sovereignty is the principle that data remains subject to the laws of the country it originated in, no matter where it is physically stored. It is why hosting EU personal data abroad does not release you from EU obligations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Geolocation is simply the physical location of a device or data. It is a fact about where something is, not a legal principle.",
+      "C": "Intellectual property is a category of protected creations such as patents and trade secrets. It concerns ownership rather than jurisdiction.",
+      "D": "Geographic restrictions are controls that block access from certain locations. They are a mechanism you might use to satisfy sovereignty requirements, not the concept itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p82",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0183",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "An audit reveals that cardholder database logs are exposing account numbers inappropriately.\nWhich of the following mechanisms would help limit the impact of this error?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Segmentation"
+      },
+      {
+        "key": "B",
+        "text": "Hashing"
+      },
+      {
+        "key": "C",
+        "text": "Journaling"
+      },
+      {
+        "key": "D",
+        "text": "Masking"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Masking replaces most of the account number with placeholder characters, leaving only enough to identify the record. The log stays useful for troubleshooting while the full number is no longer exposed, which limits the impact of logs being read by the wrong people.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Segmentation restricts who can reach the system holding the logs. It reduces who is exposed without fixing the fact that full numbers are written down.",
+      "B": "Hashing is irreversible, which breaks the log's usefulness, and card numbers are short enough to be recovered from a hash by brute force.",
+      "C": "Journaling records changes for recovery and audit. It is a logging technique, and applying it here would write even more data."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p82",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },

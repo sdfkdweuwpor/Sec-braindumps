@@ -1,14 +1,11 @@
 # Questions with no explanation in the source PDF
 
-21 of 974 extracted questions.
+18 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0172 | 5 | 5.1 | A company processes and stores sensitive data on its own systems. Which of the following steps should the comp |
-| q0173 | 1 | 1.4 | Which of the following cryptographic methods is preferred for securing communications with limited computing r |
-| q0184 | 4 | 4.4 | A security analyst attempts to start a company's database server. When the server starts, the analyst receives |
 | q0199 | 2 | 2.3 | During a SQL update of a database, a temporary field that was created was replaced by an attacker in order to  |
 | q0220 | 4 | 4.3 | A company discovered its data was advertised for sale on the dark web. During the initial investigation, the c |
 | q0221 | 3 | 3.4 | Which of the following would be the best solution to deploy a low-cost standby site that includes hardware and |

@@ -1943,13 +1943,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Input sanitization ensures that any user-supplied data is properly filtered and cleaned before being processed by the application. By sanitizing inputs, the system can prevent malicious command injection attempts like the one shown in the log entry.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Injection attacks work because user-supplied text reaches an interpreter as code rather than data. Input sanitisation filters and neutralises dangerous characters before the application processes them, which removes the mechanism the attack depends on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Secure cookies protect session tokens from theft over insecure channels or by script. They defend the session, not the input-handling path an injection travels down.",
+      "C": "Static code analysis finds flaws by reading source during development. It can help you discover the bug, but it is not a control running in production that blocks the attack.",
+      "D": "Sandboxing confines a process so damage is contained if it is compromised. It limits blast radius rather than preventing the injection itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p69",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.609,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0154",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "Which of the following strategies should an organization use to efficiently manage and analyze multiple types of logs?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Deploy a SIEM solution"
+      },
+      {
+        "key": "B",
+        "text": "Create custom scripts to aggregate and analyze logs."
+      },
+      {
+        "key": "C",
+        "text": "Implement EDR technology."
+      },
+      {
+        "key": "D",
+        "text": "Install a unified threat management appliance."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A SIEM ingests logs from many different sources, normalises their formats, and correlates events across them, then alerts on what matters. Managing and analysing multiple log types in one place is the purpose it was built for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Custom scripts can aggregate logs but become an unmaintained burden, and they lack correlation, alerting and retention features the team would have to build themselves.",
+      "C": "EDR watches endpoint behaviour in depth. It is a rich log source that feeds a SIEM rather than a platform for analysing every other type of log.",
+      "D": "A UTM appliance bundles firewall, antivirus and filtering at a boundary. It generates logs; it does not centralise everyone else's."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p71",
+    "needsReview": false,
+    "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1981,12 +2027,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "OAuth is designed for authorization rather than authentication. It uses access tokens to grant applications permission to access resources on behalf of a user, focusing on what the application can do with the user's data rather than verifying the user's identity. This makes OAuth a suitable choice for Single Sign-On (SSO) when the focus is on application authorization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "OAuth is an authorisation framework, not an authentication one. It issues access tokens that let an application act on a resource within a defined scope, which is precisely the stated requirement of focusing on application authorisation rather than verifying the user.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "LDAP is a directory protocol for looking up and authenticating against directory objects. It is about identity storage, not token-based authorisation.",
+      "B": "Federation is the general concept of trusting identities across organisational boundaries. OAuth is a specific mechanism; federation names the pattern.",
+      "C": "SAML exchanges authentication assertions between an identity provider and a service provider. It is authentication-centric, which is the opposite of the requirement."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p72",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2019,12 +2069,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "By automating repetitive tasks and orchestrating responses to common security incidents, the SIEM can handle more work without requiring additional personnel. This enhancement allows the security team to be more efficient, respond faster, and focus on more complex tasks, effectively multiplying the impact of the existing workforce.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Automation lets the same team handle far more work, because repetitive triage and response steps run without a person. That is the workforce multiplier effect — output rises without headcount, freeing analysts for the judgement-heavy cases.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Increased complexity is a real cost of automation, listed among the considerations rather than the benefits.",
+      "B": "Removing technical debt is not something automation does on its own. Poorly built automation is a common way to create technical debt.",
+      "C": "Guard rails are a use case for automation in provisioning, keeping configurations inside safe bounds. They are one application, not the primary benefit of automating SIEM response."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p73",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2057,12 +2111,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An agent-based web filtering solution installs a software agent directly on the laptops. This approach allows the filtering to work regardless of the device's location (in or out of the office) without requiring additional network configuration. The agent enforces web filtering policies locally on each laptop, ensuring consistent protection across various network environments.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An agent installed on the laptop enforces filtering policy locally, so it applies identically in the office, at home or on hotel Wi-Fi. Because the decision happens on the device, nothing has to be routed back through the corporate network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A centralised proxy only filters traffic that reaches it, which means backhauling remote users over a VPN — exactly the additional network access the company wants to avoid.",
+      "C": "URL scanning is a technique a filter uses to judge a destination. It is a capability, not a deployment model.",
+      "D": "Content categorisation likewise describes how sites are classified. It tells the filter what to block, not where the filter runs."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p75",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2070,8 +2128,8 @@ export const domain4Questions = [
   {
     "id": "q0166",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following should be used to aggregate log data in order to create alerts and detect anomalous activity?",
     "choices": [
@@ -2095,13 +2153,101 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A SIEM solution collects and aggregates log data from various sources across the network, enabling real-time monitoring, correlation, and alerting on security events. It is designed to detect anomalous activity and provide insights into potential security incidents by analyzing patterns and behaviors across the log data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A SIEM is purpose-built for this chain: collect logs from many sources, normalise and aggregate them, correlate across them, and raise alerts when patterns look anomalous. The question describes its core function end to end.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A WAF inspects and blocks malicious HTTP requests to a web application. It produces logs rather than aggregating everyone else's.",
+      "C": "Network taps copy traffic from a link so tools can inspect it. They are a collection mechanism with no analysis capability.",
+      "D": "An IDS detects suspicious network activity and alerts on it. It watches one data type and feeds the SIEM rather than aggregating across sources."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p76",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0167",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "Which of the following provides the best protection against unwanted or insecure communications to and from a device?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "System hardening"
+      },
+      {
+        "key": "B",
+        "text": "Host-based firewall"
+      },
+      {
+        "key": "C",
+        "text": "Intrusion detection system"
+      },
+      {
+        "key": "D",
+        "text": "Anti-malware software"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A host-based firewall sits on the device and applies rules to traffic in both directions, so it can block unwanted inbound connections and stop the device initiating unwanted outbound ones. The question asks about communications to and from a device, which is bidirectional control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "System hardening reduces the attack surface by disabling services and tightening configuration. It is broader and largely preventive, but it does not filter traffic on an ongoing basis.",
+      "C": "An intrusion detection system alerts on suspicious activity without blocking it. Detection is not protection.",
+      "D": "Anti-malware software identifies and removes malicious files. It addresses what runs on the device, not which communications are allowed."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p76",
+    "needsReview": false,
+    "inferenceConfidence": 0.474,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0168",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Which of the following is the primary purpose of a service that tracks log-ins and time spent using the service?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Availability"
+      },
+      {
+        "key": "B",
+        "text": "Accounting"
+      },
+      {
+        "key": "C",
+        "text": "Authentication"
+      },
+      {
+        "key": "D",
+        "text": "Authorization"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Accounting is the third element of AAA: recording what an authenticated, authorised user actually did. Tracking log-ins and session duration is accounting data, used for auditing, billing and usage analysis.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Availability means a service is reachable when needed. It is a CIA-triad goal rather than a function that records activity.",
+      "C": "Authentication proves who someone is at the point of access. It happens at log-in but does not track what follows.",
+      "D": "Authorisation decides what an authenticated user may do. It grants or denies rather than recording."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p76",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2133,51 +2279,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MDM allows an organization to remotely manage, monitor, and secure mobile devices used by employees, especially when they contain company data. With MDM, administrators can enforce security policies, remotely lock or wipe lost or stolen devices, and ensure compliance with data protection policies, thereby mitigating the risk of data loss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management enrols company devices under central control, so policy can require encryption and a passcode, and a lost handset can be located, locked or wiped remotely. That combination is what prevents the next lost device becoming a data loss.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "DLP inspects data leaving the organisation through email, uploads or removable media. A device physically walking away never passes through it.",
+      "C": "Full disk encryption protects the data at rest and is genuinely important — but it is one control that MDM enforces, alongside remote wipe and passcode policy.",
+      "D": "EDR detects and responds to malicious activity on a device. A lost phone is not a malware incident."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p77",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0170",
-    "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
-    "type": "single",
-    "question": "An IT administrator needs to ensure data retention standards are implemented on an enterprise application.\nWhich of the following describes the administrator's role?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Processor"
-      },
-      {
-        "key": "B",
-        "text": "Custodian"
-      },
-      {
-        "key": "C",
-        "text": "Privacy officer"
-      },
-      {
-        "key": "D",
-        "text": "Owner"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A custodian is responsible for the implementation and enforcement of data management policies, including data retention standards, on systems and applications. Custodians manage the technical aspects of data storage and maintenance according to the organization's policies and standards, supporting the data owner's requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p77",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2218,12 +2330,17 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "DLP (Data Loss Prevention) software: DLP helps prevent users from sending sensitive data over corporate email by monitoring and controlling the flow of sensitive information. DNS filtering: DNS filtering restricts access to potentially harmful websites by blocking access to sites based on their domain names, helping to protect users from malicious or inappropriate content.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two requirements need two controls. DLP inspects outbound email for sensitive content and blocks or quarantines it. DNS filtering refuses to resolve known-harmful domains, so users cannot reach those sites regardless of how they arrive at the link.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "File integrity monitoring alerts when protected files change unexpectedly. It watches the filesystem, not email or web access.",
+      "D": "A stateful firewall tracks connections and filters by address and port. It cannot tell sensitive data from ordinary data inside an allowed email flow.",
+      "E": "Guardrails constrain automated provisioning so infrastructure stays inside safe bounds. They apply to deployment pipelines, not user traffic.",
+      "F": "Antivirus signatures identify known malicious files. They would catch an infected attachment but not a deliberate send of sensitive data."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.565,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2256,52 +2373,60 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Log correlation involves analyzing and linking data from multiple sources to identify patterns, trends, or sequences of events that indicate potential security incidents or malicious activity.\nThis process helps security teams detect complex threats that may not be evident from individual logs alone.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Correlation is the analytical step: taking events that are unremarkable on their own and finding the relationships between them that reveal an attack. A failed login here and an outbound connection there mean little separately, and a great deal together.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Combining logs from multiple sources into one location is aggregation. It is the prerequisite for correlation, not correlation itself.",
+      "C": "Making a record of events is logging. That is the raw material.",
+      "D": "Analysing the log files of system components is log analysis in general. Correlation is specifically about relationships across sources, not examination of one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p79",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0184",
+    "id": "q0179",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security analyst attempts to start a company's database server.\nWhen the server starts, the analyst receives an error message indicating the database server did not pass authentication. After reviewing and testing the system, the analyst receives confirmation that the server has been compromised and that attackers have redirected all outgoing database traffic to a server under their control.\nWhich of the following MITRE ATT&CK techniques did the attacker most likely use to redirect database traffic?",
+    "question": "A malicious insider from the marketing team alters records and transfers company funds to a personal account.\nWhich of the following methods would be the best way to secure company records in the future?",
     "choices": [
       {
         "key": "A",
-        "text": "Browser extension"
+        "text": "Permission restrictions"
       },
       {
         "key": "B",
-        "text": "Process injection"
+        "text": "Hashing"
       },
       {
         "key": "C",
-        "text": "Valid accounts"
+        "text": "Input validation"
       },
       {
         "key": "D",
-        "text": "Escape to host"
+        "text": "Access control list"
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The insider had access they did not need in order to do their job. Permission restrictions grant each role only the rights required, so a marketing account simply cannot alter financial records or move funds — removing the capability rather than trying to detect its misuse.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Hashing would reveal that records had been altered after the fact. Detection is valuable but the alteration and transfer still happen.",
+      "C": "Input validation rejects malformed data submitted to an application. The insider entered perfectly valid data through a legitimate interface.",
+      "D": "An access control list is a mechanism for expressing permissions, usually on a file or network resource. Permission restrictions is the broader control that covers application-level rights, which is what was abused."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p83",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "source": "SY0-701_en.pdf#p81",
+    "needsReview": false,
+    "inferenceConfidence": 0.391,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

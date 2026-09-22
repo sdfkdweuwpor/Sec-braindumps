@@ -1177,12 +1177,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "If the certificate is not trusted, it's often because the root certificate (or intermediate certificate) from the issuing Certificate Authority (CA) is not installed or not recognized by the system. The root certificate verifies the chain of trust, and without it, the SSL certificate may not be trusted by the system or browser. Installing the root and any necessary intermediate certificates should resolve the trust issue.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Trust in a certificate comes from the chain leading back to a root the system already trusts. The CA and private key check out, so the remaining break is a missing root or intermediate certificate in the system's trust store — install the chain and the error clears.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wildcard certificate covers subdomains of one domain. Missing wildcard coverage produces a name-mismatch error, which is a different failure from 'not trusted'.",
+      "B": "The certificate signing request matters only while requesting the certificate. Once the CA has issued it, the CSR plays no part in validation.",
+      "D": "The public key is embedded in the certificate itself. It is not configured separately, and a mismatch there would have failed the private-key check already done."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p70",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1215,12 +1219,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A gap analysis will help the company identify the differences between its current security practices and the requirements of the new regulation. This analysis provides a clear understanding of what needs to be addressed to achieve compliance, allowing the company to prioritize and implement necessary changes before the regulation takes effect.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A gap analysis compares where the organisation is today against where the regulation requires it to be, producing a concrete list of shortfalls. Until that comparison exists there is no basis for deciding what to change or in what order.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A policy review examines existing documents. It is one input to the gap analysis rather than a substitute, and it misses gaps in practice as opposed to paperwork.",
+      "C": "Evaluating security procedures likewise assesses one slice of the estate. The regulation may demand things no current procedure touches at all.",
+      "D": "Threat scope reduction is a zero trust concept about limiting what a compromised identity can reach. It is unrelated to compliance planning."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p71",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1253,12 +1261,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Encrypting the data ensures that it remains confidential and protected from unauthorized access during transfer. Standard FTP does not provide secure transmission, so adding encryption—such as using FTPS (FTP Secure) or SFTP (SSH File Transfer Protocol)— will safeguard the data by making it unreadable to anyone intercepting the transfer.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Plain FTP sends both credentials and file contents in cleartext, so anyone on the path can read them. Encryption — using FTPS or SFTP instead — makes the transferred data unreadable to an interceptor, which is what protecting confidentiality in transit requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
+      "B": "Data masking hides portions of a value for display. The bank requires complete information to process it.",
+      "D": "Obfuscation makes data harder to read without providing genuine cryptographic protection. A capable interceptor reverses it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p71",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1291,51 +1303,17 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Symmetric encryption uses one shared key and comparatively simple operations, so it runs far faster and with much less memory and power than asymmetric alternatives. Where computing resources are limited, that efficiency is what makes it the preferred choice for bulk communication.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A hashing algorithm produces a one-way digest. It verifies integrity but cannot secure a communication, because nothing can be recovered from a hash.",
+      "B": "Public key infrastructure is the whole framework of certificates, authorities and revocation. It is heavyweight in both computation and management.",
+      "D": "Elliptic curve cryptography is the efficient choice among asymmetric algorithms, and it is genuinely used on constrained devices — but it remains asymmetric and so is still far costlier per byte than symmetric encryption."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0183",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "An audit reveals that cardholder database logs are exposing account numbers inappropriately.\nWhich of the following mechanisms would help limit the impact of this error?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Segmentation"
-      },
-      {
-        "key": "B",
-        "text": "Hashing"
-      },
-      {
-        "key": "C",
-        "text": "Journaling"
-      },
-      {
-        "key": "D",
-        "text": "Masking"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Masking is a technique used to obscure sensitive data, such as account numbers, in order to prevent unauthorized access to the full details. By applying masking to the cardholder data in the logs, only part of the account number would be visible, limiting the exposure of sensitive information and thus reducing the potential impact of the error. This approach allows for secure handling of data in scenarios where the information needs to be referenced but not fully exposed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p82",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },

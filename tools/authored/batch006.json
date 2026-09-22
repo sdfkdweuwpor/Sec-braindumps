@@ -1,0 +1,240 @@
+{
+"q0151": {"objective":"4.1",
+ "explanation":"Injection attacks work because user-supplied text reaches an interpreter as code rather than data. Input sanitisation filters and neutralises dangerous characters before the application processes them, which removes the mechanism the attack depends on.",
+ "incorrect":{
+  "B":"Secure cookies protect session tokens from theft over insecure channels or by script. They defend the session, not the input-handling path an injection travels down.",
+  "C":"Static code analysis finds flaws by reading source during development. It can help you discover the bug, but it is not a control running in production that blocks the attack.",
+  "D":"Sandboxing confines a process so damage is contained if it is compromised. It limits blast radius rather than preventing the injection itself."}},
+
+"q0152": {"objective":"1.4",
+ "explanation":"Trust in a certificate comes from the chain leading back to a root the system already trusts. The CA and private key check out, so the remaining break is a missing root or intermediate certificate in the system's trust store — install the chain and the error clears.",
+ "incorrect":{
+  "A":"A wildcard certificate covers subdomains of one domain. Missing wildcard coverage produces a name-mismatch error, which is a different failure from 'not trusted'.",
+  "B":"The certificate signing request matters only while requesting the certificate. Once the CA has issued it, the CSR plays no part in validation.",
+  "D":"The public key is embedded in the certificate itself. It is not configured separately, and a mismatch there would have failed the private-key check already done."}},
+
+"q0153": {"objective":"5.6",
+ "explanation":"The administrator was manipulated by a malicious link and a persuasive request into making a security change. Training people to recognise phishing — unexpected links, urgency, requests to alter credentials — targets exactly the step where this attack succeeded.",
+ "incorrect":{
+  "B":"Situational awareness training is broader guidance about being alert to surroundings and context. It is useful but does not teach the specific cues that identify a malicious message.",
+  "C":"Password management covers choosing and storing strong passwords. The password here was changed deliberately by the administrator, not guessed or cracked.",
+  "D":"Reviewing email policies documents what is permitted. A policy nobody applies in the moment would not have stopped the administrator acting on the request."}},
+
+"q0154": {"objective":"4.4",
+ "explanation":"A SIEM ingests logs from many different sources, normalises their formats, and correlates events across them, then alerts on what matters. Managing and analysing multiple log types in one place is the purpose it was built for.",
+ "incorrect":{
+  "B":"Custom scripts can aggregate logs but become an unmaintained burden, and they lack correlation, alerting and retention features the team would have to build themselves.",
+  "C":"EDR watches endpoint behaviour in depth. It is a rich log source that feeds a SIEM rather than a platform for analysing every other type of log.",
+  "D":"A UTM appliance bundles firewall, antivirus and filtering at a boundary. It generates logs; it does not centralise everyone else's."}},
+
+"q0155": {"objective":"1.2",
+ "explanation":"A gap analysis compares where the organisation is today against where the regulation requires it to be, producing a concrete list of shortfalls. Until that comparison exists there is no basis for deciding what to change or in what order.",
+ "incorrect":{
+  "B":"A policy review examines existing documents. It is one input to the gap analysis rather than a substitute, and it misses gaps in practice as opposed to paperwork.",
+  "C":"Evaluating security procedures likewise assesses one slice of the estate. The regulation may demand things no current procedure touches at all.",
+  "D":"Threat scope reduction is a zero trust concept about limiting what a compromised identity can reach. It is unrelated to compliance planning."}},
+
+"q0156": {"objective":"1.4",
+ "explanation":"Plain FTP sends both credentials and file contents in cleartext, so anyone on the path can read them. Encryption — using FTPS or SFTP instead — makes the transferred data unreadable to an interceptor, which is what protecting confidentiality in transit requires.",
+ "incorrect":{
+  "A":"Tokenisation substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
+  "B":"Data masking hides portions of a value for display. The bank requires complete information to process it.",
+  "D":"Obfuscation makes data harder to read without providing genuine cryptographic protection. A capable interceptor reverses it."}},
+
+"q0157": {"objective":"4.6",
+ "explanation":"OAuth is an authorisation framework, not an authentication one. It issues access tokens that let an application act on a resource within a defined scope, which is precisely the stated requirement of focusing on application authorisation rather than verifying the user.",
+ "incorrect":{
+  "A":"LDAP is a directory protocol for looking up and authenticating against directory objects. It is about identity storage, not token-based authorisation.",
+  "B":"Federation is the general concept of trusting identities across organisational boundaries. OAuth is a specific mechanism; federation names the pattern.",
+  "C":"SAML exchanges authentication assertions between an identity provider and a service provider. It is authentication-centric, which is the opposite of the requirement."}},
+
+"q0158": {"objective":"2.2",
+ "explanation":"Credential harvesting collects usernames and passwords at scale, and the cheapest way to get them is to ask. Social engineering — a phishing email leading to a convincing fake login page — has users type their credentials in voluntarily, with no exploitation required.",
+ "incorrect":{
+  "B":"Supply chain compromise poisons a trusted vendor to reach many victims. It is powerful but slow, expensive and not the typical route to gathering credentials.",
+  "C":"Third-party software is a category of product rather than an attack method. It can introduce risk but does not itself harvest anything.",
+  "D":"A rainbow table reverses password hashes you already possess. It is a cracking technique applied after a breach, not a way of collecting credentials in the first place."}},
+
+"q0159": {"objective":"4.7",
+ "explanation":"Automation lets the same team handle far more work, because repetitive triage and response steps run without a person. That is the workforce multiplier effect — output rises without headcount, freeing analysts for the judgement-heavy cases.",
+ "incorrect":{
+  "A":"Increased complexity is a real cost of automation, listed among the considerations rather than the benefits.",
+  "B":"Removing technical debt is not something automation does on its own. Poorly built automation is a common way to create technical debt.",
+  "C":"Guard rails are a use case for automation in provisioning, keeping configurations inside safe bounds. They are one application, not the primary benefit of automating SIEM response."}},
+
+"q0160": {"objective":"2.4",
+ "explanation":"CPU near 100% and memory at 97% mean the server has nothing left to serve requests with, which produces exactly the reported symptoms of slowness and intermittent availability. Resource consumption is the indicator those figures represent.",
+ "incorrect":{
+  "A":"Concurrent session usage flags one account signed in from several places at once, which suggests credential sharing or compromise. The metrics shown are about the machine, not accounts.",
+  "B":"Network saturation would show as high interface utilisation or packet loss. The evidence points at CPU and memory, which are host resources.",
+  "C":"Account lockout indicates repeated failed authentication. The file server is responding, just slowly, so authentication is not the issue."}},
+
+"q0161": {"objective":"3.3",
+ "explanation":"Data in use is data loaded into memory and being actively read, processed or modified — which is the state of records a database server is currently working on. It is the hardest state to protect, because the data must be in plaintext for the processor to work with it.",
+ "incorrect":{
+  "B":"At rest means stored and not currently being accessed, such as records sitting in a table on disk between queries.",
+  "C":"In transit means moving across a network, for example the query results travelling back to a client.",
+  "D":"Being hashed is an operation applied to data, not one of the three recognised data states."}},
+
+"q0162": {"objective":"3.1",
+ "explanation":"Cloud-native architectures are built on the assumption that individual components fail. Workloads are distributed, health-checked and replaced automatically across availability zones, so redundancy for critical processes comes from the architecture rather than being bolted on.",
+ "incorrect":{
+  "A":"Network-enabled simply means a system is reachable over a network. It describes connectivity, not resilience.",
+  "B":"Server-side describes where processing happens relative to the client. A single server-side system is a classic single point of failure.",
+  "D":"Multitenant means several customers share one instance. It is an efficiency model, and a shared failure affects every tenant at once."}},
+
+"q0163": {"objective":"2.2",
+ "explanation":"Network access control authenticates and posture-checks devices as they connect to the LAN, so an unauthorised or non-compliant machine plugged into a wall port is refused or quarantined. The wired attack surface — someone physically connecting to the network — is what it closes.",
+ "incorrect":{
+  "A":"Bluetooth is a short-range peer-to-peer radio link between devices. NAC governs access to the corporate network, not Bluetooth pairing.",
+  "C":"NFC works at a few centimetres for payments and tap-to-pair. It is not a network admission path NAC controls.",
+  "D":"SCADA is industrial control equipment. NAC may protect the network it sits on, but SCADA is a system category rather than an attack surface NAC addresses."}},
+
+"q0164": {"objective":"2.3",
+ "explanation":"Script tags appearing in application logs mean user input containing executable script reached the application. Cross-site scripting is the vulnerability that lets injected script run in another user's browser, where it can steal sessions or act as that user.",
+ "incorrect":{
+  "B":"SQL injection inserts database syntax such as quotes, UNION or OR clauses. The payload here is JavaScript, which a database would not execute.",
+  "C":"A DDoS attack floods a service with traffic. It shows up as volume, not as a crafted payload in a log entry.",
+  "D":"CSRF tricks an authenticated user's browser into submitting a request they did not intend. It abuses an existing session rather than injecting script."}},
+
+"q0165": {"objective":"4.5",
+ "explanation":"An agent installed on the laptop enforces filtering policy locally, so it applies identically in the office, at home or on hotel Wi-Fi. Because the decision happens on the device, nothing has to be routed back through the corporate network.",
+ "incorrect":{
+  "B":"A centralised proxy only filters traffic that reaches it, which means backhauling remote users over a VPN — exactly the additional network access the company wants to avoid.",
+  "C":"URL scanning is a technique a filter uses to judge a destination. It is a capability, not a deployment model.",
+  "D":"Content categorisation likewise describes how sites are classified. It tells the filter what to block, not where the filter runs."}},
+
+"q0166": {"objective":"4.4",
+ "explanation":"A SIEM is purpose-built for this chain: collect logs from many sources, normalise and aggregate them, correlate across them, and raise alerts when patterns look anomalous. The question describes its core function end to end.",
+ "incorrect":{
+  "B":"A WAF inspects and blocks malicious HTTP requests to a web application. It produces logs rather than aggregating everyone else's.",
+  "C":"Network taps copy traffic from a link so tools can inspect it. They are a collection mechanism with no analysis capability.",
+  "D":"An IDS detects suspicious network activity and alerts on it. It watches one data type and feeds the SIEM rather than aggregating across sources."}},
+
+"q0167": {"objective":"4.5",
+ "explanation":"A host-based firewall sits on the device and applies rules to traffic in both directions, so it can block unwanted inbound connections and stop the device initiating unwanted outbound ones. The question asks about communications to and from a device, which is bidirectional control.",
+ "incorrect":{
+  "A":"System hardening reduces the attack surface by disabling services and tightening configuration. It is broader and largely preventive, but it does not filter traffic on an ongoing basis.",
+  "C":"An intrusion detection system alerts on suspicious activity without blocking it. Detection is not protection.",
+  "D":"Anti-malware software identifies and removes malicious files. It addresses what runs on the device, not which communications are allowed."}},
+
+"q0168": {"objective":"4.6",
+ "explanation":"Accounting is the third element of AAA: recording what an authenticated, authorised user actually did. Tracking log-ins and session duration is accounting data, used for auditing, billing and usage analysis.",
+ "incorrect":{
+  "A":"Availability means a service is reachable when needed. It is a CIA-triad goal rather than a function that records activity.",
+  "C":"Authentication proves who someone is at the point of access. It happens at log-in but does not track what follows.",
+  "D":"Authorisation decides what an authenticated user may do. It grants or denies rather than recording."}},
+
+"q0169": {"objective":"4.1",
+ "explanation":"Mobile device management enrols company devices under central control, so policy can require encryption and a passcode, and a lost handset can be located, locked or wiped remotely. That combination is what prevents the next lost device becoming a data loss.",
+ "incorrect":{
+  "B":"DLP inspects data leaving the organisation through email, uploads or removable media. A device physically walking away never passes through it.",
+  "C":"Full disk encryption protects the data at rest and is genuinely important — but it is one control that MDM enforces, alongside remote wipe and passcode policy.",
+  "D":"EDR detects and responds to malicious activity on a device. A lost phone is not a malware incident."}},
+
+"q0170": {"objective":"5.1",
+ "explanation":"The data custodian implements and operates the controls the owner has specified — configuring retention, backups, storage and access on the systems themselves. An administrator putting retention standards into effect on an application is performing exactly that role.",
+ "incorrect":{
+  "A":"A processor is a GDPR role for an organisation handling personal data on a controller's behalf. It describes an external party rather than an internal administrator.",
+  "C":"A privacy officer oversees the organisation's privacy programme and compliance. They set direction rather than configuring applications.",
+  "D":"The data owner decides what the retention standards should be. The administrator is carrying out that decision, not making it."}},
+
+"q0171": {"objective":"4.5",
+ "explanation":"Two requirements need two controls. DLP inspects outbound email for sensitive content and blocks or quarantines it. DNS filtering refuses to resolve known-harmful domains, so users cannot reach those sites regardless of how they arrive at the link.",
+ "incorrect":{
+  "C":"File integrity monitoring alerts when protected files change unexpectedly. It watches the filesystem, not email or web access.",
+  "D":"A stateful firewall tracks connections and filters by address and port. It cannot tell sensitive data from ordinary data inside an allowed email flow.",
+  "E":"Guardrails constrain automated provisioning so infrastructure stays inside safe bounds. They apply to deployment pipelines, not user traffic.",
+  "F":"Antivirus signatures identify known malicious files. They would catch an infected attachment but not a deliberate send of sensitive data."}},
+
+"q0172": {"objective":"5.4",
+ "explanation":"Privacy regulations turn on whether personal data is actually protected. Access controls limit who can reach it and encryption protects it if storage or backups are exposed — these are the baseline technical measures regulators expect, and every other step assumes they exist.",
+ "incorrect":{
+  "B":"Training matters, but training people to follow protections that have not been implemented yet achieves nothing concrete.",
+  "C":"Incident response and disaster recovery plans prepare for failure. They are required, and they come after the data is actually protected.",
+  "D":"Purchasing security software is a means rather than a step. Buying tools without deciding what access and encryption are needed is starting at the wrong end."}},
+
+"q0173": {"objective":"1.4",
+ "explanation":"Symmetric encryption uses one shared key and comparatively simple operations, so it runs far faster and with much less memory and power than asymmetric alternatives. Where computing resources are limited, that efficiency is what makes it the preferred choice for bulk communication.",
+ "incorrect":{
+  "A":"A hashing algorithm produces a one-way digest. It verifies integrity but cannot secure a communication, because nothing can be recovered from a hash.",
+  "B":"Public key infrastructure is the whole framework of certificates, authorities and revocation. It is heavyweight in both computation and management.",
+  "D":"Elliptic curve cryptography is the efficient choice among asymmetric algorithms, and it is genuinely used on constrained devices — but it remains asymmetric and so is still far costlier per byte than symmetric encryption."}},
+
+"q0174": {"objective":"3.3",
+ "explanation":"Securing traffic in transit means the data itself must be unreadable on the wire. Restricting the network to TLS and other encrypted protocols, and permitting only those, achieves that directly rather than relying on a boundary device to police plaintext traffic.",
+ "incorrect":{
+  "A":"NAC and firewall policy control who and what may connect. Permitted traffic still crosses the network in whatever form the application sends it, plaintext included.",
+  "C":"A perimeter IPS blocking directory traversal defends web applications against a specific attack class. It inspects traffic rather than protecting it from interception.",
+  "D":"EDR monitoring for unauthorised applications is endpoint security. It says nothing about whether traffic leaving those endpoints is encrypted."}},
+
+"q0175": {"objective":"4.9",
+ "explanation":"Correlation is the analytical step: taking events that are unremarkable on their own and finding the relationships between them that reveal an attack. A failed login here and an outbound connection there mean little separately, and a great deal together.",
+ "incorrect":{
+  "A":"Combining logs from multiple sources into one location is aggregation. It is the prerequisite for correlation, not correlation itself.",
+  "C":"Making a record of events is logging. That is the raw material.",
+  "D":"Analysing the log files of system components is log analysis in general. Correlation is specifically about relationships across sources, not examination of one."}},
+
+"q0176": {"objective":"3.2",
+ "explanation":"SASE delivers networking and security together from the cloud — VPN access, a software firewall, secure web gateway and zero trust access as one service. For a fully remote workforce it provides that stack redundantly from provider points of presence, with no data centre to backhaul through.",
+ "incorrect":{
+  "A":"An IPS inspects and blocks malicious traffic at a point in the network. It is one control, not an architecture, and it provides no VPN.",
+  "B":"A SIEM aggregates and analyses logs. It is a detection platform and grants no access to anything.",
+  "D":"A CASB governs how users interact with cloud applications, enforcing policy on SaaS use. It is narrower than SASE and includes no VPN or firewall."}},
+
+"q0177": {"objective":"3.4",
+ "explanation":"A simulated failover actually moves operations to the recovery site, which proves both that the data there is complete and correct and that the site can carry real load. Nothing short of running on it demonstrates both integrity and availability.",
+ "incorrect":{
+  "B":"A tabletop exercise is a discussion of the plan. It tests understanding and finds procedural gaps, but touches no systems.",
+  "C":"Testing generators validates one component of the site's power. It says nothing about whether applications or data actually work there.",
+  "D":"Developing database encryption requirements is a security design activity. It has no bearing on whether the recovery site functions."}},
+
+"q0178": {"objective":"2.3",
+ "explanation":"Memory injection writes malicious code straight into the address space of a running, trusted process. Because nothing is written to disk and the code executes under a legitimate process, file-based scanning and normal operating system controls have nothing to inspect.",
+ "incorrect":{
+  "A":"Firmware vulnerabilities sit below the operating system and are certainly stealthy, but they are flaws in device code rather than a technique for hiding a running exploit.",
+  "B":"Side loading installs an application from outside the official store. The app is a visible file on the device.",
+  "D":"Encrypted payloads hide the content of a file or transmission from inspection. The payload still has to be decrypted and executed somewhere, which is where detection can occur."}},
+
+"q0179": {"objective":"4.6",
+ "explanation":"The insider had access they did not need in order to do their job. Permission restrictions grant each role only the rights required, so a marketing account simply cannot alter financial records or move funds — removing the capability rather than trying to detect its misuse.",
+ "incorrect":{
+  "B":"Hashing would reveal that records had been altered after the fact. Detection is valuable but the alteration and transfer still happen.",
+  "C":"Input validation rejects malformed data submitted to an application. The insider entered perfectly valid data through a legitimate interface.",
+  "D":"An access control list is a mechanism for expressing permissions, usually on a file or network resource. Permission restrictions is the broader control that covers application-level rights, which is what was abused."}},
+
+"q0180": {"objective":"5.5",
+ "explanation":"An independent audit examines both whether controls are designed appropriately and whether they actually operated over a period, and issues a formal report a third party can rely on. Assurance to outside stakeholders is what distinguishes it from internal testing.",
+ "incorrect":{
+  "A":"Red teaming simulates a determined adversary to test detection and response. It probes specific weaknesses rather than assessing the control set as a whole.",
+  "B":"Penetration testing establishes whether systems can be breached at a point in time. It produces technical findings, not assurance about control design and operation.",
+  "D":"A vulnerability assessment enumerates technical weaknesses. It covers a narrow slice of the controls and offers no independent opinion."}},
+
+"q0181": {"objective":"3.2",
+ "explanation":"A jump host is a single hardened, monitored system that administrators connect to first and administer the environment from. Placing it in a shared services zone funnels all administrative access through one controlled, logged choke point instead of exposing management interfaces broadly.",
+ "incorrect":{
+  "B":"An SSH server inside the corporate LAN gives a way in but is not a controlled administrative gateway, and it puts the entry point on the wrong side of the boundary.",
+  "C":"A reverse proxy publishes internal web services to external users. It is for application traffic, not interactive administration.",
+  "D":"MDM with conditional access manages endpoints and the conditions under which they connect. It governs the device, not the administrative path into the cloud environment."}},
+
+"q0182": {"objective":"3.3",
+ "explanation":"Data sovereignty is the principle that data remains subject to the laws of the country it originated in, no matter where it is physically stored. It is why hosting EU personal data abroad does not release you from EU obligations.",
+ "incorrect":{
+  "B":"Geolocation is simply the physical location of a device or data. It is a fact about where something is, not a legal principle.",
+  "C":"Intellectual property is a category of protected creations such as patents and trade secrets. It concerns ownership rather than jurisdiction.",
+  "D":"Geographic restrictions are controls that block access from certain locations. They are a mechanism you might use to satisfy sovereignty requirements, not the concept itself."}},
+
+"q0183": {"objective":"3.3",
+ "explanation":"Masking replaces most of the account number with placeholder characters, leaving only enough to identify the record. The log stays useful for troubleshooting while the full number is no longer exposed, which limits the impact of logs being read by the wrong people.",
+ "incorrect":{
+  "A":"Segmentation restricts who can reach the system holding the logs. It reduces who is exposed without fixing the fact that full numbers are written down.",
+  "B":"Hashing is irreversible, which breaks the log's usefulness, and card numbers are short enough to be recovered from a hash by brute force.",
+  "C":"Journaling records changes for recovery and audit. It is a logging technique, and applying it here would write even more data."}},
+
+"q0184": {"objective":"2.3",
+ "explanation":"Escape to host is the ATT&CK technique where an attacker breaks out of a container or virtual machine into the underlying host. From the host they control the networking for everything on it, which is what lets them redirect the database server's outgoing traffic wholesale.",
+ "incorrect":{
+  "A":"Browser extensions establish persistence and steal data inside a user's browser. A database server does not run one.",
+  "B":"Process injection runs malicious code inside a legitimate process on the same machine. It gains execution but does not by itself reroute a host's outbound traffic.",
+  "C":"Valid accounts means logging in with legitimate credentials. That could be how the attacker arrived, but authentication failed here — the redirection is the technique being asked about."}}
+}
