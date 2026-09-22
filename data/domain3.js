@@ -30,14 +30,18 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A VPN builds an encrypted tunnel across an untrusted network, so remote staff can reach internal resources without their traffic being readable in transit. 'Remote access without interception concerns' describes exactly what the encryption in a VPN provides.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A proxy server forwards and can filter requests on behalf of clients, usually for outbound web traffic. It does not by itself create an encrypted tunnel into the corporate network.",
+      "B": "An NGFW enforces policy on traffic crossing a boundary with application and identity awareness. It controls what may pass but is not the mechanism giving remote staff protected access.",
+      "D": "A security zone is a logical grouping of systems at a similar trust level. It is a design concept for segmentation, not a remote-access technology."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -68,14 +72,18 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Accepting arbitrary file uploads from the public means accepting potentially malicious files. A UTM appliance with malware detection inspects those uploads and blocks infected content before it is stored or served, which addresses the actual risk the feature introduces.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "IDS attack signatures detect known exploit traffic and raise an alert. Detection alone leaves the malicious PDF on the server, and a novel sample will not match a signature.",
+      "C": "A load balancer spreads requests across servers to handle volume. It improves availability and would do nothing about a file that happens to be malicious.",
+      "D": "A WAF blocking command injection defends against attacks embedded in request parameters. The threat here is the content of an uploaded file, not an injected command in the request."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -106,14 +114,18 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Containers share the host's kernel and package only the application and its dependencies, so many workloads run under a single operating system instead of one OS per server. That directly satisfies the requirement to reduce the number of operating systems.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Microservices is an application architecture that splits a system into small independently deployable services. It describes how software is decomposed, and it often increases the number of runtime instances rather than reducing operating systems.",
+      "C": "Virtualisation runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
+      "D": "Infrastructure as code defines and provisions infrastructure from version-controlled definitions. It changes how systems are built, not how many operating systems end up running."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

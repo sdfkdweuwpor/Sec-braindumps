@@ -1,31 +1,11 @@
 # Questions with no explanation in the source PDF
 
-130 of 974 extracted questions.
+110 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0001 | 5 | 5.2 | A company purchased cyber insurance to address items listed on the risk register. Which of the following strat |
-| q0002 | 5 | 5.2 | Which of the following is the most likely to be used to document risks, responsible parties, and thresholds? |
-| q0004 | 2 | 2.1 | A systems administrator notices that the research and development department is not using the company VPN when |
-| q0005 | 2 | 2.2 | Which of the following threat vectors is most commonly utilized by insider threat actors attempting data exfil |
-| q0006 | 5 | 5.3 | Which of the following agreement types defines the time frame in which a vendor needs to respond? |
-| q0007 | 4 | 4.3 | Which of the following is a feature of a next-generation SIEM system? |
-| q0008 | 1 | 1.1 | To improve the security at a data center, a security administrator implements a CCTV system and posts several  |
-| q0009 | 2 | 2.5 | Which of the following examples would be best mitigated by input sanitization? |
-| q0010 | 2 | 2.2 | An attacker posing as the Chief Executive Officer calls an employee and instructs the employee to buy gift car |
-| q0011 | 4 | 4.3 | After conducting a vulnerability scan, a systems administrator notices that one of the identified vulnerabilit |
-| q0012 | 2 | 2.5 | A recent penetration test identified that an attacker could flood the MAC address table of network switches. W |
-| q0013 | 2 | 2.3 | A user would like to install software and features that are not available with a smartphone's default software |
-| q0014 | 4 | 4.8 | Which of the following phases of an incident response involves generating reports? |
-| q0015 | 4 | 4.3 | Which of the following methods would most likely be used to identify legacy systems? |
-| q0016 | 3 | 3.2 | Employees located off-site must have access to company resources in order to complete their assigned tasks. Th |
-| q0017 | 3 | 3.2 | A company allows customers to upload PDF documents to its public e-commerce website. Which of the following wo |
-| q0018 | 4 | 4.7 | A security analyst developed a script to automate a trivial and repeatable task. Which of the following best d |
-| q0019 | 3 | 3.1 | A company is decommissioning its physical servers and replacing them with an architecture that will reduce the |
-| q0020 | 4 | 4.9 | An administrator needs to perform server hardening before deployment. Which of the following steps should the  |
-| q0021 | 4 | 4.3 | A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedure |
 | q0022 | 1 | 1.2 | Which of the following security concepts is accomplished with the installation of a RADIUS server? |
 | q0023 | 1 | 1.3 | After creating a contract for IT contractors, the human resources department changed several clauses. The cont |
 | q0024 | 3 | 3.4 | The executive management team is mandating the company develop a disaster recovery plan. The cost must be kept |

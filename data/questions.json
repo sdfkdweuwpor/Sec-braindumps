@@ -27,14 +27,18 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Transfer moves the financial consequence of a risk to a third party. Buying cyber insurance does not reduce the chance of a breach or its technical impact — it shifts who absorbs the cost when one happens, which is the defining feature of risk transference.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Accept means acknowledging a risk and choosing to do nothing about it, absorbing any loss yourself. Paying an insurer is an active step, so the risk is not simply accepted.",
+      "C": "Mitigate means reducing the likelihood or impact through controls — patching, segmentation, MFA. Insurance changes none of those; the vulnerability is exactly as exploitable as before.",
+      "D": "Avoid means eliminating the risk by not doing the activity at all, such as retiring the exposed service. The company is continuing to operate, so nothing has been avoided."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p3",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -65,14 +69,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A risk register is the central document that records each identified risk along with its owner, its likelihood and impact, the agreed threshold, and the treatment. Documenting risks, responsible parties and thresholds together is precisely what it exists to do.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Risk tolerance is the amount of variation from the risk appetite an organisation will accept. It is a single value referenced inside the register, not a document that records parties and thresholds.",
+      "B": "Risk transfer is a treatment strategy — shifting the loss to an insurer or vendor. It is a decision recorded in the register, not the record itself.",
+      "D": "Risk analysis is the process of evaluating likelihood and impact, either qualitatively or quantitatively. It produces the numbers that populate the register rather than being the artefact that stores them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p3",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -103,14 +111,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Shadow IT is the use of systems, services or workarounds without approval from the IT or security function. A department routinely bypassing the corporate VPN to reach company services is using an unsanctioned access path, which is shadow IT rather than an attack.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Espionage is the covert theft of information for a competitor or state. Nothing here suggests data is being taken or that the department has hostile intent — they are working around an inconvenience.",
+      "B": "Data exfiltration is the unauthorised removal of data from the environment. The staff are accessing company services, not extracting data out of them.",
+      "C": "A nation-state attack is a well-resourced intrusion by a government-backed group. The activity comes from a known internal department, not an external adversary."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -141,14 +153,18 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Unidentified removable devices — USB drives and external disks — are the classic insider exfiltration vector because the insider already holds legitimate access and copying data to removable media bypasses network monitoring entirely. No perimeter control ever sees the data leave.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Default network device credentials are an external attacker's foothold into unhardened equipment. An insider already has valid credentials and does not need them.",
+      "C": "Spear phishing emails are a vector used against employees to obtain access. The insider threat actor is the employee, so there is nobody to phish.",
+      "D": "Typosquatting registers look-alike domains to trick outsiders into visiting a fake site. It targets people who do not already have access, which is the opposite of an insider."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.613,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -179,21 +195,25 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement (SLA) defines the measurable service commitments between a customer and a vendor, including response and resolution times. A required time frame for a vendor to respond is an SLA metric by definition.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A statement of work (SOW) describes the specific deliverables, tasks and schedule for a piece of work. It scopes what is being done, not the ongoing response times for supporting it.",
+      "C": "A memorandum of agreement (MOA) is a formal statement of shared intent and roles between parties. It establishes cooperation but does not carry enforceable service metrics.",
+      "D": "A memorandum of understanding (MOU) is the least binding of these — a non-contractual record that parties intend to work together. It carries no measurable performance commitments."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0007",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following is a feature of a next-generation SIEM system?",
     "choices": [
@@ -217,14 +237,18 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Automated response actions are what separate a next-generation SIEM from a traditional one. Older SIEMs aggregate and correlate logs and then alert a human; a next-generation platform adds orchestration so it can isolate a host, disable an account or block an address without waiting for someone to act.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Virus signatures are pattern definitions used by antivirus software on an endpoint. A SIEM consumes alerts produced by that software; it does not maintain signatures itself.",
+      "C": "Security agent deployment is an endpoint-management function. Agents may feed logs into the SIEM, but pushing them out is not a SIEM capability.",
+      "D": "Vulnerability scanning actively probes systems for weaknesses. A SIEM ingests scanner output as one of its data sources rather than performing the scans."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -264,21 +288,26 @@
       "B",
       "F"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Cameras and warning signs do two distinct jobs. The signs are deterrent — they discourage someone from attempting the act because they expect to be caught. The CCTV is detective — it records and identifies activity after or as it occurs. Neither physically prevents entry.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Preventive controls physically stop the act before it happens — locks, bollards, an access-control vestibule. A camera does not block anyone from walking in.",
+      "C": "Corrective controls restore the environment after an incident, such as restoring from backup or rebuilding a host. Nothing here is repairing anything.",
+      "D": "Directive controls instruct people how to behave, typically through policy and procedure. A warning sign is close in spirit, but its purpose here is to discourage rather than to direct.",
+      "E": "Compensating controls stand in for a primary control that cannot be implemented. These are being deployed as controls in their own right, not as substitutes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0009",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following examples would be best mitigated by input sanitization?",
     "choices": [
@@ -302,14 +331,18 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Input sanitisation strips or neutralises dangerous characters before user-supplied data is processed or rendered. The script tag is a cross-site scripting payload — it only becomes dangerous because the application echoes the input back into a page, which is exactly what sanitisation prevents.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "An nmap command is reconnaissance run by an attacker against a host from their own machine. It never passes through your application as input, so there is nothing to sanitise.",
+      "C": "A gift-card lure is a social engineering email aimed at a person's judgement. It is mitigated by awareness training and email filtering, not by input handling in code.",
+      "D": "A browser privacy warning indicates a certificate problem on the TLS connection. That is fixed by issuing a valid certificate, which has nothing to do with input."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -340,14 +373,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Impersonation is assuming someone else's identity to gain compliance. The attacker is pretending to be the CEO and leaning on that assumed authority to make an employee buy gift cards, which is the textbook gift-card impersonation scam.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Smishing is phishing delivered over SMS. The contact here is a voice call, so the channel is wrong — that would be vishing.",
+      "B": "Disinformation is deliberately false information spread to mislead a population or shape opinion. This is a targeted fraud against one employee, not an influence campaign.",
+      "D": "Whaling is phishing that targets a senior executive as the victim. Here the executive is the identity being faked, and the target is an ordinary employee."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -378,14 +415,18 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A false positive is a finding the scanner reports that does not actually exist on the target. The scan flagged a vulnerability, investigation showed the systems are not affected, so the alert was positive but false — a common outcome of version-based rather than credentialed checking.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A false negative is a real vulnerability the scanner failed to report. That is the dangerous inverse of this situation, and by definition you do not see it in the results.",
+      "C": "A true positive is a reported vulnerability that genuinely exists. That would mean the finding was confirmed, which is the opposite of what happened.",
+      "D": "A true negative is the scanner correctly reporting nothing where nothing is wrong. Here the scanner did report something, so it is not a negative at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.952,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -416,14 +457,18 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Port security limits which and how many MAC addresses a switch port will learn, and shuts the port down or drops traffic when that limit is exceeded. MAC flooding works by overwhelming the CAM table so the switch fails open and floods frames to every port; capping MAC addresses per port stops the flood at source.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A load balancer distributes traffic across multiple servers for availability and performance. It operates above the switching layer and has no influence on a switch's MAC address table.",
+      "C": "An IPS inspects traffic for known attack patterns and can block it, but it sits inline on a traffic path rather than governing how an individual switch port learns addresses.",
+      "D": "An NGFW adds application awareness and identity to firewalling at network boundaries. MAC flooding happens inside a single broadcast domain, which never crosses the firewall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.706,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -454,14 +499,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Jailbreaking removes the manufacturer's restrictions on a device, granting privileged access to the operating system so software and features the vendor never permitted can be installed. The question specifically asks about enabling new features as well as installing software, which is what rooting or jailbreaking delivers.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "SQL injection inserts database commands through application input to read or alter data. It attacks a server-side database and has nothing to do with installing phone software.",
+      "B": "Cross-site scripting injects script into a web page viewed by other users. It runs in a browser context and cannot install applications or unlock device features.",
+      "D": "Side loading installs an app from outside the official store, which is close — but it only adds that one app. It does not lift the OS restrictions needed to enable new system features."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -492,14 +541,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Lessons learned is the final phase, where the team documents what happened, how effectively the response worked and what should change. Producing the formal incident report and its recommendations belongs to this phase.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores affected systems to normal operation and confirms they are clean. It is about returning to service, not writing it up.",
+      "B": "Preparation happens before any incident — building the plan, the tooling and the training. Reports produced here are plans, not incident findings.",
+      "D": "Containment limits the damage while the incident is live, by isolating hosts or cutting connectivity. It is an urgent operational step taken long before reporting."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -530,14 +583,18 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability scan fingerprints operating systems, services and versions across the estate, so it naturally surfaces systems running software that is out of support. It is the standard way to discover legacy hosts that nobody has inventoried.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A bug bounty program pays external researchers for vulnerabilities they find in your products. It relies on what researchers choose to look at and will not systematically enumerate your internal estate.",
+      "C": "Package monitoring tracks the third-party libraries inside your own applications for known flaws. It looks at software dependencies, not at whole systems reaching end of life.",
+      "D": "Dynamic analysis tests a running application for flaws by exercising it. It assesses application behaviour rather than identifying which hosts run obsolete platforms."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -568,14 +625,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A VPN builds an encrypted tunnel across an untrusted network, so remote staff can reach internal resources without their traffic being readable in transit. 'Remote access without interception concerns' describes exactly what the encryption in a VPN provides.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A proxy server forwards and can filter requests on behalf of clients, usually for outbound web traffic. It does not by itself create an encrypted tunnel into the corporate network.",
+      "B": "An NGFW enforces policy on traffic crossing a boundary with application and identity awareness. It controls what may pass but is not the mechanism giving remote staff protected access.",
+      "D": "A security zone is a logical grouping of systems at a similar trust level. It is a design concept for segmentation, not a remote-access technology."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -606,14 +667,18 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Accepting arbitrary file uploads from the public means accepting potentially malicious files. A UTM appliance with malware detection inspects those uploads and blocks infected content before it is stored or served, which addresses the actual risk the feature introduces.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "IDS attack signatures detect known exploit traffic and raise an alert. Detection alone leaves the malicious PDF on the server, and a novel sample will not match a signature.",
+      "C": "A load balancer spreads requests across servers to handle volume. It improves availability and would do nothing about a file that happens to be malicious.",
+      "D": "A WAF blocking command injection defends against attacks embedded in request parameters. The threat here is the content of an uploaded file, not an injected command in the request."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -644,14 +709,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "If only the author understands an automation script, the organisation depends on that one person to maintain, fix or explain it. Sharing that knowledge removes the single point of failure — the script keeps working, and keeps being safely changeable, when its author is unavailable or leaves.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Reducing implementation cost is a benefit of automating the task in the first place. The script already exists, so explaining it adds effort rather than saving build cost.",
+      "B": "Identifying complexity may be a side effect of a walkthrough, but it is a diagnostic observation rather than the reason to make sure others understand the script.",
+      "C": "Technical debt is accumulated shortcuts that will need reworking later. Documenting or explaining a script does not itself pay that debt down."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -682,21 +751,25 @@
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Containers share the host's kernel and package only the application and its dependencies, so many workloads run under a single operating system instead of one OS per server. That directly satisfies the requirement to reduce the number of operating systems.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Microservices is an application architecture that splits a system into small independently deployable services. It describes how software is decomposed, and it often increases the number of runtime instances rather than reducing operating systems.",
+      "C": "Virtualisation runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
+      "D": "Infrastructure as code defines and provisions infrastructure from version-controlled definitions. It changes how systems are built, not how many operating systems end up running."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0020",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "multi",
     "question": "An administrator needs to perform server hardening before deployment.\nWhich of the following steps should the administrator take? (Choose two.)",
     "choices": [
@@ -729,21 +802,26 @@
       "A",
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Hardening reduces the attack surface before a system is exposed. Disabling default accounts removes well-known credentials an attacker would try first, and removing unnecessary services eliminates listening ports and software that would otherwise need patching and monitoring. Both directly shrink what can be attacked.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Adding the server to the asset inventory is good practice and belongs to asset management, but recording that a system exists does not make it any harder to compromise.",
+      "D": "Documenting default passwords preserves exactly the credentials hardening is meant to eliminate. Defaults should be changed or the accounts disabled, not written down.",
+      "E": "Sending logs to the SIEM improves detection once the server is live. It is valuable monitoring, but it observes attacks rather than reducing the attack surface.",
+      "F": "Joining the domain integrates the server with central authentication and policy. It is a deployment step that can even widen exposure if done before the host is hardened."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0021",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives.\nWhich of the following will be the best method to achieve this objective?",
     "choices": [
@@ -767,14 +845,18 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Internal auditing is the organisation's own recurring, detailed examination of systems and procedures against its compliance objectives. Because it uses in-house staff, it can run as frequently as the CISO wants and go into as much detail as required.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Third-party attestation is an independent external opinion on your controls. It carries more weight with outside parties but is periodic and costly, so it cannot provide frequent detailed review.",
+      "B": "Penetration testing evaluates whether controls can be defeated by simulating an attack. It measures technical exploitability rather than tracking compliance against objectives.",
+      "D": "Vulnerability scans enumerate technical weaknesses on hosts. They say nothing about whether documented procedures are being followed, which is what compliance review examines."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p16",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.421,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

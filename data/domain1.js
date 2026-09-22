@@ -39,14 +39,19 @@ export const domain1Questions = [
       "B",
       "F"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Cameras and warning signs do two distinct jobs. The signs are deterrent — they discourage someone from attempting the act because they expect to be caught. The CCTV is detective — it records and identifies activity after or as it occurs. Neither physically prevents entry.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Preventive controls physically stop the act before it happens — locks, bollards, an access-control vestibule. A camera does not block anyone from walking in.",
+      "C": "Corrective controls restore the environment after an incident, such as restoring from backup or rebuilding a host. Nothing here is repairing anything.",
+      "D": "Directive controls instruct people how to behave, typically through policy and procedure. A warning sign is close in spirit, but its purpose here is to discourage rather than to direct.",
+      "E": "Compensating controls stand in for a primary control that cannot be implemented. These are being deployed as controls in their own right, not as substitutes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

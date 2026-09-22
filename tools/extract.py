@@ -20,6 +20,28 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import objectives as OBJ  # noqa: E402
 import corrections as FIX  # noqa: E402
 
+
+def load_authored():
+    """Merge hand-written explanations from tools/authored/*.json.
+
+    Kept outside the extractor's output so re-running extraction never loses
+    them. Each file maps question id -> {"explanation": str,
+    "incorrect": {choiceKey: str}}.
+    """
+    import glob
+    out = {}
+    for path in sorted(glob.glob(os.path.join(TOOLS, "authored", "*.json"))):
+        with open(path) as f:
+            data = json.load(f)
+        for qid, rec in data.items():
+            if qid in out:
+                raise SystemExit(f"{qid} is authored twice (second copy in {path})")
+            out[qid] = rec
+    return out
+
+
+AUTHORED = None
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = os.path.join(ROOT, "source", "SY0-701_en.pdf")
 DATA = os.path.join(ROOT, "data")
@@ -200,6 +222,9 @@ def parse_block(num, page, body):
 
 
 def build():
+    global AUTHORED
+    if AUTHORED is None:
+        AUTHORED = load_authored()
     lines = load_lines()
     blocks = split_questions(lines)
     print(f"blocks found: {len(blocks)}")
@@ -239,26 +264,55 @@ def build():
             rec["correct"] = list(fixed_key)
             corrected = True
 
+        authored = AUTHORED.get(rec["id"])
+        incorrect = {}
+        exp_source = "pdf" if rec["explanation"] else None
+        if authored:
+            if authored.get("explanation"):
+                # Authored text replaces the PDF's, per the decision to
+                # normalise every explanation to one voice.
+                exp_source = "pdf+authored" if rec["explanation"] else "authored"
+                rec["explanation"] = authored["explanation"]
+            incorrect = authored.get("incorrect", {}) or {}
+            valid = {c["key"] for c in rec["choices"]} - set(rec["correct"])
+            bad = set(incorrect) - valid
+            if bad:
+                raise SystemExit(
+                    f"{rec['id']}: authored notes for {sorted(bad)} which are "
+                    f"not wrong-answer choices (choices "
+                    f"{sorted(c['key'] for c in rec['choices'])}, "
+                    f"correct {rec['correct']})")
+
+        # An authored objective is a human read of the question, so it wins
+        # over inference and brings its domain with it.
         text_for_inference = rec["question"] + " " + " ".join(
             c["text"] for c in rec["choices"])
         obj, dom, conf = OBJ.infer_objective(text_for_inference)
         title = OBJ.OBJECTIVES[obj][1] if obj else None
 
+        auth_obj = (authored or {}).get("objective") or obj
+        if auth_obj not in OBJ.OBJECTIVES:
+            raise SystemExit(f"{rec['id']}: authored objective {auth_obj!r} is not a real SY0-701 objective")
+        auth_dom = OBJ.OBJECTIVES[auth_obj][0]
+        auth_title = OBJ.OBJECTIVES[auth_obj][1]
+
         supported.append({
             "id": rec["id"],
-            "domain": dom,
-            "objective": obj,
-            "objectiveTitle": title,
+            "domain": auth_dom,
+            "objective": auth_obj,
+            "objectiveTitle": auth_title,
             "type": "multi" if len(rec["correct"]) > 1 else "single",
             "question": rec["question"],
             "choices": rec["choices"],
             "correct": rec["correct"],
             "explanation": rec["explanation"],
-            "explanationSource": "pdf" if rec["explanation"] else None,
-            "incorrectExplanations": {},
+            "explanationSource": exp_source,
+            "incorrectExplanations": incorrect,
             "references": [],
             "source": f"SY0-701_en.pdf#p{rec['page']}",
-            "needsReview": True,          # every domain value is inferred
+            # An authored record means a human read the question, so its
+            # domain is confirmed rather than inferred.
+            "needsReview": not (authored and authored.get("objective")),
             "inferenceConfidence": conf,
             "needsExplanation": rec["explanation"] is None,
             "keyCorrected": corrected,
@@ -347,6 +401,8 @@ def write_reports(questions, unsupported):
 
 
 if __name__ == "__main__":
+    AUTHORED = load_authored()
+    print(f"authored records: {len(AUTHORED)}")
     qs, unsup = build()
     print(f"supported: {len(qs)} | unsupported: {len(unsup)}")
     write_outputs(qs, unsup)

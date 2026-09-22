@@ -180,8 +180,14 @@ def main():
     low = [q for q in qs if q["inferenceConfidence"] < 0.34]
     print(f"\ninference confidence: median {sorted(conf)[len(conf)//2]:.2f} | "
           f"{len(low)} question(s) below 0.34 (weak pick)")
-    warn(f"all {len(qs)} questions carry needsReview:true -- every domain value "
-         "is inferred, because the PDF has no domain labels")
+    unreviewed = [q for q in qs if q.get("needsReview")]
+    if unreviewed:
+        warn(f"{len(unreviewed)} of {len(qs)} questions still carry needsReview:true "
+             "-- their domain is inferred, not confirmed by a human read")
+
+    authored = [q for q in qs if q.get("explanationSource") in ("authored", "pdf+authored")]
+    with_wrongs = [q for q in qs if q.get("incorrectExplanations")]
+    print(f"explanations authored: {len(authored)} | with distractor notes: {len(with_wrongs)}")
 
     noexp = [q for q in qs if q["needsExplanation"]]
     print(f"explanations: {len(qs)-len(noexp)} present / {len(noexp)} missing")

@@ -30,14 +30,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Shadow IT is the use of systems, services or workarounds without approval from the IT or security function. A department routinely bypassing the corporate VPN to reach company services is using an unsanctioned access path, which is shadow IT rather than an attack.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Espionage is the covert theft of information for a competitor or state. Nothing here suggests data is being taken or that the department has hostile intent — they are working around an inconvenience.",
+      "B": "Data exfiltration is the unauthorised removal of data from the environment. The staff are accessing company services, not extracting data out of them.",
+      "C": "A nation-state attack is a well-resourced intrusion by a government-backed group. The activity comes from a known internal department, not an external adversary."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -68,21 +72,25 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Unidentified removable devices — USB drives and external disks — are the classic insider exfiltration vector because the insider already holds legitimate access and copying data to removable media bypasses network monitoring entirely. No perimeter control ever sees the data leave.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Default network device credentials are an external attacker's foothold into unhardened equipment. An insider already has valid credentials and does not need them.",
+      "C": "Spear phishing emails are a vector used against employees to obtain access. The insider threat actor is the employee, so there is nobody to phish.",
+      "D": "Typosquatting registers look-alike domains to trick outsiders into visiting a fake site. It targets people who do not already have access, which is the opposite of an insider."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.613,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0009",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following examples would be best mitigated by input sanitization?",
     "choices": [
@@ -106,14 +114,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Input sanitisation strips or neutralises dangerous characters before user-supplied data is processed or rendered. The script tag is a cross-site scripting payload — it only becomes dangerous because the application echoes the input back into a page, which is exactly what sanitisation prevents.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "An nmap command is reconnaissance run by an attacker against a host from their own machine. It never passes through your application as input, so there is nothing to sanitise.",
+      "C": "A gift-card lure is a social engineering email aimed at a person's judgement. It is mitigated by awareness training and email filtering, not by input handling in code.",
+      "D": "A browser privacy warning indicates a certificate problem on the TLS connection. That is fixed by issuing a valid certificate, which has nothing to do with input."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -144,14 +156,18 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Impersonation is assuming someone else's identity to gain compliance. The attacker is pretending to be the CEO and leaning on that assumed authority to make an employee buy gift cards, which is the textbook gift-card impersonation scam.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Smishing is phishing delivered over SMS. The contact here is a voice call, so the channel is wrong — that would be vishing.",
+      "B": "Disinformation is deliberately false information spread to mislead a population or shape opinion. This is a targeted fraud against one employee, not an influence campaign.",
+      "D": "Whaling is phishing that targets a senior executive as the victim. Here the executive is the identity being faked, and the target is an ordinary employee."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -182,14 +198,18 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Port security limits which and how many MAC addresses a switch port will learn, and shuts the port down or drops traffic when that limit is exceeded. MAC flooding works by overwhelming the CAM table so the switch fails open and floods frames to every port; capping MAC addresses per port stops the flood at source.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A load balancer distributes traffic across multiple servers for availability and performance. It operates above the switching layer and has no influence on a switch's MAC address table.",
+      "C": "An IPS inspects traffic for known attack patterns and can block it, but it sits inline on a traffic path rather than governing how an individual switch port learns addresses.",
+      "D": "An NGFW adds application awareness and identity to firewalling at network boundaries. MAC flooding happens inside a single broadcast domain, which never crosses the firewall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.706,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -220,14 +240,18 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Jailbreaking removes the manufacturer's restrictions on a device, granting privileged access to the operating system so software and features the vendor never permitted can be installed. The question specifically asks about enabling new features as well as installing software, which is what rooting or jailbreaking delivers.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "SQL injection inserts database commands through application input to read or alter data. It attacks a server-side database and has nothing to do with installing phone software.",
+      "B": "Cross-site scripting injects script into a web page viewed by other users. It runs in a browser context and cannot install applications or unlock device features.",
+      "D": "Side loading installs an app from outside the official store, which is close — but it only adds that one app. It does not lift the OS restrictions needed to enable new system features."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

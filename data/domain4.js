@@ -5,8 +5,8 @@ export const domain4Questions = [
   {
     "id": "q0007",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following is a feature of a next-generation SIEM system?",
     "choices": [
@@ -30,14 +30,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Automated response actions are what separate a next-generation SIEM from a traditional one. Older SIEMs aggregate and correlate logs and then alert a human; a next-generation platform adds orchestration so it can isolate a host, disable an account or block an address without waiting for someone to act.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Virus signatures are pattern definitions used by antivirus software on an endpoint. A SIEM consumes alerts produced by that software; it does not maintain signatures itself.",
+      "C": "Security agent deployment is an endpoint-management function. Agents may feed logs into the SIEM, but pushing them out is not a SIEM capability.",
+      "D": "Vulnerability scanning actively probes systems for weaknesses. A SIEM ingests scanner output as one of its data sources rather than performing the scans."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -68,14 +72,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A false positive is a finding the scanner reports that does not actually exist on the target. The scan flagged a vulnerability, investigation showed the systems are not affected, so the alert was positive but false — a common outcome of version-based rather than credentialed checking.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A false negative is a real vulnerability the scanner failed to report. That is the dangerous inverse of this situation, and by definition you do not see it in the results.",
+      "C": "A true positive is a reported vulnerability that genuinely exists. That would mean the finding was confirmed, which is the opposite of what happened.",
+      "D": "A true negative is the scanner correctly reporting nothing where nothing is wrong. Here the scanner did report something, so it is not a negative at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.952,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -106,14 +114,18 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Lessons learned is the final phase, where the team documents what happened, how effectively the response worked and what should change. Producing the formal incident report and its recommendations belongs to this phase.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores affected systems to normal operation and confirms they are clean. It is about returning to service, not writing it up.",
+      "B": "Preparation happens before any incident — building the plan, the tooling and the training. Reports produced here are plans, not incident findings.",
+      "D": "Containment limits the damage while the incident is live, by isolating hosts or cutting connectivity. It is an urgent operational step taken long before reporting."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -144,14 +156,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability scan fingerprints operating systems, services and versions across the estate, so it naturally surfaces systems running software that is out of support. It is the standard way to discover legacy hosts that nobody has inventoried.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A bug bounty program pays external researchers for vulnerabilities they find in your products. It relies on what researchers choose to look at and will not systematically enumerate your internal estate.",
+      "C": "Package monitoring tracks the third-party libraries inside your own applications for known flaws. It looks at software dependencies, not at whole systems reaching end of life.",
+      "D": "Dynamic analysis tests a running application for flaws by exercising it. It assesses application behaviour rather than identifying which hosts run obsolete platforms."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -182,21 +198,25 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "If only the author understands an automation script, the organisation depends on that one person to maintain, fix or explain it. Sharing that knowledge removes the single point of failure — the script keeps working, and keeps being safely changeable, when its author is unavailable or leaves.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Reducing implementation cost is a benefit of automating the task in the first place. The script already exists, so explaining it adds effort rather than saving build cost.",
+      "B": "Identifying complexity may be a side effect of a walkthrough, but it is a diagnostic observation rather than the reason to make sure others understand the script.",
+      "C": "Technical debt is accumulated shortcuts that will need reworking later. Documenting or explaining a script does not itself pay that debt down."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0020",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "multi",
     "question": "An administrator needs to perform server hardening before deployment.\nWhich of the following steps should the administrator take? (Choose two.)",
     "choices": [
@@ -229,52 +249,19 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Hardening reduces the attack surface before a system is exposed. Disabling default accounts removes well-known credentials an attacker would try first, and removing unnecessary services eliminates listening ports and software that would otherwise need patching and monitoring. Both directly shrink what can be attacked.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Adding the server to the asset inventory is good practice and belongs to asset management, but recording that a system exists does not make it any harder to compromise.",
+      "D": "Documenting default passwords preserves exactly the credentials hardening is meant to eliminate. Defaults should be changed or the accounts disabled, not written down.",
+      "E": "Sending logs to the SIEM improves detection once the server is live. It is valuable monitoring, but it observes attacks rather than reducing the attack surface.",
+      "F": "Joining the domain integrates the server with central authentication and policy. It is a deployment step that can even widen exposure if done before the host is hardened."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0021",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives.\nWhich of the following will be the best method to achieve this objective?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Third-party attestation"
-      },
-      {
-        "key": "B",
-        "text": "Penetration testing"
-      },
-      {
-        "key": "C",
-        "text": "Internal auditing"
-      },
-      {
-        "key": "D",
-        "text": "Vulnerability scans"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p16",
-    "needsReview": true,
-    "inferenceConfidence": 0.421,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

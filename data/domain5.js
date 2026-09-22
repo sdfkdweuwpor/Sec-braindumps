@@ -30,14 +30,18 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Transfer moves the financial consequence of a risk to a third party. Buying cyber insurance does not reduce the chance of a breach or its technical impact — it shifts who absorbs the cost when one happens, which is the defining feature of risk transference.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Accept means acknowledging a risk and choosing to do nothing about it, absorbing any loss yourself. Paying an insurer is an active step, so the risk is not simply accepted.",
+      "C": "Mitigate means reducing the likelihood or impact through controls — patching, segmentation, MFA. Insurance changes none of those; the vulnerability is exactly as exploitable as before.",
+      "D": "Avoid means eliminating the risk by not doing the activity at all, such as retiring the exposed service. The company is continuing to operate, so nothing has been avoided."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p3",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -68,14 +72,18 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A risk register is the central document that records each identified risk along with its owner, its likelihood and impact, the agreed threshold, and the treatment. Documenting risks, responsible parties and thresholds together is precisely what it exists to do.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Risk tolerance is the amount of variation from the risk appetite an organisation will accept. It is a single value referenced inside the register, not a document that records parties and thresholds.",
+      "B": "Risk transfer is a treatment strategy — shifting the loss to an insurer or vendor. It is a decision recorded in the register, not the record itself.",
+      "D": "Risk analysis is the process of evaluating likelihood and impact, either qualitatively or quantitatively. It produces the numbers that populate the register rather than being the artefact that stores them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p3",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -106,14 +114,60 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement (SLA) defines the measurable service commitments between a customer and a vendor, including response and resolution times. A required time frame for a vendor to respond is an SLA metric by definition.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A statement of work (SOW) describes the specific deliverables, tasks and schedule for a piece of work. It scopes what is being done, not the ongoing response times for supporting it.",
+      "C": "A memorandum of agreement (MOA) is a formal statement of shared intent and roles between parties. It establishes cooperation but does not carry enforceable service metrics.",
+      "D": "A memorandum of understanding (MOU) is the least binding of these — a non-contractual record that parties intend to work together. It carries no measurable performance commitments."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0021",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives.\nWhich of the following will be the best method to achieve this objective?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Third-party attestation"
+      },
+      {
+        "key": "B",
+        "text": "Penetration testing"
+      },
+      {
+        "key": "C",
+        "text": "Internal auditing"
+      },
+      {
+        "key": "D",
+        "text": "Vulnerability scans"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Internal auditing is the organisation's own recurring, detailed examination of systems and procedures against its compliance objectives. Because it uses in-house staff, it can run as frequently as the CISO wants and go into as much detail as required.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Third-party attestation is an independent external opinion on your controls. It carries more weight with outside parties but is periodic and costly, so it cannot provide frequent detailed review.",
+      "B": "Penetration testing evaluates whether controls can be defeated by simulating an attack. It measures technical exploitability rather than tracking compliance against objectives.",
+      "D": "Vulnerability scans enumerate technical weaknesses on hosts. They say nothing about whether documented procedures are being followed, which is what compliance review examines."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p16",
+    "needsReview": false,
+    "inferenceConfidence": 0.421,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
