@@ -1,0 +1,241 @@
+{
+"q0527": {"objective":"4.1",
+ "explanation":"Jailbreaking removes the manufacturer's restrictions so the user gains privileged control over the mobile operating system. MDM enforces device policy that detects and blocks those modifications, which is why it is deployed against this specific risk.",
+ "incorrect":{
+  "A":"End-of-life devices and firmware compatibility are lifecycle and patching concerns. They have nothing to do with a user deliberately unlocking the OS.",
+  "B":"VM escape is a hypervisor boundary failure in virtualised server environments. Mobile devices are not hypervisors.",
+  "C":"Buffer overflows are memory-handling defects in application code. MDM does not alter how applications manage memory."}},
+
+"q0528": {"objective":"4.3",
+ "explanation":"A zero-day has no patch, and the servers cannot come offline. That leaves only risk reduction around the flaw: tighter access restrictions, intrusion prevention and heightened monitoring, applied until a vendor fix exists. Those are compensating controls by definition.",
+ "incorrect":{
+  "A":"Containerising and migrating carries the same vulnerable software into a new wrapper. The flaw travels with it.",
+  "B":"Removing and sandboxing the servers takes mission-critical systems offline, which the high-availability requirement forbids.",
+  "D":"Patching as quickly as possible is the right instinct, but there is no patch — that is what zero-day means."}},
+
+"q0529": {"objective":"4.1",
+ "explanation":"The question asks what to configure on the MDM. Compliance attestation is the MDM function that checks a device's posture — OS version, encryption, policies, certificates — and reports whether it meets the standard, which is what justifies releasing it from quarantine.",
+ "incorrect":{
+  "A":"Device fingerprinting identifies what a device is. Knowing it is an Android tablet says nothing about whether it is safely configured.",
+  "C":"NAC is the network-side control enforcing the quarantine. It is a separate system, not something configured on the MDM.",
+  "D":"802.1X authenticates devices at the network port. Again a network control rather than an MDM setting."}},
+
+"q0530": {"objective":"2.4",
+ "explanation":"TCP 445 is SMB, and a flood of it across campus switches is the signature of a worm propagating machine to machine. Self-replication explains both the traffic volume and why the whole building is affected rather than one target.",
+ "incorrect":{
+  "A":"A buffer overflow is the memory defect a worm might exploit to gain execution. It is the mechanism, not the network-wide event.",
+  "B":"NTP amplification reflects UDP 123 traffic at a victim. Neither protocol nor port matches.",
+  "D":"Kerberoasting requests service tickets to crack service-account passwords offline. It is deliberately quiet and generates almost no traffic."}},
+
+"q0531": {"objective":"3.2",
+ "explanation":"Hotel guest Wi-Fi is an untrusted network where anyone could be watching. A VPN builds an encrypted tunnel from the laptop back to the corporate network, so the traffic is unreadable locally and internal resources are reachable without publishing them.",
+ "incorrect":{
+  "A":"EAP is an authentication framework used inside network access protocols. It authenticates but creates no tunnel to corporate resources.",
+  "B":"A jump server is a controlled entry point for administrative access. The executive needs ordinary resource access, and reaching the jump server still requires a secure path.",
+  "C":"A perimeter network isolates public-facing services. Internal resources should not be placed there."}},
+
+"q0532": {"objective":"3.1",
+ "explanation":"Air-gapped means there is no network connection at all between the critical systems and anything else. Because no path exists, remote access privileges are irrelevant — there is nothing to connect to.",
+ "incorrect":{
+  "A":"Segmentation divides a network logically. Paths still exist between zones, controlled rather than absent.",
+  "B":"Virtualised describes workloads running as guests on shared hardware. Those guests remain networked.",
+  "D":"Serverless runs code on provider-managed infrastructure, which is inherently reachable over the network."}},
+
+"q0533": {"objective":"4.5",
+ "explanation":"An IPS works by examining the contents of traffic passing through it and matching against signatures and anomaly rules. Packet inspection is that core engine, so it has to be configured before any detection or prevention decision can be made.",
+ "incorrect":{
+  "A":"Allow list policies define permitted sources or destinations. They are a coarse filter applied around inspection, not the detection mechanism.",
+  "C":"Logging and reporting record what the IPS found. They are essential but come after detection works.",
+  "D":"Firewall rules belong to a different device and filter on addresses and ports rather than content."}},
+
+"q0534": {"objective":"3.2",
+ "explanation":"The requirement is inline checking of reputation, content and category for users who are remote. SASE delivers a cloud secure web gateway that inspects traffic at the provider's edge, so remote users are filtered without their traffic being dragged back to a head office appliance.",
+ "incorrect":{
+  "A":"A VPN encrypts the path back to the corporate network. It provides connectivity, not URL inspection.",
+  "C":"An NGFW can do all of this, but it sits on-premises, so remote users must be backhauled to it — which the question implicitly rules out by emphasising remote users.",
+  "D":"SD-WAN optimises traffic across WAN links between sites. It is a connectivity technology, not a web security one."}},
+
+"q0535": {"objective":"2.5",
+ "explanation":"Travelling employees connect from networks the company does not control, so the protection has to live on the device. HIPS runs on the host itself, monitoring and blocking malicious activity locally regardless of which network the laptop happens to be on.",
+ "incorrect":{
+  "A":"Isolation separates a system from the network. It is a containment response, and it would stop the employee working.",
+  "B":"Segmentation divides the corporate network into zones. It has no effect once the device leaves that network.",
+  "C":"An ACL controls access to a resource. It protects the resource, not the travelling device."}},
+
+"q0536": {"objective":"4.4",
+ "explanation":"NetFlow records metadata about every conversation crossing the network — source, destination, ports, volume and timing — across many systems at once. That makes it the tool for spotting suspicious traffic patterns between systems in real time.",
+ "incorrect":{
+  "B":"Infrared sensors detect physical movement. They are a physical security control.",
+  "C":"A development network is an environment for building software. It is not a monitoring capability.",
+  "D":"A honeynet is a decoy environment that attracts attackers. It observes interaction with the decoy rather than real traffic between production systems."}},
+
+"q0537": {"objective":"4.1",
+ "explanation":"The malicious file has to execute or be written on the endpoint. EDR watches process and file behaviour on the device itself and can block a malicious download or its execution before it takes hold.",
+ "incorrect":{
+  "A":"DLP watches sensitive data leaving the organisation. It looks at outbound content, not inbound malware.",
+  "B":"FIM alerts when protected files are modified. It reports changes after the fact and does not block downloads.",
+  "C":"NAC decides whether a device may join the network. Once the company laptop is connected, NAC has no further view."}},
+
+"q0538": {"objective":"5.3",
+ "explanation":"Buying a SaaS product means trusting someone else's controls, so the analyst needs independent evidence rather than the vendor's own claims. A third-party audit report such as SOC 2 or ISO 27001 is an external auditor's opinion on whether those controls exist and work.",
+ "incorrect":{
+  "A":"A service-level agreement commits the vendor to performance levels such as uptime. It says nothing about security controls.",
+  "C":"A statement of work defines deliverables for a specific engagement. It is a project document.",
+  "D":"A data privacy agreement sets out how personal data will be handled. Important, but it states obligations rather than evidencing that controls operate."}},
+
+"q0539": {"objective":"1.4",
+ "explanation":"Hashing runs the password through a one-way mathematical function producing a fixed-length digest that is effectively unique to that input and cannot be reversed. Storing the digest rather than the password is what protects it.",
+ "incorrect":{
+  "A":"Adding extra characters to increase length describes a password policy or, if random and per-user, salting. It is not what hashing does.",
+  "B":"Generating a temporal token describes one-time passwords. Those expire; hashes do not.",
+  "D":"A rainbow table is a precomputed lookup attackers use to reverse hashes. Creating one would be attacking passwords, not protecting them."}},
+
+"q0540": {"objective":"2.3",
+ "explanation":"Altering the device's underlying file structure to obtain administrator permissions is removing the manufacturer's restrictions, which is jailbreaking. Once that is done, unauthorised software such as a keylogger can be installed with full privilege.",
+ "incorrect":{
+  "A":"Resource reuse is a virtualisation flaw where memory or storage passes between tenants uncleared.",
+  "B":"Bloatware is unwanted preinstalled software. It ships with the device rather than being installed by modifying the OS.",
+  "C":"Side loading installs an app from outside the official store. That does not require root access or changing the file structure."}},
+
+"q0541": {"objective":"4.8",
+ "explanation":"E-discovery is the process of identifying, preserving and producing electronically stored information in response to legal requests. Responding to a legal demand during a pending investigation is precisely what it covers.",
+ "incorrect":{
+  "B":"User provisioning creates and manages accounts. It is an identity management activity.",
+  "C":"Exporting firewall logs is one possible step within a wider process. It is a technical task, not the discipline named.",
+  "D":"Root cause analysis determines why an incident happened. It serves the organisation's own improvement, not a legal request."}},
+
+"q0542": {"objective":"3.1",
+ "explanation":"No connection to the internet and none to the local network, with updates carried in by hand on portable media, is the definition of an air gap. The physical separation is what forces the manual process.",
+ "incorrect":{
+  "A":"Microservices is an application architecture splitting software into small services. It says nothing about network isolation.",
+  "C":"Software-defined networking manages connectivity programmatically — the opposite of removing it.",
+  "D":"Serverless runs code on provider infrastructure, which is inherently network-connected."}},
+
+"q0543": {"objective":"2.1",
+ "explanation":"ARP poisoning needs no real skill — the tools are free and point-and-click — and knocking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points at an unskilled attacker, typically a student.",
+ "incorrect":{
+  "B":"Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
+  "C":"Credential stuffing replays breached username and password pairs against a login. It is an attack technique, not a threat actor.",
+  "D":"DMARC failure is an email authentication result. It is neither an actor nor related to ARP."}},
+
+"q0544": {"objective":"2.5",
+ "explanation":"Hardening a container image means shrinking it to only what the application needs. Removing default applications eliminates software that would otherwise need patching and could be abused, and disabling Telnet removes a plaintext remote access protocol that has no place in a modern image.",
+ "incorrect":{
+  "B":"Installing a NIPS adds a network security appliance. It is not something you bake into a container image.",
+  "D":"Reconfiguring DNS changes name resolution. It is a configuration choice, not a hardening step.",
+  "E":"Adding an SFTP server introduces another listening service, which enlarges the attack surface.",
+  "F":"Deleting the public certificate would break the container's ability to establish trusted TLS connections."}},
+
+"q0545": {"objective":"4.3",
+ "explanation":"Running the same scan every day produces a moving picture of which vulnerabilities are disappearing and which are not. That is how a security team verifies patches are actually being installed across the estate rather than merely being scheduled.",
+ "incorrect":{
+  "B":"Shadow IT cloud deployments live outside the corporate network. An endpoint scan will not discover someone's unsanctioned cloud account.",
+  "C":"Hardware inventory is maintained by asset management tooling. A vulnerability scanner reports software state.",
+  "D":"Hunting for active attackers is threat hunting, which examines behaviour and telemetry rather than vulnerability presence."}},
+
+"q0546": {"objective":"4.3",
+ "explanation":"Applying a patch is a claim; a rescan is the proof. Re-running the scan against the server shows the finding no longer appears, which is how remediation is validated and closed out.",
+ "incorrect":{
+  "B":"Dynamic analysis tests a running application for flaws. It is an application testing technique, not patch verification.",
+  "C":"Reporting communicates what was done. It documents the outcome rather than establishing it.",
+  "D":"Static analysis reads source code. Patching a server does not involve reviewing its vendor's source."}},
+
+"q0547": {"objective":"4.8",
+ "explanation":"A sandbox is a deliberately isolated environment built for detonating suspicious files and recording what they do. Behaviour analysis requires actually running the sample, and the sandbox contains the consequences.",
+ "incorrect":{
+  "B":"A jump server is a hardened administrative access point. Running malware on it would compromise the route into everything else.",
+  "C":"A work computer is a production endpoint. Executing the attachment there is exactly the outcome the team is trying to avoid.",
+  "D":"A container provides process isolation for deploying applications, but it shares the host kernel and is not built to contain deliberately hostile code."}},
+
+"q0548": {"objective":"5.3",
+ "explanation":"Counterfeit hardware enters through the procurement path, so the defence is understanding that path. Supply chain analysis maps who the suppliers and their suppliers are, verifies certification, and establishes where substitution could occur.",
+ "incorrect":{
+  "B":"A corporate acquisition policy states rules for purchasing. It sets expectations without verifying who is actually in the chain.",
+  "C":"A right-to-audit clause lets you inspect a vendor. Useful, but it covers direct vendors rather than the depth of the chain behind them.",
+  "D":"Penetration testing every supplier assesses their security posture. It is disproportionate and tests the wrong thing — counterfeiting is a provenance issue, not an intrusion one."}},
+
+"q0549": {"objective":"2.3",
+ "explanation":"OR 1=1 is a tautology appended to a query so the WHERE clause is always true, returning rows the user should never see. Injecting SQL logic through an input field is the textbook signature of SQL injection.",
+ "incorrect":{
+  "A":"cat /etc/shadow is a Linux command reading the password hash file. That is command execution, not SQL.",
+  "B":"dig is a DNS lookup utility. It performs name resolution.",
+  "C":"cd ../../../ climbs directories, which is directory traversal rather than an injected query."}},
+
+"q0550": {"objective":"4.5",
+ "explanation":"Insiders act with valid credentials, so nothing they do looks unauthorised. User behaviour analytics builds a baseline for each person and flags deviation — unusual hours, unusual systems, unusual volumes — which is the only reliable signal a malicious insider produces.",
+ "incorrect":{
+  "A":"Unified threat management bundles perimeter security functions. It faces outward at external threats.",
+  "B":"A web application firewall protects an application from malicious requests. It sees attacks, not misuse of legitimate access.",
+  "D":"An intrusion detection system alerts on attack patterns in traffic. An insider browsing permitted systems generates ordinary traffic."}},
+
+"q0551": {"objective":"5.6",
+ "explanation":"The employee had read the handbook and the AUP and still installed unapproved software, which suggests the rules were acknowledged rather than understood. Focused training addresses that gap proportionately, correcting behaviour without escalating a first-time policy breach.",
+ "incorrect":{
+  "A":"Educating the manager misdirects the remedy at someone who did not commit the breach.",
+  "B":"Silently uninstalling the software removes the symptom and teaches nothing — the employee will simply reinstall it.",
+  "D":"Termination is grossly disproportionate for a first installation of an unapproved application."}},
+
+"q0552": {"objective":"4.6",
+ "explanation":"The password still worked two years after it was first used and later leaked. A reuse policy prevents old passwords being set again, so a credential that appears in a breach dump cannot still be the live one.",
+ "incorrect":{
+  "A":"Privileged access management secures administrative accounts. This was a standard user.",
+  "B":"Account lockout stops repeated guessing. The attacker knew the correct password and needed no guesses.",
+  "D":"Complexity requirements make passwords harder to guess. A leaked password is disclosed rather than guessed, so complexity is irrelevant."}},
+
+"q0553": {"objective":"4.5",
+ "explanation":"The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorised domains are treated — blocks access at the network level for everyone, not just this user.",
+ "incorrect":{
+  "A":"Awareness training helps users recognise suspicious sites. It relies on judgement rather than enforcing the restriction.",
+  "B":"Modifying the unauthorised content policy changes the written rule. A policy does not block anything technically.",
+  "C":"An allow list permitting only approved domains would work but is a drastic change to how the whole organisation browses, far beyond preventing access to this domain."}},
+
+"q0554": {"objective":"4.9",
+ "explanation":"The team has the source and destination addresses and can reproduce the error. A packet capture on that conversation shows exactly what is being sent, what comes back and where it fails, which isolates whether the problem is network, service or application.",
+ "incorrect":{
+  "A":"Penetration testing attempts to breach systems. It is an offensive assessment, not a troubleshooting technique.",
+  "C":"A vulnerability scan enumerates weaknesses. It says nothing about why a batch job cannot reach a resource.",
+  "D":"Firewall rule analysis is a reasonable next step, but it inspects configuration in the abstract. The capture shows what is actually happening on the wire."}},
+
+"q0555": {"objective":"4.9",
+ "explanation":"The load balancer sits directly in front of the web servers and records every request it distributes, with source addresses, rates and response behaviour. For excessive traffic against those servers it holds the most detailed and most relevant picture.",
+ "incorrect":{
+  "A":"Router logs show routing and interface activity. They see traffic at a coarser level than individual web requests.",
+  "C":"Switch logs cover layer 2 forwarding within a segment. They reveal little about application traffic volume.",
+  "D":"Firewall logs record permitted and denied connections and are genuinely useful, but the load balancer holds the per-request detail for the servers actually affected."}},
+
+"q0556": {"objective":"5.6",
+ "explanation":"The employee knew what they were doing and took steps to hide it, so the training gap is about consequences and rules rather than technique. Privacy legislation makes clear that moving PII for personal use is unlawful, and compliance training makes clear it breaches company policy with disciplinary consequences.",
+ "incorrect":{
+  "B":"Social engineering training covers manipulation by an attacker. Nobody manipulated this employee.",
+  "C":"Risk management training is aimed at those assessing and treating organisational risk, not at deterring misuse.",
+  "E":"Phishing training addresses fraudulent messages. No message was involved.",
+  "F":"Remote work training covers working securely away from the office. The misuse would happen anywhere."}},
+
+"q0557": {"objective":"5.4",
+ "explanation":"Closing an account or deleting an app removes your access, not the provider's copy of your data. Exercising the right to be forgotten obliges the provider to erase the personal data it holds, including copies in its systems, which is the only option that actually removes it.",
+ "incorrect":{
+  "B":"Uninstalling the application removes it from your device. The provider's servers are untouched.",
+  "C":"A factory reset wipes your device. Again it has no effect on data held by the service.",
+  "D":"Terminating the account closes it, but providers routinely retain data in backups and archives afterwards."}},
+
+"q0558": {"objective":"4.5",
+ "explanation":"Two requirements need two controls. DNS filtering refuses to resolve known-malicious domains, so users cannot reach them however they got the link. A centralised TLS inspection proxy decrypts and examines HTTP and HTTPS traffic for malicious content, which is the only way to inspect encrypted web traffic.",
+ "incorrect":{
+  "A":"An IPS in blocking mode inspects traffic but works on signatures rather than domain reputation, and secure protocol enforcement makes traffic harder to inspect, not easier.",
+  "B":"EDR and user behaviour analytics detect anomalies after the fact on endpoints. Neither prevents navigation nor inspects web content inline.",
+  "D":"NAC controls which devices may connect, and blocking malicious port numbers ignores that virtually all of this traffic uses 443."}},
+
+"q0559": {"objective":"2.2",
+ "explanation":"Smishing is phishing delivered over SMS. A text message carrying a link to a counterfeit bank login is that attack precisely — the channel is what distinguishes it from other phishing variants.",
+ "incorrect":{
+  "A":"Impersonation is posing as a trusted party, which the fake bank site does. But the question asks for the attack type, and the SMS delivery makes it smishing.",
+  "B":"Phishing is the general category, conventionally by email.",
+  "C":"Vishing is phishing by voice call. No call was made."}},
+
+"q0560": {"objective":"2.1",
+ "explanation":"A coordinated group running repeated ransomware campaigns against targets chosen for maximum payout is a criminal enterprise operating for profit. That combination of organisation, repetition and financial motive defines organised crime.",
+ "incorrect":{
+  "B":"Nation-state actors pursue espionage, disruption or strategic advantage. Revenue is not the objective.",
+  "C":"Shadow IT is unsanctioned technology used inside an organisation. It is not an attacker at all.",
+  "D":"Hacktivism attacks to advance a cause. Extorting money would undercut the message."}}
+}

@@ -4164,48 +4164,10 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0527",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "Which of the following describes the reason for using an MDM solution to prevent jailbreaking?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To secure end-of-life devices from incompatible firmware updates"
-      },
-      {
-        "key": "B",
-        "text": "To avoid hypervisor attacks through VM escape"
-      },
-      {
-        "key": "C",
-        "text": "To eliminate buffer overflows at the application layer"
-      },
-      {
-        "key": "D",
-        "text": "To prevent users from changing the OS of mobile devices"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "An MDM solution can enforce device policies that block attempts to modify or replace the mobile OS, preventing users from jailbreaking their devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p227",
-    "needsReview": true,
-    "inferenceConfidence": 0.769,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0530",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A security team receives reports about high latency and complete network unavailability throughout most of the office building. Flow logs from the campus switches show high traffic on TCP 445.\nWhich of the following is most likely the root cause of this incident?",
     "choices": [
@@ -4229,12 +4191,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A worm exploiting SMB will flood TCP 445 with propagation traffic, overwhelming the network and causing high latency and outages.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "TCP 445 is SMB, and a flood of it across campus switches is the signature of a worm propagating machine to machine. Self-replication explains both the traffic volume and why the whole building is affected rather than one target.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow is the memory defect a worm might exploit to gain execution. It is the mechanism, not the network-wide event.",
+      "B": "NTP amplification reflects UDP 123 traffic at a victim. Neither protocol nor port matches.",
+      "D": "Kerberoasting requests service tickets to crack service-account passwords offline. It is deliberately quiet and generates almost no traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p228",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4267,12 +4233,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Host-based Intrusion Prevention System (HIPS) runs directly on each device, monitoring and blocking malicious activity locally, ensuring protection regardless of the network the traveling employee uses.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Travelling employees connect from networks the company does not control, so the protection has to live on the device. HIPS runs on the host itself, monitoring and blocking malicious activity locally regardless of which network the laptop happens to be on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Isolation separates a system from the network. It is a containment response, and it would stop the employee working.",
+      "B": "Segmentation divides the corporate network into zones. It has no effect once the device leaves that network.",
+      "C": "An ACL controls access to a resource. It protects the resource, not the travelling device."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p230",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4305,12 +4275,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Modifying the device's file structure to gain root access and install unauthorized software describes jailbreaking.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Altering the device's underlying file structure to obtain administrator permissions is removing the manufacturer's restrictions, which is jailbreaking. Once that is done, unauthorised software such as a keylogger can be installed with full privilege.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants uncleared.",
+      "B": "Bloatware is unwanted preinstalled software. It ships with the device rather than being installed by modifying the OS.",
+      "C": "Side loading installs an app from outside the official store. That does not require root access or changing the file structure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p232",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4343,12 +4317,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "ARP poisoning is a basic attack that does not require advanced skills or tools, making it a common method used by unskilled attackers (also known as \"script kiddies\") to disrupt network operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "ARP poisoning needs no real skill — the tools are free and point-and-click — and knocking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points at an unskilled attacker, typically a student.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
+      "C": "Credential stuffing replays breached username and password pairs against a login. It is an attack technique, not a threat actor.",
+      "D": "DMARC failure is an email authentication result. It is neither an actor nor related to ARP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p233",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4390,51 +4368,18 @@ export const domain2Questions = [
       "A",
       "C"
     ],
-    "explanation": "Removing default applications reduces the attack surface by eliminating unnecessary software that could be exploited. Disabling Telnet is essential because it is an insecure protocol, and leaving it enabled can create vulnerabilities within the container.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hardening a container image means shrinking it to only what the application needs. Removing default applications eliminates software that would otherwise need patching and could be abused, and disabling Telnet removes a plaintext remote access protocol that has no place in a modern image.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Installing a NIPS adds a network security appliance. It is not something you bake into a container image.",
+      "D": "Reconfiguring DNS changes name resolution. It is a configuration choice, not a hardening step.",
+      "E": "Adding an SFTP server introduces another listening service, which enlarges the attack surface.",
+      "F": "Deleting the public certificate would break the container's ability to establish trusted TLS connections."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p233",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0545",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To track the status of patching installations"
-      },
-      {
-        "key": "B",
-        "text": "To find shadow IT cloud deployments"
-      },
-      {
-        "key": "C",
-        "text": "To continuously monitor hardware inventory"
-      },
-      {
-        "key": "D",
-        "text": "To hunt for active attackers in the network"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Daily vulnerability scans help identify unpatched vulnerabilities on corporate endpoints, allowing the security analyst to verify that patches are being installed and to track the effectiveness and status of patch management.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p234",
-    "needsReview": true,
-    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4466,60 +4411,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The input \"10 OR 1=1\" is a common SQL injection technique designed to manipulate SQL queries, allowing unauthorized access or retrieval of data by altering the logic of the query.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "OR 1=1 is a tautology appended to a query so the WHERE clause is always true, returning rows the user should never see. Injecting SQL logic through an input field is the textbook signature of SQL injection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "cat /etc/shadow is a Linux command reading the password hash file. That is command execution, not SQL.",
+      "B": "dig is a DNS lookup utility. It performs name resolution.",
+      "C": "cd ../../../ climbs directories, which is directory traversal rather than an injected query."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p235",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0556",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "multi",
-    "question": "An employee decides to collect PII data from the company's system for personal use. The employee compresses the data into a single encrypted file before sending the file to their personal email. The security department becomes aware of the attempted misuse and blocks the attachment from leaving the corporate environment.\nWhich of the following types of employee training would most likely reduce the occurrence of this type of issue? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Privacy legislation"
-      },
-      {
-        "key": "B",
-        "text": "Social engineering"
-      },
-      {
-        "key": "C",
-        "text": "Risk management"
-      },
-      {
-        "key": "D",
-        "text": "Company compliance"
-      },
-      {
-        "key": "E",
-        "text": "Phishing"
-      },
-      {
-        "key": "F",
-        "text": "Remote work"
-      }
-    ],
-    "correct": [
-      "A",
-      "D"
-    ],
-    "explanation": "Privacy legislation - Teaching employees the legal obligations for handling PII (e.g., GDPR, HIPAA) makes them aware that personal use/transfer is prohibited and punishable.\nCompany compliance - Training on internal policies and acceptable-use rules reinforces exactly what the organization allows or forbids with company data, reducing intentional misuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p238",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4551,12 +4453,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Smishing is phishing delivered via SMS/text messages; the malicious text lured the user to a fake bank site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Smishing is phishing delivered over SMS. A text message carrying a link to a counterfeit bank login is that attack precisely — the channel is what distinguishes it from other phishing variants.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Impersonation is posing as a trusted party, which the fake bank site does. But the question asks for the attack type, and the SMS delivery makes it smishing.",
+      "B": "Phishing is the general category, conventionally by email.",
+      "C": "Vishing is phishing by voice call. No call was made."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p239",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4589,12 +4495,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Coordinated ransomware campaigns for profit are characteristic of organized crime groups - criminal enterprises motivated by financial gain rather than ideology or national interest.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A coordinated group running repeated ransomware campaigns against targets chosen for maximum payout is a criminal enterprise operating for profit. That combination of organisation, repetition and financial motive defines organised crime.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Nation-state actors pursue espionage, disruption or strategic advantage. Revenue is not the objective.",
+      "C": "Shadow IT is unsanctioned technology used inside an organisation. It is not an attacker at all.",
+      "D": "Hacktivism attacks to advance a cause. Extorting money would undercut the message."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p240",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false

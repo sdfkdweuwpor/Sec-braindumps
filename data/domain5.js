@@ -3993,12 +3993,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A third-party audit report (such as a SOC 2 or ISO 27001 certification) provides independent validation of the vendor's security controls and assurance of its security posture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Buying a SaaS product means trusting someone else's controls, so the analyst needs independent evidence rather than the vendor's own claims. A third-party audit report such as SOC 2 or ISO 27001 is an external auditor's opinion on whether those controls exist and work.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A service-level agreement commits the vendor to performance levels such as uptime. It says nothing about security controls.",
+      "C": "A statement of work defines deliverables for a specific engagement. It is a project document.",
+      "D": "A data privacy agreement sets out how personal data will be handled. Important, but it states obligations rather than evidencing that controls operate."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p231",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.682,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4031,12 +4035,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A thorough analysis of the supply chain helps ensure that all hardware is sourced from legitimate, certified vendors, reducing the risk of acquiring counterfeit equipment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Counterfeit hardware enters through the procurement path, so the defence is understanding that path. Supply chain analysis maps who the suppliers and their suppliers are, verifies certification, and establishes where substitution could occur.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A corporate acquisition policy states rules for purchasing. It sets expectations without verifying who is actually in the chain.",
+      "C": "A right-to-audit clause lets you inspect a vendor. Useful, but it covers direct vendors rather than the depth of the chain behind them.",
+      "D": "Penetration testing every supplier assesses their security posture. It is disproportionate and tests the wrong thing — counterfeiting is a provenance issue, not an intrusion one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p235",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.3,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4044,8 +4052,8 @@ export const domain5Questions = [
   {
     "id": "q0551",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "After completing onboarding at a company and reviewing the company's handbooks and AUP an employee downloads an unapproved application on a company desktop.\nWhich of the following is the best course of action tor the company to take?",
     "choices": [
@@ -4069,51 +4077,69 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Focused training helps the employee understand the risks and policies regarding software installation, reinforcing compliance and reducing the likelihood of future violations without being overly punitive.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The employee had read the handbook and the AUP and still installed unapproved software, which suggests the rules were acknowledged rather than understood. Focused training addresses that gap proportionately, correcting behaviour without escalating a first-time policy breach.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Educating the manager misdirects the remedy at someone who did not commit the breach.",
+      "B": "Silently uninstalling the software removes the symptom and teaches nothing — the employee will simply reinstall it.",
+      "D": "Termination is grossly disproportionate for a first installation of an unapproved application."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p236",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0553",
+    "id": "q0556",
     "domain": 5,
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
-    "type": "single",
-    "question": "An organization has published a list of domains that end users are not authorized to visit on company devices in order to mitigate data loss or installation or malicious code. A security analyst observes multiple successful attempts to reach a new suspicious domain from an end user's workstation.\nWhich of the following options can best prevent future access to unauthorized domains?",
+    "type": "multi",
+    "question": "An employee decides to collect PII data from the company's system for personal use. The employee compresses the data into a single encrypted file before sending the file to their personal email. The security department becomes aware of the attempted misuse and blocks the attachment from leaving the corporate environment.\nWhich of the following types of employee training would most likely reduce the occurrence of this type of issue? (Choose two.)",
     "choices": [
       {
         "key": "A",
-        "text": "Assign user awareness training."
+        "text": "Privacy legislation"
       },
       {
         "key": "B",
-        "text": "Modify the unauthorized content policy."
+        "text": "Social engineering"
       },
       {
         "key": "C",
-        "text": "Deploy an allow list."
+        "text": "Risk management"
       },
       {
         "key": "D",
-        "text": "Update the proxy filters."
+        "text": "Company compliance"
+      },
+      {
+        "key": "E",
+        "text": "Phishing"
+      },
+      {
+        "key": "F",
+        "text": "Remote work"
       }
     ],
     "correct": [
+      "A",
       "D"
     ],
-    "explanation": "Updating the proxy filters will block access to the new suspicious domain at the network level, effectively preventing users from reaching unauthorized or malicious websites in the future.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The employee knew what they were doing and took steps to hide it, so the training gap is about consequences and rules rather than technique. Privacy legislation makes clear that moving PII for personal use is unlawful, and compliance training makes clear it breaches company policy with disciplinary consequences.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Social engineering training covers manipulation by an attacker. Nobody manipulated this employee.",
+      "C": "Risk management training is aimed at those assessing and treating organisational risk, not at deterring misuse.",
+      "E": "Phishing training addresses fraudulent messages. No message was involved.",
+      "F": "Remote work training covers working securely away from the office. The misuse would happen anywhere."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p237",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
+    "source": "SY0-701_en.pdf#p238",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4145,12 +4171,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Exercising the right to be forgotten compels the provider to erase your stored personal data from its systems; simply deleting the app, resetting a device, or even closing the account may leave data retained in backups or archives.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Closing an account or deleting an app removes your access, not the provider's copy of your data. Exercising the right to be forgotten obliges the provider to erase the personal data it holds, including copies in its systems, which is the only option that actually removes it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Uninstalling the application removes it from your device. The provider's servers are untouched.",
+      "C": "A factory reset wipes your device. Again it has no effect on data held by the service.",
+      "D": "Terminating the account closes it, but providers routinely retain data in backups and archives afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p238",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

@@ -3858,44 +3858,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0529",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to configure on the MDM before allowing access to corporate resources?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Device fingerprinting"
-      },
-      {
-        "key": "B",
-        "text": "Compliance attestation"
-      },
-      {
-        "key": "C",
-        "text": "NAC"
-      },
-      {
-        "key": "D",
-        "text": "802.1X"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Compliance attestation via MDM verifies device posture (OS version, policies, certificates) before granting access, ensuring only compliant devices leave the quarantine subnet and reach corporate resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p228",
-    "needsReview": true,
-    "inferenceConfidence": 0.125,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0531",
     "domain": 3,
     "objective": "3.2",
@@ -3923,12 +3885,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A VPN establishes an encrypted tunnel over untrusted networks, ensuring the executive can securely access corporate internal resources from any location.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hotel guest Wi-Fi is an untrusted network where anyone could be watching. A VPN builds an encrypted tunnel from the laptop back to the corporate network, so the traffic is unreadable locally and internal resources are reachable without publishing them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EAP is an authentication framework used inside network access protocols. It authenticates but creates no tunnel to corporate resources.",
+      "B": "A jump server is a controlled entry point for administrative access. The executive needs ordinary resource access, and reaching the jump server still requires a secure path.",
+      "C": "A perimeter network isolates public-facing services. Internal resources should not be placed there."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p229",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3961,12 +3927,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An air-gapped architecture physically isolates critical systems from all other networks, ensuring they cannot be accessed remotely.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Air-gapped means there is no network connection at all between the critical systems and anything else. Because no path exists, remote access privileges are irrelevant — there is nothing to connect to.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Segmentation divides a network logically. Paths still exist between zones, controlled rather than absent.",
+      "B": "Virtualised describes workloads running as guests on shared hardware. Those guests remain networked.",
+      "D": "Serverless runs code on provider-managed infrastructure, which is inherently reachable over the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p229",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3999,12 +3969,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SASE provides a cloud-delivered, inline secure web gateway with URL reputation, content inspection, and categorization for remote users without backhauling traffic through on-premises firewalls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The requirement is inline checking of reputation, content and category for users who are remote. SASE delivers a cloud secure web gateway that inspects traffic at the provider's edge, so remote users are filtered without their traffic being dragged back to a head office appliance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A VPN encrypts the path back to the corporate network. It provides connectivity, not URL inspection.",
+      "C": "An NGFW can do all of this, but it sits on-premises, so remote users must be backhauled to it — which the question implicitly rules out by emphasising remote users.",
+      "D": "SD-WAN optimises traffic across WAN links between sites. It is a connectivity technology, not a web security one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p230",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4037,89 +4011,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An air-gapped architecture physically or logically isolates systems from external and internal networks, preventing direct connectivity and requiring manual methods, such as portable devices, to perform updates.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "No connection to the internet and none to the local network, with updates carried in by hand on portable media, is the definition of an air gap. The physical separation is what forces the manual process.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Microservices is an application architecture splitting software into small services. It says nothing about network isolation.",
+      "C": "Software-defined networking manages connectivity programmatically — the opposite of removing it.",
+      "D": "Serverless runs code on provider infrastructure, which is inherently network-connected."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p233",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0547",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "The internal security team is investigating a suspicious attachment and wants to perform a behavior analysis in an isolated environment.\nWhich of the following will the security team most likely use?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Sandbox"
-      },
-      {
-        "key": "B",
-        "text": "Jump server"
-      },
-      {
-        "key": "C",
-        "text": "Work computer"
-      },
-      {
-        "key": "D",
-        "text": "Container"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A sandbox provides an isolated environment where suspicious files can be safely executed and monitored for malicious behavior without risking the security of the production network or systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p235",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0550",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "A company identified the potential for malicious insiders to harm the organization.\nWhich of the following measures should the organization implement to reduce this risk?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Unified threat management"
-      },
-      {
-        "key": "B",
-        "text": "Web application firewall"
-      },
-      {
-        "key": "C",
-        "text": "User behavior analytics"
-      },
-      {
-        "key": "D",
-        "text": "Intrusion detection system"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "User behavior analytics monitors and analyzes user activities to detect anomalies or suspicious behavior, making it effective in identifying and reducing the risk posed by malicious insiders.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p236",
-    "needsReview": true,
-    "inferenceConfidence": 0.73,
     "needsExplanation": false,
     "keyCorrected": false
   },

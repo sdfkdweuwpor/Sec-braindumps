@@ -3280,82 +3280,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0533",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "A security team installs an IPS on an organization's network and needs to configure the system to detect and prevent specific network attacks.\nWhich of the following settings should the team configure first within the IPS?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Allow list policies"
-      },
-      {
-        "key": "B",
-        "text": "Packet inspection"
-      },
-      {
-        "key": "C",
-        "text": "Logging and reporting"
-      },
-      {
-        "key": "D",
-        "text": "Firewall rules"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Packet inspection is the core functionality of an IPS, as it enables the system to analyze network traffic against signatures and anomalies to detect and prevent specific attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p229",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0536",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "Which of the following is used to monitor suspicious traffic in real time between multiple systems within an organization?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "NetFlow"
-      },
-      {
-        "key": "B",
-        "text": "Infrared sensors"
-      },
-      {
-        "key": "C",
-        "text": "Development network"
-      },
-      {
-        "key": "D",
-        "text": "Honeynet"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "NetFlow captures and analyzes real-time traffic flow data across multiple systems, enabling detection of suspicious patterns and anomalies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p230",
-    "needsReview": true,
-    "inferenceConfidence": 0.714,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0539",
     "domain": 1,
     "objective": "1.4",
@@ -3383,12 +3307,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing applies mathematical algorithms to transform passwords into unique, fixed-length values, ensuring the original password cannot be reversed from the hash.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing runs the password through a one-way mathematical function producing a fixed-length digest that is effectively unique to that input and cannot be reversed. Storing the digest rather than the password is what protects it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Adding extra characters to increase length describes a password policy or, if random and per-user, salting. It is not what hashing does.",
+      "B": "Generating a temporal token describes one-time passwords. Those expire; hashes do not.",
+      "D": "A rainbow table is a precomputed lookup attackers use to reverse hashes. Creating one would be attacking passwords, not protecting them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p232",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

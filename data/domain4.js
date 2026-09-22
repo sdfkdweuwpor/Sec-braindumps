@@ -6962,6 +6962,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0527",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "Which of the following describes the reason for using an MDM solution to prevent jailbreaking?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To secure end-of-life devices from incompatible firmware updates"
+      },
+      {
+        "key": "B",
+        "text": "To avoid hypervisor attacks through VM escape"
+      },
+      {
+        "key": "C",
+        "text": "To eliminate buffer overflows at the application layer"
+      },
+      {
+        "key": "D",
+        "text": "To prevent users from changing the OS of mobile devices"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Jailbreaking removes the manufacturer's restrictions so the user gains privileged control over the mobile operating system. MDM enforces device policy that detects and blocks those modifications, which is why it is deployed against this specific risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "End-of-life devices and firmware compatibility are lifecycle and patching concerns. They have nothing to do with a user deliberately unlocking the OS.",
+      "B": "VM escape is a hypervisor boundary failure in virtualised server environments. Mobile devices are not hypervisors.",
+      "C": "Buffer overflows are memory-handling defects in application code. MDM does not alter how applications manage memory."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p227",
+    "needsReview": false,
+    "inferenceConfidence": 0.769,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0528",
     "domain": 4,
     "objective": "4.3",
@@ -6989,21 +7031,151 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "With no patch available for a zero-day, deploying compensating controls, such as enhanced monitoring, intrusion prevention, and strict access restrictions, reduces risk while keeping critical servers online.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day has no patch, and the servers cannot come offline. That leaves only risk reduction around the flaw: tighter access restrictions, intrusion prevention and heightened monitoring, applied until a vendor fix exists. Those are compensating controls by definition.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containerising and migrating carries the same vulnerable software into a new wrapper. The flaw travels with it.",
+      "B": "Removing and sandboxing the servers takes mission-critical systems offline, which the high-availability requirement forbids.",
+      "D": "Patching as quickly as possible is the right instinct, but there is no patch — that is what zero-day means."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p227",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0529",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to configure on the MDM before allowing access to corporate resources?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Device fingerprinting"
+      },
+      {
+        "key": "B",
+        "text": "Compliance attestation"
+      },
+      {
+        "key": "C",
+        "text": "NAC"
+      },
+      {
+        "key": "D",
+        "text": "802.1X"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The question asks what to configure on the MDM. Compliance attestation is the MDM function that checks a device's posture — OS version, encryption, policies, certificates — and reports whether it meets the standard, which is what justifies releasing it from quarantine.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Device fingerprinting identifies what a device is. Knowing it is an Android tablet says nothing about whether it is safely configured.",
+      "C": "NAC is the network-side control enforcing the quarantine. It is a separate system, not something configured on the MDM.",
+      "D": "802.1X authenticates devices at the network port. Again a network control rather than an MDM setting."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p228",
+    "needsReview": false,
+    "inferenceConfidence": 0.125,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0533",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security team installs an IPS on an organization's network and needs to configure the system to detect and prevent specific network attacks.\nWhich of the following settings should the team configure first within the IPS?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Allow list policies"
+      },
+      {
+        "key": "B",
+        "text": "Packet inspection"
+      },
+      {
+        "key": "C",
+        "text": "Logging and reporting"
+      },
+      {
+        "key": "D",
+        "text": "Firewall rules"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "An IPS works by examining the contents of traffic passing through it and matching against signatures and anomaly rules. Packet inspection is that core engine, so it has to be configured before any detection or prevention decision can be made.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Allow list policies define permitted sources or destinations. They are a coarse filter applied around inspection, not the detection mechanism.",
+      "C": "Logging and reporting record what the IPS found. They are essential but come after detection works.",
+      "D": "Firewall rules belong to a different device and filter on addresses and ports rather than content."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p229",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0536",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "Which of the following is used to monitor suspicious traffic in real time between multiple systems within an organization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "NetFlow"
+      },
+      {
+        "key": "B",
+        "text": "Infrared sensors"
+      },
+      {
+        "key": "C",
+        "text": "Development network"
+      },
+      {
+        "key": "D",
+        "text": "Honeynet"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "NetFlow records metadata about every conversation crossing the network — source, destination, ports, volume and timing — across many systems at once. That makes it the tool for spotting suspicious traffic patterns between systems in real time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Infrared sensors detect physical movement. They are a physical security control.",
+      "C": "A development network is an environment for building software. It is not a monitoring capability.",
+      "D": "A honeynet is a decoy environment that attracts attackers. It observes interaction with the decoy rather than real traffic between production systems."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p230",
+    "needsReview": false,
+    "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0537",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A remote employee navigates to a shopping website on their company-owned computer. The employee clicks a link that contains a malicious file.\nWhich of the following would prevent this file from downloading?",
     "choices": [
@@ -7027,12 +7199,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An EDR solution actively monitors and blocks malicious behaviors at the endpoint, including intercepting and preventing unauthorized or malicious file downloads, before they can reach the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The malicious file has to execute or be written on the endpoint. EDR watches process and file behaviour on the device itself and can block a malicious download or its execution before it takes hold.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DLP watches sensitive data leaving the organisation. It looks at outbound content, not inbound malware.",
+      "B": "FIM alerts when protected files are modified. It reports changes after the fact and does not block downloads.",
+      "C": "NAC decides whether a device may join the network. Once the company laptop is connected, NAC has no further view."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p231",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7065,13 +7241,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "E-discovery involves identifying, preserving, and collecting electronically stored information to comply with legal requests during investigations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "E-discovery is the process of identifying, preserving and producing electronically stored information in response to legal requests. Responding to a legal demand during a pending investigation is precisely what it covers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "User provisioning creates and manages accounts. It is an identity management activity.",
+      "C": "Exporting firewall logs is one possible step within a wider process. It is a technical task, not the discipline named.",
+      "D": "Root cause analysis determines why an incident happened. It serves the organisation's own improvement, not a legal request."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p232",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.704,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0545",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To track the status of patching installations"
+      },
+      {
+        "key": "B",
+        "text": "To find shadow IT cloud deployments"
+      },
+      {
+        "key": "C",
+        "text": "To continuously monitor hardware inventory"
+      },
+      {
+        "key": "D",
+        "text": "To hunt for active attackers in the network"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Running the same scan every day produces a moving picture of which vulnerabilities are disappearing and which are not. That is how a security team verifies patches are actually being installed across the estate rather than merely being scheduled.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Shadow IT cloud deployments live outside the corporate network. An endpoint scan will not discover someone's unsanctioned cloud account.",
+      "C": "Hardware inventory is maintained by asset management tooling. A vulnerability scanner reports software state.",
+      "D": "Hunting for active attackers is threat hunting, which examines behaviour and telemetry rather than vulnerability presence."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p234",
+    "needsReview": false,
+    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7103,13 +7325,101 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Rescanning the server after applying a security patch confirms whether the vulnerability has been successfully remediated and is no longer detected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Applying a patch is a claim; a rescan is the proof. Re-running the scan against the server shows the finding no longer appears, which is how remediation is validated and closed out.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Dynamic analysis tests a running application for flaws. It is an application testing technique, not patch verification.",
+      "C": "Reporting communicates what was done. It documents the outcome rather than establishing it.",
+      "D": "Static analysis reads source code. Patching a server does not involve reviewing its vendor's source."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p234",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0547",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "The internal security team is investigating a suspicious attachment and wants to perform a behavior analysis in an isolated environment.\nWhich of the following will the security team most likely use?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Sandbox"
+      },
+      {
+        "key": "B",
+        "text": "Jump server"
+      },
+      {
+        "key": "C",
+        "text": "Work computer"
+      },
+      {
+        "key": "D",
+        "text": "Container"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A sandbox is a deliberately isolated environment built for detonating suspicious files and recording what they do. Behaviour analysis requires actually running the sample, and the sandbox contains the consequences.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A jump server is a hardened administrative access point. Running malware on it would compromise the route into everything else.",
+      "C": "A work computer is a production endpoint. Executing the attachment there is exactly the outcome the team is trying to avoid.",
+      "D": "A container provides process isolation for deploying applications, but it shares the host kernel and is not built to contain deliberately hostile code."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p235",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0550",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A company identified the potential for malicious insiders to harm the organization.\nWhich of the following measures should the organization implement to reduce this risk?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Unified threat management"
+      },
+      {
+        "key": "B",
+        "text": "Web application firewall"
+      },
+      {
+        "key": "C",
+        "text": "User behavior analytics"
+      },
+      {
+        "key": "D",
+        "text": "Intrusion detection system"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Insiders act with valid credentials, so nothing they do looks unauthorised. User behaviour analytics builds a baseline for each person and flags deviation — unusual hours, unusual systems, unusual volumes — which is the only reliable signal a malicious insider produces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Unified threat management bundles perimeter security functions. It faces outward at external threats.",
+      "B": "A web application firewall protects an application from malicious requests. It sees attacks, not misuse of legitimate access.",
+      "D": "An intrusion detection system alerts on attack patterns in traffic. An insider browsing permitted systems generates ordinary traffic."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p236",
+    "needsReview": false,
+    "inferenceConfidence": 0.73,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7141,21 +7451,67 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A reuse policy prevents users from using old passwords, which helps protect accounts even if previous passwords are compromised and available on the dark web.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The password still worked two years after it was first used and later leaked. A reuse policy prevents old passwords being set again, so a credential that appears in a breach dump cannot still be the live one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privileged access management secures administrative accounts. This was a standard user.",
+      "B": "Account lockout stops repeated guessing. The attacker knew the correct password and needed no guesses.",
+      "D": "Complexity requirements make passwords harder to guess. A leaked password is disclosed rather than guessed, so complexity is irrelevant."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p236",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.474,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0553",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An organization has published a list of domains that end users are not authorized to visit on company devices in order to mitigate data loss or installation or malicious code. A security analyst observes multiple successful attempts to reach a new suspicious domain from an end user's workstation.\nWhich of the following options can best prevent future access to unauthorized domains?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Assign user awareness training."
+      },
+      {
+        "key": "B",
+        "text": "Modify the unauthorized content policy."
+      },
+      {
+        "key": "C",
+        "text": "Deploy an allow list."
+      },
+      {
+        "key": "D",
+        "text": "Update the proxy filters."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorised domains are treated — blocks access at the network level for everyone, not just this user.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Awareness training helps users recognise suspicious sites. It relies on judgement rather than enforcing the restriction.",
+      "B": "Modifying the unauthorised content policy changes the written rule. A policy does not block anything technically.",
+      "C": "An allow list permitting only approved domains would work but is a drastic change to how the whole organisation browses, far beyond preventing access to this domain."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p237",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0554",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "Users report that certain processes from a batch job are not working correctly and various resources are unavailable. An application owner provides the source and destination address information, and the errors are replicated for troubleshooting purposes.\nWhich of the following should the security team perform next to help isolate the ongoing issue?",
     "choices": [
@@ -7179,12 +7535,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Packet capture allows the security team to analyze network traffic between the source and destination addresses, helping to identify communication issues or resource availability problems in real time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The team has the source and destination addresses and can reproduce the error. A packet capture on that conversation shows exactly what is being sent, what comes back and where it fails, which isolates whether the problem is network, service or application.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration testing attempts to breach systems. It is an offensive assessment, not a troubleshooting technique.",
+      "C": "A vulnerability scan enumerates weaknesses. It says nothing about why a batch job cannot reach a resource.",
+      "D": "Firewall rule analysis is a reasonable next step, but it inspects configuration in the abstract. The capture shows what is actually happening on the wire."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p237",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7217,12 +7577,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Load balancer logs provide detailed information about incoming web traffic and distribution to the front-end servers, making them the most relevant source to diagnose excessive traffic and availability issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The load balancer sits directly in front of the web servers and records every request it distributes, with source addresses, rates and response behaviour. For excessive traffic against those servers it holds the most detailed and most relevant picture.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Router logs show routing and interface activity. They see traffic at a coarser level than individual web requests.",
+      "C": "Switch logs cover layer 2 forwarding within a segment. They reveal little about application traffic volume.",
+      "D": "Firewall logs record permitted and denied connections and are genuinely useful, but the load balancer holds the per-request detail for the servers actually affected."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p238",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.743,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7255,12 +7619,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A DNS filter blocks lookups to known bad domains, stopping users from reaching them, and a centralized TLS (HTTPS) inspection proxy lets the organization decrypt/inspect HTTP/HTTPS traffic for malicious content before re-encrypting it outbound.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two requirements need two controls. DNS filtering refuses to resolve known-malicious domains, so users cannot reach them however they got the link. A centralised TLS inspection proxy decrypts and examines HTTP and HTTPS traffic for malicious content, which is the only way to inspect encrypted web traffic.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS in blocking mode inspects traffic but works on signatures rather than domain reputation, and secure protocol enforcement makes traffic harder to inspect, not easier.",
+      "B": "EDR and user behaviour analytics detect anomalies after the fact on endpoints. Neither prevents navigation nor inspects web content inline.",
+      "D": "NAC controls which devices may connect, and blocking malicious port numbers ignores that virtually all of this traffic uses 443."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p239",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.88,
     "needsExplanation": false,
     "keyCorrected": false
