@@ -6643,12 +6643,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "After applying fixes, rescanning is essential to verify that the remediated systems no longer exhibit the previously detected vulnerabilities, ensuring true compliance with the audit findings.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Remediation is not complete until it is proven. A rescan re-tests the same systems and shows the findings no longer appear, which is the evidence an auditor needs that the audit items were genuinely closed rather than merely worked on.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confirming false positives happens during analysis, before remediation. It decides what needs fixing, not whether the fix worked.",
+      "B": "Reviewing the attack surface is a broader design activity. It does not verify these specific findings.",
+      "D": "Reporting the remediations communicates what was done. A report is only credible once a rescan has confirmed it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p210",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6681,51 +6685,17 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A bug bounty program leverages a large, diverse community of security researchers who use a wide range of testing methods to uncover vulnerabilities. This crowd-sourced approach maximizes the chances of finding any possible issue, far beyond what a single scan or internal team could achieve.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The wording is 'at any cost' and 'any possible issues'. A bug bounty puts a large, varied pool of external researchers against the site continuously, using techniques and creativity no single scan or internal team would apply — which maximises the chance of finding something obscure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Permission restrictions limit who can reach what. That hardens the site but discovers nothing.",
+      "C": "A vulnerability scan finds known, catalogued issues. It is fast and cheap but only sees what its plugins already know about.",
+      "D": "Reconnaissance is information gathering, usually the first phase of an attack or test. It finds exposure, not exploitable flaws."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p211",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0494",
-    "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media.\nWhich of the following policies will the HR employee most likely need to review after this incident?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hybrid work environment"
-      },
-      {
-        "key": "B",
-        "text": "Operation security"
-      },
-      {
-        "key": "C",
-        "text": "Data loss prevention"
-      },
-      {
-        "key": "D",
-        "text": "Social engineering"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Operational security (OPSEC) governs how employees protect sensitive information in their day-to-day activities, such as ensuring screens are locked and confidential emails aren't left exposed in shared spaces. Reviewing OPSEC best practices would help the HR employee prevent accidental disclosure in a home environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p211",
-    "needsReview": true,
-    "inferenceConfidence": 0.529,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6757,12 +6727,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Performing a wireless site survey lets you identify where your signal is spilling outside the building so you can adjust access point placement, transmit power, and antenna orientation to reduce coverage and thus visibility in surrounding areas.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The signal is reaching neighbouring buildings, which is a coverage problem. A site survey measures where the signal actually propagates so access point placement, transmit power and antenna direction can be adjusted to keep coverage inside the premises.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Mobile device management controls enrolled devices. It has no influence on how far a radio signal travels.",
+      "B": "Pre-shared keys control who may join. They stop unauthorised association but the network is still visible and attackable from outside.",
+      "C": "A heat map is the visual output produced from survey measurements. It is a deliverable rather than the activity that fixes the spill."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p214",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6795,12 +6769,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Installing a host-based content filtering solution ensures web protection for remote users even when the VPN is down, as filtering and protection occur directly on the user's device regardless of connection to the corporate network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The protection fails whenever the tunnel drops, because filtering lives on-premises. A host-based content filter runs on the laptop itself, so it applies regardless of whether the VPN is up, where the user is, or how they reach the internet.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Network access control decides which devices may join a network. It provides no web filtering.",
+      "B": "Pointing the local gateway at the VPN does not help when the VPN is the thing that failed.",
+      "C": "A public NAT to the on-premises proxy exposes an internal service directly to the internet, which trades one problem for a worse one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p215",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6833,13 +6811,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An API (Application Programming Interface) is the best option for automating tasks and enabling seamless data sharing between different programs, allowing for programmatic interaction and automation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An API is the defined interface through which one program requests data or actions from another. Automating an exchange between programs means calling their APIs, which is what makes integration scriptable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SOAR is a platform that orchestrates security workflows. It is a consumer of APIs rather than the mechanism for sharing data.",
+      "C": "SFTP transfers files securely. It moves whole files on a schedule rather than exchanging data programmatically.",
+      "D": "RDP provides an interactive remote desktop for a person. It automates nothing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p215",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0506",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "An auditor notices that, before logging into the firewall, an employee opens a document in a shared folder that contains administrative credentials.\nWhich of the following should the auditor recommend implementing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Situational awareness"
+      },
+      {
+        "key": "B",
+        "text": "Operational security"
+      },
+      {
+        "key": "C",
+        "text": "Password management"
+      },
+      {
+        "key": "D",
+        "text": "Acceptable use policy"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Administrative credentials sitting in a document on a shared folder are readable by anyone with access to that folder. A password management solution stores them encrypted, releases them under control and supports rotation, which removes the plaintext copy entirely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Situational awareness is general alertness to surroundings. It does not give the employee anywhere better to keep the credentials.",
+      "B": "Operational security is the practice of not exposing sensitive information. It names the failing without supplying the remedy.",
+      "D": "An acceptable use policy states rules. Writing down that credentials must not be shared does not provide a safe place to store them."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p216",
+    "needsReview": false,
+    "inferenceConfidence": 0.476,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6880,12 +6904,17 @@ export const domain4Questions = [
       "A",
       "E"
     ],
-    "explanation": "A bug bounty program can improve an organization's reputation by demonstrating a proactive approach to security.\nIt enables quicker discovery of vulnerabilities by leveraging external researchers to identify issues faster than internal teams alone.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A bounty puts many independent researchers on the target at once, so flaws surface far sooner than an internal team working alone would find them. Running one publicly also signals that the organisation takes security seriously, which improves how it is perceived.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Zero-days are unknown flaws with no patch. A bounty may find some, but it cannot reduce how many exist.",
+      "C": "Workforce security awareness is improved by training. Bounties involve external researchers, not staff.",
+      "D": "Costs are not reduced — running a programme means paying rewards and triaging a stream of submissions.",
+      "F": "Patch management improves through process change. A bounty generates findings that the existing process must then handle."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p218",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6918,12 +6947,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data retention is the principle that mandates an organization to keep files or records for a specified period before disposing of them, often to meet legal or regulatory requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data retention is the requirement to keep records for a defined period — usually set by law or regulation — before they may be disposed of. Keeping files for a prescribed time is precisely what the principle mandates.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data verification confirms that data is accurate and complete. It concerns quality rather than lifespan.",
+      "B": "Data backups create recoverable copies. They protect against loss but are not the rule governing how long records are kept.",
+      "C": "Data archiving moves inactive data to cheaper long-term storage. It is a technique used to satisfy retention, not the principle itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p222",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

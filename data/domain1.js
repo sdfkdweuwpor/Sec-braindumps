@@ -2961,12 +2961,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Opening both SMB and RDP from the Internet into a dedicated VLAN is not a standard practice for production services or a simple jump host (which would only require RDP/SSH). Instead, exposing these services in a controlled network segment is characteristic of a honeynet, designed to lure, observe, and analyze attacker behavior against file-sharing and remote- access services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Deliberately exposing SMB and RDP — two of the most attacked services on the internet — into an isolated VLAN makes no sense for production. It makes complete sense as bait: a honeynet, built to attract attackers and study how they behave against file sharing and remote access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A new file-sharing site would be published over HTTPS, not raw SMB from the internet. Nobody exposes SMB deliberately for real users.",
+      "B": "A jump host needs one management protocol, typically SSH or RDP, and would be fronted by a VPN rather than opened to the world.",
+      "C": "A SASE integration moves security into the cloud and reduces direct inbound exposure. It would not require opening these ports."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p212",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2999,12 +3003,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A self-signed certificate is created and signed by the issuing organization itself rather than by an external Certificate Authority, making it an internally generated certificate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A self-signed certificate is signed with its own private key rather than by an external certificate authority, so the organisation generates and vouches for it internally. That is what makes it an internally sourced certificate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A digital signature is a cryptographic operation proving origin and integrity. It is not a certificate.",
+      "B": "An asymmetric key is a key pair component. Certificates carry public keys, but a key is not itself a certificate.",
+      "D": "A symmetric key is a single shared secret used for encryption. Certificates do not contain them."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p213",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3037,12 +3045,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing is used to confirm file integrity by generating a unique fixed-length value for the file; any change in the file alters the hash value, indicating integrity has been compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing produces a fixed-length digest that changes completely if any byte of the file changes. Comparing a recomputed hash against a trusted one confirms the file is unaltered, which is integrity verification.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Masking obscures parts of a value for display. It neither detects nor prevents modification.",
+      "B": "Encryption protects confidentiality. Ciphertext can still be tampered with, and encryption alone does not reveal it.",
+      "D": "Obfuscation makes content harder to interpret. It offers no way to verify that the content is unchanged."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p214",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3075,13 +3087,59 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A self-signed certificate is not trusted by browsers because it is not issued by a recognized certificate authority, leading to certificate warnings when users connect over HTTPS.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A browser trusts a certificate only if it chains to a certificate authority already in its trust store. A self-signed certificate has no such chain, so the browser cannot verify it and warns the user.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A wildcard certificate from a trusted CA works normally. A name mismatch would give a different error.",
+      "B": "Servers are not issued root certificates; roots sit in the trust store and sign other certificates.",
+      "C": "With no certificate at all the HTTPS connection would fail outright rather than producing a warning the user can click through."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p218",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0513",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "type": "single",
+    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure that it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Management review"
+      },
+      {
+        "key": "B",
+        "text": "Load testing"
+      },
+      {
+        "key": "C",
+        "text": "Maintenance notifications"
+      },
+      {
+        "key": "D",
+        "text": "Procedure updates"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Management review is the approval step — someone accountable examines the proposed change and its security impact before it is allowed to proceed. Objective 1.3 lists the approval process among the components a change must pass through. Note this question shares its stem with q0342 but offers entirely different choices, so the two have different correct answers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Load testing measures performance under demand. It is a quality activity that says nothing about security impact.",
+      "C": "Maintenance notifications tell users when a change is happening. That is communication during implementation, not a check beforehand.",
+      "D": "Procedure updates document the new state afterwards. They follow the change rather than gating it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p218",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3122,12 +3180,17 @@ export const domain1Questions = [
       "B",
       "F"
     ],
-    "explanation": "HIPS (Host-based Intrusion Prevention System) is a preventive control because it actively blocks or prevents malicious activities on a host.\nIt is also a detective control, as it monitors and detects suspicious activities or policy violations on the host system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "HIPS performs two functions simultaneously. It blocks malicious behaviour on the host, which is preventive, and it logs and alerts on what it observed, which is detective. Both are inherent to how the product works.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Directive controls instruct people how to behave. Software gives no instructions to staff.",
+      "C": "Physical controls act on the physical environment.",
+      "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
+      "E": "Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p220",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3160,12 +3223,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Effective change management includes having a backout plan, so that if a patch or change fails, systems can be restored to their previous, stable state.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A backout plan documents exactly how to reverse a change if it goes wrong, and having one agreed before implementation is a defining feature of effective change management. Without it a failed patch becomes an outage with no rehearsed way back.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Approving a change after deployment inverts the process — approval must gate the work, not rubber-stamp it.",
+      "C": "A spreadsheet is a tool choice. It can work at small scale but says nothing about whether the procedures are effective.",
+      "D": "An automatic bypass for security updates removes the control entirely. Urgency is handled by an expedited path with approval, not by skipping it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p220",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3198,12 +3265,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Password cracking attacks exploit weak cryptographic algorithms by attempting to guess or decrypt passwords through direct access to systems or password hashes, making use of vulnerabilities in the cryptography.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "With direct access to a system an attacker can obtain the stored password hashes. If those were produced with a weak or fast algorithm, candidate passwords can be tested at enormous speed until one matches — the weakness of the algorithm is what makes cracking practical.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An on-path attack intercepts traffic between two parties. It exploits network position, not local access to weak cryptography.",
+      "C": "Digital signing is a protective mechanism, not an attack.",
+      "D": "A side-channel attack infers secrets from timing, power draw or emissions. It targets the implementation and works even against strong algorithms."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p223",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false

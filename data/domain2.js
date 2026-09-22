@@ -3855,12 +3855,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When an insider steals classified defense information and passes it to a hostile organization, their primary motivation is intelligence gathering on behalf of that organization - classic espionage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Classified defence information handed to a hostile organisation is intelligence being passed to an adversary. That is espionage — the motivation is obtaining and delivering secrets, not money or disruption.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data exfiltration describes the act of removing the data. The question asks what motivated it.",
+      "C": "Financial gain would mean the worker was paid, which is plausible but not stated. What is stated is that defence secrets reached a hostile party.",
+      "D": "Blackmail coerces a victim with a threat. Nobody is being threatened here."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p212",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3893,51 +3897,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Privilege escalation occurs when an attacker, the guest user, gains higher-level permissions than originally assigned (being added to the administrator group), allowing access to classified resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A guest account ended up in the administrator group, and from there could read classified reports. Gaining rights beyond those originally assigned is privilege escalation, and the group membership change is the evidence of it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Credential replay reuses captured authentication material. The account here is the guest's own, just with more power.",
+      "C": "Directory traversal escapes an intended directory to read arbitrary files. Access was granted through permissions, not a path trick.",
+      "D": "Brute force guesses credentials repeatedly. No guessing occurred."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p212",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0498",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following sites offers immediate service restoration following a disaster?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Cloud-based"
-      },
-      {
-        "key": "B",
-        "text": "Hot"
-      },
-      {
-        "key": "C",
-        "text": "Warm"
-      },
-      {
-        "key": "D",
-        "text": "Cold"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A hot site is a fully configured, operational environment that mirrors the primary site, allowing immediate failover and near-instant service restoration after a disaster.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p213",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3969,12 +3939,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering hole attack compromises a website commonly visited by a specific group, such as developers, so when they visit the site, they are collectively targeted and potentially infected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A watering hole attack compromises a site the target group is known to visit, so the attacker does not have to reach each person individually. Choosing a site developers frequent lets one compromise hit the whole group.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting registers a lookalike domain and waits for mistyped addresses. It catches individuals at random rather than targeting a group.",
+      "C": "Denial of service makes a service unavailable. It disrupts rather than compromises.",
+      "D": "Credential replay reuses captured authentication material against a service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p216",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4007,12 +3981,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Shadow IT refers to the use of unauthorized devices, software, or systems, such as an employee adding a wireless router without approval, outside of official IT processes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An employee installing their own wireless router bypasses IT entirely, creating an unmanaged entry point nobody approved or monitors. Unsanctioned technology introduced by staff is shadow IT, and retraining rather than dismissal confirms it was unauthorised rather than malicious.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An unskilled attacker is an external actor using commodity tools. This was an employee acting for convenience.",
+      "B": "A hacktivist attacks to advance a cause. No ideological motive exists here.",
+      "C": "A nation-state conducts sophisticated, targeted operations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p217",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4045,12 +4023,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OS-based vulnerabilities are a significant concern because exploiting them can give an attacker access to core system functions, potentially impacting all applications and users on that system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The operating system sits beneath everything else on the machine. Exploiting it yields access to system functions shared by every application and user on that host, so the blast radius is the whole system rather than one program.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Vendor patch cadence varies and is a process concern. Major vendors patch regularly, so this is not the inherent problem.",
+      "C": "User trust in the OS is a factor in social engineering, but it does not explain why an OS flaw is technically more serious.",
+      "D": "OS vulnerabilities are not generally easier to exploit; modern operating systems carry substantial exploit mitigations."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p219",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4083,51 +4065,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape occurs when an attacker exploits a vulnerability in the hypervisor, allowing them to break out of the virtual machine and access the underlying host system's resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualised environment because it exposes every other guest on the host.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Cross-site scripting injects script into a web page rendered by a browser. There is no browser here.",
+      "C": "A malicious update delivers hostile code through the update channel. The attack described is a runtime injection against the hypervisor.",
+      "D": "SQL injection manipulates database queries. No database is involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p219",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0519",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A company is experiencing a high number of users who are clicking on email-based attacks even though those users have completed annual training. The company's Chief Security Officer wants to identify and reduce which users are phished the most often.\nWhich of the following will best achieve this result?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Begin a semiannual in-person training course with mandatory attendance. The users would perform exercises that simulate answering phone calls from attackers performing social engineering attacks."
-      },
-      {
-        "key": "B",
-        "text": "Deploy a product that would occasionally send users emails to simulate an attack. The product would alert the security team whenever a user dicks links in the product's emails."
-      },
-      {
-        "key": "C",
-        "text": "Hire a security consultant to give a personalized seminar at the company. The consultant would share stones of famous companies that had breaches and explain the ramifications of those events."
-      },
-      {
-        "key": "D",
-        "text": "Require an MFA when signing in to the email client. Users would need to authenticate once a week at a minimum and daily when working remotely. •"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Deploying a simulated phishing product allows the company to directly measure which users are susceptible to phishing attacks by tracking who clicks on simulated malicious links, enabling targeted awareness and training efforts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p220",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4159,12 +4107,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An application allow list ensures that only approved applications can be installed or run on a device, effectively preventing the installation of unwanted bloatware.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Bloatware is unwanted software that ships with or gets installed onto a device. An application allow list permits only approved executables to run, so anything not on the list — including preinstalled junk — is blocked regardless of how it arrived.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling ports and protocols closes network services. Bloatware is locally installed software.",
+      "C": "Default password changes remove well-known credentials. Unrelated to what software runs.",
+      "D": "Access control permissions govern who may reach which resources. They do not determine which applications may execute."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p221",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.786,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4197,12 +4149,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs show the same employee account accessing services from geographically distant locations (Atlanta and Beijing) within a short time frame, which is not physically possible, this is known as impossible travel.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One account authenticating from Atlanta and then Beijing within a window no aircraft could cover is physically impossible. That contradiction between location and elapsed time is the impossible travel indicator, and it strongly suggests the credentials are being used by someone else.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SMTP replay is the abuse of a mail server to relay messages. It concerns mail, not login geography.",
+      "C": "Directory traversal escapes an intended directory to read arbitrary files on a web server.",
+      "D": "Cross-site request forgery tricks a browser into submitting an unintended request using an existing session."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p222",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false

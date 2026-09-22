@@ -3690,6 +3690,48 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0498",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following sites offers immediate service restoration following a disaster?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cloud-based"
+      },
+      {
+        "key": "B",
+        "text": "Hot"
+      },
+      {
+        "key": "C",
+        "text": "Warm"
+      },
+      {
+        "key": "D",
+        "text": "Cold"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A hot site is a fully equipped duplicate, continuously synchronised and ready to run. Because everything is already in place and current, service resumes immediately rather than after a build or restore.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cloud-based describes where infrastructure lives. A cloud site can be hot, warm or cold depending on how it is prepared.",
+      "C": "A warm site has hardware and connectivity but needs data restored at failover. Recovery takes hours.",
+      "D": "A cold site has space and power only. Recovery takes days or weeks."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p213",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0503",
     "domain": 3,
     "objective": "3.4",
@@ -3717,12 +3759,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Capacity planning ensures that a disaster recovery site, such as a cold site, has sufficient resources like storage and computers. A failure in capacity planning likely led to the shortfall.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Capacity planning determines how much compute, storage and people a recovery site must have to carry the workload. Arriving at the cold site to find insufficient storage and computers is a direct failure of that planning.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Load balancing distributes traffic across servers. It presumes the servers exist.",
+      "C": "Backups preserve data. The shortfall here is hardware, not data.",
+      "D": "Platform diversity avoids depending on a single vendor's technology. It does not determine how much of anything you need."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p215",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.944,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3755,12 +3801,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Generators are the best safeguard against extended power failures, as they can provide power for long durations, unlike batteries or uninterruptible power supplies, which are intended for short-term use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Extended means hours or days, which rules out anything running on stored energy. A generator produces power continuously for as long as it has fuel, so it is the safeguard sized for a long outage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Off-site backups protect data. They do nothing to keep the current site powered.",
+      "B": "Batteries hold a finite charge measured in minutes. They bridge the gap until a generator starts.",
+      "C": "A UPS is battery-backed and likewise designed for short interruptions and clean shutdown, not sustained running."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p217",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3793,12 +3843,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A hot site is a fully equipped, dedicated location that allows immediate continuation of business operations after a disaster, making it the best choice for minimal downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A dedicated location that can continue operations immediately is a hot site — fully equipped, continuously synchronised and staffed or staffable at once. Immediacy is what distinguishes it from the alternatives.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A warm site has hardware and connectivity but requires data restoration before it can run. That means hours, not immediate.",
+      "C": "Geolocation is the physical position of a device or data. It is not a recovery facility.",
+      "D": "A cold site has space and power only. Bringing it into service takes days or weeks."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p222",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.607,
     "needsExplanation": false,
     "keyCorrected": false

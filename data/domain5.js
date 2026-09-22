@@ -3714,6 +3714,48 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0494",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media.\nWhich of the following policies will the HR employee most likely need to review after this incident?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Hybrid work environment"
+      },
+      {
+        "key": "B",
+        "text": "Operation security"
+      },
+      {
+        "key": "C",
+        "text": "Data loss prevention"
+      },
+      {
+        "key": "D",
+        "text": "Social engineering"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The failure was leaving confidential information visible in a shared living space. Operational security is the practice of protecting sensitive information during everyday activity — locking screens, being conscious of who can see your display — which is exactly the habit that lapsed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hybrid work environment policy covers the arrangements for working remotely. It sets the context but is not the practice that was neglected.",
+      "C": "Data loss prevention is a technical control inspecting data in motion. A family member reading a screen never touches it.",
+      "D": "Social engineering training covers manipulation by an attacker. Nobody was manipulated; the information was simply left on display."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p211",
+    "needsReview": false,
+    "inferenceConfidence": 0.529,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0500",
     "domain": 5,
     "objective": "5.2",
@@ -3741,59 +3783,25 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Recovery Time Objective (RTO) specifies the maximum acceptable duration that a system or service can be unavailable following a disruption, directly defining tolerated downtime limits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery time objective sets the maximum tolerable period a system can be unavailable before the impact becomes unacceptable. Within a business impact analysis it is the figure that expresses how long downtime can be endured.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Likelihood and cost of an incident are risk assessment outputs, calculated with ARO and SLE.",
+      "B": "Roles and responsibilities for responders are defined in the incident response plan.",
+      "C": "The state systems should be restored to is the recovery point objective, which concerns how much data loss is acceptable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p214",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.324,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0506",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "An auditor notices that, before logging into the firewall, an employee opens a document in a shared folder that contains administrative credentials.\nWhich of the following should the auditor recommend implementing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Situational awareness"
-      },
-      {
-        "key": "B",
-        "text": "Operational security"
-      },
-      {
-        "key": "C",
-        "text": "Password management"
-      },
-      {
-        "key": "D",
-        "text": "Acceptable use policy"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Password management solutions securely store and manage credentials, preventing risky practices like keeping administrative credentials in shared folders, which can lead to unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p216",
-    "needsReview": true,
-    "inferenceConfidence": 0.476,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0508",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following is the best reason to complete an audit in a banking environment?",
     "choices": [
@@ -3817,12 +3825,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Completing audits in a banking environment is primarily driven by regulatory requirements to ensure compliance with laws and financial regulations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Banking is a heavily regulated industry where audits are mandated by law and by supervisory bodies, with penalties for failing them. The obligation is external and non-negotiable, which makes regulatory requirement the driving reason.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Organisational change may trigger a review, but it is an internal circumstance rather than the standing reason banks audit.",
+      "C": "A self-assessment requirement is internally imposed and carries no legal force.",
+      "D": "A service-level requirement is a contractual performance commitment. It concerns service quality rather than compliance verification."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p216",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3855,59 +3867,67 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The most likely benefit of conducting an internal audit is the identification of control gaps, allowing the organization to remediate weaknesses before they can be exploited.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An internal audit exists to find the gaps between what the organisation says it does and what it actually does, while there is still time to fix them quietly. Identifying control gaps for remediation is its purpose and its main benefit.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Findings going to shareholders describes external reporting. Internal audit results normally go to management and the audit committee.",
+      "B": "Reports being informal and reassignable is not a benefit; it would undermine the audit's credibility.",
+      "D": "External audits are required by regulators and customers regardless of how thorough internal audit is."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p217",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0513",
+    "id": "q0519",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "Prior to implementing a design change, the change must go through multiple steps to ensure that it does not cause any security issues.\nWhich of the following is most likely to be one of those steps?",
+    "question": "A company is experiencing a high number of users who are clicking on email-based attacks even though those users have completed annual training. The company's Chief Security Officer wants to identify and reduce which users are phished the most often.\nWhich of the following will best achieve this result?",
     "choices": [
       {
         "key": "A",
-        "text": "Management review"
+        "text": "Begin a semiannual in-person training course with mandatory attendance. The users would perform exercises that simulate answering phone calls from attackers performing social engineering attacks."
       },
       {
         "key": "B",
-        "text": "Load testing"
+        "text": "Deploy a product that would occasionally send users emails to simulate an attack. The product would alert the security team whenever a user dicks links in the product's emails."
       },
       {
         "key": "C",
-        "text": "Maintenance notifications"
+        "text": "Hire a security consultant to give a personalized seminar at the company. The consultant would share stones of famous companies that had breaches and explain the ramifications of those events."
       },
       {
         "key": "D",
-        "text": "Procedure updates"
+        "text": "Require an MFA when signing in to the email client. Users would need to authenticate once a week at a minimum and daily when working remotely. •"
       }
     ],
     "correct": [
-      "A"
+      "B"
     ],
-    "explanation": "Management review is a key step in the change management process, ensuring that proposed changes are properly evaluated for security and business impact before implementation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The CSO wants to identify which specific users are susceptible, then reduce that. A simulated phishing product measures exactly that by recording who clicks, giving per-user data that targeted follow-up training can act on — something annual training alone cannot produce.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "In-person training about phone-based social engineering addresses a different channel and still measures nobody.",
+      "C": "A consultant's seminar raises general awareness through stories. It identifies no individuals and changes no behaviour measurably.",
+      "D": "MFA on the email client protects accounts when credentials are stolen. It neither identifies who is phished nor reduces clicking."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p218",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "SY0-701_en.pdf#p220",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0521",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
     "question": "A company decides to purchase an insurance policy.\nWhich of the following risk management strategies is this company implementing?",
     "choices": [
@@ -3931,12 +3951,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Purchasing an insurance policy is a risk transfer strategy, as the financial impact of a risk is shifted from the company to the insurance provider.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Insurance does not reduce the chance of an incident or its technical impact. What it changes is who absorbs the financial loss, shifting it to the insurer — which is the definition of risk transfer.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Mitigate means reducing likelihood or impact with controls. The policy changes neither.",
+      "B": "Accept means acknowledging the risk and doing nothing about it. Buying cover is an active step.",
+      "C": "Avoid means ceasing the activity that creates the risk. The company continues operating."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p221",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

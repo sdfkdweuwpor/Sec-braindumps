@@ -1,0 +1,241 @@
+{
+"q0492": {"objective":"4.3",
+ "explanation":"Remediation is not complete until it is proven. A rescan re-tests the same systems and shows the findings no longer appear, which is the evidence an auditor needs that the audit items were genuinely closed rather than merely worked on.",
+ "incorrect":{
+  "A":"Confirming false positives happens during analysis, before remediation. It decides what needs fixing, not whether the fix worked.",
+  "B":"Reviewing the attack surface is a broader design activity. It does not verify these specific findings.",
+  "D":"Reporting the remediations communicates what was done. A report is only credible once a rescan has confirmed it."}},
+
+"q0493": {"objective":"4.3",
+ "explanation":"The wording is 'at any cost' and 'any possible issues'. A bug bounty puts a large, varied pool of external researchers against the site continuously, using techniques and creativity no single scan or internal team would apply — which maximises the chance of finding something obscure.",
+ "incorrect":{
+  "A":"Permission restrictions limit who can reach what. That hardens the site but discovers nothing.",
+  "C":"A vulnerability scan finds known, catalogued issues. It is fast and cheap but only sees what its plugins already know about.",
+  "D":"Reconnaissance is information gathering, usually the first phase of an attack or test. It finds exposure, not exploitable flaws."}},
+
+"q0494": {"objective":"5.6",
+ "explanation":"The failure was leaving confidential information visible in a shared living space. Operational security is the practice of protecting sensitive information during everyday activity — locking screens, being conscious of who can see your display — which is exactly the habit that lapsed.",
+ "incorrect":{
+  "A":"Hybrid work environment policy covers the arrangements for working remotely. It sets the context but is not the practice that was neglected.",
+  "C":"Data loss prevention is a technical control inspecting data in motion. A family member reading a screen never touches it.",
+  "D":"Social engineering training covers manipulation by an attacker. Nobody was manipulated; the information was simply left on display."}},
+
+"q0495": {"objective":"2.1",
+ "explanation":"Classified defence information handed to a hostile organisation is intelligence being passed to an adversary. That is espionage — the motivation is obtaining and delivering secrets, not money or disruption.",
+ "incorrect":{
+  "B":"Data exfiltration describes the act of removing the data. The question asks what motivated it.",
+  "C":"Financial gain would mean the worker was paid, which is plausible but not stated. What is stated is that defence secrets reached a hostile party.",
+  "D":"Blackmail coerces a victim with a threat. Nobody is being threatened here."}},
+
+"q0496": {"objective":"1.2",
+ "explanation":"Deliberately exposing SMB and RDP — two of the most attacked services on the internet — into an isolated VLAN makes no sense for production. It makes complete sense as bait: a honeynet, built to attract attackers and study how they behave against file sharing and remote access.",
+ "incorrect":{
+  "A":"A new file-sharing site would be published over HTTPS, not raw SMB from the internet. Nobody exposes SMB deliberately for real users.",
+  "B":"A jump host needs one management protocol, typically SSH or RDP, and would be fronted by a VPN rather than opened to the world.",
+  "C":"A SASE integration moves security into the cloud and reduces direct inbound exposure. It would not require opening these ports."}},
+
+"q0497": {"objective":"2.4",
+ "explanation":"A guest account ended up in the administrator group, and from there could read classified reports. Gaining rights beyond those originally assigned is privilege escalation, and the group membership change is the evidence of it.",
+ "incorrect":{
+  "A":"Credential replay reuses captured authentication material. The account here is the guest's own, just with more power.",
+  "C":"Directory traversal escapes an intended directory to read arbitrary files. Access was granted through permissions, not a path trick.",
+  "D":"Brute force guesses credentials repeatedly. No guessing occurred."}},
+
+"q0498": {"objective":"3.4",
+ "explanation":"A hot site is a fully equipped duplicate, continuously synchronised and ready to run. Because everything is already in place and current, service resumes immediately rather than after a build or restore.",
+ "incorrect":{
+  "A":"Cloud-based describes where infrastructure lives. A cloud site can be hot, warm or cold depending on how it is prepared.",
+  "C":"A warm site has hardware and connectivity but needs data restored at failover. Recovery takes hours.",
+  "D":"A cold site has space and power only. Recovery takes days or weeks."}},
+
+"q0499": {"objective":"1.4",
+ "explanation":"A self-signed certificate is signed with its own private key rather than by an external certificate authority, so the organisation generates and vouches for it internally. That is what makes it an internally sourced certificate.",
+ "incorrect":{
+  "A":"A digital signature is a cryptographic operation proving origin and integrity. It is not a certificate.",
+  "B":"An asymmetric key is a key pair component. Certificates carry public keys, but a key is not itself a certificate.",
+  "D":"A symmetric key is a single shared secret used for encryption. Certificates do not contain them."}},
+
+"q0500": {"objective":"5.2",
+ "explanation":"Recovery time objective sets the maximum tolerable period a system can be unavailable before the impact becomes unacceptable. Within a business impact analysis it is the figure that expresses how long downtime can be endured.",
+ "incorrect":{
+  "A":"Likelihood and cost of an incident are risk assessment outputs, calculated with ARO and SLE.",
+  "B":"Roles and responsibilities for responders are defined in the incident response plan.",
+  "C":"The state systems should be restored to is the recovery point objective, which concerns how much data loss is acceptable."}},
+
+"q0501": {"objective":"4.1",
+ "explanation":"The signal is reaching neighbouring buildings, which is a coverage problem. A site survey measures where the signal actually propagates so access point placement, transmit power and antenna direction can be adjusted to keep coverage inside the premises.",
+ "incorrect":{
+  "A":"Mobile device management controls enrolled devices. It has no influence on how far a radio signal travels.",
+  "B":"Pre-shared keys control who may join. They stop unauthorised association but the network is still visible and attackable from outside.",
+  "C":"A heat map is the visual output produced from survey measurements. It is a deliverable rather than the activity that fixes the spill."}},
+
+"q0502": {"objective":"1.4",
+ "explanation":"Hashing produces a fixed-length digest that changes completely if any byte of the file changes. Comparing a recomputed hash against a trusted one confirms the file is unaltered, which is integrity verification.",
+ "incorrect":{
+  "A":"Masking obscures parts of a value for display. It neither detects nor prevents modification.",
+  "B":"Encryption protects confidentiality. Ciphertext can still be tampered with, and encryption alone does not reveal it.",
+  "D":"Obfuscation makes content harder to interpret. It offers no way to verify that the content is unchanged."}},
+
+"q0503": {"objective":"3.4",
+ "explanation":"Capacity planning determines how much compute, storage and people a recovery site must have to carry the workload. Arriving at the cold site to find insufficient storage and computers is a direct failure of that planning.",
+ "incorrect":{
+  "B":"Load balancing distributes traffic across servers. It presumes the servers exist.",
+  "C":"Backups preserve data. The shortfall here is hardware, not data.",
+  "D":"Platform diversity avoids depending on a single vendor's technology. It does not determine how much of anything you need."}},
+
+"q0504": {"objective":"4.5",
+ "explanation":"The protection fails whenever the tunnel drops, because filtering lives on-premises. A host-based content filter runs on the laptop itself, so it applies regardless of whether the VPN is up, where the user is, or how they reach the internet.",
+ "incorrect":{
+  "A":"Network access control decides which devices may join a network. It provides no web filtering.",
+  "B":"Pointing the local gateway at the VPN does not help when the VPN is the thing that failed.",
+  "C":"A public NAT to the on-premises proxy exposes an internal service directly to the internet, which trades one problem for a worse one."}},
+
+"q0505": {"objective":"4.7",
+ "explanation":"An API is the defined interface through which one program requests data or actions from another. Automating an exchange between programs means calling their APIs, which is what makes integration scriptable.",
+ "incorrect":{
+  "A":"SOAR is a platform that orchestrates security workflows. It is a consumer of APIs rather than the mechanism for sharing data.",
+  "C":"SFTP transfers files securely. It moves whole files on a schedule rather than exchanging data programmatically.",
+  "D":"RDP provides an interactive remote desktop for a person. It automates nothing."}},
+
+"q0506": {"objective":"4.6",
+ "explanation":"Administrative credentials sitting in a document on a shared folder are readable by anyone with access to that folder. A password management solution stores them encrypted, releases them under control and supports rotation, which removes the plaintext copy entirely.",
+ "incorrect":{
+  "A":"Situational awareness is general alertness to surroundings. It does not give the employee anywhere better to keep the credentials.",
+  "B":"Operational security is the practice of not exposing sensitive information. It names the failing without supplying the remedy.",
+  "D":"An acceptable use policy states rules. Writing down that credentials must not be shared does not provide a safe place to store them."}},
+
+"q0507": {"objective":"2.2",
+ "explanation":"A watering hole attack compromises a site the target group is known to visit, so the attacker does not have to reach each person individually. Choosing a site developers frequent lets one compromise hit the whole group.",
+ "incorrect":{
+  "A":"Typosquatting registers a lookalike domain and waits for mistyped addresses. It catches individuals at random rather than targeting a group.",
+  "C":"Denial of service makes a service unavailable. It disrupts rather than compromises.",
+  "D":"Credential replay reuses captured authentication material against a service."}},
+
+"q0508": {"objective":"5.5",
+ "explanation":"Banking is a heavily regulated industry where audits are mandated by law and by supervisory bodies, with penalties for failing them. The obligation is external and non-negotiable, which makes regulatory requirement the driving reason.",
+ "incorrect":{
+  "B":"Organisational change may trigger a review, but it is an internal circumstance rather than the standing reason banks audit.",
+  "C":"A self-assessment requirement is internally imposed and carries no legal force.",
+  "D":"A service-level requirement is a contractual performance commitment. It concerns service quality rather than compliance verification."}},
+
+"q0509": {"objective":"5.5",
+ "explanation":"An internal audit exists to find the gaps between what the organisation says it does and what it actually does, while there is still time to fix them quietly. Identifying control gaps for remediation is its purpose and its main benefit.",
+ "incorrect":{
+  "A":"Findings going to shareholders describes external reporting. Internal audit results normally go to management and the audit committee.",
+  "B":"Reports being informal and reassignable is not a benefit; it would undermine the audit's credibility.",
+  "D":"External audits are required by regulators and customers regardless of how thorough internal audit is."}},
+
+"q0510": {"objective":"2.1",
+ "explanation":"An employee installing their own wireless router bypasses IT entirely, creating an unmanaged entry point nobody approved or monitors. Unsanctioned technology introduced by staff is shadow IT, and retraining rather than dismissal confirms it was unauthorised rather than malicious.",
+ "incorrect":{
+  "A":"An unskilled attacker is an external actor using commodity tools. This was an employee acting for convenience.",
+  "B":"A hacktivist attacks to advance a cause. No ideological motive exists here.",
+  "C":"A nation-state conducts sophisticated, targeted operations."}},
+
+"q0511": {"objective":"3.4",
+ "explanation":"Extended means hours or days, which rules out anything running on stored energy. A generator produces power continuously for as long as it has fuel, so it is the safeguard sized for a long outage.",
+ "incorrect":{
+  "A":"Off-site backups protect data. They do nothing to keep the current site powered.",
+  "B":"Batteries hold a finite charge measured in minutes. They bridge the gap until a generator starts.",
+  "C":"A UPS is battery-backed and likewise designed for short interruptions and clean shutdown, not sustained running."}},
+
+"q0512": {"objective":"1.4",
+ "explanation":"A browser trusts a certificate only if it chains to a certificate authority already in its trust store. A self-signed certificate has no such chain, so the browser cannot verify it and warns the user.",
+ "incorrect":{
+  "A":"A wildcard certificate from a trusted CA works normally. A name mismatch would give a different error.",
+  "B":"Servers are not issued root certificates; roots sit in the trust store and sign other certificates.",
+  "C":"With no certificate at all the HTTPS connection would fail outright rather than producing a warning the user can click through."}},
+
+"q0513": {"objective":"1.3",
+ "explanation":"Management review is the approval step — someone accountable examines the proposed change and its security impact before it is allowed to proceed. Objective 1.3 lists the approval process among the components a change must pass through. Note this question shares its stem with q0342 but offers entirely different choices, so the two have different correct answers.",
+ "incorrect":{
+  "B":"Load testing measures performance under demand. It is a quality activity that says nothing about security impact.",
+  "C":"Maintenance notifications tell users when a change is happening. That is communication during implementation, not a check beforehand.",
+  "D":"Procedure updates document the new state afterwards. They follow the change rather than gating it."}},
+
+"q0514": {"objective":"4.3",
+ "explanation":"A bounty puts many independent researchers on the target at once, so flaws surface far sooner than an internal team working alone would find them. Running one publicly also signals that the organisation takes security seriously, which improves how it is perceived.",
+ "incorrect":{
+  "B":"Zero-days are unknown flaws with no patch. A bounty may find some, but it cannot reduce how many exist.",
+  "C":"Workforce security awareness is improved by training. Bounties involve external researchers, not staff.",
+  "D":"Costs are not reduced — running a programme means paying rewards and triaging a stream of submissions.",
+  "F":"Patch management improves through process change. A bounty generates findings that the existing process must then handle."}},
+
+"q0515": {"objective":"2.3",
+ "explanation":"The operating system sits beneath everything else on the machine. Exploiting it yields access to system functions shared by every application and user on that host, so the blast radius is the whole system rather than one program.",
+ "incorrect":{
+  "B":"Vendor patch cadence varies and is a process concern. Major vendors patch regularly, so this is not the inherent problem.",
+  "C":"User trust in the OS is a factor in social engineering, but it does not explain why an OS flaw is technically more serious.",
+  "D":"OS vulnerabilities are not generally easier to exploit; modern operating systems carry substantial exploit mitigations."}},
+
+"q0516": {"objective":"2.3",
+ "explanation":"Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualised environment because it exposes every other guest on the host.",
+ "incorrect":{
+  "B":"Cross-site scripting injects script into a web page rendered by a browser. There is no browser here.",
+  "C":"A malicious update delivers hostile code through the update channel. The attack described is a runtime injection against the hypervisor.",
+  "D":"SQL injection manipulates database queries. No database is involved."}},
+
+"q0517": {"objective":"1.1",
+ "explanation":"HIPS performs two functions simultaneously. It blocks malicious behaviour on the host, which is preventive, and it logs and alerts on what it observed, which is detective. Both are inherent to how the product works.",
+ "incorrect":{
+  "A":"Directive controls instruct people how to behave. Software gives no instructions to staff.",
+  "C":"Physical controls act on the physical environment.",
+  "D":"Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
+  "E":"Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."}},
+
+"q0518": {"objective":"1.3",
+ "explanation":"A backout plan documents exactly how to reverse a change if it goes wrong, and having one agreed before implementation is a defining feature of effective change management. Without it a failed patch becomes an outage with no rehearsed way back.",
+ "incorrect":{
+  "A":"Approving a change after deployment inverts the process — approval must gate the work, not rubber-stamp it.",
+  "C":"A spreadsheet is a tool choice. It can work at small scale but says nothing about whether the procedures are effective.",
+  "D":"An automatic bypass for security updates removes the control entirely. Urgency is handled by an expedited path with approval, not by skipping it."}},
+
+"q0519": {"objective":"5.6",
+ "explanation":"The CSO wants to identify which specific users are susceptible, then reduce that. A simulated phishing product measures exactly that by recording who clicks, giving per-user data that targeted follow-up training can act on — something annual training alone cannot produce.",
+ "incorrect":{
+  "A":"In-person training about phone-based social engineering addresses a different channel and still measures nobody.",
+  "C":"A consultant's seminar raises general awareness through stories. It identifies no individuals and changes no behaviour measurably.",
+  "D":"MFA on the email client protects accounts when credentials are stolen. It neither identifies who is phished nor reduces clicking."}},
+
+"q0520": {"objective":"2.5",
+ "explanation":"Bloatware is unwanted software that ships with or gets installed onto a device. An application allow list permits only approved executables to run, so anything not on the list — including preinstalled junk — is blocked regardless of how it arrived.",
+ "incorrect":{
+  "A":"Disabling ports and protocols closes network services. Bloatware is locally installed software.",
+  "C":"Default password changes remove well-known credentials. Unrelated to what software runs.",
+  "D":"Access control permissions govern who may reach which resources. They do not determine which applications may execute."}},
+
+"q0521": {"objective":"5.2",
+ "explanation":"Insurance does not reduce the chance of an incident or its technical impact. What it changes is who absorbs the financial loss, shifting it to the insurer — which is the definition of risk transfer.",
+ "incorrect":{
+  "A":"Mitigate means reducing likelihood or impact with controls. The policy changes neither.",
+  "B":"Accept means acknowledging the risk and doing nothing about it. Buying cover is an active step.",
+  "C":"Avoid means ceasing the activity that creates the risk. The company continues operating."}},
+
+"q0522": {"objective":"4.2",
+ "explanation":"Data retention is the requirement to keep records for a defined period — usually set by law or regulation — before they may be disposed of. Keeping files for a prescribed time is precisely what the principle mandates.",
+ "incorrect":{
+  "A":"Data verification confirms that data is accurate and complete. It concerns quality rather than lifespan.",
+  "B":"Data backups create recoverable copies. They protect against loss but are not the rule governing how long records are kept.",
+  "C":"Data archiving moves inactive data to cheaper long-term storage. It is a technique used to satisfy retention, not the principle itself."}},
+
+"q0523": {"objective":"2.4",
+ "explanation":"One account authenticating from Atlanta and then Beijing within a window no aircraft could cover is physically impossible. That contradiction between location and elapsed time is the impossible travel indicator, and it strongly suggests the credentials are being used by someone else.",
+ "incorrect":{
+  "B":"SMTP replay is the abuse of a mail server to relay messages. It concerns mail, not login geography.",
+  "C":"Directory traversal escapes an intended directory to read arbitrary files on a web server.",
+  "D":"Cross-site request forgery tricks a browser into submitting an unintended request using an existing session."}},
+
+"q0524": {"objective":"3.4",
+ "explanation":"A dedicated location that can continue operations immediately is a hot site — fully equipped, continuously synchronised and staffed or staffable at once. Immediacy is what distinguishes it from the alternatives.",
+ "incorrect":{
+  "B":"A warm site has hardware and connectivity but requires data restoration before it can run. That means hours, not immediate.",
+  "C":"Geolocation is the physical position of a device or data. It is not a recovery facility.",
+  "D":"A cold site has space and power only. Bringing it into service takes days or weeks."}},
+
+"q0525": {"objective":"1.4",
+ "explanation":"With direct access to a system an attacker can obtain the stored password hashes. If those were produced with a weak or fast algorithm, candidate passwords can be tested at enormous speed until one matches — the weakness of the algorithm is what makes cracking practical.",
+ "incorrect":{
+  "B":"An on-path attack intercepts traffic between two parties. It exploits network position, not local access to weak cryptography.",
+  "C":"Digital signing is a protective mechanism, not an attack.",
+  "D":"A side-channel attack infers secrets from timing, power draw or emissions. It targets the implementation and works even against strong algorithms."}}
+}
