@@ -3465,12 +3465,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Low-cost IoT devices often come from unvetted or knock-off manufacturers, introducing counterfeit or tampered hardware and firmware that can embed backdoors or malicious components, posing a major supply-chain security risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Buying at the lowest price often means buying from unvetted manufacturers, where counterfeit or tampered hardware and firmware can carry backdoors or substandard components. That supply-chain exposure is what makes cheap IoT devices risky in infrastructure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Device responsiveness is a performance characteristic. Slow devices are irritating rather than insecure.",
+      "C": "Ease of deployment is a selling point of low-cost devices, not a concern.",
+      "D": "Data remanence is residual data left on media after deletion. It matters at disposal and is not specific to cheap devices."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p200",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3503,12 +3507,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Network Access Control (NAC) enforces endpoint posture checks, such as antivirus status, patch levels, and configuration, before allowing devices on switchports to access the network or internet.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Network access control authenticates and posture-checks a device as it connects to a switchport, verifying patch level, antivirus state and configuration before granting access. Requiring posture analysis before reaching the internet is exactly what NAC enforces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A VPN encrypts remote access into the network. These clients are already physically connected.",
+      "B": "A WAF protects a web application from malicious requests. It faces the wrong direction entirely.",
+      "C": "An IPS inspects traffic for attack patterns and blocks it. It examines what devices send, not whether they are compliant enough to connect."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p201",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3516,8 +3524,8 @@ export const domain3Questions = [
   {
     "id": "q0470",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following can be deployed in data centers as a protection against an undervoltage event?",
     "choices": [
@@ -3541,12 +3549,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A UPS provides battery-backed power and voltage regulation, protecting equipment from undervoltage (brownout) conditions by supplying stable power until normal levels are restored or a generator comes online. Surge protectors, by contrast, guard against overvoltage, and the other options don't address voltage dips.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An undervoltage event is a brownout — supply voltage sagging below the required level. A UPS rides through it on battery and regulates the output, keeping equipment on stable power until the mains recovers or a generator takes over.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource management allocates compute capacity. It has nothing to do with electrical supply.",
+      "B": "A load balancer distributes network traffic across servers.",
+      "C": "A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p202",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3579,12 +3591,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "By employing multiple cloud providers for the same workloads, the university reduces reliance on a single vendor and mitigates risks like outages or vendor-specific vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Using two different cloud providers for the same data means no single vendor's outage, breach or vulnerability takes everything down. Deliberately not depending on one technology or supplier is platform diversity.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A load balancer distributes requests across servers. It is a device, not an architectural diversity strategy.",
+      "B": "Parallel processing runs work concurrently across systems, typically for performance.",
+      "D": "Clustering groups servers so they act as one resilient unit. That is redundancy within a platform, not across two."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p204",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3617,12 +3633,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SCADA systems orchestrate and manage PLCs in industrial environments, and their native management protocols (e.g., Modbus, DNP3) are often sent unencrypted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Programmable logic controllers are managed by SCADA systems, and the industrial protocols involved — Modbus, DNP3 and their relatives — were designed for reliability on isolated networks with no encryption at all. Unencrypted PLC management traffic is characteristic of SCADA environments.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SDN separates network control from forwarding, and its control channels are normally secured. It also does not manage PLCs.",
+      "B": "IoT devices are frequently unencrypted too, but PLCs specifically belong to industrial control systems rather than consumer or building IoT.",
+      "C": "A VPN exists to encrypt traffic, so finding plaintext inside one would defeat its purpose."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p205",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3655,51 +3675,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VPN establishes an encrypted tunnel over the Internet (or other untrusted networks), securely linking two separate corporate networks so they can communicate as if on a private network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two companies needing both connectivity and security between them describes a site-to-site VPN. It builds an encrypted tunnel across the public internet so the networks can exchange traffic privately without dedicated circuits.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A UTM bundles several security functions in one appliance at a boundary. It filters traffic rather than establishing inter-company connectivity.",
+      "C": "NAC decides whether a device may join a network. It is an admission control, not a link between organisations.",
+      "D": "An NGFW enforces policy on traffic crossing a boundary. It can terminate a VPN, but the solution being asked for is the VPN itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p205",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0491",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following would a service provider supply as an assurance for a disposal service as part of a disposal process?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Insurance"
-      },
-      {
-        "key": "B",
-        "text": "Certification"
-      },
-      {
-        "key": "C",
-        "text": "Classification"
-      },
-      {
-        "key": "D",
-        "text": "Retention"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "As part of secure disposal, a service provider issues a certificate of destruction (a form of certification) to formally attest that media or documents were disposed of in accordance with agreed procedures and compliance requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p210",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

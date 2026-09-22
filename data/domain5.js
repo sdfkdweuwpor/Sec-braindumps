@@ -3462,78 +3462,44 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0458",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "Which of the following would best ensure a controlled version release of a new software application?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Business continuity planning"
-      },
-      {
-        "key": "B",
-        "text": "Quantified risk analysis"
-      },
-      {
-        "key": "C",
-        "text": "Static code analysis"
-      },
-      {
-        "key": "D",
-        "text": "Change management procedures"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Change management procedures establish formal processes for planning, approving, testing, and documenting software releases, ensuring new versions are deployed in a controlled, auditable manner.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p198",
-    "needsReview": true,
-    "inferenceConfidence": 0.357,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0468",
+    "id": "q0460",
     "domain": 5,
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "An attorney prints confidential documents to a copier in an office space near multiple workstations and a reception desk.\nWhen the attorney goes to the copier to retrieve the documents, the documents are missing.\nWhich of the following would best prevent this from reoccurring?",
+    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel.\nWhich of the following penetration testing methods is most likely being used?",
     "choices": [
       {
         "key": "A",
-        "text": "Place the copier in the legal department."
+        "text": "Unknown"
       },
       {
         "key": "B",
-        "text": "Configure DLP on the attorney's workstation."
+        "text": "Known"
       },
       {
         "key": "C",
-        "text": "Set up LDAP authentication on the printer."
+        "text": "Integrated"
       },
       {
         "key": "D",
-        "text": "Conduct a physical penetration test."
+        "text": "Partially known"
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "Requiring users to authenticate at the copier before a print job is released (often called pull- printing) ensures that confidential documents are only printed when the authorized person is physically present - preventing documents from being left unattended.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An unknown environment test — black box — gives the testers no internal information and no coordination with the IT team. That is the only way to see how the tools, training and SOC actually perform against an attacker who has to discover everything for themselves.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A known environment test supplies documentation, architecture and often credentials. That shortcut would bypass the very defences the CEO wants measured.",
+      "C": "Integrated testing has offensive and defensive teams working together deliberately. The premise here is that the internal team is not engaged.",
+      "D": "A partially known test gives limited information. Some coordination or detail would still undercut the validation being sought."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p201",
-    "needsReview": true,
-    "inferenceConfidence": 0.692,
+    "source": "SY0-701_en.pdf#p198",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3565,13 +3531,59 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Privacy regulations such as the EU's GDPR grant individuals the \"right to be forgotten\" (also called the right of erasure), enabling them to request deletion of all personal data that an organization holds about them.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The right to be forgotten, also called the right of erasure, is the GDPR provision letting an individual require an organisation to delete the personal data it holds about them. The question describes that right precisely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Attestation and acknowledgement is a formal confirmation that a requirement is met. It is a compliance mechanism, not an individual right.",
+      "C": "Data retention is how long an organisation keeps data. It is the organisation's obligation, sometimes in tension with an erasure request.",
+      "D": "Information deletion describes the action performed. The named right is the right to be forgotten."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p203",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.76,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0482",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat.\nWhich of the following would most likely help the security awareness team address this potential threat?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Immediately disable the accounts of staff who are likely to be terminated."
+      },
+      {
+        "key": "B",
+        "text": "Train supervisors to identify and manage disgruntled employees."
+      },
+      {
+        "key": "C",
+        "text": "Configure DLP to monitor staff who will be terminated."
+      },
+      {
+        "key": "D",
+        "text": "Raise awareness for business leaders on social engineering techniques."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Insider risk rises with grievance, and the people positioned to notice grievance are the supervisors who see their teams every day. Training them to recognise and manage disgruntlement lets the organisation intervene early, which is what an awareness team can realistically influence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling accounts of staff who are merely likely to be terminated is premature, damaging to morale, and would itself create the resentment feared.",
+      "C": "Configuring DLP to monitor staff being terminated is a technical control rather than an awareness measure, and singling people out raises legal and ethical issues.",
+      "D": "Social engineering awareness for business leaders addresses external manipulation. The threat here originates inside."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p207",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3603,12 +3615,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Downloading publicly available website content without exploiting vulnerabilities or interacting with private systems is passive reconnaissance - collecting information from external sources without direct intrusion.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Downloading publicly served content is just visiting the site as any user would, so nothing unusual appears in the target's logs and no system is probed. Gathering information without interacting beyond normal use is passive reconnaissance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Unknown environment testing describes how much information the tester was given. It characterises the whole engagement rather than this activity.",
+      "B": "A vulnerability scan actively probes the target and is plainly visible in its logs.",
+      "C": "Due diligence is the investigation performed before entering a business relationship. It is a commercial concept."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p207",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.591,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3641,12 +3657,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The \"right to be forgotten\" (right of erasure) requires that organizations delete or permanently remove all personal data related to the individual from their systems and backups, not merely obfuscate or encrypt it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The right to be forgotten requires erasure, not concealment. The organisation must actually remove the person's personal data from its systems, so nothing remains that could be recovered or re-linked to them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Purging only the identifying attributes is closer to anonymisation. It can be valid in some circumstances but is not what erasure requires.",
+      "B": "Encrypting the data keeps it, and whoever holds the key can still read it. The data still exists.",
+      "D": "Obfuscating the data likewise retains it in a reversible or partially recoverable form."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p208",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3679,12 +3699,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Public disclosure of a breach can undermine customer and partner trust in an organization's ability to protect data - directly leading to loss of existing contracts and deterring future business. Reputational damage persists long after fines or oversight actions and most impacts revenue relationships.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once a breach is publicly reported, customers and partners reassess whether the organisation can be trusted with their data. That loss of confidence drives existing contracts away and deters new ones, which is reputational damage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Fines and penalties are imposed by regulators. They hurt financially but do not themselves drive customers away.",
+      "C": "Board oversight is internal governance attention following an incident. It is a management consequence, not a commercial one.",
+      "D": "Conflicts of interest concern improper influence on decisions. They are unrelated to breach disclosure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p210",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false

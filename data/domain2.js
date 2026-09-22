@@ -3550,12 +3550,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An application allow list ensures only approved software can be installed or run on corporate endpoints, blocking any unapproved programs that might leak sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The problem is that unvetted software ran at all. An application allow list permits only approved executables to run, so a program nobody reviewed — however useful it looks — is blocked before it can quietly ship contact data and org structure outward.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Workstation hardening reduces the attack surface by removing services and tightening configuration. It does not prevent a user installing a new program.",
+      "C": "Refusing unsigned code blocks unsigned binaries. Plenty of commercial data-harvesting software is properly signed, so this misses the case.",
+      "D": "An IP blocklist blocks known-bad destinations. The program's servers would not be on any list.",
+      "E": "Standard user accounts prevent system-wide installation, which helps — but much of this software installs per-user without administrative rights."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p198",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3588,12 +3593,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Smishing is a form of phishing conducted via SMS or text messages. An unsolicited, threatening text demanding money exemplifies a smishing attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Smishing is phishing carried out over SMS. An unsolicited, threatening text from an unknown number demanding money is a text-message-based social engineering attempt, which is what the term names.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
+      "B": "Typosquatting registers look-alike domains. No domain is involved.",
+      "D": "Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p199",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3635,12 +3644,17 @@ export const domain2Questions = [
       "B",
       "C"
     ],
-    "explanation": "Smishing is phishing via SMS/text messages, exactly as seen when users receive a malicious link by text.\nImpersonation occurs when the attacker poses as the CEO to lend credibility to the request and trick employees into divulging sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two things are happening at once. The delivery channel is SMS, which makes it smishing, and the attacker is posing as the chief executive to make the request credible, which is impersonation. Both terms apply to the same message.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Misinformation is false information spread to mislead a population. This is a targeted credential-harvesting attempt.",
+      "D": "Typosquatting registers a domain one character from the real one. The link may be malicious but no mistyped domain is described.",
+      "E": "Pretexting is inventing a backstory to justify a request. There is barely a story here — just assumed authority.",
+      "F": "Phishing is the general category, and by SMS it is specifically smishing. The question wants the two precise terms."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p199",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3673,12 +3687,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Malicious QR codes can embed phishing URLs or commands that execute when scanned.\nAttacks using QR codes to phish users are known as \"quishing.\"",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A QR code is a two-dimensional matrix barcode, and scanning one hands the phone a URL the user cannot read beforehand. Phishing delivered through malicious QR codes is called quishing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
+      "C": "Vishing is phishing by voice call.",
+      "D": "Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p200",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3711,54 +3729,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Jailbreaking a device removes manufacturer, or carrier-imposed restrictions, granting administrative control and allowing it to boot into unauthorized software (in this case, a gaming platform) instead of the standard operating system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Booting into unauthorised software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
+      "B": "Side loading installs an app from outside the official store. The device would still boot normally into its own OS.",
+      "C": "A malicious update delivers hostile code through the update channel. The device here was tampered with before issue, not updated."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p203",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0479",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A software engineering manager wants to scan the code for security vulnerabilities before it is pushed into production.\nWhich of the following types of analysis should the manager select?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Static"
-      },
-      {
-        "key": "B",
-        "text": "Threat"
-      },
-      {
-        "key": "C",
-        "text": "Packet"
-      },
-      {
-        "key": "D",
-        "text": "Dynamic"
-      },
-      {
-        "key": "E",
-        "text": "Package"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Static analysis inspects source code at rest, prior to execution, to identify security vulnerabilities, coding errors, and insecure patterns before the software is deployed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p205",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3791,51 +3771,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Typosquatting involves registering a look-alike domain (e.g., examplе.com instead of example.com) to trick users who mistype URLs into visiting a malicious site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Registering a domain that closely resembles a real one, so that a mistyped or carelessly read address leads to the attacker's site, is typosquatting. It impersonates the URL itself rather than a person.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Pretexting is inventing a backstory to justify a request. It manipulates a person, not an address.",
+      "B": "Misinformation is false information spread to mislead. No domain is impersonated.",
+      "D": "A watering-hole attack compromises a legitimate site the targets already visit, rather than creating a lookalike."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p206",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0482",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat.\nWhich of the following would most likely help the security awareness team address this potential threat?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Immediately disable the accounts of staff who are likely to be terminated."
-      },
-      {
-        "key": "B",
-        "text": "Train supervisors to identify and manage disgruntled employees."
-      },
-      {
-        "key": "C",
-        "text": "Configure DLP to monitor staff who will be terminated."
-      },
-      {
-        "key": "D",
-        "text": "Raise awareness for business leaders on social engineering techniques."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Equipping supervisors to recognize signs of dissatisfaction and potential insider threats enables early intervention, addressing the human factors that awareness programs are designed to influence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p207",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3867,51 +3813,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Outdated operating systems are a primary vector for malware and performance issues.\nEnsuring that all machines are fully patched closes known vulnerabilities that attackers exploit - reducing infections and restoring system stability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Outdated operating systems carry known, published vulnerabilities that malware is written specifically to exploit — which explains both the infections and the degraded performance. Patching closes those holes, so it is the mitigation to examine before anything else.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Segmentation limits how far an infection spreads. Useful containment, but the machines remain exploitable.",
+      "C": "Monitoring reveals what is happening. It improves visibility without fixing the cause.",
+      "D": "Isolation cuts affected machines off. That is an incident response measure, not the underlying mitigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p208",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.583,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0488",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following actions should be performed on end-of-life equipment before it is discarded?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Isolation"
-      },
-      {
-        "key": "B",
-        "text": "Patching"
-      },
-      {
-        "key": "C",
-        "text": "Decommissioning"
-      },
-      {
-        "key": "D",
-        "text": "Monitoring"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Decommissioning formally retires the equipment by removing it from operational use, securely wiping or destroying any stored data, and updating asset inventories - ensuring sensitive information isn't left on discarded hardware.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p209",
-    "needsReview": true,
-    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },

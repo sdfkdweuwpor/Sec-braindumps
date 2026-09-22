@@ -6055,44 +6055,6 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0460",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel.\nWhich of the following penetration testing methods is most likely being used?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Unknown"
-      },
-      {
-        "key": "B",
-        "text": "Known"
-      },
-      {
-        "key": "C",
-        "text": "Integrated"
-      },
-      {
-        "key": "D",
-        "text": "Partially known"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "An \"unknown\" (black-box) test gives the testers no prior information or coordination with internal teams, mimicking an external attacker and validating defenses without internal assistance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p198",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0463",
     "domain": 4,
     "objective": "4.2",
@@ -6120,12 +6082,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An accurate inventory of corporate laptops is essential to ensure that every affected device is identified and included in the patch deployment process. Without a complete asset inventory, some laptops could be missed and remain vulnerable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You cannot patch a laptop you do not know exists. A complete asset inventory is what tells the engineer how many corporate laptops there are and which ones have not yet reported the patch, so coverage can actually be proven rather than assumed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Ownership records who is accountable for an asset. Useful for chasing stragglers, but it presumes the inventory already lists them.",
+      "C": "Classification assigns sensitivity levels. It affects handling requirements rather than patch coverage.",
+      "D": "Enumeration is the act of listing resources, often during discovery. The durable record it produces and is checked against is the inventory."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p199",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6167,21 +6133,68 @@ export const domain4Questions = [
       "C",
       "D"
     ],
-    "explanation": "During containment, you first pinpoint exactly what malware or attack vector is in play and how far it has spread - i.e. identifying the threat. Then, in the eradication phase, you eliminate the root cause by removing the malicious threat (malware, backdoors, unauthorized accounts, etc.)\nbefore moving on to system recovery.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containment starts by working out precisely what you are dealing with and how far it has reached, which is identifying the threat. Eradication then removes it — the malware, the backdoors, the accounts the attacker created — so the environment is clean before recovery begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Notifying stakeholders is communication that runs alongside the whole response. It is not a containment or eradication activity.",
+      "B": "Restoring the system belongs to the recovery phase, after eradication has finished.",
+      "E": "Developing a recovery plan is preparation work done before any incident.",
+      "F": "Analysing the incident is its own phase, sitting between detection and containment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p201",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.882,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0468",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "An attorney prints confidential documents to a copier in an office space near multiple workstations and a reception desk.\nWhen the attorney goes to the copier to retrieve the documents, the documents are missing.\nWhich of the following would best prevent this from reoccurring?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Place the copier in the legal department."
+      },
+      {
+        "key": "B",
+        "text": "Configure DLP on the attorney's workstation."
+      },
+      {
+        "key": "C",
+        "text": "Set up LDAP authentication on the printer."
+      },
+      {
+        "key": "D",
+        "text": "Conduct a physical penetration test."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Authenticating at the device before the job releases — pull printing — means the document only appears once the attorney is physically standing there. Nothing sits unattended in the output tray for anyone to take.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Moving the copier into the legal department reduces who walks past it, but colleagues can still pick up the wrong job and it does not scale to other confidential printing.",
+      "B": "DLP on the workstation controls what data may leave electronically. The document was printed legitimately and then taken physically.",
+      "D": "A physical penetration test would demonstrate the weakness again. It measures rather than fixes."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p201",
+    "needsReview": false,
+    "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0469",
     "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "Which of the following activities should a systems administrator perform to quarantine a potentially infected system?",
     "choices": [
@@ -6205,12 +6218,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Quarantining an infected host means isolating it from the rest of the network to prevent malware from spreading. Physically or logically placing the device into an air-gapped (isolated) environment severs its connectivity, effectively containing the threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Quarantine means severing the infected host's ability to reach anything else, so malware cannot spread and cannot phone home. Placing it in an isolated, air-gapped environment achieves that while preserving the system for investigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Disabling remote log-in through Group Policy closes one access route. The malware keeps running and keeps communicating.",
+      "C": "Converting the device into a sandbox is not a quarantine action — a sandbox is a purpose-built analysis environment, not a repurposed infected host.",
+      "D": "Remote wiping destroys the evidence along with the malware, which forecloses any investigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p202",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6218,8 +6235,8 @@ export const domain4Questions = [
   {
     "id": "q0475",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's computer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
     "choices": [
@@ -6243,12 +6260,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Deploying modern endpoint protection (antivirus/EDR) on each workstation can detect and block malicious payloads downloaded via phishing links, stopping the malware before it can install and exfiltrate customer data. This directly prevents the root cause (malware infection), whereas other controls (like DLP) act later in the attack chain.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The chain was click, download, execute, exfiltrate. Endpoint protection acts at the execution step — detecting and blocking the malicious payload on the workstation before it installs, which stops everything downstream.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "User awareness training addresses the click and is genuinely valuable, but some proportion of users will always click. The question asks what best prevents the outcome.",
+      "B": "Network monitoring detects the exfiltration in progress. Detection after thousands of records have moved is too late.",
+      "D": "DLP could block the outbound transfer, which helps, but it acts at the final step rather than preventing the compromise."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p204",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6256,8 +6277,8 @@ export const domain4Questions = [
   {
     "id": "q0476",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
     "question": "A forensic engineer determines that the root cause of a compromise is a SQL injection attack.\nWhich of the following should the engineer review to identify the command used by the threat actor?",
     "choices": [
@@ -6281,21 +6302,72 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Application logs capture the SQL statements executed (including user inputs and errors).\nReviewing the application log will reveal the exact injection payload and commands the attacker used, whereas system or network logs do not record SQL query details.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The injected SQL travelled through the application as user input, so the application's own log is what recorded the request and the statement it produced. That is where the exact payload the attacker used will be visible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Metadata describes files and communications. It carries no record of executed queries.",
+      "C": "System logs record operating system events such as service starts and authentication. They do not capture application-level SQL.",
+      "D": "NetFlow records which hosts talked to which, and how much. It shows the connection without any payload content."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p204",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.217,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0479",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "A software engineering manager wants to scan the code for security vulnerabilities before it is pushed into production.\nWhich of the following types of analysis should the manager select?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Static"
+      },
+      {
+        "key": "B",
+        "text": "Threat"
+      },
+      {
+        "key": "C",
+        "text": "Packet"
+      },
+      {
+        "key": "D",
+        "text": "Dynamic"
+      },
+      {
+        "key": "E",
+        "text": "Package"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Static analysis inspects source code without executing it, so it can run in the build pipeline before anything reaches production. Scanning code at rest for vulnerabilities and insecure patterns is exactly what the manager described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Threat analysis, or threat modelling, reasons about how a system might be attacked. It is a design-time exercise rather than a code scan.",
+      "C": "Packet analysis examines network traffic. It has no view of source code.",
+      "D": "Dynamic analysis tests the running application. That requires a deployed build, which is after the point the manager wants to check.",
+      "E": "Package analysis checks third-party dependencies for known flaws. Useful alongside, but it examines libraries rather than the team's own code."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p205",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0480",
     "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
     "question": "A security team purchases a tool for cloud security posture management. The team is quickly overwhelmed by the number of misconfigurations the tool detects.\nWhich of the following should the security team configure to establish secure baselines for cloud resource usage?",
     "choices": [
@@ -6319,12 +6391,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Guardrails define and enforce organization-specific policies and secure configuration baselines in cloud environments, automatically detecting and preventing deviations from approved settings.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A flood of misconfigurations means resources are being created outside any agreed standard. Guardrails encode the secure baseline as policy that is enforced at provisioning time, so non-compliant configurations are prevented rather than detected afterwards.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A CASB governs how users interact with cloud applications and what data moves. It does not define infrastructure baselines.",
+      "B": "IAM controls who may do what in the cloud account. Correctly authorised engineers can still deploy misconfigured resources.",
+      "D": "XDR correlates detection and response across the estate. It finds threats rather than enforcing configuration standards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p206",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6357,12 +6433,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CVSS provides a standardized, numerical severity rating for each vulnerability, enabling an analyst to efficiently rank and prioritize scan findings based on objective risk metrics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS attaches a standard 0 to 10 severity score to each finding, derived from exploitability and impact. That makes it the quickest way to rank a scan's output consistently, without bespoke analysis of every entry.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business impact analysis determines how badly the organisation suffers if a function is lost. It is valuable context but is a slow, separate exercise.",
+      "C": "A risk register records identified risks and treatments. It stores decisions rather than scoring new scan findings.",
+      "D": "Exposure factor is the percentage of asset value lost in an incident. It is one input to a quantitative risk calculation, not a ready-made ranking."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p207",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.511,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6395,21 +6475,67 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Federation allows users authenticated by an external identity provider (such as a partner's LDAP directory) to access your systems without reentering credentials, by trusting and exchanging authentication assertions between domains.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Federation establishes trust between two identity domains, so an assertion from the partner's identity provider is accepted as proof of authentication. Users authenticated against the partner's LDAP reach your systems without a second set of credentials.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Media access control is a hardware addressing scheme at the data link layer. It has no authentication role here.",
+      "B": "Interoperability is the general property of systems working together. It describes the goal rather than the mechanism.",
+      "C": "OAuth is an authorisation framework issuing access tokens. It delegates permissions rather than federating an existing LDAP authentication."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p208",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0488",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following actions should be performed on end-of-life equipment before it is discarded?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Isolation"
+      },
+      {
+        "key": "B",
+        "text": "Patching"
+      },
+      {
+        "key": "C",
+        "text": "Decommissioning"
+      },
+      {
+        "key": "D",
+        "text": "Monitoring"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Decommissioning is the formal retirement process: removing the equipment from service, securely wiping or destroying its data, updating the inventory and documenting the disposal. It is the umbrella activity that has to happen before hardware leaves the organisation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Isolation separates a system from the network. It is a containment measure for a live system.",
+      "B": "Patching updates software on systems that remain in service. There is no point patching something being discarded.",
+      "D": "Monitoring observes an operational system. Equipment at end of life is being removed, not watched."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p209",
+    "needsReview": false,
+    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0489",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
     "question": "Which of the following actions would reduce the number of false positives for an analyst to manually review?",
     "choices": [
@@ -6433,13 +6559,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "By automating the triage and handling of routine or known-false alerts through SOAR playbooks, you filter out those false positives before they reach an analyst, significantly reducing manual review workload.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SOAR playbooks handle routine alerts automatically — enriching them, checking them against known-benign patterns and closing the ones that do not warrant attention. The analyst then sees only what survived that triage, which is a direct reduction in manual false-positive review.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Redefining patch management reduces vulnerabilities. It does not change how alerts are triaged.",
+      "C": "Replacing EDR with XDR widens telemetry coverage, which typically increases alert volume rather than reducing it.",
+      "D": "Disabling heuristic scanning would cut false positives by also cutting real detections. That trades security for quiet."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p209",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0491",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following would a service provider supply as an assurance for a disposal service as part of a disposal process?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Insurance"
+      },
+      {
+        "key": "B",
+        "text": "Certification"
+      },
+      {
+        "key": "C",
+        "text": "Classification"
+      },
+      {
+        "key": "D",
+        "text": "Retention"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A disposal provider issues a certificate of destruction confirming what was destroyed, when and by what method. That certification is the documented assurance the customer retains as evidence for auditors and regulators.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Insurance transfers financial loss if something goes wrong. It compensates rather than assuring the work was done.",
+      "C": "Classification assigns sensitivity levels to data. It determines how disposal must be handled, not that it was.",
+      "D": "Retention defines how long data is kept. It governs the period before disposal."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p210",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },

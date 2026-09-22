@@ -2850,6 +2850,48 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0458",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "type": "single",
+    "question": "Which of the following would best ensure a controlled version release of a new software application?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Business continuity planning"
+      },
+      {
+        "key": "B",
+        "text": "Quantified risk analysis"
+      },
+      {
+        "key": "C",
+        "text": "Static code analysis"
+      },
+      {
+        "key": "D",
+        "text": "Change management procedures"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A controlled release means the version that reaches production has been approved, tested and documented, with a way back if it fails. Change management procedures are what impose that discipline — approval, impact analysis, test results, a maintenance window and a backout plan.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline, not a release process.",
+      "B": "Quantified risk analysis puts numbers on risk exposure. It may justify caution but governs no release.",
+      "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release happens."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p198",
+    "needsReview": false,
+    "inferenceConfidence": 0.357,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0472",
     "domain": 1,
     "objective": "1.4",
@@ -2877,12 +2919,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Salting appends a unique random value to each user's password before hashing, so identical passwords produce different hash values and resist rainbow-table attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A salt is a unique random value added to each password before hashing. Because every user's salt differs, identical passwords produce entirely different hashes — which is exactly the observation, and the reason precomputed rainbow tables fail.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data masking obscures parts of a value for display. It is not applied to stored password hashes.",
+      "C": "Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
+      "D": "Tokenisation replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenised."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p203",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
