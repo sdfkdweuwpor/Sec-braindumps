@@ -12091,12 +12091,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Dynamic analysis involves evaluating an application while it is running (during runtime) to identify potential vulnerabilities, performance issues, or other security risks. This type of analysis allows security professionals to observe the application's behavior in real-world conditions and to identify issues that may not be apparent from static code inspection alone.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Dynamic analysis exercises the application while it is actually running, so it observes real behaviour — how the deployed build handles input, what it returns, how it fails. Only a runtime technique can test a deployed application in its real configuration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Code review reads source without executing it. It happens before deployment and cannot see runtime behaviour.",
+      "C": "Package monitoring tracks the third-party dependencies an application includes for known flaws. It inspects the bill of materials, not the running process.",
+      "D": "A bug bounty pays external researchers for findings. It is a programme for sourcing reports, not an identification method in its own right."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12129,12 +12133,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Steganography is the cryptographic technique used to hide the fact that communication is occurring. It involves embedding secret data within other non-suspicious data, such as images, audio, or video files, so that the presence of the hidden message is not detectable. Unlike encryption, which transforms data into unreadable formats, steganography hides the very existence of the communication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Steganography hides a message inside ordinary-looking content such as an image or audio file, so an observer sees nothing unusual at all. Encryption conceals what was said; steganography conceals that anything was said.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data masking obscures part of a value for display, such as showing only the last four digits. The record is plainly visible, just partly hidden.",
+      "C": "Tokenisation substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
+      "D": "A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12167,12 +12175,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Before mitigating a vulnerability in a production server, it is important to refer to the change management policy. This policy outlines the necessary procedures for making changes to production systems, ensuring that changes are thoroughly reviewed, tested, and approved.\nFollowing this policy helps mitigate the risk of introducing additional issues or downtime when applying patches or updates to the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mitigating a vulnerability on a production server means changing a live system, and change management governs how that is done — approval, impact analysis, a test result, a maintenance window and a backout plan. Skipping it risks causing a worse outage than the vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Escalating to the SDLC team applies when a fix requires code changes. Most server mitigations are configuration or patching, and the process question comes first regardless.",
+      "B": "The incident response plan covers active security incidents. A known vulnerability that has not been exploited is not an incident.",
+      "C": "A risk assessment helps decide how urgently to act, and it may well have already happened. Even an urgent fix still goes through change control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12205,12 +12217,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Static analysis is the method most likely to be used by a security engineer to quickly identify a signature from a known malicious file. In static analysis, the file is examined without being executed, typically by analyzing its binary or code structure. This allows for the identification of known malicious patterns, signatures, or characteristics within the file, enabling a quick assessment of whether the file is malicious.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Static analysis examines the file without running it — hashing it, reading its structure and matching byte patterns against known signatures. For a file already known to be malicious that is both the fastest and the safest way to confirm the signature.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A sandbox detonates the file and watches what it does. That is thorough but slow, and unnecessary when the malware is already known.",
+      "C": "Network traffic analysis observes what a sample communicates. It requires the file to run and reveals behaviour rather than a file signature.",
+      "D": "Package monitoring tracks dependencies in your own software for known vulnerabilities. It is unrelated to identifying a malicious file."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12218,8 +12234,8 @@
   {
     "id": "q0292",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following should a company use to provide proof of external network security testing?",
     "choices": [
@@ -12243,12 +12259,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A third-party attestation is the most appropriate way to provide proof of external network security testing. This attestation is typically performed by an independent, external party (e.g., an audit firm or security vendor) that assesses and verifies the security measures of an organization's network. The attestation provides official confirmation that external security testing, such as vulnerability assessments or penetration tests, has been conducted and that the organization meets the required security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Proof for an outside audience has to come from someone independent. A third-party attestation is an external party's formal statement that the testing was performed and what it found, which is what makes it acceptable as evidence to customers and regulators.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business impact analysis determines how badly the organisation is hurt by disruption. It is a continuity artefact and involves no security testing.",
+      "B": "Supply chain analysis maps supplier dependencies and their risk. It looks outward at vendors rather than testing your own network.",
+      "C": "A vulnerability assessment produces findings, and it may well be the test performed — but self-produced results are not proof to an external party without independent attestation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.37,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12290,14 +12310,19 @@
       "C",
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunnelling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+      "B": "A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
+      "E": "Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
+      "F": "Data masking hides parts of a value. Like tokenisation it destroys the completeness the recipient requires."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.276,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -12328,12 +12353,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Risk identification is the step in the risk management process where the scope of the project is defined, and potential risks are identified. This step involves gathering information to understand the environment and context of the project, as well as the risks that could affect its success or security. It helps to outline what can go wrong and what risks need to be considered in subsequent stages of the risk management process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Risk identification is the first substantive step: establishing what is in scope and enumerating what could go wrong. Everything afterwards — scoring, treating, monitoring — operates on the list this stage produces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Risk assessment evaluates the risks already identified, scoring likelihood and impact. It cannot assess what has not been named.",
+      "C": "Risk treatment decides what to do about each risk — accept, mitigate, transfer or avoid. That comes after assessment.",
+      "D": "Risk monitoring and review tracks risks over time and checks that treatments remain effective. It is the ongoing final stage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p132",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12366,21 +12395,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "Typosquatting is a type of attack where attackers register a domain that is very similar to a legitimate one, often differing by only a small change, such as replacing a letter with a number or character. In this example, attackers purchased www.c0mpany.com, which is a slight variation of the legitimate domain www.company.com. Typosquatting relies on users making typographical errors when entering a web address, leading them to the malicious site instead of the legitimate one.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Registering a domain that differs from the real one by a single easily-mistyped character — a zero for the letter o — is typosquatting. It relies on users mistyping the address or failing to notice the substitution in a link.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Brand impersonation is using a company's name, logo and styling to appear legitimate. It often accompanies typosquatting, but the question is specifically about the lookalike domain registration.",
+      "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than a registered domain.",
+      "D": "A watering-hole attack compromises a legitimate site the targets already visit. Here a new fraudulent domain was created instead."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p132",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0296",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "Which of the following allows a systems administrator to tune permissions for a file?",
     "choices": [
@@ -12404,12 +12437,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "An Access Control List (ACL) allows a systems administrator to specify and fine-tune the permissions for a file or directory. It defines which users or groups have permission to access the resource and what level of access (e.g., read, write, execute) they have. ACLs provide a granular way to manage permissions and ensure that users can only access resources according to their roles or needs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An access control list attached to a file enumerates which users and groups may read, write or execute it. Tuning permissions on a specific file is exactly what an ACL provides — granular, per-principal entries on that object.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching updates software to fix defects. It has nothing to do with file permissions.",
+      "C": "Configuration enforcement keeps system settings at a defined baseline. It maintains state broadly rather than adjusting one file's permissions.",
+      "D": "Least privilege is the principle that guides what the permissions should be. It is the objective; the ACL is the mechanism."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12442,12 +12479,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Sanctions would be the greatest concern for a company that is aware of the consequences of non-compliance with government regulations. Sanctions can include financial penalties, restrictions on business operations, or other legal consequences that can significantly impact the company's ability to operate and its financial stability. Companies that fail to comply with government regulations, especially those related to data protection, financial reporting, or industry-specific laws, can face severe sanctions from regulatory bodies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sanctions are the enforcement action a regulator takes against non-compliance — fines, operating restrictions, or losing a licence to trade. They directly threaten the organisation's ability to operate, which makes them the gravest consequence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The right to be forgotten is a data subject's right to have personal data erased. It is an obligation to honour, not a penalty for failing to.",
+      "C": "External compliance reporting is the routine act of demonstrating compliance. It is a normal duty rather than a consequence.",
+      "D": "Attestation is a formal statement that requirements are met. Again it is part of demonstrating compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12480,12 +12521,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Authorization occurs after an individual has successfully logged into a computer network and is granted access to specific resources or services based on their privileges or roles. It defines what the authenticated user is allowed to do on the network (e.g., access files, use certain applications, etc.).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Authentication happens at log-in and proves who the user is. Authorisation is the step that follows: deciding what that now-verified identity is permitted to reach. Granting access after log-in is authorisation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identification is claiming an identity, such as entering a username. It precedes authentication and proves nothing.",
+      "C": "Non-repudiation prevents someone denying an action they performed. It concerns accountability after the fact.",
+      "D": "Authentication is the log-in step itself, which the question says has already happened."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12518,12 +12563,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A load balancer is the most likely solution the organization would employ to further increase the performance and availability of their application. A load balancer distributes incoming network traffic across multiple servers, ensuring that no single server becomes overwhelmed with requests. This helps improve performance by optimizing resource utilization and increases availability by ensuring that if one server fails, others can continue to handle the traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multiple servers only help if traffic is spread across them. A load balancer distributes requests over the pool and routes around any server that fails its health check, which delivers both the performance gain and the availability the organisation is after.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A jump server is a hardened entry point for administrative access. It serves administrators, not application users.",
+      "C": "A proxy server mediates requests, usually outbound from clients. It does not distribute inbound load across a server pool.",
+      "D": "SD-WAN optimises traffic across wide area network links between sites. It manages connectivity rather than application server load."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12556,14 +12605,18 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A duplicate site that mimics the company's real mail interface is pretending to be the company in order to capture credentials. Assuming a trusted organisation's identity to deceive users is impersonation.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Replication is copying data between systems for availability or backup. It is a legitimate technical process, not an attack.",
+      "C": "Phishing is the delivery method — the message that lures a user to the fake site. The question asks what is being used at the site itself, which is impersonation of the company.",
+      "D": "Smishing is phishing over SMS. No text messages are involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -12594,12 +12647,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Time-of-day restrictions are the most appropriate access control for ensuring that employees can only access corporate systems during their shifts. By setting specific time windows during which access is allowed (e.g., only during working hours or assigned shifts), the security engineer can limit when users are able to log in and access corporate resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Time-of-day restrictions attach permitted hours to an account, so authentication simply fails outside them. Limiting access to an employee's shift is exactly what this control expresses, and it works regardless of whether credentials are stolen.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Role-based access control grants rights according to job function. It governs what someone may do, not when they may do it.",
+      "C": "Least privilege limits rights to the minimum needed. Again it is about scope of access rather than timing.",
+      "D": "Biometric authentication strengthens proof of identity. A verified fingerprint at three in the morning still gets in."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12607,8 +12664,8 @@
   {
     "id": "q0302",
     "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A company wants to ensure employees are allowed to copy files from a virtual desktop during the workday but are restricted during non-working hours.\nWhich of the following security measures should the company set up?",
     "choices": [
@@ -12632,12 +12689,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Time-based access control is the most suitable measure for restricting employees from copying files during non-working hours. It allows access to resources based on the time of day, ensuring that employees can copy files during the workday, but are restricted from doing so outside of those hours. This ensures that the company's policy is enforced based on time-specific criteria.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The restriction is purely temporal — the same action is allowed during the workday and blocked outside it. Time-based access control evaluates the clock as part of the access decision, which is what the requirement describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Digital rights management controls what may be done with a document wherever it travels. It governs the content, not the hours.",
+      "B": "Role-based access control decides rights by job function. Every employee here has the same right, just not at every hour.",
+      "D": "Network access control decides whether a device may join the network at all. It is an admission decision, not a per-action time rule."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p135",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12670,21 +12731,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "An NDA (Non-Disclosure Agreement) is a legal document that restricts individuals from sharing proprietary or confidential information they have access to during their employment. Employees sign this agreement to prevent the disclosure of sensitive company information after leaving the organization. Violation of an NDA can result in legal consequences, including lawsuits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement binds someone not to reveal confidential information, and it continues to apply after they leave. Restricting what a departing employee may do with company information, with legal consequences for breach, is an NDA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An SLA commits a provider to measurable service levels. It is a supplier agreement, not an employee one.",
+      "B": "A BPA sets out how two businesses will operate a partnership. Again it is organisation to organisation.",
+      "D": "An MOA records a formal agreement of cooperation between parties. It establishes intent rather than restricting disclosure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p135",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0304",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A systems administrator just purchased multiple network devices.\nWhich of the following should the systems administrator perform to prevent attackers from accessing the devices by using publicly available information?",
     "choices": [
@@ -12708,12 +12773,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Changing default passwords is a critical step in securing network devices. Default credentials are often publicly available and widely known by attackers, making devices vulnerable to unauthorized access. By replacing these defaults with strong, unique passwords, the systems administrator can significantly reduce the risk of compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "New network devices arrive with credentials that are printed in the vendor's public documentation, so anyone can look them up. Changing those defaults immediately removes the single most trivially exploitable weakness, and 'publicly available information' points straight at it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint protection defends workstations and servers against malware. Network devices generally cannot run it.",
+      "B": "Disabling unused ports and protocols is good hardening, but the attacker is using a documented credential on a service that must stay available.",
+      "D": "Removing unnecessary software shrinks the attack surface on a general-purpose system. Network appliances run fixed firmware with little to remove."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p136",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12721,8 +12790,8 @@
   {
     "id": "q0305",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "A CVE in a key back-end component of an application has been disclosed. The systems administrator is identifying all of the systems in the environment that are susceptible to this risk.\nWhich of the following should the systems administrator perform?",
     "choices": [
@@ -12746,21 +12815,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A vulnerability scan is used to identify systems and components in an environment that are susceptible to known vulnerabilities, such as those disclosed through CVEs (Common Vulnerabilities and Exposures). This process involves scanning systems for software versions and configurations to determine if they match the affected criteria of the disclosed vulnerability.\nThis allows the systems administrator to take corrective actions, such as patching or mitigating the vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability scan fingerprints software and versions across the estate and reports which hosts match a given CVE. Enumerating everything susceptible to a newly disclosed flaw is precisely what a scanner does at scale.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A packet capture records traffic on a link. It reveals what is communicating, not which systems run a vulnerable component.",
+      "C": "Metadata analysis examines descriptive data about files or communications. It is a forensic technique, not an inventory method.",
+      "D": "Automated reporting distributes results that already exist. Something has to generate the findings first."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p136",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.529,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0306",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following activities uses OSINT?",
     "choices": [
@@ -12784,12 +12857,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "OSINT (Open-Source Intelligence) refers to the collection and analysis of publicly available information from various sources, such as social media, websites, and public records. In social engineering testing, OSINT is used to gather information about a target, such as employee names, roles, and behaviors, which can then be exploited during the test to assess the organization's vulnerability to social engineering attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Social engineering testing begins by learning about the target from public sources — staff names, job titles, email formats, supplier relationships, social media. That reconnaissance is open-source intelligence, and it is what makes a pretext convincing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data analysis of logs works on internal telemetry the organisation generated. Internal data is by definition not open source.",
+      "C": "Collecting evidence of malicious activity is forensic work on your own systems and records.",
+      "D": "Producing indicators of compromise means deriving hashes and addresses from observed malware. That is analysis output, not public information gathering."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12797,8 +12874,8 @@
   {
     "id": "q0307",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
     "question": "Which of the following are the best security controls for controlling on-premises access?\n(Choose two.)",
     "choices": [
@@ -12831,12 +12908,17 @@
       "A",
       "D"
     ],
-    "explanation": "Swipe Card: Swipe cards are a common physical security measure that allows controlled access to specific areas. They are assigned to authorized individuals and can be tracked or deactivated if lost or stolen.\nBiometric Scanner: Biometric scanners, such as fingerprint or iris scanners, provide robust security by verifying unique physical characteristics of a person. They are highly effective in preventing unauthorized access as biometric data is difficult to replicate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Both enforce entry rather than merely observing it. A swipe card is something you have, checked automatically at the door, and a biometric scanner is something you are, tied to the individual and impossible to lend. Together they are the standard physical access controls.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A picture ID depends on a human comparing a face to a photograph. It is easily forged and inconsistently checked.",
+      "C": "A phone authentication application secures logical access to systems. It is not a door control.",
+      "E": "A camera records who came through. That is detective, and it stops nobody.",
+      "F": "A memorable question is a knowledge factor for account recovery. It has no role at a physical entrance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12869,12 +12951,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Risk appetite refers to the level of risk an organization is willing to accept in pursuit of its objectives.\nWhen granting access to an application, especially to both contractors and internal employees, the implementation team needs to assess how much risk the organization is willing to tolerate regarding potential unauthorized access, data breaches, or misuse of the application.\nUnderstanding the company's risk appetite helps in designing access controls that align with its risk management strategy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Extending an application to contractors adds exposure in exchange for saving money. Risk appetite is the amount of risk the organisation is willing to take on in pursuit of an objective, which is precisely the judgement the team must understand before granting that access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk threshold is the specific trigger level at which action becomes required. It is a measurement point derived from appetite rather than the governing concept.",
+      "C": "Avoidance is a treatment — declining the activity altogether. The company has already decided it wants the expansion.",
+      "D": "The register is the document where risks are recorded. It stores the decision rather than informing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12907,12 +12993,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Attestation is the act of formally declaring or providing evidence that certain conditions or requirements have been met. In this context, it involves proving to a customer that software developers are trained on secure coding practices. This can be achieved through documentation, certifications, or other official declarations demonstrating compliance with secure coding standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Attestation is a formal declaration, backed by evidence, that a stated condition holds. Telling a customer that developers are trained in secure coding — and standing behind that claim in writing — is an attestation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Assurance is the confidence the customer gains. Attestation is the act that produces it.",
+      "B": "A contract creates obligations between parties. It might require the training, but it does not prove it happened.",
+      "C": "Due diligence is the investigation a customer performs before engaging. It is the customer's activity, not the supplier's declaration."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p138",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -12945,21 +13035,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A jump server (also known as a jump box) is a secure system designed to serve as a controlled entry point for accessing servers and environments. It is commonly used to provide external contractors or administrators with access to a specific environment, such as a test environment, while minimizing the risk of unauthorized access to other parts of the network. Jump servers typically include additional security measures like multi-factor authentication and logging to enhance control and monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server is a single hardened, logged system that external parties connect to and work from. It gives the contractor a controlled path into the test environment while keeping the rest of the network unreachable and every session recorded.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An application server runs the application itself. Exposing it directly is what the jump server avoids.",
+      "C": "An RDP server provides a remote desktop, which is a protocol and service rather than the controlled-gateway pattern being asked for.",
+      "D": "A proxy server mediates outbound client requests. It does not provide inbound administrative access to an environment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p138",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0311",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A security analyst notices unusual behavior on the network. The IDS on the network was not able to detect the activities.\nWhich of the following should the security analyst use to help the IDS detect such attacks in the future?",
     "choices": [
@@ -12983,12 +13077,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Signatures are predefined patterns or rules used by an Intrusion Detection System (IDS) to identify known malicious activities or attacks. If the IDS was unable to detect unusual behavior, the security analyst can create or update signatures based on the characteristics of the observed activity. This ensures the IDS can recognize and flag similar activities in the future, improving its effectiveness in detecting such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A signature-based IDS only recognises what it has been told to look for. Writing a signature from the characteristics of the observed activity is how you teach it to catch that behaviour next time, which is the direct answer to a missed detection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Trends describe activity measured over time. They provide context for an analyst rather than a detection rule the IDS can match.",
+      "C": "A honeypot is a decoy that detects attackers who interact with it. It adds a separate detection capability instead of improving the IDS.",
+      "D": "Reputation scores rate the trustworthiness of addresses and domains. Useful input, but it will not catch behaviour from a source with no bad reputation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p139",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13021,12 +13119,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "An EDR (Endpoint Detection and Response) solution is a technical security control that focuses on monitoring, detecting, and responding to threats on endpoint devices such as desktops, laptops, and servers. It provides real-time visibility, threat detection, and automated responses to mitigate security incidents, making it a part of the technical security category.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Control categories describe how a control is implemented. EDR is software running on endpoints, making decisions automatically, so it is a technical control — as opposed to one delivered through people, process or physical means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Physical controls act on the physical environment: locks, fences, guards, cameras.",
+      "B": "Operational controls are carried out by people day to day, such as following procedures or reviewing logs.",
+      "C": "Managerial controls are the planning and oversight layer — risk assessments, security planning, policy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p139",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13059,21 +13161,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "A zero-day vulnerability is a security flaw that is unknown to the vendor or developer and has no available fix at the time of its discovery.\nWhen relying on open-source libraries, addressing zero-day vulnerabilities can be particularly challenging because the company depends on the open-source community or the library's maintainers to identify and patch the issue. The company often has limited control over the development and update process for these libraries, making remediation more difficult compared to other vulnerability types where known fixes or mitigations are available.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day has no patch by definition, and with an open-source dependency the company cannot simply demand one — it waits on volunteer maintainers, or forks and fixes the library itself. That loss of control over the fix timeline is what makes it hardest to remediate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow is a known defect class with established fixes. Once identified in a library it is patched like any other bug.",
+      "B": "SQL injection is usually a flaw in the company's own code, where it controls the fix entirely.",
+      "C": "Cross-site scripting is likewise typically in the application the company writes and can remediate directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p140",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0314",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 1,
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
     "question": "An organization has a new regulatory requirement to implement corrective controls on a financial system.\nWhich of the following is the most likely reason for the new requirement?",
     "choices": [
@@ -13097,12 +13203,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Corrective controls are designed to identify and fix issues that arise in a system to prevent further propagation of errors. In a financial system, implementing corrective controls ensures that errors, such as data inaccuracies or processing mistakes, are identified and corrected before they can affect other interconnected systems. Regulatory requirements often mandate such controls to maintain data integrity and reliability across financial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Corrective controls act after something has gone wrong, to fix it and stop the consequences spreading. In a financial system that means catching and correcting erroneous data before it propagates into downstream systems and reports, which is why regulators mandate them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defending against insiders altering banking details is preventive — access controls and separation of duties stop the change happening.",
+      "C": "Purchasing insurance is risk transfer. Regulators do not mandate controls so that insurance can be bought.",
+      "D": "Preventing unauthorised changes is a preventive control, which is the opposite of corrective."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p140",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13135,21 +13245,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "The acquisition stage in an investigation involves obtaining forensic images of digital evidence.\nThis process includes creating exact copies of data from storage devices (e.g., hard drives, USB drives) or systems while maintaining the integrity of the original evidence. These forensic images are then used for analysis in subsequent stages of the investigation, ensuring that the original evidence remains unaltered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Acquisition is the stage where evidence is actually collected — imaging drives and capturing memory, bit for bit, with hashing to prove the copy matches. Obtaining forensic images is the definition of that step.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preservation keeps the evidence unaltered from that point on. It protects what acquisition has already captured.",
+      "C": "Reporting documents findings at the end of the investigation.",
+      "D": "E-discovery is the legal process of identifying and producing electronically stored information for litigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0316",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
     "question": "Which of the following describes the difference between encryption and hashing?",
     "choices": [
@@ -13173,21 +13287,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Encryption transforms cleartext into ciphertext using an algorithm and a key to protect the data's confidentiality. The ciphertext can be decrypted back into the original cleartext with the correct key.\nHashing is a one-way process that generates a fixed-size hash value (checksum) from input data. Hashing is typically used to ensure data integrity by detecting changes in the data, as even a small alteration results in a completely different hash value.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption is a two-way transformation: cleartext becomes ciphertext and, with the right key, comes back again. Hashing is one-way, producing a fixed-length digest used to detect whether data has changed. Reversibility is the fundamental difference.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Both techniques apply to data in transit and at rest. The distinction is not about where the data sits.",
+      "C": "This reverses the two. Encryption provides confidentiality; hashing supports integrity.",
+      "D": "Encryption may be symmetric or asymmetric, and hashing uses no key at all — a keyed variant is an HMAC, which is a different construct."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.633,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0317",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "A security report shows that during a two-week test period, 80% of employees unwittingly disclosed their SSO credentials when accessing an external website. The organization purposely created the website to simulate a cost-free password complexity test.\nWhich of the following would best help reduce the number of visits to similar websites in the future?",
     "choices": [
@@ -13211,21 +13329,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A phishing awareness campaign is the best way to address this issue by educating employees about recognizing and avoiding phishing attempts. The campaign can include training sessions, simulated phishing exercises, and guidelines for safely handling requests for sensitive information. By increasing awareness and understanding, employees will be less likely to fall for similar schemes in the future, significantly reducing the risk of credential disclosure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Eighty per cent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behaviour that produced the result.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocking all outbound traffic from the intranet would stop the business functioning. It is disproportionate by an enormous margin.",
+      "C": "Restricting internet access for those who fell for it is punitive and treats the symptom in a handful of people while leaving everyone else untrained.",
+      "D": "A deny list blocks sites you already know about. The next phishing site will be one nobody has listed yet."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0318",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "A Chief Information Security Officer (CISO) has developed information security policies that relate to the software development methodology.\nWhich of the following would the CISO most likely include in the organization's documentation?",
     "choices": [
@@ -13249,12 +13371,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Peer review requirements are often included in information security policies related to the software development methodology. Peer reviews help ensure that code is reviewed for quality, security vulnerabilities, and adherence to best practices before it is merged or deployed. This process reduces the likelihood of introducing security flaws into the software and aligns with secure development lifecycle practices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Peer review is a process requirement about how development work is checked before it progresses, which is exactly what a policy governing the development methodology states. It sets an expectation on the workflow rather than prescribing a tool.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Multifactor authentication is an access control applying across the organisation. It is not specific to the development methodology.",
+      "C": "Branch protection tests are a concrete repository configuration. They implement the policy rather than being the policy statement.",
+      "D": "Secrets management configurations are likewise implementation detail — settings in a tool, not a documented methodology expectation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13287,12 +13413,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) outlines the responsibilities and expectations for employees and users regarding the use of systems, software, and other organizational resources. It specifies the appropriate and prohibited behaviors to ensure secure and proper operation of these systems. This policy communicates general operational responsibilities and helps enforce compliance with organizational security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy sets out what users may and may not do with organisational systems and software. Communicating general responsibilities for operating those systems is exactly its purpose, and it is the document every user signs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business continuity plan describes how the organisation keeps operating through major disruption. It addresses recovery, not routine responsibilities.",
+      "B": "A change management procedure governs how modifications are approved and applied. It is narrow and aimed at those making changes.",
+      "D": "An SDLC policy governs how software is built. It applies to development teams rather than to general operation of systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13325,12 +13455,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A honeyfile is a decoy file created to detect unauthorized access or suspicious activities. In this case, the security analyst set up a fake account and saved its password in a hidden spreadsheet, configuring an alert to trigger if the file is accessed. This approach aims to deceive potential attackers and monitor their behavior, making it a clear example of using a honeyfile.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeyfile is a decoy file placed where it should not be found, with an alert on access. The spreadsheet has no legitimate purpose and nobody has a reason to open it, so any access is a reliable signal that someone is looking where they should not be.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeypot is a whole decoy system or service. Here the trap is a single file on a real system.",
+      "C": "A honeytoken is fake data such as a bogus record or credential whose use signals compromise. The account is fake, but the mechanism generating the alert is the file being opened.",
+      "D": "A honeynet is an entire decoy network of systems built to study attackers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p143",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.917,
     "needsExplanation": false,
     "keyCorrected": false
@@ -13363,12 +13497,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A VPN (Virtual Private Network) provides secure, encrypted remote access to an organization's internal network. It ensures that data transmitted between remote employees and the internal network is protected from interception and minimizes the exposure of the internal network by controlling access through secure tunnels. VPNs are a widely used and effective solution for enabling secure remote work.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A VPN gives remote staff an encrypted tunnel to defined internal resources, so nothing needs to be published to the internet. Traffic is protected in transit and the internal network stays behind the boundary, which is what minimising exposure means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "LDAP is a directory protocol for querying and authenticating against directory objects. It authenticates but provides no secure transport.",
+      "C": "FTP transfers files in plaintext. It exposes both credentials and content and offers no network access.",
+      "D": "RADIUS centralises authentication for network access. It decides who may connect but does not itself create the encrypted tunnel."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p143",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false

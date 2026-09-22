@@ -1765,12 +1765,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Steganography is the cryptographic technique used to hide the fact that communication is occurring. It involves embedding secret data within other non-suspicious data, such as images, audio, or video files, so that the presence of the hidden message is not detectable. Unlike encryption, which transforms data into unreadable formats, steganography hides the very existence of the communication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Steganography hides a message inside ordinary-looking content such as an image or audio file, so an observer sees nothing unusual at all. Encryption conceals what was said; steganography conceals that anything was said.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data masking obscures part of a value for display, such as showing only the last four digits. The record is plainly visible, just partly hidden.",
+      "C": "Tokenisation substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
+      "D": "A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1803,12 +1807,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Before mitigating a vulnerability in a production server, it is important to refer to the change management policy. This policy outlines the necessary procedures for making changes to production systems, ensuring that changes are thoroughly reviewed, tested, and approved.\nFollowing this policy helps mitigate the risk of introducing additional issues or downtime when applying patches or updates to the server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mitigating a vulnerability on a production server means changing a live system, and change management governs how that is done — approval, impact analysis, a test result, a maintenance window and a backout plan. Skipping it risks causing a worse outage than the vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Escalating to the SDLC team applies when a fix requires code changes. Most server mitigations are configuration or patching, and the process question comes first regardless.",
+      "B": "The incident response plan covers active security incidents. A known vulnerability that has not been exploited is not an incident.",
+      "C": "A risk assessment helps decide how urgently to act, and it may well have already happened. Even an urgent fix still goes through change control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1841,12 +1849,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Authorization occurs after an individual has successfully logged into a computer network and is granted access to specific resources or services based on their privileges or roles. It defines what the authenticated user is allowed to do on the network (e.g., access files, use certain applications, etc.).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Authentication happens at log-in and proves who the user is. Authorisation is the step that follows: deciding what that now-verified identity is permitted to reach. Granting access after log-in is authorisation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identification is claiming an identity, such as entering a username. It precedes authentication and proves nothing.",
+      "C": "Non-repudiation prevents someone denying an action they performed. It concerns accountability after the fact.",
+      "D": "Authentication is the log-in step itself, which the question says has already happened."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1854,8 +1866,8 @@ export const domain1Questions = [
   {
     "id": "q0307",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
     "question": "Which of the following are the best security controls for controlling on-premises access?\n(Choose two.)",
     "choices": [
@@ -1888,51 +1900,18 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": "Swipe Card: Swipe cards are a common physical security measure that allows controlled access to specific areas. They are assigned to authorized individuals and can be tracked or deactivated if lost or stolen.\nBiometric Scanner: Biometric scanners, such as fingerprint or iris scanners, provide robust security by verifying unique physical characteristics of a person. They are highly effective in preventing unauthorized access as biometric data is difficult to replicate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Both enforce entry rather than merely observing it. A swipe card is something you have, checked automatically at the door, and a biometric scanner is something you are, tied to the individual and impossible to lend. Together they are the standard physical access controls.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A picture ID depends on a human comparing a face to a photograph. It is easily forged and inconsistently checked.",
+      "C": "A phone authentication application secures logical access to systems. It is not a door control.",
+      "E": "A camera records who came through. That is detective, and it stops nobody.",
+      "F": "A memorable question is a knowledge factor for account recovery. It has no role at a physical entrance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0311",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "A security analyst notices unusual behavior on the network. The IDS on the network was not able to detect the activities.\nWhich of the following should the security analyst use to help the IDS detect such attacks in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Signatures"
-      },
-      {
-        "key": "B",
-        "text": "Trends"
-      },
-      {
-        "key": "C",
-        "text": "Honeypot"
-      },
-      {
-        "key": "D",
-        "text": "Reputation"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Signatures are predefined patterns or rules used by an Intrusion Detection System (IDS) to identify known malicious activities or attacks. If the IDS was unable to detect unusual behavior, the security analyst can create or update signatures based on the characteristics of the observed activity. This ensures the IDS can recognize and flag similar activities in the future, improving its effectiveness in detecting such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p139",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1964,13 +1943,101 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An EDR (Endpoint Detection and Response) solution is a technical security control that focuses on monitoring, detecting, and responding to threats on endpoint devices such as desktops, laptops, and servers. It provides real-time visibility, threat detection, and automated responses to mitigate security incidents, making it a part of the technical security category.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Control categories describe how a control is implemented. EDR is software running on endpoints, making decisions automatically, so it is a technical control — as opposed to one delivered through people, process or physical means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Physical controls act on the physical environment: locks, fences, guards, cameras.",
+      "B": "Operational controls are carried out by people day to day, such as following procedures or reviewing logs.",
+      "C": "Managerial controls are the planning and oversight layer — risk assessments, security planning, policy."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p139",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0314",
+    "domain": 1,
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
+    "type": "single",
+    "question": "An organization has a new regulatory requirement to implement corrective controls on a financial system.\nWhich of the following is the most likely reason for the new requirement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To defend against insider threats altering banking details"
+      },
+      {
+        "key": "B",
+        "text": "To ensure that errors are not passed to other systems"
+      },
+      {
+        "key": "C",
+        "text": "To allow for business insurance to be purchased"
+      },
+      {
+        "key": "D",
+        "text": "To prevent unauthorized changes to financial data"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Corrective controls act after something has gone wrong, to fix it and stop the consequences spreading. In a financial system that means catching and correcting erroneous data before it propagates into downstream systems and reports, which is why regulators mandate them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defending against insiders altering banking details is preventive — access controls and separation of duties stop the change happening.",
+      "C": "Purchasing insurance is risk transfer. Regulators do not mandate controls so that insurance can be bought.",
+      "D": "Preventing unauthorised changes is a preventive control, which is the opposite of corrective."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p140",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0316",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "Which of the following describes the difference between encryption and hashing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Encryption protects data in transit, while hashing protects data at rest."
+      },
+      {
+        "key": "B",
+        "text": "Encryption replaces cleartext with ciphertext, while hashing calculates a checksum."
+      },
+      {
+        "key": "C",
+        "text": "Encryption ensures data integrity, while hashing ensures data confidentiality."
+      },
+      {
+        "key": "D",
+        "text": "Encryption uses a public-key exchange, while hashing uses a private key."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Encryption is a two-way transformation: cleartext becomes ciphertext and, with the right key, comes back again. Hashing is one-way, producing a fixed-length digest used to detect whether data has changed. Reversibility is the fundamental difference.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Both techniques apply to data in transit and at rest. The distinction is not about where the data sits.",
+      "C": "This reverses the two. Encryption provides confidentiality; hashing supports integrity.",
+      "D": "Encryption may be symmetric or asymmetric, and hashing uses no key at all — a keyed variant is an HMAC, which is a different construct."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p141",
+    "needsReview": false,
+    "inferenceConfidence": 0.633,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2002,12 +2069,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A honeyfile is a decoy file created to detect unauthorized access or suspicious activities. In this case, the security analyst set up a fake account and saved its password in a hidden spreadsheet, configuring an alert to trigger if the file is accessed. This approach aims to deceive potential attackers and monitor their behavior, making it a clear example of using a honeyfile.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeyfile is a decoy file placed where it should not be found, with an alert on access. The spreadsheet has no legitimate purpose and nobody has a reason to open it, so any access is a reliable signal that someone is looking where they should not be.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A honeypot is a whole decoy system or service. Here the trap is a single file on a real system.",
+      "C": "A honeytoken is fake data such as a bogus record or credential whose use signals compromise. The account is fake, but the mechanism generating the alert is the file being opened.",
+      "D": "A honeynet is an entire decoy network of systems built to study attackers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p143",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.917,
     "needsExplanation": false,
     "keyCorrected": false

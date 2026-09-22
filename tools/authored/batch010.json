@@ -1,0 +1,241 @@
+{
+"q0288": {"objective":"4.3",
+ "explanation":"Dynamic analysis exercises the application while it is actually running, so it observes real behaviour — how the deployed build handles input, what it returns, how it fails. Only a runtime technique can test a deployed application in its real configuration.",
+ "incorrect":{
+  "B":"Code review reads source without executing it. It happens before deployment and cannot see runtime behaviour.",
+  "C":"Package monitoring tracks the third-party dependencies an application includes for known flaws. It inspects the bill of materials, not the running process.",
+  "D":"A bug bounty pays external researchers for findings. It is a programme for sourcing reports, not an identification method in its own right."}},
+
+"q0289": {"objective":"1.4",
+ "explanation":"Steganography hides a message inside ordinary-looking content such as an image or audio file, so an observer sees nothing unusual at all. Encryption conceals what was said; steganography conceals that anything was said.",
+ "incorrect":{
+  "B":"Data masking obscures part of a value for display, such as showing only the last four digits. The record is plainly visible, just partly hidden.",
+  "C":"Tokenisation substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
+  "D":"A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."}},
+
+"q0290": {"objective":"1.3",
+ "explanation":"Mitigating a vulnerability on a production server means changing a live system, and change management governs how that is done — approval, impact analysis, a test result, a maintenance window and a backout plan. Skipping it risks causing a worse outage than the vulnerability.",
+ "incorrect":{
+  "A":"Escalating to the SDLC team applies when a fix requires code changes. Most server mitigations are configuration or patching, and the process question comes first regardless.",
+  "B":"The incident response plan covers active security incidents. A known vulnerability that has not been exploited is not an incident.",
+  "C":"A risk assessment helps decide how urgently to act, and it may well have already happened. Even an urgent fix still goes through change control."}},
+
+"q0291": {"objective":"4.3",
+ "explanation":"Static analysis examines the file without running it — hashing it, reading its structure and matching byte patterns against known signatures. For a file already known to be malicious that is both the fastest and the safest way to confirm the signature.",
+ "incorrect":{
+  "B":"A sandbox detonates the file and watches what it does. That is thorough but slow, and unnecessary when the malware is already known.",
+  "C":"Network traffic analysis observes what a sample communicates. It requires the file to run and reveals behaviour rather than a file signature.",
+  "D":"Package monitoring tracks dependencies in your own software for known vulnerabilities. It is unrelated to identifying a malicious file."}},
+
+"q0292": {"objective":"5.5",
+ "explanation":"Proof for an outside audience has to come from someone independent. A third-party attestation is an external party's formal statement that the testing was performed and what it found, which is what makes it acceptable as evidence to customers and regulators.",
+ "incorrect":{
+  "A":"A business impact analysis determines how badly the organisation is hurt by disruption. It is a continuity artefact and involves no security testing.",
+  "B":"Supply chain analysis maps supplier dependencies and their risk. It looks outward at vendors rather than testing your own network.",
+  "C":"A vulnerability assessment produces findings, and it may well be the test performed — but self-produced results are not proof to an external party without independent attestation."}},
+
+"q0293": {"objective":"3.3",
+ "explanation":"The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunnelling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
+ "incorrect":{
+  "A":"Tokenisation substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+  "B":"A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
+  "E":"Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
+  "F":"Data masking hides parts of a value. Like tokenisation it destroys the completeness the recipient requires."}},
+
+"q0294": {"objective":"5.2",
+ "explanation":"Risk identification is the first substantive step: establishing what is in scope and enumerating what could go wrong. Everything afterwards — scoring, treating, monitoring — operates on the list this stage produces.",
+ "incorrect":{
+  "A":"Risk assessment evaluates the risks already identified, scoring likelihood and impact. It cannot assess what has not been named.",
+  "C":"Risk treatment decides what to do about each risk — accept, mitigate, transfer or avoid. That comes after assessment.",
+  "D":"Risk monitoring and review tracks risks over time and checks that treatments remain effective. It is the ongoing final stage."}},
+
+"q0295": {"objective":"2.2",
+ "explanation":"Registering a domain that differs from the real one by a single easily-mistyped character — a zero for the letter o — is typosquatting. It relies on users mistyping the address or failing to notice the substitution in a link.",
+ "incorrect":{
+  "B":"Brand impersonation is using a company's name, logo and styling to appear legitimate. It often accompanies typosquatting, but the question is specifically about the lookalike domain registration.",
+  "C":"An on-path attack intercepts traffic between two parties. It requires network position rather than a registered domain.",
+  "D":"A watering-hole attack compromises a legitimate site the targets already visit. Here a new fraudulent domain was created instead."}},
+
+"q0296": {"objective":"4.6",
+ "explanation":"An access control list attached to a file enumerates which users and groups may read, write or execute it. Tuning permissions on a specific file is exactly what an ACL provides — granular, per-principal entries on that object.",
+ "incorrect":{
+  "A":"Patching updates software to fix defects. It has nothing to do with file permissions.",
+  "C":"Configuration enforcement keeps system settings at a defined baseline. It maintains state broadly rather than adjusting one file's permissions.",
+  "D":"Least privilege is the principle that guides what the permissions should be. It is the objective; the ACL is the mechanism."}},
+
+"q0297": {"objective":"5.4",
+ "explanation":"Sanctions are the enforcement action a regulator takes against non-compliance — fines, operating restrictions, or losing a licence to trade. They directly threaten the organisation's ability to operate, which makes them the gravest consequence.",
+ "incorrect":{
+  "A":"The right to be forgotten is a data subject's right to have personal data erased. It is an obligation to honour, not a penalty for failing to.",
+  "C":"External compliance reporting is the routine act of demonstrating compliance. It is a normal duty rather than a consequence.",
+  "D":"Attestation is a formal statement that requirements are met. Again it is part of demonstrating compliance."}},
+
+"q0298": {"objective":"1.2",
+ "explanation":"Authentication happens at log-in and proves who the user is. Authorisation is the step that follows: deciding what that now-verified identity is permitted to reach. Granting access after log-in is authorisation.",
+ "incorrect":{
+  "B":"Identification is claiming an identity, such as entering a username. It precedes authentication and proves nothing.",
+  "C":"Non-repudiation prevents someone denying an action they performed. It concerns accountability after the fact.",
+  "D":"Authentication is the log-in step itself, which the question says has already happened."}},
+
+"q0299": {"objective":"3.2",
+ "explanation":"Multiple servers only help if traffic is spread across them. A load balancer distributes requests over the pool and routes around any server that fails its health check, which delivers both the performance gain and the availability the organisation is after.",
+ "incorrect":{
+  "B":"A jump server is a hardened entry point for administrative access. It serves administrators, not application users.",
+  "C":"A proxy server mediates requests, usually outbound from clients. It does not distribute inbound load across a server pool.",
+  "D":"SD-WAN optimises traffic across wide area network links between sites. It manages connectivity rather than application server load."}},
+
+"q0300": {"objective":"2.2",
+ "explanation":"A duplicate site that mimics the company's real mail interface is pretending to be the company in order to capture credentials. Assuming a trusted organisation's identity to deceive users is impersonation.",
+ "incorrect":{
+  "B":"Replication is copying data between systems for availability or backup. It is a legitimate technical process, not an attack.",
+  "C":"Phishing is the delivery method — the message that lures a user to the fake site. The question asks what is being used at the site itself, which is impersonation of the company.",
+  "D":"Smishing is phishing over SMS. No text messages are involved."}},
+
+"q0301": {"objective":"4.6",
+ "explanation":"Time-of-day restrictions attach permitted hours to an account, so authentication simply fails outside them. Limiting access to an employee's shift is exactly what this control expresses, and it works regardless of whether credentials are stolen.",
+ "incorrect":{
+  "A":"Role-based access control grants rights according to job function. It governs what someone may do, not when they may do it.",
+  "C":"Least privilege limits rights to the minimum needed. Again it is about scope of access rather than timing.",
+  "D":"Biometric authentication strengthens proof of identity. A verified fingerprint at three in the morning still gets in."}},
+
+"q0302": {"objective":"4.6",
+ "explanation":"The restriction is purely temporal — the same action is allowed during the workday and blocked outside it. Time-based access control evaluates the clock as part of the access decision, which is what the requirement describes.",
+ "incorrect":{
+  "A":"Digital rights management controls what may be done with a document wherever it travels. It governs the content, not the hours.",
+  "B":"Role-based access control decides rights by job function. Every employee here has the same right, just not at every hour.",
+  "D":"Network access control decides whether a device may join the network at all. It is an admission decision, not a per-action time rule."}},
+
+"q0303": {"objective":"5.3",
+ "explanation":"A non-disclosure agreement binds someone not to reveal confidential information, and it continues to apply after they leave. Restricting what a departing employee may do with company information, with legal consequences for breach, is an NDA.",
+ "incorrect":{
+  "A":"An SLA commits a provider to measurable service levels. It is a supplier agreement, not an employee one.",
+  "B":"A BPA sets out how two businesses will operate a partnership. Again it is organisation to organisation.",
+  "D":"An MOA records a formal agreement of cooperation between parties. It establishes intent rather than restricting disclosure."}},
+
+"q0304": {"objective":"4.1",
+ "explanation":"New network devices arrive with credentials that are printed in the vendor's public documentation, so anyone can look them up. Changing those defaults immediately removes the single most trivially exploitable weakness, and 'publicly available information' points straight at it.",
+ "incorrect":{
+  "A":"Endpoint protection defends workstations and servers against malware. Network devices generally cannot run it.",
+  "B":"Disabling unused ports and protocols is good hardening, but the attacker is using a documented credential on a service that must stay available.",
+  "D":"Removing unnecessary software shrinks the attack surface on a general-purpose system. Network appliances run fixed firmware with little to remove."}},
+
+"q0305": {"objective":"4.3",
+ "explanation":"A vulnerability scan fingerprints software and versions across the estate and reports which hosts match a given CVE. Enumerating everything susceptible to a newly disclosed flaw is precisely what a scanner does at scale.",
+ "incorrect":{
+  "A":"A packet capture records traffic on a link. It reveals what is communicating, not which systems run a vulnerable component.",
+  "C":"Metadata analysis examines descriptive data about files or communications. It is a forensic technique, not an inventory method.",
+  "D":"Automated reporting distributes results that already exist. Something has to generate the findings first."}},
+
+"q0306": {"objective":"5.5",
+ "explanation":"Social engineering testing begins by learning about the target from public sources — staff names, job titles, email formats, supplier relationships, social media. That reconnaissance is open-source intelligence, and it is what makes a pretext convincing.",
+ "incorrect":{
+  "B":"Data analysis of logs works on internal telemetry the organisation generated. Internal data is by definition not open source.",
+  "C":"Collecting evidence of malicious activity is forensic work on your own systems and records.",
+  "D":"Producing indicators of compromise means deriving hashes and addresses from observed malware. That is analysis output, not public information gathering."}},
+
+"q0307": {"objective":"1.2",
+ "explanation":"Both enforce entry rather than merely observing it. A swipe card is something you have, checked automatically at the door, and a biometric scanner is something you are, tied to the individual and impossible to lend. Together they are the standard physical access controls.",
+ "incorrect":{
+  "B":"A picture ID depends on a human comparing a face to a photograph. It is easily forged and inconsistently checked.",
+  "C":"A phone authentication application secures logical access to systems. It is not a door control.",
+  "E":"A camera records who came through. That is detective, and it stops nobody.",
+  "F":"A memorable question is a knowledge factor for account recovery. It has no role at a physical entrance."}},
+
+"q0308": {"objective":"5.2",
+ "explanation":"Extending an application to contractors adds exposure in exchange for saving money. Risk appetite is the amount of risk the organisation is willing to take on in pursuit of an objective, which is precisely the judgement the team must understand before granting that access.",
+ "incorrect":{
+  "A":"A risk threshold is the specific trigger level at which action becomes required. It is a measurement point derived from appetite rather than the governing concept.",
+  "C":"Avoidance is a treatment — declining the activity altogether. The company has already decided it wants the expansion.",
+  "D":"The register is the document where risks are recorded. It stores the decision rather than informing it."}},
+
+"q0309": {"objective":"5.3",
+ "explanation":"Attestation is a formal declaration, backed by evidence, that a stated condition holds. Telling a customer that developers are trained in secure coding — and standing behind that claim in writing — is an attestation.",
+ "incorrect":{
+  "A":"Assurance is the confidence the customer gains. Attestation is the act that produces it.",
+  "B":"A contract creates obligations between parties. It might require the training, but it does not prove it happened.",
+  "C":"Due diligence is the investigation a customer performs before engaging. It is the customer's activity, not the supplier's declaration."}},
+
+"q0310": {"objective":"3.2",
+ "explanation":"A jump server is a single hardened, logged system that external parties connect to and work from. It gives the contractor a controlled path into the test environment while keeping the rest of the network unreachable and every session recorded.",
+ "incorrect":{
+  "A":"An application server runs the application itself. Exposing it directly is what the jump server avoids.",
+  "C":"An RDP server provides a remote desktop, which is a protocol and service rather than the controlled-gateway pattern being asked for.",
+  "D":"A proxy server mediates outbound client requests. It does not provide inbound administrative access to an environment."}},
+
+"q0311": {"objective":"4.5",
+ "explanation":"A signature-based IDS only recognises what it has been told to look for. Writing a signature from the characteristics of the observed activity is how you teach it to catch that behaviour next time, which is the direct answer to a missed detection.",
+ "incorrect":{
+  "B":"Trends describe activity measured over time. They provide context for an analyst rather than a detection rule the IDS can match.",
+  "C":"A honeypot is a decoy that detects attackers who interact with it. It adds a separate detection capability instead of improving the IDS.",
+  "D":"Reputation scores rate the trustworthiness of addresses and domains. Useful input, but it will not catch behaviour from a source with no bad reputation."}},
+
+"q0312": {"objective":"1.1",
+ "explanation":"Control categories describe how a control is implemented. EDR is software running on endpoints, making decisions automatically, so it is a technical control — as opposed to one delivered through people, process or physical means.",
+ "incorrect":{
+  "A":"Physical controls act on the physical environment: locks, fences, guards, cameras.",
+  "B":"Operational controls are carried out by people day to day, such as following procedures or reviewing logs.",
+  "C":"Managerial controls are the planning and oversight layer — risk assessments, security planning, policy."}},
+
+"q0313": {"objective":"2.3",
+ "explanation":"A zero-day has no patch by definition, and with an open-source dependency the company cannot simply demand one — it waits on volunteer maintainers, or forks and fixes the library itself. That loss of control over the fix timeline is what makes it hardest to remediate.",
+ "incorrect":{
+  "A":"A buffer overflow is a known defect class with established fixes. Once identified in a library it is patched like any other bug.",
+  "B":"SQL injection is usually a flaw in the company's own code, where it controls the fix entirely.",
+  "C":"Cross-site scripting is likewise typically in the application the company writes and can remediate directly."}},
+
+"q0314": {"objective":"1.1",
+ "explanation":"Corrective controls act after something has gone wrong, to fix it and stop the consequences spreading. In a financial system that means catching and correcting erroneous data before it propagates into downstream systems and reports, which is why regulators mandate them.",
+ "incorrect":{
+  "A":"Defending against insiders altering banking details is preventive — access controls and separation of duties stop the change happening.",
+  "C":"Purchasing insurance is risk transfer. Regulators do not mandate controls so that insurance can be bought.",
+  "D":"Preventing unauthorised changes is a preventive control, which is the opposite of corrective."}},
+
+"q0315": {"objective":"4.8",
+ "explanation":"Acquisition is the stage where evidence is actually collected — imaging drives and capturing memory, bit for bit, with hashing to prove the copy matches. Obtaining forensic images is the definition of that step.",
+ "incorrect":{
+  "B":"Preservation keeps the evidence unaltered from that point on. It protects what acquisition has already captured.",
+  "C":"Reporting documents findings at the end of the investigation.",
+  "D":"E-discovery is the legal process of identifying and producing electronically stored information for litigation."}},
+
+"q0316": {"objective":"1.4",
+ "explanation":"Encryption is a two-way transformation: cleartext becomes ciphertext and, with the right key, comes back again. Hashing is one-way, producing a fixed-length digest used to detect whether data has changed. Reversibility is the fundamental difference.",
+ "incorrect":{
+  "A":"Both techniques apply to data in transit and at rest. The distinction is not about where the data sits.",
+  "C":"This reverses the two. Encryption provides confidentiality; hashing supports integrity.",
+  "D":"Encryption may be symmetric or asymmetric, and hashing uses no key at all — a keyed variant is an HMAC, which is a different construct."}},
+
+"q0317": {"objective":"5.6",
+ "explanation":"Eighty per cent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behaviour that produced the result.",
+ "incorrect":{
+  "A":"Blocking all outbound traffic from the intranet would stop the business functioning. It is disproportionate by an enormous margin.",
+  "C":"Restricting internet access for those who fell for it is punitive and treats the symptom in a handful of people while leaving everyone else untrained.",
+  "D":"A deny list blocks sites you already know about. The next phishing site will be one nobody has listed yet."}},
+
+"q0318": {"objective":"5.1",
+ "explanation":"Peer review is a process requirement about how development work is checked before it progresses, which is exactly what a policy governing the development methodology states. It sets an expectation on the workflow rather than prescribing a tool.",
+ "incorrect":{
+  "B":"Multifactor authentication is an access control applying across the organisation. It is not specific to the development methodology.",
+  "C":"Branch protection tests are a concrete repository configuration. They implement the policy rather than being the policy statement.",
+  "D":"Secrets management configurations are likewise implementation detail — settings in a tool, not a documented methodology expectation."}},
+
+"q0319": {"objective":"5.1",
+ "explanation":"An acceptable use policy sets out what users may and may not do with organisational systems and software. Communicating general responsibilities for operating those systems is exactly its purpose, and it is the document every user signs.",
+ "incorrect":{
+  "A":"A business continuity plan describes how the organisation keeps operating through major disruption. It addresses recovery, not routine responsibilities.",
+  "B":"A change management procedure governs how modifications are approved and applied. It is narrow and aimed at those making changes.",
+  "D":"An SDLC policy governs how software is built. It applies to development teams rather than to general operation of systems."}},
+
+"q0320": {"objective":"1.2",
+ "explanation":"A honeyfile is a decoy file placed where it should not be found, with an alert on access. The spreadsheet has no legitimate purpose and nobody has a reason to open it, so any access is a reliable signal that someone is looking where they should not be.",
+ "incorrect":{
+  "A":"A honeypot is a whole decoy system or service. Here the trap is a single file on a real system.",
+  "C":"A honeytoken is fake data such as a bogus record or credential whose use signals compromise. The account is fake, but the mechanism generating the alert is the file being opened.",
+  "D":"A honeynet is an entire decoy network of systems built to study attackers."}},
+
+"q0321": {"objective":"3.2",
+ "explanation":"A VPN gives remote staff an encrypted tunnel to defined internal resources, so nothing needs to be published to the internet. Traffic is protected in transit and the internal network stays behind the boundary, which is what minimising exposure means.",
+ "incorrect":{
+  "B":"LDAP is a directory protocol for querying and authenticating against directory objects. It authenticates but provides no secure transport.",
+  "C":"FTP transfers files in plaintext. It exposes both credentials and content and offers no network access.",
+  "D":"RADIUS centralises authentication for network access. It decides who may connect but does not itself create the encrypted tunnel."}}
+}

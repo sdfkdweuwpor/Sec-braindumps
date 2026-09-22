@@ -3937,12 +3937,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Dynamic analysis involves evaluating an application while it is running (during runtime) to identify potential vulnerabilities, performance issues, or other security risks. This type of analysis allows security professionals to observe the application's behavior in real-world conditions and to identify issues that may not be apparent from static code inspection alone.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Dynamic analysis exercises the application while it is actually running, so it observes real behaviour — how the deployed build handles input, what it returns, how it fails. Only a runtime technique can test a deployed application in its real configuration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Code review reads source without executing it. It happens before deployment and cannot see runtime behaviour.",
+      "C": "Package monitoring tracks the third-party dependencies an application includes for known flaws. It inspects the bill of materials, not the running process.",
+      "D": "A bug bounty pays external researchers for findings. It is a programme for sourcing reports, not an identification method in its own right."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3975,13 +3979,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Static analysis is the method most likely to be used by a security engineer to quickly identify a signature from a known malicious file. In static analysis, the file is examined without being executed, typically by analyzing its binary or code structure. This allows for the identification of known malicious patterns, signatures, or characteristics within the file, enabling a quick assessment of whether the file is malicious.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Static analysis examines the file without running it — hashing it, reading its structure and matching byte patterns against known signatures. For a file already known to be malicious that is both the fastest and the safest way to confirm the signature.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A sandbox detonates the file and watches what it does. That is thorough but slow, and unnecessary when the malware is already known.",
+      "C": "Network traffic analysis observes what a sample communicates. It requires the file to run and reveals behaviour rather than a file signature.",
+      "D": "Package monitoring tracks dependencies in your own software for known vulnerabilities. It is unrelated to identifying a malicious file."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0296",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "Which of the following allows a systems administrator to tune permissions for a file?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Patching"
+      },
+      {
+        "key": "B",
+        "text": "Access control list"
+      },
+      {
+        "key": "C",
+        "text": "Configuration enforcement"
+      },
+      {
+        "key": "D",
+        "text": "Least privilege"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "An access control list attached to a file enumerates which users and groups may read, write or execute it. Tuning permissions on a specific file is exactly what an ACL provides — granular, per-principal entries on that object.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching updates software to fix defects. It has nothing to do with file permissions.",
+      "C": "Configuration enforcement keeps system settings at a defined baseline. It maintains state broadly rather than adjusting one file's permissions.",
+      "D": "Least privilege is the principle that guides what the permissions should be. It is the objective; the ACL is the mechanism."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p133",
+    "needsReview": false,
+    "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4013,12 +4063,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Time-of-day restrictions are the most appropriate access control for ensuring that employees can only access corporate systems during their shifts. By setting specific time windows during which access is allowed (e.g., only during working hours or assigned shifts), the security engineer can limit when users are able to log in and access corporate resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Time-of-day restrictions attach permitted hours to an account, so authentication simply fails outside them. Limiting access to an employee's shift is exactly what this control expresses, and it works regardless of whether credentials are stolen.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Role-based access control grants rights according to job function. It governs what someone may do, not when they may do it.",
+      "C": "Least privilege limits rights to the minimum needed. Again it is about scope of access rather than timing.",
+      "D": "Biometric authentication strengthens proof of identity. A verified fingerprint at three in the morning still gets in."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4026,8 +4080,8 @@ export const domain4Questions = [
   {
     "id": "q0302",
     "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A company wants to ensure employees are allowed to copy files from a virtual desktop during the workday but are restricted during non-working hours.\nWhich of the following security measures should the company set up?",
     "choices": [
@@ -4051,21 +4105,67 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Time-based access control is the most suitable measure for restricting employees from copying files during non-working hours. It allows access to resources based on the time of day, ensuring that employees can copy files during the workday, but are restricted from doing so outside of those hours. This ensures that the company's policy is enforced based on time-specific criteria.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The restriction is purely temporal — the same action is allowed during the workday and blocked outside it. Time-based access control evaluates the clock as part of the access decision, which is what the requirement describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Digital rights management controls what may be done with a document wherever it travels. It governs the content, not the hours.",
+      "B": "Role-based access control decides rights by job function. Every employee here has the same right, just not at every hour.",
+      "D": "Network access control decides whether a device may join the network at all. It is an admission decision, not a per-action time rule."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p135",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0304",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A systems administrator just purchased multiple network devices.\nWhich of the following should the systems administrator perform to prevent attackers from accessing the devices by using publicly available information?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Install endpoint protection."
+      },
+      {
+        "key": "B",
+        "text": "Disable ports/protocols."
+      },
+      {
+        "key": "C",
+        "text": "Change default passwords."
+      },
+      {
+        "key": "D",
+        "text": "Remove unnecessary software."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "New network devices arrive with credentials that are printed in the vendor's public documentation, so anyone can look them up. Changing those defaults immediately removes the single most trivially exploitable weakness, and 'publicly available information' points straight at it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint protection defends workstations and servers against malware. Network devices generally cannot run it.",
+      "B": "Disabling unused ports and protocols is good hardening, but the attacker is using a documented credential on a service that must stay available.",
+      "D": "Removing unnecessary software shrinks the attack surface on a general-purpose system. Network appliances run fixed firmware with little to remove."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p136",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0305",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
     "question": "A CVE in a key back-end component of an application has been disclosed. The systems administrator is identifying all of the systems in the environment that are susceptible to this risk.\nWhich of the following should the systems administrator perform?",
     "choices": [
@@ -4089,13 +4189,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A vulnerability scan is used to identify systems and components in an environment that are susceptible to known vulnerabilities, such as those disclosed through CVEs (Common Vulnerabilities and Exposures). This process involves scanning systems for software versions and configurations to determine if they match the affected criteria of the disclosed vulnerability.\nThis allows the systems administrator to take corrective actions, such as patching or mitigating the vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A vulnerability scan fingerprints software and versions across the estate and reports which hosts match a given CVE. Enumerating everything susceptible to a newly disclosed flaw is precisely what a scanner does at scale.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A packet capture records traffic on a link. It reveals what is communicating, not which systems run a vulnerable component.",
+      "C": "Metadata analysis examines descriptive data about files or communications. It is a forensic technique, not an inventory method.",
+      "D": "Automated reporting distributes results that already exist. Something has to generate the findings first."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p136",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.529,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0311",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security analyst notices unusual behavior on the network. The IDS on the network was not able to detect the activities.\nWhich of the following should the security analyst use to help the IDS detect such attacks in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Signatures"
+      },
+      {
+        "key": "B",
+        "text": "Trends"
+      },
+      {
+        "key": "C",
+        "text": "Honeypot"
+      },
+      {
+        "key": "D",
+        "text": "Reputation"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A signature-based IDS only recognises what it has been told to look for. Writing a signature from the characteristics of the observed activity is how you teach it to catch that behaviour next time, which is the direct answer to a missed detection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Trends describe activity measured over time. They provide context for an analyst rather than a detection rule the IDS can match.",
+      "C": "A honeypot is a decoy that detects attackers who interact with it. It adds a separate detection capability instead of improving the IDS.",
+      "D": "Reputation scores rate the trustworthiness of addresses and domains. Useful input, but it will not catch behaviour from a source with no bad reputation."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p139",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4127,88 +4273,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The acquisition stage in an investigation involves obtaining forensic images of digital evidence.\nThis process includes creating exact copies of data from storage devices (e.g., hard drives, USB drives) or systems while maintaining the integrity of the original evidence. These forensic images are then used for analysis in subsequent stages of the investigation, ensuring that the original evidence remains unaltered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Acquisition is the stage where evidence is actually collected — imaging drives and capturing memory, bit for bit, with hashing to prove the copy matches. Obtaining forensic images is the definition of that step.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preservation keeps the evidence unaltered from that point on. It protects what acquisition has already captured.",
+      "C": "Reporting documents findings at the end of the investigation.",
+      "D": "E-discovery is the legal process of identifying and producing electronically stored information for litigation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0317",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "A security report shows that during a two-week test period, 80% of employees unwittingly disclosed their SSO credentials when accessing an external website. The organization purposely created the website to simulate a cost-free password complexity test.\nWhich of the following would best help reduce the number of visits to similar websites in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Block all outbound traffic from the intranet."
-      },
-      {
-        "key": "B",
-        "text": "Introduce a campaign to recognize phishing attempts."
-      },
-      {
-        "key": "C",
-        "text": "Restrict internet access for the employees who disclosed credentials."
-      },
-      {
-        "key": "D",
-        "text": "Implement a deny list of websites."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A phishing awareness campaign is the best way to address this issue by educating employees about recognizing and avoiding phishing attempts. The campaign can include training sessions, simulated phishing exercises, and guidelines for safely handling requests for sensitive information. By increasing awareness and understanding, employees will be less likely to fall for similar schemes in the future, significantly reducing the risk of credential disclosure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
-    "inferenceConfidence": 0.455,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0318",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "A Chief Information Security Officer (CISO) has developed information security policies that relate to the software development methodology.\nWhich of the following would the CISO most likely include in the organization's documentation?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Peer review requirements"
-      },
-      {
-        "key": "B",
-        "text": "Multifactor authentication"
-      },
-      {
-        "key": "C",
-        "text": "Branch protection tests"
-      },
-      {
-        "key": "D",
-        "text": "Secrets management configurations"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Peer review requirements are often included in information security policies related to the software development methodology. Peer reviews help ensure that code is reviewed for quality, security vulnerabilities, and adherence to best practices before it is merged or deployed. This process reduces the likelihood of introducing security flaws into the software and aligns with secure development lifecycle practices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false

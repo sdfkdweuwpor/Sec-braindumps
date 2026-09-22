@@ -1,13 +1,11 @@
 # Questions with no explanation in the source PDF
 
-9 of 974 extracted questions.
+7 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0293 | 3 | 3.3 | A security administrator is addressing an issue with a legacy system that communicates data using an unencrypt |
-| q0300 | 2 | 2.2 | A systems administrator is concerned users are accessing emails through a duplicate site that is not run by th |
 | q0332 | 4 | 4.9 | A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a f |
 | q0343 | 5 | 5.4 | The internal audit team determines a software application is no longer in scope for external reporting require |
 | q0348 | 3 | 3.1 | In which of the following will unencrypted network traffic most likely be found? |

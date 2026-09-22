@@ -2273,14 +2273,19 @@ export const domain3Questions = [
       "C",
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunnelling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+      "B": "A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
+      "E": "Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
+      "F": "Data masking hides parts of a value. Like tokenisation it destroys the completeness the recipient requires."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.276,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2311,12 +2316,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A load balancer is the most likely solution the organization would employ to further increase the performance and availability of their application. A load balancer distributes incoming network traffic across multiple servers, ensuring that no single server becomes overwhelmed with requests. This helps improve performance by optimizing resource utilization and increases availability by ensuring that if one server fails, others can continue to handle the traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Multiple servers only help if traffic is spread across them. A load balancer distributes requests over the pool and routes around any server that fails its health check, which delivers both the performance gain and the availability the organisation is after.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A jump server is a hardened entry point for administrative access. It serves administrators, not application users.",
+      "C": "A proxy server mediates requests, usually outbound from clients. It does not distribute inbound load across a server pool.",
+      "D": "SD-WAN optimises traffic across wide area network links between sites. It manages connectivity rather than application server load."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2349,51 +2358,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A jump server (also known as a jump box) is a secure system designed to serve as a controlled entry point for accessing servers and environments. It is commonly used to provide external contractors or administrators with access to a specific environment, such as a test environment, while minimizing the risk of unauthorized access to other parts of the network. Jump servers typically include additional security measures like multi-factor authentication and logging to enhance control and monitoring.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server is a single hardened, logged system that external parties connect to and work from. It gives the contractor a controlled path into the test environment while keeping the rest of the network unreachable and every session recorded.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An application server runs the application itself. Exposing it directly is what the jump server avoids.",
+      "C": "An RDP server provides a remote desktop, which is a protocol and service rather than the controlled-gateway pattern being asked for.",
+      "D": "A proxy server mediates outbound client requests. It does not provide inbound administrative access to an environment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p138",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0316",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "Which of the following describes the difference between encryption and hashing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Encryption protects data in transit, while hashing protects data at rest."
-      },
-      {
-        "key": "B",
-        "text": "Encryption replaces cleartext with ciphertext, while hashing calculates a checksum."
-      },
-      {
-        "key": "C",
-        "text": "Encryption ensures data integrity, while hashing ensures data confidentiality."
-      },
-      {
-        "key": "D",
-        "text": "Encryption uses a public-key exchange, while hashing uses a private key."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Encryption transforms cleartext into ciphertext using an algorithm and a key to protect the data's confidentiality. The ciphertext can be decrypted back into the original cleartext with the correct key.\nHashing is a one-way process that generates a fixed-size hash value (checksum) from input data. Hashing is typically used to ensure data integrity by detecting changes in the data, as even a small alteration results in a completely different hash value.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p141",
-    "needsReview": true,
-    "inferenceConfidence": 0.633,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2425,12 +2400,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A VPN (Virtual Private Network) provides secure, encrypted remote access to an organization's internal network. It ensures that data transmitted between remote employees and the internal network is protected from interception and minimizes the exposure of the internal network by controlling access through secure tunnels. VPNs are a widely used and effective solution for enabling secure remote work.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A VPN gives remote staff an encrypted tunnel to defined internal resources, so nothing needs to be published to the internet. Traffic is protected in transit and the internal network stays behind the boundary, which is what minimising exposure means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "LDAP is a directory protocol for querying and authenticating against directory objects. It authenticates but provides no secure transport.",
+      "C": "FTP transfers files in plaintext. It exposes both credentials and content and offers no network access.",
+      "D": "RADIUS centralises authentication for network access. It decides who may connect but does not itself create the encrypted tunnel."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p143",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false

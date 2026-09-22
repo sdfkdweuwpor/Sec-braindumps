@@ -1989,8 +1989,8 @@ export const domain5Questions = [
   {
     "id": "q0292",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following should a company use to provide proof of external network security testing?",
     "choices": [
@@ -2014,12 +2014,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A third-party attestation is the most appropriate way to provide proof of external network security testing. This attestation is typically performed by an independent, external party (e.g., an audit firm or security vendor) that assesses and verifies the security measures of an organization's network. The attestation provides official confirmation that external security testing, such as vulnerability assessments or penetration tests, has been conducted and that the organization meets the required security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Proof for an outside audience has to come from someone independent. A third-party attestation is an external party's formal statement that the testing was performed and what it found, which is what makes it acceptable as evidence to customers and regulators.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business impact analysis determines how badly the organisation is hurt by disruption. It is a continuity artefact and involves no security testing.",
+      "B": "Supply chain analysis maps supplier dependencies and their risk. It looks outward at vendors rather than testing your own network.",
+      "C": "A vulnerability assessment produces findings, and it may well be the test performed — but self-produced results are not proof to an external party without independent attestation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.37,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2052,12 +2056,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk identification is the step in the risk management process where the scope of the project is defined, and potential risks are identified. This step involves gathering information to understand the environment and context of the project, as well as the risks that could affect its success or security. It helps to outline what can go wrong and what risks need to be considered in subsequent stages of the risk management process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Risk identification is the first substantive step: establishing what is in scope and enumerating what could go wrong. Everything afterwards — scoring, treating, monitoring — operates on the list this stage produces.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Risk assessment evaluates the risks already identified, scoring likelihood and impact. It cannot assess what has not been named.",
+      "C": "Risk treatment decides what to do about each risk — accept, mitigate, transfer or avoid. That comes after assessment.",
+      "D": "Risk monitoring and review tracks risks over time and checks that treatments remain effective. It is the ongoing final stage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p132",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2090,12 +2098,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sanctions would be the greatest concern for a company that is aware of the consequences of non-compliance with government regulations. Sanctions can include financial penalties, restrictions on business operations, or other legal consequences that can significantly impact the company's ability to operate and its financial stability. Companies that fail to comply with government regulations, especially those related to data protection, financial reporting, or industry-specific laws, can face severe sanctions from regulatory bodies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Sanctions are the enforcement action a regulator takes against non-compliance — fines, operating restrictions, or losing a licence to trade. They directly threaten the organisation's ability to operate, which makes them the gravest consequence.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The right to be forgotten is a data subject's right to have personal data erased. It is an obligation to honour, not a penalty for failing to.",
+      "C": "External compliance reporting is the routine act of demonstrating compliance. It is a normal duty rather than a consequence.",
+      "D": "Attestation is a formal statement that requirements are met. Again it is part of demonstrating compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2128,13 +2140,59 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An NDA (Non-Disclosure Agreement) is a legal document that restricts individuals from sharing proprietary or confidential information they have access to during their employment. Employees sign this agreement to prevent the disclosure of sensitive company information after leaving the organization. Violation of an NDA can result in legal consequences, including lawsuits.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement binds someone not to reveal confidential information, and it continues to apply after they leave. Restricting what a departing employee may do with company information, with legal consequences for breach, is an NDA.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An SLA commits a provider to measurable service levels. It is a supplier agreement, not an employee one.",
+      "B": "A BPA sets out how two businesses will operate a partnership. Again it is organisation to organisation.",
+      "D": "An MOA records a formal agreement of cooperation between parties. It establishes intent rather than restricting disclosure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p135",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0306",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "Which of the following activities uses OSINT?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Social engineering testing"
+      },
+      {
+        "key": "B",
+        "text": "Data analysis of logs"
+      },
+      {
+        "key": "C",
+        "text": "Collecting evidence of malicious activity"
+      },
+      {
+        "key": "D",
+        "text": "Producing IOC for malicious artifacts"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Social engineering testing begins by learning about the target from public sources — staff names, job titles, email formats, supplier relationships, social media. That reconnaissance is open-source intelligence, and it is what makes a pretext convincing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data analysis of logs works on internal telemetry the organisation generated. Internal data is by definition not open source.",
+      "C": "Collecting evidence of malicious activity is forensic work on your own systems and records.",
+      "D": "Producing indicators of compromise means deriving hashes and addresses from observed malware. That is analysis output, not public information gathering."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p137",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2166,12 +2224,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Risk appetite refers to the level of risk an organization is willing to accept in pursuit of its objectives.\nWhen granting access to an application, especially to both contractors and internal employees, the implementation team needs to assess how much risk the organization is willing to tolerate regarding potential unauthorized access, data breaches, or misuse of the application.\nUnderstanding the company's risk appetite helps in designing access controls that align with its risk management strategy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Extending an application to contractors adds exposure in exchange for saving money. Risk appetite is the amount of risk the organisation is willing to take on in pursuit of an objective, which is precisely the judgement the team must understand before granting that access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk threshold is the specific trigger level at which action becomes required. It is a measurement point derived from appetite rather than the governing concept.",
+      "C": "Avoidance is a treatment — declining the activity altogether. The company has already decided it wants the expansion.",
+      "D": "The register is the document where risks are recorded. It stores the decision rather than informing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2204,13 +2266,101 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Attestation is the act of formally declaring or providing evidence that certain conditions or requirements have been met. In this context, it involves proving to a customer that software developers are trained on secure coding practices. This can be achieved through documentation, certifications, or other official declarations demonstrating compliance with secure coding standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Attestation is a formal declaration, backed by evidence, that a stated condition holds. Telling a customer that developers are trained in secure coding — and standing behind that claim in writing — is an attestation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Assurance is the confidence the customer gains. Attestation is the act that produces it.",
+      "B": "A contract creates obligations between parties. It might require the training, but it does not prove it happened.",
+      "C": "Due diligence is the investigation a customer performs before engaging. It is the customer's activity, not the supplier's declaration."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p138",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0317",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A security report shows that during a two-week test period, 80% of employees unwittingly disclosed their SSO credentials when accessing an external website. The organization purposely created the website to simulate a cost-free password complexity test.\nWhich of the following would best help reduce the number of visits to similar websites in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Block all outbound traffic from the intranet."
+      },
+      {
+        "key": "B",
+        "text": "Introduce a campaign to recognize phishing attempts."
+      },
+      {
+        "key": "C",
+        "text": "Restrict internet access for the employees who disclosed credentials."
+      },
+      {
+        "key": "D",
+        "text": "Implement a deny list of websites."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Eighty per cent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behaviour that produced the result.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocking all outbound traffic from the intranet would stop the business functioning. It is disproportionate by an enormous margin.",
+      "C": "Restricting internet access for those who fell for it is punitive and treats the symptom in a handful of people while leaving everyone else untrained.",
+      "D": "A deny list blocks sites you already know about. The next phishing site will be one nobody has listed yet."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p141",
+    "needsReview": false,
+    "inferenceConfidence": 0.455,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0318",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "A Chief Information Security Officer (CISO) has developed information security policies that relate to the software development methodology.\nWhich of the following would the CISO most likely include in the organization's documentation?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Peer review requirements"
+      },
+      {
+        "key": "B",
+        "text": "Multifactor authentication"
+      },
+      {
+        "key": "C",
+        "text": "Branch protection tests"
+      },
+      {
+        "key": "D",
+        "text": "Secrets management configurations"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Peer review is a process requirement about how development work is checked before it progresses, which is exactly what a policy governing the development methodology states. It sets an expectation on the workflow rather than prescribing a tool.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Multifactor authentication is an access control applying across the organisation. It is not specific to the development methodology.",
+      "C": "Branch protection tests are a concrete repository configuration. They implement the policy rather than being the policy statement.",
+      "D": "Secrets management configurations are likewise implementation detail — settings in a tool, not a documented methodology expectation."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p142",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2242,12 +2392,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) outlines the responsibilities and expectations for employees and users regarding the use of systems, software, and other organizational resources. It specifies the appropriate and prohibited behaviors to ensure secure and proper operation of these systems. This policy communicates general operational responsibilities and helps enforce compliance with organizational security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy sets out what users may and may not do with organisational systems and software. Communicating general responsibilities for operating those systems is exactly its purpose, and it is the document every user signs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A business continuity plan describes how the organisation keeps operating through major disruption. It addresses recovery, not routine responsibilities.",
+      "B": "A change management procedure governs how modifications are approved and applied. It is narrow and aimed at those making changes.",
+      "D": "An SDLC policy governs how software is built. It applies to development teams rather than to general operation of systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
     "needsExplanation": false,
     "keyCorrected": false

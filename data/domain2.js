@@ -2234,51 +2234,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Typosquatting is a type of attack where attackers register a domain that is very similar to a legitimate one, often differing by only a small change, such as replacing a letter with a number or character. In this example, attackers purchased www.c0mpany.com, which is a slight variation of the legitimate domain www.company.com. Typosquatting relies on users making typographical errors when entering a web address, leading them to the malicious site instead of the legitimate one.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Registering a domain that differs from the real one by a single easily-mistyped character — a zero for the letter o — is typosquatting. It relies on users mistyping the address or failing to notice the substitution in a link.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Brand impersonation is using a company's name, logo and styling to appear legitimate. It often accompanies typosquatting, but the question is specifically about the lookalike domain registration.",
+      "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than a registered domain.",
+      "D": "A watering-hole attack compromises a legitimate site the targets already visit. Here a new fraudulent domain was created instead."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p132",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0296",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following allows a systems administrator to tune permissions for a file?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Patching"
-      },
-      {
-        "key": "B",
-        "text": "Access control list"
-      },
-      {
-        "key": "C",
-        "text": "Configuration enforcement"
-      },
-      {
-        "key": "D",
-        "text": "Least privilege"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "An Access Control List (ACL) allows a systems administrator to specify and fine-tune the permissions for a file or directory. It defines which users or groups have permission to access the resource and what level of access (e.g., read, write, execute) they have. ACLs provide a granular way to manage permissions and ensure that users can only access resources according to their roles or needs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p133",
-    "needsReview": true,
-    "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2310,89 +2276,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A duplicate site that mimics the company's real mail interface is pretending to be the company in order to capture credentials. Assuming a trusted organisation's identity to deceive users is impersonation.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Replication is copying data between systems for availability or backup. It is a legitimate technical process, not an attack.",
+      "C": "Phishing is the delivery method — the message that lures a user to the fake site. The question asks what is being used at the site itself, which is impersonation of the company.",
+      "D": "Smishing is phishing over SMS. No text messages are involved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0304",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A systems administrator just purchased multiple network devices.\nWhich of the following should the systems administrator perform to prevent attackers from accessing the devices by using publicly available information?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Install endpoint protection."
-      },
-      {
-        "key": "B",
-        "text": "Disable ports/protocols."
-      },
-      {
-        "key": "C",
-        "text": "Change default passwords."
-      },
-      {
-        "key": "D",
-        "text": "Remove unnecessary software."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Changing default passwords is a critical step in securing network devices. Default credentials are often publicly available and widely known by attackers, making devices vulnerable to unauthorized access. By replacing these defaults with strong, unique passwords, the systems administrator can significantly reduce the risk of compromise.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p136",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0306",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "Which of the following activities uses OSINT?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Social engineering testing"
-      },
-      {
-        "key": "B",
-        "text": "Data analysis of logs"
-      },
-      {
-        "key": "C",
-        "text": "Collecting evidence of malicious activity"
-      },
-      {
-        "key": "D",
-        "text": "Producing IOC for malicious artifacts"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "OSINT (Open-Source Intelligence) refers to the collection and analysis of publicly available information from various sources, such as social media, websites, and public records. In social engineering testing, OSINT is used to gather information about a target, such as employee names, roles, and behaviors, which can then be exploited during the test to assess the organization's vulnerability to social engineering attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p137",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2424,51 +2318,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A zero-day vulnerability is a security flaw that is unknown to the vendor or developer and has no available fix at the time of its discovery.\nWhen relying on open-source libraries, addressing zero-day vulnerabilities can be particularly challenging because the company depends on the open-source community or the library's maintainers to identify and patch the issue. The company often has limited control over the development and update process for these libraries, making remediation more difficult compared to other vulnerability types where known fixes or mitigations are available.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day has no patch by definition, and with an open-source dependency the company cannot simply demand one — it waits on volunteer maintainers, or forks and fixes the library itself. That loss of control over the fix timeline is what makes it hardest to remediate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A buffer overflow is a known defect class with established fixes. Once identified in a library it is patched like any other bug.",
+      "B": "SQL injection is usually a flaw in the company's own code, where it controls the fix entirely.",
+      "C": "Cross-site scripting is likewise typically in the application the company writes and can remediate directly."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p140",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0314",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "An organization has a new regulatory requirement to implement corrective controls on a financial system.\nWhich of the following is the most likely reason for the new requirement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To defend against insider threats altering banking details"
-      },
-      {
-        "key": "B",
-        "text": "To ensure that errors are not passed to other systems"
-      },
-      {
-        "key": "C",
-        "text": "To allow for business insurance to be purchased"
-      },
-      {
-        "key": "D",
-        "text": "To prevent unauthorized changes to financial data"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Corrective controls are designed to identify and fix issues that arise in a system to prevent further propagation of errors. In a financial system, implementing corrective controls ensures that errors, such as data inaccuracies or processing mistakes, are identified and corrected before they can affect other interconnected systems. Regulatory requirements often mandate such controls to maintain data integrity and reliability across financial operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p140",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
