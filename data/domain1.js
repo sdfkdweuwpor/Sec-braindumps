@@ -82,14 +82,18 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "RADIUS is a centralised authentication service, and the concept it implements is AAA — authentication (proving who you are), authorisation (deciding what you may do), and accounting (recording what you did). Installing a RADIUS server is how an organisation delivers all three from one place.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "CIA is the confidentiality, integrity and availability triad — the goals security works towards. It is a model for what you are protecting, not a service you install.",
+      "C": "An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorisation decisions but provides no authentication or accounting.",
+      "D": "PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p16",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -120,14 +124,70 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Version control tracks successive revisions of a document, recording what changed, when and by whom, and allowing an earlier version to be recovered. A contract that has been through three revisions needs exactly that history.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Version validation is not a recognised process. Validating a document checks it is correct, which says nothing about keeping a history of its revisions.",
+      "B": "Version changes describes the edits themselves rather than the process for tracking them. The department needs the discipline, not a label for the diffs.",
+      "C": "Version updates likewise names the act of updating. Updating without a controlled history is precisely the problem being solved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p16",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0028",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
+    "type": "multi",
+    "question": "Which of the following methods can be used to detect attackers who have successfully infiltrated a network? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Tokenization"
+      },
+      {
+        "key": "B",
+        "text": "CI/CD"
+      },
+      {
+        "key": "C",
+        "text": "Honeypots"
+      },
+      {
+        "key": "D",
+        "text": "Threat modeling"
+      },
+      {
+        "key": "E",
+        "text": "DNS sinkhole"
+      },
+      {
+        "key": "F",
+        "text": "Data obfuscation"
+      }
+    ],
+    "correct": [
+      "C",
+      "E"
+    ],
+    "explanation": "Both are deception and disruption technologies that reveal an intruder already inside. A honeypot is a decoy system with no legitimate purpose, so any interaction with it is suspicious by definition. A DNS sinkhole redirects lookups for known-malicious domains, exposing which internal hosts are trying to reach an attacker's infrastructure.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Tokenisation replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
+      "B": "CI/CD is an automated build-and-release pipeline. It is a development practice and has no detection role.",
+      "D": "Threat modelling is a design-time exercise to anticipate how a system might be attacked. It is predictive, performed before deployment, not a live detection method.",
+      "F": "Data obfuscation makes data harder to interpret. Like tokenisation it reduces the value of stolen data without revealing an intruder."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p18",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -158,14 +218,18 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Hashing produces a fixed-length fingerprint of the software. Publishing that hash lets anyone recompute it and confirm the file is bit-for-bit what was released — any tampering, however small, produces a completely different value. That is integrity verification.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Encryption protects confidentiality by making content unreadable without the key. An attacker can still alter ciphertext, and legitimate users must be able to run the software anyway.",
+      "C": "Baselines record a known-good configuration to compare systems against. They govern how a system is set up, not whether a released binary has been altered.",
+      "D": "Tokenisation swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p18",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -209,52 +273,20 @@ export const domain1Questions = [
       "E",
       "F"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Two axes are being asked about. By type the control is technical — a VLAN and access restrictions implemented in the network. By function it is compensating: the server is end of life and cannot be patched, so segmentation stands in for the primary control the team is unable to apply.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Managerial controls are policies, risk assessments and procedures. This is a configuration change on network equipment.",
+      "B": "Physical controls are locks, fences, guards and cameras. The server has been isolated logically, not physically moved or fenced off.",
+      "C": "Corrective controls restore a system after an incident. Nothing has happened yet; this is preventing exposure.",
+      "D": "Detective controls identify that something has occurred. A VLAN restriction blocks access rather than reporting it.",
+      "G": "Deterrent controls discourage an attacker who is aware of them. An internal VLAN boundary is invisible to an attacker and stops them regardless of intent."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p19",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0034",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "A threat actor was able to use a username and password to log in to a stolen company mobile device.\nWhich of the following provides the best solution to increase mobile data security on all employees' company mobile devices?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Application management"
-      },
-      {
-        "key": "B",
-        "text": "Full disk encryption"
-      },
-      {
-        "key": "C",
-        "text": "Remote wipe"
-      },
-      {
-        "key": "D",
-        "text": "Containerization"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p19",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -285,14 +317,18 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Obfuscation deliberately rewrites code so it is functionally identical but far harder for a human to read — renaming symbols, flattening control flow, stripping debugging information. Since reverse engineering depends on making sense of the code, obfuscation directly raises the cost of that analysis.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Digitally signing software proves who published it and that it has not been altered. It is an integrity and authenticity control and does nothing to hide the code's logic.",
+      "C": "Limiting third-party libraries reduces supply-chain and dependency risk. It shrinks the attack surface but leaves your own code just as readable.",
+      "D": "Compile flags can strip symbols and enable protections, which helps a little, but they are a build setting rather than the recognised technique for resisting reverse engineering."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -323,14 +359,18 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "An S/MIME signature is created with the sender's private key, which only the sender holds. Anyone can verify it with the matching public key, so the sender cannot later deny having sent the message — that is non-repudiation, and it also proves the content was not altered.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Compliance may be a reason an organisation adopts signing, but it describes an external obligation rather than what the control technically achieves.",
+      "B": "Delivery rates are affected by reputation, SPF, DKIM and DMARC. S/MIME signing is applied to message content and does not improve deliverability.",
+      "C": "Signing outbound mail does not filter inbound phishing. It helps recipients verify your genuine mail, but it blocks nothing arriving at your organisation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p22",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -361,52 +401,18 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "IoT devices typically run on very limited processing power, memory and battery. Cryptography must be chosen to fit within those resource constraints — a cipher that is secure but too heavy will drain the battery, slow the device, or simply not run, which is why lightweight algorithms exist for this class of hardware.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Available bandwidth matters for what the device can transmit, and it is a real IoT constraint, but cryptographic feasibility is limited by the processor and power budget first.",
+      "C": "Block ciphers versus stream ciphers is a design decision made after establishing what the hardware can support. It is a consequence of the constraint, not the primary consideration.",
+      "D": "TLS version compatibility matters for interoperability, but it is a protocol question that only arises once the device can perform the cryptography at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p23",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0048",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "A hosting provider needs to prove that its security controls have been in place over the last six months and have sufficiently protected customer data.\nWhich of the following would provide the best proof that the hosting provider has met the requirements?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "NIST CSF"
-      },
-      {
-        "key": "B",
-        "text": "SOC 2 Type 2 report"
-      },
-      {
-        "key": "C",
-        "text": "CIS Top 20 compliance reports"
-      },
-      {
-        "key": "D",
-        "text": "Vulnerability report"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p23",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -437,14 +443,18 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A preventive control stops an undesirable event from happening. Segregation of duties splits a sensitive task so no single person can complete it alone, which prevents fraud and error before either can occur.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Configuration auditing compares systems against a baseline and reports drift. It discovers problems that already exist, making it detective.",
+      "B": "Log correlation combines events from multiple sources to identify patterns. Like auditing, it recognises activity after the fact.",
+      "C": "Incident alerts notify staff that something has happened. Notification is the definition of a detective control."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p24",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -475,56 +485,60 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A certificate error followed by a dropped connection means the client does not trust the certificate the LDAP server presented — typically because it was issued by an internal CA the browser tool has never heard of. Installing that certificate into the local truststore establishes the trust the TLS handshake requires.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Allowing SAN certificates addresses a name-mismatch problem, where the certificate does not cover the hostname used. That is a different error from an untrusted issuer.",
+      "C": "If the secure LDAP port were closed the connection would fail outright with no certificate presented. A certificate error proves the handshake started, so the port is open.",
+      "D": "A registration authority handles identity vetting for certificate requests. Its TLS version has no bearing on whether this client trusts an already-issued certificate."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p28",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0067",
+    "id": "q0065",
     "domain": 1,
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an external host that includes the following:\n... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
+    "question": "A security administrator is working to find a cost-effective solution to implement certificates for a large number of domains and subdomains owned by the company.\nWhich of the following types of certificates should the administrator implement?",
     "choices": [
       {
         "key": "A",
-        "text": "Encapsulation"
+        "text": "Wildcard"
       },
       {
         "key": "B",
-        "text": "MAC address spoofing"
+        "text": "Client certificate"
       },
       {
         "key": "C",
-        "text": "Steganography"
+        "text": "Self-signed"
       },
       {
         "key": "D",
-        "text": "Broken encryption"
-      },
-      {
-        "key": "E",
-        "text": "Sniffing via on-path position"
+        "text": "Code signing"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A wildcard certificate secures a domain and all of its first-level subdomains with one certificate and one key. For an organisation with many subdomains that is dramatically cheaper and simpler than buying and renewing an individual certificate for each.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A client certificate authenticates a user or device to a server. It solves the opposite direction of trust and does nothing for the company's own domains.",
+      "C": "A self-signed certificate costs nothing but is trusted by nobody by default, so every visitor sees a warning. That is not viable for public-facing domains.",
+      "D": "A code signing certificate proves who published a piece of software. It is unrelated to securing domains and subdomains."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p29",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -555,21 +569,25 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The root cause was a flaw in the certificate authority that let crafted certificates be issued. Cleanup has to remove the defect itself, so patching the CA is the remediation — anything else leaves the same certificates issuable tomorrow.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Updating the CRL revokes the certificates the testers created, which is necessary housekeeping. It undoes the symptom while leaving the flaw that produced them.",
+      "C": "Changing passwords is sensible after a compromise of domain administrator rights, but the attack did not rely on passwords — it forged certificates.",
+      "D": "Implementing SOAR automates response workflows. It is a programme improvement, not remediation of a specific PKI vulnerability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p31",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0077",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
     "question": "Which of the following physical controls can be used to both detect and deter? (Choose two.)",
     "choices": [
@@ -602,14 +620,19 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Lighting both deters and detects: an illuminated area discourages an intruder who does not want to be seen, and it makes them visible to cameras and guards if they proceed. A sensor detects intrusion, and once its presence is known it discourages attempts as well.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Fencing physically obstructs entry, making it preventive. It deters too, but it detects nothing.",
+      "C": "Signage warns and discourages, so it deters, but a sign cannot notice anyone.",
+      "E": "A bollard physically blocks vehicles. It is a preventive barrier with no detection capability.",
+      "F": "A lock prevents entry to those without the key. It neither reports nor records an attempt."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p32",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

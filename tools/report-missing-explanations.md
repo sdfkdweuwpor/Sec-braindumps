@@ -1,69 +1,11 @@
 # Questions with no explanation in the source PDF
 
-110 of 974 extracted questions.
+52 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0022 | 1 | 1.2 | Which of the following security concepts is accomplished with the installation of a RADIUS server? |
-| q0023 | 1 | 1.3 | After creating a contract for IT contractors, the human resources department changed several clauses. The cont |
-| q0024 | 3 | 3.4 | The executive management team is mandating the company develop a disaster recovery plan. The cost must be kept |
-| q0025 | 5 | 5.1 | An administrator at a small business notices an increase in support calls from employees who receive a blocked |
-| q0026 | 5 | 5.5 | Which of the following teams is best suited to determine whether a company has systems that can be exploited b |
-| q0027 | 5 | 5.2 | A company is reviewing options to enforce user logins after several account takeovers. The following condition |
-| q0028 | 2 | 2.4 | Which of the following methods can be used to detect attackers who have successfully infiltrated a network? (C |
-| q0029 | 1 | 1.4 | A company wants to ensure that the software it develops will not be tampered with after the final version is c |
-| q0030 | 4 | 4.6 | An organization completed a project to deploy SSO across all business applications last year. Recently, the fi |
-| q0031 | 2 | 2.4 | A user, who is waiting for a flight at an airport, logs in to the airline website using the public Wi- Fi, ign |
-| q0032 | 4 | 4.7 | A network engineer deployed a redundant switch stack to increase system availability. However, the budget can  |
-| q0033 | 1 | 1.1 | A network team segmented a critical, end-of-life server to a VLAN that can only be reached by specific devices |
-| q0034 | 1 | 1.4 | A threat actor was able to use a username and password to log in to a stolen company mobile device. Which of t |
-| q0035 | 5 | 5.2 | Which of the following best describes the risk present after controls and mitigating factors have been applied |
-| q0036 | 1 | 1.4 | A software development team asked a security administrator to recommend techniques that should be used to redu |
-| q0037 | 4 | 4.6 | Which of the following is a possible factor for MFA? |
-| q0038 | 4 | 4.6 | Easy-to-guess passwords led to an account compromise. The current password policy requires at least 12 alphanu |
-| q0039 | 2 | 2.4 | A user downloaded software from an online forum. After the user installed the software, the security team obse |
-| q0040 | 3 | 3.4 | A utility company is designing a new platform that will host all the virtual machines used by business applica |
-| q0041 | 2 | 2.4 | Which of the following best describes a use case for a DNS sinkhole? |
-| q0042 | 3 | 3.3 | An incident analyst finds several image files on a hard disk. The image files may contain geolocation coordina |
-| q0043 | 1 | 1.4 | Which of the following most likely describes why a security engineer would configure all outbound emails to us |
-| q0044 | 2 | 2.1 | During a recent company safety stand-down, the cyber-awareness team gave a presentation on the importance of c |
-| q0045 | 1 | 1.4 | Which of the following considerations is the most important regarding cryptography used in an IoT device? |
-| q0046 | 3 | 3.2 | A coffee shop owner wants to restrict internet access to only paying customers by prompting them for a receipt |
-| q0047 | 4 | 4.8 | While performing digital forensics, which of the following is considered the most volatile and should have the |
-| q0048 | 1 | 1.1 | A hosting provider needs to prove that its security controls have been in place over the last six months and h |
-| q0049 | 5 | 5.1 | A city municipality lost its primary data center when a tornado hit the facility. Which of the following shoul |
-| q0050 | 1 | 1.1 | Which of the following is considered a preventive control? |
-| q0051 | 4 | 4.4 | A systems administrator notices that a testing system is down. While investigating, the systems administrator  |
-| q0052 | 2 | 2.4 | A security team has been alerted to a flood of incoming emails that have various subject lines and are address |
-| q0053 | 4 | 4.4 | A security administrator is working to secure company data on corporate laptops in case the laptops are stolen |
-| q0054 | 3 | 3.3 | A company needs to keep the fewest records possible, meet compliance needs, and ensure destruction of records  |
-| q0055 | 4 | 4.3 | Which of the following is a common source of unintentional corporate credential leakage in cloud environments? |
-| q0056 | 3 | 3.3 | Which of the following is the best reason an organization should enforce a data classification policy to help  |
-| q0057 | 4 | 4.3 | An analyst is performing a vulnerability scan against the web servers exposed to the internet without a system |
-| q0058 | 2 | 2.5 | A security administrator is hardening corporate systems and applying appropriate mitigations by consulting a r |
-| q0059 | 3 | 3.1 | An architect has a request to increase the speed of data transfer using JSON requests externally. Currently, t |
-| q0060 | 5 | 5.4 | Which of the following addresses individual rights such as the right to be informed, the right of access, and  |
-| q0061 | 1 | 1.4 | An administrator is installing an LDAP browser tool in order to view objects in the corporate LDAP directory.  |
-| q0062 | 2 | 2.3 | Which of the following is the most important security concern when using legacy systems to provide production  |
-| q0063 | 4 | 4.9 | A security investigation revealed that malicious software was installed on a server using a server administrat |
-| q0064 | 3 | 3.2 | A user is requesting Telnet access to manage a remote development web server. Insecure protocols are not allow |
-| q0065 | 4 | 4.1 | A security administrator is working to find a cost-effective solution to implement certificates for a large nu |
-| q0066 | 4 | 4.3 | An auditor discovered multiple insecure ports on some servers. Other servers were found to have legacy protoco |
-| q0067 | 1 | 1.4 | A security analyst received a tip that sensitive proprietary information was leaked to the public. The analyst |
-| q0068 | 3 | 3.1 | A company wants to reduce the time and expense associated with code deployment. Which of the following technol |
-| q0069 | 4 | 4.4 | A security administrator is performing an audit on a stand-alone UNIX server, and the following message is imm |
-| q0070 | 4 | 4.5 | A security administrator needs to create firewall rules for the following protocols: RTP, SIP, H.323. and SRTP |
-| q0071 | 2 | 2.2 | Which of the following best describes a social engineering attack that uses a targeted electronic messaging ca |
-| q0072 | 1 | 1.4 | During a penetration test, a flaw in the internal PKI was exploited to gain domain administrator rights using  |
-| q0073 | 2 | 2.1 | A company wants to implement MFA. Which of the following enables the additional factor while using a smart car |
-| q0074 | 4 | 4.6 | A company hired an external consultant to assist with required system upgrades to a critical business applicat |
-| q0075 | 3 | 3.2 | A newly implemented wireless network is designed so that visitors can connect to the wireless network for busi |
-| q0076 | 2 | 2.1 | Which of the following data roles is responsible for identifying risks and appropriate access to data? |
-| q0077 | 1 | 1.1 | Which of the following physical controls can be used to both detect and deter? (Choose two.) |
-| q0078 | 3 | 3.2 | A multinational bank hosts several servers in its data center. These servers run a business- critical applicat |
-| q0079 | 4 | 4.1 | The author of a software package is concerned about bad actors repackaging and inserting malware into the soft |
 | q0080 | 5 | 5.3 | A third-party vendor is moving a particular application to the end-of-life stage at the end of the current yea |
 | q0081 | 4 | 4.3 | A security analyst recently read a report about a flaw in several of the organization's printer models that ca |
 | q0082 | 4 | 4.1 | A development team is launching a new public-facing web product. The Chief Information Security Officer has as |

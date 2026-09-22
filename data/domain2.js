@@ -255,53 +255,6 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0028",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "multi",
-    "question": "Which of the following methods can be used to detect attackers who have successfully infiltrated a network? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Tokenization"
-      },
-      {
-        "key": "B",
-        "text": "CI/CD"
-      },
-      {
-        "key": "C",
-        "text": "Honeypots"
-      },
-      {
-        "key": "D",
-        "text": "Threat modeling"
-      },
-      {
-        "key": "E",
-        "text": "DNS sinkhole"
-      },
-      {
-        "key": "F",
-        "text": "Data obfuscation"
-      }
-    ],
-    "correct": [
-      "C",
-      "E"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p18",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
     "id": "q0031",
     "domain": 2,
     "objective": "2.4",
@@ -329,14 +282,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "On public Wi-Fi an attacker can position themselves between the user and the site. The security warning the user dismissed was the browser reporting an untrusted certificate — the signature of interception. With the session intercepted, the attacker captured the card details used for the purchase.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A replay attack recaptures and resends a valid transmission to repeat an action. The charges here are new and unrelated to the seat purchase, and a replay would not hand over the card number.",
+      "B": "A memory leak is a programming defect where memory is never released. It degrades performance and is not an attack that steals card data.",
+      "C": "A buffer overflow writes beyond an allocated region to corrupt memory or run code. It targets a vulnerable program, and nothing here suggests the airline's software was exploited."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p18",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.417,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -367,59 +324,25 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A backdoor is hidden functionality that gives an attacker access to the system. The giveaway here is the direction and shape of the traffic — an external host connecting in on an uncommon port immediately after installing software from an untrusted forum is a listener the software opened.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A keylogger records keystrokes and typically sends them out to the attacker. That is an outbound exfiltration pattern, not inbound connections on a listening port.",
+      "B": "Ransomware encrypts files and demands payment. Its presence is unmistakable and it does not quietly accept inbound connections.",
+      "C": "A fileless virus runs in memory without writing to disk, often through scripting. The user installed a file, so the infection is not fileless."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p21",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0041",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "Which of the following best describes a use case for a DNS sinkhole?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Attackers can see a DNS sinkhole as a highly valuable resource to identify a company's domain structure."
-      },
-      {
-        "key": "B",
-        "text": "A DNS sinkhole can be used to draw employees away from known-good websites to malicious ones owned by the attacker."
-      },
-      {
-        "key": "C",
-        "text": "A DNS sinkhole can be used to capture traffic to known-malicious domains used by attackers."
-      },
-      {
-        "key": "D",
-        "text": "A DNS sinkhole can be set up to attract potential attackers away from a company's network resources."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p21",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0044",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "During a recent company safety stand-down, the cyber-awareness team gave a presentation on the importance of cyber hygiene. One topic the team covered was best practices for printing centers.\nWhich of the following describes an attack method that relates to printing centers?",
     "choices": [
@@ -443,14 +366,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Print centres accumulate discarded drafts, misprints and abandoned output. Dumpster diving is sifting through discarded material for useful information, and the classic guidance for printing areas — shred waste, use pull printing, do not leave output on the tray — exists precisely because of it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Whaling is phishing aimed at a senior executive. It arrives electronically and has nothing to do with physical printed output.",
+      "B": "Credential harvesting collects usernames and passwords, usually through a fake login page. It describes the goal of an online attack rather than a printing-centre risk.",
+      "C": "Prepending adds text to a message to manipulate how it is treated, such as a fake external warning. It is an email technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p22",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -481,14 +408,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Every message shares one attribute — the URL shortener domain. Blocking that domain at the web proxy neutralises all of the links at once, including future waves, without depending on subject lines the attacker can change at will.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A blocklist of subject lines fails immediately, because the subject lines already vary and cost the attacker nothing to change.",
+      "B": "Sinkholing the dead domain addresses the destination that is already dead and therefore harmless. The shortener, which is live, would keep working.",
+      "C": "Quarantining all received mail and notifying everyone is disruptive and reactive. It handles this batch while leaving the next one to arrive unimpeded."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p25",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -519,14 +450,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "MITRE ATT&CK is a curated knowledge base of adversary tactics and techniques observed in real intrusions, mapped to the mitigations and detections that counter each one. An administrator hardening systems against how attackers actually behave is describing ATT&CK precisely.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A CSIRT is a team that responds to security incidents. It is an organisational function, not a reference of adversary behaviour.",
+      "C": "CVSS is a scoring system that rates the severity of individual vulnerabilities. It prioritises flaws but describes no attacker technique.",
+      "D": "SOAR is a platform for automating and orchestrating response workflows. It executes playbooks rather than documenting adversary behaviour."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p27",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -557,14 +492,65 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Once a system is out of support the vendor issues no more security patches, so every newly discovered vulnerability in it stays permanently exploitable. That is the root concern, because it is unfixable by normal means and only grows worse with time.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Instability causes crashes and outages. It is an operational nuisance rather than the security problem that makes legacy systems dangerous.",
+      "C": "Loss of availability is a possible consequence of running old hardware or software. It follows from instability, and again is not primarily a security concern.",
+      "D": "Insecure protocols are common on legacy systems and are a genuine risk, but they can often be tunnelled, proxied or disabled. Unpatchable flaws cannot be remediated at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p28",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0067",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "type": "single",
+    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an external host that includes the following:\n... 12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Encapsulation"
+      },
+      {
+        "key": "B",
+        "text": "MAC address spoofing"
+      },
+      {
+        "key": "C",
+        "text": "Steganography"
+      },
+      {
+        "key": "D",
+        "text": "Broken encryption"
+      },
+      {
+        "key": "E",
+        "text": "Sniffing via on-path position"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The capture shows IPv6 traffic carried inside an IPv4 packet — protocol 41, IPv6-in-IPv4. Wrapping one protocol inside another is encapsulation, and it hides the real destination and payload from controls that only inspect the outer header, which is why it works for exfiltration.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "MAC address spoofing forges a hardware address to impersonate a device on the local segment. It cannot move data out past a boundary.",
+      "C": "Steganography conceals data inside an innocuous file such as an image. The capture shows a tunnelled network protocol, not a carrier file.",
+      "D": "Broken encryption would mean an attacker defeated a cipher to read protected data. Nothing here indicates cryptography was attacked.",
+      "E": "Sniffing from an on-path position captures traffic in transit. This traffic originates from an internal server and is being sent out deliberately."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p29",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -595,90 +581,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Whaling is spear phishing aimed specifically at a senior executive — the 'big fish'. A targeted electronic message campaign against a CEO is the textbook definition, and the seniority of the target is what distinguishes it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Spear phishing is targeted phishing at a specific individual or group. It is the correct broader category, but whaling is the precise term when the target is a top executive.",
+      "C": "Impersonation is assuming another identity to gain compliance. It is a technique often used inside such an attack rather than the name of the campaign.",
+      "D": "Identity fraud is using someone's identity for financial gain. It describes a possible outcome, not the attack method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p30",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0073",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company wants to implement MFA. Which of the following enables the additional factor while using a smart card?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "PIN"
-      },
-      {
-        "key": "B",
-        "text": "Hardware token"
-      },
-      {
-        "key": "C",
-        "text": "User ID"
-      },
-      {
-        "key": "D",
-        "text": "SMS"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p31",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0076",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following data roles is responsible for identifying risks and appropriate access to data?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Owner"
-      },
-      {
-        "key": "B",
-        "text": "Custodian"
-      },
-      {
-        "key": "C",
-        "text": "Steward"
-      },
-      {
-        "key": "D",
-        "text": "Controller"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p32",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

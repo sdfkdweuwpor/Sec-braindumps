@@ -1,0 +1,245 @@
+{
+"q0046": {"objective":"3.2",
+ "explanation":"A captive portal intercepts a new client's first web request and holds it on a sign-in page until the visitor supplies whatever the operator requires — here a receipt number. It is the standard mechanism for gating guest Wi-Fi behind a condition rather than a shared secret.",
+ "incorrect":{
+  "A":"WPA3 is a wireless encryption standard. It protects the radio link but has no way to prompt for a receipt number or distinguish a paying customer from anyone else.",
+  "C":"A pre-shared key gates access behind one password. Once a customer shares it, or it is seen on a receipt, anybody in range can join indefinitely.",
+  "D":"802.1X authenticates each user against a directory or RADIUS server. A coffee shop has no accounts for walk-in customers, so there is nothing to authenticate against."}},
+
+"q0047": {"objective":"4.8",
+ "explanation":"The order of volatility says collect what disappears soonest. RAM holds running processes, network connections, decryption keys and unsaved data, and all of it is lost the moment the machine loses power — so it must be captured before anything written to persistent storage.",
+ "incorrect":{
+  "A":"A hard drive retains its contents without power. It is important evidence but sits near the bottom of the volatility order.",
+  "C":"An SSD is likewise non-volatile. It has its own forensic complications from wear levelling and TRIM, but the data survives a power loss.",
+  "D":"Temporary files are stored on disk. They may be deleted by the operating system, but they persist across a reboot in a way memory does not."}},
+
+"q0050": {"objective":"1.1",
+ "explanation":"A preventive control stops an undesirable event from happening. Segregation of duties splits a sensitive task so no single person can complete it alone, which prevents fraud and error before either can occur.",
+ "incorrect":{
+  "A":"Configuration auditing compares systems against a baseline and reports drift. It discovers problems that already exist, making it detective.",
+  "B":"Log correlation combines events from multiple sources to identify patterns. Like auditing, it recognises activity after the fact.",
+  "C":"Incident alerts notify staff that something has happened. Notification is the definition of a detective control."}},
+
+"q0048": {"objective":"5.5",
+ "explanation":"A SOC 2 Type 2 report is an independent auditor's opinion on whether controls were both suitably designed and operating effectively across a period — typically six to twelve months. The question asks for proof of controls over the last six months, which is exactly what Type 2, unlike Type 1, examines.",
+ "incorrect":{
+  "A":"The NIST Cybersecurity Framework is a voluntary structure for organising a security programme. Following it is not evidence, because no independent party attests to what you actually did.",
+  "C":"CIS Top 20 compliance reports are self-generated measurements against a control list. They show your own assessment rather than an audited opinion.",
+  "D":"A vulnerability report lists technical weaknesses at a point in time. It says nothing about whether controls operated effectively over six months."}},
+
+"q0049": {"objective":"5.1",
+ "explanation":"The disaster recovery plan covers restoring IT systems and facilities after a destructive event, and it is what staff invoke immediately when a data centre is physically lost. It contains the recovery procedures, alternate-site arrangements and restoration order needed to get essential services running again.",
+ "incorrect":{
+  "A":"A business continuity plan is the wider plan for keeping the organisation functioning, of which disaster recovery is the technical part. It governs the whole response rather than the immediate restoration of the lost facility.",
+  "B":"A communication plan defines who is told what and when. It is activated alongside the DRP but restores no services itself.",
+  "D":"An incident response plan addresses security incidents such as intrusions and malware. A tornado is a physical disaster, not a security incident."}},
+
+"q0051": {"objective":"4.4",
+ "explanation":"The servers are up and reachable from inside the server network, so the systems themselves are healthy — what has failed is reachability for everyone else. A flood of traffic saturating the path to the service produces exactly that split, which is a denial of service.",
+ "incorrect":{
+  "B":"ARP poisoning redirects traffic within a local segment by forging address mappings. It typically enables interception rather than taking a service offline, and it would disrupt the server network too.",
+  "C":"Jamming is radio interference against a wireless network. These are servers on a wired network, where there is no signal to jam.",
+  "D":"Kerberoasting requests service tickets to crack service-account passwords offline. It is a credential attack that is deliberately quiet and causes no outage."}},
+
+"q0052": {"objective":"2.4",
+ "explanation":"Every message shares one attribute — the URL shortener domain. Blocking that domain at the web proxy neutralises all of the links at once, including future waves, without depending on subject lines the attacker can change at will.",
+ "incorrect":{
+  "A":"A blocklist of subject lines fails immediately, because the subject lines already vary and cost the attacker nothing to change.",
+  "B":"Sinkholing the dead domain addresses the destination that is already dead and therefore harmless. The shortener, which is live, would keep working.",
+  "C":"Quarantining all received mail and notifying everyone is disruptive and reactive. It handles this batch while leaving the next one to arrive unimpeded."}},
+
+"q0053": {"objective":"4.1",
+ "explanation":"The threat is physical theft of the laptop, so the data must be unreadable to someone holding the hardware. Full disk encryption keeps the volume encrypted at rest, so removing the drive or booting another operating system yields ciphertext without the key.",
+ "incorrect":{
+  "B":"Data loss prevention watches for sensitive data leaving the organisation through email, uploads or removable media. A thief with the physical device never triggers it.",
+  "C":"Operating system hardening reduces the attack surface of a running system. A thief can bypass the installed OS entirely by attaching the disk elsewhere.",
+  "D":"Boot security such as Secure Boot ensures only trusted code loads at startup. It protects the boot chain but leaves the data readable if the drive is moved."}},
+
+"q0054": {"objective":"5.1",
+ "explanation":"A retention policy states how long each type of record must be kept to satisfy legal and regulatory obligations, and requires secure destruction once that period expires. Keeping the fewest records possible while still meeting compliance is exactly the balance it strikes.",
+ "incorrect":{
+  "A":"A security policy is the overarching statement of security intent. It is far too broad to specify retention periods and destruction schedules.",
+  "B":"A classification policy defines sensitivity levels and how each must be handled. It governs protection, not lifespan.",
+  "D":"An access control policy defines who may reach what. It says nothing about how long data is kept or when it is destroyed."}},
+
+"q0055": {"objective":"4.3",
+ "explanation":"Developers routinely commit API keys, tokens and passwords into source control by accident, and cloud deployments multiply the number of credentials in play. Public and misconfigured repositories are scraped constantly, which makes them the leading unintentional leakage path.",
+ "incorrect":{
+  "B":"The dark web is where leaked credentials are traded after the fact. It is a destination for stolen data, not the source of the leak.",
+  "C":"Threat feeds distribute indicators of compromise to defenders. They report on threats rather than leaking anything.",
+  "D":"State actors deliberately steal credentials. The question asks about unintentional leakage, which is the organisation's own mistake.",
+  "E":"Vulnerability databases catalogue known software flaws. They publish weaknesses in products, never an organisation's credentials."}},
+
+"q0056": {"objective":"3.3",
+ "explanation":"Classification is valuable because it lets one set of handling requirements attach to a label rather than to every individual file. Once data is marked confidential or restricted, the encryption, access and retention rules for that level apply automatically wherever it goes.",
+ "incorrect":{
+  "A":"Making users consider classification is a consequence of the policy, and it depends on user diligence. The security benefit comes from the requirements the label triggers, not from the thinking.",
+  "B":"Access levels are one control that follows from classification, but they are a subset. The policy drives the full set of security requirements, not access alone.",
+  "D":"Visibility of a label before opening a document is a convenience of labelling. It helps people, but it is not why the policy protects sensitive information."}},
+
+"q0057": {"objective":"4.3",
+ "explanation":"A non-credentialed scan probes a target from the outside with no account, seeing only what an unauthenticated attacker would see — open ports, exposed services and banner-visible versions. Scanning internet-facing web servers without a system account is that by definition.",
+ "incorrect":{
+  "B":"A packet capture records traffic passing an interface for later analysis. It observes rather than probes, and it would not enumerate vulnerabilities.",
+  "C":"Privilege escalation is gaining higher rights after an initial foothold. The analyst has no account at all, so there is nothing to escalate from.",
+  "D":"System enumeration lists resources such as users, shares or services, usually after gaining some access. It is a step within an assessment, not the scan being described.",
+  "E":"A passive scan only observes existing traffic without sending anything. A vulnerability scan actively probes the target, so it is not passive."}},
+
+"q0058": {"objective":"2.5",
+ "explanation":"MITRE ATT&CK is a curated knowledge base of adversary tactics and techniques observed in real intrusions, mapped to the mitigations and detections that counter each one. An administrator hardening systems against how attackers actually behave is describing ATT&CK precisely.",
+ "incorrect":{
+  "B":"A CSIRT is a team that responds to security incidents. It is an organisational function, not a reference of adversary behaviour.",
+  "C":"CVSS is a scoring system that rates the severity of individual vulnerabilities. It prioritises flaws but describes no attacker technique.",
+  "D":"SOAR is a platform for automating and orchestrating response workflows. It executes playbooks rather than documenting adversary behaviour."}},
+
+"q0059": {"objective":"3.1",
+ "explanation":"JSON requests exchanged with external parties is a description of a web API. Microservices exposing APIs replace the batch, file-oriented model of SFTP with lightweight request-and-response calls, which is both faster and the idiomatic way to move JSON.",
+ "incorrect":{
+  "A":"A website-hosted solution serves pages to people. It addresses human browsing rather than programmatic JSON exchange between systems.",
+  "B":"Cloud shared storage is still file transfer, just hosted elsewhere. It keeps the same store-and-collect pattern that is causing the delay.",
+  "C":"A secure email solution moves messages between mailboxes. It is slower than SFTP for data transfer and is not an API."}},
+
+"q0060": {"objective":"5.4",
+ "explanation":"GDPR grants data subjects a defined set of rights over their personal data, including the right to be informed, the right of access and the right to erasure — commonly called the right to be forgotten. Those named rights are specific to it.",
+ "incorrect":{
+  "B":"PCI DSS is a contractual standard for protecting payment card data. It imposes security controls on merchants and gives cardholders no such rights.",
+  "C":"NIST publishes voluntary security frameworks and standards. They guide how organisations build controls and confer no individual rights.",
+  "D":"ISO produces international standards such as ISO 27001 for information security management. They are certifiable management systems, not privacy rights legislation."}},
+
+"q0061": {"objective":"1.4",
+ "explanation":"A certificate error followed by a dropped connection means the client does not trust the certificate the LDAP server presented — typically because it was issued by an internal CA the browser tool has never heard of. Installing that certificate into the local truststore establishes the trust the TLS handshake requires.",
+ "incorrect":{
+  "A":"Allowing SAN certificates addresses a name-mismatch problem, where the certificate does not cover the hostname used. That is a different error from an untrusted issuer.",
+  "C":"If the secure LDAP port were closed the connection would fail outright with no certificate presented. A certificate error proves the handshake started, so the port is open.",
+  "D":"A registration authority handles identity vetting for certificate requests. Its TLS version has no bearing on whether this client trusts an already-issued certificate."}},
+
+"q0062": {"objective":"2.3",
+ "explanation":"Once a system is out of support the vendor issues no more security patches, so every newly discovered vulnerability in it stays permanently exploitable. That is the root concern, because it is unfixable by normal means and only grows worse with time.",
+ "incorrect":{
+  "A":"Instability causes crashes and outages. It is an operational nuisance rather than the security problem that makes legacy systems dangerous.",
+  "C":"Loss of availability is a possible consequence of running old hardware or software. It follows from instability, and again is not primarily a security concern.",
+  "D":"Insecure protocols are common on legacy systems and are a genuine risk, but they can often be tunnelled, proxied or disabled. Unpatchable flaws cannot be remediated at all."}},
+
+"q0063": {"objective":"4.9",
+ "explanation":"Telnet transmits everything, credentials included, in plaintext. Anyone positioned to observe the traffic could read the administrator's password straight off the wire with a capture tool and then log in legitimately, which matches malware installed under valid credentials.",
+ "incorrect":{
+  "A":"Password spraying tries a few common passwords across many accounts. It produces a large volume of failed logins, and it does not explain why Telnet matters here.",
+  "C":"A remote-access Trojan gives an attacker control of a machine, but it would have to be installed first. The question is asking how the credentials were obtained.",
+  "D":"A dictionary attack guesses passwords from a word list, again generating many failures. The plaintext protocol means no guessing was necessary."}},
+
+"q0064": {"objective":"3.2",
+ "explanation":"SSH is the encrypted, authenticated replacement for Telnet, providing the same interactive remote shell over a protected channel. Where insecure protocols are banned, it is the direct substitute for exactly this use case.",
+ "incorrect":{
+  "A":"HTTPS secures web traffic. It would protect a web management interface but does not provide the command-line session Telnet gives.",
+  "B":"SNMPv3 is for secure monitoring and management of device metrics. It polls and sets values rather than opening a shell.",
+  "D":"RDP provides a remote graphical desktop, mainly on Windows. It is a heavier tool than needed and is not the standard replacement for Telnet on a web server.",
+  "E":"SMTP transports email between servers. It has no remote-administration function at all."}},
+
+"q0065": {"objective":"1.4",
+ "explanation":"A wildcard certificate secures a domain and all of its first-level subdomains with one certificate and one key. For an organisation with many subdomains that is dramatically cheaper and simpler than buying and renewing an individual certificate for each.",
+ "incorrect":{
+  "B":"A client certificate authenticates a user or device to a server. It solves the opposite direction of trust and does nothing for the company's own domains.",
+  "C":"A self-signed certificate costs nothing but is trusted by nobody by default, so every visitor sees a warning. That is not viable for public-facing domains.",
+  "D":"A code signing certificate proves who published a piece of software. It is unrelated to securing domains and subdomains."}},
+
+"q0066": {"objective":"4.3",
+ "explanation":"Nessus is a vulnerability scanner: it sweeps hosts, enumerates open ports and identifies the services and protocol versions behind them, then flags insecure configurations and legacy protocols. Finding those issues across multiple servers is exactly what it is built to do.",
+ "incorrect":{
+  "B":"curl is a command-line client for making individual web requests. It can test one endpoint at a time but performs no discovery across an estate.",
+  "C":"Wireshark captures and dissects traffic that is already flowing. It can reveal a legacy protocol in use, but only passively and only where it is placed.",
+  "D":"netcat opens or listens on a single connection for testing. It is a manual, one-port-at-a-time tool rather than an auditing scanner."}},
+
+"q0067": {"objective":"2.4",
+ "explanation":"The capture shows IPv6 traffic carried inside an IPv4 packet — protocol 41, IPv6-in-IPv4. Wrapping one protocol inside another is encapsulation, and it hides the real destination and payload from controls that only inspect the outer header, which is why it works for exfiltration.",
+ "incorrect":{
+  "B":"MAC address spoofing forges a hardware address to impersonate a device on the local segment. It cannot move data out past a boundary.",
+  "C":"Steganography conceals data inside an innocuous file such as an image. The capture shows a tunnelled network protocol, not a carrier file.",
+  "D":"Broken encryption would mean an attacker defeated a cipher to read protected data. Nothing here indicates cryptography was attacked.",
+  "E":"Sniffing from an on-path position captures traffic in transit. This traffic originates from an internal server and is being sent out deliberately."}},
+
+"q0068": {"objective":"3.1",
+ "explanation":"Serverless removes servers, operating systems and capacity planning from the deployment path entirely — code is uploaded and the provider runs it on demand. That strips out most of the time and cost associated with preparing and maintaining an environment for each release.",
+ "incorrect":{
+  "B":"Thin clients shift desktop computing to a central server. They change how users access applications and have no effect on how code is deployed.",
+  "C":"A private cloud still requires the organisation to own, patch and scale the underlying infrastructure. It is the most operationally expensive of the cloud models.",
+  "D":"Virtual machines each carry a full guest operating system that must be built, patched and maintained. That is precisely the overhead the company wants to shed."}},
+
+"q0069": {"objective":"4.6",
+ "explanation":"On UNIX, /etc/shadow stores the password hashes and is readable only by root. A tool whose first action is to try to open that file is attempting to obtain hashes to crack, which identifies it as a password cracker.",
+ "incorrect":{
+  "A":"A pass-the-hash monitor watches for reuse of captured hashes in authentication traffic. It observes network or logon events rather than reading the shadow file.",
+  "B":"A file integrity monitor records checksums and reports changes. It would need read access too, but its purpose is detecting modification, not extracting hashes.",
+  "C":"Forensic analysis tools examine acquired images and artefacts. They typically work from a copy and would not be blocked by live file permissions in this way."}},
+
+"q0070": {"objective":"4.5",
+ "explanation":"SIP and H.323 are call signalling protocols, RTP carries the media stream and SRTP is its encrypted form. That combination is the standard protocol set for voice over IP, so the rules exist to support VoIP.",
+ "incorrect":{
+  "A":"An RTOS is a real-time operating system used in embedded devices. It is a platform, not something with its own signalling and media protocols.",
+  "C":"A system on a chip integrates components onto one piece of silicon. It is a hardware design, again with no associated protocol set.",
+  "D":"HVAC systems use building-automation protocols such as BACnet or Modbus, not SIP and RTP."}},
+
+"q0071": {"objective":"2.2",
+ "explanation":"Whaling is spear phishing aimed specifically at a senior executive — the 'big fish'. A targeted electronic message campaign against a CEO is the textbook definition, and the seniority of the target is what distinguishes it.",
+ "incorrect":{
+  "B":"Spear phishing is targeted phishing at a specific individual or group. It is the correct broader category, but whaling is the precise term when the target is a top executive.",
+  "C":"Impersonation is assuming another identity to gain compliance. It is a technique often used inside such an attack rather than the name of the campaign.",
+  "D":"Identity fraud is using someone's identity for financial gain. It describes a possible outcome, not the attack method."}},
+
+"q0072": {"objective":"1.4",
+ "explanation":"The root cause was a flaw in the certificate authority that let crafted certificates be issued. Cleanup has to remove the defect itself, so patching the CA is the remediation — anything else leaves the same certificates issuable tomorrow.",
+ "incorrect":{
+  "A":"Updating the CRL revokes the certificates the testers created, which is necessary housekeeping. It undoes the symptom while leaving the flaw that produced them.",
+  "C":"Changing passwords is sensible after a compromise of domain administrator rights, but the attack did not rely on passwords — it forged certificates.",
+  "D":"Implementing SOAR automates response workflows. It is a programme improvement, not remediation of a specific PKI vulnerability."}},
+
+"q0073": {"objective":"4.6",
+ "explanation":"A smart card is something you have. Pairing it with a PIN adds something you know, giving two distinct factors — which is what makes the combination multifactor rather than just a card.",
+ "incorrect":{
+  "B":"A hardware token is also something you have, the same factor as the card. Two of the same factor is not multifactor authentication.",
+  "C":"A user ID identifies who is claiming access. Identification is not authentication, and a user ID is not secret.",
+  "D":"An SMS code is something you have via the phone, and it is a valid second factor in general — but the question asks what enables the extra factor while using a smart card, where the PIN is the paired element."}},
+
+"q0074": {"objective":"4.6",
+ "explanation":"Privileged access management brokers access to critical systems: the consultant authenticates to the PAM platform, which injects the credential, opens the session and records it, all without ever revealing the password. It also allows the access to be time-limited and revoked the moment the work ends.",
+ "incorrect":{
+  "A":"TACACS+ centralises authentication and command authorisation, largely for network devices. It still relies on the consultant holding credentials.",
+  "B":"SAML federates identity between an identity provider and applications. It avoids a second password but does not vault or conceal privileged credentials.",
+  "C":"An SSO platform gives one sign-in across applications. It spreads the consultant's single identity further rather than restricting privileged use.",
+  "D":"Role-based access control decides what a role may do once authenticated. It scopes permissions but does not solve the problem of sharing the password."}},
+
+"q0075": {"objective":"5.1",
+ "explanation":"The legal department's concern is liability for what visitors do. A captive portal that requires visitors to accept terms and conditions creates a recorded acceptance of an acceptable use policy before access is granted, which is the control that addresses a legal rather than technical exposure.",
+ "incorrect":{
+  "A":"A RADIUS server authenticates devices against a directory. Visitors have no accounts, and authentication would not establish agreement to any terms.",
+  "B":"802.1X enforces per-device authentication before network access. Like RADIUS it presumes managed devices with credentials, which guests do not have.",
+  "D":"WPS simplifies joining a network with a button or PIN. It is a known-weak convenience feature and records nothing about who accepted what."}},
+
+"q0076": {"objective":"5.1",
+ "explanation":"The data owner is the senior individual accountable for a data set. They classify it, determine the risks to it and decide who should have access — accountability decisions, as opposed to the hands-on work of maintaining it.",
+ "incorrect":{
+  "B":"The data custodian implements and operates the controls the owner specifies — backups, storage, applying permissions. They execute decisions rather than making them.",
+  "C":"The data steward is responsible for data quality, context and appropriate use day to day. They manage the data's fitness, not who may access it.",
+  "D":"The data controller is a GDPR role determining the purposes and means of processing personal data. It is a regulatory designation for an organisation rather than the internal role that sets access."}},
+
+"q0077": {"objective":"1.2",
+ "explanation":"Lighting both deters and detects: an illuminated area discourages an intruder who does not want to be seen, and it makes them visible to cameras and guards if they proceed. A sensor detects intrusion, and once its presence is known it discourages attempts as well.",
+ "incorrect":{
+  "B":"Fencing physically obstructs entry, making it preventive. It deters too, but it detects nothing.",
+  "C":"Signage warns and discourages, so it deters, but a sign cannot notice anyone.",
+  "E":"A bollard physically blocks vehicles. It is a preventive barrier with no detection capability.",
+  "F":"A lock prevents entry to those without the key. It neither reports nor records an attempt."}},
+
+"q0078": {"objective":"3.2",
+ "explanation":"A load balancer spreads incoming requests across multiple servers, so peak demand is shared rather than overwhelming one host, and it removes failed servers from rotation automatically. That is what keeps a busy customer-facing application accessible during peak usage.",
+ "incorrect":{
+  "B":"Cloud backups protect against data loss and support recovery. They do nothing for the capacity of a running service.",
+  "C":"Geographic dispersal places infrastructure in different locations to survive a regional outage. It addresses disaster resilience rather than concurrent load.",
+  "D":"Disk multipathing provides redundant routes between a server and its storage. It removes one internal single point of failure but does not scale to handle more users."}},
+
+"q0079": {"objective":"4.1",
+ "explanation":"Code signing attaches a digital signature created with the author's private key. Anyone installing the package can verify the signature, which proves both that the author published it and that not a byte has changed — so a repackaged copy carrying malware fails verification.",
+ "incorrect":{
+  "A":"Input validation checks data supplied to a running program. It protects the software's behaviour, not the integrity of the distributed file.",
+  "C":"Secure cookies protect session tokens in a browser. They are a web application control and are unrelated to distributing software.",
+  "D":"Fuzzing feeds malformed input to find defects during testing. It improves the code's robustness before release but says nothing about the file afterwards."}}
+}

@@ -265,6 +265,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0027",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A company is reviewing options to enforce user logins after several account takeovers. The following conditions must be met as part of the solution:\n• Allow employees to work remotely or from assigned offices around the world.\n• Provide a seamless login experience.\n• Limit the amount of equipment required.\nWhich of the following best meets these conditions?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Trusted devices"
+      },
+      {
+        "key": "B",
+        "text": "Geotagging"
+      },
+      {
+        "key": "C",
+        "text": "Smart cards"
+      },
+      {
+        "key": "D",
+        "text": "Time-based logins"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Trusted devices let an already-registered device act as an authentication factor, so a known laptop or phone satisfies the second factor automatically. That gives a seamless login anywhere in the world with no extra hardware to issue, which is exactly the three constraints listed.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Geotagging records where a device is. Staff work remotely and from offices worldwide, so tying login to location would block legitimate access rather than enable it.",
+      "C": "Smart cards are strong, but they are additional equipment that must be issued, replaced and paired with readers. That breaks the requirement to limit equipment.",
+      "D": "Time-based logins restrict when someone may sign in. With employees spread across the world there is no common window, so this would obstruct rather than secure."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p17",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0030",
     "domain": 4,
     "objective": "4.6",
@@ -292,52 +334,60 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "SAML is the standard for exchanging authentication and authorisation assertions between an identity provider and a service provider, and it is what web-based SSO to cloud applications runs on. Bringing a new cloud accounting product into an existing SSO estate means configuring a SAML trust.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "RADIUS centralises authentication for network access — VPN concentrators, wireless controllers, switches. It is not how a browser-based cloud application federates identity.",
+      "C": "EAP is an authentication framework used inside network access protocols such as 802.1X. It operates at the network layer, not between web applications.",
+      "D": "OpenID Connect is a genuine federation option, but it is the newer OAuth-based protocol. Where an enterprise SSO deployment already exists across business applications, SAML is the established choice."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p18",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0032",
+    "id": "q0034",
     "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A network engineer deployed a redundant switch stack to increase system availability. However, the budget can only cover the cost of one ISP connection.\nWhich of the following best describes the potential risk factor?",
+    "question": "A threat actor was able to use a username and password to log in to a stolen company mobile device.\nWhich of the following provides the best solution to increase mobile data security on all employees' company mobile devices?",
     "choices": [
       {
         "key": "A",
-        "text": "The equipment MTBF is unknown."
+        "text": "Application management"
       },
       {
         "key": "B",
-        "text": "The ISP has no SLA."
+        "text": "Full disk encryption"
       },
       {
         "key": "C",
-        "text": "An RPO has not been determined."
+        "text": "Remote wipe"
       },
       {
         "key": "D",
-        "text": "There is a single point of failure."
+        "text": "Containerization"
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The device is already stolen and the attacker already has valid credentials, so preventive measures on that handset have been bypassed. Remote wipe is the control that still helps: it destroys the data on the device from the management console, and applied across the fleet it limits the damage of any future loss.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Application management controls which apps may be installed and how they behave. It does not remove data from a device an attacker has already logged into.",
+      "B": "Full disk encryption protects data when the device is off or locked. It has already been defeated here, because logging in with a valid password unlocks the volume.",
+      "D": "Containerisation separates corporate data from personal data on the device. Useful, but the attacker authenticated as the user and so reaches inside the container too."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p19",
-    "needsReview": true,
-    "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -368,14 +418,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The recognised authentication factors are something you know, something you have, and something you are, with somewhere you are and something you do treated as attributes. Something you have — a token, smart card or phone — is a true factor.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Something you exhibit refers to behaviour such as typing rhythm or gait. It is an authentication attribute, not one of the three factors.",
+      "C": "Somewhere you are is location. It is also classed as an attribute, used to add context rather than to stand as a factor in its own right.",
+      "D": "Someone you know is a trust-relationship attribute, sometimes used for vouching. It is not a factor either."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -415,14 +469,103 @@ export const domain4Questions = [
       "A",
       "F"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The failure was easy-to-guess passwords, so the fix must increase how hard a password is to guess. Raising the minimum length to 14 characters enlarges the search space far more than any other single change, and requiring a special character widens the character set beyond alphanumerics. Both attack the actual weakness.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Upgrading from MD5 to SHA-512 is worth doing, but hashing protects stored passwords if the database is stolen. It makes a guessable password no harder to guess.",
+      "C": "Increasing the maximum age to 120 days lets a weak password stay in use longer. That makes the situation worse, not better.",
+      "D": "Reducing the minimum length to ten characters shrinks the search space, making guessing easier.",
+      "E": "Reducing the minimum age to zero lets users cycle through changes quickly to return to a favourite password, defeating password history."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0041",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "Which of the following best describes a use case for a DNS sinkhole?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Attackers can see a DNS sinkhole as a highly valuable resource to identify a company's domain structure."
+      },
+      {
+        "key": "B",
+        "text": "A DNS sinkhole can be used to draw employees away from known-good websites to malicious ones owned by the attacker."
+      },
+      {
+        "key": "C",
+        "text": "A DNS sinkhole can be used to capture traffic to known-malicious domains used by attackers."
+      },
+      {
+        "key": "D",
+        "text": "A DNS sinkhole can be set up to attract potential attackers away from a company's network resources."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A DNS sinkhole answers lookups for known-malicious domains with a controlled address instead of the real one. That both stops the connection and, crucially, logs which internal hosts tried to make it — turning the DNS layer into a detection point for already-infected machines.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A sinkhole is an internal control that returns false answers for bad domains. It reveals nothing about your domain structure, and attackers do not query it.",
+      "B": "Drawing users away from good sites to malicious ones describes DNS poisoning — an attack. A sinkhole does the opposite, steering traffic away from malicious destinations.",
+      "D": "Attracting attackers away from real resources describes a honeypot. A sinkhole intercepts outbound lookups rather than luring inbound attackers."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p21",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0042",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "type": "single",
+    "question": "An incident analyst finds several image files on a hard disk. The image files may contain geolocation coordinates.\nWhich of the following best describes the type of information the analyst is trying to extract from the image files?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Log data"
+      },
+      {
+        "key": "B",
+        "text": "Metadata"
+      },
+      {
+        "key": "C",
+        "text": "Encrypted data"
+      },
+      {
+        "key": "D",
+        "text": "Sensitive data"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Metadata is data describing the file rather than its visible content — for an image, the EXIF block holding camera model, timestamps and GPS coordinates. Geolocation embedded in a photograph lives there, which is why it is so valuable in an investigation.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Log data records events produced by systems and applications. It is generated separately from the file, not carried inside it.",
+      "C": "Encrypted data is content deliberately made unreadable without a key. The coordinates are stored in the clear in the file header.",
+      "D": "Sensitive data describes how information is classified. Geolocation may well be sensitive, but the question asks what kind of information it is structurally."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p22",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -453,14 +596,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The order of volatility says collect what disappears soonest. RAM holds running processes, network connections, decryption keys and unsaved data, and all of it is lost the moment the machine loses power — so it must be captured before anything written to persistent storage.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A hard drive retains its contents without power. It is important evidence but sits near the bottom of the volatility order.",
+      "C": "An SSD is likewise non-volatile. It has its own forensic complications from wear levelling and TRIM, but the data survives a power loss.",
+      "D": "Temporary files are stored on disk. They may be deleted by the operating system, but they persist across a reboot in a way memory does not."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p23",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -491,21 +638,25 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The servers are up and reachable from inside the server network, so the systems themselves are healthy — what has failed is reachability for everyone else. A flood of traffic saturating the path to the service produces exactly that split, which is a denial of service.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "ARP poisoning redirects traffic within a local segment by forging address mappings. It typically enables interception rather than taking a service offline, and it would disrupt the server network too.",
+      "C": "Jamming is radio interference against a wireless network. These are servers on a wired network, where there is no signal to jam.",
+      "D": "Kerberoasting requests service tickets to crack service-account passwords offline. It is a credential attack that is deliberately quiet and causes no outage."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p24",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0053",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A security administrator is working to secure company data on corporate laptops in case the laptops are stolen.\nWhich of the following solutions should the administrator consider?",
     "choices": [
@@ -529,14 +680,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The threat is physical theft of the laptop, so the data must be unreadable to someone holding the hardware. Full disk encryption keeps the volume encrypted at rest, so removing the drive or booting another operating system yields ciphertext without the key.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Data loss prevention watches for sensitive data leaving the organisation through email, uploads or removable media. A thief with the physical device never triggers it.",
+      "C": "Operating system hardening reduces the attack surface of a running system. A thief can bypass the installed OS entirely by attaching the disk elsewhere.",
+      "D": "Boot security such as Secure Boot ensures only trusted code loads at startup. It protects the boot chain but leaves the data readable if the drive is moved."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p25",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -571,14 +726,19 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Developers routinely commit API keys, tokens and passwords into source control by accident, and cloud deployments multiply the number of credentials in play. Public and misconfigured repositories are scraped constantly, which makes them the leading unintentional leakage path.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "The dark web is where leaked credentials are traded after the fact. It is a destination for stolen data, not the source of the leak.",
+      "C": "Threat feeds distribute indicators of compromise to defenders. They report on threats rather than leaking anything.",
+      "D": "State actors deliberately steal credentials. The question asks about unintentional leakage, which is the organisation's own mistake.",
+      "E": "Vulnerability databases catalogue known software flaws. They publish weaknesses in products, never an organisation's credentials."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p26",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -613,14 +773,19 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A non-credentialed scan probes a target from the outside with no account, seeing only what an unauthenticated attacker would see — open ports, exposed services and banner-visible versions. Scanning internet-facing web servers without a system account is that by definition.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A packet capture records traffic passing an interface for later analysis. It observes rather than probes, and it would not enumerate vulnerabilities.",
+      "C": "Privilege escalation is gaining higher rights after an initial foothold. The analyst has no account at all, so there is nothing to escalate from.",
+      "D": "System enumeration lists resources such as users, shares or services, usually after gaining some access. It is a step within an assessment, not the scan being described.",
+      "E": "A passive scan only observes existing traffic without sending anything. A vulnerability scan actively probes the target, so it is not passive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p26",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -651,52 +816,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Telnet transmits everything, credentials included, in plaintext. Anyone positioned to observe the traffic could read the administrator's password straight off the wire with a capture tool and then log in legitimately, which matches malware installed under valid credentials.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Password spraying tries a few common passwords across many accounts. It produces a large volume of failed logins, and it does not explain why Telnet matters here.",
+      "C": "A remote-access Trojan gives an attacker control of a machine, but it would have to be installed first. The question is asking how the credentials were obtained.",
+      "D": "A dictionary attack guesses passwords from a word list, again generating many failures. The plaintext protocol means no guessing was necessary."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p28",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0065",
-    "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
-    "type": "single",
-    "question": "A security administrator is working to find a cost-effective solution to implement certificates for a large number of domains and subdomains owned by the company.\nWhich of the following types of certificates should the administrator implement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Wildcard"
-      },
-      {
-        "key": "B",
-        "text": "Client certificate"
-      },
-      {
-        "key": "C",
-        "text": "Self-signed"
-      },
-      {
-        "key": "D",
-        "text": "Code signing"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p29",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -727,21 +858,25 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Nessus is a vulnerability scanner: it sweeps hosts, enumerates open ports and identifies the services and protocol versions behind them, then flags insecure configurations and legacy protocols. Finding those issues across multiple servers is exactly what it is built to do.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "curl is a command-line client for making individual web requests. It can test one endpoint at a time but performs no discovery across an estate.",
+      "C": "Wireshark captures and dissects traffic that is already flowing. It can reveal a legacy protocol in use, but only passively and only where it is placed.",
+      "D": "netcat opens or listens on a single connection for testing. It is a manual, one-port-at-a-time tool rather than an auditing scanner."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p29",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0069",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "A security administrator is performing an audit on a stand-alone UNIX server, and the following message is immediately displayed:\n(Error 13): /etc/shadow: Permission denied.\nWhich of the following best describes the type of tool that is being used?",
     "choices": [
@@ -765,14 +900,18 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "On UNIX, /etc/shadow stores the password hashes and is readable only by root. A tool whose first action is to try to open that file is attempting to obtain hashes to crack, which identifies it as a password cracker.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A pass-the-hash monitor watches for reuse of captured hashes in authentication traffic. It observes network or logon events rather than reading the shadow file.",
+      "B": "A file integrity monitor records checksums and reports changes. It would need read access too, but its purpose is detecting modification, not extracting hashes.",
+      "C": "Forensic analysis tools examine acquired images and artefacts. They typically work from a copy and would not be blocked by live file permissions in this way."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p30",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -803,14 +942,60 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "SIP and H.323 are call signalling protocols, RTP carries the media stream and SRTP is its encrypted form. That combination is the standard protocol set for voice over IP, so the rules exist to support VoIP.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "An RTOS is a real-time operating system used in embedded devices. It is a platform, not something with its own signalling and media protocols.",
+      "C": "A system on a chip integrates components onto one piece of silicon. It is a hardware design, again with no associated protocol set.",
+      "D": "HVAC systems use building-automation protocols such as BACnet or Modbus, not SIP and RTP."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p30",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0073",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A company wants to implement MFA. Which of the following enables the additional factor while using a smart card?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "PIN"
+      },
+      {
+        "key": "B",
+        "text": "Hardware token"
+      },
+      {
+        "key": "C",
+        "text": "User ID"
+      },
+      {
+        "key": "D",
+        "text": "SMS"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A smart card is something you have. Pairing it with a PIN adds something you know, giving two distinct factors — which is what makes the combination multifactor rather than just a card.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A hardware token is also something you have, the same factor as the card. Two of the same factor is not multifactor authentication.",
+      "C": "A user ID identifies who is claiming access. Identification is not authentication, and a user ID is not secret.",
+      "D": "An SMS code is something you have via the phone, and it is a valid second factor in general — but the question asks what enables the extra factor while using a smart card, where the PIN is the paired element."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p31",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -845,14 +1030,19 @@ export const domain4Questions = [
     "correct": [
       "E"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Privileged access management brokers access to critical systems: the consultant authenticates to the PAM platform, which injects the credential, opens the session and records it, all without ever revealing the password. It also allows the access to be time-limited and revoked the moment the work ends.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "TACACS+ centralises authentication and command authorisation, largely for network devices. It still relies on the consultant holding credentials.",
+      "B": "SAML federates identity between an identity provider and applications. It avoids a second password but does not vault or conceal privileged credentials.",
+      "C": "An SSO platform gives one sign-in across applications. It spreads the consultant's single identity further rather than restricting privileged use.",
+      "D": "Role-based access control decides what a role may do once authenticated. It scopes permissions but does not solve the problem of sharing the password."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p31",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -883,14 +1073,18 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a digital signature created with the author's private key. Anyone installing the package can verify the signature, which proves both that the author published it and that not a byte has changed — so a repackaged copy carrying malware fails verification.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Input validation checks data supplied to a running program. It protects the software's behaviour, not the integrity of the distributed file.",
+      "C": "Secure cookies protect session tokens in a browser. They are a web application control and are unrelated to distributing software.",
+      "D": "Fuzzing feeds malformed input to find defects during testing. It improves the code's robustness before release but says nothing about the file afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p33",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

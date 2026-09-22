@@ -156,21 +156,67 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A cold site is the cheapest recovery option: space, power and cooling but no pre-installed systems, data or standing network links. With no budget for extra internet connections, it is the only choice the constraints leave open, accepting a much longer recovery time in exchange.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A hot site is fully equipped and continuously synchronised, ready to take over almost immediately. It is by far the most expensive option and requires the very connectivity the company cannot fund.",
+      "C": "A failover site is a general term for any site traffic can be switched to. Where it is meaningful it implies hot-site capability and cost.",
+      "D": "A warm site sits between the two, with hardware and connectivity in place but data restored at failover time. It still needs standing links, so it exceeds the stated budget."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p16",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.621,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0032",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "A network engineer deployed a redundant switch stack to increase system availability. However, the budget can only cover the cost of one ISP connection.\nWhich of the following best describes the potential risk factor?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The equipment MTBF is unknown."
+      },
+      {
+        "key": "B",
+        "text": "The ISP has no SLA."
+      },
+      {
+        "key": "C",
+        "text": "An RPO has not been determined."
+      },
+      {
+        "key": "D",
+        "text": "There is a single point of failure."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Redundant switches remove one single point of failure, but a single ISP connection simply creates another. If that one link goes down, the resilient switch stack behind it is unreachable — availability is only as good as the weakest element in the path.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "An unknown MTBF makes failure rates hard to predict, but it is a gap in information. The concrete architectural weakness is the one link.",
+      "B": "A missing SLA means no contractual guarantee of uptime or repair time. That is a commercial concern; even a strong SLA would not stop the outage.",
+      "C": "An RPO defines how much data loss is tolerable after an incident. It relates to backup and recovery planning, not to a single network path."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p19",
+    "needsReview": false,
+    "inferenceConfidence": 0.727,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0040",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A utility company is designing a new platform that will host all the virtual machines used by business applications. The requirements include:\n• A starting baseline of 50% memory utilization\n• Storage scalability\n• Single circuit failure resilience Which of the following best meets all of these requirements?",
     "choices": [
@@ -194,52 +240,18 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "All three requirements are about elastic, resilient capacity rather than any single component. An IaaS provider supplies pooled compute so a memory baseline can be met and grown, storage that scales on demand, and infrastructure already engineered to survive the loss of a single circuit — without the company buying any of it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Dual PDUs and redundant power supplies address power resilience only. They do nothing for the memory baseline or storage scalability.",
+      "C": "Network load balancing across multiple paths improves network availability. It does not provide compute headroom or scalable storage.",
+      "D": "Large NAS devices per host add storage capacity, but bought in fixed increments rather than scaling on demand, and they address neither memory nor circuit resilience."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p21",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0042",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "An incident analyst finds several image files on a hard disk. The image files may contain geolocation coordinates.\nWhich of the following best describes the type of information the analyst is trying to extract from the image files?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Log data"
-      },
-      {
-        "key": "B",
-        "text": "Metadata"
-      },
-      {
-        "key": "C",
-        "text": "Encrypted data"
-      },
-      {
-        "key": "D",
-        "text": "Sensitive data"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p22",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -270,52 +282,18 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A captive portal intercepts a new client's first web request and holds it on a sign-in page until the visitor supplies whatever the operator requires — here a receipt number. It is the standard mechanism for gating guest Wi-Fi behind a condition rather than a shared secret.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "WPA3 is a wireless encryption standard. It protects the radio link but has no way to prompt for a receipt number or distinguish a paying customer from anyone else.",
+      "C": "A pre-shared key gates access behind one password. Once a customer shares it, or it is seen on a receipt, anybody in range can join indefinitely.",
+      "D": "802.1X authenticates each user against a directory or RADIUS server. A coffee shop has no accounts for walk-in customers, so there is nothing to authenticate against."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p23",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0054",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "A company needs to keep the fewest records possible, meet compliance needs, and ensure destruction of records that are no longer needed.\nWhich of the following best describes the policy that meets these requirements?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Security policy"
-      },
-      {
-        "key": "B",
-        "text": "Classification policy"
-      },
-      {
-        "key": "C",
-        "text": "Retention policy"
-      },
-      {
-        "key": "D",
-        "text": "Access control policy"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p26",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -346,14 +324,18 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Classification is valuable because it lets one set of handling requirements attach to a label rather than to every individual file. Once data is marked confidential or restricted, the encryption, access and retention rules for that level apply automatically wherever it goes.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Making users consider classification is a consequence of the policy, and it depends on user diligence. The security benefit comes from the requirements the label triggers, not from the thinking.",
+      "B": "Access levels are one control that follows from classification, but they are a subset. The policy drives the full set of security requirements, not access alone.",
+      "D": "Visibility of a label before opening a document is a convenience of labelling. It helps people, but it is not why the policy protects sensitive information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p26",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -384,14 +366,18 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "JSON requests exchanged with external parties is a description of a web API. Microservices exposing APIs replace the batch, file-oriented model of SFTP with lightweight request-and-response calls, which is both faster and the idiomatic way to move JSON.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A website-hosted solution serves pages to people. It addresses human browsing rather than programmatic JSON exchange between systems.",
+      "B": "Cloud shared storage is still file transfer, just hosted elsewhere. It keeps the same store-and-collect pattern that is causing the delay.",
+      "C": "A secure email solution moves messages between mailboxes. It is slower than SFTP for data transfer and is not an API."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p27",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -426,14 +412,19 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "SSH is the encrypted, authenticated replacement for Telnet, providing the same interactive remote shell over a protected channel. Where insecure protocols are banned, it is the direct substitute for exactly this use case.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "HTTPS secures web traffic. It would protect a web management interface but does not provide the command-line session Telnet gives.",
+      "B": "SNMPv3 is for secure monitoring and management of device metrics. It polls and sets values rather than opening a shell.",
+      "D": "RDP provides a remote graphical desktop, mainly on Windows. It is a heavier tool than needed and is not the standard replacement for Telnet on a web server.",
+      "E": "SMTP transports email between servers. It has no remote-administration function at all."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p28",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -464,52 +455,18 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Serverless removes servers, operating systems and capacity planning from the deployment path entirely — code is uploaded and the provider runs it on demand. That strips out most of the time and cost associated with preparing and maintaining an environment for each release.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Thin clients shift desktop computing to a central server. They change how users access applications and have no effect on how code is deployed.",
+      "C": "A private cloud still requires the organisation to own, patch and scale the underlying infrastructure. It is the most operationally expensive of the cloud models.",
+      "D": "Virtual machines each carry a full guest operating system that must be built, patched and maintained. That is precisely the overhead the company wants to shed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p30",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0075",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities.\nWhich of me following should the security team implement to address this concern?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Configure a RADIUS server to manage device authentication."
-      },
-      {
-        "key": "B",
-        "text": "Use 802.1X on all devices connecting to wireless."
-      },
-      {
-        "key": "C",
-        "text": "Add a guest captive portal requiring visitors to accept terms and conditions."
-      },
-      {
-        "key": "D",
-        "text": "Allow for new devices to be connected via WPS."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p32",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -540,14 +497,18 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A load balancer spreads incoming requests across multiple servers, so peak demand is shared rather than overwhelming one host, and it removes failed servers from rotation automatically. That is what keeps a busy customer-facing application accessible during peak usage.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Cloud backups protect against data loss and support recovery. They do nothing for the capacity of a running service.",
+      "C": "Geographic dispersal places infrastructure in different locations to survive a regional outage. It addresses disaster resilience rather than concurrent load.",
+      "D": "Disk multipathing provides redundant routes between a server and its storage. It removes one internal single point of failure but does not scale to handle more users."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p32",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {

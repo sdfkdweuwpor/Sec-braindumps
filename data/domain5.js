@@ -173,8 +173,8 @@ export const domain5Questions = [
   {
     "id": "q0025",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "An administrator at a small business notices an increase in support calls from employees who receive a blocked page message after trying to navigate to a spoofed website.\nWhich of the following should the administrator do?",
     "choices": [
@@ -198,14 +198,18 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The web filter is working — it is catching spoofed sites and blocking them. The problem is that employees keep navigating to them, which is a user-behaviour problem. Security awareness training teaches people to recognise spoofed links before they click, reducing the attempts rather than the blocks.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Multifactor authentication protects accounts when credentials are stolen. It is worth having, but it does nothing to stop users visiting spoofed sites in the first place.",
+      "B": "Decreasing the web filter settings would let the spoofed sites through. That removes the symptom — the support calls — by removing the protection.",
+      "D": "Updating the acceptable use policy changes what the rules say. A policy nobody has been trained on will not change what users click."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p17",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.37,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -236,52 +240,18 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The red team performs the offensive role, actively attempting to exploit weaknesses the way a real attacker would. Determining whether a known vulnerability is genuinely exploitable on your systems requires someone to try it, which is the red team's job.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "The purple team is the coordinating function that keeps offence and defence sharing findings. It improves how the two work together rather than carrying out the exploitation itself.",
+      "B": "The blue team defends — monitoring, detecting and responding. They would harden against the vulnerability, not prove it can be exploited.",
+      "D": "The white team sets the rules of engagement and adjudicates an exercise. They oversee rather than test."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p17",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0027",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "A company is reviewing options to enforce user logins after several account takeovers. The following conditions must be met as part of the solution:\n• Allow employees to work remotely or from assigned offices around the world.\n• Provide a seamless login experience.\n• Limit the amount of equipment required.\nWhich of the following best meets these conditions?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Trusted devices"
-      },
-      {
-        "key": "B",
-        "text": "Geotagging"
-      },
-      {
-        "key": "C",
-        "text": "Smart cards"
-      },
-      {
-        "key": "D",
-        "text": "Time-based logins"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p17",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -312,14 +282,60 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Residual risk is what remains after controls and mitigating factors have been applied. No control set reduces risk to zero, and the leftover exposure is what management formally accepts.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Avoided risk is risk eliminated by not undertaking the activity at all. If it were avoided there would be nothing left to measure.",
+      "C": "Inherent risk is the level before any controls are applied. That is the starting point of the calculation, not the end of it.",
+      "D": "Operational risk is a category of risk arising from processes, people and systems. It describes where a risk comes from, not how much of it survives treatment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0048",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "A hosting provider needs to prove that its security controls have been in place over the last six months and have sufficiently protected customer data.\nWhich of the following would provide the best proof that the hosting provider has met the requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "NIST CSF"
+      },
+      {
+        "key": "B",
+        "text": "SOC 2 Type 2 report"
+      },
+      {
+        "key": "C",
+        "text": "CIS Top 20 compliance reports"
+      },
+      {
+        "key": "D",
+        "text": "Vulnerability report"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A SOC 2 Type 2 report is an independent auditor's opinion on whether controls were both suitably designed and operating effectively across a period — typically six to twelve months. The question asks for proof of controls over the last six months, which is exactly what Type 2, unlike Type 1, examines.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "The NIST Cybersecurity Framework is a voluntary structure for organising a security programme. Following it is not evidence, because no independent party attests to what you actually did.",
+      "C": "CIS Top 20 compliance reports are self-generated measurements against a control list. They show your own assessment rather than an audited opinion.",
+      "D": "A vulnerability report lists technical weaknesses at a point in time. It says nothing about whether controls operated effectively over six months."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p23",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -350,14 +366,60 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The disaster recovery plan covers restoring IT systems and facilities after a destructive event, and it is what staff invoke immediately when a data centre is physically lost. It contains the recovery procedures, alternate-site arrangements and restoration order needed to get essential services running again.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A business continuity plan is the wider plan for keeping the organisation functioning, of which disaster recovery is the technical part. It governs the whole response rather than the immediate restoration of the lost facility.",
+      "B": "A communication plan defines who is told what and when. It is activated alongside the DRP but restores no services itself.",
+      "D": "An incident response plan addresses security incidents such as intrusions and malware. A tornado is a physical disaster, not a security incident."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p24",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0054",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "A company needs to keep the fewest records possible, meet compliance needs, and ensure destruction of records that are no longer needed.\nWhich of the following best describes the policy that meets these requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Security policy"
+      },
+      {
+        "key": "B",
+        "text": "Classification policy"
+      },
+      {
+        "key": "C",
+        "text": "Retention policy"
+      },
+      {
+        "key": "D",
+        "text": "Access control policy"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A retention policy states how long each type of record must be kept to satisfy legal and regulatory obligations, and requires secure destruction once that period expires. Keeping the fewest records possible while still meeting compliance is exactly the balance it strikes.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A security policy is the overarching statement of security intent. It is far too broad to specify retention periods and destruction schedules.",
+      "B": "A classification policy defines sensitivity levels and how each must be handled. It governs protection, not lifespan.",
+      "D": "An access control policy defines who may reach what. It says nothing about how long data is kept or when it is destroyed."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p26",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -388,14 +450,102 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "GDPR grants data subjects a defined set of rights over their personal data, including the right to be informed, the right of access and the right to erasure — commonly called the right to be forgotten. Those named rights are specific to it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "PCI DSS is a contractual standard for protecting payment card data. It imposes security controls on merchants and gives cardholders no such rights.",
+      "C": "NIST publishes voluntary security frameworks and standards. They guide how organisations build controls and confer no individual rights.",
+      "D": "ISO produces international standards such as ISO 27001 for information security management. They are certifiable management systems, not privacy rights legislation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p27",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0075",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities.\nWhich of me following should the security team implement to address this concern?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configure a RADIUS server to manage device authentication."
+      },
+      {
+        "key": "B",
+        "text": "Use 802.1X on all devices connecting to wireless."
+      },
+      {
+        "key": "C",
+        "text": "Add a guest captive portal requiring visitors to accept terms and conditions."
+      },
+      {
+        "key": "D",
+        "text": "Allow for new devices to be connected via WPS."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "The legal department's concern is liability for what visitors do. A captive portal that requires visitors to accept terms and conditions creates a recorded acceptance of an acceptable use policy before access is granted, which is the control that addresses a legal rather than technical exposure.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A RADIUS server authenticates devices against a directory. Visitors have no accounts, and authentication would not establish agreement to any terms.",
+      "B": "802.1X enforces per-device authentication before network access. Like RADIUS it presumes managed devices with credentials, which guests do not have.",
+      "D": "WPS simplifies joining a network with a button or PIN. It is a known-weak convenience feature and records nothing about who accepted what."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p32",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0076",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Which of the following data roles is responsible for identifying risks and appropriate access to data?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Owner"
+      },
+      {
+        "key": "B",
+        "text": "Custodian"
+      },
+      {
+        "key": "C",
+        "text": "Steward"
+      },
+      {
+        "key": "D",
+        "text": "Controller"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The data owner is the senior individual accountable for a data set. They classify it, determine the risks to it and decide who should have access — accountability decisions, as opposed to the hands-on work of maintaining it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "The data custodian implements and operates the controls the owner specifies — backups, storage, applying permissions. They execute decisions rather than making them.",
+      "C": "The data steward is responsible for data quality, context and appropriate use day to day. They manage the data's fitness, not who may access it.",
+      "D": "The data controller is a GDPR role determining the purposes and means of processing personal data. It is a regulatory designation for an organisation rather than the internal role that sets access."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p32",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
