@@ -39,7 +39,7 @@ export async function renderResults(view, { params, navigate }) {
   if (!result) {
     view.append(el('div', { class: 'empty' }, [
       el('span', { class: 'ic', 'aria-hidden': 'true', text: '○' }),
-      el('h2', { text: 'No results yet' }),
+      el('h1', { text: 'No results yet' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
     ]));
     return;

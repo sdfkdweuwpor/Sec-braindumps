@@ -121,7 +121,7 @@ async function render() {
   if (!fn) {
     view.append(el('div', { class: 'empty' }, [
       el('span', { class: 'ic', 'aria-hidden': 'true', text: '∅' }),
-      el('h2', { text: 'Page not found' }),
+      el('h1', { text: 'Page not found' }),
       el('p', { class: 'muted', text: `Nothing is routed at ${path}.` }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
     ]));

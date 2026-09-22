@@ -41,7 +41,7 @@ export async function renderQuiz(view, { navigate }) {
   if (!session) {
     view.append(el('div', { class: 'empty' }, [
       el('span', { class: 'ic', 'aria-hidden': 'true', text: '◇' }),
-      el('h2', { text: 'No quiz in progress' }),
+      el('h1', { text: 'No quiz in progress' }),
       el('p', { class: 'muted', text: 'Start one from the Study screen.' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
     ]));
@@ -84,7 +84,7 @@ export async function renderQuiz(view, { navigate }) {
     const timerEl = session.durationMs ? el('span', { class: 'pill' }) : null;
 
     body.append(el('div', { class: 'spread' }, [
-      el('strong', { text: `Question ${n} of ${total}` }),
+      el('h1', { style: 'font-size:1.15rem;margin:0', text: `Question ${n} of ${total}` }),
       el('div', { class: 'row' }, [
         timerEl,
         flagBtn,

@@ -1,0 +1,10 @@
+{
+  "name": "secplus-sy0-701-practice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline CompTIA Security+ SY0-701 practice exam app. No dependencies, no build step.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

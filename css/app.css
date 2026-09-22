@@ -4,6 +4,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
@@ -155,7 +156,7 @@ main {
 
 /* ---------- quiz ---------- */
 .qmeta { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
-.qtext { font-size: 1.06rem; margin: .9rem 0 1rem; white-space: pre-wrap; }
+.qtext { font-size: 1.06rem; margin: .9rem 0 1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
 .qtext .bullets { display: block; }
 
 .choices { display: grid; gap: .55rem; margin: 0; padding: 0; border: 0; }
@@ -210,6 +211,7 @@ main {
 
 .empty { text-align: center; padding: 2.5rem 1rem; color: var(--text-dim); }
 .empty .ic { font-size: 2rem; display: block; margin-bottom: .5rem; }
+.empty h1 { font-size: 1.2rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
@@ -270,7 +272,13 @@ summary {
   color: var(--text); background: var(--bg-raised);
   border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
 }
-select.numinput { width: auto; }
+select.numinput {
+  width: auto;
+  max-width: 100%;      /* a <select> sizes to its longest option, which on
+                           mobile pushed the page into horizontal scroll */
+  min-width: 0;
+}
+.row > select.numinput { flex: 0 1 auto; }
 
 .startbar {
   position: sticky; bottom: calc(var(--tap) + env(safe-area-inset-bottom));
@@ -325,7 +333,7 @@ select.numinput { width: auto; }
 /* ---------- question list ---------- */
 .qrow { border-top: 1px solid var(--border); }
 .qrow summary { gap: .6rem; }
-.qrow .stem { flex: 1; min-width: 0; }
+.qrow .stem { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .qrow .tags { display: flex; gap: .35rem; flex-wrap: wrap; margin-top: .3rem; }
 .qrow .tags .pill { font-size: .7rem; padding: .1rem .45rem; }
 .pager { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: .8rem; }
