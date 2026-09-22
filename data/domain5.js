@@ -4774,6 +4774,48 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0663",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "At the start of a penetration test, the tester checks OSINT resources for information about the client environment.\nWhich of the following types of reconnaissance is the tester performing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Active"
+      },
+      {
+        "key": "B",
+        "text": "Passive"
+      },
+      {
+        "key": "C",
+        "text": "Offensive"
+      },
+      {
+        "key": "D",
+        "text": "Defensive"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Consulting open-source intelligence means reading what is already published — registries, certificate logs, job adverts, social media. The tester never touches the client's systems, so nothing appears in their logs, which is what makes it passive reconnaissance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Active reconnaissance sends traffic to the target, such as port scanning or service probing, and is visible in its logs.",
+      "C": "Offensive describes the overall posture of the engagement rather than a reconnaissance type.",
+      "D": "Defensive describes the blue team's role. A penetration tester is not defending anything."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p278",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0664",
     "domain": 5,
     "objective": "5.2",
@@ -4801,12 +4843,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Quantitative risk analysis assigns a monetary value to potential losses, such as the cost of replacing a physical server after an attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Putting a monetary figure on what an incident would cost — here the price of replacing a server — is quantitative risk analysis. It works in currency and numbers rather than descriptive bands, feeding directly into SLE and ALE calculations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A disaster recovery test verifies that recovery procedures work. It exercises capability rather than costing losses.",
+      "C": "Physical security controls are protective measures such as locks and barriers. They are controls, not an analysis process.",
+      "D": "Threat modelling anticipates how a system might be attacked during design. It identifies threats rather than pricing their impact."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.421,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4839,12 +4885,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A Purple team combines both offensive (Red team) and defensive (Blue team) security techniques to improve an organization's overall security posture through collaborative testing and defense.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The purple team is the function that brings offence and defence together, feeding red team findings directly into blue team detection and response. Combining both disciplines to improve protection is what defines it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The red team is offensive only, simulating an adversary.",
+      "B": "The blue team is defensive only — monitoring, detecting and responding.",
+      "D": "The yellow team is the builders, the developers and engineers who construct the systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4877,51 +4927,17 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Due diligence is the practice of researching and understanding relevant laws and regulations to ensure that information security operations comply with legal and regulatory requirements for a specific industry.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Due diligence is the investigative work of finding out what laws, regulations and obligations apply to your operations before acting. Researching an industry's information security legal landscape is exactly that.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Compliance reporting demonstrates that requirements are being met. It comes after you know what they are.",
+      "B": "GDPR is one specific regulation, not the practice of researching regulations generally.",
+      "D": "Attestation is a formal statement that a requirement has been met."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.538,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0677",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "Which of the following outlines the configuration, maintenance, and security roles between a cloud service provider and the customer?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Service-level agreement"
-      },
-      {
-        "key": "B",
-        "text": "Responsibility matrix"
-      },
-      {
-        "key": "C",
-        "text": "Memorandum of understanding"
-      },
-      {
-        "key": "D",
-        "text": "Non-disclosure agreement"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A responsibility matrix clearly defines and outlines the division of configuration, maintenance, and security roles between a cloud service provider and the customer.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4953,12 +4969,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A service-level agreement (SLA) formally defines measurable performance targets - such as 97 % server and network uptime - that the provider commits to meet.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement states the measurable performance the provider commits to deliver, and uptime percentage is the classic SLA metric. A specific figure such as 97% is exactly what it exists to record.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A BPA sets out how two businesses will operate a partnership.",
+      "B": "An MOU is a non-binding statement of intent between parties, with no enforceable metrics.",
+      "C": "An NDA restricts disclosure of confidential information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p294",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4991,12 +5011,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The ban represents a government-imposed sanction; the general counsel must ensure the hardware refresh avoids any continued use or procurement of the sanctioned vendor's devices to remain legally compliant.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A government ban is a sanction, and continuing to buy or operate the sanctioned vendor's equipment would put the company in breach of it. That legal exposure is what general counsel is concerned with during the refresh.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data sovereignty concerns which country's laws govern stored data. The issue here is the vendor, not data location.",
+      "C": "Cost of replacement is a finance and procurement concern rather than a legal one.",
+      "D": "Loss of license would mean the company losing its own authorisation to operate. The ban is on the vendor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5029,12 +5053,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Annualized loss expectancy is derived by multiplying the single loss expectancy by the annualized rate of occurrence (ARO), which expresses how often the loss is expected to occur in a year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised loss expectancy is single loss expectancy multiplied by the annualised rate of occurrence. With SLE already known, ARO is the missing term — how many times a year the loss is expected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "MTTR is the average time to repair a failed component. It is a maintenance metric, not a loss calculation input.",
+      "C": "An SLA is a contractual performance commitment.",
+      "D": "RTO is the maximum tolerable downtime. It is a recovery target rather than a frequency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p296",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.962,
     "needsExplanation": false,
     "keyCorrected": false

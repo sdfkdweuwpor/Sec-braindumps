@@ -27963,9 +27963,9 @@
   },
   {
     "id": "q0663",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "At the start of a penetration test, the tester checks OSINT resources for information about the client environment.\nWhich of the following types of reconnaissance is the tester performing?",
     "choices": [
@@ -27989,12 +27989,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Passive reconnaissance involves gathering information from publicly available sources, such as OSINT resources, without directly interacting with the target environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Consulting open-source intelligence means reading what is already published — registries, certificate logs, job adverts, social media. The tester never touches the client's systems, so nothing appears in their logs, which is what makes it passive reconnaissance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Active reconnaissance sends traffic to the target, such as port scanning or service probing, and is visible in its logs.",
+      "C": "Offensive describes the overall posture of the engagement rather than a reconnaissance type.",
+      "D": "Defensive describes the blue team's role. A penetration tester is not defending anything."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p278",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28027,12 +28031,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Quantitative risk analysis assigns a monetary value to potential losses, such as the cost of replacing a physical server after an attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Putting a monetary figure on what an incident would cost — here the price of replacing a server — is quantitative risk analysis. It works in currency and numbers rather than descriptive bands, feeding directly into SLE and ALE calculations.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A disaster recovery test verifies that recovery procedures work. It exercises capability rather than costing losses.",
+      "C": "Physical security controls are protective measures such as locks and barriers. They are controls, not an analysis process.",
+      "D": "Threat modelling anticipates how a system might be attacked during design. It identifies threats rather than pricing their impact."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.421,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28065,12 +28073,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Memory injection refers to a technique where malware is loaded directly into the system's volatile memory (RAM) to execute malicious code without writing files to disk, making detection and persistence more difficult. This matches the scenario where the malware is now active in the computer's volatile storage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The malware is running in RAM rather than from a file on disk. Loading code directly into memory so it executes without leaving a file behind is memory injection, and it is used precisely because file-based scanning has nothing to examine.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A race condition exploits the timing gap between checking a value and using it. It is a logic flaw, not a residency technique.",
+      "B": "A zero-day exploit targets a flaw with no patch. That describes the vulnerability's status, not where the malware lives.",
+      "C": "A buffer overflow writes past an allocated memory region to corrupt memory or gain execution. It may be the way in, but the technique described is the in-memory residency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28103,12 +28115,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is an attack in which a malicious actor breaks out of the confines of a virtual machine to gain access to the underlying hypervisor or other virtual machines, matching the scenario described.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualisation vulnerability because the hypervisor controls every other guest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection manipulates database queries through application input. No database is involved.",
+      "C": "Privilege escalation gains higher rights within one system. VM escape crosses to a different system entirely, which is a stronger claim.",
+      "D": "A logic bomb is dormant code that triggers on a condition. It is a payload, not a boundary failure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28141,12 +28157,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Phishing involves sending large quantities of unsolicited messages to users in an attempt to trick them into revealing sensitive information or performing malicious actions. This aligns with users receiving many unsolicited emails.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hundreds of unsolicited messages sent to many users at once is a broad, untargeted campaign. Phishing is the general term for that mass fraudulent messaging aimed at whoever happens to respond.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering hole attack compromises a website the targets visit. No messages are sent at all.",
+      "B": "Typosquatting registers lookalike domains and waits for mistyped addresses.",
+      "C": "Business email compromise is narrowly targeted at individuals who can authorise payments, usually one carefully crafted message rather than hundreds."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28179,12 +28199,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Escrow refers to a trusted third party securely holding a copy of the decryption key, allowing recovery of encrypted data if the original key is lost.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Escrow deposits a copy of the key with a trusted custodian who releases it under defined conditions. If the working key is lost, that escrowed copy is the only thing standing between the organisation and permanently unreadable data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A CSR is a certificate signing request submitted to obtain a certificate. It plays no part in recovery.",
+      "B": "Salting adds randomness before hashing passwords. It is unrelated to encryption key management.",
+      "C": "Root of trust is the trusted anchor a cryptographic system builds on. It establishes trust rather than recovering keys."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28192,8 +28216,8 @@
   {
     "id": "q0669",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A company's antivirus solution is effective in blocking malware but often has false positives. The security team has spent a significant amount of time on investigations but cannot determine a root cause. The company is looking for a heuristic solution.\nWhich of the following should replace the antivirus solution?",
     "choices": [
@@ -28217,12 +28241,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "EDR (Endpoint Detection and Response) uses advanced heuristic and behavioral analysis to detect, investigate, and respond to threats, reducing false positives and providing deeper insight than traditional antivirus.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Signature-based antivirus matches known patterns, which is why it produces noise it cannot explain. EDR uses behavioural and heuristic analysis and records the full process chain, so it both reduces false positives and gives the team the context to determine root cause.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs from many sources. It would help investigations but replaces no endpoint protection.",
+      "C": "DLP watches for sensitive data leaving the organisation. It addresses a different problem entirely.",
+      "D": "An IDS detects suspicious network traffic. It sits on the network rather than the endpoint and would not replace antivirus."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28255,12 +28283,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Typosquatting involves registering domain names that are visually or typographically similar to legitimate sites to trick users into visiting the malicious site, matching the scenario described.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering hole attack compromises a genuine site the targets already visit rather than creating a new one.",
+      "B": "Brand impersonation mimics a company's name and styling. It often accompanies typosquatting, but the question is about the domain registration.",
+      "C": "Phishing is the fraudulent message that might carry the link. Here the lookalike domain is what has been created."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28293,12 +28325,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "A Purple team combines both offensive (Red team) and defensive (Blue team) security techniques to improve an organization's overall security posture through collaborative testing and defense.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The purple team is the function that brings offence and defence together, feeding red team findings directly into blue team detection and response. Combining both disciplines to improve protection is what defines it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The red team is offensive only, simulating an adversary.",
+      "B": "The blue team is defensive only — monitoring, detecting and responding.",
+      "D": "The yellow team is the builders, the developers and engineers who construct the systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28331,12 +28367,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Due diligence is the practice of researching and understanding relevant laws and regulations to ensure that information security operations comply with legal and regulatory requirements for a specific industry.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Due diligence is the investigative work of finding out what laws, regulations and obligations apply to your operations before acting. Researching an industry's information security legal landscape is exactly that.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Compliance reporting demonstrates that requirements are being met. It comes after you know what they are.",
+      "B": "GDPR is one specific regulation, not the practice of researching regulations generally.",
+      "D": "Attestation is a formal statement that a requirement has been met."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.538,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28369,12 +28409,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique value for file contents, allowing technicians to verify file integrity by comparing hashes before and after transfer to ensure the file was not altered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing produces a digest that changes entirely if any byte changes. Computing the hash before and after the transfer and comparing the two proves the file arrived exactly as it left.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Authentication proves identity. It confirms who sent the file, not that the contents are unchanged.",
+      "B": "Obfuscation makes content harder to interpret. It provides no verification.",
+      "D": "Encryption keeps the content confidential. Ciphertext can still be corrupted or altered in transit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p282",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28407,21 +28451,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "Packet capture provides a detailed record of network traffic, allowing analysts to inspect the actual contents of communications to determine if sensitive data was exfiltrated to a command- and-control server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Determining whether data actually left requires seeing what was sent, not just that a connection existed. A packet capture records the payload itself, so the analyst can identify the content and volume of anything that went to the command-and-control server.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record activity inside a business application. Malware communicating out does not pass through it.",
+      "B": "Metadata describes files and communications. It is descriptive rather than a record of transmitted content.",
+      "C": "Network logs show which hosts communicated, when and how much. That reveals the connection but not what was in it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p282",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0675",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "A security analyst is investigating an alert that was produced by endpoint protection software.\nThe analyst determines this event was a false positive triggered by an employee who attempted to download a file.\nWhich of the following is the most likely reason the download was blocked?",
     "choices": [
@@ -28445,12 +28493,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A misconfiguration in the endpoint protection software can lead to false positives, causing legitimate files to be incorrectly flagged and blocked during download.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A false positive means the software flagged something harmless. That is a tuning and configuration problem — a rule or heuristic set too broadly — rather than evidence of any real threat in the file.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A zero-day in the file would make the alert a true positive, not a false one.",
+      "C": "A supply chain attack on the vendor would be a serious compromise of the security product itself, far beyond one spurious alert.",
+      "D": "Incorrect file permissions would prevent access with a permissions error, not trigger an endpoint protection alert."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.474,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28483,21 +28535,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "The employee was compensated by a competitor, making financial gain the most likely motivation for stealing and delivering internal business files.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Revenge would mean acting out of grievance against the employer. Payment is what prompted this.",
+      "C": "Blackmail would mean the employee was coerced by a threat. They were compensated instead.",
+      "D": "Data exfiltration describes what was done — removing the data. The question asks why."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0677",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following outlines the configuration, maintenance, and security roles between a cloud service provider and the customer?",
     "choices": [
@@ -28521,12 +28577,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A responsibility matrix clearly defines and outlines the division of configuration, maintenance, and security roles between a cloud service provider and the customer.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The cloud responsibility matrix, often called the shared responsibility model, states exactly which configuration, maintenance and security duties belong to the provider and which remain the customer's for each service model.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A service-level agreement commits the provider to measurable performance such as uptime. It governs service quality, not who does what.",
+      "C": "A memorandum of understanding is a non-binding statement of intent between organisations.",
+      "D": "A non-disclosure agreement restricts disclosure of confidential information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28559,21 +28619,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "A deterrent security control is intended to discourage or discourage potential attackers from attempting unauthorized actions. Perimeter fencing visibly establishes a physical boundary around a facility and signals that the area is protected and monitored. This presence discourages unauthorized individuals from attempting to enter the property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Perimeter fencing is visible from outside and signals that the site is protected, which discourages an attacker from attempting entry in the first place. Discouraging the attempt is what makes a control deterrent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "NFC badging enforces who may pass through a door. It physically prevents entry, making it preventive.",
+      "C": "System patching removes vulnerabilities before they can be exploited, which is preventive.",
+      "D": "Log monitoring identifies activity after it has occurred, which is detective."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p284",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0680",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following non-production sites is an operational mirror of the primary data center and is ready for use if the primary data center experiences an outage?",
     "choices": [
@@ -28597,12 +28661,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A hot site is a fully operational mirror of the primary data center, maintained in real time and ready to take over operations immediately if the primary site experiences an outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hot site is a complete operational duplicate, kept synchronised and ready to take over immediately. Being a live mirror of the primary data centre is precisely what distinguishes it from the other options.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A warm site has hardware and connectivity but data must be restored at failover, so it is not a live mirror.",
+      "C": "A cold site has space and power only, with no systems in place.",
+      "D": "Frozen is not a recognised recovery site type."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p288",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28644,12 +28712,17 @@
       "A",
       "E"
     ],
-    "explanation": "A jump server restricts and controls administrative access to the database system, reducing the attack surface. A host-based firewall limits network connections directly to the database server, preventing unauthorized access and hardening the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hardening access means reducing who can connect and from where. A jump server funnels all administrative access through one controlled, logged host, and a host-based firewall on the database limits inbound connections to only the addresses and ports that are actually needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A NIDS detects suspicious network traffic and alerts. It observes rather than restricting access.",
+      "C": "Monitoring provides visibility into what is happening. Valuable, but it hardens nothing.",
+      "D": "A proxy server mediates outbound client requests. It does not control inbound access to a database.",
+      "F": "A WAF protects a web application from malicious HTTP requests. A database is not a web application."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28657,8 +28730,8 @@
   {
     "id": "q0682",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A few weeks after deploying additional email servers, a company begins to receive complaints from employees that messages they send are going into their recipients' spam folders.\nWhich of the following needs to be updated in order to resolve this issue?",
     "choices": [
@@ -28682,12 +28755,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "An SPF (Sender Policy Framework) record needs to be updated to include the new email servers, allowing recipient systems to verify the legitimacy of the sending servers and prevent outgoing emails from being marked as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The new servers are not listed in the domain's SPF record, so receiving systems cannot verify they are authorised to send for the domain and treat their mail as suspicious. Adding them to the SPF record resolves it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A CNAME is a DNS alias record. It affects name resolution, not sender authorisation.",
+      "B": "SMTP is the mail transport protocol itself. The servers are delivering mail fine; the problem is how it is judged on arrival.",
+      "C": "DLP inspects outbound content for sensitive data. It does not influence spam classification at the recipient."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28695,8 +28772,8 @@
   {
     "id": "q0683",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
     "question": "A company uses a cloud-based platform for file storage and wants to ensure the security of its data in transit.\nWhich of the following should the company verify are in place to secure this type of communication? (Choose two.)",
     "choices": [
@@ -28729,12 +28806,17 @@
       "A",
       "C"
     ],
-    "explanation": "TLS certificates enable secure, encrypted connections, while HTTPS ensures data in transit to and from the cloud storage is encrypted, protecting it from interception.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The question asks what to verify is in place for the communication itself. TLS certificates establish the encrypted, authenticated channel, and HTTPS is the protocol that carries the file traffic over that channel — together they secure the data in transit to the platform.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "WPA2 encrypts the wireless link only. It protects the first hop and nothing beyond the access point.",
+      "D": "A VPN would add another encrypted tunnel, but the question is about verifying the platform's own transport security rather than adding infrastructure.",
+      "E": "Encryption key management governs how keys are generated, stored and rotated. It supports encryption without being the transit control.",
+      "F": "Digital signatures prove origin and integrity. They do not keep content confidential in transit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.391,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28771,21 +28853,26 @@
     "correct": [
       "D"
     ],
-    "explanation": "Dynamic analysis evaluates the web application while it is running, directly exercising its authentication processes to uncover weaknesses such as credential bypasses or session- handling flaws that static code review or network scans may not reveal.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Authentication weaknesses show up in how the running application actually behaves — whether sessions can be fixed, tokens reused, or logic bypassed. Dynamic analysis exercises the live application, which is the only way to observe those flaws.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Static analysis reads source code without running it. It catches many defects but cannot test real authentication behaviour end to end.",
+      "B": "Packet capture records traffic. It shows what was exchanged without probing for weaknesses.",
+      "C": "Agent-based scanning inspects a host from the inside for missing patches and configuration issues. It does not test an application's authentication logic.",
+      "E": "Network-based scanning discovers hosts, ports and service versions. It operates below the application layer."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0686",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A systems administrator configures a new application. The next day, a security analyst reviews the logs and identifies multiple accounts that had been created overnight with administrative privileges and connections from different countries.\nWhich of the following solutions would have prevented this incident?",
     "choices": [
@@ -28809,21 +28896,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Changing the default credentials would have blocked unauthorized access to the application's administrative interface, preventing attackers from logging in overnight and creating privileged accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A brand-new application compromised overnight from multiple countries points at credentials that were already public — the vendor's documented defaults. Changing them before the application was reachable would have removed the only thing the attackers needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Input validation prevents injection attacks. The attackers logged in legitimately rather than injecting anything.",
+      "C": "A honeynet attracts and observes attackers. It adds visibility without protecting the real application.",
+      "D": "A WAF blocks malicious HTTP requests. A valid login with correct credentials is not malicious by any signature."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0687",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "An organization has been experiencing issues with deleted network share data and improperly assigned permissions.\nWhich of the following would best help track and remediate these issues?",
     "choices": [
@@ -28847,12 +28938,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "FIM continuously monitors files and their permissions on network shares, alerting when items are deleted or access rights are changed so administrators can quickly investigate and remediate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring watches files and their access control settings, raising an alert when something is deleted or when permissions change. That covers both symptoms — vanished data and wrongly assigned rights — and gives the trail needed to remediate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DLP inspects data leaving the organisation. Deletion and permission changes happen internally and never cross a boundary.",
+      "B": "EDR detects malicious activity on endpoints. An administrator misapplying permissions is not malicious behaviour.",
+      "D": "An ACL is the permission structure itself. It defines access rather than tracking who changed it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28885,12 +28980,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A service-level agreement (SLA) formally defines measurable performance targets - such as 97 % server and network uptime - that the provider commits to meet.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement states the measurable performance the provider commits to deliver, and uptime percentage is the classic SLA metric. A specific figure such as 97% is exactly what it exists to record.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A BPA sets out how two businesses will operate a partnership.",
+      "B": "An MOU is a non-binding statement of intent between parties, with no enforceable metrics.",
+      "C": "An NDA restricts disclosure of confidential information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p294",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28923,12 +29022,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "SCADA systems are industrial control environments designed to monitor and manage processes like the physical flow of gas in pipelines, so securing the SCADA environment protects the legacy platform that controls those operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legacy platform controlling the physical flow of gas through pipes is industrial process control. SCADA is the environment covering that supervisory control of physical industrial processes, and it is what must be secured.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IaaS is a cloud service model providing compute and storage. Pipeline control equipment is not a cloud workload.",
+      "C": "SDN manages network connectivity programmatically. It is a networking architecture.",
+      "D": "IoT covers networked embedded devices generally. The specific term for supervisory control of industrial processes is SCADA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p294",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28961,12 +29064,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Remediation priorities must align with the organization's overall risk tolerance - vulnerabilities whose residual risk exceeds that threshold receive the highest priority for corrective action.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Severity scores rank findings technically, but which of them actually demand action depends on how much risk the organisation is prepared to carry. Risk tolerance is the threshold that converts a scored list into a remediation priority.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The impact of reporting to executives is a communication concern. It should not shape which vulnerabilities get fixed.",
+      "C": "Open-source information can indicate active exploitation, which is useful input, but it does not set the threshold for action.",
+      "D": "The source of the report affects how much you trust it. Once verified, the finding stands on its own merits."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -28999,12 +29106,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The ban represents a government-imposed sanction; the general counsel must ensure the hardware refresh avoids any continued use or procurement of the sanctioned vendor's devices to remain legally compliant.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A government ban is a sanction, and continuing to buy or operate the sanctioned vendor's equipment would put the company in breach of it. That legal exposure is what general counsel is concerned with during the refresh.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data sovereignty concerns which country's laws govern stored data. The issue here is the vendor, not data location.",
+      "C": "Cost of replacement is a finance and procurement concern rather than a legal one.",
+      "D": "Loss of license would mean the company losing its own authorisation to operate. The ban is on the vendor."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29037,12 +29148,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The \"../../../etc/passwd\" and \"../../../etc/shadow\" path sequences attempt to climb directories and read sensitive files, indicating a directory traversal attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Repeated ../ sequences are an attempt to climb out of the web root and read arbitrary files, and the targets named are the Unix password and shadow files. Escaping the intended directory this way is directory traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "File injection would mean uploading or writing a malicious file. These requests are reading, not writing.",
+      "B": "Privilege escalation gains rights beyond those held. The request reads a file with whatever rights the web server already has.",
+      "D": "Cookie forgery manipulates session tokens to impersonate a user. No cookies appear in these requests."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29075,12 +29190,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Annualized loss expectancy is derived by multiplying the single loss expectancy by the annualized rate of occurrence (ARO), which expresses how often the loss is expected to occur in a year.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualised loss expectancy is single loss expectancy multiplied by the annualised rate of occurrence. With SLE already known, ARO is the missing term — how many times a year the loss is expected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "MTTR is the average time to repair a failed component. It is a maintenance metric, not a loss calculation input.",
+      "C": "An SLA is a contractual performance commitment.",
+      "D": "RTO is the maximum tolerable downtime. It is a recovery target rather than a frequency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p296",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.962,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29113,12 +29232,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Exposing high-value targets like SMB and RDP to the internet on an isolated VLAN is characteristic of a honeynet, allowing the security team to lure and observe attackers while keeping production systems protected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SMB and RDP are among the most attacked services on the internet, and nobody exposes them deliberately for production use. Placing them on an isolated VLAN where they can be reached and watched is a honeynet — bait built to attract attackers and study them safely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A file-sharing site would be published over HTTPS. Exposing raw SMB to the internet is never how that is done.",
+      "B": "Preparing for a penetration test does not require weakening the perimeter; testers work against the real configuration.",
+      "C": "A SASE integration moves security into the cloud and reduces direct inbound exposure rather than creating it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p296",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29151,12 +29274,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "An MDM platform can detect devices that have been jailbroken and enforce policies - such as blocking access or wiping the device - to prevent compromised, unsupported mobile operating systems from accessing organizational resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Jailbreaking removes the manufacturer's restrictions on a mobile device, giving privileged control and allowing unvetted software to run. MDM detects that state and can block the device from corporate resources or wipe it, which is why it mitigates this specific vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a hardware security chip, not a vulnerability.",
+      "B": "A buffer overflow is a memory-handling defect in program code. MDM does not alter how applications manage memory.",
+      "D": "SQL injection attacks a server-side database through application input. It has nothing to do with mobile device management."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29189,12 +29316,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Software deployed by users without formal review or approval is classified as shadow IT, since it operates outside the organization's sanctioned processes and controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A department deployed software on its own without the vetting the organisation requires. Technology adopted outside sanctioned processes and controls is shadow IT, and the risk is that nobody has assessed, patched or monitored it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Espionage is covert collection of information for advantage. The department was simply doing its work.",
+      "B": "Data exfiltration is the unauthorised removal of data. Nothing suggests data has left.",
+      "D": "A zero-day is a flaw with no available patch. The problem here is process, not an unknown vulnerability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29227,12 +29358,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "CYOD (Choose Your Own Device) allows employees to pick hardware from a company- approved catalog, aligning with the scenario of selecting a specific workstation make and model from a preapproved list.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Choose your own device lets employees pick hardware from a list the organisation has already approved, so the company retains control over what it must support and secure while giving the user some choice. Selecting from a preapproved catalogue is exactly that model.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "MDM is the management platform used to enforce policy on devices. It is a tool, not an ownership model.",
+      "C": "PED stands for personal electronic device. It describes a category of hardware rather than a deployment model.",
+      "D": "COPE means the company buys the device and permits personal use. The employee does not choose the model from a list."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -29265,12 +29400,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool overwrites every sector of the drive with new data, rendering the original information unrecoverable while leaving the hardware fully functional for reuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. Unrecoverable data plus reusable hardware is exactly what repurposing requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys the magnetic structure of the platters, which is thorough but renders the drive unusable.",
+      "B": "A drive shredder physically destroys the device, leaving nothing to repurpose.",
+      "C": "A retention platform stores data for a required period. It is a storage system, not a sanitisation method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

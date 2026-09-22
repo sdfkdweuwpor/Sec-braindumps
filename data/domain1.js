@@ -3811,12 +3811,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Escrow refers to a trusted third party securely holding a copy of the decryption key, allowing recovery of encrypted data if the original key is lost.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Escrow deposits a copy of the key with a trusted custodian who releases it under defined conditions. If the working key is lost, that escrowed copy is the only thing standing between the organisation and permanently unreadable data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A CSR is a certificate signing request submitted to obtain a certificate. It plays no part in recovery.",
+      "B": "Salting adds randomness before hashing passwords. It is unrelated to encryption key management.",
+      "C": "Root of trust is the trusted anchor a cryptographic system builds on. It establishes trust rather than recovering keys."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3849,12 +3853,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hashing generates a unique value for file contents, allowing technicians to verify file integrity by comparing hashes before and after transfer to ensure the file was not altered.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing produces a digest that changes entirely if any byte changes. Computing the hash before and after the transfer and comparing the two proves the file arrived exactly as it left.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Authentication proves identity. It confirms who sent the file, not that the contents are unchanged.",
+      "B": "Obfuscation makes content harder to interpret. It provides no verification.",
+      "D": "Encryption keeps the content confidential. Ciphertext can still be corrupted or altered in transit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p282",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3887,50 +3895,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A deterrent security control is intended to discourage or discourage potential attackers from attempting unauthorized actions. Perimeter fencing visibly establishes a physical boundary around a facility and signals that the area is protected and monitored. This presence discourages unauthorized individuals from attempting to enter the property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Perimeter fencing is visible from outside and signals that the site is protected, which discourages an attacker from attempting entry in the first place. Discouraging the attempt is what makes a control deterrent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "NFC badging enforces who may pass through a door. It physically prevents entry, making it preventive.",
+      "C": "System patching removes vulnerabilities before they can be exploited, which is preventive.",
+      "D": "Log monitoring identifies activity after it has occurred, which is detective."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p284",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0680",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "Which of the following non-production sites is an operational mirror of the primary data center and is ready for use if the primary data center experiences an outage?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hot"
-      },
-      {
-        "key": "B",
-        "text": "Warm"
-      },
-      {
-        "key": "C",
-        "text": "Cold"
-      },
-      {
-        "key": "D",
-        "text": "Frozen"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A hot site is a fully operational mirror of the primary data center, maintained in real time and ready to take over operations immediately if the primary site experiences an outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p288",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3963,12 +3937,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Exposing high-value targets like SMB and RDP to the internet on an isolated VLAN is characteristic of a honeynet, allowing the security team to lure and observe attackers while keeping production systems protected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SMB and RDP are among the most attacked services on the internet, and nobody exposes them deliberately for production use. Placing them on an isolated VLAN where they can be reached and watched is a honeynet — bait built to attract attackers and study them safely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A file-sharing site would be published over HTTPS. Exposing raw SMB to the internet is never how that is done.",
+      "B": "Preparing for a penetration test does not require weakening the perimeter; testers work against the real configuration.",
+      "C": "A SASE integration moves security into the cloud and reduces direct inbound exposure rather than creating it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p296",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

@@ -5587,12 +5587,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Memory injection refers to a technique where malware is loaded directly into the system's volatile memory (RAM) to execute malicious code without writing files to disk, making detection and persistence more difficult. This matches the scenario where the malware is now active in the computer's volatile storage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The malware is running in RAM rather than from a file on disk. Loading code directly into memory so it executes without leaving a file behind is memory injection, and it is used precisely because file-based scanning has nothing to examine.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A race condition exploits the timing gap between checking a value and using it. It is a logic flaw, not a residency technique.",
+      "B": "A zero-day exploit targets a flaw with no patch. That describes the vulnerability's status, not where the malware lives.",
+      "C": "A buffer overflow writes past an allocated memory region to corrupt memory or gain execution. It may be the way in, but the technique described is the in-memory residency."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5625,12 +5629,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape is an attack in which a malicious actor breaks out of the confines of a virtual machine to gain access to the underlying hypervisor or other virtual machines, matching the scenario described.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualisation vulnerability because the hypervisor controls every other guest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SQL injection manipulates database queries through application input. No database is involved.",
+      "C": "Privilege escalation gains higher rights within one system. VM escape crosses to a different system entirely, which is a stronger claim.",
+      "D": "A logic bomb is dormant code that triggers on a condition. It is a payload, not a boundary failure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p279",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5663,12 +5671,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Phishing involves sending large quantities of unsolicited messages to users in an attempt to trick them into revealing sensitive information or performing malicious actions. This aligns with users receiving many unsolicited emails.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hundreds of unsolicited messages sent to many users at once is a broad, untargeted campaign. Phishing is the general term for that mass fraudulent messaging aimed at whoever happens to respond.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering hole attack compromises a website the targets visit. No messages are sent at all.",
+      "B": "Typosquatting registers lookalike domains and waits for mistyped addresses.",
+      "C": "Business email compromise is narrowly targeted at individuals who can authorise payments, usually one carefully crafted message rather than hundreds."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5701,51 +5713,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Typosquatting involves registering domain names that are visually or typographically similar to legitimate sites to trick users into visiting the malicious site, matching the scenario described.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering hole attack compromises a genuine site the targets already visit rather than creating a new one.",
+      "B": "Brand impersonation mimics a company's name and styling. It often accompanies typosquatting, but the question is about the domain registration.",
+      "C": "Phishing is the fraudulent message that might carry the link. Here the lookalike domain is what has been created."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p281",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0675",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A security analyst is investigating an alert that was produced by endpoint protection software.\nThe analyst determines this event was a false positive triggered by an employee who attempted to download a file.\nWhich of the following is the most likely reason the download was blocked?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "A misconfiguration in the endpoint protection software"
-      },
-      {
-        "key": "B",
-        "text": "A zero-day vulnerability in the file"
-      },
-      {
-        "key": "C",
-        "text": "A supply chain attack on the endpoint protection vendor"
-      },
-      {
-        "key": "D",
-        "text": "Incorrect file permissions"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A misconfiguration in the endpoint protection software can lead to false positives, causing legitimate files to be incorrectly flagged and blocked during download.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
-    "inferenceConfidence": 0.474,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5777,89 +5755,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The employee was compensated by a competitor, making financial gain the most likely motivation for stealing and delivering internal business files.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Revenge would mean acting out of grievance against the employer. Payment is what prompted this.",
+      "C": "Blackmail would mean the employee was coerced by a threat. They were compensated instead.",
+      "D": "Data exfiltration describes what was done — removing the data. The question asks why."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p283",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0686",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A systems administrator configures a new application. The next day, a security analyst reviews the logs and identifies multiple accounts that had been created overnight with administrative privileges and connections from different countries.\nWhich of the following solutions would have prevented this incident?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Applying input validation"
-      },
-      {
-        "key": "B",
-        "text": "Changing the default credentials"
-      },
-      {
-        "key": "C",
-        "text": "Installing a honeynet"
-      },
-      {
-        "key": "D",
-        "text": "Deploying a WAF"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Changing the default credentials would have blocked unauthorized access to the application's administrative interface, preventing attackers from logging in overnight and creating privileged accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0687",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "An organization has been experiencing issues with deleted network share data and improperly assigned permissions.\nWhich of the following would best help track and remediate these issues?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "DLP"
-      },
-      {
-        "key": "B",
-        "text": "EDR"
-      },
-      {
-        "key": "C",
-        "text": "FIM"
-      },
-      {
-        "key": "D",
-        "text": "ACL"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "FIM continuously monitors files and their permissions on network shares, alerting when items are deleted or access rights are changed so administrators can quickly investigate and remediate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5891,12 +5797,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The \"../../../etc/passwd\" and \"../../../etc/shadow\" path sequences attempt to climb directories and read sensitive files, indicating a directory traversal attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Repeated ../ sequences are an attempt to climb out of the web root and read arbitrary files, and the targets named are the Unix password and shadow files. Escaping the intended directory this way is directory traversal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "File injection would mean uploading or writing a malicious file. These requests are reading, not writing.",
+      "B": "Privilege escalation gains rights beyond those held. The request reads a file with whatever rights the web server already has.",
+      "D": "Cookie forgery manipulates session tokens to impersonate a user. No cookies appear in these requests."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5929,12 +5839,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An MDM platform can detect devices that have been jailbroken and enforce policies - such as blocking access or wiping the device - to prevent compromised, unsupported mobile operating systems from accessing organizational resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Jailbreaking removes the manufacturer's restrictions on a mobile device, giving privileged control and allowing unvetted software to run. MDM detects that state and can block the device from corporate resources or wipe it, which is why it mitigates this specific vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a hardware security chip, not a vulnerability.",
+      "B": "A buffer overflow is a memory-handling defect in program code. MDM does not alter how applications manage memory.",
+      "D": "SQL injection attacks a server-side database through application input. It has nothing to do with mobile device management."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5967,12 +5881,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Software deployed by users without formal review or approval is classified as shadow IT, since it operates outside the organization's sanctioned processes and controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A department deployed software on its own without the vetting the organisation requires. Technology adopted outside sanctioned processes and controls is shadow IT, and the risk is that nobody has assessed, patched or monitored it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Espionage is covert collection of information for advantage. The department was simply doing its work.",
+      "B": "Data exfiltration is the unauthorised removal of data. Nothing suggests data has left.",
+      "D": "A zero-day is a flaw with no available patch. The problem here is process, not an unknown vulnerability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false

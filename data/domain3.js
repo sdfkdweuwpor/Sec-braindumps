@@ -5002,6 +5002,90 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0677",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following outlines the configuration, maintenance, and security roles between a cloud service provider and the customer?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Service-level agreement"
+      },
+      {
+        "key": "B",
+        "text": "Responsibility matrix"
+      },
+      {
+        "key": "C",
+        "text": "Memorandum of understanding"
+      },
+      {
+        "key": "D",
+        "text": "Non-disclosure agreement"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The cloud responsibility matrix, often called the shared responsibility model, states exactly which configuration, maintenance and security duties belong to the provider and which remain the customer's for each service model.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A service-level agreement commits the provider to measurable performance such as uptime. It governs service quality, not who does what.",
+      "C": "A memorandum of understanding is a non-binding statement of intent between organisations.",
+      "D": "A non-disclosure agreement restricts disclosure of confidential information."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p283",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0680",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following non-production sites is an operational mirror of the primary data center and is ready for use if the primary data center experiences an outage?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Hot"
+      },
+      {
+        "key": "B",
+        "text": "Warm"
+      },
+      {
+        "key": "C",
+        "text": "Cold"
+      },
+      {
+        "key": "D",
+        "text": "Frozen"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A hot site is a complete operational duplicate, kept synchronised and ready to take over immediately. Being a live mirror of the primary data centre is precisely what distinguishes it from the other options.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A warm site has hardware and connectivity but data must be restored at failover, so it is not a live mirror.",
+      "C": "A cold site has space and power only, with no systems in place.",
+      "D": "Frozen is not a recognised recovery site type."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p288",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0681",
     "domain": 3,
     "objective": "3.2",
@@ -5038,12 +5122,17 @@ export const domain3Questions = [
       "A",
       "E"
     ],
-    "explanation": "A jump server restricts and controls administrative access to the database system, reducing the attack surface. A host-based firewall limits network connections directly to the database server, preventing unauthorized access and hardening the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hardening access means reducing who can connect and from where. A jump server funnels all administrative access through one controlled, logged host, and a host-based firewall on the database limits inbound connections to only the addresses and ports that are actually needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A NIDS detects suspicious network traffic and alerts. It observes rather than restricting access.",
+      "C": "Monitoring provides visibility into what is happening. Valuable, but it hardens nothing.",
+      "D": "A proxy server mediates outbound client requests. It does not control inbound access to a database.",
+      "F": "A WAF protects a web application from malicious HTTP requests. A database is not a web application."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5051,8 +5140,8 @@ export const domain3Questions = [
   {
     "id": "q0683",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "multi",
     "question": "A company uses a cloud-based platform for file storage and wants to ensure the security of its data in transit.\nWhich of the following should the company verify are in place to secure this type of communication? (Choose two.)",
     "choices": [
@@ -5085,12 +5174,17 @@ export const domain3Questions = [
       "A",
       "C"
     ],
-    "explanation": "TLS certificates enable secure, encrypted connections, while HTTPS ensures data in transit to and from the cloud storage is encrypted, protecting it from interception.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The question asks what to verify is in place for the communication itself. TLS certificates establish the encrypted, authenticated channel, and HTTPS is the protocol that carries the file traffic over that channel — together they secure the data in transit to the platform.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "WPA2 encrypts the wireless link only. It protects the first hop and nothing beyond the access point.",
+      "D": "A VPN would add another encrypted tunnel, but the question is about verifying the platform's own transport security rather than adding infrastructure.",
+      "E": "Encryption key management governs how keys are generated, stored and rotated. It supports encryption without being the transit control.",
+      "F": "Digital signatures prove origin and integrity. They do not keep content confidential in transit."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.391,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5123,12 +5217,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SCADA systems are industrial control environments designed to monitor and manage processes like the physical flow of gas in pipelines, so securing the SCADA environment protects the legacy platform that controls those operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legacy platform controlling the physical flow of gas through pipes is industrial process control. SCADA is the environment covering that supervisory control of physical industrial processes, and it is what must be secured.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IaaS is a cloud service model providing compute and storage. Pipeline control equipment is not a cloud workload.",
+      "C": "SDN manages network connectivity programmatically. It is a networking architecture.",
+      "D": "IoT covers networked embedded devices generally. The specific term for supervisory control of industrial processes is SCADA."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p294",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false

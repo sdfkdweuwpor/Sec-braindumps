@@ -8857,48 +8857,10 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0663",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "At the start of a penetration test, the tester checks OSINT resources for information about the client environment.\nWhich of the following types of reconnaissance is the tester performing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Active"
-      },
-      {
-        "key": "B",
-        "text": "Passive"
-      },
-      {
-        "key": "C",
-        "text": "Offensive"
-      },
-      {
-        "key": "D",
-        "text": "Defensive"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Passive reconnaissance involves gathering information from publicly available sources, such as OSINT resources, without directly interacting with the target environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p278",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0669",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A company's antivirus solution is effective in blocking malware but often has false positives. The security team has spent a significant amount of time on investigations but cannot determine a root cause. The company is looking for a heuristic solution.\nWhich of the following should replace the antivirus solution?",
     "choices": [
@@ -8922,12 +8884,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "EDR (Endpoint Detection and Response) uses advanced heuristic and behavioral analysis to detect, investigate, and respond to threats, reducing false positives and providing deeper insight than traditional antivirus.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Signature-based antivirus matches known patterns, which is why it produces noise it cannot explain. EDR uses behavioural and heuristic analysis and records the full process chain, so it both reduces false positives and gives the team the context to determine root cause.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs from many sources. It would help investigations but replaces no endpoint protection.",
+      "C": "DLP watches for sensitive data leaving the organisation. It addresses a different problem entirely.",
+      "D": "An IDS detects suspicious network traffic. It sits on the network rather than the endpoint and would not replace antivirus."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p280",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8960,21 +8926,67 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Packet capture provides a detailed record of network traffic, allowing analysts to inspect the actual contents of communications to determine if sensitive data was exfiltrated to a command- and-control server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Determining whether data actually left requires seeing what was sent, not just that a connection existed. A packet capture records the payload itself, so the analyst can identify the content and volume of anything that went to the command-and-control server.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record activity inside a business application. Malware communicating out does not pass through it.",
+      "B": "Metadata describes files and communications. It is descriptive rather than a record of transmitted content.",
+      "C": "Network logs show which hosts communicated, when and how much. That reveals the connection but not what was in it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p282",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0675",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "A security analyst is investigating an alert that was produced by endpoint protection software.\nThe analyst determines this event was a false positive triggered by an employee who attempted to download a file.\nWhich of the following is the most likely reason the download was blocked?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A misconfiguration in the endpoint protection software"
+      },
+      {
+        "key": "B",
+        "text": "A zero-day vulnerability in the file"
+      },
+      {
+        "key": "C",
+        "text": "A supply chain attack on the endpoint protection vendor"
+      },
+      {
+        "key": "D",
+        "text": "Incorrect file permissions"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A false positive means the software flagged something harmless. That is a tuning and configuration problem — a rule or heuristic set too broadly — rather than evidence of any real threat in the file.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A zero-day in the file would make the alert a true positive, not a false one.",
+      "C": "A supply chain attack on the vendor would be a serious compromise of the security product itself, far beyond one spurious alert.",
+      "D": "Incorrect file permissions would prevent access with a permissions error, not trigger an endpoint protection alert."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p283",
+    "needsReview": false,
+    "inferenceConfidence": 0.474,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0682",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A few weeks after deploying additional email servers, a company begins to receive complaints from employees that messages they send are going into their recipients' spam folders.\nWhich of the following needs to be updated in order to resolve this issue?",
     "choices": [
@@ -8998,12 +9010,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An SPF (Sender Policy Framework) record needs to be updated to include the new email servers, allowing recipient systems to verify the legitimacy of the sending servers and prevent outgoing emails from being marked as spam.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The new servers are not listed in the domain's SPF record, so receiving systems cannot verify they are authorised to send for the domain and treat their mail as suspicious. Adding them to the SPF record resolves it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A CNAME is a DNS alias record. It affects name resolution, not sender authorisation.",
+      "B": "SMTP is the mail transport protocol itself. The servers are delivering mail fine; the problem is how it is judged on arrival.",
+      "C": "DLP inspects outbound content for sensitive data. It does not influence spam classification at the recipient."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p289",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9040,13 +9056,102 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Dynamic analysis evaluates the web application while it is running, directly exercising its authentication processes to uncover weaknesses such as credential bypasses or session- handling flaws that static code review or network scans may not reveal.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Authentication weaknesses show up in how the running application actually behaves — whether sessions can be fixed, tokens reused, or logic bypassed. Dynamic analysis exercises the live application, which is the only way to observe those flaws.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Static analysis reads source code without running it. It catches many defects but cannot test real authentication behaviour end to end.",
+      "B": "Packet capture records traffic. It shows what was exchanged without probing for weaknesses.",
+      "C": "Agent-based scanning inspects a host from the inside for missing patches and configuration issues. It does not test an application's authentication logic.",
+      "E": "Network-based scanning discovers hosts, ports and service versions. It operates below the application layer."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p293",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0686",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A systems administrator configures a new application. The next day, a security analyst reviews the logs and identifies multiple accounts that had been created overnight with administrative privileges and connections from different countries.\nWhich of the following solutions would have prevented this incident?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Applying input validation"
+      },
+      {
+        "key": "B",
+        "text": "Changing the default credentials"
+      },
+      {
+        "key": "C",
+        "text": "Installing a honeynet"
+      },
+      {
+        "key": "D",
+        "text": "Deploying a WAF"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A brand-new application compromised overnight from multiple countries points at credentials that were already public — the vendor's documented defaults. Changing them before the application was reachable would have removed the only thing the attackers needed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Input validation prevents injection attacks. The attackers logged in legitimately rather than injecting anything.",
+      "C": "A honeynet attracts and observes attackers. It adds visibility without protecting the real application.",
+      "D": "A WAF blocks malicious HTTP requests. A valid login with correct credentials is not malicious by any signature."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p293",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0687",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An organization has been experiencing issues with deleted network share data and improperly assigned permissions.\nWhich of the following would best help track and remediate these issues?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "DLP"
+      },
+      {
+        "key": "B",
+        "text": "EDR"
+      },
+      {
+        "key": "C",
+        "text": "FIM"
+      },
+      {
+        "key": "D",
+        "text": "ACL"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "File integrity monitoring watches files and their access control settings, raising an alert when something is deleted or when permissions change. That covers both symptoms — vanished data and wrongly assigned rights — and gives the trail needed to remediate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "DLP inspects data leaving the organisation. Deletion and permission changes happen internally and never cross a boundary.",
+      "B": "EDR detects malicious activity on endpoints. An administrator misapplying permissions is not malicious behaviour.",
+      "D": "An ACL is the permission structure itself. It defines access rather than tracking who changed it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p293",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9078,12 +9183,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Remediation priorities must align with the organization's overall risk tolerance - vulnerabilities whose residual risk exceeds that threshold receive the highest priority for corrective action.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Severity scores rank findings technically, but which of them actually demand action depends on how much risk the organisation is prepared to carry. Risk tolerance is the threshold that converts a scored list into a remediation priority.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The impact of reporting to executives is a communication concern. It should not shape which vulnerabilities get fixed.",
+      "C": "Open-source information can indicate active exploitation, which is useful input, but it does not set the threshold for action.",
+      "D": "The source of the report affects how much you trust it. Once verified, the finding stands on its own merits."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p295",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9116,12 +9225,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CYOD (Choose Your Own Device) allows employees to pick hardware from a company- approved catalog, aligning with the scenario of selecting a specific workstation make and model from a preapproved list.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Choose your own device lets employees pick hardware from a list the organisation has already approved, so the company retains control over what it must support and secure while giving the user some choice. Selecting from a preapproved catalogue is exactly that model.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "MDM is the management platform used to enforce policy on devices. It is a tool, not an ownership model.",
+      "C": "PED stands for personal electronic device. It describes a category of hardware rather than a deployment model.",
+      "D": "COPE means the company buys the device and permits personal use. The employee does not choose the model from a list."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p297",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -9154,12 +9267,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A wipe tool overwrites every sector of the drive with new data, rendering the original information unrecoverable while leaving the hardware fully functional for reuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. Unrecoverable data plus reusable hardware is exactly what repurposing requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys the magnetic structure of the platters, which is thorough but renders the drive unusable.",
+      "B": "A drive shredder physically destroys the device, leaving nothing to repurpose.",
+      "C": "A retention platform stores data for a required period. It is a storage system, not a sanitisation method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p298",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
