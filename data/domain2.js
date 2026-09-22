@@ -1898,12 +1898,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data exfiltration refers to the unauthorized transfer of sensitive data from a company's systems to an external location, often by a malicious actor. In this case, the VPN logs indicate that a user is accessing the company file server and transferring information to a suspicious IP address during non-working hours. This behavior strongly suggests that sensitive data is being stolen or transferred without authorization, which is the essence of data exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Company data is being copied from an internal file server out to an unfamiliar external address, outside normal hours to avoid notice. Unauthorised transfer of data out of the organisation is data exfiltration, whatever the attacker's ultimate purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting registers look-alike domains to catch users who mistype an address. Nothing here involves a user visiting a fake site.",
+      "B": "Root of trust is the trusted anchor a cryptographic system is built on. It is a PKI concept, not a threat.",
+      "D": "Blackmail coerces a victim with a threat. No demand has been made — data is simply leaving."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1936,12 +1940,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Business email compromise (BEC) is a type of attack in which a hacker impersonates an executive, business partner, or trusted entity within the company (often via email) to trick employees into performing unauthorized financial transactions, such as wire transfers. In this case, the attacker uses a fraudulent message from what appears to be the company's bank, urgently requesting a wire transfer, which is a hallmark of a BEC attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Business email compromise uses a trusted-looking sender and manufactured urgency to trigger a fraudulent payment. The combination of a message appearing to come from the bank's domain, the accounting department as target, and a rushed wire transfer is the standard shape of BEC.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Vishing is voice phishing conducted over the phone. This arrived as an email message.",
+      "C": "Spear phishing is targeted phishing, usually to harvest credentials or deliver malware. BEC is the specific variant aimed at fraudulent financial transfers.",
+      "D": "Impersonation is the technique being used within the attack. The question asks for the attack, and BEC is the precise name for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p117",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1949,8 +1957,8 @@ export const domain2Questions = [
   {
     "id": "q0261",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "An analyst is reviewing job postings to ensure sensitive company information is not being shared with the general public.\nWhich of the following is the analyst most likely looking for?",
     "choices": [
@@ -1974,12 +1982,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When reviewing job postings, an analyst would be most concerned with software versions being shared, as this can potentially expose vulnerabilities in the company's systems. If the version of software being used by the company is disclosed, attackers could target known vulnerabilities in those specific versions. Therefore, job postings should not contain such sensitive details.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Job adverts often list the exact products and versions a team runs, which hands an attacker a target list without any scanning. Knowing a specific version lets them look up its known vulnerabilities directly, so software versions are what the analyst is watching for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Office addresses are usually public anyway and appear on the company's own website.",
+      "C": "A list of board members is typically published in corporate filings and investor material.",
+      "D": "Government identification numbers would never appear in a job posting, and an analyst reviewing recruitment content is not looking for personal identifiers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1987,8 +1999,8 @@ export const domain2Questions = [
   {
     "id": "q0262",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "An engineer has ensured that the switches are using the latest OS, the servers have the latest patches, and the endpoints' definitions are up to date.\nWhich of the following will these actions most effectively prevent?",
     "choices": [
@@ -2012,12 +2024,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "By ensuring that switches are using the latest OS, servers have the latest patches, and endpoints' definitions are up to date, the engineer is most effectively protecting against known exploits. Exploits are typically vulnerabilities in software or systems that attackers use to gain unauthorized access or control. Patching systems and updating definitions helps close these known vulnerabilities, making it more difficult for attackers to exploit them.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Patches, OS updates and current definitions all address flaws that are already public and catalogued. Keeping them current closes the vulnerabilities attackers most commonly reuse, so known exploits are what these actions prevent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Zero-day attacks target flaws with no patch available. By definition no update exists yet, so patching cannot prevent them.",
+      "B": "Insider threats come from people with legitimate access. Patching changes nothing about what an authorised user can do.",
+      "C": "End-of-life support is a product lifecycle status. Applying updates does not extend a vendor's support commitment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2050,89 +2066,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "MAC filtering tells the switch which hardware addresses a port may accept, so an unknown laptop plugged into the phone's port is refused network access outright. Stopping the device joining is what prevents it scanning for anything.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Segmentation limits where a connected device can reach. It contains the damage but the unauthorised laptop is still on the network and still scanning its segment.",
+      "C": "Certification is a compliance or attestation concept. It provides no technical enforcement at a switch port.",
+      "D": "Isolation confines a system away from others. Like segmentation it reduces reach rather than denying the connection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0267",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "Which of the following should a systems administrator use to decrease the company's hardware attack surface?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Replication"
-      },
-      {
-        "key": "B",
-        "text": "Isolation"
-      },
-      {
-        "key": "C",
-        "text": "Centralization"
-      },
-      {
-        "key": "D",
-        "text": "Virtualization"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0270",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "A security manager wants to reduce the number of steps required to identify and contain basic threats.\nWhich of the following will help achieve this goal?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "SOAR"
-      },
-      {
-        "key": "B",
-        "text": "SIEM"
-      },
-      {
-        "key": "C",
-        "text": "DMARC"
-      },
-      {
-        "key": "D",
-        "text": "NIDS"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "SOAR (Security Orchestration, Automation, and Response) is designed to automate and streamline security operations, including threat identification and containment. SOAR platforms integrate with existing security tools to automate repetitive tasks, facilitate faster decision- making, and reduce the number of manual steps required to respond to basic threats. This helps improve response times and operational efficiency by orchestrating workflows and automating incident handling.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2164,12 +2108,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Patching is the most effective way to address operating system vulnerabilities once they are identified. Patches are updates released by software vendors to fix known vulnerabilities, including security holes, bugs, or other issues that could be exploited by attackers. Applying patches promptly ensures that vulnerabilities are mitigated, reducing the risk of an attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for the specific defect. Applying it removes the vulnerability rather than making it harder to reach, which is why patching is the definitive remediation once an OS flaw is identified.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint protection detects and blocks malicious activity. It may stop an exploit attempt while leaving the underlying flaw in place.",
+      "B": "Removing unnecessary software reduces the attack surface generally. It does not fix a vulnerability in software you still need.",
+      "C": "Configuration enforcement keeps settings at a known-good baseline. Useful hardening, but a correctly configured system can still be vulnerable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p122",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2177,8 +2125,8 @@ export const domain2Questions = [
   {
     "id": "q0277",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following is an example of memory injection?",
     "choices": [
@@ -2202,89 +2150,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Memory injection is a type of attack where malicious code is injected into the memory space of an already running process. This allows the attacker to control or manipulate the process's behavior by executing the injected code. This technique is commonly used in exploits such as code injection attacks, where the attacker injects malicious code into a process's memory, causing it to execute and perform malicious actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Memory injection writes attacker code into the address space of a process that is already running, then causes it to execute. Because the code never touches disk and runs under a legitimate process, it evades file-based detection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Two processes racing over the same variable describes a race condition or TOC/TOU flaw.",
+      "B": "A process receiving more data than expected and executing code describes a buffer overflow.",
+      "D": "Overwriting an executable on disk so malicious code runs next time describes file infection or a malicious update — the opposite of an in-memory technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0279",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to perform before allowing access to corporate resources?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Device fingerprinting"
-      },
-      {
-        "key": "B",
-        "text": "Compliance attestation"
-      },
-      {
-        "key": "C",
-        "text": "Penetration test"
-      },
-      {
-        "key": "D",
-        "text": "Application vulnerability test"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Before allowing guest devices to access corporate resources, the security team should perform compliance attestation. This involves ensuring that the guest devices meet specific security and configuration requirements, such as up-to-date antivirus software, the latest security patches, and proper configurations. Compliance attestation helps verify that the devices are safe to connect to the corporate network and reduces the risk of introducing vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
-    "inferenceConfidence": 0.167,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0281",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise.\nWhich of the following documents would be most relevant to revise as part of this process?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "SDLC"
-      },
-      {
-        "key": "B",
-        "text": "IRP"
-      },
-      {
-        "key": "C",
-        "text": "BCP"
-      },
-      {
-        "key": "D",
-        "text": "AUP"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "An Incident Response Plan (IRP) is the most relevant document to revise when developing procedures for detective and corrective activities related to common threats such as phishing, social engineering, and business email compromise. The IRP outlines the steps to be taken when a security incident occurs, including detection, containment, eradication, and recovery. It ensures that the organization is prepared to respond to and mitigate the effects of these types of threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p126",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2316,12 +2192,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Side loading refers to the process of installing applications on a device through means other than the official application store (such as downloading apps from third-party sources). This can introduce security risks because apps from unofficial sources may not undergo the same vetting process as those from the official app store, potentially allowing malicious software to be installed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading installs an application from a source other than the official store, bypassing the vetting and signing checks that store normally applies. The app arrives unreviewed, which is what makes it a vulnerability class in its own right.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script into a web page to run in another user's browser. It is a web application flaw.",
+      "B": "A buffer overflow writes past an allocated memory region to corrupt memory or execute code. It exploits a program, not an install path.",
+      "C": "Jailbreaking removes the manufacturer's restrictions on the device itself. It is related and often enables side loading, but the act of installing from outside the store is side loading specifically."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false

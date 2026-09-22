@@ -3448,6 +3448,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0257",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A network engineer is increasing the overall security of network devices and needs to harden the devices.\nWhich of the following will best accomplish this task?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configuring centralized logging"
+      },
+      {
+        "key": "B",
+        "text": "Generating local administrator accounts"
+      },
+      {
+        "key": "C",
+        "text": "Replacing Telnet with SSH"
+      },
+      {
+        "key": "D",
+        "text": "Enabling HTTP administration"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Telnet carries credentials and session data in plaintext, so anyone able to observe the traffic can take over device management. Replacing it with SSH encrypts and authenticates the session, and removing the insecure protocol is a core hardening step for network devices.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Centralised logging improves visibility and investigation. It is valuable but detective — it records attacks rather than making the device harder to attack.",
+      "B": "Generating local administrator accounts adds more credentials to manage and more ways in. Hardening reduces accounts rather than creating them.",
+      "D": "Enabling HTTP administration adds another plaintext management interface, which increases the attack surface instead of shrinking it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p116",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0260",
     "domain": 4,
     "objective": "4.2",
@@ -3475,12 +3517,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data retention refers to the period of time that data must be kept by an organization. Local and international regulations (such as GDPR, HIPAA, or other data protection laws) often define how long specific types of data must be retained for legal, regulatory, or business purposes. These regulations can directly impact how long data should be stored and when it must be deleted or anonymized.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Regulations routinely specify how long particular records must be kept — tax data for years, health records for decades, personal data no longer than necessary. Retention is therefore the life-cycle stage most directly dictated by local and international law.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Destruction is governed by retention rules rather than being regulated on its own. Laws say when data must go, and destruction carries that out.",
+      "B": "Certification is the proof that disposal happened, typically a certificate of destruction from a vendor. It is evidence, not a regulated duration.",
+      "D": "Sanitisation is a technical method for rendering data unrecoverable. Standards describe how to do it; regulations mostly govern when."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3513,14 +3559,60 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A phone the employee already owns supplies all three factors at no cost: the app's one-time code is something you have, facial recognition is something you are, and the device unlock or account password is something you know. No third-party licence or dedicated hardware is required.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A smart card with PIN and password covers only something you have and something you know, and it needs cards and readers purchased and issued.",
+      "B": "Security questions and an emailed code are both weak variations on something you know, and email is not a reliable possession factor.",
+      "C": "Voice and fingerprint are two instances of something you are, and SMS requires carrier delivery and is vulnerable to SIM swapping."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0270",
+    "domain": 4,
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "type": "single",
+    "question": "A security manager wants to reduce the number of steps required to identify and contain basic threats.\nWhich of the following will help achieve this goal?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "SOAR"
+      },
+      {
+        "key": "B",
+        "text": "SIEM"
+      },
+      {
+        "key": "C",
+        "text": "DMARC"
+      },
+      {
+        "key": "D",
+        "text": "NIDS"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "SOAR strings tool actions together into automated playbooks, so a recognised basic threat can be enriched, triaged and contained without an analyst performing each step manually. Reducing the number of human steps is exactly what it is built for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A SIEM aggregates logs and raises alerts. It tells the analyst what is happening; the responding steps remain manual.",
+      "C": "DMARC is an email authentication policy that reduces spoofing of your domain. It addresses one threat and automates no response.",
+      "D": "A NIDS detects suspicious network activity and alerts. Detection without action again leaves every containment step to a person."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p121",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -3551,13 +3643,59 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "MDM (Mobile Device Management) is the best solution in this scenario. MDM allows IT teams to manage, configure, and secure mobile devices remotely. It can be used to ensure that company-provided tablets are properly configured, with all necessary features and updates, and to resolve issues such as missing features or software inconsistencies. Additionally, MDM can help enforce company policies, deploy apps, and track device compliance, making it an efficient way to address the problem within the 48-hour time frame.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management pushes configuration, applications and settings to enrolled devices centrally. Missing features across a fleet of company tablets can be corrected in one policy change and delivered within hours, without touching each device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detects and responds to malicious activity on endpoints. It is a security monitoring tool with no configuration-deployment role.",
+      "B": "COPE is a device ownership model describing who owns the hardware. It is a policy choice, not a tool that fixes anything.",
+      "D": "FDE encrypts the storage on a device. It protects data and does nothing about missing features."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p123",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0274",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A company is implementing a policy to allow employees to use their personal equipment for work. However, the company wants to ensure that only company-approved applications can be installed.\nWhich of the following addresses this concern?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "MDM"
+      },
+      {
+        "key": "B",
+        "text": "Containerization"
+      },
+      {
+        "key": "C",
+        "text": "DLP"
+      },
+      {
+        "key": "D",
+        "text": "FIM"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Mobile device management enrols the personal device under policy and can enforce an application allow list, blocking anything not approved. It is the control layer that lets a BYOD programme dictate what may be installed on hardware the company does not own.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Containerisation separates work data from personal data on the device. It protects corporate data but does not govern which applications the user installs.",
+      "C": "DLP watches for sensitive data leaving the organisation. It monitors data movement, not software installation.",
+      "D": "FIM alerts when protected files change. It watches integrity on servers and workstations rather than controlling app installs."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p123",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3589,13 +3727,101 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A privileged access management (PAM) solution is the best strategy to prevent the threat actor from using domain administrator accounts in a pass-the-hash attack. PAM solutions are designed to secure, control, and monitor the access to critical accounts (like domain administrator accounts) by enforcing least privilege access, ensuring strong authentication methods, and reducing the exposure of credentials. These solutions often include features such as vaulting and rotating privileged credentials, which mitigate the risk of pass-the-hash attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Pass the hash works because a reusable credential for a privileged account sits in memory on machines the administrator logs into. Privileged access management brokers those sessions and issues short-lived or vaulted credentials, so there is no durable hash worth stealing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Weekly password compliance audits check that passwords meet standards. The attack never needs the password, only its hash.",
+      "C": "IDS policies monitoring domain controller access detect the attack after it succeeds. Detection is not prevention.",
+      "D": "Password expiration forces periodic changes. A stolen hash is used immediately, long before any expiry window matters."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p124",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.52,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0279",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to perform before allowing access to corporate resources?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Device fingerprinting"
+      },
+      {
+        "key": "B",
+        "text": "Compliance attestation"
+      },
+      {
+        "key": "C",
+        "text": "Penetration test"
+      },
+      {
+        "key": "D",
+        "text": "Application vulnerability test"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A quarantine subnet exists so a device can be checked before it is trusted. Compliance attestation is that check — confirming patch level, antivirus state and configuration meet policy — and passing it is what justifies releasing the device onto the corporate network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Device fingerprinting identifies what a device is. Knowing it is a Windows laptop says nothing about whether it is safely configured.",
+      "C": "A penetration test assesses whether a system can be breached. Running one against every guest device is neither practical nor relevant.",
+      "D": "An application vulnerability test examines software for flaws. It is a development and assessment activity, not a network admission check."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p125",
+    "needsReview": false,
+    "inferenceConfidence": 0.167,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0281",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise.\nWhich of the following documents would be most relevant to revise as part of this process?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "SDLC"
+      },
+      {
+        "key": "B",
+        "text": "IRP"
+      },
+      {
+        "key": "C",
+        "text": "BCP"
+      },
+      {
+        "key": "D",
+        "text": "AUP"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Detective and corrective activities for phishing, social engineering and business email compromise are all incident handling steps. The incident response plan is the document that defines how such events are detected, triaged, contained and recovered from, so that is what needs revising.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The SDLC governs how software is designed, built and released. These threats target people and email, not the development process.",
+      "C": "A business continuity plan keeps the organisation operating through major disruption. It addresses availability rather than detecting and correcting phishing.",
+      "D": "An acceptable use policy tells staff what conduct is permitted. It is preventive guidance, not a procedure for responding to an incident."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p126",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3627,51 +3853,59 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "User provisioning automates the creation, modification and removal of accounts and their entitlements from an authoritative source. Updating permissions across a large number of accounts is exactly the bulk, rule-driven work it exists to handle.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Security groups are the mechanism permissions are usually attached to. They make the change simpler but something still has to apply it at scale.",
+      "B": "Federation lets identities be trusted across organisations. It handles authentication between domains, not bulk permission changes.",
+      "D": "Vertical scaling adds resources to an existing system. It is a capacity concept with no bearing on account administration."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p127",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0284",
+    "id": "q0285",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations?",
+    "question": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore offices.\nWhich of the following is this an example of?",
     "choices": [
       {
         "key": "A",
-        "text": "Attestation report"
+        "text": "Tabletop exercise"
       },
       {
         "key": "B",
-        "text": "Third-party audit"
+        "text": "Penetration test"
       },
       {
         "key": "C",
-        "text": "Vulnerability assessment"
+        "text": "Geographic dispersion"
       },
       {
         "key": "D",
-        "text": "Penetration testing"
+        "text": "Incident response"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "An attestation report is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations. An attestation report is a document provided by the third party (or a third-party auditor) that confirms their adherence to specific security frameworks, policies, or regulatory standards. This report is often based on industry standards such as SOC 2, ISO 27001, or similar certifications, and provides assurance without the need for an in-depth audit or testing process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Stakeholders sitting down to talk through their roles in a hypothetical breach is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing coordination and finding gaps in the plan before a genuine incident.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A penetration test actively attacks systems to find weaknesses. It is technical and hands-on.",
+      "C": "Geographic dispersion spreads infrastructure across locations for resilience. The offshore offices are the subject of the discussion, not the concept being demonstrated.",
+      "D": "Incident response is the overall discipline being rehearsed. The question asks what this activity is, and a tabletop exercise is the specific name for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
+    "needsReview": false,
+    "inferenceConfidence": 0.391,
     "needsExplanation": false,
     "keyCorrected": false
   },

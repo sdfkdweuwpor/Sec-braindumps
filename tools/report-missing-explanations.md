@@ -1,15 +1,11 @@
 # Questions with no explanation in the source PDF
 
-13 of 974 extracted questions.
+9 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0266 | 2 | 2.5 | Which of the following is the best way to prevent an unauthorized user from plugging a laptop into an employee |
-| q0267 | 2 | 2.2 | Which of the following should a systems administrator use to decrease the company's hardware attack surface? |
-| q0268 | 4 | 4.6 | A company wants to add an MFA solution for all employees who access the corporate network remotely. Log-in req |
-| q0283 | 4 | 4.7 | An administrator wants to automate an account permissions update for a large number of accounts. Which of the  |
 | q0293 | 3 | 3.3 | A security administrator is addressing an issue with a legacy system that communicates data using an unencrypt |
 | q0300 | 2 | 2.2 | A systems administrator is concerned users are accessing emails through a duplicate site that is not run by th |
 | q0332 | 4 | 4.9 | A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a f |

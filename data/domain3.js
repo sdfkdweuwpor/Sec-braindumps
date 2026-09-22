@@ -1980,44 +1980,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0257",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
-    "type": "single",
-    "question": "A network engineer is increasing the overall security of network devices and needs to harden the devices.\nWhich of the following will best accomplish this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Configuring centralized logging"
-      },
-      {
-        "key": "B",
-        "text": "Generating local administrator accounts"
-      },
-      {
-        "key": "C",
-        "text": "Replacing Telnet with SSH"
-      },
-      {
-        "key": "D",
-        "text": "Enabling HTTP administration"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Replacing Telnet with SSH (Secure Shell) is one of the best practices for hardening network devices. Telnet sends data, including passwords, in plaintext, making it vulnerable to interception. SSH, on the other hand, encrypts the communication between devices, providing a more secure way to manage network devices remotely.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p116",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0263",
     "domain": 3,
     "objective": "3.1",
@@ -2045,12 +2007,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Storage of data is a significant security concern when installing and using low-cost IoT (Internet of Things) devices in infrastructure environments. Many low-cost IoT devices may not have robust security measures in place to protect the data they collect or transmit. This data could be sensitive, such as operational metrics or user data, and if not properly secured, it could be vulnerable to theft, unauthorized access, or misuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The discriminator is low-cost. Cheap IoT hardware often comes from unvetted manufacturers with opaque firmware and no patch commitment, so country of origin stands in for supply-chain risk — the possibility of backdoors or compromised components reaching critical infrastructure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Device responsiveness is a performance characteristic. Slow devices are frustrating rather than insecure.",
+      "C": "Ease of deployment is a benefit of low-cost devices, not a security concern.",
+      "D": "Storage of data is a genuine IoT concern, but it applies to IoT devices at any price. It does not follow from the devices being inexpensive, which is what the question emphasises."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": true
@@ -2087,13 +2053,60 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An Intrusion Prevention System (IPS) is the most secure method for protecting the internal network against externally crafted malicious packets. IPS can monitor network traffic in real- time, detect, and block malicious packets or suspicious activity, which is critical for defending against external threats. An IPS actively analyzes traffic and can take action (such as blocking traffic or alerting administrators) to prevent attacks, making it highly effective in hardening the network against malicious packets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An intrusion prevention system sits inline at the network boundary, inspects packets against attack signatures and behaviour, and drops malicious ones before they reach anything internal. Against externally crafted packets, blocking at the perimeter is the strongest position.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Anti-malware solutions inspect files on endpoints. They act after something has already arrived on a host.",
+      "B": "Host-based firewalls protect individual machines. They help in depth but leave each host defending itself rather than stopping the packet at the boundary.",
+      "D": "Network access control decides which devices may join the network. It governs admission, not the content of packets from outside.",
+      "E": "A network allow list permits only known sources. It is useful but coarse, and malicious packets can arrive from an allowed address."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.29,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0267",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following should a systems administrator use to decrease the company's hardware attack surface?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Replication"
+      },
+      {
+        "key": "B",
+        "text": "Isolation"
+      },
+      {
+        "key": "C",
+        "text": "Centralization"
+      },
+      {
+        "key": "D",
+        "text": "Virtualization"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Replication copies data to additional systems. That adds hardware rather than reducing it.",
+      "B": "Isolation separates systems from one another. It limits lateral movement but does not reduce the number of physical devices.",
+      "C": "Centralisation concentrates management in one place. It can simplify administration while leaving the same hardware in service."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p120",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2125,51 +2138,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Since the legacy FTP server does not support SFTP (which would provide secure file transfer), SSH tunneling is a compensating control that can help protect sensitive financial data in transit.\nSSH tunneling involves creating a secure, encrypted tunnel between the FTP server and the third party, ensuring that the data transferred through FTP is encrypted and protected from eavesdropping or tampering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SSH tunnelling wraps the existing FTP session inside an encrypted SSH channel, so the financial data is protected in transit without changing the legacy server. That is precisely the definition of a compensating control — a substitute that achieves the same protection when the primary control is unavailable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Telnet is itself an unencrypted protocol. Adding it makes the situation worse.",
+      "C": "Patch installation keeps software current, but no patch will add SFTP support to a system that does not have it.",
+      "D": "Full disk encryption protects data at rest on the server. It does nothing once the data leaves over the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.346,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0274",
+    "id": "q0280",
     "domain": 3,
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company is implementing a policy to allow employees to use their personal equipment for work. However, the company wants to ensure that only company-approved applications can be installed.\nWhich of the following addresses this concern?",
+    "question": "A customer has a contract with a CSP and wants to identify which controls should be implemented in the IaaS enclave.\nWhich of the following is most likely to contain this information?",
     "choices": [
       {
         "key": "A",
-        "text": "MDM"
+        "text": "Statement of work"
       },
       {
         "key": "B",
-        "text": "Containerization"
+        "text": "Responsibility matrix"
       },
       {
         "key": "C",
-        "text": "DLP"
+        "text": "Service-level agreement"
       },
       {
         "key": "D",
-        "text": "FIM"
+        "text": "Master service agreement"
       }
     ],
     "correct": [
-      "A"
+      "B"
     ],
-    "explanation": "MDM (Mobile Device Management) is the most appropriate solution for this scenario. MDM allows companies to manage and secure mobile devices, including personal devices used for work (BYOD - Bring Your Own Device). With MDM, the company can enforce policies such as restricting the installation of unauthorized applications and ensuring that only company- approved applications are installed on the devices. MDM also allows remote management, configuration, and monitoring of devices to ensure compliance with company policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The cloud responsibility matrix is the document that divides security duties between provider and customer for each service model. For IaaS it states precisely which controls remain the customer's to implement, which is what the question asks for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A statement of work defines deliverables and tasks for a specific engagement. It scopes work rather than allocating security responsibility.",
+      "C": "A service-level agreement commits the provider to measurable performance such as uptime. It covers service quality, not control ownership.",
+      "D": "A master service agreement establishes the general commercial terms. Specific responsibilities are described elsewhere."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p123",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
+    "source": "SY0-701_en.pdf#p126",
+    "needsReview": false,
+    "inferenceConfidence": 0.957,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2201,12 +2222,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Tokenization is a data protection strategy that involves replacing sensitive data with surrogate values, or \"tokens,\" which have no meaningful value outside the specific context in which they are used. These tokens are used in place of the original sensitive data to protect it, and the actual sensitive data is stored securely in a separate system or vault. Tokenization is commonly used to protect payment card information, personal identification details, and other sensitive data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
+      "C": "Removing sensitive data from production is data minimisation. It reduces exposure by elimination rather than by substitution.",
+      "D": "Hashing produces an irreversible digest. Unlike a token it cannot be exchanged back for the original value when the business needs it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

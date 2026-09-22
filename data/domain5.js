@@ -1737,8 +1737,8 @@ export const domain5Questions = [
   {
     "id": "q0253",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "A new employee accessed an unauthorized website. An investigation found that the employee violated the company's rules.\nWhich of the following did the employee violate?",
     "choices": [
@@ -1762,12 +1762,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is a set of rules that define what is acceptable behavior regarding the use of company resources, including the internet. If the employee accessed an unauthorized website, this action would likely violate the company's AUP, which outlines the proper and prohibited uses of the company's network, devices, and other resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy defines what employees may and may not do with company systems, including which sites and services are permitted. Accessing an unauthorised website is a breach of that policy, which is why the AUP is the document the employee violated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOU is a non-binding statement of intent between organisations. It governs relationships between parties, not employee conduct.",
+      "C": "An NDA binds someone not to disclose confidential information. Browsing an unauthorised site discloses nothing.",
+      "D": "An MOA is a formal agreement of cooperation between organisations. Again it is external, not an internal conduct rule."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1775,8 +1779,8 @@ export const domain5Questions = [
   {
     "id": "q0259",
     "domain": 5,
-    "objective": "5.5",
-    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "A company filed a complaint with its IT service provider after the company discovered the service provider's external audit team had access to some of the company's confidential information.\nWhich of the following is the most likely reason the company filed the complaint?",
     "choices": [
@@ -1800,12 +1804,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legally binding contract that ensures confidential information shared between two parties is not disclosed to unauthorized third parties. In this case, the company likely filed a complaint because the external audit team, which was part of the service provider, had access to the company's confidential information without the proper NDA in place, potentially violating confidentiality agreements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement is what legally binds a third party not to reveal confidential information they encounter. Auditors reaching the company's confidential data without one in place means there was no enforceable obligation of secrecy, which is what the complaint is about.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOU with template clauses is weak but it is a statement of intent, not the instrument that protects confidentiality.",
+      "B": "An SOW defines the deliverables and scope of a piece of work. Its absence would be a scoping dispute, not a confidentiality breach.",
+      "C": "A work order authorises specific tasks under an existing agreement. Again it concerns what work is done, not how information is protected."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p117",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1838,51 +1846,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Automated alerting when anomalies occur is a crucial recommendation for improving security compliance monitoring. This approach ensures that suspicious activities, such as excessive login attempts and frequent lockouts, are immediately detected and flagged for further investigation, reducing the risk of undetected security threats. Automated alerts improve response times and reduce the need for manual monitoring, enhancing overall security posture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A weekly manual review means an attack on Monday goes unnoticed until Friday. Automated alerting on anomalies collapses that window to minutes and removes reliance on someone reading a report, which is the substantive improvement to compliance monitoring.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recording who reviewed the report and when improves the audit trail. It documents the process without making it faster or more reliable.",
+      "C": "A weekly statement that no exceptions were noted is more paperwork. It attests to the review rather than improving it.",
+      "D": "Masking usernames protects privacy but removes the very detail needed to investigate excessive attempts against a specific account."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0280",
+    "id": "q0271",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "A customer has a contract with a CSP and wants to identify which controls should be implemented in the IaaS enclave.\nWhich of the following is most likely to contain this information?",
+    "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives.\nWhich of the following did the vendor provide to the CIO?",
     "choices": [
       {
         "key": "A",
-        "text": "Statement of work"
+        "text": "Penetration test results"
       },
       {
         "key": "B",
-        "text": "Responsibility matrix"
+        "text": "Self-assessment findings"
       },
       {
         "key": "C",
-        "text": "Service-level agreement"
+        "text": "Attestation of compliance"
       },
       {
         "key": "D",
-        "text": "Master service agreement"
+        "text": "Third-party audit report"
       }
     ],
     "correct": [
-      "B"
+      "C"
     ],
-    "explanation": "A responsibility matrix (also known as a RACI matrix) is the most likely document to contain information about which security controls should be implemented in the IaaS (Infrastructure as a Service) enclave. It outlines the specific responsibilities of the customer and the cloud service provider (CSP) regarding security and compliance, helping to clarify which party is responsible for various controls and tasks within the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An attestation of compliance is a formal statement asserting which framework objectives are met, signed by the party making the claim. A report plus a signed letter confirming 17 of 21 objectives is exactly that form of assertion.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration test results describe whether systems could be breached. They report technical findings, not coverage against a compliance framework.",
+      "B": "Self-assessment findings are an internal review without a formal signed assertion. The signed letter is what makes this an attestation.",
+      "D": "A third-party audit report is produced by an independent auditor who performed the examination. Here the vendor is asserting its own compliance."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p126",
-    "needsReview": true,
-    "inferenceConfidence": 0.957,
+    "source": "SY0-701_en.pdf#p122",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1914,51 +1930,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Yellow team testing is a security testing technique that combines both defensive and offensive methodologies with developers to ensure secure coding practices and the identification of vulnerabilities early in the development process. This collaborative approach helps developers understand both how to defend against attacks and how attackers might exploit weaknesses, leading to more secure applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In the extended team-colour model the yellow team is the builders — developers and engineers. Bringing offensive and defensive practice to them during development is what produces securely built applications, rather than testing security in after release.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The blue team defends: monitoring, detection and response against live attacks.",
+      "C": "The red team attacks, simulating an adversary against systems that already exist.",
+      "D": "Green is the pairing of yellow with blue, focused on improving how defenders and builders work together. The question specifies both offensive and defensive with developers, which is yellow."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p127",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0285",
+    "id": "q0284",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore offices.\nWhich of the following is this an example of?",
+    "question": "Which of the following is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations?",
     "choices": [
       {
         "key": "A",
-        "text": "Tabletop exercise"
+        "text": "Attestation report"
       },
       {
         "key": "B",
-        "text": "Penetration test"
+        "text": "Third-party audit"
       },
       {
         "key": "C",
-        "text": "Geographic dispersion"
+        "text": "Vulnerability assessment"
       },
       {
         "key": "D",
-        "text": "Incident response"
+        "text": "Penetration testing"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a type of simulation where stakeholders discuss their roles, responsibilities, and procedures in response to a hypothetical situation, such as a security breach. The goal of this exercise is to test how well the team coordinates and responds to the incident without actually executing the actions in a real environment. It helps ensure that everyone understands their responsibilities and can react effectively when an actual breach occurs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An attestation report already exists — the supplier commissioned it once and shares it with every customer who asks. Requesting and reading it costs almost nothing compared with commissioning your own assessment, which is what makes it the fastest and cheapest confirmation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A third-party audit commissioned for you gives stronger assurance but takes weeks or months and is expensive.",
+      "C": "A vulnerability assessment identifies technical weaknesses in systems. It says little about whether contractual security obligations are being met.",
+      "D": "Penetration testing is the most costly and time-consuming option here, and it tests exploitability rather than compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
-    "inferenceConfidence": 0.391,
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },

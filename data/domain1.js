@@ -1639,51 +1639,17 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A honeytoken is a piece of data or a user account intentionally created to act as a trap for malicious activity. It is designed to attract and detect unauthorized access or suspicious transactions, as in this scenario where suspicious transactions were linked to a user account set up as a trap.\nWhen an attacker interacts with the honeytoken, it can alert administrators to potential malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeytoken is a piece of fake data — here a user account — planted specifically so that any use of it is proof of malicious activity. Because the account has no legitimate purpose, transactions attached to it are an unambiguous alarm rather than something requiring interpretation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A honeynet is an entire decoy network of systems built to study attacker behaviour. This is a single account inside a real system.",
+      "C": "A honeypot is a decoy host or service. Again the scale is wrong — no system was stood up, just a record.",
+      "D": "A honeyfile is a decoy file with an enticing name. Close in spirit, but the trap here is an account and its transactions, not a file."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p116",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0271",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives.\nWhich of the following did the vendor provide to the CIO?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Penetration test results"
-      },
-      {
-        "key": "B",
-        "text": "Self-assessment findings"
-      },
-      {
-        "key": "C",
-        "text": "Attestation of compliance"
-      },
-      {
-        "key": "D",
-        "text": "Third-party audit report"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "An attestation of compliance is a statement or document, often signed by a third party or the vendor themselves, confirming that specific objectives within a compliance framework are being met. In this case, the vendor provided a report and a signed letter stating that their services meet 17 of the 21 objectives, which aligns with an attestation of compliance. This document typically summarizes the vendor's compliance status and is used to assure customers that the vendor adheres to certain standards or regulations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p122",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1715,12 +1681,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A compensating control is a security measure implemented to mitigate risks when the primary control (e.g., patching the vulnerability) is not immediately feasible. In this case, placing a bastion host in the network to reduce the risk of a zero-day exploit is a compensating control. It provides an additional layer of security, helping to protect the network from exploitation until the vulnerability can be properly addressed (e.g., through a patch or fix).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "There is no patch for a zero-day, so the primary control is unavailable. Placing a bastion host substitutes a different measure that reduces the same risk while the real fix is awaited, which is what makes it compensating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Detective controls identify that something has happened. A bastion host restricts the access path rather than reporting on it.",
+      "C": "Operational describes how a control is implemented — through people and process. This is a technical change to the architecture.",
+      "D": "Physical controls act on the physical environment. A bastion host is a network system."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p124",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.786,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1753,12 +1723,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "When the security administrator implements encryption on all hard drives, the primary goal is to protect the confidentiality of the data. Encryption ensures that only authorized users can access the data, as it is transformed into an unreadable format without the proper decryption key. This protects sensitive information from unauthorized access, even if the physical hard drive is lost or stolen.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption renders data unreadable without the key, so only authorised parties can make sense of it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered, and is assured by hashing and signatures. Encrypted data can still be corrupted.",
+      "B": "Authentication proves who someone is. Encryption protects the data itself rather than verifying identity.",
+      "C": "Zero Trust is an architectural model based on never assuming trust from network position. Disk encryption is a single control, not an architecture."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false

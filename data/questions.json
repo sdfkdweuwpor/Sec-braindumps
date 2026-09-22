@@ -10633,8 +10633,8 @@
   {
     "id": "q0253",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "A new employee accessed an unauthorized website. An investigation found that the employee violated the company's rules.\nWhich of the following did the employee violate?",
     "choices": [
@@ -10658,12 +10658,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "An Acceptable Use Policy (AUP) is a set of rules that define what is acceptable behavior regarding the use of company resources, including the internet. If the employee accessed an unauthorized website, this action would likely violate the company's AUP, which outlines the proper and prohibited uses of the company's network, devices, and other resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy defines what employees may and may not do with company systems, including which sites and services are permitted. Accessing an unauthorised website is a breach of that policy, which is why the AUP is the document the employee violated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOU is a non-binding statement of intent between organisations. It governs relationships between parties, not employee conduct.",
+      "C": "An NDA binds someone not to disclose confidential information. Browsing an unauthorised site discloses nothing.",
+      "D": "An MOA is a formal agreement of cooperation between organisations. Again it is external, not an internal conduct rule."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10696,12 +10700,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data exfiltration refers to the unauthorized transfer of sensitive data from a company's systems to an external location, often by a malicious actor. In this case, the VPN logs indicate that a user is accessing the company file server and transferring information to a suspicious IP address during non-working hours. This behavior strongly suggests that sensitive data is being stolen or transferred without authorization, which is the essence of data exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Company data is being copied from an internal file server out to an unfamiliar external address, outside normal hours to avoid notice. Unauthorised transfer of data out of the organisation is data exfiltration, whatever the attacker's ultimate purpose.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting registers look-alike domains to catch users who mistype an address. Nothing here involves a user visiting a fake site.",
+      "B": "Root of trust is the trusted anchor a cryptographic system is built on. It is a PKI concept, not a threat.",
+      "D": "Blackmail coerces a victim with a threat. No demand has been made — data is simply leaving."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10734,21 +10742,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "A honeytoken is a piece of data or a user account intentionally created to act as a trap for malicious activity. It is designed to attract and detect unauthorized access or suspicious transactions, as in this scenario where suspicious transactions were linked to a user account set up as a trap.\nWhen an attacker interacts with the honeytoken, it can alert administrators to potential malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeytoken is a piece of fake data — here a user account — planted specifically so that any use of it is proof of malicious activity. Because the account has no legitimate purpose, transactions attached to it are an unambiguous alarm rather than something requiring interpretation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A honeynet is an entire decoy network of systems built to study attacker behaviour. This is a single account inside a real system.",
+      "C": "A honeypot is a decoy host or service. Again the scale is wrong — no system was stood up, just a record.",
+      "D": "A honeyfile is a decoy file with an enticing name. Close in spirit, but the trap here is an account and its transactions, not a file."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p116",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0257",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A network engineer is increasing the overall security of network devices and needs to harden the devices.\nWhich of the following will best accomplish this task?",
     "choices": [
@@ -10772,12 +10784,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Replacing Telnet with SSH (Secure Shell) is one of the best practices for hardening network devices. Telnet sends data, including passwords, in plaintext, making it vulnerable to interception. SSH, on the other hand, encrypts the communication between devices, providing a more secure way to manage network devices remotely.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Telnet carries credentials and session data in plaintext, so anyone able to observe the traffic can take over device management. Replacing it with SSH encrypts and authenticates the session, and removing the insecure protocol is a core hardening step for network devices.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Centralised logging improves visibility and investigation. It is valuable but detective — it records attacks rather than making the device harder to attack.",
+      "B": "Generating local administrator accounts adds more credentials to manage and more ways in. Hardening reduces accounts rather than creating them.",
+      "D": "Enabling HTTP administration adds another plaintext management interface, which increases the attack surface instead of shrinking it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p116",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10810,12 +10826,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Business email compromise (BEC) is a type of attack in which a hacker impersonates an executive, business partner, or trusted entity within the company (often via email) to trick employees into performing unauthorized financial transactions, such as wire transfers. In this case, the attacker uses a fraudulent message from what appears to be the company's bank, urgently requesting a wire transfer, which is a hallmark of a BEC attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Business email compromise uses a trusted-looking sender and manufactured urgency to trigger a fraudulent payment. The combination of a message appearing to come from the bank's domain, the accounting department as target, and a rushed wire transfer is the standard shape of BEC.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Vishing is voice phishing conducted over the phone. This arrived as an email message.",
+      "C": "Spear phishing is targeted phishing, usually to harvest credentials or deliver malware. BEC is the specific variant aimed at fraudulent financial transfers.",
+      "D": "Impersonation is the technique being used within the attack. The question asks for the attack, and BEC is the precise name for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p117",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10823,8 +10843,8 @@
   {
     "id": "q0259",
     "domain": 5,
-    "objective": "5.5",
-    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "A company filed a complaint with its IT service provider after the company discovered the service provider's external audit team had access to some of the company's confidential information.\nWhich of the following is the most likely reason the company filed the complaint?",
     "choices": [
@@ -10848,12 +10868,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A Non-Disclosure Agreement (NDA) is a legally binding contract that ensures confidential information shared between two parties is not disclosed to unauthorized third parties. In this case, the company likely filed a complaint because the external audit team, which was part of the service provider, had access to the company's confidential information without the proper NDA in place, potentially violating confidentiality agreements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement is what legally binds a third party not to reveal confidential information they encounter. Auditors reaching the company's confidential data without one in place means there was no enforceable obligation of secrecy, which is what the complaint is about.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An MOU with template clauses is weak but it is a statement of intent, not the instrument that protects confidentiality.",
+      "B": "An SOW defines the deliverables and scope of a piece of work. Its absence would be a scoping dispute, not a confidentiality breach.",
+      "C": "A work order authorises specific tasks under an existing agreement. Again it concerns what work is done, not how information is protected."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p117",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10886,12 +10910,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Data retention refers to the period of time that data must be kept by an organization. Local and international regulations (such as GDPR, HIPAA, or other data protection laws) often define how long specific types of data must be retained for legal, regulatory, or business purposes. These regulations can directly impact how long data should be stored and when it must be deleted or anonymized.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Regulations routinely specify how long particular records must be kept — tax data for years, health records for decades, personal data no longer than necessary. Retention is therefore the life-cycle stage most directly dictated by local and international law.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Destruction is governed by retention rules rather than being regulated on its own. Laws say when data must go, and destruction carries that out.",
+      "B": "Certification is the proof that disposal happened, typically a certificate of destruction from a vendor. It is evidence, not a regulated duration.",
+      "D": "Sanitisation is a technical method for rendering data unrecoverable. Standards describe how to do it; regulations mostly govern when."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10899,8 +10927,8 @@
   {
     "id": "q0261",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "An analyst is reviewing job postings to ensure sensitive company information is not being shared with the general public.\nWhich of the following is the analyst most likely looking for?",
     "choices": [
@@ -10924,12 +10952,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "When reviewing job postings, an analyst would be most concerned with software versions being shared, as this can potentially expose vulnerabilities in the company's systems. If the version of software being used by the company is disclosed, attackers could target known vulnerabilities in those specific versions. Therefore, job postings should not contain such sensitive details.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Job adverts often list the exact products and versions a team runs, which hands an attacker a target list without any scanning. Knowing a specific version lets them look up its known vulnerabilities directly, so software versions are what the analyst is watching for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Office addresses are usually public anyway and appear on the company's own website.",
+      "C": "A list of board members is typically published in corporate filings and investor material.",
+      "D": "Government identification numbers would never appear in a job posting, and an analyst reviewing recruitment content is not looking for personal identifiers."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -10937,8 +10969,8 @@
   {
     "id": "q0262",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "An engineer has ensured that the switches are using the latest OS, the servers have the latest patches, and the endpoints' definitions are up to date.\nWhich of the following will these actions most effectively prevent?",
     "choices": [
@@ -10962,12 +10994,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "By ensuring that switches are using the latest OS, servers have the latest patches, and endpoints' definitions are up to date, the engineer is most effectively protecting against known exploits. Exploits are typically vulnerabilities in software or systems that attackers use to gain unauthorized access or control. Patching systems and updating definitions helps close these known vulnerabilities, making it more difficult for attackers to exploit them.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Patches, OS updates and current definitions all address flaws that are already public and catalogued. Keeping them current closes the vulnerabilities attackers most commonly reuse, so known exploits are what these actions prevent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Zero-day attacks target flaws with no patch available. By definition no update exists yet, so patching cannot prevent them.",
+      "B": "Insider threats come from people with legitimate access. Patching changes nothing about what an authorised user can do.",
+      "C": "End-of-life support is a product lifecycle status. Applying updates does not extend a vendor's support commitment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11000,12 +11036,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Storage of data is a significant security concern when installing and using low-cost IoT (Internet of Things) devices in infrastructure environments. Many low-cost IoT devices may not have robust security measures in place to protect the data they collect or transmit. This data could be sensitive, such as operational metrics or user data, and if not properly secured, it could be vulnerable to theft, unauthorized access, or misuse.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The discriminator is low-cost. Cheap IoT hardware often comes from unvetted manufacturers with opaque firmware and no patch commitment, so country of origin stands in for supply-chain risk — the possibility of backdoors or compromised components reaching critical infrastructure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Device responsiveness is a performance characteristic. Slow devices are frustrating rather than insecure.",
+      "C": "Ease of deployment is a benefit of low-cost devices, not a security concern.",
+      "D": "Storage of data is a genuine IoT concern, but it applies to IoT devices at any price. It does not follow from the devices being inexpensive, which is what the question emphasises."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": true
@@ -11038,12 +11078,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Automated alerting when anomalies occur is a crucial recommendation for improving security compliance monitoring. This approach ensures that suspicious activities, such as excessive login attempts and frequent lockouts, are immediately detected and flagged for further investigation, reducing the risk of undetected security threats. Automated alerts improve response times and reduce the need for manual monitoring, enhancing overall security posture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A weekly manual review means an attack on Monday goes unnoticed until Friday. Automated alerting on anomalies collapses that window to minutes and removes reliance on someone reading a report, which is the substantive improvement to compliance monitoring.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recording who reviewed the report and when improves the audit trail. It documents the process without making it faster or more reliable.",
+      "C": "A weekly statement that no exceptions were noted is more paperwork. It attests to the review rather than improving it.",
+      "D": "Masking usernames protects privacy but removes the very detail needed to investigate excessive attempts against a specific account."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11080,12 +11124,17 @@
     "correct": [
       "C"
     ],
-    "explanation": "An Intrusion Prevention System (IPS) is the most secure method for protecting the internal network against externally crafted malicious packets. IPS can monitor network traffic in real- time, detect, and block malicious packets or suspicious activity, which is critical for defending against external threats. An IPS actively analyzes traffic and can take action (such as blocking traffic or alerting administrators) to prevent attacks, making it highly effective in hardening the network against malicious packets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An intrusion prevention system sits inline at the network boundary, inspects packets against attack signatures and behaviour, and drops malicious ones before they reach anything internal. Against externally crafted packets, blocking at the perimeter is the strongest position.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Anti-malware solutions inspect files on endpoints. They act after something has already arrived on a host.",
+      "B": "Host-based firewalls protect individual machines. They help in depth but leave each host defending itself rather than stopping the packet at the boundary.",
+      "D": "Network access control decides which devices may join the network. It governs admission, not the content of packets from outside.",
+      "E": "A network allow list permits only known sources. It is useful but coarse, and malicious packets can arrive from an allowed address."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.29,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11118,21 +11167,25 @@
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "MAC filtering tells the switch which hardware addresses a port may accept, so an unknown laptop plugged into the phone's port is refused network access outright. Stopping the device joining is what prevents it scanning for anything.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Segmentation limits where a connected device can reach. It contains the damage but the unauthorised laptop is still on the network and still scanning its segment.",
+      "C": "Certification is a compliance or attestation concept. It provides no technical enforcement at a switch port.",
+      "D": "Isolation confines a system away from others. Like segmentation it reduces reach rather than denying the connection."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0267",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following should a systems administrator use to decrease the company's hardware attack surface?",
     "choices": [
@@ -11156,14 +11209,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Replication copies data to additional systems. That adds hardware rather than reducing it.",
+      "B": "Isolation separates systems from one another. It limits lateral movement but does not reduce the number of physical devices.",
+      "C": "Centralisation concentrates management in one place. It can simplify administration while leaving the same hardware in service."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -11194,14 +11251,18 @@
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A phone the employee already owns supplies all three factors at no cost: the app's one-time code is something you have, facial recognition is something you are, and the device unlock or account password is something you know. No third-party licence or dedicated hardware is required.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A smart card with PIN and password covers only something you have and something you know, and it needs cards and readers purchased and issued.",
+      "B": "Security questions and an emailed code are both weak variations on something you know, and email is not a reliable possession factor.",
+      "C": "Voice and fingerprint are two instances of something you are, and SMS requires carrier delivery and is vulnerable to SIM swapping."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -11232,21 +11293,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Since the legacy FTP server does not support SFTP (which would provide secure file transfer), SSH tunneling is a compensating control that can help protect sensitive financial data in transit.\nSSH tunneling involves creating a secure, encrypted tunnel between the FTP server and the third party, ensuring that the data transferred through FTP is encrypted and protected from eavesdropping or tampering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SSH tunnelling wraps the existing FTP session inside an encrypted SSH channel, so the financial data is protected in transit without changing the legacy server. That is precisely the definition of a compensating control — a substitute that achieves the same protection when the primary control is unavailable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Telnet is itself an unencrypted protocol. Adding it makes the situation worse.",
+      "C": "Patch installation keeps software current, but no patch will add SFTP support to a system that does not have it.",
+      "D": "Full disk encryption protects data at rest on the server. It does nothing once the data leaves over the network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.346,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0270",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "domain": 4,
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
     "question": "A security manager wants to reduce the number of steps required to identify and contain basic threats.\nWhich of the following will help achieve this goal?",
     "choices": [
@@ -11270,21 +11335,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "SOAR (Security Orchestration, Automation, and Response) is designed to automate and streamline security operations, including threat identification and containment. SOAR platforms integrate with existing security tools to automate repetitive tasks, facilitate faster decision- making, and reduce the number of manual steps required to respond to basic threats. This helps improve response times and operational efficiency by orchestrating workflows and automating incident handling.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SOAR strings tool actions together into automated playbooks, so a recognised basic threat can be enriched, triaged and contained without an analyst performing each step manually. Reducing the number of human steps is exactly what it is built for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A SIEM aggregates logs and raises alerts. It tells the analyst what is happening; the responding steps remain manual.",
+      "C": "DMARC is an email authentication policy that reduces spoofing of your domain. It addresses one threat and automates no response.",
+      "D": "A NIDS detects suspicious network activity and alerts. Detection without action again leaves every containment step to a person."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0271",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "domain": 5,
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives.\nWhich of the following did the vendor provide to the CIO?",
     "choices": [
@@ -11308,12 +11377,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "An attestation of compliance is a statement or document, often signed by a third party or the vendor themselves, confirming that specific objectives within a compliance framework are being met. In this case, the vendor provided a report and a signed letter stating that their services meet 17 of the 21 objectives, which aligns with an attestation of compliance. This document typically summarizes the vendor's compliance status and is used to assure customers that the vendor adheres to certain standards or regulations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An attestation of compliance is a formal statement asserting which framework objectives are met, signed by the party making the claim. A report plus a signed letter confirming 17 of 21 objectives is exactly that form of assertion.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration test results describe whether systems could be breached. They report technical findings, not coverage against a compliance framework.",
+      "B": "Self-assessment findings are an internal review without a formal signed assertion. The signed letter is what makes this an attestation.",
+      "D": "A third-party audit report is produced by an independent auditor who performed the examination. Here the vendor is asserting its own compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p122",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11346,12 +11419,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Patching is the most effective way to address operating system vulnerabilities once they are identified. Patches are updates released by software vendors to fix known vulnerabilities, including security holes, bugs, or other issues that could be exploited by attackers. Applying patches promptly ensures that vulnerabilities are mitigated, reducing the risk of an attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A patch is the vendor's fix for the specific defect. Applying it removes the vulnerability rather than making it harder to reach, which is why patching is the definitive remediation once an OS flaw is identified.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Endpoint protection detects and blocks malicious activity. It may stop an exploit attempt while leaving the underlying flaw in place.",
+      "B": "Removing unnecessary software reduces the attack surface generally. It does not fix a vulnerability in software you still need.",
+      "C": "Configuration enforcement keeps settings at a known-good baseline. Useful hardening, but a correctly configured system can still be vulnerable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p122",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.913,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11384,21 +11461,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "MDM (Mobile Device Management) is the best solution in this scenario. MDM allows IT teams to manage, configure, and secure mobile devices remotely. It can be used to ensure that company-provided tablets are properly configured, with all necessary features and updates, and to resolve issues such as missing features or software inconsistencies. Additionally, MDM can help enforce company policies, deploy apps, and track device compliance, making it an efficient way to address the problem within the 48-hour time frame.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management pushes configuration, applications and settings to enrolled devices centrally. Missing features across a fleet of company tablets can be corrected in one policy change and delivered within hours, without touching each device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EDR detects and responds to malicious activity on endpoints. It is a security monitoring tool with no configuration-deployment role.",
+      "B": "COPE is a device ownership model describing who owns the hardware. It is a policy choice, not a tool that fixes anything.",
+      "D": "FDE encrypts the storage on a device. It protects data and does nothing about missing features."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p123",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0274",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A company is implementing a policy to allow employees to use their personal equipment for work. However, the company wants to ensure that only company-approved applications can be installed.\nWhich of the following addresses this concern?",
     "choices": [
@@ -11422,12 +11503,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "MDM (Mobile Device Management) is the most appropriate solution for this scenario. MDM allows companies to manage and secure mobile devices, including personal devices used for work (BYOD - Bring Your Own Device). With MDM, the company can enforce policies such as restricting the installation of unauthorized applications and ensuring that only company- approved applications are installed on the devices. MDM also allows remote management, configuration, and monitoring of devices to ensure compliance with company policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mobile device management enrols the personal device under policy and can enforce an application allow list, blocking anything not approved. It is the control layer that lets a BYOD programme dictate what may be installed on hardware the company does not own.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Containerisation separates work data from personal data on the device. It protects corporate data but does not govern which applications the user installs.",
+      "C": "DLP watches for sensitive data leaving the organisation. It monitors data movement, not software installation.",
+      "D": "FIM alerts when protected files change. It watches integrity on servers and workstations rather than controlling app installs."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p123",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11460,12 +11545,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A compensating control is a security measure implemented to mitigate risks when the primary control (e.g., patching the vulnerability) is not immediately feasible. In this case, placing a bastion host in the network to reduce the risk of a zero-day exploit is a compensating control. It provides an additional layer of security, helping to protect the network from exploitation until the vulnerability can be properly addressed (e.g., through a patch or fix).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "There is no patch for a zero-day, so the primary control is unavailable. Placing a bastion host substitutes a different measure that reduces the same risk while the real fix is awaited, which is what makes it compensating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Detective controls identify that something has happened. A bastion host restricts the access path rather than reporting on it.",
+      "C": "Operational describes how a control is implemented — through people and process. This is a technical change to the architecture.",
+      "D": "Physical controls act on the physical environment. A bastion host is a network system."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p124",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.786,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11498,12 +11587,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "A privileged access management (PAM) solution is the best strategy to prevent the threat actor from using domain administrator accounts in a pass-the-hash attack. PAM solutions are designed to secure, control, and monitor the access to critical accounts (like domain administrator accounts) by enforcing least privilege access, ensuring strong authentication methods, and reducing the exposure of credentials. These solutions often include features such as vaulting and rotating privileged credentials, which mitigate the risk of pass-the-hash attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Pass the hash works because a reusable credential for a privileged account sits in memory on machines the administrator logs into. Privileged access management brokers those sessions and issues short-lived or vaulted credentials, so there is no durable hash worth stealing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Weekly password compliance audits check that passwords meet standards. The attack never needs the password, only its hash.",
+      "C": "IDS policies monitoring domain controller access detect the attack after it succeeds. Detection is not prevention.",
+      "D": "Password expiration forces periodic changes. A stolen hash is used immediately, long before any expiry window matters."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p124",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.52,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11511,8 +11604,8 @@
   {
     "id": "q0277",
     "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following is an example of memory injection?",
     "choices": [
@@ -11536,12 +11629,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Memory injection is a type of attack where malicious code is injected into the memory space of an already running process. This allows the attacker to control or manipulate the process's behavior by executing the injected code. This technique is commonly used in exploits such as code injection attacks, where the attacker injects malicious code into a process's memory, causing it to execute and perform malicious actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Memory injection writes attacker code into the address space of a process that is already running, then causes it to execute. Because the code never touches disk and runs under a legitimate process, it evades file-based detection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Two processes racing over the same variable describes a race condition or TOC/TOU flaw.",
+      "B": "A process receiving more data than expected and executing code describes a buffer overflow.",
+      "D": "Overwriting an executable on disk so malicious code runs next time describes file infection or a malicious update — the opposite of an in-memory technique."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11574,21 +11671,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "When the security administrator implements encryption on all hard drives, the primary goal is to protect the confidentiality of the data. Encryption ensures that only authorized users can access the data, as it is transformed into an unreadable format without the proper decryption key. This protects sensitive information from unauthorized access, even if the physical hard drive is lost or stolen.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption renders data unreadable without the key, so only authorised parties can make sense of it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity means data has not been altered, and is assured by hashing and signatures. Encrypted data can still be corrupted.",
+      "B": "Authentication proves who someone is. Encryption protects the data itself rather than verifying identity.",
+      "C": "Zero Trust is an architectural model based on never assuming trust from network position. Disk encryption is a single control, not an architecture."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0279",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "An administrator has configured a quarantine subnet for all guest devices that connect to the network.\nWhich of the following would be best for the security team to perform before allowing access to corporate resources?",
     "choices": [
@@ -11612,21 +11713,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "Before allowing guest devices to access corporate resources, the security team should perform compliance attestation. This involves ensuring that the guest devices meet specific security and configuration requirements, such as up-to-date antivirus software, the latest security patches, and proper configurations. Compliance attestation helps verify that the devices are safe to connect to the corporate network and reduces the risk of introducing vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A quarantine subnet exists so a device can be checked before it is trusted. Compliance attestation is that check — confirming patch level, antivirus state and configuration meet policy — and passing it is what justifies releasing the device onto the corporate network.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Device fingerprinting identifies what a device is. Knowing it is a Windows laptop says nothing about whether it is safely configured.",
+      "C": "A penetration test assesses whether a system can be breached. Running one against every guest device is neither practical nor relevant.",
+      "D": "An application vulnerability test examines software for flaws. It is a development and assessment activity, not a network admission check."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.167,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0280",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A customer has a contract with a CSP and wants to identify which controls should be implemented in the IaaS enclave.\nWhich of the following is most likely to contain this information?",
     "choices": [
@@ -11650,21 +11755,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "A responsibility matrix (also known as a RACI matrix) is the most likely document to contain information about which security controls should be implemented in the IaaS (Infrastructure as a Service) enclave. It outlines the specific responsibilities of the customer and the cloud service provider (CSP) regarding security and compliance, helping to clarify which party is responsible for various controls and tasks within the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The cloud responsibility matrix is the document that divides security duties between provider and customer for each service model. For IaaS it states precisely which controls remain the customer's to implement, which is what the question asks for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A statement of work defines deliverables and tasks for a specific engagement. It scopes work rather than allocating security responsibility.",
+      "C": "A service-level agreement commits the provider to measurable performance such as uptime. It covers service quality, not control ownership.",
+      "D": "A master service agreement establishes the general commercial terms. Specific responsibilities are described elsewhere."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p126",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.957,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0281",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise.\nWhich of the following documents would be most relevant to revise as part of this process?",
     "choices": [
@@ -11688,12 +11797,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "An Incident Response Plan (IRP) is the most relevant document to revise when developing procedures for detective and corrective activities related to common threats such as phishing, social engineering, and business email compromise. The IRP outlines the steps to be taken when a security incident occurs, including detection, containment, eradication, and recovery. It ensures that the organization is prepared to respond to and mitigate the effects of these types of threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Detective and corrective activities for phishing, social engineering and business email compromise are all incident handling steps. The incident response plan is the document that defines how such events are detected, triaged, contained and recovered from, so that is what needs revising.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The SDLC governs how software is designed, built and released. These threats target people and email, not the development process.",
+      "C": "A business continuity plan keeps the organisation operating through major disruption. It addresses availability rather than detecting and correcting phishing.",
+      "D": "An acceptable use policy tells staff what conduct is permitted. It is preventive guidance, not a procedure for responding to an incident."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p126",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11726,12 +11839,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Yellow team testing is a security testing technique that combines both defensive and offensive methodologies with developers to ensure secure coding practices and the identification of vulnerabilities early in the development process. This collaborative approach helps developers understand both how to defend against attacks and how attackers might exploit weaknesses, leading to more secure applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In the extended team-colour model the yellow team is the builders — developers and engineers. Bringing offensive and defensive practice to them during development is what produces securely built applications, rather than testing security in after release.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The blue team defends: monitoring, detection and response against live attacks.",
+      "C": "The red team attacks, simulating an adversary against systems that already exist.",
+      "D": "Green is the pairing of yellow with blue, focused on improving how defenders and builders work together. The question specifies both offensive and defensive with developers, which is yellow."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p127",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11764,21 +11881,25 @@
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "User provisioning automates the creation, modification and removal of accounts and their entitlements from an authoritative source. Updating permissions across a large number of accounts is exactly the bulk, rule-driven work it exists to handle.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Security groups are the mechanism permissions are usually attached to. They make the change simpler but something still has to apply it at scale.",
+      "B": "Federation lets identities be trusted across organisations. It handles authentication between domains, not bulk permission changes.",
+      "D": "Vertical scaling adds resources to an existing system. It is a capacity concept with no bearing on account administration."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p127",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0284",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "domain": 5,
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
     "question": "Which of the following is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations?",
     "choices": [
@@ -11802,21 +11923,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "An attestation report is the fastest and most cost-effective way to confirm a third-party supplier's compliance with security obligations. An attestation report is a document provided by the third party (or a third-party auditor) that confirms their adherence to specific security frameworks, policies, or regulatory standards. This report is often based on industry standards such as SOC 2, ISO 27001, or similar certifications, and provides assurance without the need for an in-depth audit or testing process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An attestation report already exists — the supplier commissioned it once and shares it with every customer who asks. Requesting and reading it costs almost nothing compared with commissioning your own assessment, which is what makes it the fastest and cheapest confirmation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A third-party audit commissioned for you gives stronger assurance but takes weeks or months and is expensive.",
+      "C": "A vulnerability assessment identifies technical weaknesses in systems. It says little about whether contractual security obligations are being met.",
+      "D": "Penetration testing is the most costly and time-consuming option here, and it tests exploitability rather than compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0285",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "Various company stakeholders meet to discuss roles and responsibilities in the event of a security breach that would affect offshore offices.\nWhich of the following is this an example of?",
     "choices": [
@@ -11840,12 +11965,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a type of simulation where stakeholders discuss their roles, responsibilities, and procedures in response to a hypothetical situation, such as a security breach. The goal of this exercise is to test how well the team coordinates and responds to the incident without actually executing the actions in a real environment. It helps ensure that everyone understands their responsibilities and can react effectively when an actual breach occurs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Stakeholders sitting down to talk through their roles in a hypothetical breach is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing coordination and finding gaps in the plan before a genuine incident.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A penetration test actively attacks systems to find weaknesses. It is technical and hands-on.",
+      "C": "Geographic dispersion spreads infrastructure across locations for resilience. The offshore offices are the subject of the discussion, not the concept being demonstrated.",
+      "D": "Incident response is the overall discipline being rehearsed. The question asks what this activity is, and a tabletop exercise is the specific name for it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.391,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11878,12 +12007,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Tokenization is a data protection strategy that involves replacing sensitive data with surrogate values, or \"tokens,\" which have no meaningful value outside the specific context in which they are used. These tokens are used in place of the original sensitive data to protect it, and the actual sensitive data is stored securely in a separate system or vault. Tokenization is commonly used to protect payment card information, personal identification details, and other sensitive data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
+      "C": "Removing sensitive data from production is data minimisation. It reduces exposure by elimination rather than by substitution.",
+      "D": "Hashing produces an irreversible digest. Unlike a token it cannot be exchanged back for the original value when the business needs it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -11916,12 +12049,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Side loading refers to the process of installing applications on a device through means other than the official application store (such as downloading apps from third-party sources). This can introduce security risks because apps from unofficial sources may not undergo the same vetting process as those from the official app store, potentially allowing malicious software to be installed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading installs an application from a source other than the official store, bypassing the vetting and signing checks that store normally applies. The app arrives unreviewed, which is what makes it a vulnerability class in its own right.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script into a web page to run in another user's browser. It is a web application flaw.",
+      "B": "A buffer overflow writes past an allocated memory region to corrupt memory or execute code. It exploits a program, not an install path.",
+      "C": "Jailbreaking removes the manufacturer's restrictions on the device itself. It is related and often enables side loading, but the act of installing from outside the store is side loading specifically."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
