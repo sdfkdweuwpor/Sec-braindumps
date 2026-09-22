@@ -187,7 +187,10 @@ def main():
         pass
 
     # ---- coverage reporting --------------------------------------------
-    print("\nper-domain counts (inferred -- no domain labels exist in the PDF):")
+    labelled = sum(1 for q in qs if not q.get("needsReview"))
+    how = ("hand-assigned" if labelled == len(qs)
+           else f"{labelled}/{len(qs)} hand-assigned, rest inferred")
+    print(f"\nper-domain counts ({how} -- the PDF carries no domain labels):")
     bydom = Counter(q["domain"] for q in qs)
     for d in sorted(OBJ.DOMAINS):
         share = bydom[d] / len(qs) * 100
@@ -195,10 +198,30 @@ def main():
         print(f"   Domain {d} {OBJ.DOMAINS[d]['title'][:42]:<44} "
               f"{bydom[d]:>4}  {share:5.1f}%   (exam weight {w}%)")
 
+    # Every question with an authored objective uses that human read, so raw
+    # inference confidence no longer decides anything and reporting it as risk
+    # would be noise. What is still worth knowing is where the keyword
+    # inference DISAGREES with the human read: either the objective is a
+    # genuine judgement call, or the keyword table has a gap worth filling.
     conf = [q["inferenceConfidence"] for q in qs]
-    low = [q for q in qs if q["inferenceConfidence"] < 0.34]
-    print(f"\ninference confidence: median {sorted(conf)[len(conf)//2]:.2f} | "
-          f"{len(low)} question(s) below 0.34 (weak pick)")
+    print(f"\ninference confidence: median {sorted(conf)[len(conf)//2]:.2f} "
+          f"(diagnostic only -- authored objectives override it)")
+
+    confirmed = [q for q in qs if not q.get("needsReview")]
+    disagree = []
+    for q in confirmed:
+        text = q["question"] + " " + " ".join(c["text"] for c in q["choices"])
+        guess, _dom, _c = OBJ.infer_objective(text)
+        if guess and guess != q["objective"]:
+            disagree.append((q["id"], q["objective"], guess))
+    if confirmed:
+        pct = len(disagree) / len(confirmed) * 100
+        print(f"inference agrees with the human read on "
+              f"{len(confirmed) - len(disagree)}/{len(confirmed)} "
+              f"({100 - pct:.0f}%) confirmed questions")
+        cross = Counter((a, b) for _i, a, b in disagree)
+        for (auth, guess), n in cross.most_common(5):
+            print(f"   authored {auth} but keywords say {guess}: {n}")
     unreviewed = [q for q in qs if q.get("needsReview")]
     if unreviewed:
         warn(f"{len(unreviewed)} of {len(qs)} questions still carry needsReview:true "

@@ -107,6 +107,33 @@ with more than one answer, and an answer-letter distribution skewed past 40%
 near-duplicate questions and flags any whose copies disagree on the answer —
 that disagreement is proof one of them is wrong.
 
+### Explanations
+
+Every question carries an explanation written to one voice plus a note on each
+wrong choice saying what that option actually means and why it does not fit
+the stem. The PDF's own explanations were not trusted verbatim — they vary in
+voice, some only restate the answer, and a few rationalise a wrong key — so
+all of them were rewritten.
+
+Authored text lives in `tools/authored/batch*.json`, keyed by question id and
+kept out of the extractor so re-extraction never loses it:
+
+```json
+{"q0001": {
+  "objective": "5.2",
+  "explanation": "Transfer moves the financial consequence of a risk ...",
+  "incorrect": {"A": "Accept means ...", "C": "Mitigate means ..."}
+}}
+```
+
+`objective` is a human read and wins over keyword inference. `incorrect` may
+only name choices that are actually wrong — the extractor exits non-zero if a
+note targets a correct answer or a choice that does not exist, so a shifted
+question cannot silently acquire the wrong notes.
+
+To write more, `python3 tools/dump_batch.py` prints a compact slice of the
+questions that have no authored record yet.
+
 ### Question ids are permanent
 
 Progress is keyed by `id`, never by position or question text. `q0142` must
@@ -152,13 +179,17 @@ re-running it never loses them:
 }
 ```
 
-**On provenance:** the source PDF carries no domain or objective labels, so
-every question's domain is inferred by keyword matching in
-`tools/objectives.py` and carries `needsReview: true`. `inferenceConfidence`
-is the winning objective's share of the total keyword score — a low value
-means several objectives matched about equally. `explanationSource` records
-whether an explanation came from the PDF or was written afterwards, so
-anything authored can be spot-checked.
+**On provenance:** the source PDF carries no domain or objective labels.
+Keyword matching in `tools/objectives.py` makes a first pass, but every
+question in the bank now carries a hand-assigned objective from
+`tools/authored/`, which overrides the guess and clears `needsReview`. Any
+question added later without an authored objective falls back to inference and
+comes back with `needsReview: true`. `inferenceConfidence` is the winning
+objective's share of the total keyword score, kept as a diagnostic only —
+`validate.py` reports where inference disagrees with the human read, which
+points at gaps in the keyword table rather than at bad data.
+`explanationSource` records whether an explanation came from the PDF or was
+written afterwards, so anything authored can be spot-checked.
 
 ## How readiness is calculated
 
@@ -200,7 +231,14 @@ Notes:
   answered as multiple choice. One more (`q0114`) has choices that exist only
   as images, and one (`q0852`) was dropped because the PDF paired its stem with
   another question's choices.
-- 17 near-duplicate question pairs remain in the bank, reported by
-  `validate.py` and left in deliberately rather than auto-deleted.
-- Domain assignments are inferred and imperfect. Some questions sit in the
-  wrong objective; `needsReview` is true on all of them.
+- 18 near-duplicate question pairs remain in the bank, reported by
+  `validate.py` and left in deliberately rather than auto-deleted. One pair
+  (`q0342`/`q0513`) shares a stem but offers different choices and is listed
+  in `UNRESOLVED`; both are left as the PDF had them.
+- Objectives are hand-assigned, but a Security+ question often defensibly
+  belongs to more than one. Where the placement is a judgement call it was
+  made once and applied consistently rather than split across objectives.
+- The bank's domain mix is not the exam's (Domain 4 is 31% of the pool against
+  a 28% exam weight, Domain 2 is 19% against 22%). Only the mock exam corrects
+  for this, apportioning by official weight; a custom quiz over the whole bank
+  will over-sample Domain 4.
