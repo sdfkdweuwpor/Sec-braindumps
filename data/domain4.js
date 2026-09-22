@@ -8439,8 +8439,8 @@ export const domain4Questions = [
   {
     "id": "q0633",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A business is expanding to a new country and must protect customers from accidental disclosure of specific national identity information.\nWhich of the following should the security engineer update to best meet business requirements?",
     "choices": [
@@ -8464,12 +8464,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data Loss Prevention (DLP) can be configured to detect and prevent the unauthorized transmission of specific national identity information, ensuring compliance with privacy regulations in the new country.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The requirement is to stop a specific category of personal identifier leaving accidentally. DLP inspects content against patterns and policy, so it can be tuned to recognise that country's identity number format and block or quarantine messages containing it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SIEM correlates logs and raises alerts. It reports after the disclosure rather than preventing it.",
+      "B": "SCAP automates configuration and compliance checking of systems. It examines settings, not content.",
+      "D": "A WAF protects a web application from malicious inbound requests. Accidental disclosure is outbound and usually not an attack."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p267",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8502,12 +8506,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) provides a standardized severity score for vulnerabilities, enabling analysts to prioritize remediation efforts based on risk impact.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what allows a long list of findings to be ranked consistently. Prioritisation needs a common measure, and that is what CVSS provides.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "OSINT is intelligence gathered from public sources. It can indicate a flaw is being exploited in the wild but provides no score.",
+      "B": "CVE is the identifier catalogue. It names each vulnerability uniquely and carries no severity.",
+      "C": "An IoC is an indicator of compromise — evidence a system was attacked. It reports on incidents rather than ranking vulnerabilities."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p269",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8540,12 +8548,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "RADIUS provides centralized authentication, authorization, and accounting, and it can integrate with an LDAP database to authenticate users connecting to the company's wireless network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "RADIUS is the standard for centralised authentication of network access, and wireless controllers speak it natively. It can query the existing LDAP directory as its user store, satisfying both the LDAP and the central management requirements.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SAML federates authentication between an identity provider and web applications. Wireless association is not a web session.",
+      "B": "TACACS+ centralises authentication and command authorisation, but it is used mainly for administrative access to network devices rather than client wireless authentication.",
+      "C": "OAuth is an authorisation framework issuing tokens to applications. It does not authenticate devices onto a wireless network."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p271",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8553,8 +8565,8 @@ export const domain4Questions = [
   {
     "id": "q0644",
     "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
     "question": "An administrator is creating domain profiles for each employee within the company. The administrator wants to make the process more efficient by assigning permissions based on user roles and departments.\nWhich of the following would most likely fulfill those requirements?",
     "choices": [
@@ -8578,12 +8590,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Security groups allow administrators to assign permissions collectively based on user roles or departments, streamlining domain profile management and reducing repetitive configuration tasks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Security groups let permissions be attached to a role or department once, and users inherit them through membership. Managing entitlements by group rather than per person is what makes the process efficient and consistent.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource provisioning allocates infrastructure such as compute or storage. It does not assign user permissions.",
+      "B": "User provisioning creates and removes accounts, often automatically. It is the mechanism that places users into groups rather than the structure granting the permissions.",
+      "D": "Enforcing baselines keeps system configuration at a known-good standard. It governs machines, not user entitlements."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p271",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8616,12 +8632,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "After identifying (detecting) an incident, the next step is containment, which aims to limit the spread and impact of the threat before proceeding to eradication or recovery.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The incident has been identified, which is detection. The next step is to stop it getting worse — isolating affected hosts, cutting connectivity, disabling accounts — before spending time on removing the cause or restoring service.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Detection is the step that has just happened.",
+      "C": "Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
+      "D": "Recovery restores systems to normal service and comes last."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p272",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8654,12 +8674,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Baseline enforcement ensures consistent performance and security standards across managed services, allowing the provider to scale operations cost-effectively without sacrificing quality.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Scaling from supplying links to managing them means doing the same configuration work many times over. Enforcing a baseline means every managed link is built and maintained to one standard automatically, so quality stays consistent as volume grows without adding proportional effort.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Escalation support handles exceptions that front-line staff cannot. It is reactive and does not scale routine delivery.",
+      "B": "Increasing the workforce scales by adding cost linearly, which is the opposite of cost-effective.",
+      "D": "Technical debt is accumulated shortcuts that will need reworking. It is a liability, not a method."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p273",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8692,12 +8716,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A tabletop exercise is a simulated event in which the incident response team and other stakeholders walk through their roles and decision-making processes to evaluate readiness and improve response plans.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Bringing the response team and stakeholders together to work through a hypothetical event, discussing what each would do, is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing roles and finding gaps.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Lessons learned is the review conducted after a real incident.",
+      "B": "Digital forensics is the technical collection and analysis of evidence.",
+      "D": "Root cause analysis determines why a real incident occurred."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p274",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8730,13 +8758,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Code signing uses digital certificates to verify the authenticity and integrity of software, ensuring it has not been tampered with after being created and delivered by the vendor.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The dispute is whether the software was altered after the vendor released it. Code signing settles that — the vendor signs the binary with its private key, and anyone can verify the signature to prove the file is exactly what was published.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure storage protects the files on the distribution server. It does not let the customer verify what they downloaded.",
+      "B": "Static code analysis finds defects in source during development. It says nothing about tampering after release.",
+      "C": "Input validation protects a running application from malicious input. It is unrelated to distribution integrity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p276",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0658",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "After completing an annual external penetration test, a company receives the following guidance:\n• Decommission two unused web servers currently exposed to the internet.\n• Close 18 open and unused ports found on their existing production web servers.\n• Remove company email addresses and contact info from public domain registration records.\nWhich of the following security practices best describes these recommendations?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Attack surface reduction"
+      },
+      {
+        "key": "B",
+        "text": "Vulnerability assessment"
+      },
+      {
+        "key": "C",
+        "text": "Tabletop exercise"
+      },
+      {
+        "key": "D",
+        "text": "Business impact analysis"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Every recommendation removes something an attacker could use: unused servers, unused ports, and publicly available contact details that feed social engineering. Eliminating exposure rather than defending it is attack surface reduction.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A vulnerability assessment is the activity that produced these findings. The recommendations describe what to do with them.",
+      "C": "A tabletop exercise rehearses incident response in discussion.",
+      "D": "A business impact analysis determines how badly the organisation suffers when a function is lost."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p276",
+    "needsReview": false,
+    "inferenceConfidence": 0.36,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8768,12 +8842,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A SIEM (Security Information and Event Management) system collects logs from multiple sources, correlates the data, and generates alerts for suspicious or malicious activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A SIEM ingests logs from many different devices and services, normalises the differing formats, correlates events across them and raises alerts. Receiving logs broadly and presenting alerts is precisely its definition.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SCADA supervises industrial control equipment. It is an operational technology system.",
+      "C": "SNMP is a protocol for monitoring and managing devices. It gathers metrics rather than correlating logs into alerts.",
+      "D": "SCAP is a set of standards for automating configuration and vulnerability checking."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p277",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false

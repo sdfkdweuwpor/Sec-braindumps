@@ -5140,44 +5140,6 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0630",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A security administrator receives multiple reports about the same suspicious email.\nWhich of the following is the most likely reason for the malicious email's continued delivery?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Employees are flagging legitimate emails as spam."
-      },
-      {
-        "key": "B",
-        "text": "Information from reported emails is not being used to tune email filtering tools."
-      },
-      {
-        "key": "C",
-        "text": "Employees are using shadow IT solutions for email."
-      },
-      {
-        "key": "D",
-        "text": "Employees are forwarding personal emails to company email addresses."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "If reported email data is not used to update and tune filtering tools, the malicious email can continue bypassing defenses and reaching other users' inboxes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p266",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0631",
     "domain": 2,
     "objective": "2.3",
@@ -5205,12 +5167,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cross-Site Scripting (XSS) allows attackers to inject malicious scripts into a web page, which can display pop-ups or redirect users to other sites without their consent.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A pop-up appearing on a page and pushing the user elsewhere means script that was not part of the site is executing in the browser. Injected script running in another user's session is cross-site scripting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A denial of service makes a site unavailable. The page is loading and running perfectly well.",
+      "C": "SQL injection manipulates database queries on the server. It does not produce browser pop-ups.",
+      "D": "TOC, or time-of-check, is a race condition between validating something and using it. It is a timing flaw, not a browser behaviour."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p267",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5218,8 +5184,8 @@ export const domain2Questions = [
   {
     "id": "q0632",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "An administrator must secure several end-of-life SCADA devices in a manufacturing facility on a limited budget.\nWhich of the following should the security administrator do to best secure these devices?",
     "choices": [
@@ -5243,12 +5209,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Network segmentation isolates end-of-life SCADA devices from other systems, reducing the attack surface and limiting lateral movement, which is critical when patching or direct security updates are not possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "End-of-life SCADA devices cannot be patched and the budget is limited, so the remaining lever is reachability. Putting them on their own subnet with controlled access removes most of the paths an attacker could use and costs little more than configuration effort.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Monitoring reveals attacks in progress. Visibility is valuable but the devices remain just as exploitable.",
+      "C": "Applying patches is impossible — end of life means the vendor issues none.",
+      "D": "Blocking internet access helps, but SCADA compromises frequently originate from the internal network. Segmentation addresses both directions."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p267",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5256,8 +5226,8 @@ export const domain2Questions = [
   {
     "id": "q0637",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "Which of the following would help reduce the impact of a zero-day vulnerability in NAS installed on a large office network?",
     "choices": [
@@ -5281,12 +5251,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Segmentation isolates the NAS from the broader network, limiting an attacker's ability to exploit the zero-day vulnerability and reducing the potential impact on other systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day has no patch, so the flaw cannot be removed. Segmentation limits which systems can reach the NAS and what the NAS can reach, so even successful exploitation is confined to a small part of the network rather than the whole office.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption protects the confidentiality of stored data. An attacker exploiting the NAS operates through the device, which can read its own data.",
+      "B": "Patching is unavailable by definition — that is what zero-day means.",
+      "D": "Filtering inspects traffic content. Useful, but it relies on recognising the attack, and a zero-day has no known signature."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p269",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5319,12 +5293,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Smishing uses fraudulent SMS messages to trick victims into revealing sensitive information or clicking malicious links, potentially compromising MFA tokens sent to a phone.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The MFA code is delivered by text, so the attacker targets the text. Smishing sends a fraudulent SMS that tricks the administrator into handing over the code or approving the prompt, defeating the second factor without breaking any cryptography.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Typosquatting registers lookalike domains for mistyped addresses. It does not intercept or extract a token.",
+      "C": "Espionage is a motivation for stealing information rather than a technique for defeating MFA.",
+      "D": "Pretexting is the invented story used to justify a request. It is an element within the attack rather than the attack vector, which here is SMS."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p269",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5332,8 +5310,8 @@ export const domain2Questions = [
   {
     "id": "q0640",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "A security analyst reviews the following SIEM events:\nWhich of the following best describes the observed behavior?",
     "choices": [
@@ -5357,12 +5335,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The successful logins from multiple distant geographic locations within minutes indicate that the same credentials are being used by different individuals or systems, which is consistent with password sharing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Successful logins from distant locations in quick succession mean one set of credentials is in use by more than one person or system. Where no compromise is indicated, the ordinary explanation is that the account's password has been shared.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A brute-force attack produces a mass of failed attempts before any success. These logins succeeded.",
+      "B": "Privilege escalation is gaining rights beyond those assigned. The account's permissions are unchanged.",
+      "C": "Cross-site scripting injects script into a web page. It is unrelated to authentication geography."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p270",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5370,8 +5352,8 @@ export const domain2Questions = [
   {
     "id": "q0648",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "An administrator discovers a cross-site scripting vulnerability on a company website.\nWhich of the following will most likely remediate the issue?",
     "choices": [
@@ -5395,12 +5377,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Input validation ensures that user-supplied data is properly sanitized before processing or displaying, effectively preventing cross-site scripting attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cross-site scripting exists because user-supplied content reaches a page without being neutralised. Validating and sanitising input at the application removes the defect itself, which is remediation rather than mitigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An NGFW filters traffic at a network boundary. It does not understand an individual application's input handling.",
+      "C": "A vulnerability scan found the problem. Scanning again fixes nothing.",
+      "D": "A WAF can block many XSS attempts and is a sensible compensating control, but it filters around the flaw while the vulnerable code remains."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p273",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.312,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5433,12 +5419,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An evil twin attack sets up a rogue wireless access point that mimics a legitimate one, targeting insecure or poorly secured networks to capture user data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An evil twin is a rogue access point broadcasting the same network name as a legitimate one. It works because open or weakly secured wireless networks give clients no way to verify which access point is genuine, so they associate with the attacker's.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Impersonation is assuming a trusted identity to manipulate a person. It targets human judgement rather than a network.",
+      "C": "A watering hole attack compromises a website the target group visits. The vulnerability is in the site, not the network.",
+      "D": "Pretexting is inventing a backstory to justify a request. Again it targets people."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p274",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5471,12 +5461,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection (SQLi) exploits improper or missing input validation in database queries, allowing attackers to manipulate SQL commands and access or modify database content.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The recommendation is specifically about database input validation, which points at input reaching the database as code. SQL injection is the vulnerability that arises when user-supplied text is interpreted as part of a query instead of as data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script that runs in a browser. It is an output-encoding problem rather than a database one.",
+      "B": "Command injection executes operating system commands. The recommendation names the database specifically.",
+      "C": "A buffer overflow writes past an allocated memory region. It is a memory-handling defect, not a query-construction one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p274",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.467,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5509,51 +5503,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Spyware covertly collects and transmits data to external servers, often to IP addresses with known bad reputations, matching the described behavior in the logs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Consistent data of a particular type being sent out to disreputable addresses is collection and exfiltration running quietly in the background. Spyware is malware whose purpose is exactly that — gathering information and shipping it to the attacker.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A logic bomb sits dormant until a trigger and then acts destructively. It does not stream data out continuously.",
+      "B": "A worm spreads itself between hosts. The traffic here goes outbound to external addresses, not laterally.",
+      "D": "A keylogger is a specific kind of spyware capturing keystrokes. The logs describe similar data types generally, which points at the broader category."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p277",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.389,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0661",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "Which of the following describes a situation where a user is authorized before being authenticated?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Privilege escalation"
-      },
-      {
-        "key": "B",
-        "text": "Race condition"
-      },
-      {
-        "key": "C",
-        "text": "Tailgating"
-      },
-      {
-        "key": "D",
-        "text": "Impersonation"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Privilege escalation can occur if authorization is granted without proper authentication, allowing a user to gain higher-level access than intended.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p277",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5585,12 +5545,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An insider threat involves a person within the organization, such as an employee, who uses their access for malicious purposes, often due to personal grievances or dissatisfaction.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An employee turning against the organisation over a personal grievance, while still holding legitimate access, is the classic insider threat. What makes them dangerous is that their access is genuine and their activity looks authorised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Nation-state actors pursue espionage and strategic disruption from outside.",
+      "C": "Shadow IT is unsanctioned technology adopted for convenience. It is careless rather than malicious.",
+      "D": "A hacktivist attacks to advance a cause. This is personal grievance, not ideology."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p278",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

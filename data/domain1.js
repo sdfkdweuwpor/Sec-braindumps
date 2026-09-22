@@ -3601,12 +3601,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A public key is deployed on the web server within its digital certificate, allowing clients to establish an encrypted session by securely exchanging a symmetric key through asymmetric encryption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The server presents a certificate containing its public key. Clients use that key to protect the exchange that establishes a shared session key, which is what makes an encrypted connection possible without the two parties having met before.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "The private key stays on the server and is never deployed to anyone. Exposing it would destroy the security of every session.",
+      "C": "Asymmetric key names the category the public and private keys belong to. The question asks which one is deployed.",
+      "D": "A symmetric key is what the handshake produces for the session. It is negotiated per connection, not pre-deployed on the server."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p266",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3639,51 +3643,17 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Hashing creates a unique fixed-length value based on the data, allowing verification of integrity by comparing the hash before and after transit to detect any modifications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hashing produces a digest that changes completely if any bit changes. Sending the hash alongside the data lets the recipient recompute it and confirm the content arrived exactly as it left, which detects modification in transit.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Tokenisation substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
+      "C": "Masking obscures part of a value for display. It neither detects nor prevents alteration.",
+      "D": "Encryption keeps data confidential. Ciphertext can still be tampered with, and encryption alone does not reveal that it was."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p268",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0636",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "Which of the following would an organization most likely use to minimize the loss of data on a file server in the event that data needs to be restored due to loss of the primary server?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Monitoring"
-      },
-      {
-        "key": "B",
-        "text": "Journaling"
-      },
-      {
-        "key": "C",
-        "text": "Obfuscation"
-      },
-      {
-        "key": "D",
-        "text": "Tokenization"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Journaling records changes to files in real time, enabling quick restoration of the most recent data in case of primary server failure, thereby minimizing potential data loss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p268",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3715,12 +3685,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A maintenance window is a scheduled period agreed upon in advance during which updates or changes can be made without disrupting normal business operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A maintenance window is an agreed period, normally at a time of low usage, in which disruptive work may be carried out. Agreeing it with leadership is how updates get applied with the disruption planned for and communicated rather than unexpected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A backout plan describes how to reverse the change if it fails. Essential, but it addresses failure rather than avoiding disruption.",
+      "C": "A standard operating procedure documents how the task is performed. It governs method, not timing.",
+      "D": "Impact analysis assesses what the change might affect. It informs the decision but does not schedule the work."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p272",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.926,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3753,13 +3727,59 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A SIEM alert is a detective control because it identifies and reports suspicious or malicious activity after it occurs, enabling further investigation and response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An alert tells you something has happened. Recognising and reporting activity after the fact, so it can be investigated, is the definition of a detective control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Preventive controls stop an event occurring. An alert blocks nothing.",
+      "B": "Corrective controls restore normal operation after an incident. The alert precedes any correction.",
+      "C": "Compensating controls substitute for a primary control that cannot be implemented. A SIEM alert is a control in its own right."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p273",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0661",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
+    "type": "single",
+    "question": "Which of the following describes a situation where a user is authorized before being authenticated?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Privilege escalation"
+      },
+      {
+        "key": "B",
+        "text": "Race condition"
+      },
+      {
+        "key": "C",
+        "text": "Tailgating"
+      },
+      {
+        "key": "D",
+        "text": "Impersonation"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Access should be granted only after identity is proven. If the system authorises first, someone obtains rights they were never verified to hold — effectively escalating their privileges through a flaw in the authentication and authorisation ordering. Note this question is loosely worded; the intended point is that authorisation without prior authentication yields unearned access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A race condition exploits the timing gap between checking a condition and acting on it. That is a related flaw but concerns timing rather than the order of authentication and authorisation.",
+      "C": "Tailgating is following an authorised person through a physical door.",
+      "D": "Impersonation is assuming another identity to deceive someone. That involves a false authentication rather than none at all."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p277",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },

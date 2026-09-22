@@ -1,0 +1,239 @@
+{
+"q0629": {"objective":"1.4",
+ "explanation":"The server presents a certificate containing its public key. Clients use that key to protect the exchange that establishes a shared session key, which is what makes an encrypted connection possible without the two parties having met before.",
+ "incorrect":{
+  "B":"The private key stays on the server and is never deployed to anyone. Exposing it would destroy the security of every session.",
+  "C":"Asymmetric key names the category the public and private keys belong to. The question asks which one is deployed.",
+  "D":"A symmetric key is what the handshake produces for the session. It is negotiated per connection, not pre-deployed on the server."}},
+
+"q0630": {"objective":"5.6",
+ "explanation":"Users reported the message, which means the organisation knew about it — yet it kept arriving. That gap between reporting and enforcement means the intelligence from those reports is not being fed back into the filtering rules, so nothing changes for the next recipient.",
+ "incorrect":{
+  "A":"Flagging legitimate email as spam produces false positives. It would block wanted mail, not let malicious mail through.",
+  "C":"Shadow IT email solutions would bypass corporate filtering, but the reports are coming through the normal channel, so the mail is reaching corporate mailboxes.",
+  "D":"Forwarding personal email inward is a risk, but the reports describe the same message reaching multiple people, which points at inbound filtering."}},
+
+"q0631": {"objective":"2.3",
+ "explanation":"A pop-up appearing on a page and pushing the user elsewhere means script that was not part of the site is executing in the browser. Injected script running in another user's session is cross-site scripting.",
+ "incorrect":{
+  "A":"A denial of service makes a site unavailable. The page is loading and running perfectly well.",
+  "C":"SQL injection manipulates database queries on the server. It does not produce browser pop-ups.",
+  "D":"TOC, or time-of-check, is a race condition between validating something and using it. It is a timing flaw, not a browser behaviour."}},
+
+"q0632": {"objective":"2.5",
+ "explanation":"End-of-life SCADA devices cannot be patched and the budget is limited, so the remaining lever is reachability. Putting them on their own subnet with controlled access removes most of the paths an attacker could use and costs little more than configuration effort.",
+ "incorrect":{
+  "B":"Monitoring reveals attacks in progress. Visibility is valuable but the devices remain just as exploitable.",
+  "C":"Applying patches is impossible — end of life means the vendor issues none.",
+  "D":"Blocking internet access helps, but SCADA compromises frequently originate from the internal network. Segmentation addresses both directions."}},
+
+"q0633": {"objective":"4.5",
+ "explanation":"The requirement is to stop a specific category of personal identifier leaving accidentally. DLP inspects content against patterns and policy, so it can be tuned to recognise that country's identity number format and block or quarantine messages containing it.",
+ "incorrect":{
+  "A":"A SIEM correlates logs and raises alerts. It reports after the disclosure rather than preventing it.",
+  "B":"SCAP automates configuration and compliance checking of systems. It examines settings, not content.",
+  "D":"A WAF protects a web application from malicious inbound requests. Accidental disclosure is outbound and usually not an attack."}},
+
+"q0634": {"objective":"1.4",
+ "explanation":"Hashing produces a digest that changes completely if any bit changes. Sending the hash alongside the data lets the recipient recompute it and confirm the content arrived exactly as it left, which detects modification in transit.",
+ "incorrect":{
+  "B":"Tokenisation substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
+  "C":"Masking obscures part of a value for display. It neither detects nor prevents alteration.",
+  "D":"Encryption keeps data confidential. Ciphertext can still be tampered with, and encryption alone does not reveal that it was."}},
+
+"q0635": {"objective":"3.3",
+ "explanation":"Tokenisation replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
+ "incorrect":{
+  "A":"Hashing is irreversible, so the application could never retrieve the original value when it legitimately needs it.",
+  "B":"Masking hides parts of a value for display. The full value still sits in the database underneath.",
+  "D":"Obfuscation makes data harder to read without genuine cryptographic strength, and it is reversible by anyone who works out the scheme."}},
+
+"q0636": {"objective":"3.4",
+ "explanation":"Journaling records each change as it happens, so recovery can roll forward to within moments of the failure. That continuous capture is what minimises how much work is lost compared with periodic copies.",
+ "incorrect":{
+  "A":"Monitoring observes the system and alerts on problems. It preserves no data.",
+  "C":"Obfuscation makes data harder to interpret. It offers no protection against loss.",
+  "D":"Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."}},
+
+"q0637": {"objective":"2.5",
+ "explanation":"A zero-day has no patch, so the flaw cannot be removed. Segmentation limits which systems can reach the NAS and what the NAS can reach, so even successful exploitation is confined to a small part of the network rather than the whole office.",
+ "incorrect":{
+  "A":"Encryption protects the confidentiality of stored data. An attacker exploiting the NAS operates through the device, which can read its own data.",
+  "B":"Patching is unavailable by definition — that is what zero-day means.",
+  "D":"Filtering inspects traffic content. Useful, but it relies on recognising the attack, and a zero-day has no known signature."}},
+
+"q0638": {"objective":"4.3",
+ "explanation":"CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what allows a long list of findings to be ranked consistently. Prioritisation needs a common measure, and that is what CVSS provides.",
+ "incorrect":{
+  "A":"OSINT is intelligence gathered from public sources. It can indicate a flaw is being exploited in the wild but provides no score.",
+  "B":"CVE is the identifier catalogue. It names each vulnerability uniquely and carries no severity.",
+  "C":"An IoC is an indicator of compromise — evidence a system was attacked. It reports on incidents rather than ranking vulnerabilities."}},
+
+"q0639": {"objective":"2.2",
+ "explanation":"The MFA code is delivered by text, so the attacker targets the text. Smishing sends a fraudulent SMS that tricks the administrator into handing over the code or approving the prompt, defeating the second factor without breaking any cryptography.",
+ "incorrect":{
+  "B":"Typosquatting registers lookalike domains for mistyped addresses. It does not intercept or extract a token.",
+  "C":"Espionage is a motivation for stealing information rather than a technique for defeating MFA.",
+  "D":"Pretexting is the invented story used to justify a request. It is an element within the attack rather than the attack vector, which here is SMS."}},
+
+"q0640": {"objective":"2.4",
+ "explanation":"Successful logins from distant locations in quick succession mean one set of credentials is in use by more than one person or system. Where no compromise is indicated, the ordinary explanation is that the account's password has been shared.",
+ "incorrect":{
+  "A":"A brute-force attack produces a mass of failed attempts before any success. These logins succeeded.",
+  "B":"Privilege escalation is gaining rights beyond those assigned. The account's permissions are unchanged.",
+  "C":"Cross-site scripting injects script into a web page. It is unrelated to authentication geography."}},
+
+"q0641": {"objective":"3.2",
+ "explanation":"The traffic is specifically inbound HTTP and the requirement is to block violations immediately. A web application firewall understands HTTP, inspects each request against application attack patterns, and drops the malicious ones inline.",
+ "incorrect":{
+  "A":"An IPS blocks inline too, but it works at the network level on general attack signatures rather than understanding application logic and HTTP semantics.",
+  "B":"An IDS detects and alerts without blocking, which fails the immediate-blocking requirement.",
+  "C":"A proxy mediates and can filter requests, but it is not purpose-built to recognise web application attacks."}},
+
+"q0642": {"objective":"3.2",
+ "explanation":"An intrusion prevention system sits inline, inspects traffic against attack signatures and behaviour, and drops what it recognises as malicious without waiting for a person. Automated immediate action against inbound traffic is exactly its function.",
+ "incorrect":{
+  "A":"UEM manages endpoints — configuration, applications and policy on devices. It does not inspect network traffic.",
+  "C":"A WAF also blocks inline but only understands HTTP to a web application. The requirement here is general inbound malicious traffic.",
+  "D":"A VPN encrypts a connection. It provides confidentiality rather than threat blocking."}},
+
+"q0643": {"objective":"4.6",
+ "explanation":"RADIUS is the standard for centralised authentication of network access, and wireless controllers speak it natively. It can query the existing LDAP directory as its user store, satisfying both the LDAP and the central management requirements.",
+ "incorrect":{
+  "A":"SAML federates authentication between an identity provider and web applications. Wireless association is not a web session.",
+  "B":"TACACS+ centralises authentication and command authorisation, but it is used mainly for administrative access to network devices rather than client wireless authentication.",
+  "C":"OAuth is an authorisation framework issuing tokens to applications. It does not authenticate devices onto a wireless network."}},
+
+"q0644": {"objective":"4.6",
+ "explanation":"Security groups let permissions be attached to a role or department once, and users inherit them through membership. Managing entitlements by group rather than per person is what makes the process efficient and consistent.",
+ "incorrect":{
+  "A":"Resource provisioning allocates infrastructure such as compute or storage. It does not assign user permissions.",
+  "B":"User provisioning creates and removes accounts, often automatically. It is the mechanism that places users into groups rather than the structure granting the permissions.",
+  "D":"Enforcing baselines keeps system configuration at a known-good standard. It governs machines, not user entitlements."}},
+
+"q0645": {"objective":"1.3",
+ "explanation":"A maintenance window is an agreed period, normally at a time of low usage, in which disruptive work may be carried out. Agreeing it with leadership is how updates get applied with the disruption planned for and communicated rather than unexpected.",
+ "incorrect":{
+  "B":"A backout plan describes how to reverse the change if it fails. Essential, but it addresses failure rather than avoiding disruption.",
+  "C":"A standard operating procedure documents how the task is performed. It governs method, not timing.",
+  "D":"Impact analysis assesses what the change might affect. It informs the decision but does not schedule the work."}},
+
+"q0646": {"objective":"3.2",
+ "explanation":"IPSec authenticates and encrypts IP packets themselves, so every protocol carried over the link is protected regardless of whether the application supports encryption. That makes it the right layer for securing all traffic between corporate sites.",
+ "incorrect":{
+  "A":"EAP is an authentication framework used inside network access protocols such as 802.1X. It authenticates but does not encrypt site-to-site traffic.",
+  "C":"SD-WAN manages and optimises traffic across WAN links. It can carry encryption but is a connectivity management technology rather than the security protocol.",
+  "D":"A WAF protects a web application from malicious requests. It covers one application, not all internal traffic."}},
+
+"q0647": {"objective":"4.8",
+ "explanation":"The incident has been identified, which is detection. The next step is to stop it getting worse — isolating affected hosts, cutting connectivity, disabling accounts — before spending time on removing the cause or restoring service.",
+ "incorrect":{
+  "B":"Detection is the step that has just happened.",
+  "C":"Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
+  "D":"Recovery restores systems to normal service and comes last."}},
+
+"q0648": {"objective":"2.5",
+ "explanation":"Cross-site scripting exists because user-supplied content reaches a page without being neutralised. Validating and sanitising input at the application removes the defect itself, which is remediation rather than mitigation.",
+ "incorrect":{
+  "B":"An NGFW filters traffic at a network boundary. It does not understand an individual application's input handling.",
+  "C":"A vulnerability scan found the problem. Scanning again fixes nothing.",
+  "D":"A WAF can block many XSS attempts and is a sensible compensating control, but it filters around the flaw while the vulnerable code remains."}},
+
+"q0649": {"objective":"4.7",
+ "explanation":"Scaling from supplying links to managing them means doing the same configuration work many times over. Enforcing a baseline means every managed link is built and maintained to one standard automatically, so quality stays consistent as volume grows without adding proportional effort.",
+ "incorrect":{
+  "A":"Escalation support handles exceptions that front-line staff cannot. It is reactive and does not scale routine delivery.",
+  "B":"Increasing the workforce scales by adding cost linearly, which is the opposite of cost-effective.",
+  "D":"Technical debt is accumulated shortcuts that will need reworking. It is a liability, not a method."}},
+
+"q0650": {"objective":"1.1",
+ "explanation":"An alert tells you something has happened. Recognising and reporting activity after the fact, so it can be investigated, is the definition of a detective control.",
+ "incorrect":{
+  "A":"Preventive controls stop an event occurring. An alert blocks nothing.",
+  "B":"Corrective controls restore normal operation after an incident. The alert precedes any correction.",
+  "C":"Compensating controls substitute for a primary control that cannot be implemented. A SIEM alert is a control in its own right."}},
+
+"q0651": {"objective":"2.2",
+ "explanation":"An evil twin is a rogue access point broadcasting the same network name as a legitimate one. It works because open or weakly secured wireless networks give clients no way to verify which access point is genuine, so they associate with the attacker's.",
+ "incorrect":{
+  "B":"Impersonation is assuming a trusted identity to manipulate a person. It targets human judgement rather than a network.",
+  "C":"A watering hole attack compromises a website the target group visits. The vulnerability is in the site, not the network.",
+  "D":"Pretexting is inventing a backstory to justify a request. Again it targets people."}},
+
+"q0652": {"objective":"2.3",
+ "explanation":"The recommendation is specifically about database input validation, which points at input reaching the database as code. SQL injection is the vulnerability that arises when user-supplied text is interpreted as part of a query instead of as data.",
+ "incorrect":{
+  "A":"Cross-site scripting injects script that runs in a browser. It is an output-encoding problem rather than a database one.",
+  "B":"Command injection executes operating system commands. The recommendation names the database specifically.",
+  "C":"A buffer overflow writes past an allocated memory region. It is a memory-handling defect, not a query-construction one."}},
+
+"q0653": {"objective":"4.8",
+ "explanation":"Bringing the response team and stakeholders together to work through a hypothetical event, discussing what each would do, is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing roles and finding gaps.",
+ "incorrect":{
+  "A":"Lessons learned is the review conducted after a real incident.",
+  "B":"Digital forensics is the technical collection and analysis of evidence.",
+  "D":"Root cause analysis determines why a real incident occurred."}},
+
+"q0654": {"objective":"3.3",
+ "explanation":"Confidential is the level for information that must not be disclosed publicly but is shared inside the organisation and with trusted partners under agreement. That intended audience is exactly what the classification describes.",
+ "incorrect":{
+  "A":"Public data can be disclosed to anyone without harm.",
+  "B":"Restricted is a tighter level, limiting access to a specifically named group rather than the organisation and its partners generally.",
+  "D":"Sensitive is a broad descriptor covering anything needing protection. It is less precise than confidential as a classification level."}},
+
+"q0655": {"objective":"3.1",
+ "explanation":"Microsegmentation means enforcing policy between individual workloads rather than between large network zones. Software-defined networking makes that practical, because policy is expressed centrally in software and applied per workload instead of per physical device.",
+ "incorrect":{
+  "A":"Next-generation firewalls enforce rich policy at boundaries. Deploying one between every pair of workloads is not feasible physically or financially.",
+  "C":"Embedded systems are purpose-built devices. They are a category of equipment, not a segmentation technology.",
+  "D":"Air-gapped means no network connection at all. That is total isolation rather than fine-grained segmentation."}},
+
+"q0656": {"objective":"5.2",
+ "explanation":"Recovery point objective states how much data the business can afford to lose, expressed as a period of time. Backups must run at least as often as that window, so the RPO directly dictates the schedule.",
+ "incorrect":{
+  "A":"RTO is the maximum tolerable downtime. It drives recovery capability rather than backup frequency.",
+  "C":"MTTR is the average time to repair a failed component. It is a maintenance metric.",
+  "D":"MTBF predicts how long equipment runs before failing. It informs reliability planning, not backup cadence."}},
+
+"q0657": {"objective":"4.1",
+ "explanation":"The dispute is whether the software was altered after the vendor released it. Code signing settles that — the vendor signs the binary with its private key, and anyone can verify the signature to prove the file is exactly what was published.",
+ "incorrect":{
+  "A":"Secure storage protects the files on the distribution server. It does not let the customer verify what they downloaded.",
+  "B":"Static code analysis finds defects in source during development. It says nothing about tampering after release.",
+  "C":"Input validation protects a running application from malicious input. It is unrelated to distribution integrity."}},
+
+"q0658": {"objective":"4.1",
+ "explanation":"Every recommendation removes something an attacker could use: unused servers, unused ports, and publicly available contact details that feed social engineering. Eliminating exposure rather than defending it is attack surface reduction.",
+ "incorrect":{
+  "B":"A vulnerability assessment is the activity that produced these findings. The recommendations describe what to do with them.",
+  "C":"A tabletop exercise rehearses incident response in discussion.",
+  "D":"A business impact analysis determines how badly the organisation suffers when a function is lost."}},
+
+"q0659": {"objective":"4.4",
+ "explanation":"A SIEM ingests logs from many different devices and services, normalises the differing formats, correlates events across them and raises alerts. Receiving logs broadly and presenting alerts is precisely its definition.",
+ "incorrect":{
+  "B":"SCADA supervises industrial control equipment. It is an operational technology system.",
+  "C":"SNMP is a protocol for monitoring and managing devices. It gathers metrics rather than correlating logs into alerts.",
+  "D":"SCAP is a set of standards for automating configuration and vulnerability checking."}},
+
+"q0660": {"objective":"2.4",
+ "explanation":"Consistent data of a particular type being sent out to disreputable addresses is collection and exfiltration running quietly in the background. Spyware is malware whose purpose is exactly that — gathering information and shipping it to the attacker.",
+ "incorrect":{
+  "A":"A logic bomb sits dormant until a trigger and then acts destructively. It does not stream data out continuously.",
+  "B":"A worm spreads itself between hosts. The traffic here goes outbound to external addresses, not laterally.",
+  "D":"A keylogger is a specific kind of spyware capturing keystrokes. The logs describe similar data types generally, which points at the broader category."}},
+
+"q0661": {"objective":"1.2",
+ "explanation":"Access should be granted only after identity is proven. If the system authorises first, someone obtains rights they were never verified to hold — effectively escalating their privileges through a flaw in the authentication and authorisation ordering. Note this question is loosely worded; the intended point is that authorisation without prior authentication yields unearned access.",
+ "incorrect":{
+  "B":"A race condition exploits the timing gap between checking a condition and acting on it. That is a related flaw but concerns timing rather than the order of authentication and authorisation.",
+  "C":"Tailgating is following an authorised person through a physical door.",
+  "D":"Impersonation is assuming another identity to deceive someone. That involves a false authentication rather than none at all."}},
+
+"q0662": {"objective":"2.1",
+ "explanation":"An employee turning against the organisation over a personal grievance, while still holding legitimate access, is the classic insider threat. What makes them dangerous is that their access is genuine and their activity looks authorised.",
+ "incorrect":{
+  "B":"Nation-state actors pursue espionage and strategic disruption from outside.",
+  "C":"Shadow IT is unsanctioned technology adopted for convenience. It is careless rather than malicious.",
+  "D":"A hacktivist attacks to advance a cause. This is personal grievance, not ideology."}}
+}

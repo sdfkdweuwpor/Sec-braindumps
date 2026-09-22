@@ -4690,6 +4690,48 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0630",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A security administrator receives multiple reports about the same suspicious email.\nWhich of the following is the most likely reason for the malicious email's continued delivery?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Employees are flagging legitimate emails as spam."
+      },
+      {
+        "key": "B",
+        "text": "Information from reported emails is not being used to tune email filtering tools."
+      },
+      {
+        "key": "C",
+        "text": "Employees are using shadow IT solutions for email."
+      },
+      {
+        "key": "D",
+        "text": "Employees are forwarding personal emails to company email addresses."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Users reported the message, which means the organisation knew about it — yet it kept arriving. That gap between reporting and enforcement means the intelligence from those reports is not being fed back into the filtering rules, so nothing changes for the next recipient.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Flagging legitimate email as spam produces false positives. It would block wanted mail, not let malicious mail through.",
+      "C": "Shadow IT email solutions would bypass corporate filtering, but the reports are coming through the normal channel, so the mail is reaching corporate mailboxes.",
+      "D": "Forwarding personal email inward is a risk, but the reports describe the same message reaching multiple people, which points at inbound filtering."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p266",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0656",
     "domain": 5,
     "objective": "5.2",
@@ -4717,51 +4759,17 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Recovery Point Objective (RPO) defines the maximum acceptable amount of data loss in terms of time, directly influencing how frequently backups must be performed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery point objective states how much data the business can afford to lose, expressed as a period of time. Backups must run at least as often as that window, so the RPO directly dictates the schedule.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RTO is the maximum tolerable downtime. It drives recovery capability rather than backup frequency.",
+      "C": "MTTR is the average time to repair a failed component. It is a maintenance metric.",
+      "D": "MTBF predicts how long equipment runs before failing. It informs reliability planning, not backup cadence."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p276",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0658",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "After completing an annual external penetration test, a company receives the following guidance:\n• Decommission two unused web servers currently exposed to the internet.\n• Close 18 open and unused ports found on their existing production web servers.\n• Remove company email addresses and contact info from public domain registration records.\nWhich of the following security practices best describes these recommendations?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Attack surface reduction"
-      },
-      {
-        "key": "B",
-        "text": "Vulnerability assessment"
-      },
-      {
-        "key": "C",
-        "text": "Tabletop exercise"
-      },
-      {
-        "key": "D",
-        "text": "Business impact analysis"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Attack surface reduction involves minimizing the number of exploitable points, such as unused servers, open ports, and publicly exposed contact information, that attackers could target.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p276",
-    "needsReview": true,
-    "inferenceConfidence": 0.36,
     "needsExplanation": false,
     "keyCorrected": false
   },

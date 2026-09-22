@@ -4735,13 +4735,59 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization replaces sensitive data with non-sensitive, unique tokens while storing the actual data securely in a separate location, effectively protecting data at rest in a database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tokenisation replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hashing is irreversible, so the application could never retrieve the original value when it legitimately needs it.",
+      "B": "Masking hides parts of a value for display. The full value still sits in the database underneath.",
+      "D": "Obfuscation makes data harder to read without genuine cryptographic strength, and it is reversible by anyone who works out the scheme."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p268",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.812,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0636",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following would an organization most likely use to minimize the loss of data on a file server in the event that data needs to be restored due to loss of the primary server?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Monitoring"
+      },
+      {
+        "key": "B",
+        "text": "Journaling"
+      },
+      {
+        "key": "C",
+        "text": "Obfuscation"
+      },
+      {
+        "key": "D",
+        "text": "Tokenization"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Journaling records each change as it happens, so recovery can roll forward to within moments of the failure. That continuous capture is what minimises how much work is lost compared with periodic copies.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Monitoring observes the system and alerts on problems. It preserves no data.",
+      "C": "Obfuscation makes data harder to interpret. It offers no protection against loss.",
+      "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p268",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4773,12 +4819,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A Web Application Firewall (WAF) protects inbound HTTP traffic by monitoring, filtering, and immediately blocking malicious requests targeting web applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The traffic is specifically inbound HTTP and the requirement is to block violations immediately. A web application firewall understands HTTP, inspects each request against application attack patterns, and drops the malicious ones inline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS blocks inline too, but it works at the network level on general attack signatures rather than understanding application logic and HTTP semantics.",
+      "B": "An IDS detects and alerts without blocking, which fails the immediate-blocking requirement.",
+      "C": "A proxy mediates and can filter requests, but it is not purpose-built to recognise web application attacks."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p270",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4811,12 +4861,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An Intrusion Prevention System (IPS) automatically detects and blocks malicious network traffic in real time, providing immediate protection against inbound threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An intrusion prevention system sits inline, inspects traffic against attack signatures and behaviour, and drops what it recognises as malicious without waiting for a person. Automated immediate action against inbound traffic is exactly its function.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "UEM manages endpoints — configuration, applications and policy on devices. It does not inspect network traffic.",
+      "C": "A WAF also blocks inline but only understands HTTP to a web application. The requirement here is general inbound malicious traffic.",
+      "D": "A VPN encrypts a connection. It provides confidentiality rather than threat blocking."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p271",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4849,12 +4903,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "IPsec authenticates and encrypts IP traffic, providing secure communication between corporate sites over the local or wide area network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IPSec authenticates and encrypts IP packets themselves, so every protocol carried over the link is protected regardless of whether the application supports encryption. That makes it the right layer for securing all traffic between corporate sites.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EAP is an authentication framework used inside network access protocols such as 802.1X. It authenticates but does not encrypt site-to-site traffic.",
+      "C": "SD-WAN manages and optimises traffic across WAN links. It can carry encryption but is a connectivity management technology rather than the security protocol.",
+      "D": "A WAF protects a web application from malicious requests. It covers one application, not all internal traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p272",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4887,12 +4945,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Confidential data is intended for internal organizational use or for sharing with trusted commercial partners, requiring protection from unauthorized disclosure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Confidential is the level for information that must not be disclosed publicly but is shared inside the organisation and with trusted partners under agreement. That intended audience is exactly what the classification describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Public data can be disclosed to anyone without harm.",
+      "B": "Restricted is a tighter level, limiting access to a specifically named group rather than the organisation and its partners generally.",
+      "D": "Sensitive is a broad descriptor covering anything needing protection. It is less precise than confidential as a classification level."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p275",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4925,12 +4987,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Software-defined networking (SDN) enables microsegmentation by allowing fine-grained, software-based control over network traffic flows, isolating workloads and minimizing attack surfaces.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Microsegmentation means enforcing policy between individual workloads rather than between large network zones. Software-defined networking makes that practical, because policy is expressed centrally in software and applied per workload instead of per physical device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Next-generation firewalls enforce rich policy at boundaries. Deploying one between every pair of workloads is not feasible physically or financially.",
+      "C": "Embedded systems are purpose-built devices. They are a category of equipment, not a segmentation technology.",
+      "D": "Air-gapped means no network connection at all. That is total isolation rather than fine-grained segmentation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p275",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
