@@ -4026,44 +4026,6 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0561",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "A security officer observes that a software development team is not complying with its corporate security policy on encrypting confidential data.\nWhich of the following categories refers to this type of non-compliance?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "External"
-      },
-      {
-        "key": "B",
-        "text": "Standard"
-      },
-      {
-        "key": "C",
-        "text": "Regulation"
-      },
-      {
-        "key": "D",
-        "text": "Internal"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "It's a violation of an internal corporate security policy, so the non-compliance is classified as internal.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p240",
-    "needsReview": true,
-    "inferenceConfidence": 0.417,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0562",
     "domain": 3,
     "objective": "3.3",
@@ -4091,12 +4053,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The AI tool is a proprietary creation owned by the company under contract, making it intellectual property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tool the company designed and built is its own proprietary creation, and its value lies in that exclusivity. Intellectual property is the data classification covering trade secrets, designs, source code and proprietary work products.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Classified is a government security marking applied to national security information.",
+      "B": "Regulated information is data whose handling is dictated by law, such as health or payment data. An internal ticketing tool is not inherently regulated.",
+      "C": "Open source means the code is published under a licence permitting reuse. A tool built under a specific contract is the opposite."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p240",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4129,12 +4095,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An air-gapped system is physically and logically isolated from any external (internet-facing) network, so packets from the internet simply have no path to reach it. This architectural separation is the most definitive way to prevent internet access altogether, rather than just limiting or monitoring it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap means no network path exists between the system and the internet, so there is nothing to filter, block or misconfigure. That absence of connectivity is the most definitive way to prevent internet access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containerisation isolates applications on a shared kernel. The host still has connectivity.",
+      "B": "Virtualisation runs guests on shared hardware. Those guests remain networked.",
+      "C": "SD-WAN manages and optimises connectivity across WAN links — it provides access rather than removing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p241",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4167,12 +4137,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "They're worried about how long the generator can run before it's likely to fail during a prolonged outage. MTBF quantifies the expected operational time between failures, guiding preventive maintenance schedules and part replacement intervals to reduce the chance of a fault when the generator is most needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The concern is how long the generator will run before something fails. Mean time between failures expresses exactly that expected operating interval, which is what drives preventive maintenance schedules and component replacement intervals.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RPO is how much data loss is tolerable, measured backwards from a failure. It concerns data, not hardware reliability.",
+      "B": "ARO is the annualised rate of occurrence of a loss event. It is a risk frequency input rather than an equipment reliability measure.",
+      "D": "MTTR is the average time to repair once something has failed. That matters after the fault, whereas maintenance planning aims to prevent it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p241",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4205,13 +4179,101 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "AES with a 256-bit key is strong, standards-approved symmetric encryption specifically suited for protecting stored data. It renders the ciphertext unreadable without the key, meets common regulatory requirements (e.g., FIPS 140-2 validated implementations), and provides far stronger assurance for data at rest than transport protocols, masking, or password salting techniques that don't actually encrypt the full dataset.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data at rest is stored data, and protecting it means making it unreadable without a key. AES-256 is strong, standards-approved symmetric encryption designed for exactly that, and it is what full disk and database encryption use underneath.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "TLS 1.2 protects data in transit. It secures a connection and does nothing once data lands on disk.",
+      "C": "Masking obscures parts of a value for display. The underlying stored data remains intact and readable.",
+      "D": "Salting adds randomness before hashing passwords. It strengthens hashing rather than encrypting stored data."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0576",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure models?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Common attacks are less likely to be effective."
+      },
+      {
+        "key": "B",
+        "text": "Configuration can be better managed and replicated."
+      },
+      {
+        "key": "C",
+        "text": "Outsourcing to a third party with more expertise in network defense is possible."
+      },
+      {
+        "key": "D",
+        "text": "Optimization can occur across a number of computing instances"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Infrastructure as code defines systems in version-controlled files, so every environment is built from the same reviewed definition. Configuration becomes repeatable and auditable, and the undocumented manual tweaks that cause drift in traditional builds simply cannot occur.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IaC does not make common attacks less effective. The resulting systems face the same threats; they are just built consistently.",
+      "C": "Outsourcing to a third party describes a managed service. IaC is a method the organisation applies itself.",
+      "D": "Optimisation across computing instances is an efficiency benefit of cloud platforms rather than a security advantage of IaC."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p246",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0577",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "Which of the following is an advantage of a microservice-based architecture over traditional software architectures?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Updates can be done one or more times per day if security issues arise."
+      },
+      {
+        "key": "B",
+        "text": "Managing communication between microservices is more streamlined."
+      },
+      {
+        "key": "C",
+        "text": "The internal structure of the code is hidden from users, making exploits more difficult to write."
+      },
+      {
+        "key": "D",
+        "text": "The services are written by a single team and can be debugged more quickly."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Each microservice is independently deployable, so a security fix in one component can be built, tested and released without rebuilding the whole application. That independence is what allows patching as often as needed, shrinking the window a vulnerability stays open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Communication between microservices becomes harder, not easier — calls that were in-process now cross the network.",
+      "C": "Hiding internal structure is not a property of microservices. Their interfaces are typically well documented APIs.",
+      "D": "Debugging is harder because a single request spans several services and network hops."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p246",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4252,21 +4314,68 @@ export const domain3Questions = [
       "B",
       "E"
     ],
-    "explanation": "TLS - Data in transit: TLS encrypts sessions as information moves across networks, preventing interception or tampering while the data is traveling.\nFDE - Data at rest: Full-disk encryption protects files stored on the device; if the drive is lost or stolen, the data remains unreadable without the key.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The two controls protect two different data states. TLS encrypts sessions as information crosses the network, which is data in transit. Full disk encryption protects files stored on the device, which is data at rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data segmentation separates data into distinct stores or zones. Neither control does that.",
+      "C": "Data sovereignty is the legal principle about which country's laws govern data. It is unrelated to these controls.",
+      "D": "Data in use is data loaded in memory and being actively processed. Neither FDE nor TLS protects that state.",
+      "F": "Data redundancy is about keeping copies for availability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p250",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.912,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0588",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "An administrator investigating an incident is concerned about the downtime of a critical server due to a failed drive.\nWhich of the following would the administrator use to estimate the time needed to fix the issue?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "MTTR"
+      },
+      {
+        "key": "B",
+        "text": "MTBF"
+      },
+      {
+        "key": "C",
+        "text": "RTO"
+      },
+      {
+        "key": "D",
+        "text": "RPO"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Mean time to repair is the average time needed to fix a failed component and return it to service. Estimating how long the server will be down while the drive is replaced is exactly what MTTR measures.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MTBF predicts how long equipment runs before failing. It forecasts the failure rather than the repair.",
+      "C": "RTO is the maximum downtime the business will tolerate. It is a target the repair must fit inside, not an estimate of the repair.",
+      "D": "RPO concerns how much data loss is acceptable."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p251",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0589",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A business manager is concerned about the availability of an application running on hardware in the local data center.\nWhich of the following solutions will improve availability while reducing maintenance overhead?",
     "choices": [
@@ -4290,12 +4399,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Transitioning from on-premises to a cloud environment improves availability through the provider's redundant infrastructure and managed services, while reducing maintenance overhead since hardware and many operational tasks are handled by the cloud provider.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The manager wants better availability without more work. Moving to the cloud inherits the provider's redundancy, failover and managed infrastructure, so availability improves while hardware maintenance stops being the company's responsibility at all.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Load balancing and HA genuinely improve availability, but they add more hardware to own, patch and maintain — which is the overhead being reduced.",
+      "C": "Cybersecurity insurance transfers financial loss. It does nothing for uptime.",
+      "D": "Decommissioning end-of-life hardware removes risk and is worth doing, but it reduces capacity rather than improving availability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4328,12 +4441,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A jump server acts as a controlled access point that can be restricted to specific internal IP addresses, ensuring that only approved internal sources can connect to the mission-critical database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server funnels all access to the database through one controlled, hardened host whose own access can be restricted to specific internal addresses. Everything else is denied, so the database accepts connections from exactly one known source.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A web application firewall inspects HTTP traffic to a web application. A database is not a web application.",
+      "B": "A network tap copies traffic for monitoring. It observes and blocks nothing.",
+      "C": "An intrusion prevention system blocks traffic matching attack patterns. Legitimate connections from an unapproved internal address match no attack signature."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false

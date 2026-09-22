@@ -4186,40 +4186,44 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0568",
+    "id": "q0561",
     "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "Which of the following prevents unauthorized modifications to internal processes, assets, and security controls?",
+    "question": "A security officer observes that a software development team is not complying with its corporate security policy on encrypting confidential data.\nWhich of the following categories refers to this type of non-compliance?",
     "choices": [
       {
         "key": "A",
-        "text": "Change management"
+        "text": "External"
       },
       {
         "key": "B",
-        "text": "Playbooks"
+        "text": "Standard"
       },
       {
         "key": "C",
-        "text": "Incident response"
+        "text": "Regulation"
       },
       {
         "key": "D",
-        "text": "Acceptable use policy"
+        "text": "Internal"
       }
     ],
     "correct": [
-      "A"
+      "D"
     ],
-    "explanation": "A formal change management process requires every alteration to be requested, reviewed, approved, documented, and tested before deployment. That governance gate keeps internal processes, assets, and security controls from being modified ad hoc or by unauthorized personnel, ensuring integrity and auditability of all changes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The rule being broken is the company's own security policy, not a law or an external standard. Failing to meet an obligation the organisation set for itself is internal non-compliance, which is handled through management and disciplinary process rather than a regulator.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "External non-compliance means failing an obligation imposed from outside, such as a contract or a regulator's requirement.",
+      "B": "A standard is a mandatory technical requirement. It is a type of document rather than a category of non-compliance.",
+      "C": "Regulation refers to law imposed by a government body. No statute has been breached here."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p243",
-    "needsReview": true,
-    "inferenceConfidence": 0.478,
+    "source": "SY0-701_en.pdf#p240",
+    "needsReview": false,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4251,12 +4255,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is a catalog of identified risks and their details; for each entry you track signals that a risk is materializing. Those measurable signals are key risk indicators (KRIs) - thresholds or metrics (e.g., failed logins/day, patch backlog age) tied to a specific risk so you can spot escalation early and trigger the planned response. Continuous assessment, appetite, and culture are program-level concepts, not individual register fields.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk register records each identified risk with its owner, its scoring, its treatment and the signals that it is materialising. Those measurable signals are key risk indicators, and they sit inside the register entry for each risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Continuous risk assessment is a way of running the programme. It produces entries rather than being a field within one.",
+      "C": "Risk appetite is an organisation-wide statement of how much risk is acceptable. It governs the register rather than appearing per-risk.",
+      "D": "Risk culture describes how the organisation thinks about risk. It is a cultural characteristic, not a data field."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.92,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4289,51 +4297,59 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RTO is the maximum acceptable downtime: the target window within which systems and operations must be restored after a disruption.\nWhen the team asks \"how long until we're back up?\", they're defining the RTO.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery time objective is the maximum tolerable period between a disruption and operations being restored. Asking how long until systems are back up is asking for the RTO.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Recovery point objective concerns how much data loss is acceptable, measured backwards from the failure.",
+      "C": "Mean time between failures predicts how often equipment fails. It is a reliability measure.",
+      "D": "Mean time to repair is the average time to fix one failed component. It is a maintenance metric that feeds into RTO rather than being it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p245",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.806,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0576",
+    "id": "q0580",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure models?",
+    "question": "An accounting clerk sent money to an attacker's bank account after receiving fraudulent instructions over the phone to use a new account.\nWhich of the following would most likely prevent this activity in the future?",
     "choices": [
       {
         "key": "A",
-        "text": "Common attacks are less likely to be effective."
+        "text": "Standardizing security incident reporting"
       },
       {
         "key": "B",
-        "text": "Configuration can be better managed and replicated."
+        "text": "Executing regular phishing campaigns"
       },
       {
         "key": "C",
-        "text": "Outsourcing to a third party with more expertise in network defense is possible."
+        "text": "Implementing insider threat detection measures"
       },
       {
         "key": "D",
-        "text": "Optimization can occur across a number of computing instances"
+        "text": "Updating processes for sending wire transfers"
       }
     ],
     "correct": [
-      "B"
+      "D"
     ],
-    "explanation": "IaC stores infrastructure definitions as version-controlled code, so every change is reviewable, auditable, and repeatable. You can spin up identical, securely preconfigured environments from the same template, eliminating drift and undocumented tweaks that plague traditional, manually built infrastructure. This consistency and traceability are what make IaC the more secure choice.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One person acting alone on a phone instruction was enough to move money. Rebuilding the wire transfer process with verification steps — a callback to a known number, dual approval, pre-approved account lists — makes the same attack structurally impossible rather than relying on the clerk's judgement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Standardising incident reporting improves how you respond after the money has gone.",
+      "B": "Phishing campaigns train people against fraudulent messages. The instruction arrived by phone, and awareness alone still leaves one person able to act unilaterally.",
+      "C": "Insider threat detection looks for malicious employees. The clerk was deceived, not disloyal."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "SY0-701_en.pdf#p247",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4365,12 +4381,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An SLA spells out exactly how fast a provider must respond and resolve issues, what thresholds and KPIs will be measured (uptime, throughput, MTTR), and when/whom to escalate to if those targets aren't met, making it the formal document for response times, escalation paths, and performance metrics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement sets out the measurable commitments a provider must meet — response times, resolution targets, uptime and throughput — and who to escalate to when they are missed. Those three elements are precisely what an SLA defines.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
+      "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
+      "C": "An NDA restricts disclosure of confidential information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p248",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4403,12 +4423,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An NDA legally binds parties to keep specified information secret, directly enforcing the confidentiality pillar of security by prohibiting unauthorized disclosure of protected data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement legally binds the parties not to reveal specified information. Preventing unauthorised disclosure is the confidentiality pillar of security, which makes the NDA the document most directly tied to it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A statement of work defines deliverables and tasks for an engagement.",
+      "C": "An MOU is a non-binding statement of intent between parties.",
+      "D": "A BPA governs the commercial terms of a business partnership."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4441,50 +4465,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The tester has some internal knowledge (valid credentials and target URL) but lacks full visibility into the application internals/source code. That limited insight falls squarely into gray/partially known testing, which blends external attacker perspective with select insider information to focus efforts efficiently.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester was given the URL and valid credentials but not the source code — some insider knowledge, but not full visibility. That middle ground is a partially known environment, often called grey box.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An unknown environment gives the tester nothing and requires them to discover the target themselves.",
+      "C": "A known environment supplies full documentation, architecture and typically source code.",
+      "D": "Obfuscated is not a recognised penetration testing category; it describes code made deliberately hard to read."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0588",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "An administrator investigating an incident is concerned about the downtime of a critical server due to a failed drive.\nWhich of the following would the administrator use to estimate the time needed to fix the issue?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "MTTR"
-      },
-      {
-        "key": "B",
-        "text": "MTBF"
-      },
-      {
-        "key": "C",
-        "text": "RTO"
-      },
-      {
-        "key": "D",
-        "text": "RPO"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "MTTR (Mean Time to Repair) measures the average time required to repair a failed component or system and restore it to full functionality, making it the correct metric for estimating downtime due to a failed drive.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4517,12 +4507,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tailgating into a facility during a red-team exercise is a form of physical penetration testing, where security is evaluated by attempting to bypass physical access controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A red team physically bypassing entry controls by following an authorised person through a door is a physical penetration test. The engagement is authorised, and the objective is to demonstrate that the physical control can be defeated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat is someone inside the organisation abusing legitimate access. The red team are contracted outsiders.",
+      "B": "A brute-force attack tries many values until one works. Tailgating requires no guessing.",
+      "D": "Active reconnaissance probes a target to gather information. Tailgating is gaining entry, which is exploitation rather than reconnaissance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p253",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.737,
     "needsExplanation": false,
     "keyCorrected": false

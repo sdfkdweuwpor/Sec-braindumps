@@ -23664,9 +23664,9 @@
   },
   {
     "id": "q0561",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "domain": 5,
+    "objective": "5.4",
+    "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
     "question": "A security officer observes that a software development team is not complying with its corporate security policy on encrypting confidential data.\nWhich of the following categories refers to this type of non-compliance?",
     "choices": [
@@ -23690,12 +23690,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "It's a violation of an internal corporate security policy, so the non-compliance is classified as internal.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The rule being broken is the company's own security policy, not a law or an external standard. Failing to meet an obligation the organisation set for itself is internal non-compliance, which is handled through management and disciplinary process rather than a regulator.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "External non-compliance means failing an obligation imposed from outside, such as a contract or a regulator's requirement.",
+      "B": "A standard is a mandatory technical requirement. It is a type of document rather than a category of non-compliance.",
+      "C": "Regulation refers to law imposed by a government body. No statute has been breached here."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p240",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23728,12 +23732,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "The AI tool is a proprietary creation owned by the company under contract, making it intellectual property.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tool the company designed and built is its own proprietary creation, and its value lies in that exclusivity. Intellectual property is the data classification covering trade secrets, designs, source code and proprietary work products.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Classified is a government security marking applied to national security information.",
+      "B": "Regulated information is data whose handling is dictated by law, such as health or payment data. An internal ticketing tool is not inherently regulated.",
+      "C": "Open source means the code is published under a licence permitting reuse. A tool built under a specific contract is the opposite."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p240",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23766,12 +23774,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "An air-gapped system is physically and logically isolated from any external (internet-facing) network, so packets from the internet simply have no path to reach it. This architectural separation is the most definitive way to prevent internet access altogether, rather than just limiting or monitoring it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap means no network path exists between the system and the internet, so there is nothing to filter, block or misconfigure. That absence of connectivity is the most definitive way to prevent internet access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Containerisation isolates applications on a shared kernel. The host still has connectivity.",
+      "B": "Virtualisation runs guests on shared hardware. Those guests remain networked.",
+      "C": "SD-WAN manages and optimises connectivity across WAN links — it provides access rather than removing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p241",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23804,12 +23816,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "They're worried about how long the generator can run before it's likely to fail during a prolonged outage. MTBF quantifies the expected operational time between failures, guiding preventive maintenance schedules and part replacement intervals to reduce the chance of a fault when the generator is most needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The concern is how long the generator will run before something fails. Mean time between failures expresses exactly that expected operating interval, which is what drives preventive maintenance schedules and component replacement intervals.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "RPO is how much data loss is tolerable, measured backwards from a failure. It concerns data, not hardware reliability.",
+      "B": "ARO is the annualised rate of occurrence of a loss event. It is a risk frequency input rather than an equipment reliability measure.",
+      "D": "MTTR is the average time to repair once something has failed. That matters after the fault, whereas maintenance planning aims to prevent it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p241",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23846,12 +23862,17 @@
     "correct": [
       "E"
     ],
-    "explanation": "Physically destroying the media (industrial shredding/pulverizing) renders the platters/chips irrecoverable, providing the highest assurance that no residual data can be reconstructed - unlike logical wipes or degaussing, which can fail or be bypassed on certain media types.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Physical destruction leaves nothing to recover. Shredding or pulverising the platters and chips removes any dependence on software behaving correctly, which is why it gives the strongest assurance of any disposal method.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys magnetic structure and works on tape and spinning disks, but it has no effect on solid-state media.",
+      "B": "A multipass wipe is thorough on conventional drives, but wear levelling on SSDs can leave blocks the overwrite never reaches.",
+      "C": "Hashing verifies integrity. It is not a disposal method at all.",
+      "D": "Erasure is a logical delete. It is the weakest option and data is often trivially recoverable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23884,21 +23905,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "An overwhelming volume of packets can fill an application's input buffers faster than it can process them. Once those buffers are saturated, the program spends excessive time handling overflow conditions (or even overwrites memory), causing dramatic slowdowns and potential instability - classic symptoms of a buffer overflow–style resource exhaustion.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When packets arrive faster than the application can process them, input buffers fill and the program spends its time handling overflow conditions instead of doing work. That buffer saturation is what produces the extreme slowdown described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A race condition is a timing flaw between checking a value and using it. It produces incorrect behaviour rather than gradual slowdown under load.",
+      "B": "Cross-site scripting injects script that runs in another user's browser. It affects clients, not server throughput.",
+      "D": "Side loading installs software from outside an official store. It is unrelated to packet handling."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0567",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "A company experiences a breach. The investigation reveals that the threat actor used a zero- day vulnerability to gain access and move laterally.\nWhich of the following would best improve the company's security posture and minimize the time to detect this type of incident?",
     "choices": [
@@ -23922,21 +23947,25 @@
     "correct": [
       "D"
     ],
-    "explanation": "UBA builds baselines of normal user and entity activity (logins, data access patterns, movement between hosts) and flags deviations - the kind of anomalous lateral movement a zero-day– driven intruder generates. Because it's behavior-based rather than signature-based, it can surface unseen exploits faster and shrink detection time for novel attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day has no signature, so signature-based tools are blind to it. User behaviour analytics baselines normal activity and flags deviation, so the lateral movement that follows the initial compromise still stands out even though the exploit itself is unknown.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NAC decides which devices may join the network. Once the attacker is operating from an admitted host it sees nothing.",
+      "B": "An IDS matches traffic against known attack patterns. A zero-day has no pattern to match.",
+      "C": "DLP watches for sensitive data leaving. It may catch exfiltration at the end, but not the lateral movement that precedes it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0568",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
     "question": "Which of the following prevents unauthorized modifications to internal processes, assets, and security controls?",
     "choices": [
@@ -23960,12 +23989,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A formal change management process requires every alteration to be requested, reviewed, approved, documented, and tested before deployment. That governance gate keeps internal processes, assets, and security controls from being modified ad hoc or by unauthorized personnel, ensuring integrity and auditability of all changes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Change management requires every modification to be requested, reviewed, approved and documented before it happens. That gate is what stops processes, assets and controls being altered informally or by someone without authority.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Playbooks give step-by-step guidance for handling specific situations. They direct response rather than gating change.",
+      "C": "Incident response deals with security events after they occur.",
+      "D": "An acceptable use policy tells users what conduct is permitted. It governs behaviour rather than authorising system changes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p243",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.478,
     "needsExplanation": false,
     "keyCorrected": false
@@ -23998,12 +24031,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The stranger is manipulating a casual conversation to elicit sensitive details (employer, division, personal info). This intentional information-gathering through interpersonal interaction is classic social engineering - exploiting human trust rather than technical flaws.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The stranger is steering a casual conversation to extract employer, division and personal details — information useful for a later pretext or targeted attack. Manipulating a person to give up information is social engineering, and this specific form is called elicitation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat comes from someone inside the organisation. The stranger has no relationship to it.",
+      "B": "Phishing is fraudulent messaging, usually electronic. This is a face-to-face conversation.",
+      "D": "Risky describes the behaviour of the user answering, not the technique the stranger is using."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p243",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24036,12 +24073,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "EDR agents sit on hosts, continuously collect rich telemetry (processes, connections, file changes), and can capture network indicators from those endpoints. They rapidly analyze this data locally and ship it to a backend where it's correlated and reported – that's what the CISO wants to speed detection and investigation of compromised systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "EDR agents sit on the hosts themselves, continuously collecting process, file and connection telemetry, analysing it locally and forwarding it to a central platform for correlation and reporting. That is exactly the capability described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NAC decides whether a device may join a network. It collects no host forensic data.",
+      "B": "An IPS inspects network traffic inline and blocks attacks. It sees the wire, not what is happening inside a host.",
+      "C": "A SIEM is the backend that correlates and reports. It receives the data rather than collecting it from potentially compromised systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24074,12 +24115,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "A risk register is a catalog of identified risks and their details; for each entry you track signals that a risk is materializing. Those measurable signals are key risk indicators (KRIs) - thresholds or metrics (e.g., failed logins/day, patch backlog age) tied to a specific risk so you can spot escalation early and trigger the planned response. Continuous assessment, appetite, and culture are program-level concepts, not individual register fields.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk register records each identified risk with its owner, its scoring, its treatment and the signals that it is materialising. Those measurable signals are key risk indicators, and they sit inside the register entry for each risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Continuous risk assessment is a way of running the programme. It produces entries rather than being a field within one.",
+      "C": "Risk appetite is an organisation-wide statement of how much risk is acceptable. It governs the register rather than appearing per-risk.",
+      "D": "Risk culture describes how the organisation thinks about risk. It is a cultural characteristic, not a data field."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.92,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24112,12 +24157,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "AES with a 256-bit key is strong, standards-approved symmetric encryption specifically suited for protecting stored data. It renders the ciphertext unreadable without the key, meets common regulatory requirements (e.g., FIPS 140-2 validated implementations), and provides far stronger assurance for data at rest than transport protocols, masking, or password salting techniques that don't actually encrypt the full dataset.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data at rest is stored data, and protecting it means making it unreadable without a key. AES-256 is strong, standards-approved symmetric encryption designed for exactly that, and it is what full disk and database encryption use underneath.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "TLS 1.2 protects data in transit. It secures a connection and does nothing once data lands on disk.",
+      "C": "Masking obscures parts of a value for display. The underlying stored data remains intact and readable.",
+      "D": "Salting adds randomness before hashing passwords. It strengthens hashing rather than encrypting stored data."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24150,12 +24199,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Once hardware reaches end of life, manufacturers typically end security support. Without new firmware/ microcode patches or drivers, newly discovered vulnerabilities remain unpatched, leaving the device exposed indefinitely - this is the core security concern with EOL gear.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once hardware passes end of life the manufacturer stops issuing firmware and driver updates. Every vulnerability discovered from that point onward stays exploitable permanently, which is the security concern that distinguishes EOL equipment from merely old equipment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Improper disposal causing data release is a real risk, but it occurs at the moment of disposal rather than while the hardware is still in service.",
+      "B": "Lack of replacement hardware is a supply and availability problem, not a vulnerability.",
+      "C": "Legacy hardware lacking resources for new software is a performance and compatibility issue."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p245",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24188,12 +24241,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "RTO is the maximum acceptable downtime: the target window within which systems and operations must be restored after a disruption.\nWhen the team asks \"how long until we're back up?\", they're defining the RTO.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery time objective is the maximum tolerable period between a disruption and operations being restored. Asking how long until systems are back up is asking for the RTO.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Recovery point objective concerns how much data loss is acceptable, measured backwards from the failure.",
+      "C": "Mean time between failures predicts how often equipment fails. It is a reliability measure.",
+      "D": "Mean time to repair is the average time to fix one failed component. It is a maintenance metric that feeds into RTO rather than being it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p245",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.806,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24201,8 +24258,8 @@
   {
     "id": "q0575",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following is a risk for a company using end-of-life applications on its network?",
     "choices": [
@@ -24226,21 +24283,25 @@
     "correct": [
       "C"
     ],
-    "explanation": "End-of-life applications no longer receive security patches. Newly found flaws stay unpatched, leaving the software inherently vulnerable and an easy entry point for attackers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An application past end of life receives no further security patches, so newly discovered flaws remain open indefinitely. Running software that can never be fixed is the vulnerable software risk in its purest form.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Default credentials are a configuration weakness present at deployment, not a consequence of the software ageing.",
+      "B": "Open service ports are an attack surface concern that applies to any software regardless of its support status.",
+      "D": "Insecure networks describe the environment the application runs in rather than the application itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0576",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure models?",
     "choices": [
@@ -24264,21 +24325,25 @@
     "correct": [
       "B"
     ],
-    "explanation": "IaC stores infrastructure definitions as version-controlled code, so every change is reviewable, auditable, and repeatable. You can spin up identical, securely preconfigured environments from the same template, eliminating drift and undocumented tweaks that plague traditional, manually built infrastructure. This consistency and traceability are what make IaC the more secure choice.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code defines systems in version-controlled files, so every environment is built from the same reviewed definition. Configuration becomes repeatable and auditable, and the undocumented manual tweaks that cause drift in traditional builds simply cannot occur.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IaC does not make common attacks less effective. The resulting systems face the same threats; they are just built consistently.",
+      "C": "Outsourcing to a third party describes a managed service. IaC is a method the organisation applies itself.",
+      "D": "Optimisation across computing instances is an efficiency benefit of cloud platforms rather than a security advantage of IaC."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0577",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following is an advantage of a microservice-based architecture over traditional software architectures?",
     "choices": [
@@ -24302,12 +24367,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Microservices are small, independently deployable components. Because each service can be built, tested, and released on its own pipeline, a security fix in one area doesn't require rebuilding and redeploying the whole application. That independence enables rapid, even multiple-per-day patches, shrinking exposure windows when vulnerabilities are found.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Each microservice is independently deployable, so a security fix in one component can be built, tested and released without rebuilding the whole application. That independence is what allows patching as often as needed, shrinking the window a vulnerability stays open.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Communication between microservices becomes harder, not easier — calls that were in-process now cross the network.",
+      "C": "Hiding internal structure is not a property of microservices. Their interfaces are typically well documented APIs.",
+      "D": "Debugging is harder because a single request spans several services and network hops."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24315,8 +24384,8 @@
   {
     "id": "q0578",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "An organization purchases software from an overseas company. The organization's IDS solution detects that advertising data from the software is unexpectedly reporting back to the overseas company.\nWhich of the following threat vectors does this best describe?",
     "choices": [
@@ -24340,12 +24409,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "The compromise came through third-party software the organization obtained and trusted; its unexpected \"phone home\" behavior is a classic supply chain risk, where embedded code or telemetry from a vendor creates a hidden data exfiltration path.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The organisation bought software from a vendor, trusted it, and that software is quietly sending data out. Compromise arriving through a trusted third-party product is a supply chain threat vector — the trust in the supplier is what made the path possible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Espionage describes the motivation behind such collection. The question asks for the vector, which is the software itself.",
+      "C": "Nation-state names a category of threat actor. It might be who is behind it, but it is not how the data is leaving.",
+      "D": "An insider threat originates from someone within the organisation. This came from an external vendor's code."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.636,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24378,21 +24451,25 @@
     "correct": [
       "A"
     ],
-    "explanation": "OSINT involves systematically gathering and analyzing publicly available data - news reports, paste sites, breach repositories, darknet mirrors, social media - to see whether details of your company's breach have been exposed. It's purpose-built for finding exactly this kind of public breach information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Open-source intelligence systematically gathers publicly available information — news coverage, paste sites, breach repositories, forums and social media. Discovering what has already been published about a company's breach is exactly what OSINT is for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A SIEM correlates internal log data. It has no view of what has been published externally.",
+      "C": "CVE is a catalogue of software vulnerabilities. It names product flaws, not company breaches.",
+      "D": "CVSS scores the severity of those vulnerabilities."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0580",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "An accounting clerk sent money to an attacker's bank account after receiving fraudulent instructions over the phone to use a new account.\nWhich of the following would most likely prevent this activity in the future?",
     "choices": [
@@ -24416,12 +24493,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Stronger, verified procedures (e.g., dual approval, out-of-band callback to a known contact, preapproved account lists) make it impossible for a single clerk to act on a phone request alone.\nBy baking verification steps into the wire-transfer workflow, future fraudulent instructions get stopped at the process gate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "One person acting alone on a phone instruction was enough to move money. Rebuilding the wire transfer process with verification steps — a callback to a known number, dual approval, pre-approved account lists — makes the same attack structurally impossible rather than relying on the clerk's judgement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Standardising incident reporting improves how you respond after the money has gone.",
+      "B": "Phishing campaigns train people against fraudulent messages. The instruction arrived by phone, and awareness alone still leaves one person able to act unilaterally.",
+      "C": "Insider threat detection looks for malicious employees. The clerk was deceived, not disloyal."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24454,12 +24535,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "An SLA spells out exactly how fast a provider must respond and resolve issues, what thresholds and KPIs will be measured (uptime, throughput, MTTR), and when/whom to escalate to if those targets aren't met, making it the formal document for response times, escalation paths, and performance metrics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement sets out the measurable commitments a provider must meet — response times, resolution targets, uptime and throughput — and who to escalate to when they are missed. Those three elements are precisely what an SLA defines.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
+      "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
+      "C": "An NDA restricts disclosure of confidential information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p248",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24492,12 +24577,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "Defacement tied to public protests signals an ideologically motivated actor. Hacktivists target visibility - public sites - to broadcast a message or embarrass the organization, rather than to steal money or state secrets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Defacing a public website in the middle of a protest campaign is about visibility, not profit or intelligence. Attacking to broadcast a message and embarrass the target is the defining behaviour of a hacktivist.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Nation-states pursue espionage and strategic advantage quietly. A private equity firm is not a strategic target and defacement is deliberately loud.",
+      "B": "An unskilled attacker also defaces sites, but for notoriety rather than in support of an identifiable cause. The protests point at ideology.",
+      "C": "Organised crime is motivated by money. Defacement generates none."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p248",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24530,12 +24619,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "An NDA legally binds parties to keep specified information secret, directly enforcing the confidentiality pillar of security by prohibiting unauthorized disclosure of protected data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A non-disclosure agreement legally binds the parties not to reveal specified information. Preventing unauthorised disclosure is the confidentiality pillar of security, which makes the NDA the document most directly tied to it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A statement of work defines deliverables and tasks for an engagement.",
+      "C": "An MOU is a non-binding statement of intent between parties.",
+      "D": "A BPA governs the commercial terms of a business partnership."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24568,12 +24661,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "The tester has some internal knowledge (valid credentials and target URL) but lacks full visibility into the application internals/source code. That limited insight falls squarely into gray/partially known testing, which blends external attacker perspective with select insider information to focus efforts efficiently.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tester was given the URL and valid credentials but not the source code — some insider knowledge, but not full visibility. That middle ground is a partially known environment, often called grey box.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An unknown environment gives the tester nothing and requires them to discover the target themselves.",
+      "C": "A known environment supplies full documentation, architecture and typically source code.",
+      "D": "Obfuscated is not a recognised penetration testing category; it describes code made deliberately hard to read."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24606,12 +24703,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "The firewall is the choke point that records every inbound/outbound session to the IoT device;\nits timestamps on the first suspicious connection will most reliably show when the exploit traffic first hit the network. Reviewing those entries pinpoints the initial compromise time before diving into more granular device or segment logs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The exploit arrived over the network, and the firewall is the choke point that logs every session reaching the device with a timestamp. The first suspicious connection recorded there is the most reliable marker of when the compromise began.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Wireless access point logs cover association and authentication on the radio. They show the device joining rather than the exploit traffic.",
+      "B": "Switch logs record layer 2 forwarding within a segment and reveal little about session content or direction.",
+      "D": "NAC logs record admission decisions when a device joins. That is before the exploit, not at the moment of it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.926,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24644,12 +24745,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Installing an app from an unofficial/third-party store bypasses the platform's vetted distribution channel, which is exactly what side loading means: loading software \"from the side\" instead of the official app store. This increases risk because the code may not be reviewed, signed, or scanned to the platform's security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing its review, signing and scanning. The unofficial store is the defining detail.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables side loading but is a separate, deeper change.",
+      "C": "Privilege escalation gains rights beyond those assigned. Installing an app does not by itself elevate anything.",
+      "D": "Code signing is a protective mechanism proving who published software. It is what side loading bypasses."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p250",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24691,21 +24796,26 @@
       "B",
       "E"
     ],
-    "explanation": "TLS - Data in transit: TLS encrypts sessions as information moves across networks, preventing interception or tampering while the data is traveling.\nFDE - Data at rest: Full-disk encryption protects files stored on the device; if the drive is lost or stolen, the data remains unreadable without the key.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The two controls protect two different data states. TLS encrypts sessions as information crosses the network, which is data in transit. Full disk encryption protects files stored on the device, which is data at rest.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data segmentation separates data into distinct stores or zones. Neither control does that.",
+      "C": "Data sovereignty is the legal principle about which country's laws govern data. It is unrelated to these controls.",
+      "D": "Data in use is data loaded in memory and being actively processed. Neither FDE nor TLS protects that state.",
+      "F": "Data redundancy is about keeping copies for availability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p250",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.912,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0588",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "An administrator investigating an incident is concerned about the downtime of a critical server due to a failed drive.\nWhich of the following would the administrator use to estimate the time needed to fix the issue?",
     "choices": [
@@ -24729,12 +24839,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "MTTR (Mean Time to Repair) measures the average time required to repair a failed component or system and restore it to full functionality, making it the correct metric for estimating downtime due to a failed drive.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Mean time to repair is the average time needed to fix a failed component and return it to service. Estimating how long the server will be down while the drive is replaced is exactly what MTTR measures.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MTBF predicts how long equipment runs before failing. It forecasts the failure rather than the repair.",
+      "C": "RTO is the maximum downtime the business will tolerate. It is a target the repair must fit inside, not an estimate of the repair.",
+      "D": "RPO concerns how much data loss is acceptable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24742,8 +24856,8 @@
   {
     "id": "q0589",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A business manager is concerned about the availability of an application running on hardware in the local data center.\nWhich of the following solutions will improve availability while reducing maintenance overhead?",
     "choices": [
@@ -24767,12 +24881,16 @@
     "correct": [
       "B"
     ],
-    "explanation": "Transitioning from on-premises to a cloud environment improves availability through the provider's redundant infrastructure and managed services, while reducing maintenance overhead since hardware and many operational tasks are handled by the cloud provider.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The manager wants better availability without more work. Moving to the cloud inherits the provider's redundancy, failover and managed infrastructure, so availability improves while hardware maintenance stops being the company's responsibility at all.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Load balancing and HA genuinely improve availability, but they add more hardware to own, patch and maintain — which is the overhead being reduced.",
+      "C": "Cybersecurity insurance transfers financial loss. It does nothing for uptime.",
+      "D": "Decommissioning end-of-life hardware removes risk and is worth doing, but it reduces capacity rather than improving availability."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24805,12 +24923,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A jump server acts as a controlled access point that can be restricted to specific internal IP addresses, ensuring that only approved internal sources can connect to the mission-critical database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server funnels all access to the database through one controlled, hardened host whose own access can be restricted to specific internal addresses. Everything else is denied, so the database accepts connections from exactly one known source.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A web application firewall inspects HTTP traffic to a web application. A database is not a web application.",
+      "B": "A network tap copies traffic for monitoring. It observes and blocks nothing.",
+      "C": "An intrusion prevention system blocks traffic matching attack patterns. Legitimate connections from an unapproved internal address match no attack signature."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p251",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.733,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24843,12 +24965,16 @@
     "correct": [
       "D"
     ],
-    "explanation": "A site survey analyzes the physical environment to determine optimal access point placement, ensuring full coverage with the fewest devices needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A site survey measures the physical environment — layout, construction materials, interference — to establish how far signal actually carries. That is what determines the minimum number of access points needed for full coverage rather than guessing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A signal locator finds a signal source. It is a troubleshooting tool, not a planning method.",
+      "B": "WPA3 is a wireless security standard. It governs encryption, not coverage.",
+      "C": "A heat map visualises the survey's measurements. It is the output rather than the activity producing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p252",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24881,12 +25007,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Sending litigation hold notifications is the first step to ensure that all relevant email correspondence within the specified date range is preserved and not altered or deleted, maintaining compliance with legal requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The first risk when a legal request arrives is that relevant data gets deleted by routine retention before anyone collects it. A litigation hold notification suspends that deletion and tells custodians to preserve everything in scope, which must happen before any collection begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Root cause analysis determines why an incident happened. This is a legal disclosure request, not an incident.",
+      "C": "Chain of custody documents handling of evidence once it is collected. Collection has not started.",
+      "D": "Determining the preservation method is a sensible step, but it follows the hold — the hold stops the clock while those decisions are made."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p252",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24919,12 +25049,16 @@
     "correct": [
       "C"
     ],
-    "explanation": "Tailgating into a facility during a red-team exercise is a form of physical penetration testing, where security is evaluated by attempting to bypass physical access controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A red team physically bypassing entry controls by following an authorised person through a door is a physical penetration test. The engagement is authorised, and the objective is to demonstrate that the physical control can be defeated.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat is someone inside the organisation abusing legitimate access. The red team are contracted outsiders.",
+      "B": "A brute-force attack tries many values until one works. Tailgating requires no guessing.",
+      "D": "Active reconnaissance probes a target to gather information. Tailgating is gaining entry, which is exploitation rather than reconnaissance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p253",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.737,
     "needsExplanation": false,
     "keyCorrected": false
@@ -24957,12 +25091,16 @@
     "correct": [
       "A"
     ],
-    "explanation": "Endpoint protection is an agent-based solution installed on devices that can detect and block malicious activity locally, allowing it to function even when the system is disconnected from the corporate network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The description is an agent installed on the device that detects and blocks malicious behaviour locally. Because the decision is made on the host, it keeps working when the machine is off the corporate network — which is the defining characteristic of endpoint protection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "System patching fixes known vulnerabilities. It is preventive maintenance rather than a detection and blocking agent.",
+      "C": "HIDS is host-based intrusion detection — it detects and alerts but does not block, and the question specifies blocking.",
+      "D": "An NGFW is a network appliance at a boundary. A disconnected laptop never passes through it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p253",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false

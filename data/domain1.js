@@ -3322,6 +3322,48 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0568",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "type": "single",
+    "question": "Which of the following prevents unauthorized modifications to internal processes, assets, and security controls?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Change management"
+      },
+      {
+        "key": "B",
+        "text": "Playbooks"
+      },
+      {
+        "key": "C",
+        "text": "Incident response"
+      },
+      {
+        "key": "D",
+        "text": "Acceptable use policy"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Change management requires every modification to be requested, reviewed, approved and documented before it happens. That gate is what stops processes, assets and controls being altered informally or by someone without authority.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Playbooks give step-by-step guidance for handling specific situations. They direct response rather than gating change.",
+      "C": "Incident response deals with security events after they occur.",
+      "D": "An acceptable use policy tells users what conduct is permitted. It governs behaviour rather than authorising system changes."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p243",
+    "needsReview": false,
+    "inferenceConfidence": 0.478,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0596",
     "domain": 1,
     "objective": "1.4",

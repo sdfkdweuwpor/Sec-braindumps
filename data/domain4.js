@@ -7665,13 +7665,60 @@ export const domain4Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "Physically destroying the media (industrial shredding/pulverizing) renders the platters/chips irrecoverable, providing the highest assurance that no residual data can be reconstructed - unlike logical wipes or degaussing, which can fail or be bypassed on certain media types.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Physical destruction leaves nothing to recover. Shredding or pulverising the platters and chips removes any dependence on software behaving correctly, which is why it gives the strongest assurance of any disposal method.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Degaussing destroys magnetic structure and works on tape and spinning disks, but it has no effect on solid-state media.",
+      "B": "A multipass wipe is thorough on conventional drives, but wear levelling on SSDs can leave blocks the overwrite never reaches.",
+      "C": "Hashing verifies integrity. It is not a disposal method at all.",
+      "D": "Erasure is a logical delete. It is the weakest option and data is often trivially recoverable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0567",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A company experiences a breach. The investigation reveals that the threat actor used a zero- day vulnerability to gain access and move laterally.\nWhich of the following would best improve the company's security posture and minimize the time to detect this type of incident?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "NAC"
+      },
+      {
+        "key": "B",
+        "text": "IDS"
+      },
+      {
+        "key": "C",
+        "text": "DLP"
+      },
+      {
+        "key": "D",
+        "text": "UBA"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A zero-day has no signature, so signature-based tools are blind to it. User behaviour analytics baselines normal activity and flags deviation, so the lateral movement that follows the initial compromise still stands out even though the exploit itself is unknown.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NAC decides which devices may join the network. Once the attacker is operating from an admitted host it sees nothing.",
+      "B": "An IDS matches traffic against known attack patterns. A zero-day has no pattern to match.",
+      "C": "DLP watches for sensitive data leaving. It may catch exfiltration at the end, but not the lateral movement that precedes it."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p242",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7703,12 +7750,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "EDR agents sit on hosts, continuously collect rich telemetry (processes, connections, file changes), and can capture network indicators from those endpoints. They rapidly analyze this data locally and ship it to a backend where it's correlated and reported – that's what the CISO wants to speed detection and investigation of compromised systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "EDR agents sit on the hosts themselves, continuously collecting process, file and connection telemetry, analysing it locally and forwarding it to a central platform for correlation and reporting. That is exactly the capability described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NAC decides whether a device may join a network. It collects no host forensic data.",
+      "B": "An IPS inspects network traffic inline and blocks attacks. It sees the wire, not what is happening inside a host.",
+      "C": "A SIEM is the backend that correlates and reports. It receives the data rather than collecting it from potentially compromised systems."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p244",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7741,12 +7792,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OSINT involves systematically gathering and analyzing publicly available data - news reports, paste sites, breach repositories, darknet mirrors, social media - to see whether details of your company's breach have been exposed. It's purpose-built for finding exactly this kind of public breach information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Open-source intelligence systematically gathers publicly available information — news coverage, paste sites, breach repositories, forums and social media. Discovering what has already been published about a company's breach is exactly what OSINT is for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A SIEM correlates internal log data. It has no view of what has been published externally.",
+      "C": "CVE is a catalogue of software vulnerabilities. It names product flaws, not company breaches.",
+      "D": "CVSS scores the severity of those vulnerabilities."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7779,12 +7834,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The firewall is the choke point that records every inbound/outbound session to the IoT device;\nits timestamps on the first suspicious connection will most reliably show when the exploit traffic first hit the network. Reviewing those entries pinpoints the initial compromise time before diving into more granular device or segment logs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The exploit arrived over the network, and the firewall is the choke point that logs every session reaching the device with a timestamp. The first suspicious connection recorded there is the most reliable marker of when the compromise began.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Wireless access point logs cover association and authentication on the radio. They show the device joining rather than the exploit traffic.",
+      "B": "Switch logs record layer 2 forwarding within a segment and reveal little about session content or direction.",
+      "D": "NAC logs record admission decisions when a device joins. That is before the exploit, not at the moment of it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p249",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.926,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7817,12 +7876,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A site survey analyzes the physical environment to determine optimal access point placement, ensuring full coverage with the fewest devices needed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A site survey measures the physical environment — layout, construction materials, interference — to establish how far signal actually carries. That is what determines the minimum number of access points needed for full coverage rather than guessing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A signal locator finds a signal source. It is a troubleshooting tool, not a planning method.",
+      "B": "WPA3 is a wireless security standard. It governs encryption, not coverage.",
+      "C": "A heat map visualises the survey's measurements. It is the output rather than the activity producing it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p252",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7855,12 +7918,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Sending litigation hold notifications is the first step to ensure that all relevant email correspondence within the specified date range is preserved and not altered or deleted, maintaining compliance with legal requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The first risk when a legal request arrives is that relevant data gets deleted by routine retention before anyone collects it. A litigation hold notification suspends that deletion and tells custodians to preserve everything in scope, which must happen before any collection begins.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Root cause analysis determines why an incident happened. This is a legal disclosure request, not an incident.",
+      "C": "Chain of custody documents handling of evidence once it is collected. Collection has not started.",
+      "D": "Determining the preservation method is a sensible step, but it follows the hold — the hold stops the clock while those decisions are made."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p252",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false

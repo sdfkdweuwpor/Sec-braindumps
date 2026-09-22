@@ -4537,51 +4537,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "An overwhelming volume of packets can fill an application's input buffers faster than it can process them. Once those buffers are saturated, the program spends excessive time handling overflow conditions (or even overwrites memory), causing dramatic slowdowns and potential instability - classic symptoms of a buffer overflow–style resource exhaustion.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When packets arrive faster than the application can process them, input buffers fill and the program spends its time handling overflow conditions instead of doing work. That buffer saturation is what produces the extreme slowdown described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A race condition is a timing flaw between checking a value and using it. It produces incorrect behaviour rather than gradual slowdown under load.",
+      "B": "Cross-site scripting injects script that runs in another user's browser. It affects clients, not server throughput.",
+      "D": "Side loading installs software from outside an official store. It is unrelated to packet handling."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0567",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company experiences a breach. The investigation reveals that the threat actor used a zero- day vulnerability to gain access and move laterally.\nWhich of the following would best improve the company's security posture and minimize the time to detect this type of incident?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "NAC"
-      },
-      {
-        "key": "B",
-        "text": "IDS"
-      },
-      {
-        "key": "C",
-        "text": "DLP"
-      },
-      {
-        "key": "D",
-        "text": "UBA"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "UBA builds baselines of normal user and entity activity (logins, data access patterns, movement between hosts) and flags deviations - the kind of anomalous lateral movement a zero-day– driven intruder generates. Because it's behavior-based rather than signature-based, it can surface unseen exploits faster and shrink detection time for novel attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p242",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4613,12 +4579,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The stranger is manipulating a casual conversation to elicit sensitive details (employer, division, personal info). This intentional information-gathering through interpersonal interaction is classic social engineering - exploiting human trust rather than technical flaws.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The stranger is steering a casual conversation to extract employer, division and personal details — information useful for a later pretext or targeted attack. Manipulating a person to give up information is social engineering, and this specific form is called elicitation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat comes from someone inside the organisation. The stranger has no relationship to it.",
+      "B": "Phishing is fraudulent messaging, usually electronic. This is a face-to-face conversation.",
+      "D": "Risky describes the behaviour of the user answering, not the technique the stranger is using."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p243",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4651,12 +4621,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Once hardware reaches end of life, manufacturers typically end security support. Without new firmware/ microcode patches or drivers, newly discovered vulnerabilities remain unpatched, leaving the device exposed indefinitely - this is the core security concern with EOL gear.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once hardware passes end of life the manufacturer stops issuing firmware and driver updates. Every vulnerability discovered from that point onward stays exploitable permanently, which is the security concern that distinguishes EOL equipment from merely old equipment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Improper disposal causing data release is a real risk, but it occurs at the moment of disposal rather than while the hardware is still in service.",
+      "B": "Lack of replacement hardware is a supply and availability problem, not a vulnerability.",
+      "C": "Legacy hardware lacking resources for new software is a performance and compatibility issue."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p245",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4664,8 +4638,8 @@ export const domain2Questions = [
   {
     "id": "q0575",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "Which of the following is a risk for a company using end-of-life applications on its network?",
     "choices": [
@@ -4689,59 +4663,25 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "End-of-life applications no longer receive security patches. Newly found flaws stay unpatched, leaving the software inherently vulnerable and an easy entry point for attackers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An application past end of life receives no further security patches, so newly discovered flaws remain open indefinitely. Running software that can never be fixed is the vulnerable software risk in its purest form.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Default credentials are a configuration weakness present at deployment, not a consequence of the software ageing.",
+      "B": "Open service ports are an attack surface concern that applies to any software regardless of its support status.",
+      "D": "Insecure networks describe the environment the application runs in rather than the application itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0577",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following is an advantage of a microservice-based architecture over traditional software architectures?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Updates can be done one or more times per day if security issues arise."
-      },
-      {
-        "key": "B",
-        "text": "Managing communication between microservices is more streamlined."
-      },
-      {
-        "key": "C",
-        "text": "The internal structure of the code is hidden from users, making exploits more difficult to write."
-      },
-      {
-        "key": "D",
-        "text": "The services are written by a single team and can be debugged more quickly."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Microservices are small, independently deployable components. Because each service can be built, tested, and released on its own pipeline, a security fix in one area doesn't require rebuilding and redeploying the whole application. That independence enables rapid, even multiple-per-day patches, shrinking exposure windows when vulnerabilities are found.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p246",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0578",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "An organization purchases software from an overseas company. The organization's IDS solution detects that advertising data from the software is unexpectedly reporting back to the overseas company.\nWhich of the following threat vectors does this best describe?",
     "choices": [
@@ -4765,51 +4705,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The compromise came through third-party software the organization obtained and trusted; its unexpected \"phone home\" behavior is a classic supply chain risk, where embedded code or telemetry from a vendor creates a hidden data exfiltration path.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The organisation bought software from a vendor, trusted it, and that software is quietly sending data out. Compromise arriving through a trusted third-party product is a supply chain threat vector — the trust in the supplier is what made the path possible.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Espionage describes the motivation behind such collection. The question asks for the vector, which is the software itself.",
+      "C": "Nation-state names a category of threat actor. It might be who is behind it, but it is not how the data is leaving.",
+      "D": "An insider threat originates from someone within the organisation. This came from an external vendor's code."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.636,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0580",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "An accounting clerk sent money to an attacker's bank account after receiving fraudulent instructions over the phone to use a new account.\nWhich of the following would most likely prevent this activity in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Standardizing security incident reporting"
-      },
-      {
-        "key": "B",
-        "text": "Executing regular phishing campaigns"
-      },
-      {
-        "key": "C",
-        "text": "Implementing insider threat detection measures"
-      },
-      {
-        "key": "D",
-        "text": "Updating processes for sending wire transfers"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Stronger, verified procedures (e.g., dual approval, out-of-band callback to a known contact, preapproved account lists) make it impossible for a single clerk to act on a phone request alone.\nBy baking verification steps into the wire-transfer workflow, future fraudulent instructions get stopped at the process gate.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p247",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4841,12 +4747,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Defacement tied to public protests signals an ideologically motivated actor. Hacktivists target visibility - public sites - to broadcast a message or embarrass the organization, rather than to steal money or state secrets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Defacing a public website in the middle of a protest campaign is about visibility, not profit or intelligence. Attacking to broadcast a message and embarrass the target is the defining behaviour of a hacktivist.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Nation-states pursue espionage and strategic advantage quietly. A private equity firm is not a strategic target and defacement is deliberately loud.",
+      "B": "An unskilled attacker also defaces sites, but for notoriety rather than in support of an identifiable cause. The protests point at ideology.",
+      "C": "Organised crime is motivated by money. Defacement generates none."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p248",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4879,12 +4789,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Installing an app from an unofficial/third-party store bypasses the platform's vetted distribution channel, which is exactly what side loading means: loading software \"from the side\" instead of the official app store. This increases risk because the code may not be reviewed, signed, or scanned to the platform's security standards.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing its review, signing and scanning. The unofficial store is the defining detail.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables side loading but is a separate, deeper change.",
+      "C": "Privilege escalation gains rights beyond those assigned. Installing an app does not by itself elevate anything.",
+      "D": "Code signing is a protective mechanism proving who published software. It is what side loading bypasses."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p250",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4917,12 +4831,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Endpoint protection is an agent-based solution installed on devices that can detect and block malicious activity locally, allowing it to function even when the system is disconnected from the corporate network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The description is an agent installed on the device that detects and blocks malicious behaviour locally. Because the decision is made on the host, it keeps working when the machine is off the corporate network — which is the defining characteristic of endpoint protection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "System patching fixes known vulnerabilities. It is preventive maintenance rather than a detection and blocking agent.",
+      "C": "HIDS is host-based intrusion detection — it detects and alerts but does not block, and the question specifies blocking.",
+      "D": "An NGFW is a network appliance at a boundary. A disconnected laptop never passes through it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p253",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
