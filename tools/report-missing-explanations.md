@@ -1,15 +1,11 @@
 # Questions with no explanation in the source PDF
 
-17 of 974 extracted questions.
+13 of 974 extracted questions.
 
 These carry `explanation: null` and `needsExplanation: true`. Nothing was invented at extraction time.
 
 | id | domain | objective | question |
 |---|---|---|---|
-| q0220 | 4 | 4.3 | A company discovered its data was advertised for sale on the dark web. During the initial investigation, the c |
-| q0221 | 3 | 3.4 | Which of the following would be the best solution to deploy a low-cost standby site that includes hardware and |
-| q0228 | 2 | 2.3 | Which of the following types of vulnerabilities is primarily caused by improper use and management of cryptogr |
-| q0241 | 3 | 3.4 | Which of the following options will provide the lowest RTO and RPO for a database? |
 | q0266 | 2 | 2.5 | Which of the following is the best way to prevent an unauthorized user from plugging a laptop into an employee |
 | q0267 | 2 | 2.2 | Which of the following should a systems administrator use to decrease the company's hardware attack surface? |
 | q0268 | 4 | 4.6 | A company wants to add an MFA solution for all employees who access the corporate network remotely. Log-in req |

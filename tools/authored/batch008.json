@@ -1,0 +1,242 @@
+{
+"q0219": {"objective":"5.2",
+ "explanation":"The business needs the system, it cannot be changed, and it cannot be taken offline — so none of the treatments that alter or remove the risk are available. What remains is a documented decision to accept it, ideally recorded in the risk register with compensating controls such as isolation and heightened monitoring.",
+ "incorrect":{
+  "A":"Reject is not a recognised risk treatment. Refusing to acknowledge a risk is not a decision, it is an omission.",
+  "C":"Transfer shifts the financial consequence to an insurer or third party. It may be worth doing alongside, but it changes nothing about the system continuing to run unsupported.",
+  "D":"Avoid means ceasing the activity that creates the risk. The system must stay online, so avoidance is explicitly ruled out."}},
+
+"q0220": {"objective":"4.8",
+ "explanation":"A confirmed breach of proprietary data starts a notification clock. Telling the affected parties — customers, partners, regulators as applicable — is the obligation that carries legal deadlines, so it takes priority over the technical work that follows.",
+ "incorrect":{
+  "A":"Identifying the entry method matters and will happen, but root-cause analysis can run for weeks while notification deadlines are measured in days.",
+  "B":"Reporting to authorities is part of notification, but it is one audience among several and is not always the first or only requirement.",
+  "D":"Vulnerability scanning is preventive housekeeping. The data is already out; scanning now does nothing about the breach in hand."}},
+
+"q0221": {"objective":"3.4",
+ "explanation":"A warm site sits between the two extremes: hardware and connectivity are already in place, but data must be restored at failover time. That gives a usable recovery capability at far less cost than keeping a fully synchronised site running.",
+ "incorrect":{
+  "A":"Recovery site is the generic umbrella term covering hot, warm and cold. It does not identify a specific level of readiness.",
+  "B":"A cold site has space, power and cooling but no hardware or internet access, which is precisely what the question says must be included.",
+  "C":"A hot site is fully equipped and continuously synchronised, ready almost immediately. It is the most expensive option, not the low-cost one."}},
+
+"q0222": {"objective":"1.1",
+ "explanation":"Counting who enters the building is recording events that have already happened, which is the definition of a detective control. The data then informs what preventive controls to configure, but the counting itself only observes.",
+ "incorrect":{
+  "B":"Preventive controls stop an event occurring. Counting entries blocks nobody.",
+  "C":"Corrective controls restore normal operation after an incident. Nothing here is being repaired.",
+  "D":"Directive controls instruct people how to behave. A counter issues no instructions."}},
+
+"q0223": {"objective":"3.2",
+ "explanation":"Two problems need solving: proving remote users are who they claim, and protecting PHI as it crosses the internet. MFA stops a stolen password being enough to reach health data, and a VPN encrypts the session so the traffic cannot be read in transit.",
+ "incorrect":{
+  "A":"A local administrative password governs privileged access on one machine. It is unrelated to secure remote access.",
+  "B":"A perimeter network isolates public-facing services from the internal network. This application is internal and should not be published there.",
+  "C":"A jump server gives administrators a controlled entry point for managing systems. These are ordinary users of an application, not administrators.",
+  "D":"A WAF protects a web application from malicious requests. It guards the application but neither authenticates the user nor encrypts their link."}},
+
+"q0224": {"objective":"5.6",
+ "explanation":"Posters and online modules teach people what to look for; a simulated phishing campaign tests whether the teaching stuck. It is the standard practical component of an awareness programme, giving measurable results and targeted follow-up for those who click.",
+ "incorrect":{
+  "A":"A password policy is a technical standard enforced by systems. It is not an awareness activity.",
+  "B":"Access badges are a physical access control. Issuing them teaches nobody anything.",
+  "D":"A risk assessment evaluates the organisation's exposure. It is a governance activity, not user training."}},
+
+"q0225": {"objective":"3.1",
+ "explanation":"An air gap means there is no network connection at all between the secure systems and anything else — data moves only by physically carrying media. That physical separation is the strongest form of isolation and is what the client described.",
+ "incorrect":{
+  "A":"SDN manages networks through software-defined control. It is about programmable connectivity, which is the opposite of removing connectivity.",
+  "C":"Containerised means applications are packaged to run on a shared kernel. Containers provide logical separation on the same host, not physical isolation.",
+  "D":"Highly available describes a system engineered to stay up. It speaks to uptime, not isolation."}},
+
+"q0226": {"objective":"3.2",
+ "explanation":"SASE delivers firewalling, secure web gateway, zero trust access and VPN as one cloud service. For a small IT team moving to cloud, that removes the need to buy, deploy and maintain several on-premises appliances, which is where the resource saving comes from.",
+ "incorrect":{
+  "A":"An IPS is a single control inspecting traffic at one point. It solves part of the problem and still has to be deployed and maintained.",
+  "B":"A WAF protects web applications specifically. It is narrow and does not address secure access to cloud services generally.",
+  "D":"IAM governs identities and permissions. It is an essential piece of a cloud migration but is not a consolidated network security solution."}},
+
+"q0227": {"objective":"5.6",
+ "explanation":"The incident turned on a person clicking a link in a convincing message. Security awareness training addresses that decision point directly, teaching staff to recognise executive impersonation and suspicious links before they click — which is where this chain could have been broken.",
+ "incorrect":{
+  "B":"Database encryption protects data at rest from unauthorised reading. Ransomware encrypts files regardless of whether they were already encrypted.",
+  "C":"Segmentation limits how far the ransomware spreads once it runs. That reduces impact, which is valuable, but the infection still occurs.",
+  "D":"Reporting suspicious emails is a useful behaviour, and it is one outcome of awareness training rather than a separate programme. Reporting also happens after recognition, which is the skill being taught."}},
+
+"q0228": {"objective":"2.3",
+ "explanation":"Certificates are only as trustworthy as the private keys behind them. When keys are left in source code, on shared drives or in unprotected configuration files, anyone who finds one can impersonate the service, so insecure key storage is the vulnerability that improper certificate management produces.",
+ "incorrect":{
+  "A":"Misconfiguration is the broad category of settings applied wrongly. It is too general — the question asks specifically about certificate management.",
+  "B":"Resource reuse is a virtualisation flaw where memory or storage passes between tenants without being cleared.",
+  "D":"Weak cipher suites are a protocol negotiation problem. They concern which algorithms are permitted, not how certificates and their keys are handled."}},
+
+"q0229": {"objective":"3.1",
+ "explanation":"Splitting a system into independent services means each one can be scaled on its own according to demand, and each runs in its own boundary so a failure or compromise is contained. Independent scaling and compartmentalisation are the two benefits that follow directly from the split.",
+ "incorrect":{
+  "A":"Debugging is harder in microservices, because a single request now crosses several services and network hops rather than staying inside one process.",
+  "B":"Cost of ownership usually rises. More services mean more deployment pipelines, monitoring and orchestration to run.",
+  "E":"Authentication is not inherently stronger. If anything there are now more service-to-service boundaries that each need securing.",
+  "F":"Complexity increases rather than reduces. That is the recognised trade-off for the flexibility gained."}},
+
+"q0230": {"objective":"2.2",
+ "explanation":"Of the three activities, only the attachment is attacker-controlled and delivered directly to the victim. A resume sent in a message is a well-worn lure, and opening it is what executed the ransomware — making the attachment the vector.",
+ "incorrect":{
+  "B":"A watering hole attack compromises a site the target group is known to visit. The site browsed was the company's own.",
+  "C":"An infected website would mean the browsing delivered the payload. The company's own site is the least likely candidate and nothing suggests it was compromised.",
+  "D":"Typosquatting relies on the user mistyping a domain and landing on a look-alike. The user visited their own company's site, not a mistyped one."}},
+
+"q0231": {"objective":"3.2",
+ "explanation":"Port security restricts which devices a switch port will accept, by limiting and pinning MAC addresses and shutting the port down when an unexpected one appears. An unused port then refuses to service an unknown laptop instead of handing it an address.",
+ "incorrect":{
+  "B":"Transport Layer Security encrypts application traffic. It protects data in transit but does not control who may plug into the network.",
+  "C":"A proxy server mediates outbound requests. The tester was enumerating the local network, which never passes through a proxy.",
+  "D":"Security zones group systems by trust level. Good design limits what the tester could reach, but it does not stop the port granting access in the first place."}},
+
+"q0232": {"objective":"1.4",
+ "explanation":"Full disk encryption encrypts the entire volume, so a lost device yields nothing without the key. Removing the drive or booting another operating system returns ciphertext, which is what protects the data when the hardware is in someone else's hands.",
+ "incorrect":{
+  "A":"A TPM is a chip that stores keys and measures boot integrity. It commonly holds the FDE key, but the TPM alone encrypts nothing.",
+  "B":"ECC is an asymmetric algorithm used for key exchange and signatures. It is a primitive, not a disk protection scheme.",
+  "D":"An HSM is a dedicated appliance for generating and protecting keys, used in servers and data centres rather than on a mobile device."}},
+
+"q0233": {"objective":"2.4",
+ "explanation":"DNS records that quietly change to point at an address outside the company is name-resolution tampering. Traffic intended for a legitimate service is redirected to infrastructure the attacker controls, which is DNS poisoning.",
+ "incorrect":{
+  "A":"A DDoS attack floods a service to make it unavailable. Records were altered, not overwhelmed, and the service kept resolving.",
+  "C":"A ransomware compromise encrypts files and demands payment. There is no encryption or ransom here.",
+  "D":"A spyware infection quietly collects information from a host. It does not rewrite DNS records for the whole organisation."}},
+
+"q0234": {"objective":"4.3",
+ "explanation":"A false negative means a real vulnerability exists and the scan did not report it. Nobody investigates what they never saw, so the exposure stays open indefinitely while the organisation believes it is clean — which is far more dangerous than wasted effort.",
+ "incorrect":{
+  "B":"Time wasted chasing vulnerabilities that do not exist describes false positives. Annoying, but it costs effort rather than leaving you exposed.",
+  "C":"Misordered prioritisation is a scoring or triage issue. A false negative is not ranked low; it is absent altogether.",
+  "D":"A vulnerability with no available patch is a real, detected finding you must work around. The scan found it, so it is not a false negative."}},
+
+"q0235": {"objective":"4.2",
+ "explanation":"Wiping overwrites every block in software so the data cannot be recovered, using tools the company already has and leaving the laptops sellable or reusable. That combination of effectiveness and retained hardware value makes it the cost-effective choice.",
+ "incorrect":{
+  "B":"Recycling disposes of the hardware without addressing the data at all. Drives regularly turn up on resale markets still readable.",
+  "C":"Shredding is thorough but physically destroys the drive, and often the laptop's resale value with it, plus a service fee.",
+  "D":"Deletion removes the file system pointers while leaving the data blocks intact and trivially recoverable."}},
+
+"q0236": {"objective":"3.1",
+ "explanation":"Infrastructure as code defines servers in version-controlled files that are applied automatically. Every build comes from the same definition, so configuration is standardised, changes are reviewable, and provisioning time collapses from hours of manual work to a pipeline run.",
+ "incorrect":{
+  "A":"IoT refers to networked embedded devices. It is a category of equipment, not a provisioning approach.",
+  "C":"IaaS provides the underlying compute and storage. It supplies the machines but does nothing on its own to standardise how they are configured.",
+  "D":"ICS is industrial control systems used in manufacturing and utilities. It is unrelated to server builds."}},
+
+"q0237": {"objective":"2.1",
+ "explanation":"The attacker is threatening to release damaging material unless money is paid. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation.",
+ "incorrect":{
+  "A":"Organised crime is a type of threat actor, not an intent. The question asks what the actor wants, not who they are.",
+  "B":"Philosophical beliefs motivate hacktivists making a political point. Nothing ideological is being advanced here.",
+  "C":"Espionage is covert collection of information for advantage. The attacker already has the material and is publicising their possession of it."}},
+
+"q0238": {"objective":"4.1",
+ "explanation":"Every listening port is a way in that must be patched, configured and monitored. Closing the ones nothing needs removes those entry points entirely, which is the clearest possible reduction of the attack surface.",
+ "incorrect":{
+  "A":"Unencrypted traffic is addressed by choosing secure protocols. A closed port carries no traffic at all, so this describes a side effect rather than the reason.",
+  "B":"Eliminating false positives is a reporting convenience. Tidier scan output is not a security outcome.",
+  "D":"Resource utilisation may improve marginally. That is an operational benefit, not a security reason."}},
+
+"q0239": {"objective":"1.3",
+ "explanation":"A standard operating procedure gives the step-by-step instructions for performing a task the same way every time — which is how a patch gets applied without drifting from the secure baseline. It is the document an administrator actually follows during the work.",
+ "incorrect":{
+  "A":"An information security policy states what must be achieved at a high level. It sets the requirement without describing the steps.",
+  "B":"Service-level expectations describe the performance a service must deliver. They are about outcomes, not procedure.",
+  "D":"A test result report records what happened when the patch was tested. It is evidence produced by following the procedure, not the procedure itself."}},
+
+"q0240": {"objective":"4.6",
+ "explanation":"Brute force works because a password is the only thing standing in the way. Multifactor authentication removes that assumption — even a correctly guessed password fails without the second factor, so the attack stops producing results regardless of how many attempts are made.",
+ "incorrect":{
+  "A":"Patching fixes software vulnerabilities. Brute force exploits no vulnerability; it uses the login exactly as designed.",
+  "B":"A web application firewall can rate-limit and slow attempts, which helps, but it does not change the fact that a correct password still grants access.",
+  "D":"Encrypting customer data protects it at rest. An attacker logged in as a legitimate user sees decrypted data through the application."}},
+
+"q0241": {"objective":"3.4",
+ "explanation":"Journaling records every transaction as it happens, so the database can be rolled forward to within moments of the failure. Continuous capture gives the smallest possible data loss window and the fastest restoration to a consistent state.",
+ "incorrect":{
+  "A":"Snapshots capture the state at intervals. Anything written since the last snapshot is lost, so the RPO is as long as the gap between them.",
+  "B":"On-site backups are periodic copies. They are usually the slowest to restore and the furthest behind of these options.",
+  "D":"A hot site gives somewhere to run quickly, which helps RTO, but the data available there is only as current as whatever replication feeds it."}},
+
+"q0242": {"objective":"2.3",
+ "explanation":"VM escape breaks the boundary between a guest and its host. Once the attacker reaches the hypervisor they are beneath every virtual machine on that hardware, so any other tenant or workload on the same host becomes reachable.",
+ "incorrect":{
+  "A":"Inserting instructions into memory to gain elevated permissions describes memory injection or privilege escalation within one system.",
+  "C":"Unencrypted data being read by a user in a separate environment describes resource reuse, where storage or memory is reallocated without being cleared.",
+  "D":"Installing unapproved software describes side loading or jailbreaking on an endpoint."}},
+
+"q0243": {"objective":"4.9",
+ "explanation":"Full packet capture is by far the bulkiest security data, since it stores the complete contents of network traffic rather than summaries. Its investigative value also decays quickest, so shortening its retention saves the most storage for the least loss of capability.",
+ "incorrect":{
+  "B":"Endpoint logs are comparatively compact and remain useful for tracing activity long after the fact.",
+  "C":"OS security logs are small, and authentication and privilege records are exactly what long-running investigations depend on.",
+  "D":"Vulnerability scan results are tiny by comparison and are often kept to evidence remediation over time for compliance."}},
+
+"q0244": {"objective":"2.3",
+ "explanation":"Cross-site scripting injects script into a web page so that it executes in another user's browser under that site's origin. From there it can read cookies, hijack the session or act as the user, which is what taking control of the client's browser means.",
+ "incorrect":{
+  "A":"SQL injection targets the database behind the application. It executes on the server, not in the client's browser.",
+  "C":"A zero-day exploit is any attack against a vulnerability with no patch yet. It describes timing, not the technique.",
+  "D":"An on-path attack intercepts traffic between two parties. It requires network position rather than injecting script into a page."}},
+
+"q0245": {"objective":"4.9",
+ "explanation":"The log shows an INSERT statement creating a user account through SQL injection. Before changing anything, the analyst needs to know whether it worked — checking the users table for the new account establishes whether this is an attempt or an active compromise, which determines everything that follows.",
+ "incorrect":{
+  "A":"Implementing a WAF prevents future attempts. It is the right longer-term fix but does nothing about an account that may already exist.",
+  "B":"Disabling the script stops the injection path and may well be necessary, but doing it first destroys nothing and discovers nothing — the attacker's account would remain.",
+  "C":"Blocking brute-force attempts addresses a different attack. This was a single injected statement, not repeated guessing."}},
+
+"q0246": {"objective":"5.2",
+ "explanation":"Recovery time objective is the maximum tolerable duration a system can be down before the business suffers unacceptable harm. Measuring how quickly systems must be restored is precisely what the RTO expresses.",
+ "incorrect":{
+  "A":"Recovery point objective is about data, not time to restore — how much work you can afford to lose, measured backwards from the failure.",
+  "B":"Risk appetite is the amount of risk an organisation is willing to pursue. It is a strategic posture, not a recovery metric.",
+  "C":"Risk tolerance is the acceptable variation around that appetite. Again a risk measure rather than a restoration target.",
+  "E":"Mean time between failures predicts how often equipment fails. It measures reliability, not recovery speed."}},
+
+"q0247": {"objective":"2.1",
+ "explanation":"Hacktivists attack to advance a cause — political, social or ideological. Their payoff is the message rather than money or intelligence, which is exactly what being motivated by personal beliefs means.",
+ "incorrect":{
+  "A":"Nation-states act for strategic advantage: espionage, disruption, positioning. That is state interest rather than personal conviction.",
+  "B":"Organised crime is motivated by profit above everything else.",
+  "D":"An insider threat is usually driven by grievance or personal gain. Belief can play a part, but the defining trait of an insider is their access, not their motive."}},
+
+"q0248": {"objective":"5.2",
+ "explanation":"A risk register is the running record of identified risks with their owners, likelihood, impact and agreed treatment. Vulnerabilities that persist across reporting cycles belong there with their recommendations, so they stay tracked rather than being re-discovered each scan.",
+ "incorrect":{
+  "A":"An audit report is a point-in-time assessment against a standard. It records findings at that moment rather than tracking them over time.",
+  "C":"A compliance report demonstrates adherence to a requirement. It shows status, not an ongoing treatment plan.",
+  "D":"A penetration test is an activity that produces findings. Those findings then feed the register."}},
+
+"q0249": {"objective":"4.5",
+ "explanation":"Common data exfiltration against an application happens through its own interface — injection, cross-site scripting, abusive queries. A web application firewall inspects each HTTP request and response and blocks those patterns, which is the control aimed squarely at that threat.",
+ "incorrect":{
+  "A":"URL scanning judges whether a destination is safe to visit. It protects users browsing out, not an application being attacked.",
+  "C":"A reverse proxy fronts an application and can hide its origin, but on its own it forwards traffic rather than inspecting it for attacks.",
+  "D":"NAC controls which devices may join the network. It has no view of what happens inside the application afterwards."}},
+
+"q0250": {"objective":"3.4",
+ "explanation":"A load balancer fronts a pool of servers and distributes requests across whichever ones are healthy. Adding or replacing a server means registering it with the pool — the application stays available throughout and no client configuration changes.",
+ "incorrect":{
+  "B":"Fault tolerance is the goal rather than a specific solution. It describes surviving failure without saying how.",
+  "C":"Proxy servers mediate requests, typically outbound. They are not a mechanism for distributing load across application servers.",
+  "D":"Replication copies data between systems so it exists in more than one place. It protects data but does not route users away from a failed server."}},
+
+"q0251": {"objective":"5.2",
+ "explanation":"A risk assessment on new software asks what could go wrong if the organisation adopts it. Known vulnerabilities in the product, its update history and its dependencies are the security exposures being brought in, which is what the assessment must evaluate.",
+ "incorrect":{
+  "B":"Cost-benefit analysis weighs price against value. It is a procurement decision, not a risk one.",
+  "C":"Ongoing monitoring strategies describe how the software will be watched after adoption. That is a treatment decided once risks are known.",
+  "D":"Network infrastructure compatibility is a technical fit question. It affects whether the software will work, not what risk it carries."}},
+
+"q0252": {"objective":"2.4",
+ "explanation":"The attacker is positioned between the user and the service, capturing credentials as they pass and then reusing them. Intercepting communication in transit and replaying what was captured is an on-path attack, formerly called man in the middle.",
+ "incorrect":{
+  "A":"SQL injection manipulates database queries through application input. It needs no interception and captures no credentials in transit.",
+  "C":"Brute force guesses credentials by trying many possibilities. The attacker here already has the real ones.",
+  "D":"Password spraying tries a few common passwords across many accounts. Again it is guessing rather than intercepting."}}
+}

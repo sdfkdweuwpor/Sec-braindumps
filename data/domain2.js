@@ -1562,14 +1562,18 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Certificates are only as trustworthy as the private keys behind them. When keys are left in source code, on shared drives or in unprotected configuration files, anyone who finds one can impersonate the service, so insecure key storage is the vulnerability that improper certificate management produces.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Misconfiguration is the broad category of settings applied wrongly. It is too general — the question asks specifically about certificate management.",
+      "B": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants without being cleared.",
+      "D": "Weak cipher suites are a protocol negotiation problem. They concern which algorithms are permitted, not how certificates and their keys are handled."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p101",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1600,12 +1604,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The most likely vector of this attack is a spear-phishing attachment. The user opened a resume received in a message, which is a common method used in spear-phishing attacks. These attacks often involve sending a specifically crafted attachment (like a resume) to the targeted user. Once the attachment is opened, it could trigger malware, such as ransomware, which encrypts files on the system and displays a ransom note. This attack vector aligns with the described symptoms, as the user interacted with the malicious attachment before experiencing the ransomware infection.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Of the three activities, only the attachment is attacker-controlled and delivered directly to the victim. A resume sent in a message is a well-worn lure, and opening it is what executed the ransomware — making the attachment the vector.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A watering hole attack compromises a site the target group is known to visit. The site browsed was the company's own.",
+      "C": "An infected website would mean the browsing delivered the payload. The company's own site is the least likely candidate and nothing suggests it was compromised.",
+      "D": "Typosquatting relies on the user mistyping a domain and landing on a look-alike. The user visited their own company's site, not a mistyped one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p102",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1638,12 +1646,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "DNS poisoning (also known as DNS cache poisoning) involves an attacker manipulating DNS records, redirecting traffic to malicious destinations. In this case, the change in the DNS records to an IP address outside the company's network suggests that the attacker may have poisoned the DNS cache or altered the DNS records to reroute traffic, potentially leading to a malicious site or server.\nThis is not a DDoS attack, ransomware compromise, or spyware infection as the primary issue appears to be manipulation of DNS records, which is characteristic of DNS poisoning.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "DNS records that quietly change to point at an address outside the company is name-resolution tampering. Traffic intended for a legitimate service is redirected to infrastructure the attacker controls, which is DNS poisoning.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A DDoS attack floods a service to make it unavailable. Records were altered, not overwhelmed, and the service kept resolving.",
+      "C": "A ransomware compromise encrypts files and demands payment. There is no encryption or ransom here.",
+      "D": "A spyware infection quietly collects information from a host. It does not rewrite DNS records for the whole organisation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p103",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1676,12 +1688,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The threat actor's intent in this scenario is best described as blackmail. The official is being threatened with the release of compromising photos unless a large sum of money is paid, which is a classic form of blackmail. The attacker is using the threat of exposing sensitive information to coerce the official into making a payment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker is threatening to release damaging material unless money is paid. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Organised crime is a type of threat actor, not an intent. The question asks what the actor wants, not who they are.",
+      "B": "Philosophical beliefs motivate hacktivists making a political point. Nothing ideological is being advanced here.",
+      "C": "Espionage is covert collection of information for advantage. The attacker already has the material and is publicising their possession of it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p105",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1714,12 +1730,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VM escape occurs when an attacker manages to break out of a virtual machine (VM) and gain access to the underlying hypervisor or host system. Once the attacker has access to the hypervisor, they can potentially compromise other VMs running on the same host, which could lead to unauthorized access, data breaches, or further exploitation of the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "VM escape breaks the boundary between a guest and its host. Once the attacker reaches the hypervisor they are beneath every virtual machine on that hardware, so any other tenant or workload on the same host becomes reachable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Inserting instructions into memory to gain elevated permissions describes memory injection or privilege escalation within one system.",
+      "C": "Unencrypted data being read by a user in a separate environment describes resource reuse, where storage or memory is reallocated without being cleared.",
+      "D": "Installing unapproved software describes side loading or jailbreaking on an endpoint."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p107",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1752,12 +1772,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cross-site scripting (XSS) is a type of vulnerability that occurs when attackers inject malicious scripts into web applications. These scripts are then executed by the client's web browser, which can allow the attacker to steal sensitive data (such as cookies or session tokens), impersonate users, or perform other malicious actions within the context of the user's session.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cross-site scripting injects script into a web page so that it executes in another user's browser under that site's origin. From there it can read cookies, hijack the session or act as the user, which is what taking control of the client's browser means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SQL injection targets the database behind the application. It executes on the server, not in the client's browser.",
+      "C": "A zero-day exploit is any attack against a vulnerability with no patch yet. It describes timing, not the technique.",
+      "D": "An on-path attack intercepts traffic between two parties. It requires network position rather than injecting script into a page."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p108",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1790,12 +1814,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A hacktivist is a type of attacker who is motivated by personal or political beliefs, often aiming to promote a cause or to protest against certain actions or policies. Hacktivists typically use hacking as a means of expressing their views or making a statement, rather than for financial gain or other personal benefits, which distinguishes them from other types of threat actors like nation-states or organized crime groups.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hacktivists attack to advance a cause — political, social or ideological. Their payoff is the message rather than money or intelligence, which is exactly what being motivated by personal beliefs means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Nation-states act for strategic advantage: espionage, disruption, positioning. That is state interest rather than personal conviction.",
+      "B": "Organised crime is motivated by profit above everything else.",
+      "D": "An insider threat is usually driven by grievance or personal gain. Belief can play a part, but the defining trait of an insider is their access, not their motive."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p109",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1828,12 +1856,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An \"on-path\" attack, previously known as a man-in-the-middle (MITM) attack, occurs when a malicious actor intercepts communication between two parties (such as a user and a server). In this scenario, the attacker is trying to access sensitive financial information by intercepting and reusing login credentials. The malicious actor can capture the credentials and then use them to gain unauthorized access to the system or data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker is positioned between the user and the service, capturing credentials as they pass and then reusing them. Intercepting communication in transit and replaying what was captured is an on-path attack, formerly called man in the middle.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SQL injection manipulates database queries through application input. It needs no interception and captures no credentials in transit.",
+      "C": "Brute force guesses credentials by trying many possibilities. The attacker here already has the real ones.",
+      "D": "Password spraying tries a few common passwords across many accounts. Again it is guessing rather than intercepting."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false

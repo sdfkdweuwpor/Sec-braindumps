@@ -1609,14 +1609,18 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A warm site sits between the two extremes: hardware and connectivity are already in place, but data must be restored at failover time. That gives a usable recovery capability at far less cost than keeping a fully synchronised site running.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Recovery site is the generic umbrella term covering hot, warm and cold. It does not identify a specific level of readiness.",
+      "B": "A cold site has space, power and cooling but no hardware or internet access, which is precisely what the question says must be included.",
+      "C": "A hot site is fully equipped and continuously synchronised, ready almost immediately. It is the most expensive option, not the low-cost one."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p98",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.929,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1656,12 +1660,17 @@ export const domain3Questions = [
       "E",
       "F"
     ],
-    "explanation": "Multi-factor authentication (MFA) and a virtual private network (VPN) best meet the organization's security requirements for remote access to sensitive information like protected health information (PHI).\nMFA adds a layer of security by requiring multiple forms of verification before granting access, which helps protect against unauthorized access.\nVPN provides a secure encrypted connection for remote users, ensuring that data transmitted over the network remains confidential and secure.\nTogether, these controls help secure remote access to the corporate application handling sensitive data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two problems need solving: proving remote users are who they claim, and protecting PHI as it crosses the internet. MFA stops a stolen password being enough to reach health data, and a VPN encrypts the session so the traffic cannot be read in transit.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A local administrative password governs privileged access on one machine. It is unrelated to secure remote access.",
+      "B": "A perimeter network isolates public-facing services from the internal network. This application is internal and should not be published there.",
+      "C": "A jump server gives administrators a controlled entry point for managing systems. These are ordinary users of an application, not administrators.",
+      "D": "A WAF protects a web application from malicious requests. It guards the application but neither authenticates the user nor encrypts their link."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p99",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1694,12 +1703,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An air-gapped system is physically isolated from any other network, meaning it has no direct or indirect connection to the internet or other networks. This architecture is commonly used to protect highly secure systems by ensuring that they are not accessible remotely, thus reducing the risk of unauthorized access or cyberattacks. This approach aligns with the client's goal of physically isolating its secure systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap means there is no network connection at all between the secure systems and anything else — data moves only by physically carrying media. That physical separation is the strongest form of isolation and is what the client described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SDN manages networks through software-defined control. It is about programmable connectivity, which is the opposite of removing connectivity.",
+      "C": "Containerised means applications are packaged to run on a shared kernel. Containers provide logical separation on the same host, not physical isolation.",
+      "D": "Highly available describes a system engineered to stay up. It speaks to uptime, not isolation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p100",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1732,12 +1745,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Secure Access Service Edge (SASE) combines network security functions with wide area network (WAN) capabilities in a cloud-delivered model, which simplifies management and provides scalable, secure access to cloud-based services. For a company with limited IT resources, SASE offers an integrated solution that reduces the need for extensive on-premises infrastructure and simplifies ongoing support. This approach allows the company to enhance security while efficiently supporting its cloud migration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SASE delivers firewalling, secure web gateway, zero trust access and VPN as one cloud service. For a small IT team moving to cloud, that removes the need to buy, deploy and maintain several on-premises appliances, which is where the resource saving comes from.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS is a single control inspecting traffic at one point. It solves part of the problem and still has to be deployed and maintained.",
+      "B": "A WAF protects web applications specifically. It is narrow and does not address secure access to cloud services generally.",
+      "D": "IAM governs identities and permissions. It is an essential piece of a cloud migration but is not a consolidated network security solution."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p100",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1779,12 +1796,17 @@ export const domain3Questions = [
       "C",
       "D"
     ],
-    "explanation": "A microservices architecture offers the following benefits compared to a monolithic architecture:\nImproved scalability: Each microservice can be independently scaled based on demand, allowing more efficient resource usage and better performance for high-demand components.\nIncreased compartmentalization : Microservices are designed as separate, independent components, which improves modularity and allows for better fault isolation, easier updates, and focused development on specific services.\nWhile microservices have benefits such as easier debugging and reduced cost of ownership, their primary advantages lie in scalability and compartmentalization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Splitting a system into independent services means each one can be scaled on its own according to demand, and each runs in its own boundary so a failure or compromise is contained. Independent scaling and compartmentalisation are the two benefits that follow directly from the split.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Debugging is harder in microservices, because a single request now crosses several services and network hops rather than staying inside one process.",
+      "B": "Cost of ownership usually rises. More services mean more deployment pipelines, monitoring and orchestration to run.",
+      "E": "Authentication is not inherently stronger. If anything there are now more service-to-service boundaries that each need securing.",
+      "F": "Complexity increases rather than reduces. That is the recognised trade-off for the flexibility gained."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p101",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1817,12 +1839,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Port security is a network security feature that restricts input to an Ethernet port based on MAC addresses, which helps prevent unauthorized devices from gaining access to the network. By implementing port security, administrators can control which devices are allowed to connect to specific network ports, preventing unauthorized access through unused or untrusted ports. This measure would have prevented the penetration tester from gaining access to the local network by plugging into an unused port.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port security restricts which devices a switch port will accept, by limiting and pinning MAC addresses and shutting the port down when an unexpected one appears. An unused port then refuses to service an unknown laptop instead of handing it an address.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Transport Layer Security encrypts application traffic. It protects data in transit but does not control who may plug into the network.",
+      "C": "A proxy server mediates outbound requests. The tester was enumerating the local network, which never passes through a proxy.",
+      "D": "Security zones group systems by trust level. Good design limits what the tester could reach, but it does not stop the port granting access in the first place."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p102",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.68,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1855,51 +1881,17 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as Code (IaC) is the best solution for controlling, standardizing, and speeding up the process of building new servers. IaC allows the company to define the infrastructure using code, enabling automated provisioning, configuration, and management of servers and other IT resources. This approach ensures consistency, reduces human error, and accelerates the deployment process. With IaC, the company can quickly spin up new servers in a standardized and efficient manner.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code defines servers in version-controlled files that are applied automatically. Every build comes from the same definition, so configuration is standardised, changes are reviewable, and provisioning time collapses from hours of manual work to a pipeline run.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IoT refers to networked embedded devices. It is a category of equipment, not a provisioning approach.",
+      "C": "IaaS provides the underlying compute and storage. It supplies the machines but does nothing on its own to standardise how they are configured.",
+      "D": "ICS is industrial control systems used in manufacturing and utilities. It is unrelated to server builds."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p105",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0240",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "A malicious actor conducted a brute-force attack on a company's web servers and eventually gained access to the company's customer information database.\nWhich of the following is the most effective way to prevent similar attacks?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Regular patching of servers"
-      },
-      {
-        "key": "B",
-        "text": "Web application firewalls"
-      },
-      {
-        "key": "C",
-        "text": "Multifactor authentication"
-      },
-      {
-        "key": "D",
-        "text": "Enabling encryption of customer data"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "The most effective way to prevent similar brute-force attacks in the future is to implement multifactor authentication (MFA). MFA requires users to provide multiple forms of authentication (such as a password and a one-time code sent to a mobile device) before gaining access. This significantly reduces the likelihood of successful brute-force attacks, as attackers would need more than just the password to gain unauthorized access to the system.\nWhile regular patching, web application firewalls, and encryption of customer data are important security measures, MFA directly addresses the core vulnerability exploited by brute-force attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p107",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1931,51 +1923,17 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Journaling records every transaction as it happens, so the database can be rolled forward to within moments of the failure. Continuous capture gives the smallest possible data loss window and the fastest restoration to a consistent state.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Snapshots capture the state at intervals. Anything written since the last snapshot is lost, so the RPO is as long as the gap between them.",
+      "B": "On-site backups are periodic copies. They are usually the slowest to restore and the furthest behind of these options.",
+      "D": "A hot site gives somewhere to run quickly, which helps RTO, but the data available there is only as current as whatever replication feeds it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p107",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.778,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0245",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "While investigating a possible incident, a security analyst discovers the following:\nWhich of the following should the analyst do first?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Implement a WAF."
-      },
-      {
-        "key": "B",
-        "text": "Disable the query.php script."
-      },
-      {
-        "key": "C",
-        "text": "Block brute-force attempts on temporary users."
-      },
-      {
-        "key": "D",
-        "text": "Check the users table for new accounts."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "The log snippet shows an HTTP request where an attacker is attempting to insert new data into the database through a SQL injection attack. The request contains an SQL command INSERT INTO users VALUES ('temp', 'pass123'), which is likely an attempt to create a new user with the username \"temp\" and the password \"pass123.\"",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p109",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2007,12 +1965,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Load balancing is the best solution for improving the availability of an application with minimal effort in the event that a server needs to be replaced or added. A load balancer distributes incoming traffic across multiple servers, ensuring that the application remains available even if one or more servers experience issues. This approach allows the system to scale and remain highly available without requiring significant manual intervention when adding or replacing servers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A load balancer fronts a pool of servers and distributes requests across whichever ones are healthy. Adding or replacing a server means registering it with the pool — the application stays available throughout and no client configuration changes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Fault tolerance is the goal rather than a specific solution. It describes surviving failure without saying how.",
+      "C": "Proxy servers mediate requests, typically outbound. They are not a mechanism for distributing load across application servers.",
+      "D": "Replication copies data between systems so it exists in more than one place. It protects data but does not route users away from a failed server."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p111",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false

@@ -1480,8 +1480,8 @@ export const domain5Questions = [
   {
     "id": "q0219",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
     "question": "A systems administrator discovers a system that is no longer receiving support from the vendor.\nHowever, this system and its environment are critical to running the business, cannot be modified, and must stay online.\nWhich of the following risk treatments is the most appropriate in this situation?",
     "choices": [
@@ -1505,12 +1505,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When a system is critical, cannot be modified, and must stay online despite no longer receiving vendor support, the most appropriate risk treatment is to accept the risk. This decision acknowledges the potential vulnerabilities but continues operation due to the system's importance. Additional compensating controls, such as network isolation, monitoring, and backup procedures, may be implemented to help mitigate associated risks while accepting them as part of the business necessity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The business needs the system, it cannot be changed, and it cannot be taken offline — so none of the treatments that alter or remove the risk are available. What remains is a documented decision to accept it, ideally recorded in the risk register with compensating controls such as isolation and heightened monitoring.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Reject is not a recognised risk treatment. Refusing to acknowledge a risk is not a decision, it is an omission.",
+      "C": "Transfer shifts the financial consequence to an insurer or third party. It may be worth doing alongside, but it changes nothing about the system continuing to run unsupported.",
+      "D": "Avoid means ceasing the activity that creates the risk. The system must stay online, so avoidance is explicitly ruled out."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p97",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1543,12 +1547,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In a security awareness program, a phishing campaign is often implemented alongside other awareness activities, such as security-themed posters and online user training. Phishing simulations help users recognize and respond correctly to phishing attempts, reinforcing the training's effectiveness. This practical exercise increases awareness about social engineering attacks, making it a suitable component of a comprehensive security awareness program.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Posters and online modules teach people what to look for; a simulated phishing campaign tests whether the teaching stuck. It is the standard practical component of an awareness programme, giving measurable results and targeted follow-up for those who click.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A password policy is a technical standard enforced by systems. It is not an awareness activity.",
+      "B": "Access badges are a physical access control. Issuing them teaches nobody anything.",
+      "D": "A risk assessment evaluates the organisation's exposure. It is a governance activity, not user training."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p99",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.414,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1581,51 +1589,17 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Security awareness training is the most effective way to prevent similar incidents, as it educates employees on how to recognize and respond to phishing emails and other social engineering attacks. By training employees to spot suspicious links and emails, especially those that appear to be from high-level executives, the company can reduce the likelihood of employees falling victim to such attacks in the future.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The incident turned on a person clicking a link in a convincing message. Security awareness training addresses that decision point directly, teaching staff to recognise executive impersonation and suspicious links before they click — which is where this chain could have been broken.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Database encryption protects data at rest from unauthorised reading. Ransomware encrypts files regardless of whether they were already encrypted.",
+      "C": "Segmentation limits how far the ransomware spreads once it runs. That reduces impact, which is valuable, but the infection still occurs.",
+      "D": "Reporting suspicious emails is a useful behaviour, and it is one outcome of awareness training rather than a separate programme. Reporting also happens after recognition, which is the skill being taught."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p101",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.533,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0239",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "Which of the following would a security administrator use to comply with a secure baseline during a patch update?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Information security policy"
-      },
-      {
-        "key": "B",
-        "text": "Service-level expectations"
-      },
-      {
-        "key": "C",
-        "text": "Standard operating procedure"
-      },
-      {
-        "key": "D",
-        "text": "Test result report"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A Standard Operating Procedure (SOP) is used to ensure that patch updates and other security practices are carried out in a consistent, secure, and compliant manner, adhering to the organization's secure baseline. SOPs provide step-by-step instructions and guidelines for performing tasks like patching, ensuring that all actions taken are in line with established security standards and compliance requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p106",
-    "needsReview": true,
-    "inferenceConfidence": 0.44,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1661,12 +1635,17 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Recovery Time Objective (RTO) refers to the maximum acceptable amount of time that an IT system can be down after an incident before causing significant disruption to the business.\nThis metric is used to set restoration goals and minimize business impact. RTO helps the company define how quickly the systems need to be restored to resume normal operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Recovery time objective is the maximum tolerable duration a system can be down before the business suffers unacceptable harm. Measuring how quickly systems must be restored is precisely what the RTO expresses.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery point objective is about data, not time to restore — how much work you can afford to lose, measured backwards from the failure.",
+      "B": "Risk appetite is the amount of risk an organisation is willing to pursue. It is a strategic posture, not a recovery metric.",
+      "C": "Risk tolerance is the acceptable variation around that appetite. Again a risk measure rather than a restoration target.",
+      "E": "Mean time between failures predicts how often equipment fails. It measures reliability, not recovery speed."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p109",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.771,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1699,12 +1678,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A risk register is a document used to track and manage risks, including persistent vulnerabilities.\nIt includes details about each vulnerability, its potential impact, the likelihood of its occurrence, and recommendations for mitigating or managing the risk. The risk register serves as a tool to prioritize and address ongoing security issues systematically.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk register is the running record of identified risks with their owners, likelihood, impact and agreed treatment. Vulnerabilities that persist across reporting cycles belong there with their recommendations, so they stay tracked rather than being re-discovered each scan.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An audit report is a point-in-time assessment against a standard. It records findings at that moment rather than tracking them over time.",
+      "C": "A compliance report demonstrates adherence to a requirement. It shows status, not an ongoing treatment plan.",
+      "D": "A penetration test is an activity that produces findings. Those findings then feed the register."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p110",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1737,12 +1720,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When performing a risk assessment on new software, the company needs to evaluate the potential vulnerabilities within the software. Identifying software vulnerabilities helps assess the potential security risks, such as possible exploits or weaknesses that could be exploited by attackers. This is a critical part of the risk assessment process to ensure that the software does not introduce security threats to the company's environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A risk assessment on new software asks what could go wrong if the organisation adopts it. Known vulnerabilities in the product, its update history and its dependencies are the security exposures being brought in, which is what the assessment must evaluate.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Cost-benefit analysis weighs price against value. It is a procurement decision, not a risk one.",
+      "C": "Ongoing monitoring strategies describe how the software will be watched after adoption. That is a treatment decided once risks are known.",
+      "D": "Network infrastructure compatibility is a technical fit question. It affects whether the software will work, not what risk it carries."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p111",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false

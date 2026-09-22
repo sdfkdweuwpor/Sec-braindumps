@@ -3114,8 +3114,8 @@ export const domain4Questions = [
   {
     "id": "q0220",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A company discovered its data was advertised for sale on the dark web. During the initial investigation, the company determined the data was proprietary data.\nWhich of the following is the next step the company should take?",
     "choices": [
@@ -3139,14 +3139,18 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A confirmed breach of proprietary data starts a notification clock. Telling the affected parties — customers, partners, regulators as applicable — is the obligation that carries legal deadlines, so it takes priority over the technical work that follows.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Identifying the entry method matters and will happen, but root-cause analysis can run for weeks while notification deadlines are measured in days.",
+      "B": "Reporting to authorities is part of notification, but it is one audience among several and is not always the first or only requirement.",
+      "D": "Vulnerability scanning is preventive housekeeping. The data is already out; scanning now does nothing about the breach in hand."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p98",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -3177,12 +3181,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "False negatives in vulnerability scanning occur when the scan fails to detect existing vulnerabilities. This is a concern because it means that the system has vulnerabilities, but they are not being identified and addressed, leaving the system potentially exposed to exploitation.\nUnlike false positives, which result in wasted time on vulnerabilities that aren't actually present, false negatives directly impact security by failing to identify real risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A false negative means a real vulnerability exists and the scan did not report it. Nobody investigates what they never saw, so the exposure stays open indefinitely while the organisation believes it is clean — which is far more dangerous than wasted effort.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Time wasted chasing vulnerabilities that do not exist describes false positives. Annoying, but it costs effort rather than leaving you exposed.",
+      "C": "Misordered prioritisation is a scoring or triage issue. A false negative is not ranked low; it is absent altogether.",
+      "D": "A vulnerability with no available patch is a real, detected finding you must work around. The scan found it, so it is not a false negative."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p104",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3215,12 +3223,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Wiping is the most cost-effective method to decrease the risk of client data theft from decommissioned laptops. Wiping involves using software tools to securely erase all data on the hard drive, making it unrecoverable. This ensures that sensitive information cannot be accessed, even if the laptop is later reused or disposed of. Compared to shredding (which involves physical destruction and is more costly) or simple deletion (which does not truly erase the data), wiping is an effective, inexpensive way to mitigate the risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Wiping overwrites every block in software so the data cannot be recovered, using tools the company already has and leaving the laptops sellable or reusable. That combination of effectiveness and retained hardware value makes it the cost-effective choice.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Recycling disposes of the hardware without addressing the data at all. Drives regularly turn up on resale markets still readable.",
+      "C": "Shredding is thorough but physically destroys the drive, and often the laptop's resale value with it, plus a service fee.",
+      "D": "Deletion removes the file system pointers while leaving the data blocks intact and trivially recoverable."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p104",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3228,8 +3240,8 @@ export const domain4Questions = [
   {
     "id": "q0238",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "Which of the following is the best security reason for closing service ports that are not needed?",
     "choices": [
@@ -3253,13 +3265,59 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Closing unnecessary service ports is a critical security measure because it helps to reduce the system's attack surface. Each open port represents a potential entry point for attackers, and if a service is not needed, keeping the associated port open unnecessarily increases the risk of exploitation. By closing unused ports, you minimize the number of possible attack vectors, making it harder for attackers to compromise the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every listening port is a way in that must be patched, configured and monitored. Closing the ones nothing needs removes those entry points entirely, which is the clearest possible reduction of the attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Unencrypted traffic is addressed by choosing secure protocols. A closed port carries no traffic at all, so this describes a side effect rather than the reason.",
+      "B": "Eliminating false positives is a reporting convenience. Tidier scan output is not a security outcome.",
+      "D": "Resource utilisation may improve marginally. That is an operational benefit, not a security reason."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p106",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0240",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A malicious actor conducted a brute-force attack on a company's web servers and eventually gained access to the company's customer information database.\nWhich of the following is the most effective way to prevent similar attacks?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Regular patching of servers"
+      },
+      {
+        "key": "B",
+        "text": "Web application firewalls"
+      },
+      {
+        "key": "C",
+        "text": "Multifactor authentication"
+      },
+      {
+        "key": "D",
+        "text": "Enabling encryption of customer data"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Brute force works because a password is the only thing standing in the way. Multifactor authentication removes that assumption — even a correctly guessed password fails without the second factor, so the attack stops producing results regardless of how many attempts are made.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Patching fixes software vulnerabilities. Brute force exploits no vulnerability; it uses the login exactly as designed.",
+      "B": "A web application firewall can rate-limit and slow attempts, which helps, but it does not change the fact that a correct password still grants access.",
+      "D": "Encrypting customer data protects it at rest. An attacker logged in as a legitimate user sees decrypted data through the application."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p107",
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3291,13 +3349,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Packet capture data generally has a high storage cost because it records detailed network traffic and is often voluminous.\nWhile packet capture data is valuable for short-term investigations and troubleshooting, it typically does not need to be retained long-term for most security operations. Reducing its retention length can help lower the cost of storing such data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full packet capture is by far the bulkiest security data, since it stores the complete contents of network traffic rather than summaries. Its investigative value also decays quickest, so shortening its retention saves the most storage for the least loss of capability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Endpoint logs are comparatively compact and remain useful for tracing activity long after the fact.",
+      "C": "OS security logs are small, and authentication and privilege records are exactly what long-running investigations depend on.",
+      "D": "Vulnerability scan results are tiny by comparison and are often kept to evidence remediation over time for compliance."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p108",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0245",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "type": "single",
+    "question": "While investigating a possible incident, a security analyst discovers the following:\nWhich of the following should the analyst do first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Implement a WAF."
+      },
+      {
+        "key": "B",
+        "text": "Disable the query.php script."
+      },
+      {
+        "key": "C",
+        "text": "Block brute-force attempts on temporary users."
+      },
+      {
+        "key": "D",
+        "text": "Check the users table for new accounts."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The log shows an INSERT statement creating a user account through SQL injection. Before changing anything, the analyst needs to know whether it worked — checking the users table for the new account establishes whether this is an attempt or an active compromise, which determines everything that follows.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Implementing a WAF prevents future attempts. It is the right longer-term fix but does nothing about an account that may already exist.",
+      "B": "Disabling the script stops the injection path and may well be necessary, but doing it first destroys nothing and discovers nothing — the attacker's account would remain.",
+      "C": "Blocking brute-force attempts addresses a different attack. This was a single injected statement, not repeated guessing."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p109",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3329,12 +3433,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A Web Application Firewall (WAF) is specifically designed to protect web applications by filtering and monitoring HTTP traffic. It helps prevent common data exfiltration attacks, such as SQL injection, cross-site scripting (XSS), and other web-based threats, by inspecting incoming traffic and blocking malicious requests. A WAF would be an effective choice for safeguarding the sensitive data in the application and ensuring it is not exploited by attackers attempting data exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Common data exfiltration against an application happens through its own interface — injection, cross-site scripting, abusive queries. A web application firewall inspects each HTTP request and response and blocks those patterns, which is the control aimed squarely at that threat.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "URL scanning judges whether a destination is safe to visit. It protects users browsing out, not an application being attacked.",
+      "C": "A reverse proxy fronts an application and can hide its origin, but on its own it forwards traffic rather than inspecting it for attacks.",
+      "D": "NAC controls which devices may join the network. It has no view of what happens inside the application afterwards."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p110",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false

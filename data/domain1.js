@@ -1513,12 +1513,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A detective control is used to identify and record events or actions after they occur. In this case, tracking the number of employees accessing the building each day is a detective control, as it involves monitoring and logging access to gather data for configuring appropriate access controls. This helps the organization assess usage patterns to adjust security measures accordingly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Counting who enters the building is recording events that have already happened, which is the definition of a detective control. The data then informs what preventive controls to configure, but the counting itself only observes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preventive controls stop an event occurring. Counting entries blocks nobody.",
+      "C": "Corrective controls restore normal operation after an incident. Nothing here is being repaired.",
+      "D": "Directive controls instruct people how to behave. A counter issues no instructions."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p98",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1551,13 +1555,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full Disk Encryption (FDE) ensures that all data on a mobile device's drive is encrypted, making it unreadable without the proper decryption key. If the device is lost or stolen, the data remains protected because the contents of the drive are encrypted and cannot be accessed without the appropriate credentials. This is the most effective method to protect the data in case of device loss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption encrypts the entire volume, so a lost device yields nothing without the key. Removing the drive or booting another operating system returns ciphertext, which is what protects the data when the hardware is in someone else's hands.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a chip that stores keys and measures boot integrity. It commonly holds the FDE key, but the TPM alone encrypts nothing.",
+      "B": "ECC is an asymmetric algorithm used for key exchange and signatures. It is a primitive, not a disk protection scheme.",
+      "D": "An HSM is a dedicated appliance for generating and protecting keys, used in servers and data centres rather than on a mobile device."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p103",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0239",
+    "domain": 1,
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "type": "single",
+    "question": "Which of the following would a security administrator use to comply with a secure baseline during a patch update?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Information security policy"
+      },
+      {
+        "key": "B",
+        "text": "Service-level expectations"
+      },
+      {
+        "key": "C",
+        "text": "Standard operating procedure"
+      },
+      {
+        "key": "D",
+        "text": "Test result report"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A standard operating procedure gives the step-by-step instructions for performing a task the same way every time — which is how a patch gets applied without drifting from the secure baseline. It is the document an administrator actually follows during the work.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An information security policy states what must be achieved at a high level. It sets the requirement without describing the steps.",
+      "B": "Service-level expectations describe the performance a service must deliver. They are about outcomes, not procedure.",
+      "D": "A test result report records what happened when the patch was tested. It is evidence produced by following the procedure, not the procedure itself."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p106",
+    "needsReview": false,
+    "inferenceConfidence": 0.44,
     "needsExplanation": false,
     "keyCorrected": false
   },
