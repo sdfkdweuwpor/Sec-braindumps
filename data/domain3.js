@@ -4456,6 +4456,48 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0596",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following techniques can be used to remove sensitive information from database records while still providing sufficient data to perform testing?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Obfuscation"
+      },
+      {
+        "key": "B",
+        "text": "RBAC"
+      },
+      {
+        "key": "C",
+        "text": "Tokenization"
+      },
+      {
+        "key": "D",
+        "text": "Filtering"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Obfuscation scrambles or replaces sensitive fields so the records keep their shape and remain usable for testing while no longer containing real customer information. That is the balance the engineer needs — realistic data without exposure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RBAC limits who may reach the data. The engineer legitimately needs access, and the real data would still be there.",
+      "C": "Tokenisation substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
+      "D": "Filtering returns fewer records. A smaller set of real customer data is still real customer data."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p254",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0608",
     "domain": 3,
     "objective": "3.1",
@@ -4483,12 +4525,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Infrastructure as Code (IaC) allows security configurations, such as WAF policies, to be automatically provisioned and managed as part of the application deployment process, ensuring consistency and reducing manual effort.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Defining security configuration as code, so WAF policies are provisioned automatically whenever an application deploys, is infrastructure as code. The policy lives in version control alongside the application and is applied by the same pipeline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "IoT refers to networked embedded devices.",
+      "C": "IoC means indicator of compromise — an artefact such as a hash or address showing a system was attacked.",
+      "D": "IaaS is a cloud service model providing compute and storage. It supplies the platform rather than automating configuration on it."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p258",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4496,8 +4542,8 @@ export const domain3Questions = [
   {
     "id": "q0609",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "Which of the following uses proprietary controls and is designed to function in harsh environments over many years with limited remote access management?",
     "choices": [
@@ -4521,89 +4567,101 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Industrial Control Systems (ICS) use proprietary controls and are built to operate reliably in harsh environments for extended periods, often with limited remote access and management capabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Industrial control systems run manufacturing and utility processes on proprietary protocols and hardware, are installed for decades in physically demanding environments, and are deliberately kept with minimal remote management. Every element of the description matches ICS.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Microservers are small general-purpose computers. They use standard operating systems and protocols.",
+      "C": "Containers package applications to run on a shared kernel. They are a software deployment model, not field equipment.",
+      "D": "IoT devices are networked and often cloud-managed, which is the opposite of limited remote access, and they use standard protocols rather than proprietary industrial ones."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p258",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0619",
+    "id": "q0610",
     "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "Which of the following security concepts is being followed when applying encryption to sensitive data?",
+    "question": "Which of the following data recovery strategies will result in a quick recovery at low cost?",
     "choices": [
       {
         "key": "A",
-        "text": "Confidentiality"
+        "text": "Hot"
       },
       {
         "key": "B",
-        "text": "Non-repudiation"
+        "text": "Cold"
       },
       {
         "key": "C",
-        "text": "Availability"
+        "text": "Manual"
       },
       {
         "key": "D",
-        "text": "Integrity"
+        "text": "Warm"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Note the question asks for low cost, and of these options a cold site is the cheapest recovery strategy — space, power and cooling with no standing equipment or data. Be aware the trade-off is a slow recovery, so 'quick' fits poorly; cold is nonetheless the only low-cost option offered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hot site is fully equipped and continuously synchronised, giving the fastest recovery at the highest cost.",
+      "C": "Manual is not a recognised recovery site type.",
+      "D": "A warm site has hardware and connectivity with data restored at failover. It sits between the two on both speed and cost."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p259",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0618",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "A company that operates with most of its infrastructure in the cloud had its development environment breached. The attackers gained access via a public-facing development application and were able to pivot to the production environment.\nWhich of the following architecture changes would best prevent this from occurring again?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Moving each environment to a separate VPC in the company cloud account"
+      },
+      {
+        "key": "B",
+        "text": "Deploying firewalls in the company cloud account"
+      },
+      {
+        "key": "C",
+        "text": "Migrating the development environment to an on-premises environment"
+      },
+      {
+        "key": "D",
+        "text": "Implementing security groups restricting access between environments"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Encryption ensures confidentiality by protecting sensitive data from unauthorized access, allowing only authorized parties with the correct decryption key to read it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The failure was that a breach in development could reach production at all. Separate VPCs place the two environments in genuinely distinct networks with no implicit path between them, so compromising one provides no route to the other.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Deploying firewalls adds filtering, but within a shared VPC the underlying network adjacency remains and the firewall becomes one misconfiguration away from failure.",
+      "C": "Migrating development on-premises moves the problem rather than solving it, and creates a hybrid connection that can itself be pivoted through.",
+      "D": "Security groups restricting access between environments is the right instinct at the wrong layer — they are instance-level rules within a shared network, weaker and easier to misconfigure than true network separation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p262",
-    "needsReview": true,
-    "inferenceConfidence": 0.714,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0622",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "Which of the following should be used to ensure that a device is inaccessible to a network- connected resource?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Disablement of unused services"
-      },
-      {
-        "key": "B",
-        "text": "Web application firewall"
-      },
-      {
-        "key": "C",
-        "text": "Host isolation"
-      },
-      {
-        "key": "D",
-        "text": "Network-based IDS"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Host isolation removes a device from communicating with network-connected resources, ensuring it cannot access or affect other systems while remaining powered on for investigation or remediation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p263",
-    "needsReview": true,
-    "inferenceConfidence": 0.75,
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4635,12 +4693,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Classification assigns labels to files based on their sensitivity, value, and regulatory requirements, guiding how the data should be handled and protected.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Classification is the process of assigning a sensitivity label based on a file's value, how damaging disclosure would be, and any regulations governing it. That label then drives the handling and protection requirements.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Verification confirms that something is accurate or genuine. It does not assign sensitivity.",
+      "B": "Certification is formal attestation that a requirement has been met, such as a certificate of destruction.",
+      "D": "Inventory records what data or assets exist. It catalogues without judging sensitivity."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p264",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false

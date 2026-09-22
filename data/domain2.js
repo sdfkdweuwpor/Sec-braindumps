@@ -4846,44 +4846,6 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0595",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A manager meets with various stakeholders involved with a recently resolved security incident.\nDuring the meeting, they discuss potential improvements to the environment in order to better respond to future incidents.\nWhich of the following incident response activities does this describe?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Recovery"
-      },
-      {
-        "key": "B",
-        "text": "Analysis"
-      },
-      {
-        "key": "C",
-        "text": "Lessons learned"
-      },
-      {
-        "key": "D",
-        "text": "Containment"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "The lessons learned phase occurs after an incident is resolved and involves reviewing the response process, identifying improvements, and implementing changes to enhance future incident handling.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p253",
-    "needsReview": true,
-    "inferenceConfidence": 0.429,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0603",
     "domain": 2,
     "objective": "2.2",
@@ -4911,50 +4873,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A watering hole attack compromises a legitimate website frequently visited by the target, embedding malicious code that delivers malware, such as the unauthorized desktop application downloaded after the employee logged in.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The employee went to a site they routinely use for work and it delivered malware. Compromising a legitimate site that a specific group is known to visit, so the victims come to the attacker, is a watering hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects script that runs in the browser. It steals sessions or data rather than downloading and installing a desktop application.",
+      "C": "Typosquatting relies on the user mistyping an address. The employee reached the genuine payment site.",
+      "D": "A buffer overflow is a memory-handling defect. It might be exploited somewhere in the chain but does not describe the attack."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p256",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0604",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "An EDR solution recognizes that a specific workstation has outbound traffic to a malicious IP.\nWhich of the following would be the best action to take to contain the threat?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Change the passwords for all users accessing that workstation."
-      },
-      {
-        "key": "B",
-        "text": "Isolate the workstation as part of immediate response."
-      },
-      {
-        "key": "C",
-        "text": "Patch the workstation because it is likely vulnerable."
-      },
-      {
-        "key": "D",
-        "text": "Review the hardening and policies affecting that workstation."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Isolating the workstation immediately stops communication with the malicious IP and prevents further spread or data exfiltration, making it the most effective containment action.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p257",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4987,12 +4915,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Isolation places the end-of-life system on a segmented network or removes its external connectivity, reducing exposure and preventing attackers from exploiting its vulnerabilities while it remains in use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The system is business-critical so it must keep running, and it is end of life so it cannot be patched. Isolation removes the attacker's route to it — segmenting it away and restricting what may reach it — which reduces exposure without taking it offline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Monitoring tells you when someone attacks it. Detection does not prevent exploitation.",
+      "C": "Decommissioning removes the system, which the business-critical requirement forbids.",
+      "D": "Encryption protects data confidentiality. It does nothing about a vulnerable service being exploited."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p257",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5025,89 +4957,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Hacktivists are motivated by philosophical or political beliefs, using hacking to promote their cause or draw attention to specific social or ideological issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hacktivist attacks in service of a cause, so the reward is the message rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Financial gain motivates organised crime.",
+      "B": "Service disruption is often the method a hacktivist uses to draw attention. It is the tactic, not the underlying motive.",
+      "D": "Corporate espionage seeks commercial advantage through stolen information."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p257",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.923,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0610",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following data recovery strategies will result in a quick recovery at low cost?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hot"
-      },
-      {
-        "key": "B",
-        "text": "Cold"
-      },
-      {
-        "key": "C",
-        "text": "Manual"
-      },
-      {
-        "key": "D",
-        "text": "Warm"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A cold site is the least expensive recovery option, providing space and infrastructure but no active systems, allowing for recovery at a lower cost—though with slower setup compared to hot or warm sites.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p259",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0612",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "After multiple phishing simulations, the Chief Security Officer announces a new program that incentivizes employees to not click phishing links in the upcoming quarter.\nWhich of the following security awareness execution techniques does this represent?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Computer-based training"
-      },
-      {
-        "key": "B",
-        "text": "Insider threat awareness"
-      },
-      {
-        "key": "C",
-        "text": "SOAR playbook"
-      },
-      {
-        "key": "D",
-        "text": "Gamification"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Gamification uses rewards, competition, or incentives to motivate and reinforce desired behaviors - in this case, encouraging employees to avoid clicking phishing links through a reward-based program.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p260",
-    "needsReview": true,
-    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5139,12 +4999,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A misconfiguration vulnerability occurs when system settings - such as those deployed via group policy - are set insecurely, unintentionally weakening security and increasing exposure to threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
+      "C": "A malicious update delivers hostile code through an update channel. A legitimate internal policy rollout is not that.",
+      "D": "Supply chain risk comes from a compromised vendor or component. The change originated inside the organisation."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p260",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.583,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5177,13 +5041,59 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A trusted insider, such as a disgruntled employee or contractor with authorized access to internal systems, is most likely to plant a logic bomb in an internally-developed application since they have both the access and knowledge needed to insert the malicious code.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A logic bomb hidden inside an internally developed application has to be written into the code by someone with commit access and knowledge of the system. A trusted insider is the only actor with both, which is why they are the likely source.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A nation-state pursues espionage or strategic disruption, usually through external intrusion rather than by writing code into your internal application.",
+      "C": "Organised crime is motivated by profit and favours ransomware or fraud, which monetise quickly.",
+      "D": "A hacktivist wants publicity. A hidden logic bomb is the opposite of a public statement, and they lack internal code access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p260",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0622",
+    "domain": 2,
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "type": "single",
+    "question": "Which of the following should be used to ensure that a device is inaccessible to a network- connected resource?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Disablement of unused services"
+      },
+      {
+        "key": "B",
+        "text": "Web application firewall"
+      },
+      {
+        "key": "C",
+        "text": "Host isolation"
+      },
+      {
+        "key": "D",
+        "text": "Network-based IDS"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is what inaccessibility requires.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling unused services closes individual ports. The device stays reachable on whatever remains running.",
+      "B": "A web application firewall filters HTTP traffic to a web application. It inspects rather than disconnects, and only for one protocol.",
+      "D": "A network-based IDS watches traffic and alerts. It is passive and blocks nothing."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p263",
+    "needsReview": false,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5215,12 +5125,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "VM escape exploits a vulnerability in the virtualization layer, allowing an attacker to break out of a virtual machine and gain access to the host system or adjacent virtual machines.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "VM escape breaks out of a guest into the hypervisor, and from there every other virtual machine on the same host becomes reachable. Attacking one system to reach its neighbours is precisely what that vulnerability enables.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Side loading installs an application from outside the official store. It affects one device.",
+      "C": "Remote code execution runs attacker code on a target. It gains a foothold on that host without inherently crossing to adjacent ones.",
+      "D": "Resource exhaustion consumes memory, CPU or connections until a service fails. It denies availability rather than granting access."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p265",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false

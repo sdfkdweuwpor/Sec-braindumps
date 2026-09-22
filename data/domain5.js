@@ -4549,13 +4549,59 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A one-time risk assessment is performed for unique events such as decommissioning an application, to evaluate potential security or compliance impacts before the system is retired.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A one-time assessment fits a discrete event with a beginning and an end. Decommissioning an application is exactly that — a specific change whose risks are evaluated once, then the application is gone and there is nothing left to reassess.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Quantifying annual loss expectancy is a calculation within an assessment rather than a reason to run one.",
+      "B": "Updating the risk register periodically is by definition recurring.",
+      "C": "Complying with a regulation almost always requires ongoing or recurring assessment, not a single exercise."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p256",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0612",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "After multiple phishing simulations, the Chief Security Officer announces a new program that incentivizes employees to not click phishing links in the upcoming quarter.\nWhich of the following security awareness execution techniques does this represent?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Computer-based training"
+      },
+      {
+        "key": "B",
+        "text": "Insider threat awareness"
+      },
+      {
+        "key": "C",
+        "text": "SOAR playbook"
+      },
+      {
+        "key": "D",
+        "text": "Gamification"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Turning awareness into a contest with rewards for good behaviour is gamification. It borrows competition and incentive from games to motivate staff, which is a recognised technique for executing a security awareness programme.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Computer-based training is the delivery format for online modules. No training is being delivered here.",
+      "B": "Insider threat awareness is a training topic about recognising malicious colleagues.",
+      "C": "A SOAR playbook automates security response workflows. It is a technical control with no role in awareness."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p260",
+    "needsReview": false,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4587,12 +4633,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failing to comply with right-to-be-forgotten regulations, such as GDPR requirements, can lead to legal penalties and fines from regulatory authorities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The right to be forgotten is a statutory obligation under privacy law such as GDPR. Failing to honour erasure requests is non-compliance, and the enforcement mechanism regulators use is monetary penalty.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Data breaches result from a security failure. Retaining data longer than permitted is a compliance failure, though it does enlarge what a future breach would expose.",
+      "C": "Revenue loss may follow reputational harm, but it is an indirect downstream effect rather than the impact of the regulatory failure itself.",
+      "D": "Blackmail is a criminal act by an attacker, unrelated to a compliance shortfall."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p261",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4625,12 +4675,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Annual Loss Expectancy (ALE) estimates the yearly financial impact of a risk, helping the organization compare the potential cost of ransomware incidents against the cost of licensing the prevention solution.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A licence is an annual cost, so it has to be weighed against an annual expected loss. ALE gives that yearly figure by combining the cost of one incident with how often it is expected, which makes the two numbers directly comparable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SLE is the loss from a single incident. Without frequency it cannot be compared to an annual licence fee.",
+      "C": "RTO is the maximum tolerable downtime. It is a recovery target, not a financial measure.",
+      "D": "ARO is how often the event is expected per year. It is one input to ALE rather than the comparable figure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p263",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

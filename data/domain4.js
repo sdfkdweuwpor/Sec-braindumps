@@ -7933,6 +7933,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0595",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A manager meets with various stakeholders involved with a recently resolved security incident.\nDuring the meeting, they discuss potential improvements to the environment in order to better respond to future incidents.\nWhich of the following incident response activities does this describe?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Recovery"
+      },
+      {
+        "key": "B",
+        "text": "Analysis"
+      },
+      {
+        "key": "C",
+        "text": "Lessons learned"
+      },
+      {
+        "key": "D",
+        "text": "Containment"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "The incident is already resolved and stakeholders are meeting to discuss what should change. Reviewing the response and identifying improvements after the fact is the lessons learned phase, the final stage of the incident response process.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Recovery restores affected systems to normal operation. That work is finished before this meeting takes place.",
+      "B": "Analysis determines what happened and how far it reached, during the incident rather than after it.",
+      "D": "Containment limits damage while the incident is live."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p253",
+    "needsReview": false,
+    "inferenceConfidence": 0.429,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0598",
     "domain": 4,
     "objective": "4.3",
@@ -7960,12 +8002,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A sandbox safely executes and observes the behavior of suspicious files in an isolated environment, allowing the analyst to determine if they are malicious without risking the production network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Determining whether an attachment is malicious means watching what it actually does. A sandbox executes it in an isolated environment and records its behaviour, so the analyst gets a verdict without risking a production system.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Sanitisation removes data from media. It is a disposal technique, not an analysis one.",
+      "C": "Static analysis inspects the file without running it. Useful and fast, but packed or novel samples reveal little until they execute.",
+      "D": "Enumeration lists resources such as users or shares during an assessment."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p254",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -7973,8 +8019,8 @@ export const domain4Questions = [
   {
     "id": "q0599",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "Which of the following would be used to detect an employee who is emailing a customer list to a personal account before leaving the company?",
     "choices": [
@@ -7998,12 +8044,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data Loss Prevention (DLP) monitors and controls the movement of sensitive data, enabling detection of attempts to send protected information, such as a customer list, to unauthorized destinations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A customer list leaving by email is sensitive data in motion. DLP inspects outbound content against policy and flags or blocks protected information heading to an unauthorised destination, which is exactly this scenario.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "FIM alerts when protected files are modified. Copying a file into an email changes nothing on disk.",
+      "C": "An IDS looks for attack patterns in network traffic. A staff member sending an email generates entirely normal traffic.",
+      "D": "EDR watches for malicious activity on endpoints. Attaching a file to a message is not malicious behaviour by any technical measure."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p255",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8036,12 +8086,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A tabletop exercise is a simulated scenario where team members discuss and walk through their planned response to an incident, such as a ransomware attack, and then assess performance to identify improvements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The team ran a simulated scenario against their updated playbook and then assessed how they did. Walking through an incident in discussion to rehearse and evaluate the response is a tabletop exercise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Lessons learned is the review that follows a real incident. Nothing actually happened here.",
+      "B": "Root cause analysis determines why an incident occurred. There is no incident to analyse.",
+      "C": "Disaster recovery planning covers restoring systems after a major disruption. Ransomware response is incident response, and the activity described is the rehearsal, not the plan."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p255",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.367,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8074,13 +8128,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SCAP (Security Content Automation Protocol) is a standardized framework that enables automated vulnerability management, compliance checking, and security measurement.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SCAP is a set of standards that lets tools express, exchange and check security configuration and vulnerability data in a machine-readable way. That interoperability is what makes automated vulnerability and compliance assessment possible across different products.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CVE is a naming catalogue giving each vulnerability a unique identifier. Identifiers alone automate nothing.",
+      "C": "OSINT is intelligence gathered from public sources. It is a research discipline, not an automation framework.",
+      "D": "CVSS scores severity. It helps prioritise findings without automating how they are discovered or checked."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p256",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.7,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0604",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "An EDR solution recognizes that a specific workstation has outbound traffic to a malicious IP.\nWhich of the following would be the best action to take to contain the threat?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Change the passwords for all users accessing that workstation."
+      },
+      {
+        "key": "B",
+        "text": "Isolate the workstation as part of immediate response."
+      },
+      {
+        "key": "C",
+        "text": "Patch the workstation because it is likely vulnerable."
+      },
+      {
+        "key": "D",
+        "text": "Review the hardening and policies affecting that workstation."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Outbound traffic to a known-malicious address means the workstation is actively communicating with an attacker. Isolating it immediately severs that channel, stopping both further instructions arriving and any data still leaving — which is what containment means.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Changing passwords is a sensible follow-up, but doing it first leaves the compromised machine connected and able to capture the new credentials.",
+      "C": "Patching addresses how the machine may have been compromised. That is remediation, and it does nothing about the live connection.",
+      "D": "Reviewing hardening and policy is a longer-term improvement. The threat is active now."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p257",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8112,13 +8212,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Benchmarks provide standardized configuration guidelines, such as those from CIS, enabling the MSSP to create consistent firewall configuration templates and apply changes efficiently across multiple clients.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Benchmarks such as the CIS guides define a known-good configuration for a product. Building a template from a benchmark gives the MSSP one vetted standard to apply and audit across hundreds of client firewalls rather than configuring each from scratch.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SNMP monitors and manages device state. It reports and sets values rather than defining a configuration standard.",
+      "C": "NetFlow records traffic flow metadata. It is a visibility tool.",
+      "D": "SCAP automates configuration and compliance checking against defined content. It is the machinery for verifying compliance with a benchmark rather than the standard itself."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p259",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0615",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "Which of the following is a company addressing when it rolls out MDM on all COPE devices?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Malware outbreaks"
+      },
+      {
+        "key": "B",
+        "text": "Phishing attacks"
+      },
+      {
+        "key": "C",
+        "text": "Unsupported applications"
+      },
+      {
+        "key": "D",
+        "text": "Data masking"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "MDM on corporate-owned devices enforces which applications may be installed and run. Blocking unsupported or unapproved software across the fleet is one of the core reasons organisations deploy it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Malware outbreaks are addressed primarily by endpoint protection. MDM contributes indirectly by controlling what installs.",
+      "B": "Phishing attacks target the user's judgement and are addressed by mail filtering and training.",
+      "D": "Data masking obscures values for display in applications and reports. It is a data protection technique, not a device management one."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p261",
+    "needsReview": false,
+    "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8150,51 +8296,17 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "User Behavior Analytics (UBA) detects unusual or risky user activities, such as exfiltrating customer contact data, helping to identify and prevent insider threats before employees leave for a competitor.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Departing employees use their legitimate access, so nothing they do is technically unauthorised. User behaviour analytics baselines what normal looks like for each person and flags the deviation — bulk access to customer records by someone who rarely touches them.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "FIM alerts when protected files change. Reading and copying records modifies nothing.",
+      "B": "NAC decides which devices may join the network. It has no view of what an admitted user does.",
+      "C": "An IDS matches traffic against attack signatures. An employee querying a CRM produces entirely ordinary traffic."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p261",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0618",
-    "domain": 4,
-    "objective": "4.7",
-    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
-    "type": "single",
-    "question": "A company that operates with most of its infrastructure in the cloud had its development environment breached. The attackers gained access via a public-facing development application and were able to pivot to the production environment.\nWhich of the following architecture changes would best prevent this from occurring again?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Moving each environment to a separate VPC in the company cloud account"
-      },
-      {
-        "key": "B",
-        "text": "Deploying firewalls in the company cloud account"
-      },
-      {
-        "key": "C",
-        "text": "Migrating the development environment to an on-premises environment"
-      },
-      {
-        "key": "D",
-        "text": "Implementing security groups restricting access between environments"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Placing development and production environments in separate VPCs provides strong network isolation, preventing attackers from pivoting between them even if one environment is compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p262",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8226,12 +8338,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Application logs for the webmail service contain details about authentication events, including the source IP address used during the compromised log-in.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The log-in happened inside the webmail application, so the application's own authentication log holds the session details including the source address the credentials were used from. That is the record tying the compromise to an origin.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Network logs show traffic flows in aggregate. They may show a connection without attributing it to a specific account's log-in.",
+      "C": "System logs record operating system events on a host. Webmail authentication is handled by the application.",
+      "D": "Firewall logs record permitted and denied connections. They show traffic reaching the service but not which account authenticated."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p264",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8264,12 +8380,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Chain of custody is the documented process of handling and tracking evidence from collection to presentation in court, ensuring its integrity and admissibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody is the unbroken documented record of who handled each piece of evidence, when, and what they did with it. Without it the defence can argue the evidence may have been altered, and a court can refuse it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling.",
+      "C": "E-discovery is the legal process of identifying and producing electronically stored information.",
+      "D": "A tabletop exercise rehearses incident response in discussion. It has no evidentiary role."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p265",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.789,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8302,12 +8422,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Static analysis examines source code without executing it, enabling the detection of security flaws such as hard-coded credentials early in the software development process.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Hard-coded credentials are visible in the source itself, so a tool that reads the code finds them. Static analysis runs in the development pipeline without executing anything, which is why it catches secrets before they ever reach production.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A vulnerability scan probes a running system for known flaws. Credentials embedded in source are invisible to it.",
+      "B": "A penetration test attacks a deployed system. It might eventually find the credentials, but only after they are already in production.",
+      "D": "Quality assurance verifies the software behaves as specified. Hard-coded credentials work perfectly, so functional testing passes."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p265",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

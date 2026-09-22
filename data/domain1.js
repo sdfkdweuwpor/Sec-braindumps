@@ -3364,44 +3364,6 @@ export const domain1Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0596",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "A database engineer needs sample customer data for testing purposes.\nWhich of the following techniques can be used to remove sensitive information from database records while still providing sufficient data to perform testing?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Obfuscation"
-      },
-      {
-        "key": "B",
-        "text": "RBAC"
-      },
-      {
-        "key": "C",
-        "text": "Tokenization"
-      },
-      {
-        "key": "D",
-        "text": "Filtering"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Obfuscation masks or scrambles sensitive data elements, allowing realistic but anonymized records to be used for testing without exposing actual customer information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "SY0-701_en.pdf#p254",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0597",
     "domain": 1,
     "objective": "1.4",
@@ -3429,12 +3391,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Full disk encryption secures all data on a laptop's storage, ensuring it remains protected and inaccessible if the device is lost or stolen.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A lost laptop means someone else has the hardware. Full disk encryption encrypts the entire volume, so removing the drive or booting another operating system yields ciphertext rather than files.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Volume encryption covers one logical volume. Data written outside it, including some system areas, stays readable.",
+      "C": "Partition encryption protects a single partition, leaving others on the same disk exposed.",
+      "D": "File encryption protects only the files chosen. Temporary copies, swap and anything not selected remain in the clear."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p254",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3467,51 +3433,59 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Bollards serve as a robust physical barrier designed to withstand and absorb the kinetic impact of a vehicle, thereby preventing unauthorized vehicular access or accidental collisions that could cause structural damage or endanger personnel.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
+      "B": "Fencing marks a boundary and deters people on foot. Standard fencing will not withstand a vehicle.",
+      "C": "Lighting improves visibility and deters. It presents no physical barrier."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p258",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0615",
+    "id": "q0619",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following is a company addressing when it rolls out MDM on all COPE devices?",
+    "question": "Which of the following security concepts is being followed when applying encryption to sensitive data?",
     "choices": [
       {
         "key": "A",
-        "text": "Malware outbreaks"
+        "text": "Confidentiality"
       },
       {
         "key": "B",
-        "text": "Phishing attacks"
+        "text": "Non-repudiation"
       },
       {
         "key": "C",
-        "text": "Unsupported applications"
+        "text": "Availability"
       },
       {
         "key": "D",
-        "text": "Data masking"
+        "text": "Integrity"
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "Mobile Device Management (MDM) on Corporate-Owned, Personally Enabled (COPE) devices enforces application control policies, helping prevent the installation and use of unsupported or unauthorized applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption makes data unreadable without the key, so only authorised parties can interpret it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
+      "C": "Availability means systems and data are accessible when needed. Encryption can even work against it if keys are lost.",
+      "D": "Integrity means data has not been altered, and is assured by hashing and signatures."
+    },
     "references": [],
-    "source": "SY0-701_en.pdf#p261",
-    "needsReview": true,
-    "inferenceConfidence": 0.308,
+    "source": "SY0-701_en.pdf#p262",
+    "needsReview": false,
+    "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3543,12 +3517,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Key escrow securely stores encryption keys with a trusted third party or internal authority, enabling recovery of encrypted data if the original key is lost or corrupted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Key escrow deposits a copy of the encryption key with a trusted custodian under controlled conditions. If the working key is corrupted or deleted, the escrowed copy is what allows the data to be decrypted rather than lost permanently.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Self-signed certificates are certificates an organisation issues to itself. They do not provide key recovery.",
+      "C": "Tokenisation substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
+      "D": "A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p263",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3581,12 +3559,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A backout plan provides predefined steps to revert a change if it fails or causes issues, minimizing downtime and preventing extended customer impact.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The change failed and there was no rehearsed way to undo it, so the outage ran past the window and reached customers. A backout plan defines in advance exactly how to revert, which caps the damage of a failed change at the length of the rollback.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "User notification tells customers something is happening. It manages expectations without shortening the outage.",
+      "B": "Change approval authorises the work. The change was already approved and correctly scheduled.",
+      "C": "Risk analysis assesses what might go wrong beforehand. It informs the decision but supplies no way out once it has gone wrong."
+    },
     "references": [],
     "source": "SY0-701_en.pdf#p264",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
