@@ -57,7 +57,7 @@ function buildShell() {
   clear(root);
 
   const nav = el('nav', { class: 'nav', 'aria-label': 'Sections' }, [
-    el('span', { class: 'navtitle', text: NAV_TITLE }),
+    el('span', { class: 'navtitle' }, [el('span', { class: 'brandmark', 'aria-hidden': 'true', text: 'S+' }), NAV_TITLE]),
     ...NAV.map((n) => el('a', { href: n.href, 'data-nav': n.match.join(' ') }, [
       el('span', { class: 'ic', 'aria-hidden': 'true', text: n.ic }),
       el('span', { text: n.label }),
@@ -75,8 +75,8 @@ function buildShell() {
 
   const topbar = el('header', { class: 'topbar' }, [
     el('span', { class: 'brand' }, [
-      APP_TITLE,
-      el('small', { text: APP_SUBTITLE }),
+      el('span', { class: 'brandmark', 'aria-hidden': 'true', text: 'S+' }),
+      el('span', { class: 'brandtext' }, [APP_TITLE, el('small', { text: APP_SUBTITLE })]),
     ]),
     themeBtn,
   ]);

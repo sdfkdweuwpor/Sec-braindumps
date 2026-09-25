@@ -74,5 +74,12 @@ export const UNSUPPORTED_QUESTIONS = [
     "reason": "only 0 parsed choice(s)",
     "question": "Drag and Drop Question A security engineer is setting up passwordless authentication for the first time.\nINSTRUCTIONS Drag and drop the MINIMUM set of commands to set this up and verify that it works. Commands may only be used once, and not all will be used.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.",
     "source": "bank.pdf#p378"
+  },
+  {
+    "id": "q1189",
+    "number": 1189,
+    "reason": "dropped by correction: Source corruption: the stem asks for a single integrated authentication solution, but the four choices belong to a different question about anomalous user behaviour. The braindump PDF carries the same corruption (its q0852). Unanswerable as printed.",
+    "question": "A software company currently secures access using a combination of traditional username/password configurations and one-time passwords for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its emplo",
+    "source": "bank.pdf#p418"
   }
 ];

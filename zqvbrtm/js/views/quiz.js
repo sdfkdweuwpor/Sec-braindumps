@@ -236,34 +236,39 @@ export async function renderQuiz(view, { navigate }) {
         .map((c) => `${c.key}. ${c.text}`)
         .join('  |  ');
 
-      const panel = el('div', { class: 'explain' }, [
-        el('div', { class: 'row', style: 'margin-bottom:.4rem' }, [
-          el('span', {
-            class: 'statelabel',
-            style: `color:var(--${got ? 'correct' : 'incorrect'})`,
-            text: got ? '✓ Correct' : '✗ Incorrect',
-          }),
+      const panel = el('div', { class: `explain ${got ? 'is-right' : 'is-wrong'}` }, [
+        el('div', { class: 'explain-head' }, [
+          el('span', { class: 'verdict', text: got ? '✓ Correct' : '✗ Incorrect' }),
+          el('span', { class: 'explain-key', text: `Answer: ${correctKeys.join(', ')}` }),
         ]),
-        el('h3', { text: `Correct answer: ${correctKeys.join(', ')}` }),
-        el('p', { text: correctText }),
       ]);
 
+      // Pocket Prep's pattern: the explanation opens by itself when you got it
+      // wrong, and sits one tap away when you got it right.
+      const details = el('details', { class: 'explain-more', open: got ? null : '' }, [
+        el('summary', {}, [
+          el('span', { class: 'when-closed', text: 'Show explanation' }),
+          el('span', { class: 'when-open', text: 'Hide explanation' }),
+        ]),
+      ]);
+      const inner = el('div', { class: 'explain-body' }, [
+        el('p', { class: 'explain-correct' }, [el('b', { text: 'Correct: ' }), correctText]),
+      ]);
       if (question.explanation) {
-        panel.append(el('p', { text: question.explanation }));
+        inner.append(el('p', { text: question.explanation }));
       } else {
-        panel.append(el('p', { class: 'faint',
+        inner.append(el('p', { class: 'faint',
           text: 'No explanation available for this question yet.' }));
       }
-
       const wrongs = Object.entries(question.incorrectExplanations || {})
         .filter(([k]) => !correctKeys.includes(k));
       if (wrongs.length) {
-        panel.append(el('h3', { text: 'Why the others are wrong',
-          style: 'margin-top:.8rem' }));
-        panel.append(el('ul', { class: 'wrongs' },
-          wrongs.map(([k, why]) => el('li', {}, [el('b', { text: `${k}. ` }), why]))));
+        inner.append(el('h3', { text: 'Why the others are wrong' }));
+        inner.append(el('ul', { class: 'wrongs' },
+          wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: k }), el('span', { text: why })]))));
       }
-
+      details.append(inner);
+      panel.append(details);
       body.append(panel);
     }
 

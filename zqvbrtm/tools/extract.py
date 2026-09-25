@@ -244,6 +244,31 @@ def parse_block(num, page, body):
     }
 
 
+def apply_text_fixes(rec):
+    """Repair the PDF's OCR and typing errors in the text students read.
+
+    Fixes are exact substring replacements listed per question in
+    corrections.TEXT_FIXES; each must match, so a fix can never silently
+    stop applying after re-extraction. Choices that exactly duplicate an
+    earlier choice (a PDF defect) are removed, unless one is keyed.
+    """
+    for old, new in FIX.TEXT_FIXES.get(rec["id"], []):
+        hits = rec["question"].count(old) + sum(c["text"].count(old) for c in rec["choices"])
+        if not hits:
+            raise SystemExit(f"{rec['id']}: text fix {old!r} no longer matches")
+        rec["question"] = rec["question"].replace(old, new)
+        for c in rec["choices"]:
+            c["text"] = c["text"].replace(old, new)
+    seen, kept = set(), []
+    for c in rec["choices"]:
+        t = " ".join(c["text"].lower().split())
+        if t in seen and c["key"] not in (rec["correct"] or []):
+            continue
+        seen.add(t)
+        kept.append(c)
+    rec["choices"] = kept
+
+
 def build():
     global AUTHORED, PDF
     PDF = PDF or find_pdf()
@@ -258,6 +283,7 @@ def build():
     for num, page, body in blocks:
         raw = "\n".join(l for l, _ in body)
         rec = parse_block(num, page, body)
+        apply_text_fixes(rec)
 
         if PBQ_MARKERS.search(raw) or len(rec["choices"]) < 2:
             unsupported.append({

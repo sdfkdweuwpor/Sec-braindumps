@@ -30,12 +30,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption (FDE) encrypts all the data on a disk drive, protecting the data at rest on the entire laptop, including the operating system, applications, and user files. This ensures that if a laptop is lost or stolen, the data cannot be accessed without the correct decryption key.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption encrypts everything on the laptop's drive -- operating system, applications and user files -- so a lost or stolen laptop reveals nothing without the key. It is the standard protection for data at rest on employee laptops.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Partition encryption protects only selected partitions, leaving data elsewhere on the disk exposed.",
+      "B": "Asymmetric encryption is a type of algorithm (public/private keys), not a way of protecting a laptop's storage.",
+      "D": "Database encryption protects data inside a database, not the files and system on a laptop."
+    },
     "references": [],
     "source": "bank.pdf#p5",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.636,
     "needsExplanation": false,
     "keyCorrected": false
@@ -68,12 +72,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Preventive - an acceptable use policy enforces rules to users to use company resources.\nexample - company A states that in order to access files in the company server you must connect to your company VPN when working from home. This prevents you from connecting from an insecure network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An acceptable use policy sets rules before anyone acts, telling users what they may and may not do so that misuse is discouraged and prevented. Of these control types, preventive fits best. By category (not type) it is a managerial control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Detective controls identify an event after it happens, such as logs or alarms. A policy does not detect anything.",
+      "B": "Compensating controls stand in for a primary control that cannot be used. An AUP is a primary policy, not a substitute.",
+      "C": "Corrective controls fix things after an incident, such as restoring from backup. An AUP acts beforehand."
+    },
     "references": [],
     "source": "bank.pdf#p5",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -106,12 +114,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A change control request is a document that describes the proposed change to a system, the reason for the change, the expected impact, the approval process, the testing plan, the implementation plan, the rollback plan, and the communication plan. A change control request is a best practice for applying any patch to a production system, especially a high-priority one, as it ensures that the change is authorized, documented, tested, and communicated. A change control request also minimizes the risk of unintended consequences, such as system downtime, data loss, or security breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Even an urgent patch on a production system goes through change management first: a change request documents the change, its impact, testing and a backout plan, and gets approval. High priority speeds the process up; it does not skip it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Air-gapping the system cuts it off from the network, causing an outage without addressing the patch.",
+      "B": "Moving the system to another segment changes its exposure but is itself an unapproved change.",
+      "D": "Applying the patch straight away bypasses approval and testing, which is how unplanned outages happen."
+    },
     "references": [],
     "source": "bank.pdf#p8",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -138,20 +150,24 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Including an 'allow any1 policy above the 'deny any' policy"
+        "text": "Including an 'allow any' policy above the 'deny any' policy"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The rule itself was reasonable; the outage happened because it went straight into production. Testing the policy in a non-production environment first would have shown that it blocked the servers before anyone was affected.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Change management documentation and approval matter, but paperwork alone would not have revealed the rule's effect -- testing would.",
+      "C": "Disabling IPS signatures weakens protection and has nothing to do with the rule blocking legitimate traffic.",
+      "D": "An 'allow any' rule above 'deny any' would permit everything, defeating the purpose of the firewall."
+    },
     "references": [],
     "source": "bank.pdf#p10",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -182,12 +198,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A honey pot is a system or a network that is designed to mimic a real production server and attract potential attackers. A honey pot can be used to identify the attacker's methods, techniques, and objectives without affecting the actual production servers. A honey pot can also divert the attacker's attention from the real targets and waste their time and resources. The other options are not effective ways to identify potential attacker activities without affecting production servers:\nVideo surveillance: This is a physical security technique that uses cameras and monitors to record and observe the activities in a certain area. Video surveillance can help to deter, detect, and investigate physical intrusions, but it does not directly identify the attacker's activities on the network or the servers.\nZero Trust: This is a security strategy that assumes that no user, device, or network is trustworthy by default and requires strict verification and validation for every request and transaction. Zero Trust can help to improve the security posture and reduce the attack surface of an organization, but it does not directly identify the attacker's activities on the network or the servers. Geofencing:\nThis is a security technique that uses geographic location as a criterion to restrict or allow access to data or resources. Geofencing can help to protect the data sovereignty and compliance of an organization, but it does not directly identify the attacker's activities on the network or the servers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A honeypot is a decoy system built to attract attackers, so their tools and techniques can be observed on something that is not production. Any interaction with it is suspicious by definition.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Video surveillance watches physical spaces, not attacker activity on systems.",
+      "C": "Zero Trust is an architecture that verifies every access request. It does not lure or observe attackers.",
+      "D": "Geofencing triggers actions based on a device's location. It does not reveal attacker behaviour."
+    },
     "references": [],
     "source": "bank.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -220,12 +240,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Non-repudiation is the ability to prove that a message or document was sent or signed by a particular person, and that the person cannot deny sending or signing it. Non-repudiation can be achieved by using cryptographic techniques, such as hashing and digital signatures, that can verify the authenticity and integrity of the message or document. Non-repudiation can be useful for legal, financial, or contractual purposes, as it can provide evidence of the origin and content of the message or document.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Non-repudiation means the sender cannot deny having sent a message, usually through digital signatures tied to that individual. It is what lets a message be attributed to a specific person.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Adaptive identity adjusts authentication based on context and risk. It does not bind a message to its sender.",
+      "C": "Authentication proves identity at login, but does not by itself prove who created a particular message.",
+      "D": "Access logs record access events, but logs can be disputed or altered and do not provide cryptographic proof of authorship."
+    },
     "references": [],
     "source": "bank.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -258,12 +282,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A detective control is a type of control that monitors and analyzes the events and activities in a system or a network, and alerts or reports when an incident or a violation occurs. A SIEM (Security Information and Event Management) system is a tool that collects, correlates, and analyzes the logs from various sources, such as firewalls, routers, servers, or applications, and provides a centralized view of the security status and incidents. An analyst who reviews the logs on a weekly basis can identify and investigate any anomalies, trends, or patterns that indicate a potential threat or a breach. A detective control can help the company to respond quickly and effectively to the incidents, and to improve its security posture and resilience.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Collecting logs in a SIEM and having an analyst review them finds events after they have happened. Controls that identify activity rather than stop it are detective.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Corrective controls fix problems after an incident, such as restoring systems.",
+      "B": "Preventive controls stop an event before it happens, such as firewalls or locks.",
+      "D": "Deterrent controls discourage attempts, such as warning signs."
+    },
     "references": [],
     "source": "bank.pdf#p17",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.545,
     "needsExplanation": false,
     "keyCorrected": false
@@ -296,12 +324,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Steganography is the process of hiding information within another medium, such as an image, audio, video, or text file. The hidden information is not visible or noticeable to the casual observer, and can only be extracted by using a specific technique or key. Steganography can be used for various purposes, such as concealing secret messages, watermarking, or evading detection by antivirus software.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Steganography hides data inside another file, such as text or code tucked into an image, so its presence is not obvious.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Symmetric encryption scrambles data so it is unreadable, but does not hide that the data exists.",
+      "B": "Hashing produces a fixed-length digest for integrity checks. It does not hide content inside images.",
+      "C": "Data masking replaces sensitive values with placeholders in displays, not hiding data inside images."
+    },
     "references": [],
     "source": "bank.pdf#p32",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.636,
     "needsExplanation": false,
     "keyCorrected": false
@@ -334,60 +366,17 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Masking is a method to secure credit card data that involves replacing some or all of the digits with symbols, such as asterisks, dashes, or Xs, while leaving some of the original digits visible.\nMasking is best to use when a requirement is to see only the last four numbers on a credit card, as it can prevent unauthorized access to the full card number, while still allowing identification and verification of the cardholder. Masking does not alter the original data, unlike encryption, hashing, or tokenization, which use algorithms to transform the data into different formats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Masking hides most of a value in displays while leaving part visible, such as showing only the last four digits of a card. That matches the requirement exactly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption hides the whole number from anyone without the key -- nothing is partly visible.",
+      "B": "Hashing turns the number into an irreversible digest; no digits remain visible.",
+      "D": "Tokenization swaps the number for an unrelated token. It protects the data, but does not show the real last four digits."
+    },
     "references": [],
     "source": "bank.pdf#p35",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0062",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "multi",
-    "question": "Which of the following are cases in which an engineer should recommend the decommissioning of a network device? (Select two).",
-    "choices": [
-      {
-        "key": "A",
-        "text": "The device has been moved from a production environment to a test environment."
-      },
-      {
-        "key": "B",
-        "text": "The device is configured to use cleartext passwords."
-      },
-      {
-        "key": "C",
-        "text": "The device is moved to an isolated segment on the enterprise network."
-      },
-      {
-        "key": "D",
-        "text": "The device is moved to a different location in the enterprise."
-      },
-      {
-        "key": "E",
-        "text": "The device's encryption level cannot meet organizational standards."
-      },
-      {
-        "key": "F",
-        "text": "The device is unable to receive authorized updates."
-      }
-    ],
-    "correct": [
-      "B",
-      "E"
-    ],
-    "explanation": "B. The device is configured to use cleartext passwords. This is a major security vulnerability and poses a significant risk of unauthorized access. Devices using cleartext passwords should be decommissioned and replaced with devices using secure authentication methods.\nE. The device's encryption level cannot meet organizational standards. If the device cannot encrypt data to the required level, it compromises the confidentiality of sensitive information and should be decommissioned. Organizational security policies should dictate the minimum acceptable encryption level for network devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p37",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -419,12 +408,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Zero Trust is a security model that assumes no trust for any entity inside or outside the network perimeter and requires continuous verification of identity and permissions. Zero Trust can provide a secure zone by isolating and protecting sensitive data and resources from unauthorized access.\nZero Trust can also enforce a company-wide access control policy by applying the principle of least privilege and granular segmentation for users, devices, and applications. Zero Trust can reduce the scope of threats by preventing lateral movement and minimizing the attack surface.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Zero Trust uses policy enforcement points to create secure zones, applies one access policy to every request everywhere, and reduces the threat scope by never assuming trust. The three requirements map onto its core ideas.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "AAA (authentication, authorization, accounting) is a framework for controlling access, but it does not define secure zones or reduce threat scope across the organization.",
+      "C": "Non-repudiation proves who performed an action. It does not create zones or enforce access policy.",
+      "D": "The CIA triad is the set of security goals, not a solution that is set up."
+    },
     "references": [],
     "source": "bank.pdf#p38",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -509,12 +502,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Detective controls are security measures that are designed to identify and monitor any malicious activity or anomalies on a system or network. They can help to discover the source, scope, and impact of an attack, and provide evidence for further analysis or investigation. Detective controls include log files, security audits, intrusion detection systems, network monitoring tools, and antivirus software. In this case, the administrator used log files as a detective control to review the ransomware attack on the company's system. Log files are records of events and activities that occur on a system or network, such as user actions, system errors, network traffic, and security alerts. They can provide valuable information for troubleshooting, auditing, and forensics.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Reviewing log files reveals what happened after the fact. Controls used to identify and investigate events are detective.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Compensating controls substitute for a primary control that cannot be used.",
+      "C": "Preventive controls stop an event from happening; reading logs after the attack does not.",
+      "D": "Corrective controls fix things after an incident, such as restoring from backup, not reviewing what happened."
+    },
     "references": [],
     "source": "bank.pdf#p40",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -547,12 +544,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Scheduled downtime is a planned period of time when a system or service is unavailable for maintenance, updates, upgrades, or other changes. Scheduled downtime gives administrators a set period to perform changes to an operational system without disrupting the normal business operations or affecting the availability of the system or service. Scheduled downtime also allows administrators to inform the users and stakeholders about the expected duration and impact of the changes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A scheduled downtime window is an agreed time set aside for changes, chosen to minimize business impact and let everyone know in advance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Impact analysis assesses what a change could affect; it does not set a time to make it.",
+      "C": "A backout plan explains how to undo a failed change.",
+      "D": "The change advisory board approves changes, but does not itself provide the time window."
+    },
     "references": [],
     "source": "bank.pdf#p46",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -585,13 +586,59 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "OCSP stands for Online Certificate Status Protocol. It is a protocol that allows applications to check the revocation status of a certificate in real-time. It works by sending a query to an OCSP responder, which is a server that maintains a database of revoked certificates. The OCSP responder returns a response that indicates whether the certificate is valid, revoked, or unknown.\nOCSP is faster and more efficient than downloading and parsing Certificate Revocation Lists (CRLs), which are large files that contain the serial numbers of all revoked certificates issued by a Certificate Authority (CA).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When a certificate is presented, the client asks the CA's OCSP responder in real time whether that certificate is still valid or has been revoked.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A certificate signing request is sent to a CA to obtain a certificate, not to validate one.",
+      "C": "The CA issues and revokes certificates; OCSP is the mechanism used to check validity when one is presented.",
+      "D": "A CRC is an error-detection checksum, unrelated to certificates."
+    },
     "references": [],
     "source": "bank.pdf#p47",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0097",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
+    "type": "single",
+    "question": "Which of the following security concepts is the best reason for permissions on a human resources fileshare to follow the principle of least privilege?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Integrity"
+      },
+      {
+        "key": "B",
+        "text": "Availability"
+      },
+      {
+        "key": "C",
+        "text": "Confidentiality"
+      },
+      {
+        "key": "D",
+        "text": "Non-repudiation"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "HR files hold personal information that only certain people should see. Least privilege limits who can read them, which protects confidentiality.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Integrity is about preventing unauthorized changes. Least privilege helps here too, but HR data's main concern is who can see it.",
+      "B": "Availability is about access when needed; restricting permissions does the opposite.",
+      "D": "Non-repudiation proves who performed an action. It is not the reason to limit access."
+    },
+    "references": [],
+    "source": "bank.pdf#p50",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -674,12 +721,17 @@ export const domain1Questions = [
       "A",
       "B"
     ],
-    "explanation": "Key escrow is a method of storing encryption keys in a secure location, such as a trusted third party or a hardware security module (HSM). Key escrow is important for FDE because it allows the recovery of encrypted data in case of lost or forgotten passwords, device theft, or hardware failure. Key escrow also enables authorized access to encrypted data for legal or forensic purposes. TPM presence is a feature of some laptops that have a dedicated chip for storing encryption keys and other security information. TPM presence is important for FDE because it enhances the security and performance of encryption by generating and protecting the keys within the chip, rather than relying on software or external devices. TPM presence also enables features such as secure boot, remote attestation, and device authentication.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Full disk encryption needs somewhere secure to hold the key -- a TPM chip on the laptop -- and a way to recover data if a user forgets their PIN or leaves: key escrow. Both have to be planned before rolling out FDE.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Digital signatures prove authenticity and integrity; they are not part of encrypting disks.",
+      "D": "Tokenization replaces sensitive values with tokens, typically in databases and payment systems.",
+      "E": "Public key management matters for PKI, but FDE on laptops normally uses symmetric keys protected by the TPM.",
+      "F": "Certificate authorities issue certificates; FDE does not depend on them."
+    },
     "references": [],
     "source": "bank.pdf#p57",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -712,12 +764,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Salting is the process of adding extra random data to a password or other data before applying a one-way data transformation algorithm, such as a hash function. Salting increases the complexity and randomness of the input data, making it harder for attackers to guess or crack the original data using precomputed tables or brute force methods. Salting also helps prevent identical passwords from producing identical hash values, which could reveal the passwords to attackers who have access to the hashed data. Salting is commonly used to protect passwords stored in databases or transmitted over networks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A salt is random data added to each password before it is hashed, so identical passwords produce different hashes and precomputed rainbow tables are useless.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key stretching repeats the hashing many times to slow cracking. It adds work, not extra data before hashing.",
+      "B": "Data masking hides parts of data in displays; it is unrelated to hashing.",
+      "C": "Steganography hides data inside other files."
+    },
     "references": [],
     "source": "bank.pdf#p59",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -750,13 +806,59 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "It asks about the Data plane not the control plane, which includes implicit trust zones, systems and subjects, and policy enforcement points.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In the Zero Trust model, the data plane is where traffic actually flows through implicit trust zones and policy enforcement points. Secured zones belong to the data plane; adaptive identity, threat scope reduction and subjects are control-plane concepts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Subject role is evaluated by the policy engine in the control plane.",
+      "C": "Adaptive identity is a control-plane decision about authentication.",
+      "D": "Threat scope reduction is a control-plane goal achieved through policy."
+    },
     "references": [],
     "source": "bank.pdf#p64",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.955,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0129",
+    "domain": 1,
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "type": "single",
+    "question": "A company wants to verify that the software the company is deploying came from the vendor the company purchased the software from. Which of the following is the best way for the company to confirm this information?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Validate the code signature."
+      },
+      {
+        "key": "B",
+        "text": "Execute the code in a sandbox."
+      },
+      {
+        "key": "C",
+        "text": "Search the executable for ASCII strings."
+      },
+      {
+        "key": "D",
+        "text": "Generate a hash of the files."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A code signature is made with the vendor's private key and verified against their certificate. A valid signature proves the software came from that vendor and has not been changed since it was signed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Running the code in a sandbox shows its behaviour, not who published it.",
+      "C": "Searching for readable strings may reveal clues, but proves nothing about origin.",
+      "D": "A hash checks integrity against a known value, but by itself does not prove who produced the file."
+    },
+    "references": [],
+    "source": "bank.pdf#p65",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -788,51 +890,59 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Compensating controls are alternative security measures that are implemented when the primary controls are not feasible, cost-effective, or sufficient to mitigate the risk. In this case, the organization used compensating controls to protect the legacy system from potential attacks by disabling unneeded services and placing a firewall in front of it. This reduced the attack surface and the likelihood of exploitation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The legacy system itself cannot be fixed, so the organization added other protections around it: disabling unneeded services and putting a firewall in front. Alternative measures that reduce risk when the ideal control is not possible are compensating controls.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An exception formally accepts a deviation from policy. Here the organization actively reduced the risk.",
+      "B": "Segmentation separates networks. A firewall in front of one system is part of it, but disabling services is not; the combination is compensating controls.",
+      "C": "Risk transfer moves the risk to a third party, such as an insurer."
+    },
     "references": [],
     "source": "bank.pdf#p66",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.235,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0156",
+    "id": "q0145",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "Local guidelines require that all information systems meet a minimum security baseline to be compliant. Which of the following can security administrators use to assess their system configurations against the baseline?",
+    "question": "Which of the following should a security administrator adhere to when setting up a new set of firewall rules?",
     "choices": [
       {
         "key": "A",
-        "text": "SOAR playbook"
+        "text": "Disaster recovery plan"
       },
       {
         "key": "B",
-        "text": "Security control matrix"
+        "text": "Incident response procedure"
       },
       {
         "key": "C",
-        "text": "Risk management framework"
+        "text": "Business continuity plan"
       },
       {
         "key": "D",
-        "text": "Benchmarks"
+        "text": "Change management procedure"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": "Benchmarks: Security benchmarks provide standardized sets of best practices and settings that help ensure the secure configuration of an operating system or application. Organizations such as the Center for Internet Security (CIS) provide security benchmarks that can be used to evaluate and harden systems to meet security baselines.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Adding firewall rules changes production security infrastructure, so it follows the change management procedure: request, impact review, approval, testing and a backout plan.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A disaster recovery plan governs restoring systems after a disaster.",
+      "B": "Incident response procedures apply during security incidents, not routine configuration.",
+      "C": "A business continuity plan keeps the organization operating during disruptions."
+    },
     "references": [],
-    "source": "bank.pdf#p74",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
+    "source": "bank.pdf#p70",
+    "needsReview": false,
+    "inferenceConfidence": 0.528,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -864,12 +974,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "From a practical standpoint, an administrator would use automation to compare all existing certificates with the revocation list, but potentially they could also script to OCSP per each certificate in the environment. Either option seem valid, but CRL seems the better option from enterprise scan perspective.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The certificate revocation list is the CA's published list of revoked certificates. Checking every installed certificate against it shows which ones were invalidated and need replacing -- well suited to a bulk check across the company.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SCEP enrolls devices for certificates; it does not report which were revoked.",
+      "B": "OCSP checks one certificate at a time in real time, suited to validating a certificate as it is used rather than auditing everything installed.",
+      "C": "A certificate signing request asks a CA for a new certificate."
+    },
     "references": [],
     "source": "bank.pdf#p76",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -902,12 +1016,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "HSM as a Service (HSMaaS), Hardware security modules (HSMs) are fortified, tamper-resistant hardware components that produce, safeguard, and manage keys for encrypting and decrypting data and establishing digital signatures and certificates.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "HSM as a service provides cloud-hosted hardware security modules that can import the organization's existing keys and manage them centrally across providers, with low latency, wherever the data lives.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A TPM is a chip in a single device; it cannot centrally manage keys across clouds.",
+      "B": "IaaS provides computing infrastructure, not key management.",
+      "D": "PaaS provides a development platform, not key management."
+    },
     "references": [],
     "source": "bank.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -940,12 +1058,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Adding a random string of characters, known as a \"salt,\" to a password before hashing it is known as salting. This technique strengthens passwords by ensuring that even if two users have the same password, their hashes will be different due to the unique salt, making it much harder for attackers to crack passwords using precomputed tables.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Adding random data to a password before hashing is salting. The salt makes each hash unique, so identical passwords do not match and precomputed tables stop working.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Key stretching makes cracking slower by hashing many times, rather than by adding a random string.",
+      "B": "Tokenization replaces sensitive values with tokens.",
+      "C": "Data masking hides parts of data in displays."
+    },
     "references": [],
     "source": "bank.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
@@ -953,10 +1075,10 @@ export const domain1Questions = [
   {
     "id": "q0178",
     "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
+    "objective": "1.1",
+    "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Visitors to a secured facility are required to check in with a photo ID and enter the facility through an access control vestibule Which of the following but describes this form of security control?",
+    "question": "Visitors to a secured facility are required to check in with a photo ID and enter the facility through an access control vestibule. Which of the following best describes this form of security control?",
     "choices": [
       {
         "key": "A",
@@ -978,51 +1100,59 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A physical security control is a device or mechanism that prevents unauthorized access to a physical location or asset. An access control vestibule, also known as a mantrap, is a physical security control that consists of a small space with two sets of interlocking doors, such that the first set of doors must close before the second set opens. This prevents unauthorized individuals from following authorized individuals into the facility, a practice known as piggybacking or tailgating. A photo ID check is another form of physical security control that verifies the identity of visitors. Managerial, technical, and operational security controls are not directly related to physical access, but rather to policies, procedures, systems, and processes that support security objectives.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An access control vestibule (mantrap) and a photo ID check at the entrance are tangible barriers controlling who enters a building. They are physical controls.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Managerial controls are policies and procedures.",
+      "C": "Technical controls are enforced by technology on systems, such as firewalls.",
+      "D": "The ID check is carried out by people, but the vestibule itself is a physical control, and the combination is best described as physical."
+    },
     "references": [],
     "source": "bank.pdf#p82",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.529,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0182",
+    "id": "q0179",
     "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
+    "objective": "1.4",
+    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following risk management strategies should an enterprise adopt first if a legacy application is critical to business operations and there are preventative controls that are not yet implemented?",
+    "question": "A company must ensure sensitive data at rest is rendered unreadable. Which of the following will the company most likely use?",
     "choices": [
       {
         "key": "A",
-        "text": "Mitigate"
+        "text": "Hashing"
       },
       {
         "key": "B",
-        "text": "Accept"
+        "text": "Tokenization"
       },
       {
         "key": "C",
-        "text": "Transfer"
+        "text": "Encryption"
       },
       {
         "key": "D",
-        "text": "Avoid"
+        "text": "Segmentation"
       }
     ],
     "correct": [
-      "A"
+      "C"
     ],
-    "explanation": "Mitigate is the risk management strategy that involves reducing the likelihood or impact of a risk.\nIf a legacy application is critical to business operations and there are preventative controls that are not yet implemented, the enterprise should adopt the mitigate strategy first to address the existing vulnerabilities and gaps in the application. This could involve applying patches, updates, or configuration changes to the application, or adding additional layers of security controls around the application. Accept, transfer, and avoid are other risk management strategies, but they are not the best options for this scenario. Accept means acknowledging the risk and accepting the consequences without taking any action. Transfer means shifting the risk to a third party, such as an insurance company or a vendor. Avoid means eliminating the risk by removing the source or changing the process. These strategies may not be feasible or desirable for a legacy application that is critical to business operations and has no preventative controls in place.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Encryption transforms stored data so that it is unreadable without the key, and it is reversible for authorized users. That is the standard way to make sensitive data at rest unreadable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hashing is one-way; the original data could never be read again, which suits verifying passwords, not protecting data you still need.",
+      "B": "Tokenization replaces specific values with tokens, typically for fields such as card numbers, not all sensitive data at rest.",
+      "D": "Segmentation separates networks; the stored data itself stays readable."
+    },
     "references": [],
-    "source": "bank.pdf#p84",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "bank.pdf#p83",
+    "needsReview": false,
+    "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1054,52 +1184,102 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To secure an on-site data center against intrusion from an insider, the best measure is to use an access badge system. Access badges control who can enter restricted areas by verifying their identity and permissions, thereby preventing unauthorized access from insiders.\nAccess badge: Provides controlled and monitored access to restricted areas, ensuring that only authorized personnel can enter.\nBollards: Provide physical barriers to prevent vehicle access but do not prevent unauthorized personnel entry.\nMotion sensor: Detects movement but does not control or restrict access.\nVideo surveillance: Monitors and records activity but does not physically prevent intrusion.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Insiders already get into the building, so the data center needs its own gate. Access badges allow only authorized staff through the data center door and record who entered.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Bollards stop vehicles, not people inside the building.",
+      "C": "Motion sensors detect movement, but cannot tell authorized from unauthorized staff.",
+      "D": "Video surveillance records intrusions, but does not prevent them."
+    },
     "references": [],
     "source": "bank.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0195",
+    "id": "q0190",
     "domain": 1,
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge. Which of the following types of tests does this represent?",
+    "question": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project fulfil?",
     "choices": [
       {
         "key": "A",
-        "text": "Defensive"
+        "text": "Privacy"
       },
       {
         "key": "B",
-        "text": "Passive"
+        "text": "Integrity"
       },
       {
         "key": "C",
-        "text": "Offensive"
+        "text": "Confidentiality"
       },
       {
         "key": "D",
-        "text": "Physical"
+        "text": "Availability"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A load balancer spreads traffic across servers and routes around failed ones, keeping services reachable. It supports availability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privacy concerns personal data handling; load balancing does not address it.",
+      "B": "Integrity ensures data is not altered.",
+      "C": "Confidentiality keeps data from unauthorized eyes."
+    },
     "references": [],
-    "source": "bank.pdf#p89",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "source": "bank.pdf#p87",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0191",
+    "domain": 1,
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
+    "type": "single",
+    "question": "A technician is deploying a new security camera. Which of the following should the technician do?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configure the correct VLAN."
+      },
+      {
+        "key": "B",
+        "text": "Perform a vulnerability scan."
+      },
+      {
+        "key": "C",
+        "text": "Disable unnecessary ports."
+      },
+      {
+        "key": "D",
+        "text": "Conduct a site survey."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Before installing a camera, a site survey establishes where it must go to cover the right area: angles, lighting, obstructions and cabling. It is the step specific to deploying a camera.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Putting the camera on the correct VLAN is good practice, but it comes after placement is decided.",
+      "B": "A vulnerability scan checks for flaws after the device is installed on the network.",
+      "C": "Disabling unnecessary ports is hardening -- useful, but not the planning step for a new camera."
+    },
+    "references": [],
+    "source": "bank.pdf#p88",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1130,14 +1310,18 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "One shared key both encrypts and decrypts the message. Using the same key on both ends is symmetric encryption.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Asymmetric encryption uses a key pair -- the public key encrypts and the private key decrypts.",
+      "C": "Hashing is one-way and cannot be decrypted.",
+      "D": "Salting adds random data before hashing; it is not encryption."
+    },
     "references": [],
     "source": "bank.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1168,12 +1352,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "To demonstrate that the system can be restored to a working state in the event of a performance issue after deploying a change, the systems administrator must submit a backout plan. A backout plan outlines the steps to revert the system to its previous state if the new deployment causes problems.\nBackout plan: Provides detailed steps to revert changes and restore the system to its previous state in case of issues, ensuring minimal disruption and quick recovery.\nImpact analysis: Evaluates the potential effects of a change but does not provide steps to revert changes.\nTest procedure: Details the steps for testing the change but does not address restoring the system to a previous state.\nApproval procedure: Involves obtaining permissions for the change but does not ensure system recovery in case of issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A backout plan documents how to undo the change and return the system to its previous working state if something goes wrong.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An impact analysis predicts what the change might affect, not how to reverse it.",
+      "C": "A test procedure checks that the change works before or after deployment.",
+      "D": "The approval procedure authorizes the change; it does not show that it can be reversed."
+    },
     "references": [],
     "source": "bank.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1248,12 +1436,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "To verify the integrity of downloaded files, a software developer should post hashes on the website. A hash is a fixed-length string or number generated from input data, such as a file. When users download the application files, they can generate their own hash from the downloaded files and compare it with the hash provided by the developer. If the hashes match, it confirms that the files have not been altered or corrupted during the download process.\nHashes: Ensure data integrity by allowing users to verify that the downloaded files are identical to the original ones. Common hashing algorithms include MD5, SHA-1, and SHA-256.\nCertificates and Algorithms: Are more related to ensuring authenticity and securing communications rather than verifying file integrity.\nSalting: Is a technique used in hashing passwords to add an additional layer of security, not for verifying file integrity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Publishing the hash of each file lets users hash their download and compare. If the values match, the file was not corrupted or tampered with.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Certificates identify the publisher; used with a code signature they prove origin, but integrity checking of a download is done with hashes.",
+      "C": "Posting algorithm names alone gives users nothing to check against.",
+      "D": "Salting is for protecting stored passwords, not verifying downloads."
+    },
     "references": [],
     "source": "bank.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1286,14 +1478,18 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Storing password hashes rather than passwords means that a stolen login database does not reveal passwords directly, limiting the damage of a breach.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Tokenization replaces sensitive values in systems such as payment processing, not login credentials.",
+      "C": "Obfuscation only makes data harder to read; it gives no real cryptographic protection.",
+      "D": "Segmentation limits access to the database, but once it is stolen, nothing protects its contents."
+    },
     "references": [],
     "source": "bank.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1502,51 +1698,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "When a critical legacy server is segmented into a private network, the security control being used is compensating. Compensating controls are alternative measures put in place to satisfy a security requirement when the primary control is not feasible or practical. In this case, segmenting the legacy server into a private network serves as a compensating control to protect it from potential vulnerabilities that cannot be mitigated directly.\nCompensating: Provides an alternative method to achieve the desired security outcome when the primary control is not possible.\nDeterrent: Aims to discourage potential attackers but does not directly address segmentation.\nCorrective: Used to correct or mitigate the impact of an incident after it has occurred.\nPreventive: Aims to prevent security incidents but is not specific to the context of segmentation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A critical legacy server usually cannot be patched or hardened properly, so it is placed in a private segment to reduce its exposure instead. A control that substitutes for one that cannot be applied is compensating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Deterrent controls discourage attempts, such as warning signs.",
+      "B": "Corrective controls fix problems after an incident.",
+      "D": "Segmentation does prevent some access, but its purpose here is to compensate for the server's missing protections."
+    },
     "references": [],
     "source": "bank.pdf#p107",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0256",
+    "id": "q0255",
     "domain": 1,
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An employee recently resigned from a company. The employee was responsible for managing and supporting weekly batch jobs over the past five years. A few weeks after the employee resigned. one of the batch jobs talked and caused a major disruption. Which of the following would work best to prevent this type of incident from reoccurring?",
+    "question": "Which of the following is an algorithm performed to verify that data has not been modified?",
     "choices": [
       {
         "key": "A",
-        "text": "Job rotation"
+        "text": "Hash"
       },
       {
         "key": "B",
-        "text": "Retention"
+        "text": "Code check"
       },
       {
         "key": "C",
-        "text": "Outsourcing"
+        "text": "Encryption"
       },
       {
         "key": "D",
-        "text": "Separation of duties"
+        "text": "Checksum"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Job rotation is a security control that involves regularly moving employees to different roles within an organization. This practice helps prevent incidents where a single employee has too much control or knowledge about a specific job function, reducing the risk of disruption when an employee leaves. It also helps in identifying any hidden issues or undocumented processes that could cause problems after an employee's departure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A hash algorithm produces a fixed-length digest from data. Recalculating the digest later and comparing shows whether even one bit changed, verifying that the data has not been modified.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "'Code check' is not a defined integrity algorithm.",
+      "C": "Encryption protects confidentiality; it does not by itself prove data was not changed.",
+      "D": "A checksum detects accidental errors, but is not designed to detect deliberate tampering the way a cryptographic hash is."
+    },
     "references": [],
     "source": "bank.pdf#p113",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1587,12 +1791,17 @@ export const domain1Questions = [
       "E",
       "F"
     ],
-    "explanation": "Multi-Factor Authentication (MFA) and patch management are both examples of preventative and technical controls. MFA prevents unauthorized access by requiring multiple forms of verification, and patch management ensures that systems are protected against vulnerabilities by applying updates. Both of these controls are implemented using technical methods, and they work to prevent security incidents before they occur.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "MFA and patch management are enforced through technology, so their category is technical; both stop attacks before they succeed, so their type is preventive.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Physical controls are tangible barriers such as locks and fences.",
+      "B": "Managerial controls are policies and procedures.",
+      "C": "Detective controls identify events after they happen.",
+      "D": "'Administrator' is not a control category."
+    },
     "references": [],
     "source": "bank.pdf#p113",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1603,7 +1812,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "A network administrator deployed a DNS logging tool that togs suspicious websites that are visited and then sends a daily report based on various weighted metrics. Which of the following best describes the type of control the administrator put in place?",
+    "question": "A network administrator deployed a DNS logging tool that logs suspicious websites that are visited and then sends a daily report based on various weighted metrics. Which of the following best describes the type of control the administrator put in place?",
     "choices": [
       {
         "key": "A",
@@ -1625,12 +1834,16 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The tool that the network administrator deployed is described as one that logs suspicious websites and sends a daily report based on various weighted metrics. This fits the description of a detective control. Detective controls are designed to identify and log security events or incidents after they have occurred. By analyzing these logs and generating reports, the tool helps in detecting potential security breaches, thus allowing for further investigation and response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The tool records suspicious site visits and reports on them afterwards, without blocking anything. Identifying activity after it happens is a detective control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A preventive control would block the sites.",
+      "B": "A deterrent discourages behaviour, such as a warning banner.",
+      "C": "A corrective control fixes something after an incident."
+    },
     "references": [],
     "source": "bank.pdf#p116",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1641,7 +1854,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A spoofed identity was detected for a digital certificate. Which of the following are the type of unidentified key and the certificate mat could be in use on the company domain?",
+    "question": "A spoofed identity was detected for a digital certificate. Which of the following are the type of unidentified key and the certificate that could be in use on the company domain?",
     "choices": [
       {
         "key": "A",
@@ -1663,93 +1876,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A self-signed certificate is a certificate that is signed by its own private key rather than by a trusted certificate authority (CA). This means that the authenticity of the certificate relies solely on the issuer's own authority. If a spoofed identity was detected, it could indicate that a private key associated with a self-signed certificate was compromised. Self-signed certificates are often used internally within organizations, but they carry higher risks since they are not validated by a third- party CA, making them more susceptible to spoofing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A spoofed certificate identity points to a certificate the attacker generated and signed themselves with their own private key -- a self-signed certificate that no trusted CA verified.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A root certificate belongs to a trusted CA; an attacker would not have the CA's private key.",
+      "B": "Public keys are meant to be public, and an expired certificate is simply invalid, not spoofed.",
+      "D": "A wildcard certificate covers many subdomains; the public key is not the missing piece."
+    },
     "references": [],
     "source": "bank.pdf#p117",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0267",
+    "id": "q0285",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "The Chief Information Security Officer wants to put security measures in place to protect PlI. The organization needs to use its existing labeling and classification system to accomplish this goal.\nWhich of the following would most likely be configured to meet the requirements?",
+    "question": "A company wants to get alerts when others are researching and doing reconnaissance on the company One approach would be to host a part of the Infrastructure online with known vulnerabilities that would appear to be company assets. Which of the following describes this approach?",
     "choices": [
       {
         "key": "A",
-        "text": "Tokenization"
+        "text": "Watering hole"
       },
       {
         "key": "B",
-        "text": "S/MIME"
+        "text": "Bug bounty"
       },
       {
         "key": "C",
-        "text": "DLP"
+        "text": "DNS sinkhole"
       },
       {
         "key": "D",
-        "text": "MFA"
+        "text": "Honeypot"
       }
     ],
     "correct": [
-      "C"
+      "D"
     ],
-    "explanation": "Data Loss Prevention (DLP) systems are typically configured to protect sensitive data such as Personally Identifiable Information (PII) within an organization. DLP tools enforce policies that monitor, detect, and block the unauthorized transmission of sensitive data. By leveraging the organization's existing labeling and classification system, DLP solutions can identify and protect data based on its classification, ensuring that PII is appropriately secured according to organizational policies.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Exposing decoy systems with known vulnerabilities, made to look like real company assets, lures attackers doing reconnaissance and alerts the company when anyone probes them. That is a honeypot.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A watering-hole attack compromises a site the victims visit; it is an attack, not a detection method.",
+      "B": "A bug bounty pays researchers to report vulnerabilities, not to lure attackers.",
+      "C": "A DNS sinkhole redirects requests for malicious domains to a controlled server."
+    },
     "references": [],
-    "source": "bank.pdf#p117",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0282",
-    "domain": 1,
-    "objective": "1.3",
-    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
-    "type": "single",
-    "question": "A software developer would like to ensure. The source code cannot be reverse engineered or debugged. Which of the following should the developer consider?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Version control"
-      },
-      {
-        "key": "B",
-        "text": "Obfuscation toolkit"
-      },
-      {
-        "key": "C",
-        "text": "Code reuse"
-      },
-      {
-        "key": "D",
-        "text": "Continuous integration"
-      },
-      {
-        "key": "E",
-        "text": "Stored procedures"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "An obfuscation toolkit is used by developers to make source code difficult to understand and reverse engineer. This technique involves altering the code's structure and naming conventions without changing its functionality, making it much harder for attackers to decipher the code or use debugging tools to analyze it. Obfuscation is an important practice in protecting proprietary software and intellectual property from reverse engineering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p122",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
+    "source": "bank.pdf#p123",
+    "needsReview": false,
+    "inferenceConfidence": 0.312,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1759,11 +1938,11 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "In which of the following scenarios is tokenization the best privacy technique 10 use?",
+    "question": "In which of the following scenarios is tokenization the best privacy technique to use?",
     "choices": [
       {
         "key": "A",
-        "text": "Providing pseudo-anonymization tor social media user accounts"
+        "text": "Providing pseudo-anonymization for social media user accounts"
       },
       {
         "key": "B",
@@ -1771,7 +1950,7 @@ export const domain1Questions = [
       },
       {
         "key": "C",
-        "text": "Enabling established customers to safely store credit card Information"
+        "text": "Enabling established customers to safely store credit card information"
       },
       {
         "key": "D",
@@ -1781,12 +1960,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization is a process that replaces sensitive data, such as credit card information, with a non- sensitive equivalent (token) that can be used in place of the actual data. This technique is particularly useful in securely storing payment information because the token can be safely stored and transmitted without exposing the original credit card number.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Tokenization replaces a stored card number with a meaningless token, while the real number is held in a secure vault. It lets returning customers keep a card on file safely -- the classic use case.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Pseudonymizing social media accounts is not what tokenization is designed for.",
+      "B": "A hardware or software token as a second factor is an authentication method, unrelated to data tokenization.",
+      "D": "Masking and segmentation are separate techniques from tokenization."
+    },
     "references": [],
     "source": "bank.pdf#p126",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1819,12 +2002,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Salting is a technique used to enhance the security of hashed passwords by adding a unique, random value (salt) to each password before hashing it. This prevents attackers from easily decrypting passwords using rainbow tables, which are precomputed tables for reversing cryptographic hash functions. Since each password has a unique salt, the same password will produce different hash values, making rainbow table attacks ineffective.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Rainbow tables are precomputed hashes of common passwords. Salting adds unique random data to each password before hashing, so precomputed tables no longer match.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Digital signatures prove authenticity and integrity, not resistance to cracking.",
+      "C": "Hashing alone is exactly what rainbow tables are built to reverse.",
+      "D": "Perfect forward secrecy protects past session keys in encrypted communications."
+    },
     "references": [],
     "source": "bank.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1835,7 +2022,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "A financial institution would like to store its customer data m the cloud but still allow the data to be accessed and manipulated while encrypted. Doing so would prevent the cloud service provider from being able to decipher the data due to its sensitivity. The financial institution Is not concerned about computational overheads and slow speeds. Which of the following cryptographic techniques would best meet the requirement?",
+    "question": "A financial institution would like to store its customer data in the cloud but still allow the data to be accessed and manipulated while encrypted. Doing so would prevent the cloud service provider from being able to decipher the data due to its sensitivity. The financial institution is not concerned about computational overheads and slow speeds. Which of the following cryptographic techniques would best meet the requirement?",
     "choices": [
       {
         "key": "A",
@@ -1857,12 +2044,16 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Homomorphic encryption allows data to be encrypted and manipulated without needing to decrypt it first. This cryptographic technique would allow the financial institution to store customer data securely in the cloud while still permitting operations like searching and calculations to be performed on the encrypted data. This ensures that the cloud service provider cannot decipher the sensitive data, meeting the institution's security requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Homomorphic encryption allows computations on encrypted data without decrypting it, so the provider can process data it can never read. It is slow and computationally heavy, which the institution says it accepts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Asymmetric encryption protects data, but it must be decrypted before it can be processed.",
+      "B": "Symmetric encryption also requires decryption before processing.",
+      "D": "Ephemeral keys are temporary session keys; they do not allow processing of encrypted data."
+    },
     "references": [],
     "source": "bank.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1870,14 +2061,14 @@ export const domain1Questions = [
   {
     "id": "q0303",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
     "question": "Which of the following best describe why a process would require a two-person integrity security control?",
     "choices": [
       {
         "key": "A",
-        "text": "To Increase the chance that the activity will be completed in half of the time the process would take only one user to complete"
+        "text": "To increase the chance that the activity will be completed in half of the time the process would take only one user to complete"
       },
       {
         "key": "B",
@@ -1895,127 +2086,59 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A two-person integrity security control is implemented to minimize the risk of errors or unauthorized actions. This control ensures that at least two individuals are involved in critical operations, which helps to verify the accuracy of the process and prevents unauthorized users from acting alone. It's a security measure commonly used in sensitive operations, like financial transactions or access to critical systems, to ensure accountability and accuracy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Two-person integrity requires two authorized people to carry out a sensitive task together, so no single person can make a mistake or act without authorization unnoticed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Two people are not there to halve the time; the goal is oversight.",
+      "B": "Two-person integrity uses two authorized participants, not observers from another department.",
+      "D": "Recording someone on CCTV is monitoring one person, not two-person control."
+    },
     "references": [],
     "source": "bank.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0308",
+    "id": "q0315",
     "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
+    "objective": "1.3",
+    "objectiveTitle": "Explain the importance of change management processes and the impact to security",
     "type": "single",
-    "question": "A systems administrator is redesigning now devices will perform network authentication. The following requirements need to be met:\n- An existing Internal certificate must be used.\n- Wired and wireless networks must be supported\n- Any unapproved device should be Isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources Which of the following would best meet the requirements?",
+    "question": "Which of the following environments utilizes a subset of customer data and is most likely to be used to assess the impacts of major system upgrades and demonstrate system features?",
     "choices": [
       {
         "key": "A",
-        "text": "802.IX"
+        "text": "Development"
       },
       {
         "key": "B",
-        "text": "EAP"
+        "text": "Test"
       },
       {
         "key": "C",
-        "text": "RADIUS"
+        "text": "Production"
       },
       {
         "key": "D",
-        "text": "WPA2"
+        "text": "Staging"
       }
     ],
     "correct": [
-      "A"
+      "D"
     ],
-    "explanation": "802.1X is a network access control protocol that provides an authentication mechanism to devices trying to connect to a LAN or WLAN. It supports the use of certificates for authentication, can quarantine unapproved devices, and ensures that only approved and updated devices can access network resources. This protocol best meets the requirements of securing both wired and wireless networks with internal certificates.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Staging mirrors production as closely as possible, often with a subset of real data, so major upgrades can be assessed and features demonstrated before going live.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Development is where code is written, usually without customer data.",
+      "B": "Test is for functional testing, typically with test data, not production-like demonstrations.",
+      "C": "Production is live; assessing upgrades there risks the business."
+    },
     "references": [],
-    "source": "bank.pdf#p132",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0310",
-    "domain": 1,
-    "objective": "1.4",
-    "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
-    "type": "single",
-    "question": "A security analyst needs to propose a remediation plan 'or each item in a risk register. The item with the highest priority requires employees to have separate logins for SaaS solutions and different password complexity requirements for each solution. Which of the following implementation plans will most likely resolve this security issue?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Creating a unified password complexity standard"
-      },
-      {
-        "key": "B",
-        "text": "Integrating each SaaS solution with the Identity provider"
-      },
-      {
-        "key": "C",
-        "text": "Securing access to each SaaS by using a single wildcard certificate"
-      },
-      {
-        "key": "D",
-        "text": "Configuring geofencing on each SaaS solution"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Integrating each SaaS solution with an Identity Provider (IdP) is the most effective way to address the security issue. This approach allows for Single Sign-On (SSO) capabilities, where users can access multiple SaaS applications with a single set of credentials while maintaining strong password policies across all services. It simplifies the user experience and ensures consistent security enforcement across different SaaS platforms.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p133",
-    "needsReview": true,
-    "inferenceConfidence": 0.278,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0311",
-    "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
-    "type": "single",
-    "question": "A security analyst finds a rogue device during a monthly audit of current endpoint assets that are connected to the network. The corporate network utilizes 002.1X for access control. To be allowed on the network, a device must have a Known hardware address, and a valid user name and password must be entered in a captive portal. The following is the audit report:\nWhich of the following is the most likely way a rogue device was allowed to connect?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "A user performed a MAC cloning attack with a personal device."
-      },
-      {
-        "key": "B",
-        "text": "A DMCP failure caused an incorrect IP address to be distributed"
-      },
-      {
-        "key": "C",
-        "text": "An administrator bypassed the security controls for testing."
-      },
-      {
-        "key": "D",
-        "text": "DNS hijacking let an attacker intercept the captive portal traffic."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The most likely way a rogue device was able to connect to the network is through a MAC cloning attack. In this attack, a personal device copies the MAC address of an authorized device, bypassing the 802.1X access control that relies on known hardware addresses for network access. The matching MAC addresses in the audit report suggest that this technique was used to gain unauthorized network access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p133",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
+    "source": "bank.pdf#p134",
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2047,12 +2170,16 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The scenario described, where client files are only accessible to employees who \"need to know\" the information, reflects the concept of confidentiality. Confidentiality ensures that sensitive information is only accessible to those who are authorized to view it, preventing unauthorized access.\nAvailability ensures that data is accessible when needed but doesn't focus on restricting access.\nIntegrity ensures that data remains accurate and unaltered but doesn't pertain to access control.\nNon-repudiation ensures that actions cannot be denied after they are performed, but this concept is unrelated to access control.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes -- confidentiality.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Availability means access when needed; this restricts access.",
+      "C": "Integrity protects data from unauthorized change.",
+      "D": "Non-repudiation proves who performed an action."
+    },
     "references": [],
     "source": "bank.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2127,51 +2254,17 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To limit the potential impact on the log-in database in case of a breach, the security team would most likely recommend hashing. Hashing converts passwords into fixed-length strings of characters, which cannot be easily reversed to reveal the original passwords. Even if the database is breached, attackers cannot easily retrieve the actual passwords if they are properly hashed (especially with techniques like salting).\nTokenization is used to replace sensitive data with a token, but it is more common for protecting credit card data than passwords.\nObfuscation is the process of making data harder to interpret but is weaker than hashing for password protection.\nSegmentation helps isolate data but doesn't directly protect the contents of the login database.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Storing password hashes rather than passwords means a stolen login database does not reveal passwords directly, limiting the damage of a breach.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Tokenization replaces sensitive values in systems such as payment processing, not login credentials.",
+      "C": "Obfuscation only makes data harder to read; it provides no real cryptographic protection.",
+      "D": "Segmentation limits access to the database, but once it is stolen, nothing protects its contents."
+    },
     "references": [],
     "source": "bank.pdf#p140",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0332",
-    "domain": 1,
-    "objective": "1.2",
-    "objectiveTitle": "Summarize fundamental security concepts",
-    "type": "single",
-    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge Which of the following types of tests does this represent?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Defensive"
-      },
-      {
-        "key": "B",
-        "text": "Passive"
-      },
-      {
-        "key": "C",
-        "text": "Offensive"
-      },
-      {
-        "key": "D",
-        "text": "Physical"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Attempting to enter an unauthorized area using an access badge during a penetration test is an example of a physical test. This type of test evaluates the effectiveness of physical security controls, such as access badges, security guards, and locks, in preventing unauthorized access to restricted areas.\nDefensive and offensive testing typically refer to digital or network-based penetration testing strategies.\nPassive testing involves observing or monitoring but not interacting with the environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p141",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2927,8 +3020,8 @@ export const domain1Questions = [
   {
     "id": "q0468",
     "domain": 1,
-    "objective": "1.1",
-    "objectiveTitle": "Compare and contrast various types of security controls",
+    "objective": "1.2",
+    "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
     "question": "Which of the following are the best security controls for controlling on-premises access? (Select two.)",
     "choices": [
@@ -2961,12 +3054,17 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": "Swipe cards and biometric scanners are commonly used to control on-premises access due to their reliability and ability to restrict unauthorized entry. Swipe cards provide physical access control, while biometric scanners ensure identity verification.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Swipe cards and biometric scanners control who can open doors: the card proves possession and the biometric proves identity. They are the direct entry controls.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A picture ID relies on someone checking it and is easily faked.",
+      "C": "A phone authentication app is for logging in to systems, not opening physical doors.",
+      "E": "A camera records who enters, but does not control access.",
+      "F": "'Memorable' (a memorable phrase or password) is a knowledge factor for systems, not a physical access control."
+    },
     "references": [],
     "source": "bank.pdf#p190",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5905,7 +6003,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "Which of the following technologies assists in passively verifying the expired status of a dig tal certificate?",
+    "question": "Which of the following technologies assists in passively verifying the expired status of a digital certificate?",
     "choices": [
       {
         "key": "A",
@@ -7037,12 +7135,16 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Data masking irreversibly alters sensitive data to hide it, whereas tokenization replaces data with tokens that can be mapped back to the original values through a secure tokenization system, making it reversible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Masking permanently hides part of the data, for example showing only the last four digits, and cannot be undone. Tokenization swaps the data for a token that can be mapped back to the original through a secure token vault.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking does not use encryption, and tokenization substitutes tokens, not null values.",
+      "C": "The mapping description is inaccurate; the key difference is reversibility.",
+      "D": "Neither is defined by random versus pseudo-random functions."
+    },
     "references": [],
     "source": "bank.pdf#p411",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false

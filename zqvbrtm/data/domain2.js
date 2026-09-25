@@ -30,12 +30,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The principle of least privilege is a security concept that limits access to resources to the minimum level needed for a user, a program, or a device to perform a legitimate function. It is a cybersecurity best practice that protects high-value data and assets from compromise or insider threat. Least privilege can be applied to different abstraction layers of a computing environment, such as processes, systems, or connected devices. However, it is rarely implemented in practice.\nIn this scenario, the IT manager is setting up the principle of least privilege by restricting access to the administrator console of the help desk software to only two authorized users: the IT manager and the help desk lead. This way, the IT manager can prevent unauthorized or accidental changes to the software configuration, data, or functionality by other help desk staff.\nThe other help desk staff will only have access to the normal user interface of the software, which is sufficient for them to perform their job functions.\nThe other options are not correct. Hardening is the process of securing a system by reducing its surface of vulnerability, such as by removing unnecessary software, changing default passwords, or disabling unnecessary services. Employee monitoring is the surveillance of workers' activity, such as by tracking web browsing, application use, keystrokes, or screenshots. Configuration enforcement is the process of ensuring that a system adheres to a predefined set of security settings, such as by applying a patch, a policy, or a template.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Only the two people who need the administrator console keep access to it; everyone else loses it. Restricting access to the minimum required for each role is least privilege.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hardening reduces a system's attack surface by removing services and tightening settings, not by limiting which users have access.",
+      "B": "Employee monitoring watches what users do. Nothing here observes activity.",
+      "C": "Configuration enforcement keeps systems at an approved baseline. It is not about assigning access by role."
+    },
     "references": [],
     "source": "bank.pdf#p5",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
     "needsExplanation": false,
     "keyCorrected": false
@@ -68,12 +72,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Firmware is a type of software that is embedded in a hardware device, such as a router, a printer, or a BIOS chip. Firmware controls the basic functions and operations of the device, and it can be updated or modified by the manufacturer or the user. Firmware version is a hardware-specific vulnerability, as it can expose the device to security risks if it is outdated, corrupted, or tampered with. An attacker can exploit firmware vulnerabilities to gain unauthorized access, modify device settings, install malware, or cause damage to the device or the network. Therefore, it is important to keep firmware updated and verify its integrity and authenticity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Firmware lives on the hardware device itself -- BIOS, routers, controllers -- so an outdated or flawed firmware version is a vulnerability tied to the hardware. The other options are software and application flaws.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Buffer overflow is a software memory-handling flaw in applications.",
+      "C": "SQL injection is a web application and database flaw.",
+      "D": "Cross-site scripting is a web application flaw that runs in the browser."
+    },
     "references": [],
     "source": "bank.pdf#p10",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -92,7 +100,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Application allow list."
+        "text": "Application allow list"
       },
       {
         "key": "C",
@@ -106,51 +114,59 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An application allow list is a security technique that specifies which applications are permitted to run on a system or a network. An application allow list can block unknown programs from executing by only allowing the execution of programs that are explicitly authorized and verified.\nAn application allow list can prevent malware, unauthorized software, or unwanted applications from running and compromising the security of the system or the network. The other options are not the best ways to block unknown programs from executing:\nAccess control list: This is a security technique that specifies which users or groups are granted or denied access to a resource or an object. An access control list can control the permissions and privileges of users or groups, but it does not directly block unknown programs from executing. Host-based firewall: This is a security device that monitors and filters the incoming and outgoing network traffic on a single host or system. A host-based firewall can block or allow network connections based on predefined rules, but it does not directly block unknown programs from executing.\nDLP solution: This is a security system that detects and prevents the unauthorized transmission or leakage of sensitive data. A DLP solution can protect the confidentiality and integrity of data, but it does not directly block unknown programs from executing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An application allow list permits only approved programs to run and blocks everything else by default, so anything unknown is stopped automatically.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An access control list controls access to resources such as files or network traffic, not which programs execute.",
+      "C": "A host-based firewall filters network connections. A program can still run locally.",
+      "D": "DLP stops sensitive data leaving. It does not prevent programs from executing."
+    },
     "references": [],
     "source": "bank.pdf#p12",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.622,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0023",
+    "id": "q0028",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.1",
+    "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A company hired a consultant to perform an offensive security assessment covering penetration testing and social engineering.\nWhich of the following teams will conduct this assessment activity?",
+    "question": "An administrator was notified that a user logged in remotely after hours and copied large amounts of data to a personal device.\nWhich of the following best describes the user's activity?",
     "choices": [
       {
         "key": "A",
-        "text": "White"
+        "text": "Penetration testing"
       },
       {
         "key": "B",
-        "text": "Purple"
+        "text": "Phishing campaign"
       },
       {
         "key": "C",
-        "text": "Blue"
+        "text": "External audit"
       },
       {
         "key": "D",
-        "text": "Red"
+        "text": "Insider threat"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": "A red team is a group of security professionals who perform offensive security assessments covering penetration testing and social engineering. A red team simulates real-world attacks and exploits the vulnerabilities of a target organization, system, or network. A red team aims to test the effectiveness of the security controls, policies, and procedures of the target, as well as the awareness and response of the staff and the blue team. A red team can be hired as an external consultant or formed internally within the organization.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legitimate user logging in after hours and copying large amounts of data to a personal device is misusing authorized access -- the textbook insider threat indicator.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Penetration testing is authorized, scheduled testing, not a user taking data home.",
+      "B": "A phishing campaign tricks users through messages. Nothing here involves deception.",
+      "C": "An external audit is a formal review by an outside party, not data theft."
+    },
     "references": [],
-    "source": "bank.pdf#p12",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
+    "source": "bank.pdf#p14",
+    "needsReview": false,
+    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -182,12 +198,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A compensating control is a security measure that is implemented to mitigate the risk of a vulnerability or a weakness that cannot be resolved by the primary control. A compensating control does not prevent or eliminate the vulnerability or weakness, but it can reduce the likelihood or impact of an attack. A host-based firewall on a legacy Linux system that allows connections from only specific internal IP addresses is an example of a compensating control, as it can limit the exposure of the system to potential threats from external or unauthorized sources.\nA host-based firewall is a software application that monitors and filters the incoming and outgoing network traffic on a single host, based on a set of rules or policies. A legacy Linux system is an older version of the Linux operating system that may not be compatible with the latest security updates or patches, and may have known vulnerabilities or weaknesses that could be exploited by attackers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legacy system often cannot be patched or upgraded, so a host firewall allowing only specific internal addresses is added to reduce the risk. A control put in place because the normal fix is not possible is a compensating control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Network segmentation separates networks at the infrastructure level. This is a rule on a single host.",
+      "C": "Transferring risk moves the financial impact to someone else, such as an insurer.",
+      "D": "SNMP traps are alerts sent by network devices. They do not restrict connections."
+    },
     "references": [],
     "source": "bank.pdf#p16",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.231,
     "needsExplanation": false,
     "keyCorrected": false
@@ -220,12 +240,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Brute force is a type of attack that tries to guess the password or other credentials of a user account by using a large number of possible combinations. An attacker can use automated tools or scripts to perform a brute force attack and gain unauthorized access to the account. The domain activity logs show that the user ismith has failed to log in 10 times in a row within a short period of time, which is a strong indicator of a brute force attack. The logs also show that the source IP address of the failed logins is different from the usual IP address of ismith, which suggests that the attacker is using a different device or location to launch the attack. The security analyst should take immediate action to block the attacker's IP address, reset ismith's password, and notify ismith of the incident.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The log excerpt (not reproduced in the source) shows many failed logins for jsmith in quick succession. Repeated rapid password guesses against one account are a brute-force attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A lockout may follow repeated failures, but it would be the result, not the explanation of the activity.",
+      "B": "A keylogger captures keystrokes quietly. It would produce successful logins, not a string of failures.",
+      "D": "Ransomware encrypts files. It does not cause repeated failed logins against one account."
+    },
     "references": [],
     "source": "bank.pdf#p19",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -258,12 +282,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Jailbreaking is a primary security concern for a company setting up a BYOD (Bring Your Own Device) program. Jailbreaking is the process of removing the manufacturer's or the carrier's restrictions on a device, such as a smartphone or a tablet, to gain root access and install unauthorized or custom software. Jailbreaking can compromise the security of the device and the data stored on it, as well as expose it to malware, viruses, or hacking. Jailbreaking can also violate the warranty and the terms of service of the device, and make it incompatible with the company's security policies and standards. Therefore, a company setting up a BYOD program should prohibit jailbreaking and enforce device compliance and encryption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Employee-owned phones may be jailbroken or rooted, which removes the OS security controls and lets unvetted apps and malware run on a device connecting to company resources. That is a primary BYOD concern.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "End of life affects any hardware and software, but it is not the defining risk of letting personal devices in.",
+      "B": "A buffer overflow is an application coding flaw, not a BYOD policy concern.",
+      "C": "VM escape is a virtualization vulnerability, unrelated to employee devices."
+    },
     "references": [],
     "source": "bank.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -296,12 +324,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A buffer overflow is a vulnerability that occurs when an application writes more data to a memory buffer than it can hold, causing the excess data to overwrite adjacent memory locations. A register is a small storage area in the CPU that holds temporary data or instructions. An attacker can exploit a buffer overflow to overwrite a register with a malicious address that points to a shellcode, which is a piece of code that gives the attacker control over the system. By doing so, the attacker can bypass the normal execution flow of the application and execute arbitrary commands.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A buffer overflow writes past the end of a memory buffer into adjacent memory, where an attacker can overwrite a return address or register so execution jumps to their own code.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "VM escape breaks out of a virtual machine to the host. It is not about overwriting registers.",
+      "B": "SQL injection manipulates database queries through input, not CPU registers.",
+      "D": "A race condition exploits the timing between operations, not memory overwrites."
+    },
     "references": [],
     "source": "bank.pdf#p31",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
     "keyCorrected": false
@@ -334,12 +366,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The device is STILL running a critical application. therefore it needs to be connected to the network. a compensating mechanism for this scenario would be segmentation as this would limit the ability of an attacker to pivot from the vulnerable server to the rest of the network.as possible.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The server still runs a critical application, so it has to stay on the network. Segmentation limits what can reach it and what an attacker could reach from it, containing the legacy risk without stopping the business.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Full isolation would cut off the application the business depends on.",
+      "C": "Hardening helps, but legacy systems often cannot be secured enough because they lack current patches and settings.",
+      "D": "Decommissioning removes a critical application the business still needs."
+    },
     "references": [],
     "source": "bank.pdf#p32",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -372,12 +408,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An insider threat is a type of attack that originates from someone who has legitimate access to an organization's network, systems, or data. In this case, the domain user who encrypted the files on the database server is an example of an insider threat, as they abused their access privileges to cause harm to the organization. Insider threats can be motivated by various factors, such as financial gain, revenge, espionage, or sabotage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The logs show that a legitimate domain account last accessed the files before they were encrypted. Harm caused through valid internal access points to an insider threat.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Social engineering manipulates people. Nothing here shows deception.",
+      "C": "A watering-hole attack compromises a website the victims visit. The logs show a domain user acting on the server.",
+      "D": "The account was an authorized domain user, not an outside attacker without access."
+    },
     "references": [],
     "source": "bank.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -410,12 +450,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Ransomware is a type of malware that encrypts the victim's files and demands a ransom for the decryption key. The ransomware usually displays a message on the infected system with instructions on how to pay the ransom and recover the files. The .ryk extension is associated with a ransomware variant called Ryuk, which targets large organizations and demands high ransoms.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Files renamed with a new extension and a message on every machine are the signature of ransomware. .ryk is the extension used by the Ryuk ransomware family.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A virus spreads by infecting other files, but does not typically encrypt them and display ransom notes.",
+      "B": "A Trojan disguises itself as legitimate software; it does not by itself encrypt files across the network.",
+      "C": "Spyware hides and collects information. It does not display messages or rename files."
+    },
     "references": [],
     "source": "bank.pdf#p35",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -448,12 +492,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A watering-hole attack is a type of cyberattack that targets groups of users by infecting websites that they commonly visit. The attackers exploit vulnerabilities to deliver a malicious payload to the organization's network. The attack aims to infect users' computers and gain access to a connected corporate network. The attackers target websites known to be popular among members of a particular organization or demographic. The attack differs from phishing and spear- phishing attacks, which typically attempt to steal data or install malware onto users' devices1 In this scenario, the compromised industry blog is the watering hole that the attackers used to spread malware across the company's network. The attackers likely chose this blog because they knew that the employees of the company were interested in its content and visited it frequently.\nThe attackers may have injected malicious code into the blog or redirected the visitors to a spoofed website that hosted the malware. The malware then infected the employees' computers and propagated to the network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Attackers compromised a site that people in the industry regularly visit and waited for them to come to it. Infecting a trusted site a target group frequents is a watering-hole attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Impersonation is pretending to be someone else, typically over the phone or in person.",
+      "B": "Disinformation spreads false information; it does not deliver malware.",
+      "D": "Smishing is phishing through SMS text messages."
+    },
     "references": [],
     "source": "bank.pdf#p40",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -486,127 +534,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Jailbreaking is the process of removing the restrictions imposed by the manufacturer or carrier on a mobile device, such as an iPhone or iPad. Jailbreaking allows users to install unauthorized applications, modify system settings, and access root privileges. However, jailbreaking also exposes the device to potential security risks, such as malware, spyware, unauthorized access, data loss, and voided warranty. Therefore, an organization may prohibit employees from jailbreaking their mobile devices to prevent these vulnerabilities and protect the corporate data and network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Modifying a mobile device's operating system to remove its restrictions is jailbreaking (rooting on Android). Banning it in the AUP addresses that vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting is a web application flaw, not something done to a phone's OS.",
+      "B": "A buffer overflow is a coding flaw in applications.",
+      "D": "Side loading installs apps from outside the official store; it does not require modifying the OS."
+    },
     "references": [],
     "source": "bank.pdf#p42",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0076",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "Which of the following practices would be best to prevent an insider from introducing malicious code into a company's development process?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Code scanning for vulnerabilities"
-      },
-      {
-        "key": "B",
-        "text": "Open-source component usage"
-      },
-      {
-        "key": "C",
-        "text": "Quality assurance testing"
-      },
-      {
-        "key": "D",
-        "text": "Peer review and approval"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Peer review and approval is a practice that involves having other developers or experts review the code before it is deployed or released. Peer review and approval can help detect and prevent malicious code, errors, bugs, vulnerabilities, and poor quality in the development process. Peer review and approval can also enforce coding standards, best practices, and compliance requirements. Peer review and approval can be done manually or with the help of tools, such as code analysis, code review, and code signing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p42",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0077",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A systems administrator is creating a script that would save time and prevent human error when performing account creation for a large number of end users. Which of the following would be a good use case for this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Off-the-shelf software"
-      },
-      {
-        "key": "B",
-        "text": "Orchestration"
-      },
-      {
-        "key": "C",
-        "text": "Baseline"
-      },
-      {
-        "key": "D",
-        "text": "Policy enforcement"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Orchestration is the process of automating multiple tasks across different systems and applications. It can help save time and reduce human error by executing predefined workflows and scripts. In this case, the systems administrator can use orchestration to create accounts for a large number of end users without having to manually enter their information and assign permissions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p43",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0078",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "After an audit, an administrator discovers all users have access to confidential data on a file server. Which of the following should the administrator use to restrict access to the data quickly?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Group Policy"
-      },
-      {
-        "key": "B",
-        "text": "Content filtering"
-      },
-      {
-        "key": "C",
-        "text": "Data loss prevention"
-      },
-      {
-        "key": "D",
-        "text": "Access control lists"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Access control lists (ACLs) are rules that specify which users or groups can access which resources on a file server. They can help restrict access to confidential data by granting or denying permissions based on the identity or role of the user. In this case, the administrator can use ACLs to quickly modify the access rights of the users and prevent them from accessing the data they are not authorized to see.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p43",
-    "needsReview": true,
-    "inferenceConfidence": 0.237,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -638,51 +576,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Ransomware-as-a-service is a type of cybercrime where hackers sell or rent ransomware tools or services to other criminals who use them to launch attacks and extort money from victims. This is a typical example of organized crime, which is a group of criminals who work together to conduct illegal activities for profit. Organized crime is different from other types of threat actors, such as insider threats, hacktivists, or nation-states, who may have different motives, methods, or targets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Ransomware-as-a-service is a criminal business model: developers rent their ransomware to affiliates in exchange for a share of the ransom. Profit-driven, organized groups are organized crime.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat abuses access from within; RaaS is an external criminal market.",
+      "B": "Hacktivists attack for political or social causes, not ransom revenue.",
+      "C": "Nation-states pursue espionage and geopolitical aims. Some use ransomware, but RaaS as a business is organized crime."
+    },
     "references": [],
     "source": "bank.pdf#p43",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.938,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0085",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following actions could a security engineer take to ensure workstations and servers are properly monitored for unauthorized changes and software?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Configure all systems to log scheduled tasks."
-      },
-      {
-        "key": "B",
-        "text": "Collect and monitor all traffic exiting the network."
-      },
-      {
-        "key": "C",
-        "text": "Block traffic based on known malicious signatures."
-      },
-      {
-        "key": "D",
-        "text": "Install endpoint management software on all systems."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Endpoint management software is a tool that allows security engineers to monitor and control the configuration, security, and performance of workstations and servers from a central console.\nEndpoint management software can help detect and prevent unauthorized changes and software installations, enforce policies and compliance, and provide reports and alerts on the status of the endpoints. The other options are not as effective or comprehensive as endpoint management software for this purpose.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p46",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -714,12 +618,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Segmentation is a technique that divides a network into smaller subnetworks or segments, each with its own security policies and controls. Segmentation can help mitigate network access vulnerabilities in legacy loT devices by isolating them from other devices and systems, reducing their attack surface and limiting the potential impact of a breach. Segmentation can also improve network performance and efficiency by reducing congestion and traffic. Patching, insurance, and replacement are other possible strategies to deal with network access vulnerabilities, but they may not be feasible or effective in the short term. Patching may not be available or compatible for legacy loT devices, insurance may not cover the costs or damages of a cyberattack, and replacement may be expensive and time-consuming.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Legacy IoT devices often cannot be patched quickly, if at all. Segmenting them onto an isolated network limits who can reach the vulnerable service, and it can be done right away.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Insurance transfers financial loss; it does nothing to stop exploitation.",
+      "B": "Patching is ideal, but legacy IoT devices frequently have no patch available, and it is not the quick option here.",
+      "D": "Replacing devices is effective but slow and costly -- not quick mitigation."
+    },
     "references": [],
     "source": "bank.pdf#p47",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.769,
     "needsExplanation": false,
     "keyCorrected": false
@@ -752,51 +660,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SQL injection is a type of attack that exploits a database misconfiguration or a flaw in the application code that interacts with the database. An attacker can inject malicious SQL statements into the user input fields or the URL parameters that are sent to the database server.\nThese statements can then execute unauthorized commands, such as reading, modifying, deleting, or creating data, or even taking over the database server. SQL injection can compromise the confidentiality, integrity, and availability of the data and the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SQL injection sends crafted input that the application passes to the database as part of a query. It takes advantage of poor input handling and database misconfigurations such as excessive privileges.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Buffer overflow is a memory corruption flaw in application code, not a database misconfiguration.",
+      "C": "VM escape breaks out of a virtual machine into the host.",
+      "D": "Memory injection puts code into a running process's memory, unrelated to databases."
+    },
     "references": [],
     "source": "bank.pdf#p49",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.944,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0094",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "An organization would like to store customer data on a separate part of the network that is not accessible to users on the main corporate network. Which of the following should the administrator use to accomplish this goal?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Segmentation"
-      },
-      {
-        "key": "B",
-        "text": "Isolation"
-      },
-      {
-        "key": "C",
-        "text": "Patching"
-      },
-      {
-        "key": "D",
-        "text": "Encryption"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Segmentation is a network design technique that divides the network into smaller and isolated segments based on logical or physical boundaries. Segmentation can help improve network security by limiting the scope of an attack, reducing the attack surface, and enforcing access control policies. Segmentation can also enhance network performance, scalability, and manageability. To accomplish the goal of storing customer data on a separate part of the network, the administrator can use segmentation technologies such as subnetting, VLANs, firewalls, routers, or switches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p49",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -828,51 +702,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Opening firewall ports exposes the SaaS provider's system to traffic, so any flaw in that software becomes reachable. Vulnerable software is the risk the open ports create. Published answers disagree on this question; some pick the supply-chain vendor or a non-segmented network.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Default credentials are a risk for any system, but nothing here points to them; the change being made is opening ports.",
+      "B": "A non-segmented network may increase exposure, but the question gives no information about segmentation.",
+      "C": "Relying on the provider is a supply-chain consideration, but it is the software reachable through the opened ports that creates the new risk."
+    },
     "references": [],
     "source": "bank.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0097",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following security concepts is the best reason for permissions on a human resources fileshare to follow the principle of least privilege?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Integrity"
-      },
-      {
-        "key": "B",
-        "text": "Availability"
-      },
-      {
-        "key": "C",
-        "text": "Confidentiality"
-      },
-      {
-        "key": "D",
-        "text": "Non-repudiation"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Confidentiality is the security concept that ensures data is protected from unauthorized access or disclosure. The principle of least privilege is a technique that grants users or systems the minimum level of access or permissions that they need to perform their tasks, and nothing more.\nBy applying the principle of least privilege to a human resources fileshare, the permissions can be restricted to only those who have a legitimate need to access the sensitive data, such as HR staff, managers, or auditors. This can prevent unauthorized users, such as hackers, employees, or contractors, from accessing, copying, modifying, or deleting the data. Therefore, the principle of least privilege can enhance the confidentiality of the data on the fileshare. Integrity, availability, and non-repudiation are other security concepts, but they are not the best reason for permissions on a human resources fileshare to follow the principle of least privilege. Integrity is the security concept that ensures data is accurate and consistent, and protected from unauthorized modification or corruption. Availability is the security concept that ensures data is accessible and usable by authorized users or systems when needed. Non-repudiation is the security concept that ensures the authenticity and accountability of data and actions, and prevents the denial of involvement or responsibility. While these concepts are also important for data security, they are not directly related to the level of access or permissions granted to users or systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p50",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -946,12 +786,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An application allow list is a security technique that specifies which applications are authorized to run on a system and blocks all other applications. An application allow list can best protect against an employee inadvertently installing malware on a company system because it prevents the execution of any unauthorized or malicious software, such as viruses, worms, trojans, ransomware, or spyware. An application allow list can also reduce the attack surface and improve the performance of the system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An allow list lets only approved applications run, so malware an employee accidentally downloads or installs simply will not execute.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A host-based firewall filters network connections, but locally installed malware can still run.",
+      "B": "Isolating systems limits spread, but does not stop a user installing malware on the system in the first place.",
+      "C": "Least privilege limits what malware can do, but many programs install and run with ordinary user rights."
+    },
     "references": [],
     "source": "bank.pdf#p52",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.655,
     "needsExplanation": false,
     "keyCorrected": false
@@ -962,7 +806,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company's end users are reporting that they are unable to reach external websites. After reviewing the performance data for the DNS severs, the analyst discovers that the CPU, disk, and memory usage are minimal, but the network interface is flooded with inbound traffic. Network logs show only a small number of DNS queries sent to this server. Which of the following best describes what the security analyst is seeing?",
+    "question": "A company's end users are reporting that they are unable to reach external websites. After reviewing the performance data for the DNS servers, the analyst discovers that the CPU, disk, and memory usage are minimal, but the network interface is flooded with inbound traffic. Network logs show only a small number of DNS queries sent to this server. Which of the following best describes what the security analyst is seeing?",
     "choices": [
       {
         "key": "A",
@@ -984,12 +828,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A reflected denial of service (RDoS) attack is a type of DDoS attack that uses spoofed source IP addresses to send requests to a third-party server, which then sends responses to the victim server. The attacker exploits the difference in size between the request and the response, which can amplify the amount of traffic sent to the victim server. The attacker also hides their identity by using the victim's IP address as the source. A RDoS attack can target DNS servers by sending forged DNS queries that generate large DNS responses. This can flood the network interface of the DNS server and prevent it from serving legitimate requests from end users.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The DNS server's interface is flooded with inbound traffic that does not match the few queries it sent. The attacker spoofed the server's address in queries to other servers, whose large responses are reflected at it -- a reflected denial of service.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Concurrent session usage is about many simultaneous logins, not a flood of unsolicited responses.",
+      "B": "A cryptographic downgrade weakens encryption; it does not produce inbound floods.",
+      "C": "On-path attacks intercept traffic between two parties. This is a volume attack against the server."
+    },
     "references": [],
     "source": "bank.pdf#p53",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1022,12 +870,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "RBAC stands for Role-Based Access Control, which is a method of restricting access to data and resources based on the roles or responsibilities of users. RBAC simplifies the management of permissions by assigning roles to users and granting access rights to roles, rather than to individual users. RBAC can help enforce the principle of least privilege and reduce the risk of unauthorized access or data leakage. The other options are not as suitable for the scenario as RBAC, as they either do not prevent access based on responsibilities, or do not apply a simplified format.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Role-based access control grants permissions according to job responsibilities, using a small set of roles instead of per-user rules -- the simplified structure the administrator wants.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "ACLs list permissions resource by resource, which becomes complex and hard to manage.",
+      "C": "SAML is a federation and single sign-on standard; it does not define an access structure.",
+      "D": "Group Policy Objects configure Windows settings, not resource access by responsibility."
+    },
     "references": [],
     "source": "bank.pdf#p53",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1035,8 +887,8 @@ export const domain2Questions = [
   {
     "id": "q0104",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "One of a company's vendors sent an analyst a security bulletin that recommends a BIOS update.\nWhich of the following vulnerability types is being addressed by the patch?",
     "choices": [
@@ -1060,12 +912,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Firmware is a type of software that is embedded in hardware devices, such as BIOS, routers, printers, or cameras. Firmware controls the basic functions and operations of the device, and can be updated or patched to fix bugs, improve performance, or enhance security. Firmware vulnerabilities are flaws or weaknesses in the firmware code that can be exploited by attackers to gain unauthorized access, modify settings, or cause damage to the device or the network. A BIOS update is a patch that addresses a firmware vulnerability in the basic input/output system of a computer, which is responsible for booting the operating system and managing the communication between the hardware and the software. The other options are not types of vulnerabilities, but rather categories of software or technology.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The BIOS is firmware -- low-level software stored on the hardware that starts the system. A BIOS update fixes a firmware vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Virtualization flaws are in hypervisors and virtual machines, not the BIOS.",
+      "C": "Application flaws are fixed by updating the application.",
+      "D": "Operating system flaws are fixed by OS patches, not a BIOS update."
+    },
     "references": [],
     "source": "bank.pdf#p54",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1098,51 +954,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A brute-force attack is a type of attack that involves systematically trying all possible combinations of passwords or keys until the correct one is found. The log file shows multiple failed login attempts in a short amount of time, which is a characteristic of a brute-force attack.\nThe attacker is trying to guess the password of the Administrator account on the server. The log file also shows the event ID 4625, which indicates a failed logon attempt, and the status code 0xC000006A, which means the user name is correct but the password is wrong. These are indicators of compromise (IoC) that suggest a brute-force attack is taking place.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The log excerpt (not reproduced in the source) shows many failed logins against the Administrator account in quick succession. Rapid repeated password guessing against one account is a brute-force attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Privilege escalation raises the rights of an account that already has access; the log shows failed attempts to get in.",
+      "C": "A password audit tests stored password strength offline; it does not generate a burst of failed logins.",
+      "D": "A user who forgot their password tries a few times, not a rapid automated series."
+    },
     "references": [],
     "source": "bank.pdf#p56",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0112",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A hacker gained access to a system via a phishing attempt that was a direct result of a user clicking a suspicious link. The link laterally deployed ransomware, which laid dormant for multiple weeks, across the network. Which of the following would have mitigated the spread?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "IPS"
-      },
-      {
-        "key": "B",
-        "text": "IDS"
-      },
-      {
-        "key": "C",
-        "text": "WAF"
-      },
-      {
-        "key": "D",
-        "text": "UAT"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "IPS stands for intrusion prevention system, which is a network security device that monitors and blocks malicious traffic in real time. IPS is different from IDS, which only detects and alerts on malicious traffic, but does not block it. IPS would have mitigated the spread of ransomware by preventing the hacker from accessing the system via the phishing link, or by stopping the ransomware from communicating with its command and control server or encrypting the files.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p58",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1174,12 +996,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Organized crime is a type of threat actor that is motivated by financial gain and often operates across national borders. Organized crime groups may be hired by foreign governments to conduct cyberattacks on critical systems located in other countries, such as power grids, military networks, or financial institutions. Organized crime groups have the resources, skills, and connections to carry out sophisticated and persistent attacks that can cause significant damage and disruption.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Organized crime groups sell their skills for money, including to foreign governments that want deniable attacks on other countries' critical systems. Of the options, they are the capable, for-hire actor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hacktivists attack for their own cause, not as hired contractors.",
+      "B": "A whistleblower exposes wrongdoing from inside an organization; it is not an attacker for hire.",
+      "D": "Unskilled attackers lack the capability to attack critical infrastructure and are not hired by governments."
+    },
     "references": [],
     "source": "bank.pdf#p58",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1212,12 +1038,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Phishing is a type of social engineering attack that involves sending fraudulent emails that appear to be from legitimate sources, such as payment websites, banks, or other trusted entities. The goal of phishing is to trick the recipients into clicking on malicious links, opening malicious attachments, or providing sensitive information, such as log-in credentials, personal data, or financial details. In this scenario, the employee received an email from a payment website that asked the employee to update contact information. The email contained a link that directed the employee to a fake website that mimicked the appearance of the real one. The employee entered the log-in information, but received a \"page not found\" error message. This indicates that the employee fell victim to a phishing attack, and the attacker may have captured the employee's credentials for the payment website.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An email posing as a payment site led the employee to a fake page that captured their login, then showed an error. That credential-harvesting email is phishing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Brand impersonation is part of the lure, but the attack as a whole -- a fake message to steal credentials -- is phishing.",
+      "B": "Pretexting builds an invented scenario, usually in conversation, to persuade the victim.",
+      "C": "Typosquatting registers misspelled domains for people who mistype URLs. Here the employee clicked a link in an email."
+    },
     "references": [],
     "source": "bank.pdf#p59",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1250,51 +1080,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "In a BEC attack, the attacker typically impersonates a high-ranking executive or authority figure within the organization and requests sensitive information or actions from employees. In this case, the HR director is requesting log-in credentials for a cloud administrator account, which is a classic example of BEC where the attacker seeks to gain access to privileged accounts through deception.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Business email compromise impersonates a trusted internal authority to get employees to hand over money, data or access. An email that appears to come from the HR director asking for cloud admin credentials is that pattern.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A gift card request with a spoofed display name is common executive impersonation phishing, but it only fakes the display field rather than compromising or impersonating a business account.",
+      "B": "Messages demanding payment to unlock files are ransomware.",
+      "D": "A link to a fake email portal is ordinary credential phishing."
+    },
     "references": [],
     "source": "bank.pdf#p60",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0120",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "An organization's internet-facing website was compromised when an attacker exploited a buffer overflow. Which of the following should the organization deploy to best protect against similar attacks in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "NGFW"
-      },
-      {
-        "key": "B",
-        "text": "WAF"
-      },
-      {
-        "key": "C",
-        "text": "TLS"
-      },
-      {
-        "key": "D",
-        "text": "SD-WAN"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A buffer overflow is a type of software vulnerability that occurs when an application writes more data to a memory buffer than it can hold, causing the excess data to overwrite adjacent memory locations. This can lead to unexpected behavior, such as crashes, errors, or code execution. A buffer overflow can be exploited by an attacker to inject malicious code or commands into the application, which can compromise the security and functionality of the system. An organization's internet-facing website was compromised when an attacker exploited a buffer overflow. To best protect against similar attacks in the future, the organization should deploy a web application firewall (WAF). A WAF is a type of firewall that monitors and filters the traffic between a web application and the internet. A WAF can detect and block common web attacks, such as buffer overflows, SQL injections, cross-site scripting (XSS), and more. A WAF can also enforce security policies and rules, such as input validation, output encoding, and encryption. A WAF can provide a layer of protection for the web application, preventing attackers from exploiting its vulnerabilities and compromising its data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p61",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1335,14 +1131,19 @@ export const domain2Questions = [
       "C",
       "E"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The message arrived as a text (smishing), and the attacker pretended to be the payroll department (impersonation). Both techniques are in play.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Typosquatting relies on mistyped web addresses.",
+      "B": "Phishing is the general category, but email phishing specifically is not the channel here; smishing is the more precise answer.",
+      "D": "Vishing uses voice calls, not text messages.",
+      "F": "Misinformation is false information spread without intent to harvest credentials."
+    },
     "references": [],
     "source": "bank.pdf#p62",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1415,51 +1216,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Shadow IT is the term used to describe the use of unauthorized or unapproved IT resources within an organization. The marketing department set up its own project management software without telling the appropriate departments, such as IT, security, or compliance. This could pose a risk to the organization's security posture, data integrity, and regulatory compliance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A department deploying its own software without IT or security knowing about it is shadow IT, which creates unmanaged, unmonitored risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An insider threat is malicious or negligent harm by someone with access. The marketing team is only acting without approval.",
+      "C": "Data exfiltration is data being stolen or moved out. Nothing here says data left.",
+      "D": "Service disruption is an outage; no service was interrupted."
+    },
     "references": [],
     "source": "bank.pdf#p64",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0129",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company wants to verify that the software the company is deploying came from the vendor the company purchased the software from. Which of the following is the best way for the company to confirm this information?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Validate the code signature."
-      },
-      {
-        "key": "B",
-        "text": "Execute the code in a sandbox."
-      },
-      {
-        "key": "C",
-        "text": "Search the executable for ASCII strings."
-      },
-      {
-        "key": "D",
-        "text": "Generate a hash of the files."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Validating the code signature is the best way to verify software authenticity, as it ensures that the software has not been tampered with and that it comes from a verified source. Code signatures are digital signatures applied by the software vendor, and validating them confirms the software's integrity and origin.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p65",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1506,53 +1273,6 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0131",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "multi",
-    "question": "Which of the following factors are the most important to address when formulating a training curriculum plan for a security awareness program? (Select two).",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Channels by which the organization communicates with customers"
-      },
-      {
-        "key": "B",
-        "text": "The reporting mechanisms for ethics violations"
-      },
-      {
-        "key": "C",
-        "text": "Threat vectors based on the industry in which the organization operates"
-      },
-      {
-        "key": "D",
-        "text": "Secure software development training for all personnel"
-      },
-      {
-        "key": "E",
-        "text": "Cadence and duration of training events"
-      },
-      {
-        "key": "F",
-        "text": "Retraining requirements for individuals who fail phishing simulations"
-      }
-    ],
-    "correct": [
-      "C",
-      "E"
-    ],
-    "explanation": "A training curriculum plan for a security awareness program should address the following factors:\nThe threat vectors based on the industry in which the organization operates. This will help the employees to understand the specific risks and challenges that their organization faces, and how to protect themselves and the organization from cyberattacks. For example, a healthcare organization may face different threat vectors than a financial organization, such as ransomware, data breaches, or medical device hacking.\nThe cadence and duration of training events. This will help the employees to retain the information and skills they learn, and to keep up with the changing security landscape. The training events should be frequent enough to reinforce the key concepts and behaviors, but not too long or too short to lose the attention or interest of the employees. For example, a security awareness program may include monthly newsletters, quarterly webinars, annual workshops, or periodic quizzes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p65",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0137",
     "domain": 2,
     "objective": "2.3",
@@ -1580,12 +1300,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Side loading is the process of installing software outside of a manufacturer's approved software repository. This can expose the device to potential vulnerabilities, such as malware, spyware, or unauthorized access. Side loading can also bypass security controls and policies that are enforced by the manufacturer or the organization. Side loading is often done by users who want to access applications or features that are not available or allowed on their devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Side loading is installing apps from outside the official store, which skips the vetting that repository provides and makes it easy to install malware.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Jailbreaking removes OS restrictions. It often enables side loading, but it is not the same as installing from outside the store.",
+      "B": "Memory injection places code into a running process.",
+      "C": "Resource reuse refers to memory or storage not being cleared before reuse."
+    },
     "references": [],
     "source": "bank.pdf#p67",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1618,13 +1342,59 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Password spraying is a type of brute-force attack used to gain unauthorized access to user accounts by systematically attempting a small number of commonly used passwords against many user accounts. Unlike traditional brute-force attacks, which attempt many different passwords against a single user account, password spraying involves trying a few commonly used passwords against a large number of accounts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The logs (not reproduced in the source) show one or two common passwords tried against many different accounts. Few passwords across many accounts, staying under lockout thresholds, is password spraying.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Account forgery is not a standard attack pattern in these logs.",
+      "C": "Pass-the-hash reuses stolen password hashes to authenticate, producing successful logins rather than a spread of attempts.",
+      "D": "Brute force tries many passwords against one account; spraying tries few passwords against many."
+    },
     "references": [],
     "source": "bank.pdf#p68",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0139",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "type": "single",
+    "question": "A systems administrator receives the following alert from a file integrity monitoring tool:\nThe hash of the cmd.exe file has changed.\nThe systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The end user changed the file permissions."
+      },
+      {
+        "key": "B",
+        "text": "A cryptographic collision was detected."
+      },
+      {
+        "key": "C",
+        "text": "A snapshot of the file system was taken."
+      },
+      {
+        "key": "D",
+        "text": "A rootkit was deployed."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A core system file changed with no patching to explain it. Rootkits replace or modify system binaries such as cmd.exe to hide themselves and keep control, which is exactly what file integrity monitoring is designed to catch.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Changing file permissions alters metadata, not the file's contents, so the hash would not change.",
+      "B": "A collision is two different inputs producing the same hash. Here the hash changed, which is the opposite.",
+      "C": "Taking a snapshot copies the file system without changing any file."
+    },
+    "references": [],
+    "source": "bank.pdf#p68",
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1656,12 +1426,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A nation-state is a threat actor that is sponsored by a government or a political entity to conduct cyberattacks against other countries or organizations. Nation-states have large financial resources, advanced technical skills, and strategic objectives that may target critical systems such as military, energy, or infrastructure. Nation-states are often motivated by espionage, sabotage, or warfare.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Nation-states have the largest budgets and the motive to attack foreign critical infrastructure for espionage, disruption or strategic advantage.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider works within one organization and does not have state-level resources.",
+      "B": "Unskilled attackers use basic tools and have few resources.",
+      "D": "Hacktivists pursue causes and seldom have large financial backing."
+    },
     "references": [],
     "source": "bank.pdf#p71",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1694,12 +1468,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "SQL injection is a type of attack that enables the use of an input field to run commands that can view or manipulate data in a database. SQL stands for Structured Query Language, which is a language used to communicate with databases. By injecting malicious SQL statements into an input field, an attacker can bypass authentication, access sensitive information, modify or delete data, or execute commands on the server. SQL injection is one of the most common and dangerous web application vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SQL injection places database commands in an input field; when the application builds a query from that input, the attacker's commands run and can read or change data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cross-site scripting injects scripts that run in other users' browsers, not database commands.",
+      "B": "Side loading installs apps from unofficial sources.",
+      "C": "A buffer overflow overwrites memory. It is not typically carried out through form fields to query data."
+    },
     "references": [],
     "source": "bank.pdf#p71",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1741,12 +1519,17 @@ export const domain2Questions = [
       "A",
       "B"
     ],
-    "explanation": "SPIM (Spam over Internet Messaging) poses a threat to VoIP systems by consuming bandwidth, diverting resources, and potentially causing denial of service attacks. The influx of SPIM messages can degrade the quality of VoIP calls, overload servers, and serve as a platform for social engineering attacks, jeopardizing the security of VoIP users. To mitigate these risks, organizations should implement spam filters, intrusion detection systems, and regular software updates while also educating users to recognize and avoid potential threats associated with SPIM.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "VoIP brings its own attacks: vishing uses voice calls to deceive people, and SPIM -- spam over internet messaging -- floods VoIP and messaging systems with unwanted messages.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "VLAN hopping is a switching attack, not specific to VoIP.",
+      "D": "Phishing is email-based, not a VoIP vulnerability.",
+      "E": "DHCP snooping is a switch security feature, not a vulnerability.",
+      "F": "Tailgating is a physical intrusion technique."
+    },
     "references": [],
     "source": "bank.pdf#p74",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1779,21 +1562,67 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Shadow IT refers to information technology systems used within organizations without explicit organizational approval.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Staff installing software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hacktivists are external attackers with causes, not employees installing tools.",
+      "B": "Script kiddies are unskilled external attackers.",
+      "C": "Competitors may seek advantage, but they do not deploy unapproved software inside the company."
+    },
     "references": [],
     "source": "bank.pdf#p74",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0157",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "type": "single",
+    "question": "A company's public-facing website, https://www.organization.com, has an IP address of 166.18.75.6. However, over the past hour the SOC has received reports of the site's homepage displaying incorrect information. A quick nslookup search shows https://www.organization.com is pointing to 151.191.122.115. Which of the following is occurring?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "DoS attack"
+      },
+      {
+        "key": "B",
+        "text": "ARP poisoning"
+      },
+      {
+        "key": "C",
+        "text": "DNS spoofing"
+      },
+      {
+        "key": "D",
+        "text": "NXDOMAIN attack"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "The site's name now resolves to an IP address the company does not own, so visitors are sent to a server showing false content. Tampered name resolution is DNS spoofing (poisoning).",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A DoS attack makes the site unavailable, but here it responds -- from the wrong address.",
+      "B": "ARP poisoning redirects traffic on a local network by falsifying MAC mappings, not public DNS lookups.",
+      "D": "An NXDOMAIN attack floods resolvers with queries for nonexistent domains to exhaust them."
+    },
+    "references": [],
+    "source": "bank.pdf#p75",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0158",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "An employee fell for a phishing scam, which allowed an attacker to gain access to a company PC. The attacker scraped the PC's memory to find other credentials. Without cracking these credentials, the attacker used them to move laterally through the corporate network. Which of the following describes this type of attack?",
     "choices": [
@@ -1817,51 +1646,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Unlike other credential theft attacks, a pass the hash attack does not require the attacker to know or crack the password to gain access to the system. Rather, it uses a stored version of the password to initiate a new session.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate elsewhere, without cracking them. Reusing the hash itself is pass-the-hash.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privilege escalation raises permissions on a system; the defining action here is reusing stolen hashes to move between systems.",
+      "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
+      "C": "SQL injection attacks databases through input fields."
+    },
     "references": [],
     "source": "bank.pdf#p75",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.533,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0162",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "A recent malware outbreak across a subnet included successful rootkit installations on many PCs, ensuring persistence by rendering remediation efforts ineffective. Which of the following would best detect the presence of a rootkit in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "FDE"
-      },
-      {
-        "key": "B",
-        "text": "NIDS"
-      },
-      {
-        "key": "C",
-        "text": "EDR"
-      },
-      {
-        "key": "D",
-        "text": "DLP"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "EDR (Endpoint Detection and Response) is the most suitable solution among the given options for detecting the presence of a rootkit. EDR solutions continuously monitor and collect data from endpoints, looking for suspicious activities and behavior patterns that might indicate the presence of malware, including rootkits. They also provide tools for investigating and responding to security incidents, making them effective for dealing with sophisticated threats that can evade traditional antivirus solutions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p76",
-    "needsReview": true,
-    "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1893,51 +1688,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The least privilege principle states that users and processes should only have the minimum level of access required to perform their tasks. This helps to prevent unauthorized or unnecessary actions that could compromise security. In this case, the patch transfer might be failing because the user or process does not have the appropriate permissions to access the critical system or the network resources needed for the transfer. Applying the least privilege principle can help to avoid this issue by granting the user or process the necessary access rights for the patching activity.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The account moving the patch probably lacks the permissions needed to write to the critical system. Least privilege restricts accounts to only the access they need, which can block tasks that require more access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Attribute-based control could block it, but nothing in the scenario mentions attributes.",
+      "B": "A time-of-day restriction would block logins outside hours, but nothing here mentions timing.",
+      "C": "Role-based control grants access by role. It could be the mechanism, but least privilege is the principle most likely limiting the transfer."
+    },
     "references": [],
     "source": "bank.pdf#p78",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0169",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "Which of the following is used to protect a computer from viruses, malware, and Trojans being installed and moving laterally across the network?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "IDS"
-      },
-      {
-        "key": "B",
-        "text": "ACL"
-      },
-      {
-        "key": "C",
-        "text": "EDR"
-      },
-      {
-        "key": "D",
-        "text": "NAC"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Endpoint detection and response (EDR) is a technology that monitors and analyzes the activity and behavior of endpoints, such as computers, laptops, mobile devices, and servers. EDR can help to detect and prevent malicious software, such as viruses, malware, and Trojans, from infecting the endpoints and spreading across the network. EDR can also provide visibility and response capabilities to contain and remediate threats. EDR is different from IDS, which is a network-based technology that monitors and alerts on network traffic anomalies. EDR is also different from ACL, which is a list of rules that control the access to network resources. EDR is also different from NAC, which is a technology that enforces policies on the network access of devices based on their identity and compliance status.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p79",
-    "needsReview": true,
-    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1969,12 +1730,16 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A host-based firewall is a software application that runs on an individual endpoint and filters the incoming and outgoing network traffic based on a set of rules. A host-based firewall can help to mitigate the threat posed by suspicious connections between internal endpoints by blocking or allowing the traffic based on the source, destination, port, protocol, or application. A host-based firewall is different from a web application firewall, which is a type of firewall that protects web applications from common web-based attacks, such as SQL injection, cross-site scripting, and session hijacking. A host-based firewall is also different from an access control list, which is a list of rules that control the access to network resources, such as files, folders, printers, or routers. A host-based firewall is also different from an application allow list, which is a list of applications that are authorized to run on an endpoint, preventing unauthorized or malicious applications from executing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A perimeter firewall only sees traffic entering and leaving the network. Host-based firewalls on each endpoint filter the internal, endpoint-to-endpoint connections the perimeter never sees.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A web application firewall protects web applications, not traffic between endpoints.",
+      "C": "Router ACLs filter between subnets, but endpoints on the same segment talk directly past them.",
+      "D": "An application allow list controls what runs, not which connections are allowed."
+    },
     "references": [],
     "source": "bank.pdf#p79",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2007,12 +1772,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Data exfiltration is a technique that attackers use to steal sensitive data from a target system or network by transmitting it through DNS queries and responses. This method is often used in advanced persistent threat (APT) attacks, in which attackers seek to persistently evade detection in the target environment. A large amount of unusual DNS queries to systems on the internet over short periods of time during non-business hours is a strong indicator of data exfiltration. A worm, a logic bomb, and ransomware would not use DNS queries to communicate with their command and control servers or perform their malicious actions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Large volumes of unusual DNS queries to outside systems, at night, in short bursts, is the pattern of DNS tunnelling: data broken into query strings and smuggled out through a protocol that is usually allowed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A worm spreading internally would scan internal hosts, not send DNS queries to the internet.",
+      "C": "A logic bomb deleting data would not generate outbound DNS traffic.",
+      "D": "Ransomware encrypting files is local activity, not a stream of DNS queries."
+    },
     "references": [],
     "source": "bank.pdf#p80",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2020,8 +1789,8 @@ export const domain2Questions = [
   {
     "id": "q0174",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.2",
+    "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
     "question": "An employee receives a text message from an unknown number claiming to be the company's Chief Executive Officer and asking the employee to purchase several gift cards. Which of the following types of attacks does this describe?",
     "choices": [
@@ -2045,12 +1814,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Smishing is a type of phishing attack that uses text messages or common messaging apps to trick victims into clicking on malicious links or providing personal information. The scenario in the question describes a smishing attack that uses pretexting, which is a form of social engineering that involves impersonating someone else to gain trust or access. The unknown number claims to be the company's CEO and asks the employee to purchase gift cards, which is a common scam tactic. Vishing is a similar type of attack that uses phone calls or voicemails, while phishing is a broader term that covers any email-based attack.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A text message pretending to be the CEO and asking for gift cards is smishing -- phishing by SMS.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Vishing uses voice calls, not text messages.",
+      "C": "Pretexting (the invented story) is part of the attack, but the defining attack type is smishing because it came by text.",
+      "D": "Phishing is the general term; smishing is the precise answer for text messages."
+    },
     "references": [],
     "source": "bank.pdf#p81",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2058,8 +1831,8 @@ export const domain2Questions = [
   {
     "id": "q0185",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
     "question": "The local administrator account for a company's VPN appliance was unexpectedly used to log in to the remote management interface. Which of the following would have most likely prevented this from happening?",
     "choices": [
@@ -2083,12 +1856,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Changing the default password for the local administrator account on a VPN appliance is a basic security measure that would have most likely prevented the unexpected login to the remote management interface. Default passwords are often easy to guess or publicly available, and attackers can use them to gain unauthorized access to devices and systems. Changing the default password to a strong and unique one reduces the risk of brute-force attacks and credential theft. Using least privilege, assigning individual user IDs, and reviewing logs more frequently are also good security practices, but they are not as effective as changing the default password in preventing the unexpected login.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An unexpected login with the appliance's local administrator account most likely used the vendor's default password, which is published in manuals and easily found online. Changing it at installation would have stopped this.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Least privilege limits what accounts can do, but the built-in administrator has full rights by design.",
+      "C": "Individual user IDs improve accountability, but the default admin account would still exist with a known password.",
+      "D": "Reviewing logs more often might detect the login sooner, but would not prevent it."
+    },
     "references": [],
     "source": "bank.pdf#p85",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2121,52 +1898,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Memory injection vulnerabilities allow unauthorized code or commands to be executed within a software program, leading to abnormal behavior such as generating outbound traffic over random high ports. This issue often arises from software not properly validating or encoding input, which can be exploited by attackers to inject malicious code.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A process that should make no network connections suddenly sending traffic over random ports is running code it was never meant to. Injecting malicious code into a running process's memory is memory injection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A race condition exploits timing between operations, which would not make the process start communicating.",
+      "C": "Side loading installs apps from unofficial sources; this is an existing legitimate process misbehaving.",
+      "D": "SQL injection targets database queries, not a local batch process."
+    },
     "references": [],
     "source": "bank.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0189",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "An engineer moved to another team and is unable to access the new team's shared folders while still being able to access the shared folders from the former team. After opening a ticket, the engineer discovers that the account was never moved to the new group. Which of the following access controls is most likely causing the lack of access?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Role-based"
-      },
-      {
-        "key": "B",
-        "text": "Discretionary"
-      },
-      {
-        "key": "C",
-        "text": "Time of day"
-      },
-      {
-        "key": "D",
-        "text": "Least privilege"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p87",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
     "keyCorrected": false
   },
   {
@@ -2197,14 +1940,18 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The servers are running but unreachable because a sudden surge of traffic is saturating the network. Overwhelming a service with traffic from many sources is a distributed denial-of-service attack.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "ARP poisoning redirects local traffic; it does not flood public services.",
+      "B": "Brute force guesses passwords; it would not make the services unreachable.",
+      "C": "A buffer overflow crashes or hijacks a process; here the services are up and the network is flooded."
+    },
     "references": [],
     "source": "bank.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2235,14 +1982,18 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Organized crime exists to make money, through ransomware, fraud and selling stolen data. Profit is its defining motive.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Hacktivists are driven by political or social causes.",
+      "B": "Insiders act for many reasons -- revenge, ideology or money -- so profit is not their defining motive.",
+      "D": "Shadow IT is unauthorized technology use, not a threat actor seeking profit."
+    },
     "references": [],
     "source": "bank.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2273,12 +2024,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Files are populating a message, nothing else would except ransomware to let the victim know.\nAlso, .ryk is a file extension for Ransomeware Ryuk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Every system showing the same message about files renamed with a new extension is the signature of ransomware. .ryk is the extension used by the Ryuk family.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A virus attaches to files to spread; it does not encrypt them and leave ransom notes.",
+      "B": "A Trojan disguises itself as legitimate software, but does not by itself explain encrypted files everywhere.",
+      "C": "Spyware stays hidden while collecting information; it does not display messages."
+    },
     "references": [],
     "source": "bank.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2289,7 +2044,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator is advised that an external web server is not functioning property. The administrator reviews the following firewall logs containing traffic going to the web server:\nWhich of the following attacks is likely occurring?",
+    "question": "A systems administrator is advised that an external web server is not functioning properly. The administrator reviews the following firewall logs containing traffic going to the web server:\nWhich of the following attacks is likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -2311,14 +2066,18 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The firewall log (not reproduced in the source) shows a flood of connections to the web server from many different source addresses. Traffic from many sources overwhelming one server is a DDoS attack.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Directory traversal requests files outside the web root through crafted paths; it does not produce a traffic flood.",
+      "C": "Brute force would show repeated login attempts, not general connection floods from many addresses.",
+      "D": "An HTTPS downgrade forces weaker encryption; it does not stop the server functioning."
+    },
     "references": [],
     "source": "bank.pdf#p94",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.556,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2433,51 +2192,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The vulnerability likely present in the application that is storing data using MD5 is a cryptographic vulnerability. MD5 is considered to be a weak hashing algorithm due to its susceptibility to collision attacks, where two different inputs produce the same hash output, compromising data integrity and security.\nCryptographic: Refers to vulnerabilities in cryptographic algorithms or implementations, such as the weaknesses in MD5.\nMalicious update: Refers to the intentional injection of harmful updates, not related to the use of MD5.\nZero day: Refers to previously unknown vulnerabilities for which no patch is available, not specifically related to MD5.\nSide loading: Involves installing software from unofficial sources, not directly related to the use of MD5.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "MD5 is a broken hash algorithm: collisions can be generated and MD5 hashes crack quickly. Relying on it is a cryptographic vulnerability.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A malicious update is a compromised patch or release, not a weak algorithm choice.",
+      "C": "A zero-day is an unknown, unpatched flaw. MD5's weaknesses have been known for decades.",
+      "D": "Side loading is installing software from unofficial sources."
+    },
     "references": [],
     "source": "bank.pdf#p105",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0240",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "A company tested and validated the effectiveness of network security appliances within the corporate network. The IDS detected a high rate of SQL injection attacks against the company's servers, and the company's perimeter firewall is at capacity. Which of the following would be the best action to maintain security and reduce the traffic to the perimeter firewall?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Set the appliance to IPS mode and place it in front of the company firewall."
-      },
-      {
-        "key": "B",
-        "text": "Convert the firewall to a WAF and use IPSec tunnels to increase throughput."
-      },
-      {
-        "key": "C",
-        "text": "Set the firewall to fail open if it is overloaded with traffic and send alerts to the SIEM."
-      },
-      {
-        "key": "D",
-        "text": "Configure the firewall to perform deep packet inspection and monitor TLS traffic."
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Given the scenario where an Intrusion Detection System (IDS) has detected a high rate of SQL injection attacks and the perimeter firewall is at capacity, the best action would be to set the appliance to Intrusion Prevention System (IPS) mode and place it in front of the company firewall.\nThis approach has several benefits:\nIntrusion Prevention System (IPS): Unlike IDS, which only detects and alerts on malicious activity, IPS can actively block and prevent those activities. Placing an IPS in front of the firewall means it can filter out malicious traffic before it reaches the firewall, reducing the load on the firewall and enhancing overall security.\nReducing Traffic Load: By blocking SQL injection attacks and other malicious traffic before it reaches the firewall, the IPS helps maintain the firewall's performance and prevents it from becoming a bottleneck.\nEnhanced Security: The IPS provides an additional layer of defense, identifying and mitigating threats in real-time.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p106",
-    "needsReview": true,
-    "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2509,12 +2234,16 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The security administrator's actions of removing default permissions and adding permissions only for users who need access as part of their job duties best describe the principle of least privilege.\nThis principle ensures that users are granted the minimum necessary access to perform their job functions, reducing the risk of unauthorized access or data breaches.\nLeast privilege: Limits access rights for users to the bare minimum necessary for their job duties, enhancing security by reducing potential attack surfaces.\nEncryption standard compliance: Involves meeting encryption requirements, but it does not explain the removal and assignment of specific permissions.\nData replication requirements: Focus on duplicating data across different systems for redundancy and availability, not related to user permissions.\nAccess control monitoring: Involves tracking and reviewing access to resources, but the scenario is about setting permissions, not monitoring them.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Removing default access and granting it only to people whose jobs require it is least privilege.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption standards govern how data is encrypted, not who has permission to shares.",
+      "B": "Replication copies data between systems; it is unrelated to permissions.",
+      "D": "Access control monitoring reviews access after it is granted; the administrator changed the permissions themselves."
+    },
     "references": [],
     "source": "bank.pdf#p109",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2522,8 +2251,8 @@ export const domain2Questions = [
   {
     "id": "q0248",
     "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "An employee fell for a phishing scam, which allowed an attacker to gain access to a company PC. The attacker scraped the PC's memory to find other credentials. Without cracking these credentials, the attacker used them to move laterally through the corporate network. Which of the following describes this type of attack?",
     "choices": [
@@ -2547,15 +2276,61 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The scenario describes an attacker who obtained credentials from a compromised system's memory and used them without cracking to move laterally within the network. This technique is known as a \"pass-the-hash\" attack, where the attacker captures hashed credentials (e.g., NTLM hashes) and uses them to authenticate and gain access to other systems without needing to know the plaintext password. This is a common attack method in environments where weak security practices or outdated protocols are in use.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate to other systems, without cracking them. Reusing the hash itself is pass-the-hash.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Privilege escalation raises rights on a system; the defining action here is reusing stolen hashes to move between systems.",
+      "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
+      "C": "SQL injection attacks databases through input fields."
+    },
     "references": [],
     "source": "bank.pdf#p110",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.533,
     "needsExplanation": false,
     "keyCorrected": false
+  },
+  {
+    "id": "q0254",
+    "domain": 2,
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "type": "single",
+    "question": "An administrator is investigating an incident and discovers several users' computers were infected with malware after viewing files that were shared with them. The administrator discovers no degraded performance in the infected machines and an examination of the log files does not show excessive failed logins. Which of the following attacks is most likely the cause of the malware?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Malicious flash drive"
+      },
+      {
+        "key": "B",
+        "text": "Remote access Trojan"
+      },
+      {
+        "key": "C",
+        "text": "Brute-forced password"
+      },
+      {
+        "key": "D",
+        "text": "Cryptojacking"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Malware delivered in shared files that users opened, with no sign of heavy resource use and no password guessing, fits a Trojan, typically a remote access Trojan that quietly gives the attacker control. The key in the source says cryptojacking, but cryptominers consume CPU heavily, which the scenario explicitly rules out.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A malicious flash drive requires physical media; these infections came through shared files.",
+      "C": "A brute-forced password would show up as excessive failed logins, which the logs do not show.",
+      "D": "Cryptojacking consumes CPU heavily and degrades performance, which did not happen."
+    },
+    "references": [],
+    "source": "bank.pdf#p112",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
+    "needsExplanation": false,
+    "keyCorrected": true
   },
   {
     "id": "q0259",
@@ -2563,7 +2338,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst discovers that a large number of employee credentials had been stolen and were being sold on the dark web. The analyst investigates and discovers that some hourly employee credentials were compromised, but salaried employee credentials were not affected.\nMost employees clocked in and out while they were Inside the building using one of the kiosks connected to the network. However, some clocked out and recorded their time after leaving to go home. Only those who clocked in and out while Inside the building had credentials stolen. Each of the kiosks are on different floors, and there are multiple routers, since the business segments environments for certain business functions.\nHourly employees are required to use a website called acmetimekeeping.com to clock in and out.\nThis website is accessible from the internet. Which of the following Is the most likely reason for this compromise?",
+    "question": "A security analyst discovers that a large number of employee credentials had been stolen and were being sold on the dark web. The analyst investigates and discovers that some hourly employee credentials were compromised, but salaried employee credentials were not affected.\nMost employees clocked in and out while they were inside the building using one of the kiosks connected to the network. However, some clocked out and recorded their time after leaving to go home. Only those who clocked in and out while inside the building had credentials stolen. Each of the kiosks are on different floors, and there are multiple routers, since the business segments environments for certain business functions.\nHourly employees are required to use a website called acmetimekeeping.com to clock in and out.\nThis website is accessible from the internet. Which of the following is the most likely reason for this compromise?",
     "choices": [
       {
         "key": "A",
@@ -2575,25 +2350,29 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "The internal DNS servers were poisoned and were redirecting acmetimkeeping.com to malicious domain that intercepted the credentials and then passed them through to the real site."
+        "text": "The internal DNS servers were poisoned and were redirecting acmetimekeeping.com to malicious domain that intercepted the credentials and then passed them through to the real site."
       },
       {
         "key": "D",
-        "text": "ARP poisoning affected the machines in the building and caused the kiosks lo send a copy of all the submitted credentials to a machine."
+        "text": "ARP poisoning affected the machines in the building and caused the kiosks to send a copy of all the submitted credentials to a machine."
       }
     ],
     "correct": [
-      "B"
+      "C"
     ],
-    "explanation": "The scenario suggests that only the employees who used the kiosks inside the building had their credentials compromised. Since the time-keeping website is accessible from the internet, it is possible that a malicious actor exploited an unpatched vulnerability in the site, allowing them to inject malicious code that captured the credentials of those who logged in from the kiosks. This is a common attack vector for stealing credentials from web applications.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The same public website was used from home and from the office, but only office users lost credentials, so the site itself was not compromised. The kiosks sit on different routed segments, which ARP poisoning cannot span; poisoned internal DNS affects every internal client at once. The key in the source says the website was compromised, but that would have exposed home users too.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A brute-force attack on the website would not depend on where users clocked in from.",
+      "B": "A compromised website would steal credentials from everyone using it, including people clocking in from home.",
+      "D": "ARP poisoning only works within one broadcast domain, but the kiosks are on multiple routed segments."
+    },
     "references": [],
     "source": "bank.pdf#p114",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.364,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0260",
@@ -2601,15 +2380,15 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A business uses Wi-Fi with content filleting enabled. An employee noticed a coworker accessed a blocked sue from a work computer and repotted the issue. While Investigating the issue, a security administrator found another device providing internet access to certain employees.\nWhich of the following best describes the security risk?",
+    "question": "A business uses Wi-Fi with content filtering enabled. An employee noticed a coworker accessed a blocked site from a work computer and reported the issue. While investigating the issue, a security administrator found another device providing internet access to certain employees.\nWhich of the following best describes the security risk?",
     "choices": [
       {
         "key": "A",
-        "text": "The host-based security agent Is not running on all computers."
+        "text": "The host-based security agent is not running on all computers."
       },
       {
         "key": "B",
-        "text": "A rogue access point Is allowing users to bypass controls."
+        "text": "A rogue access point is allowing users to bypass controls."
       },
       {
         "key": "C",
@@ -2623,12 +2402,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The presence of another device providing internet access that bypasses the content filtering system indicates the existence of a rogue access point. Rogue access points are unauthorized devices that can create a backdoor into the network, allowing users to bypass security controls like content filtering. This presents a significant security risk as it can expose the network to unauthorized access and potential data breaches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Another device providing internet access, outside the filtered corporate Wi-Fi, is a rogue access point. It gives users a path that bypasses the content filter entirely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A missing host agent would not explain a separate device supplying internet access.",
+      "C": "A hidden SSID is still part of the managed network and would still be filtered.",
+      "D": "Jamming stops a network working; it does not provide a way around the filter."
+    },
     "references": [],
     "source": "bank.pdf#p115",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2661,127 +2444,17 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Shadow IT refers to the use of information technology systems, devices, software, applications, and services without explicit IT department approval. This is the most likely cause of introducing vulnerabilities on a corporate network by deploying unapproved software, as such software may not have been vetted for security compliance, increasing the risk of vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Staff deploying software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hacktivists are external attackers with causes.",
+      "B": "Script kiddies are unskilled external attackers.",
+      "C": "Competitors may seek advantage, but do not deploy unapproved software inside the company."
+    },
     "references": [],
     "source": "bank.pdf#p115",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0262",
-    "domain": 2,
-    "objective": "2.3",
-    "objectiveTitle": "Explain various types of vulnerabilities",
-    "type": "single",
-    "question": "Two companies are in the process of merging. The companies need to decide how to standardize their information security programs. Which of the following would best align the security programs?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Shared deployment of CIS baselines"
-      },
-      {
-        "key": "B",
-        "text": "Joint cybersecurity best practices"
-      },
-      {
-        "key": "C",
-        "text": "Both companies following the same CSF"
-      },
-      {
-        "key": "D",
-        "text": "Assessment of controls in a vulnerability report"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A Cybersecurity Framework (CSF) provides a structured approach to standardizing and aligning security programs across different organizations. By both companies adopting the same CSF, they can ensure that their security measures, policies, and practices are consistent, which is essential during a merger when aligning two different security programs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p115",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0264",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following is best used to detect fraud by assigning employees to different roles?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Least privilege"
-      },
-      {
-        "key": "B",
-        "text": "Mandatory vacation"
-      },
-      {
-        "key": "C",
-        "text": "Separation of duties"
-      },
-      {
-        "key": "D",
-        "text": "Job rotation"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Job rotation is a strategy used in organizations to detect and prevent fraud by periodically assigning employees to different roles within the organization. This approach helps ensure that no single employee has exclusive control over a specific process or set of tasks for an extended period, thereby reducing the opportunity for fraudulent activities to go unnoticed. By rotating roles, organizations can uncover irregularities and discrepancies that might have been concealed by an employee who had prolonged access to sensitive functions. Job rotation also promotes cross- training, which can enhance the organization's overall resilience and flexibility.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p116",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0268",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "single",
-    "question": "An analyst is reviewing an incident in which a user clicked on a link in a phishing email. Which of the following log sources would the analyst utilize to determine whether the connection was successful?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Network"
-      },
-      {
-        "key": "B",
-        "text": "System"
-      },
-      {
-        "key": "C",
-        "text": "Application"
-      },
-      {
-        "key": "D",
-        "text": "Authentication"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "To determine whether the connection was successful after a user clicked on a link in a phishing email, the most relevant log source to analyze would be the network logs. These logs would provide information on outbound and inbound traffic, allowing the analyst to see if the user's system connected to the remote server specified in the phishing link. Network logs can include details such as IP addresses, domains accessed, and the success or failure of connections, which are crucial for understanding the impact of the phishing attempt.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p117",
-    "needsReview": true,
-    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2791,7 +2464,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An employee in the accounting department receives an email containing a demand for payment tot services performed by a vendor However, the vendor is not in the vendor management database. Which of the following in this scenario an example of?",
+    "question": "An employee in the accounting department receives an email containing a demand for payment for services performed by a vendor. However, the vendor is not in the vendor management database. Which of the following is this scenario an example of?",
     "choices": [
       {
         "key": "A",
@@ -2813,97 +2486,25 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The scenario describes an instance where an employee receives a fraudulent invoice from a vendor that is not recognized in the company's vendor management system. This is a classic example of an invoice scam, where attackers attempt to trick organizations into making payments for fake or non- existent services. These scams often rely on social engineering tactics to bypass financial controls.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A payment demand for services from a vendor the company has never used is an invoice scam: a fake bill sent in the hope that someone pays it without checking.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Pretexting builds a detailed invented scenario to extract information; the defining feature here is a fake bill.",
+      "B": "Impersonation pretends to be a specific person or known entity, but this 'vendor' is unknown to the company.",
+      "C": "Ransomware encrypts data and demands payment to unlock it."
+    },
     "references": [],
     "source": "bank.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0274",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A new vulnerability enables a type of malware that allows the unauthorized movement of data from a system. Which of the following would detect this behavior?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Implementing encryption"
-      },
-      {
-        "key": "B",
-        "text": "Monitoring outbound traffic"
-      },
-      {
-        "key": "C",
-        "text": "Using default settings"
-      },
-      {
-        "key": "D",
-        "text": "Closing all open ports"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Monitoring outbound traffic is essential for detecting unauthorized data exfiltration from a system.\nA new vulnerability that allows malware to move data unauthorizedly would typically attempt to send this data out of the network. By monitoring outbound traffic, security tools can detect unusual data transfers, trigger alerts, and help prevent the exfiltration of sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p120",
-    "needsReview": true,
-    "inferenceConfidence": 0.25,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0276",
-    "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
-    "type": "single",
-    "question": "Which of the following is the most effective way to protect an application server running software that is no longer supported from network threats?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Air gap"
-      },
-      {
-        "key": "B",
-        "text": "Barricade"
-      },
-      {
-        "key": "C",
-        "text": "Port security"
-      },
-      {
-        "key": "D",
-        "text": "Screen subnet"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "One of the most effective ways to protect an application server is to use a screened subnet. A screened subnet is a network segment that is isolated from both the internet and the internal network by two firewalls. The application server is placed in the screened subnet, also known as the demilitarized zone (DMZ), and only the necessary ports are opened for communication. This way, the application server is shielded from external attacks and internal breaches, and the impact of a compromise is minimized.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p120",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0277",
     "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
     "question": "Which of the following is the best method to reduce the attack surface of an enterprise network?",
     "choices": [
@@ -2925,17 +2526,21 @@ export const domain2Questions = [
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The attack surface is every service and entry point an attacker could reach. Disabling unused network services removes entry points outright, which is the most direct way to shrink it. The key in the source says 'change default passwords for printers', which hardens those devices but leaves their services exposed.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Port security controls which devices use switch ports; it does not remove exposed services.",
+      "C": "Changing default passwords hardens printers, but their services remain exposed.",
+      "D": "A guest network separates visitors, but does not reduce the services exposed on the enterprise network."
+    },
     "references": [],
     "source": "bank.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
-    "needsExplanation": true,
-    "keyCorrected": false
+    "needsExplanation": false,
+    "keyCorrected": true
   },
   {
     "id": "q0281",
@@ -2980,125 +2585,175 @@ export const domain2Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0285",
+    "id": "q0282",
+    "domain": 2,
+    "objective": "2.5",
+    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "type": "single",
+    "question": "A software developer would like to ensure the source code cannot be reverse engineered or debugged. Which of the following should the developer consider?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Version control"
+      },
+      {
+        "key": "B",
+        "text": "Obfuscation toolkit"
+      },
+      {
+        "key": "C",
+        "text": "Code reuse"
+      },
+      {
+        "key": "D",
+        "text": "Continuous integration"
+      },
+      {
+        "key": "E",
+        "text": "Stored procedures"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Obfuscation transforms code so it still runs but is extremely hard for people or tools to understand, deterring reverse engineering and debugging.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Version control tracks changes to code; it does not protect it from analysis.",
+      "C": "Code reuse is using existing code in new projects.",
+      "D": "Continuous integration automates building and testing.",
+      "E": "Stored procedures are precompiled database queries."
+    },
+    "references": [],
+    "source": "bank.pdf#p122",
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0287",
+    "domain": 2,
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
+    "type": "single",
+    "question": "A website user is locked out of an account after clicking an email link and visiting a different website Web server logs show the user's password was changed, even though the user did not change the password. Which of the following is the most likely cause?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cross-site request forgery"
+      },
+      {
+        "key": "B",
+        "text": "Directory traversal"
+      },
+      {
+        "key": "C",
+        "text": "ARP poisoning"
+      },
+      {
+        "key": "D",
+        "text": "SQL injection"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Clicking the link sent a hidden request, from the user's own authenticated browser session, to change the password on the site. Tricking a browser into performing an authenticated action is cross-site request forgery.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Directory traversal requests files outside the web root; it does not change passwords.",
+      "C": "ARP poisoning redirects local network traffic; it does not explain an email link triggering a password change.",
+      "D": "SQL injection manipulates database queries through input, not through a victim's session."
+    },
+    "references": [],
+    "source": "bank.pdf#p124",
+    "needsReview": false,
+    "inferenceConfidence": 0.52,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0298",
     "domain": 2,
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company wants to get alerts when others are researching and doing reconnaissance on the company One approach would be to host a part of the Infrastructure online with known vulnerabilities that would appear to be company assets. Which of the following describes this approach?",
+    "question": "The security operations center is researching an event concerning a suspicious IP address. A security analyst looks at the following event logs and discovers that a significant portion of the user accounts have experienced failed log-in attempts when authenticating from the same IP address:\nWhich of the following most likely describes the attack that took place?",
     "choices": [
       {
         "key": "A",
-        "text": "Watering hole"
+        "text": "Spraying"
       },
       {
         "key": "B",
-        "text": "Bug bounty"
+        "text": "Brute-force"
       },
       {
         "key": "C",
-        "text": "DNS sinkhole"
+        "text": "Dictionary"
       },
       {
         "key": "D",
-        "text": "Honeypot"
+        "text": "Rainbow table"
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
-    "explanation": "A honeypot is a security mechanism set up to attract and detect potential attackers by simulating vulnerable assets. By hosting a part of the infrastructure online with known vulnerabilities that appear to be company assets, the company can observe and analyze the behavior of attackers conducting reconnaissance. This approach allows the company to get alerts and gather intelligence on potential threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Failed logins across a large portion of accounts from one IP address -- a few attempts each rather than many against one -- is password spraying.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Brute force hammers one account with many passwords.",
+      "C": "A dictionary attack tries a word list, usually against one account; the spread across many accounts marks spraying.",
+      "D": "Rainbow tables crack stolen hashes offline and generate no failed logins."
+    },
     "references": [],
-    "source": "bank.pdf#p123",
-    "needsReview": true,
-    "inferenceConfidence": 0.312,
+    "source": "bank.pdf#p128",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0288",
+    "id": "q0311",
     "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security engineer is working to address the growing risks that shadow IT services are introducing to the organization. The organization has taken a cloud-first approach end does not have an on- premises IT infrastructure. Which of the following would best secure the organization?",
+    "question": "A security analyst finds a rogue device during a monthly audit of current endpoint assets that are connected to the network. The corporate network utilizes 802.1X for access control. To be allowed on the network, a device must have a known hardware address, and a valid user name and password must be entered in a captive portal. The following is the audit report:\nWhich of the following is the most likely way a rogue device was allowed to connect?",
     "choices": [
       {
         "key": "A",
-        "text": "Upgrading to a next-generation firewall"
+        "text": "A user performed a MAC cloning attack with a personal device."
       },
       {
         "key": "B",
-        "text": "Deploying an appropriate in-line CASB solution"
+        "text": "A DHCP failure caused an incorrect IP address to be distributed"
       },
       {
         "key": "C",
-        "text": "Conducting user training on software policies"
+        "text": "An administrator bypassed the security controls for testing."
       },
       {
         "key": "D",
-        "text": "Configuring double key encryption in SaaS platforms"
+        "text": "DNS hijacking let an attacker intercept the captive portal traffic."
       }
     ],
     "correct": [
-      "B"
+      "A"
     ],
-    "explanation": "A Cloud Access Security Broker (CASB) solution is the most suitable option for securing an organization that has adopted a cloud-first strategy and does not have an on-premises IT infrastructure. CASBs provide visibility and control over shadow IT services, enforce security policies, and protect data across cloud services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The network only lets in devices with a known MAC address plus valid captive portal credentials. A user who copied an approved device's MAC address onto a personal device and logged in with their own credentials would pass both checks.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A DHCP failure affects addressing, not whether a device passes authentication.",
+      "C": "An administrator bypass is possible but less likely than a user cloning a MAC.",
+      "D": "DNS hijacking of the portal would not supply a known hardware address."
+    },
     "references": [],
-    "source": "bank.pdf#p124",
-    "needsReview": true,
-    "inferenceConfidence": 0.357,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0309",
-    "domain": 2,
-    "objective": "2.2",
-    "objectiveTitle": "Explain common threat vectors and attack surfaces",
-    "type": "multi",
-    "question": "A company implemented an MDM policy 10 mitigate risks after repealed instances of employees losing company-provided mobile phones. In several cases. The lost phones were used maliciously to perform social engineering attacks against other employees. Which of the following MDM features should be configured to best address this issue? (Select two).",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Screen locks"
-      },
-      {
-        "key": "B",
-        "text": "Remote wipe"
-      },
-      {
-        "key": "C",
-        "text": "Full device encryption"
-      },
-      {
-        "key": "D",
-        "text": "Push notifications"
-      },
-      {
-        "key": "E",
-        "text": "Application management"
-      },
-      {
-        "key": "F",
-        "text": "Geolocation"
-      }
-    ],
-    "correct": [
-      "A",
-      "B"
-    ],
-    "explanation": "Screen locks: Enforcing screen lock policies ensures that unauthorized users cannot easily access the device contents if a phone is lost or stolen. This adds a crucial first layer of protection.\nRemote wipe: This feature allows administrators to erase all data on a lost or stolen device remotely. It is essential in preventing malicious access to sensitive corporate data, especially if the device is compromised.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p132",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "source": "bank.pdf#p133",
+    "needsReview": false,
+    "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3112,7 +2767,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "SOU"
+        "text": "SQLi"
       },
       {
         "key": "B",
@@ -3130,13 +2785,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Jailbreaking is the process of removing restrictions imposed by the manufacturer on a smartphone, allowing the user to install unauthorized software and features not available through official app stores. This action typically voids the warranty and can introduce security risks by bypassing built-in protections.\nSOU (Statement of Understanding) is not related to modifying devices.\nCross-site scripting is a web-based attack technique, unrelated to smartphone software.\nSide loading refers to installing apps from unofficial sources but without necessarily removing built-in restrictions like jailbreaking does.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Removing the manufacturer's restrictions to install unauthorized software and unlock features is jailbreaking (rooting on Android).",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "'SOU' is not a mobile vulnerability or technique.",
+      "B": "Cross-site scripting is a web application attack.",
+      "D": "Side loading installs apps from outside the official store, but does not unlock new OS features; jailbreaking does both."
+    },
     "references": [],
     "source": "bank.pdf#p138",
-    "needsReview": true,
-    "inferenceConfidence": 0.818,
+    "needsReview": false,
+    "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3185,14 +2844,14 @@ export const domain2Questions = [
   {
     "id": "q0328",
     "domain": 2,
-    "objective": "2.5",
-    "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
+    "objective": "2.4",
+    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
     "question": "Which of the following examples would be best mitigated by input sanitization?",
     "choices": [
       {
         "key": "A",
-        "text": "<script>alert (\"Warning!\") ,-</script>"
+        "text": "<script>alert(\"Warning!\");</script>"
       },
       {
         "key": "B",
@@ -3210,13 +2869,59 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "This example of a script injection attack would be best mitigated by input sanitization. Input sanitization involves cleaning or filtering user inputs to ensure that they do not contain harmful data, such as malicious scripts. This prevents attackers from executing script-based attacks (e.g., Cross-Site Scripting or XSS).\nNmap command is unrelated to input sanitization, as it is a network scanning tool.\nEmail phishing attempts require different mitigations, such as user training.\nBrowser warnings about insecure connections involve encryption protocols, not input validation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A <script> tag in input is a cross-site scripting payload. Input sanitization strips or encodes such tags so they cannot run in a browser.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An nmap command is a network scan, not input to an application.",
+      "C": "A phishing email is social engineering; filtering and training address it, not input sanitization.",
+      "D": "A certificate warning in the browser is a TLS issue."
+    },
     "references": [],
     "source": "bank.pdf#p139",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0343",
+    "domain": 2,
+    "objective": "2.3",
+    "objectiveTitle": "Explain various types of vulnerabilities",
+    "type": "single",
+    "question": "A legacy device is being decommissioned and is no longer receiving updates or patches. Which of the following describes this scenario?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "End of business"
+      },
+      {
+        "key": "B",
+        "text": "End of testing"
+      },
+      {
+        "key": "C",
+        "text": "End of support"
+      },
+      {
+        "key": "D",
+        "text": "End of life"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "End of life means the vendor has stopped supporting the product altogether: no more updates or patches, and it is expected to be retired -- exactly this device.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "'End of business' is not a standard lifecycle term.",
+      "B": "'End of testing' is not a lifecycle stage for devices.",
+      "C": "End of support usually ends specific support services; end of life is the stage where the product is retired and all updates stop."
+    },
+    "references": [],
+    "source": "bank.pdf#p145",
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3248,51 +2953,17 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To enhance security for a system running an end-of-life operating system, placing the system in an isolated VLAN is the most effective approach. By isolating the system from the rest of the network, you can limit its exposure to potential threats while maintaining its functionality. This segmentation helps protect the rest of the network from any vulnerabilities in the outdated system.\nInstalling HIDS (Host-based Intrusion Detection System) can help detect intrusions but won't mitigate the risks posed by an unsupported OS.\nDecommissioning may not be feasible if the system is critical.\nEncrypting the system's hard drive protects data at rest but doesn't address vulnerabilities from an outdated OS.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The system is critical, so it cannot simply be retired, and its OS can no longer be patched. Isolating it in its own VLAN limits what can reach it, reducing risk while it keeps running.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A HIDS can detect attacks, but does not reduce exposure of the unpatched OS.",
+      "C": "Decommissioning would stop customer transaction processing.",
+      "D": "Encrypting the drive protects data at rest, not the running system from network attacks."
+    },
     "references": [],
     "source": "bank.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0349",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "To track the status of patching installations"
-      },
-      {
-        "key": "B",
-        "text": "To find shadow IT cloud deployments"
-      },
-      {
-        "key": "C",
-        "text": "To continuously the monitor hardware inventory"
-      },
-      {
-        "key": "D",
-        "text": "To hunt for active attackers in the network"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Running daily vulnerability scans on all corporate endpoints is primarily done to track the status of patching installations. These scans help identify any missing security patches or vulnerabilities that could be exploited by attackers. Keeping the endpoints up-to-date with the latest patches is critical for maintaining security.\nFinding shadow IT cloud deployments and monitoring hardware inventory are better achieved through other tools.\nHunting for active attackers would typically involve more real-time threat detection methods than daily vulnerability scans.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p148",
-    "needsReview": true,
-    "inferenceConfidence": 0.263,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3366,12 +3037,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The employee notices that the links in the email do not correspond to the company's official URLs, indicating that this is likely a social engineering attack. Social engineering involves manipulating individuals into divulging confidential information or performing actions that may compromise security. Phishing emails, like the one described, often contain fraudulent links to trick the recipient into providing sensitive information or downloading malware.\nBusiness email refers to business email compromise (BEC), which typically involves impersonating a high-level executive to defraud the company.\nUnsecured network is unrelated to the email content.\nDefault credentials do not apply here, as the issue is with suspicious links, not login credentials.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A message pretending to be from HR, with links that lead somewhere other than company sites, is a phishing lure -- social engineering aimed at a new employee who does not yet know what normal looks like.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Business email compromise uses a real compromised or spoofed business account to request payments or data; this is generic phishing.",
+      "C": "An unsecured network is a network weakness, not the vector used here.",
+      "D": "Default credentials are unchanged factory passwords, unrelated to a phishing email."
+    },
     "references": [],
     "source": "bank.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3592,7 +3267,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an external host that includes the following:\n...\n12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) paylcad length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
+    "question": "A security analyst received a tip that sensitive proprietary information was leaked to the public.\nThe analyst is reviewing the PCAP and notices traffic between an internal server and an external host that includes the following:\n...\n12:47:22.327233 PPPoE [ses 0x8122] IP (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto IPv6 (41), length 331) 10.5.1.1 > 52.165.16.154: IP6 (hlim E3, next-header TCP (6) payload length: 271) 2001:67c:2158:a019::ace.53104 > 2001:0:5ef5:79fd:380c:dddd:a601:24fa.13788: Flags [P.], cksum 0xd7ee (correct), seq 97:348, ack 102, win 16444, length 251 ...\nWhich of the following was most likely used to exfiltrate the data?",
     "choices": [
       {
         "key": "A",
@@ -3955,12 +3630,16 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Zero-day vulnerabilities are unknown flaws in software, making them harder to patch, especially when using open-source libraries without dedicated support teams.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A zero-day in an open-source library has no fix yet, and the company depends on the library's maintainers to produce one. It is the hardest to remediate, because there is nothing to apply until upstream acts.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Buffer overflows are serious, but once known they can be patched.",
+      "B": "SQL injection can be fixed in the company's own code with parameterized queries.",
+      "C": "Cross-site scripting can be fixed with output encoding and input validation in the company's code."
+    },
     "references": [],
     "source": "bank.pdf#p182",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4077,12 +3756,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The activity described in the table, where multiple connection attempts are made on port 445 (used for SMB services), suggests a brute-force attack. The attacker likely used automated methods to guess credentials, causing multiple failures. Such attempts are a hallmark of brute- force attacks targeting shared resources.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The alert details (not reproduced in the source) show many failed login attempts against the badge workstation in a short time. A rapid run of failed guesses is a brute-force attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocked content means a web or file filter stopped something, not repeated login failures.",
+      "C": "Concurrent session usage is the same account logged in from multiple places.",
+      "D": "Account lockout may follow repeated failures, but the indicator is the brute-force activity itself."
+    },
     "references": [],
     "source": "bank.pdf#p186",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4115,12 +3798,16 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VM escape occurs when an attacker breaks out of a virtual machine's isolation to access the hypervisor. This compromise can allow control of the hypervisor and all other VMs on the host, posing significant security risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A VM escape breaks out of a guest into the hypervisor, and from there the attacker can reach the host and every other VM running on it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Inserting code into memory for elevated rights describes memory injection or privilege escalation.",
+      "C": "Reading unencrypted data across environments describes a data exposure issue, not escaping a VM.",
+      "D": "Installing unapproved software describes side loading."
+    },
     "references": [],
     "source": "bank.pdf#p191",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4514,7 +4201,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "While reviewing logs, a security administrator identifies the following code:\nWhich of the following best describes the vulnerability being exploited?",
+    "question": "While reviewing logs, a security administrator identifies the following code:\n<script>function (send_info)</script>\nWhich of the following best describes the vulnerability being exploited?",
     "choices": [
       {
         "key": "A",
@@ -5406,7 +5093,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A company's website is www.company.com. Attackers purchased the domain www.company.com. Which of the following types of attacks describes this example?",
+    "question": "A company's website is www.company.com. Attackers purchased the domain www.c0mpany.com. Which of the following types of attacks describes this example?",
     "choices": [
       {
         "key": "A",
@@ -6934,44 +6621,6 @@ export const domain2Questions = [
     "source": "bank.pdf#p301",
     "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0836",
-    "domain": 2,
-    "objective": "2.1",
-    "objectiveTitle": "Compare and contrast common threat actors and motivations",
-    "type": "single",
-    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat. Which of the following would most likely help the security awareness team address this potential threat?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Immediately disable the accounts of staff who are likely to be terminated."
-      },
-      {
-        "key": "B",
-        "text": "Train supervisors to identify and manage disgruntled employees."
-      },
-      {
-        "key": "C",
-        "text": "Configure DLP to monitor staff who will be terminated."
-      },
-      {
-        "key": "D",
-        "text": "Configure DLP to monitor staff who will be terminated."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Equipping supervisors to recognize signs of dissatisfaction and potential insider threats enables early intervention, addressing the human factors that awareness programs are designed to influence.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p301",
-    "needsReview": true,
-    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },

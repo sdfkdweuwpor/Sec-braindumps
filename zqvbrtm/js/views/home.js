@@ -15,9 +15,12 @@ function startSession(session, navigate) {
   navigate('#/quiz');
 }
 
+const MODE_ICON = { 'Build your own': '✎', 'Missed questions': '↺', 'Weakest subject': '◎', 'Mock exam': '⏱' };
+
 function modeCard({ title, blurb, cta, disabled, note, onStart }) {
-  return el('div', { class: 'card' }, [
-    el('div', { class: 'spread' }, [
+  return el('div', { class: 'card mode-card' }, [
+    el('div', { class: 'mode-head' }, [
+      el('span', { class: 'mode-ic', 'aria-hidden': 'true', text: MODE_ICON[title] || '◆' }),
       el('div', {}, [
         el('h2', { text: title }),
         el('p', { class: 'muted', text: blurb, style: 'margin:0' }),
@@ -26,7 +29,7 @@ function modeCard({ title, blurb, cta, disabled, note, onStart }) {
     note ? el('p', { class: 'faint', text: note, style: 'margin:.6rem 0 0' }) : null,
     el('div', { style: 'margin-top:.8rem' }, [
       el('button', {
-        class: 'btn', type: 'button', disabled: disabled || false, onclick: onStart,
+        class: 'btn block', type: 'button', disabled: disabled || false, onclick: onStart,
       }, cta),
     ]),
   ]);
@@ -66,7 +69,9 @@ export async function renderHome(view, { navigate }) {
   }
 
   // --- Build your own -------------------------------------------------
-  view.append(modeCard({
+  const grid = el('div', { class: 'mode-grid' });
+  view.append(grid);
+  grid.append(modeCard({
     title: 'Build your own',
     blurb: 'Pick domains, objectives, missed or saved questions, and a length.',
     cta: 'Open builder',
@@ -75,7 +80,7 @@ export async function renderHome(view, { navigate }) {
 
   // --- Missed ---------------------------------------------------------
   const missed = store.missedIds();
-  view.append(modeCard({
+  grid.append(modeCard({
     title: 'Missed questions',
     blurb: 'Everything you have answered incorrectly.',
     cta: missed.length ? `Practise ${missed.length} missed` : 'Nothing missed yet',
@@ -94,7 +99,7 @@ export async function renderHome(view, { navigate }) {
       flaggedIds: store.getFlagged(),
       correctCount: store.correctCount,
     });
-    view.append(modeCard({
+    grid.append(modeCard({
       title: 'Weakest subject',
       blurb: `20 questions from your three weakest objectives: ${objectives.join(', ')}.`,
       cta: `Start ${Math.min(20, pool.length)}-question quiz`,
@@ -110,7 +115,7 @@ export async function renderHome(view, { navigate }) {
       },
     }));
   } else {
-    view.append(modeCard({
+    grid.append(modeCard({
       title: 'Weakest subject',
       blurb: 'Targets the three objectives you score lowest on.',
       cta: 'Not enough data yet',
@@ -122,7 +127,7 @@ export async function renderHome(view, { navigate }) {
   }
 
   // --- Mock exam ------------------------------------------------------
-  view.append(modeCard({
+  grid.append(modeCard({
     title: 'Mock exam',
     blurb: `${MOCK_COUNT} questions weighted to the official domain percentages, `
          + `${MOCK_MINUTES}-minute timer, no feedback until you submit.`,

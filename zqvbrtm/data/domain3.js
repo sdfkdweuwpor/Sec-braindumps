@@ -30,12 +30,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "According to the shared responsibility model, the client and the cloud provider have different roles and responsibilities for securing the cloud environment, depending on the service model. In an IaaS (Infrastructure as a Service) model, the cloud provider is responsible for securing the physical infrastructure, such as the servers, storage, and network devices, while the client is responsible for securing the operating systems, applications, and data that run on the cloud infrastructure. Therefore, the client is responsible for securing the company's database in an IaaS model for a cloud environment, as the database is an application that stores data. The client can use various security controls, such as encryption, access control, backup, and auditing, to protect the database from unauthorized access, modification, or loss. The third-party vendor and the DBA (Database Administrator) are not roles defined by the shared responsibility model, but they may be involved in the implementation or management of the database security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In IaaS the provider secures the physical infrastructure and virtualization layer, while the customer is responsible for everything they install on top, including operating systems, applications and databases. The company's database is therefore the client's responsibility.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A third-party vendor has no role in the shared responsibility model between customer and cloud provider.",
+      "C": "The cloud provider secures the hardware and hypervisor in IaaS, not the customer's database.",
+      "D": "A DBA is a job role within the client organization. The model assigns responsibility to the client, not to a particular job title."
+    },
     "references": [],
     "source": "bank.pdf#p6",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
     "keyCorrected": false
@@ -77,12 +81,17 @@ export const domain3Questions = [
       "A",
       "D"
     ],
-    "explanation": "Ease of recovery: High-availability networks should be designed in a way that allows for quick and easy recovery in the event of a failure. Redundancy, failover mechanisms, and backup systems are some of the components that can help facilitate smooth recovery.\nResponsiveness: High-availability networks need to be responsive to ensure that any potential issues or failures are quickly detected, and appropriate actions are taken promptly to minimize downtime and impact.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "High availability is about staying up and coming back fast. The design must weigh how easily service can be recovered after a failure and how responsive the network stays under load and failover -- both are listed availability considerations in SY0-701.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Ability to patch matters for security, but it is not a defining design factor for availability.",
+      "C": "Physical isolation limits exposure but works against the redundancy and reachability high availability needs.",
+      "E": "Attack surface is a security consideration, not an availability design factor.",
+      "F": "Extensible authentication (EAP) is an authentication framework, unrelated to availability."
+    },
     "references": [],
     "source": "bank.pdf#p7",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -109,19 +118,23 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Tablet exercise"
+        "text": "Tabletop exercise"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Capacity planning is the process of determining the resources needed to meet the current and future demands of an organization. Capacity planning can help a company develop a business continuity strategy by estimating how many staff members would be required to sustain the business in the case of a disruption, such as a natural disaster, a cyberattack, or a pandemic.\nCapacity planning can also help a company optimize the use of its resources, reduce costs, and improve performance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Working out how many people are needed to keep the business running during a disruption is capacity planning, which covers people, technology and infrastructure in business continuity planning.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Redundancy duplicates components so one failure does not stop service. It is not a staffing estimate.",
+      "C": "Geographic dispersion spreads sites across locations to survive regional events.",
+      "D": "A tabletop exercise walks through a scenario in discussion to test a plan. It does not size staffing needs."
+    },
     "references": [],
     "source": "bank.pdf#p9",
-    "needsReview": true,
-    "inferenceConfidence": 0.9,
+    "needsReview": false,
+    "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -153,13 +166,59 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A geolocation policy is a policy that restricts or allows access to data or resources based on the geographic location of the user or device. A geolocation policy can be implemented using various methods, such as IP address filtering, GPS tracking, or geofencing. A geolocation policy can help the company's legal department to prevent unauthorized access to sensitive documents from individuals in high-risk countries.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A geolocation policy allows or blocks access based on where the user is connecting from, so access from high-risk countries can be denied outright. That is the direct, enforceable control for this requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data masking hides parts of data from users who can access it. It does not keep people in certain countries out.",
+      "B": "Encryption protects data from anyone without the key, but authorized users anywhere could still open the documents.",
+      "D": "Data sovereignty regulations are laws about where data is stored and processed. They are not a control the company applies to users."
+    },
     "references": [],
     "source": "bank.pdf#p9",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.562,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0018",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "An organization is building a new backup data center with cost-benefit as the primary requirement and RTO and RPO values around two days. Which of the following types of sites is the best for this scenario?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Real-time recovery"
+      },
+      {
+        "key": "B",
+        "text": "Hot"
+      },
+      {
+        "key": "C",
+        "text": "Cold"
+      },
+      {
+        "key": "D",
+        "text": "Warm"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A warm site has the facilities and some equipment in place and can be running in about a day or two, costing much less than a hot site. RTO and RPO of around two days with cost as the priority is a warm site.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Real-time recovery gives near-zero RTO and RPO at the highest cost, far beyond what two days needs.",
+      "B": "A hot site recovers almost immediately but is the most expensive option, poor value for a two-day target.",
+      "C": "A cold site is cheapest but can take weeks to bring online, missing a two-day target."
+    },
+    "references": [],
+    "source": "bank.pdf#p10",
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -191,14 +250,18 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Patient data is protected health information, which is regulated and must only be seen by those who need it. Of these labels, sensitive is the classification for PHI, PII and similar regulated personal data.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Private usually describes information an organization keeps internal, but it is not the category for regulated health data.",
+      "B": "Critical describes data essential to operations, such as systems the business cannot run without, not personal data.",
+      "D": "Public data can be freely disclosed -- the opposite of what patient data requires."
+    },
     "references": [],
     "source": "bank.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -215,7 +278,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Type 1 hvpervisor"
+        "text": "Type 1 hypervisor"
       },
       {
         "key": "C",
@@ -229,14 +292,18 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Serverless computing runs code in the cloud without managing servers, and you pay only for execution time. That makes it a low-cost, cloud-based way to host an application.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A Type 1 hypervisor runs virtual machines on hardware you own and manage -- neither low-cost nor inherently cloud-based.",
+      "C": "SD-WAN manages wide-area network connectivity. It does not host applications.",
+      "D": "Software-defined networking manages network behaviour through software. It does not host applications."
+    },
     "references": [],
     "source": "bank.pdf#p18",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -267,12 +334,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Geographic dispersion is a strategy that involves distributing the servers or data centers across different geographic locations. Geographic dispersion can help the company to mitigate the risk of weather events causing damage to the server room and downtime, as well as improve the availability, performance, and resilience of the network. Geographic dispersion can also enhance the disaster recovery and business continuity capabilities of the company, as it can provide backup and failover options in case of a regional outage or disruption. The other options are not the best ways to address the company's concern:\nClustering servers: This is a technique that involves grouping multiple servers together to act as a single system. Clustering servers can help to improve the performance, scalability, and fault tolerance of the network, but it does not protect the servers from physical damage or downtime caused by weather events, especially if the servers are located in the same room or building.\nLoad balancers: These are devices or software that distribute the network traffic or workload among multiple servers or resources. Load balancers can help to optimize the utilization, efficiency, and reliability of the network, but they do not prevent the servers from being damaged or disrupted by weather events, especially if the servers are located in the same room or building.\nOff-site backups: These are copies of data or files that are stored in a different location than the original source. Off-site backups can help to protect the data from being lost or corrupted by weather events, but they do not prevent the servers from being damaged or disrupted by weather events, nor do they ensure the availability or continuity of the network services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Weather that damages a building takes out everything in it. Placing servers in separate geographic locations means one storm cannot take down the whole service.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Clustered servers in the same server room fail together if the room is damaged.",
+      "C": "Load balancers spread traffic, but if all the servers are in the damaged room, there is nothing left to balance.",
+      "D": "Off-site backups protect the data but not uptime -- systems are down until everything is restored."
+    },
     "references": [],
     "source": "bank.pdf#p19",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -305,12 +376,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "To provide employees with computers that do not have access to the internet and prevent information leaks to an online forum, implementing an air gap would be the best solution. An air gap physically isolates the computer or network from any outside connections, including the internet, ensuring that data cannot be transferred to or from the system.\nAir gap: A security measure that isolates a computer or network from the internet or other networks, preventing any form of electronic communication with external systems.\nJump server: A secure server used to access and manage devices in a different security zone, but it does not provide isolation from the internet.\nLogical segmentation: Segregates networks using software or network configurations, but it does not guarantee complete isolation from the internet.\nVirtualization: Creates virtual instances of systems, which can be isolated, but does not inherently prevent internet access without additional configurations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An air gap physically separates the computers from any outside network, so nothing on them can reach the internet or be posted to a forum.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A jump server is a hardened host used to administer other systems. It does not remove internet access.",
+      "C": "Logical segmentation separates traffic with rules, but a misconfiguration could still allow internet access; it is weaker than a physical gap.",
+      "D": "Virtualization runs multiple systems on shared hardware. It has nothing to do with internet access."
+    },
     "references": [],
     "source": "bank.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -318,8 +393,8 @@ export const domain3Questions = [
   {
     "id": "q0058",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A healthcare organization wants to provide a web application that allows individuals to digitally report health emergencies.\nWhich of the following is the most important consideration during development?",
     "choices": [
@@ -343,12 +418,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Availability is the ability of a system or service to be accessible and usable when needed. For a web application that allows individuals to digitally report health emergencies, availability is the most important consideration during development, because any downtime or delay could have serious consequences for the health and safety of the users. The web application should be designed to handle high traffic, prevent denial-of-service attacks, and have backup and recovery plans in case of failures.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "People reporting health emergencies must be able to reach the application at the moment they need it; any downtime could cost lives. Availability is the most important consideration.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Scalability matters for handling load, but only in service of availability.",
+      "C": "Cost is a factor in any project, but it cannot outrank people's ability to report an emergency.",
+      "D": "Ease of deployment helps the developers, not the people who depend on the service."
+    },
     "references": [],
     "source": "bank.pdf#p36",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -381,12 +460,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Data classification is the process of assigning labels or tags to data based on its sensitivity, value, and risk. Data classification is the first step in a data loss prevention (DLP) solution, as it helps to identify what data needs to be protected and how. By applying classifications to the data, the security administrator can define appropriate policies and rules for the DLP solution to prevent the exfiltration of sensitive customer data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "DLP can only protect data it can recognize, so the data must be classified first. Classification labels tell the DLP rules what is sensitive and what to do with it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Blocking cloud storage is a specific control. Without knowing what is sensitive, it is guesswork.",
+      "B": "Blocking all attachments stops normal business and still misses sensitive data leaving in other ways.",
+      "D": "Removing all permissions breaks access for legitimate users; access should follow classification."
+    },
     "references": [],
     "source": "bank.pdf#p36",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -419,12 +502,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "End-of-life operating systems are those that are no longer supported by the vendor or manufacturer, meaning they do not receive any security updates or patches. This makes them vulnerable to exploits and attacks that take advantage of known or unknown flaws in the software.\nPatch availability is the security implication of using end-of-life operating systems, as it affects the ability to fix or prevent security issues. Other factors, such as product software compatibility, ease of recovery, or cost of replacement, are not directly related to security, but rather to functionality, availability, or budget.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An end-of-life operating system no longer receives security patches, so every new vulnerability stays open. The lack of patches is the security implication to document.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Software compatibility is an operational question, not the security implication.",
+      "C": "Ease of recovery concerns restoring after failure, not the risk the old OS creates.",
+      "D": "Replacement cost is a budget consideration, not a security implication."
+    },
     "references": [],
     "source": "bank.pdf#p44",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
@@ -509,12 +596,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "IPSec is a protocol suite that provides secure communication over IP networks. IPSec can be used to create virtual private networks (VPNs) that encrypt and authenticate the data exchanged between two or more parties. IPSec can also provide data integrity, confidentiality, replay protection, and access control. A security consultant can use IPSec to gain secure, remote access to a client environment by establishing a VPN tunnel with the client's network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "IPSec builds encrypted, authenticated tunnels between networks or between a remote user and a network. It is the standard basis for a secure VPN into a client environment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "EAP is an authentication framework used in wireless and 802.1X, not a remote access tunnel.",
+      "B": "DHCP assigns IP addresses; it provides no security.",
+      "D": "NAT translates addresses between networks; it does not encrypt or authenticate anything."
+    },
     "references": [],
     "source": "bank.pdf#p45",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -547,12 +638,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption at rest is a strategy that protects data stored on a device, such as a laptop, by converting it into an unreadable format that can only be accessed with a decryption key or password. Encryption at rest can prevent data loss on stolen laptops by preventing unauthorized access to the data, even if the device is physically compromised. Encryption at rest can also help comply with data privacy regulations and standards that require data protection. Masking, data classification, and permission restrictions are other strategies that can help protect data, but they may not be sufficient or applicable for data stored on laptops. Masking is a technique that obscures sensitive data elements, such as credit card numbers, with random characters or symbols, but it is usually used for data in transit or in use, not at rest. Data classification is a process that assigns labels to data based on its sensitivity and business impact, but it does not protect the data itself. Permission restrictions are rules that define who can access, modify, or delete data, but they may not prevent unauthorized access if the laptop is stolen and the security controls are bypassed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "If a laptop is stolen, the thief has the disk. Encrypting data at rest means the stored data is unreadable without the key, so the loss of the device does not become a loss of data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Masking hides parts of values in displays and test data. It does not protect a stolen drive's contents.",
+      "C": "Classification labels data by sensitivity. It guides protection but does not protect anything by itself.",
+      "D": "Permission restrictions apply inside the operating system; a thief can read the drive from another system and bypass them."
+    },
     "references": [],
     "source": "bank.pdf#p48",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -585,12 +680,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Containers are a method of virtualization that allows applications to run in isolated environments with their own dependencies, libraries, and configurations. Containers are best suited for constantly changing environments because they are lightweight, portable, scalable, and easy to deploy and update. Containers can also support microservices architectures, which enable faster and more frequent delivery of software features.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Containers package an application with its dependencies, start in seconds and are easily replaced, so they suit environments that change constantly -- frequent releases, scaling up and down, and redeploying.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A real-time operating system is built for predictable timing in fixed-purpose devices, not frequent change.",
+      "C": "Embedded systems are purpose-built and rarely updated -- the opposite of constantly changing.",
+      "D": "SCADA systems control industrial processes and are deliberately stable and slow to change."
+    },
     "references": [],
     "source": "bank.pdf#p48",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -623,13 +722,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VPN is a virtual private network that creates a secure tunnel between two or more devices over a public network. A VPN can encrypt and authenticate the data, as well as hide the IP addresses and locations of the devices. A jump server is a server that acts as an intermediary between a user and a target server, such as a production server. A jump server can provide an additional layer of security and access control, as well as logging and auditing capabilities. A firewall is a device or software that filters and blocks unwanted network traffic based on predefined rules. A firewall can protect the internal network from external threats and limit the exposure of sensitive services and ports. A security analyst should recommend setting up a VPN and placing the jump server inside the firewall to improve the security of the remote desktop access to the production network. This way, the remote desktop service will not be exposed to the public network, and only authorized users with VPN credentials can access the jump server and then the production server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Remote desktop exposed on the public network is a direct path to production. Putting a VPN in front and moving the jump server inside the firewall means users must authenticate to the VPN before they can even reach the jump host.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A non-standard port is security through obscurity; scanners will still find the service.",
+      "C": "A web proxy controls outbound browsing and does nothing about inbound access to the remote desktop.",
+      "D": "Longer passwords help a little, but the service is still exposed to the whole internet."
+    },
     "references": [],
     "source": "bank.pdf#p49",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0094",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "An organization would like to store customer data on a separate part of the network that is not accessible to users on the main corporate network. Which of the following should the administrator use to accomplish this goal?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Segmentation"
+      },
+      {
+        "key": "B",
+        "text": "Isolation"
+      },
+      {
+        "key": "C",
+        "text": "Patching"
+      },
+      {
+        "key": "D",
+        "text": "Encryption"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Placing customer data on its own network segment, with rules controlling what can reach it, keeps it away from the main corporate network while still letting authorized systems use it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Isolation cuts a system off completely, which would stop legitimate systems using the data too.",
+      "C": "Patching fixes vulnerabilities; it does not separate networks.",
+      "D": "Encryption protects data from being read, but does not stop users on the corporate network from reaching it."
+    },
+    "references": [],
+    "source": "bank.pdf#p49",
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -661,12 +806,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SASE stands for Secure Access Service Edge. It is a cloud-based service that combines network and security functions into a single integrated solution. SASE can help reduce traffic on the VPN and internet circuit by providing secure and optimized access to the data center and cloud applications for remote employees. SASE can also monitor and enforce security policies on the remote employee internet traffic, regardless of their location or device. SASE can offer benefits such as lower costs, improved performance, scalability, and flexibility compared to traditional VPN solutions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SASE delivers security and networking from the cloud: remote users connect to a nearby cloud edge that inspects and monitors their internet traffic, and provides encrypted access to the data center. Internet-bound traffic no longer passes through the company's VPN concentrator and circuit.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A bigger load-balanced VPN adds capacity but still sends all traffic through the company's own circuit.",
+      "C": "SD-WAN optimizes links between sites; it does not cover remote users' internet monitoring.",
+      "D": "More VPN concentrators in the cloud keep the same design and do not reduce the traffic."
+    },
     "references": [],
     "source": "bank.pdf#p52",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -699,12 +848,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Infrastructure as code (IaC) is a method of using code and automation to manage and provision cloud resources, such as servers, networks, storage, and applications. IaC allows for easy deployment, scalability, consistency, and repeatability of cloud environments. IaC is also a key component of DevSecOps, which integrates security into the development and operations processes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Infrastructure as code defines cloud resources in template files, so environments can be deployed the same way every time with a single command. That is what makes cloud deployment easy and repeatable.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Software as a service delivers finished applications, not a way to deploy your own resources.",
+      "C": "The Internet of Things describes connected devices, not cloud deployment.",
+      "D": "Software-defined networking manages networks through software but does not deploy compute or storage resources."
+    },
     "references": [],
     "source": "bank.pdf#p55",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.95,
     "needsExplanation": false,
     "keyCorrected": false
@@ -737,13 +890,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A jump server is a device or virtual machine that acts as an intermediary between a user's workstation and a remote network segment. A jump server can be used to securely access servers or devices that are not directly reachable from the user's workstation, such as database servers. A jump server can also provide audit logs and access control for the remote connections.\nA jump server is also known as a jump box or a jump host.\nRADIUS is a protocol for authentication, authorization, and accounting of network access.\nRADIUS is not a device or a method to access remote servers, but rather a way to verify the identity and permissions of users or devices that request network access. HSM is an acronym for Hardware Security Module, which is a physical device that provides secure storage and generation of cryptographic keys. HSMs are used to protect sensitive data and applications, such as digital signatures, encryption, and authentication. HSMs are not used to access remote servers, but rather to enhance the security of the data and applications that reside on them5 .\nA load balancer is a device or software that distributes network traffic across multiple servers or devices, based on criteria such as availability, performance, or capacity. A load balancer can improve the scalability, reliability, and efficiency of network services, such as web servers, application servers, or database servers. A load balancer is not used to access remote servers, but rather to optimize the delivery of the services that run on them .",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server is the one hardened, monitored host allowed into the secure segment. Administrators connect to it first and then to the database servers, so access is controlled and logged.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "RADIUS authenticates users, but does not provide a path into the segment.",
+      "C": "A hardware security module protects cryptographic keys, not administrative access.",
+      "D": "A load balancer distributes client traffic to servers, not administrator access."
+    },
     "references": [],
     "source": "bank.pdf#p61",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0120",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "An organization's internet-facing website was compromised when an attacker exploited a buffer overflow. Which of the following should the organization deploy to best protect against similar attacks in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "NGFW"
+      },
+      {
+        "key": "B",
+        "text": "WAF"
+      },
+      {
+        "key": "C",
+        "text": "TLS"
+      },
+      {
+        "key": "D",
+        "text": "SD-WAN"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The attack arrived through the public website, so the protection belongs in front of it. A web application firewall inspects HTTP requests and blocks malicious payloads, including oversized input used for buffer overflows.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A next-generation firewall inspects general traffic but is not specialized in web application attacks.",
+      "C": "TLS encrypts traffic; it would carry the malicious payload securely rather than stop it.",
+      "D": "SD-WAN manages connections between sites."
+    },
+    "references": [],
+    "source": "bank.pdf#p61",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -775,13 +974,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Data in transit is data that is moving from one location to another, such as over a network or through the air. Data in transit is vulnerable to interception, modification, or theft by malicious actors. A VPN (virtual private network) is a technology that protects data in transit by creating a secure tunnel between two endpoints and encrypting the data that passes through it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A site-to-site VPN encrypts the traffic travelling between headquarters and the branch. It protects data in transit.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Data in use is data being processed in memory, which a VPN does not protect.",
+      "C": "Geographic restrictions limit access by location. A VPN does not enforce them.",
+      "D": "Data sovereignty is the legal rule that data is subject to the laws of where it is stored."
+    },
     "references": [],
     "source": "bank.pdf#p64",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.963,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0136",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "Which of the following is required for an organization to properly manage its restore process in the event of system failure?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IRP"
+      },
+      {
+        "key": "B",
+        "text": "DRP"
+      },
+      {
+        "key": "C",
+        "text": "RPO"
+      },
+      {
+        "key": "D",
+        "text": "SDLC"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "A disaster recovery plan documents how to restore systems and data after a failure: priorities, procedures, who does what, and where backups are. Without it, restoration is improvised.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An incident response plan handles security incidents such as breaches, not restoring systems after a failure in general.",
+      "C": "The recovery point objective is a target for acceptable data loss. It is one input to the plan, not the plan itself.",
+      "D": "The software development life cycle governs building software, not recovering systems."
+    },
+    "references": [],
+    "source": "bank.pdf#p67",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -813,13 +1058,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A jump server is a server that acts as an intermediary between a user and a target system. A jump server can provide an added layer of security by preventing unauthorized access to internal company resources. A user can connect to the jump server using a secure protocol, such as SSH, and then access the target system from the jump server. This way, the target system is isolated from the external network and only accessible through the jump server. A jump server can also enforce security policies, such as authentication, authorization, logging, and auditing, on the user's connection. A jump server is also known as a bastion host or a jump box.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A jump server is the single hardened gateway users must pass through to reach internal resources. It adds a controlled, logged layer between users and sensitive systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An RDP server provides remote desktop access; on its own it adds exposure rather than a security layer.",
+      "C": "A proxy server mediates web requests, not access to internal resources.",
+      "D": "A hypervisor runs virtual machines. It does not control access to internal resources."
+    },
     "references": [],
     "source": "bank.pdf#p69",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0143",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "A company needs to provide administrative access to internal resources while minimizing the traffic allowed through the security boundary. Which of the following methods is most secure?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Implementing a bastion host"
+      },
+      {
+        "key": "B",
+        "text": "Deploying a perimeter network"
+      },
+      {
+        "key": "C",
+        "text": "Installing a WAF"
+      },
+      {
+        "key": "D",
+        "text": "Utilizing single sign-on"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "A bastion host is one hardened system exposed at the boundary for administrative access. Only traffic to that host is allowed through, and administrators reach internal resources from it, keeping the opening minimal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A perimeter network (screened subnet) hosts public services, but does not by itself minimize administrative traffic crossing the boundary.",
+      "C": "A WAF protects web applications, not administrative access.",
+      "D": "Single sign-on reduces the number of logins but does not limit traffic through the boundary."
+    },
+    "references": [],
+    "source": "bank.pdf#p70",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -851,59 +1142,25 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Intellectual property is a type of data that consists of ideas, inventions, designs, or other creative works that have commercial value and are protected by law. Employees in the research and development business unit are most likely to use intellectual property data in their day-to-day work activities, as they are involved in creating new products or services for the company.\nIntellectual property data needs to be protected from unauthorized use, disclosure, or theft, as it can give the company a competitive advantage in the market. Therefore, these employees receive extensive training to ensure they understand how to best protect this type of data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Research and development produces designs, inventions and trade secrets -- intellectual property. Protecting it is the reason these employees receive extensive training.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encrypted describes the state of data, not the type of data people work with.",
+      "C": "Critical describes importance to operations. R&D's work product is better described as intellectual property.",
+      "D": "Data in transit is a state (moving over a network), not the kind of information R&D handles."
+    },
     "references": [],
     "source": "bank.pdf#p72",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0161",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "A security analyst needs to harden access to a network. One of the requirements is to authenticate users with smart cards. Which of the following should the analyst enable to best meet this requirement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "CHAP"
-      },
-      {
-        "key": "B",
-        "text": "PEAP"
-      },
-      {
-        "key": "C",
-        "text": "MS-CHAPv2"
-      },
-      {
-        "key": "D",
-        "text": "EAP-TLS"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "EAP-TLS is a strong and secure authentication method that involves the use of digital certificates, typically stored on smart cards, for user authentication. It requires the user to present a valid certificate, which is verified by the authentication server, providing a high level of security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p76",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0163",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "An organization is building a single virtual environment that will host customer applications and data that require availability at all times. The data center that is hosting the environment will provide generator power and ISP services. Which of the following is the best solution to support the organization's requirement?",
     "choices": [
@@ -927,12 +1184,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "While NIC teaming, cloud backups, and load balancer appliances are all important for different aspects of an IT infrastructure, they do not directly address the need for continuous power availability, which is the primary concern in this scenario. UPS, in combination with backup generators and ISP services, helps ensure that the data center remains operational even during power-related issues.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The data center already supplies generators and ISP connectivity, but generators take time to start. A UPS bridges that gap with instant battery power, so the environment never loses power -- the missing piece for 'availability at all times'.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NIC teaming adds network redundancy, but connectivity is already covered by the data center's ISP service.",
+      "B": "Cloud backups protect data, but do not keep a single environment running.",
+      "C": "A load balancer spreads traffic across multiple systems, and this is a single environment."
+    },
     "references": [],
     "source": "bank.pdf#p77",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -965,13 +1226,59 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A Cloud Access Security Broker (CASB) would best meet the requirements stated in the scenario. CASBs can provide visibility into which cloud applications are being used across a company, restrict data that is uploaded to the cloud, and prevent unauthorized downloading of company applications for personal use. They act as a gatekeeper, allowing the organization to extend its security policies beyond its own infrastructure. CASBs provide features like visibility, data security, threat protection, and compliance, ensuring secure and only authorized use of cloud services by employees.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A cloud access security broker sits between users and cloud services. It shows which cloud apps are in use, enforces what data can be uploaded and blocks unsanctioned downloads -- every requirement listed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A next-generation firewall inspects traffic at the network edge but lacks a CASB's cloud application and data controls.",
+      "C": "Application whitelisting controls what runs on endpoints, not cloud usage or uploads.",
+      "D": "A next-generation secure web gateway filters web traffic but is not the complete cloud governance solution."
+    },
     "references": [],
     "source": "bank.pdf#p77",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0171",
+    "domain": 3,
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "type": "single",
+    "question": "A business received a small grant to migrate its infrastructure to an off-premises solution. Which of the following should be considered first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Security of cloud providers"
+      },
+      {
+        "key": "B",
+        "text": "Cost of implementation"
+      },
+      {
+        "key": "C",
+        "text": "Ability of engineers"
+      },
+      {
+        "key": "D",
+        "text": "Security of architecture"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Before choosing providers or estimating costs, the business has to design how the new environment will be secured -- identity, network layout, data protection and shared responsibilities. Security of the architecture shapes every later decision. Published answers disagree on this question, and cost is the most common alternative given the small grant.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Provider security matters, but assessing it comes after deciding what the architecture needs.",
+      "B": "Cost matters with a small grant, but a cheap design that is insecure costs far more later.",
+      "C": "Engineering skills matter for delivery, but are considered after the architecture is defined."
+    },
+    "references": [],
+    "source": "bank.pdf#p80",
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1003,89 +1310,17 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Geographic dispersion is the practice of having backup data stored in different locations that are far enough apart to minimize the risk of a single natural disaster affecting both sites. This ensures that the company can recover its regulated data in case of a disaster at the primary site. Platform diversity, hot site, and load balancing are not directly related to the protection of backup data from natural disasters.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Storing backups at sites far enough apart that one natural disaster cannot hit both is geographic dispersion.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Platform diversity uses different technologies to avoid shared flaws, not shared disasters.",
+      "C": "A hot site speeds recovery, but if it is near the primary site the same disaster could affect both.",
+      "D": "Load balancing spreads traffic; it does not protect backup data."
+    },
     "references": [],
     "source": "bank.pdf#p80",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0179",
-    "domain": 3,
-    "objective": "3.3",
-    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
-    "type": "single",
-    "question": "A company must ensure sensitive data at rest is rendered unreadable. Which of the following will the company most likely use?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hashing"
-      },
-      {
-        "key": "B",
-        "text": "Tokenization"
-      },
-      {
-        "key": "C",
-        "text": "Encryption"
-      },
-      {
-        "key": "D",
-        "text": "Segmentation"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "Encryption is a method of transforming data in a way that makes it unreadable without a secret key necessary to decrypt the data back into plaintext. Encryption is one of the most common and effective ways to protect data at rest, as it prevents unauthorized access, modification, or theft of the data. Encryption can be applied to different types of data at rest, such as block storage, object storage, databases, archives, and so on. Hashing, tokenization, and segmentation are not methods of rendering data at rest unreadable, but rather of protecting data in other ways.\nHashing is a one-way function that generates a fixed-length output, called a hash or digest, from an input, such that the input cannot be recovered from the output. Hashing is used to verify the integrity and authenticity of data, but not to encrypt it. Tokenization is a process that replaces sensitive data with non-sensitive substitutes, called tokens, that have no meaning or value on their own. Tokenization is used to reduce the exposure and compliance scope of sensitive data, but not to encrypt it. Segmentation is a technique that divides a network or a system into smaller, isolated units, called segments, that have different levels of access and security. Segmentation is used to limit the attack surface and contain the impact of a breach, but not to encrypt data at rest.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p83",
-    "needsReview": true,
-    "inferenceConfidence": 0.812,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0190",
-    "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
-    "type": "single",
-    "question": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project fulfil?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Privacy"
-      },
-      {
-        "key": "B",
-        "text": "Integrity"
-      },
-      {
-        "key": "C",
-        "text": "Confidentiality"
-      },
-      {
-        "key": "D",
-        "text": "Availability"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Deploying a load balancer in the company's cloud environment primarily fulfills the fundamental security requirement of availability. A load balancer distributes incoming network traffic across multiple servers, ensuring that no single server becomes overwhelmed and that the service remains available even if some servers fail.\nAvailability: Ensures that services and resources are accessible when needed, which is directly supported by load balancing.\nPrivacy: Protects personal and sensitive information from unauthorized access but is not directly related to load balancing.\nIntegrity: Ensures that data is accurate and has not been tampered with, but load balancing is not primarily focused on data integrity.\nConfidentiality: Ensures that information is accessible only to authorized individuals, which is not the primary concern of load balancing.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p87",
-    "needsReview": true,
-    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1117,14 +1352,18 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Port security on the switch controls which devices can use a physical port, for example by allowing only known MAC addresses or requiring 802.1X authentication, so a visitor's laptop gets no access.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A web application firewall protects web applications, not physical network ports.",
+      "C": "TLS encrypts sessions; it does not control who can plug into the network.",
+      "D": "A VPN secures remote connections; it does not stop someone plugging into an open jack."
+    },
     "references": [],
     "source": "bank.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.871,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1155,12 +1394,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization allows multiple virtual machines (VMs) to run on a single physical server, reducing the need for multiple physical servers. This approach consolidates workloads, optimizes hardware usage, and lowers operational costs by enabling multiple isolated environments on fewer physical devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtualization runs many virtual machines on one physical host, consolidating workloads onto fewer servers.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Serverless moves applications to a provider, but it is not how an organization consolidates its own physical servers.",
+      "B": "Segmentation divides networks; it does not reduce server count.",
+      "D": "Microservices break applications into small services, which often increases the number of deployed components."
+    },
     "references": [],
     "source": "bank.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1193,12 +1436,16 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An NGFW (Next-Generation Firewall) utilizing application inspection could have identified and blocked the unusual use of HTTP over port 53. Application inspection allows NGFWs to analyze traffic at the application layer, identifying and blocking suspicious or non-standard protocol usage, such as HTTP traffic on DNS port 53.\nNGFW utilizing application inspection: Inspects traffic at the application layer and can block non- standard protocol usage, such as HTTP over port 53.\nWAF utilizing SSL decryption: Focuses on protecting web applications and decrypting SSL traffic but may not detect the use of HTTP over port 53.\nUTM utilizing a threat feed: Provides comprehensive security but may not focus specifically on application layer inspection.\nSD-WAN utilizing IPSec: Enhances secure WAN connections but is not primarily designed to inspect and block specific application traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port 53 is DNS, but the recruiter pushed HTTP through it. A next-generation firewall with application inspection identifies the actual protocol, regardless of port, and blocks HTTP pretending to be DNS.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A WAF protects web applications from inbound attacks; this was outbound HTTP on the DNS port.",
+      "C": "A threat feed recognizes known bad destinations; an ordinary web server would not be listed.",
+      "D": "SD-WAN with IPSec encrypts traffic between sites; it does not inspect protocols."
+    },
     "references": [],
     "source": "bank.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1231,14 +1478,60 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "An IPSec site-to-site VPN connects the two internal networks and encrypts every packet that passes between them, whatever the application.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "EAP is an authentication framework, not a network-to-network encryption method.",
+      "C": "SD-WAN manages routing between sites but does not by itself guarantee encryption of all traffic.",
+      "D": "TLS encrypts individual application sessions; not every protocol used in the migration would necessarily use it."
+    },
     "references": [],
     "source": "bank.pdf#p92",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0212",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "An organization would like to calculate the time needed to resolve a hardware issue with a server.\nWhich of the following risk management processes describes this example?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Recovery point objective"
+      },
+      {
+        "key": "B",
+        "text": "Mean time between failures"
+      },
+      {
+        "key": "C",
+        "text": "Recovery time objective"
+      },
+      {
+        "key": "D",
+        "text": "Mean time to repair"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Mean time to repair is the average time needed to fix a failed component and bring it back into service -- the time to resolve a hardware issue.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The recovery point objective is the maximum acceptable data loss.",
+      "B": "Mean time between failures measures how long hardware runs between failures, not how long repairs take.",
+      "C": "The recovery time objective is a target for maximum downtime, not a measure of repair time."
+    },
+    "references": [],
+    "source": "bank.pdf#p94",
+    "needsReview": false,
+    "inferenceConfidence": 0.943,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1311,12 +1604,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The category of data that is most impacted when it is lost is \"Critical.\" Critical data is essential to the organization's operations and often includes sensitive information such as financial records, proprietary business information, and vital operational data. The loss of critical data can severely disrupt business operations and have significant financial, legal, and reputational consequences.\nConfidential: Refers to data that must be protected from unauthorized access to maintain privacy and security.\nPublic: Refers to data that is intended for public disclosure and whose loss does not have severe consequences.\nPrivate: Typically refers to personal data that needs to be protected to ensure privacy.\nCritical: Refers to data that is essential for the operation and survival of the organization, and its loss can have devastating impacts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Critical data is what the organization needs in order to operate. By definition, losing it has the greatest impact.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Confidential data is harmful if disclosed, which is a different concern from the impact of losing it.",
+      "B": "Public data is already freely available and has little impact if lost.",
+      "C": "Private data concerns individuals' personal information and disclosure, not operational impact."
+    },
     "references": [],
     "source": "bank.pdf#p95",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1408,8 +1705,8 @@ export const domain3Questions = [
   {
     "id": "q0223",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "Which of the following is classified as high availability in a cloud environment?",
     "choices": [
@@ -1433,12 +1730,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "In a cloud environment, high availability is typically ensured through the use of a load balancer. A load balancer distributes network or application traffic across multiple servers, ensuring that no single server becomes overwhelmed and that services remain available even if one or more servers fail. This setup enhances the reliability and availability of applications.\nLoad balancer: Ensures high availability by distributing traffic across multiple servers or instances, preventing overload and ensuring continuous availability.\nAccess broker: Typically refers to a service that facilitates secure access to resources, not directly related to high availability.\nCloud HSM (Hardware Security Module): Provides secure key management in the cloud but does not specifically ensure high availability.\nWAF (Web Application Firewall): Protects web applications by filtering and monitoring HTTP traffic but is not primarily focused on ensuring high availability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A load balancer spreads requests across multiple instances and routes around failed ones, so the service stays up. It is the high-availability component.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A cloud access broker governs cloud usage and data policy, not availability.",
+      "B": "A cloud HSM protects cryptographic keys.",
+      "C": "A WAF protects web applications from attacks."
+    },
     "references": [],
     "source": "bank.pdf#p99",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1471,13 +1772,101 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To minimize the impact of the increasing number of various traffic types during attacks, a security engineer is most likely to configure behavioral-based rules on a Next-Generation Firewall (NGFW). Behavioral-based rules analyze the behavior of traffic patterns and can detect and block unusual or malicious activity that deviates from normal behavior.\nBehavioral-based: Detects anomalies by comparing current traffic behavior to known good behavior, making it effective against various traffic types during attacks.\nSignature-based: Relies on known patterns of known threats, which might not be as effective against new or varied attack types.\nURL-based: Controls access to websites based on URL categories but is not specifically aimed at handling diverse traffic types during attacks.\nAgent-based: Typically involves software agents on endpoints to monitor and enforce policies, not directly related to NGFW rules.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Signatures only catch attacks already known. With many varied traffic types appearing during attacks, behaviour-based rules that compare traffic with a normal baseline catch anomalies no signature describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Signature-based rules only match known patterns, missing new or varied attack traffic.",
+      "C": "URL-based rules filter web destinations, not attack traffic types in general.",
+      "D": "Agent-based describes software installed on hosts, not an NGFW rule type."
+    },
     "references": [],
     "source": "bank.pdf#p105",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0238",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "A company that is located in an area prone to hurricanes is developing a disaster recovery plan and looking at site considerations that allow the company to immediately continue operations.\nWhich of the following is the best type of site for this company?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cold"
+      },
+      {
+        "key": "B",
+        "text": "Tertiary"
+      },
+      {
+        "key": "C",
+        "text": "Warm"
+      },
+      {
+        "key": "D",
+        "text": "Hot"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "To continue operations immediately after a hurricane, the company needs a hot site: fully equipped and running with current data, ready to take over at once. It should also be far enough away not to share the same storm.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A cold site is only space and power; bringing it up takes weeks.",
+      "B": "'Tertiary' describes a third site in a sequence, not its readiness.",
+      "C": "A warm site has some equipment but needs hours or days to be operational."
+    },
+    "references": [],
+    "source": "bank.pdf#p106",
+    "needsReview": false,
+    "inferenceConfidence": 0.6,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0240",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "A company tested and validated the effectiveness of network security appliances within the corporate network. The IDS detected a high rate of SQL injection attacks against the company's servers, and the company's perimeter firewall is at capacity. Which of the following would be the best action to maintain security and reduce the traffic to the perimeter firewall?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Set the appliance to IPS mode and place it in front of the company firewall."
+      },
+      {
+        "key": "B",
+        "text": "Convert the firewall to a WAF and use IPSec tunnels to increase throughput."
+      },
+      {
+        "key": "C",
+        "text": "Set the firewall to fail open if it is overloaded with traffic and send alerts to the SIEM."
+      },
+      {
+        "key": "D",
+        "text": "Configure the firewall to perform deep packet inspection and monitor TLS traffic."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The appliance is already detecting the SQL injection. Switching it to IPS mode and placing it in front of the firewall lets it drop that malicious traffic before it reaches the firewall, reducing the firewall's load while improving protection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Converting the firewall to a WAF and adding IPSec tunnels would not reduce its load; tunnels add processing.",
+      "C": "Failing open when overloaded removes protection exactly when the attack is heaviest.",
+      "D": "Deep packet inspection and TLS monitoring add work to a firewall that is already at capacity."
+    },
+    "references": [],
+    "source": "bank.pdf#p106",
+    "needsReview": false,
+    "inferenceConfidence": 0.267,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1566,6 +1955,48 @@ export const domain3Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0250",
+    "domain": 3,
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "type": "single",
+    "question": "A security team created a document that details the order in which critical systems should be brought back online after a major outage. Which of the following documents did the team create?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Communication plan"
+      },
+      {
+        "key": "B",
+        "text": "Incident response plan"
+      },
+      {
+        "key": "C",
+        "text": "Data retention policy"
+      },
+      {
+        "key": "D",
+        "text": "Disaster recovery plan"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "The order in which critical systems are restored after a major outage is set out in the disaster recovery plan, based on business priorities.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A communication plan covers who is told what, not restoration order.",
+      "B": "An incident response plan handles security incidents rather than restoring systems after an outage.",
+      "C": "A data retention policy covers how long data is kept."
+    },
+    "references": [],
+    "source": "bank.pdf#p111",
+    "needsReview": false,
+    "inferenceConfidence": 0.511,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0251",
     "domain": 3,
     "objective": "3.1",
@@ -1597,12 +2028,17 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "Software as a Service (SaaS) represents an application that is hosted in the cloud and accessible via the internet from anywhere, with no requirement for on-premises infrastructure. SaaS applications are managed by a third-party provider, allowing users to access them through a web browser, making them highly scalable and flexible for remote access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Software as a service is a complete application run by the provider and used through a browser from anywhere, with nothing to install or host on premises.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "PaaS provides a platform for building applications, not a finished application.",
+      "B": "A hybrid cloud mixes on-premises and cloud infrastructure, so it has an on-premises component.",
+      "C": "A private cloud is dedicated infrastructure, often on premises.",
+      "D": "IaaS provides infrastructure the customer still has to build and manage applications on."
+    },
     "references": [],
     "source": "bank.pdf#p111",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1610,8 +2046,8 @@ export const domain3Questions = [
   {
     "id": "q0252",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A company is utilizing an offshore team to help support the finance department. The company wants to keep the data secure by keeping it on a company device but does not want to provide equipment to the offshore team. Which of the following should the company implement to meet this requirement?",
     "choices": [
@@ -1635,51 +2071,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Virtual Desktop Infrastructure (VDI) allows a company to host desktop environments on a centralized server. Offshore teams can access these virtual desktops remotely, ensuring that sensitive data stays within the company's infrastructure without the need to provide physical devices to the team. This solution is ideal for maintaining data security while enabling remote work, as all data processing occurs on the company's secure servers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Virtual desktop infrastructure runs the desktops on company servers; the offshore team only views and controls them remotely, from their own equipment. The data never leaves company systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "MDM manages devices -- but the team would be using their own devices, which the company does not want to manage.",
+      "C": "A VPN would give their own machines network access, so data could land on those devices.",
+      "D": "A virtual private cloud is an isolated section of a cloud provider's network, not a way to give users desktops."
+    },
     "references": [],
     "source": "bank.pdf#p111",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0254",
+    "id": "q0258",
     "domain": 3,
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "An administrator is Investigating an incident and discovers several users' computers were Infected with malware after viewing files mat were shared with them. The administrator discovers no degraded performance in the infected machines and an examination of the log files does not show excessive failed logins. Which of the following attacks Is most likely the cause of the malware?",
+    "question": "An organization implemented cloud-managed IP cameras to monitor building entry points and sensitive areas. The service provider enables direct TCP/IP connection to stream live video footage from each camera. The organization wants to ensure this stream is encrypted and authenticated. Which of the following protocols should be implemented to best meet this objective?",
     "choices": [
       {
         "key": "A",
-        "text": "Malicious flash drive"
+        "text": "SSH"
       },
       {
         "key": "B",
-        "text": "Remote access Trojan"
+        "text": "SRTP"
       },
       {
         "key": "C",
-        "text": "Brute-forced password"
+        "text": "S/MIME"
       },
       {
         "key": "D",
-        "text": "Cryptojacking"
+        "text": "PPTP"
       }
     ],
     "correct": [
-      "D"
+      "B"
     ],
-    "explanation": "Cryptojacking is the likely cause in this scenario. It involves malware that hijacks the resources of infected computers to mine cryptocurrency, usually without the user's knowledge. This type of attack doesn't typically degrade performance significantly or result in obvious system failures, which matches the situation described, where the machines showed no signs of degraded performance or excessive failed logins.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Secure Real-time Transport Protocol encrypts and authenticates live audio and video streams, which is exactly what the camera footage needs.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SSH secures remote administration sessions, not video streams.",
+      "C": "S/MIME secures email messages.",
+      "D": "PPTP is an outdated VPN protocol with broken security."
+    },
     "references": [],
-    "source": "bank.pdf#p112",
-    "needsReview": true,
-    "inferenceConfidence": 0.364,
+    "source": "bank.pdf#p114",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1689,7 +2133,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A systems administrate wants to implement a backup solution. the solution needs to allow recovery of the entire system, including the operating system, in case of a disaster. Which of the following backup types should the administrator consider?",
+    "question": "A systems administrator wants to implement a backup solution. The solution needs to allow recovery of the entire system, including the operating system, in case of a disaster. Which of the following backup types should the administrator consider?",
     "choices": [
       {
         "key": "A",
@@ -1711,13 +2155,59 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An image backup, also known as a full system backup, captures the entire contents of a system, including the operating system, applications, settings, and all data. This type of backup allows for a complete recovery of the system in case of a disaster, as it includes everything needed to restore the system to its previous state. This makes it the ideal choice for a systems administrator who needs to ensure the ability to recover the entire system, including the OS.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An image backup captures the entire disk -- operating system, applications, settings and data -- so a whole system can be restored in one step after a disaster.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Incremental backups capture changed files since the last backup, not a restorable whole system image.",
+      "B": "A storage area network is storage infrastructure, not a backup type.",
+      "C": "Differential backups capture changes since the last full backup, typically of files rather than the whole system."
+    },
     "references": [],
     "source": "bank.pdf#p116",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0267",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "The Chief Information Security Officer wants to put security measures in place to protect PII. The organization needs to use its existing labeling and classification system to accomplish this goal.\nWhich of the following would most likely be configured to meet the requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Tokenization"
+      },
+      {
+        "key": "B",
+        "text": "S/MIME"
+      },
+      {
+        "key": "C",
+        "text": "DLP"
+      },
+      {
+        "key": "D",
+        "text": "MFA"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "DLP policies can use the organization's existing labels and classifications to find PII and control where it goes. It works directly with the classification system the CISO wants to use.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Tokenization replaces specific values with tokens, but does not use classification labels to protect data.",
+      "B": "S/MIME encrypts and signs email, independently of data labels.",
+      "D": "MFA strengthens authentication and does not interact with data classification."
+    },
+    "references": [],
+    "source": "bank.pdf#p117",
+    "needsReview": false,
+    "inferenceConfidence": 0.2,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1727,7 +2217,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The Cruel Information Security Officer (CISO) asks a security analyst to install an OS update to a production VM that has a 99% uptime SLA. The CISO tells me analyst the installation must be done as quickly as possible. Which of the following courses of action should the security analyst take first?",
+    "question": "The Chief Information Security Officer (CISO) asks a security analyst to install an OS update to a production VM that has a 99% uptime SLA. The CISO tells the analyst the installation must be done as quickly as possible. Which of the following courses of action should the security analyst take first?",
     "choices": [
       {
         "key": "A",
@@ -1735,7 +2225,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Install the patch Immediately."
+        "text": "Install the patch immediately."
       },
       {
         "key": "C",
@@ -1749,12 +2239,16 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Before applying any updates or patches to a production VM, especially one with a 99% uptime SLA, it is crucial to first take a snapshot of the VM. This snapshot serves as a backup that can be quickly restored in case the update causes any issues, ensuring that the system can be returned to its previous state without violating the SLA. This step mitigates risk and is a standard best practice in change management for critical systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Before touching a VM with strict uptime requirements, take a snapshot. If the update causes problems, the VM can be rolled back in moments, protecting the SLA while still moving quickly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A health check is useful, but it gives no way back if the update fails.",
+      "B": "Installing immediately with no rollback point risks a long outage if something goes wrong.",
+      "C": "Confirming backups run is good, but restoring from backup is far slower than reverting a snapshot."
+    },
     "references": [],
     "source": "bank.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1795,13 +2289,197 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "Software as a Service (SaaS) is the cloud model that best meets the goal of outsourcing the management, including patching, of firmware, operating systems, and applications to the cloud vendor. In a SaaS environment, the cloud provider is responsible for maintaining and updating the entire software stack, allowing the organization to focus on using the software rather than managing its infrastructure.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In SaaS the provider runs everything -- hardware, firmware, operating systems and the application -- so patching all of it is the vendor's job.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A community cloud is a deployment model shared by organizations; it does not by itself make the vendor patch applications.",
+      "B": "In PaaS the customer still manages and patches their own applications.",
+      "C": "Containerization is a packaging technology; someone still has to patch the images.",
+      "D": "A private cloud is dedicated infrastructure the organization often manages itself.",
+      "F": "In IaaS the customer patches operating systems and applications."
+    },
     "references": [],
     "source": "bank.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0276",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "Which of the following is the most effective way to protect an application server running software that is no longer supported from network threats?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Air gap"
+      },
+      {
+        "key": "B",
+        "text": "Barricade"
+      },
+      {
+        "key": "C",
+        "text": "Port security"
+      },
+      {
+        "key": "D",
+        "text": "Screen subnet"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "An unsupported server still has to be reachable to do its job. Placing it in a screened subnet (DMZ), between firewalls, tightly limits what can reach it and contains a compromise. Published answers disagree; some pick an air gap, which would stop the server serving anyone.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An air gap is the most isolating, but an application server that must serve users cannot be completely disconnected.",
+      "B": "A barricade is a physical barrier, irrelevant to network threats.",
+      "C": "Port security limits which devices can connect to switch ports; it does not protect a server from network attacks."
+    },
+    "references": [],
+    "source": "bank.pdf#p120",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0278",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "Callers speaking a foreign language are using company phone numbers to make unsolicited phone calls to a partner organization. A security analyst validates through phone system logs that the calls are occurring and the numbers are not being spoofed. Which of the following is the most likely explanation?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "The executive team is traveling internationally and trying to avoid roaming charges"
+      },
+      {
+        "key": "B",
+        "text": "The company's SIP server security settings are weak."
+      },
+      {
+        "key": "C",
+        "text": "Disgruntled employees are making calls to the partner organization."
+      },
+      {
+        "key": "D",
+        "text": "The service provider has assigned multiple companies the same numbers"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The calls genuinely come from the company's own phone system, not spoofed numbers. Attackers who take over a poorly secured SIP server can place calls through it, which is common toll fraud.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Traveling executives would not be making unsolicited calls in a foreign language to a partner.",
+      "C": "Disgruntled employees are possible but far less likely than external abuse of a weak SIP server.",
+      "D": "Carriers do not assign the same numbers to multiple companies."
+    },
+    "references": [],
+    "source": "bank.pdf#p121",
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0288",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "A security engineer is working to address the growing risks that shadow IT services are introducing to the organization. The organization has taken a cloud-first approach and does not have an on- premises IT infrastructure. Which of the following would best secure the organization?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Upgrading to a next-generation firewall"
+      },
+      {
+        "key": "B",
+        "text": "Deploying an appropriate in-line CASB solution"
+      },
+      {
+        "key": "C",
+        "text": "Conducting user training on software policies"
+      },
+      {
+        "key": "D",
+        "text": "Configuring double key encryption in SaaS platforms"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "With no on-premises infrastructure, a traditional network firewall has nothing to protect. An inline CASB sits between users and cloud services, discovering unsanctioned apps and enforcing policy on them -- the direct answer to shadow IT in a cloud-first organization.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A next-generation firewall protects a network perimeter the organization does not have.",
+      "C": "Training helps, but does not give visibility into or control over shadow IT services.",
+      "D": "Double key encryption protects data in sanctioned SaaS platforms, not unsanctioned services."
+    },
+    "references": [],
+    "source": "bank.pdf#p124",
+    "needsReview": false,
+    "inferenceConfidence": 0.357,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0294",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "multi",
+    "question": "A vendor needs to remotely and securely transfer files from one server to another using the command line. Which of the following protocols should be Implemented to allow for this type of access? (Select two).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "SSH"
+      },
+      {
+        "key": "B",
+        "text": "SNMP"
+      },
+      {
+        "key": "C",
+        "text": "RDP"
+      },
+      {
+        "key": "D",
+        "text": "S/MIME"
+      },
+      {
+        "key": "E",
+        "text": "SMTP"
+      },
+      {
+        "key": "F",
+        "text": "SFTP"
+      }
+    ],
+    "correct": [
+      "A",
+      "F"
+    ],
+    "explanation": "SFTP transfers files over an encrypted SSH connection, and SSH provides the secure command-line session. Together they cover secure, remote, command-line file transfer.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SNMP manages and monitors network devices.",
+      "C": "RDP is a graphical remote desktop, not command-line file transfer.",
+      "D": "S/MIME secures email.",
+      "E": "SMTP sends email and is not a file transfer protocol."
+    },
+    "references": [],
+    "source": "bank.pdf#p127",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1811,7 +2489,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "An external vendor recently visited a company's headquarters tor a presentation. Following the visit a member of the hosting team found a file that the external vendor left behind on a server.\nThe file contained detailed architecture information and code snippets. Which of the following data types best describes this file?",
+    "question": "An external vendor recently visited a company's headquarters for a presentation. Following the visit a member of the hosting team found a file that the external vendor left behind on a server.\nThe file contained detailed architecture information and code snippets. Which of the following data types best describes this file?",
     "choices": [
       {
         "key": "A",
@@ -1833,12 +2511,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The file left by the external vendor, containing detailed architecture information and code snippets, is best described as proprietary data. Proprietary data is information that is owned by a company and is essential to its competitive advantage. It includes sensitive business information such as trade secrets, intellectual property, and confidential data that should be protected from unauthorized access.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Detailed architecture information and code snippets belong to the vendor, have business value and are not meant to be shared -- proprietary data.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Government data belongs to or is classified by government agencies.",
+      "B": "Public data can be freely shared; this clearly cannot.",
+      "D": "Critical describes data essential to operations; proprietary best describes the vendor's internal architecture and code."
+    },
     "references": [],
     "source": "bank.pdf#p128",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1849,7 +2531,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The Chief Information Security Officer of an organization needs to ensure recovery from ransomware would likely occur within the organization's agreed-upon RPOs end RTOs. Which of the following backup scenarios would best ensure recovery?",
+    "question": "The Chief Information Security Officer of an organization needs to ensure recovery from ransomware would likely occur within the organization's agreed-upon RPOs and RTOs. Which of the following backup scenarios would best ensure recovery?",
     "choices": [
       {
         "key": "A",
@@ -1857,11 +2539,11 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Dally full backups stored on premises in magnetic offline media"
+        "text": "Daily full backups stored on premises in magnetic offline media"
       },
       {
         "key": "C",
-        "text": "Daly differential backups maintained by a third-party cloud provider"
+        "text": "Daily differential backups maintained by a third-party cloud provider"
       },
       {
         "key": "D",
@@ -1869,25 +2551,29 @@ export const domain3Questions = [
       }
     ],
     "correct": [
-      "D"
+      "B"
     ],
-    "explanation": "A backup strategy that combines weekly full backups with daily incremental backups stored on a NAS (Network Attached Storage) drive is likely to meet an organization's Recovery Point Objectives (RPOs) and Recovery Time Objectives (RTOs). This approach ensures that recent data is regularly backed up and that recovery can be done efficiently, without significant data loss or lengthy downtime.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Ransomware encrypts whatever it can reach on the network, including backup targets such as NAS drives and SANs. Offline media is out of its reach, and daily full backups keep data loss to a day while allowing restoration from one backup set. Published answers disagree here; the key in the source picks the NAS option.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hourly backups on a network-attached SAN are exposed to the same ransomware that hit production.",
+      "C": "Cloud backups are off-site, but differentials must be combined with a full backup, and online copies can still be targeted.",
+      "D": "A NAS drive on the network is a common ransomware target, and restoring a week of incrementals is slow."
+    },
     "references": [],
     "source": "bank.pdf#p130",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.25,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0304",
     "domain": 3,
-    "objective": "3.1",
-    "objectiveTitle": "Compare and contrast security implications of different architecture models",
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company recently decided to allow employees to work remotely. The company wants to protect us data without using a VPN. Which of the following technologies should the company Implement?",
+    "question": "A company recently decided to allow employees to work remotely. The company wants to protect its data without using a VPN. Which of the following technologies should the company implement?",
     "choices": [
       {
         "key": "A",
@@ -1899,23 +2585,69 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Deep packet Inspection"
+        "text": "Deep packet inspection"
       },
       {
         "key": "D",
-        "text": "Next-gene ration firewall"
+        "text": "Next-generation firewall"
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "A Secure Web Gateway (SWG) protects users by filtering unwanted software/malware from user- initiated web traffic and enforcing corporate and regulatory policy compliance. This technology allows the company to secure remote users' data and web traffic without relying on a VPN, making it ideal for organizations supporting remote work.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A secure web gateway inspects and filters remote users' web traffic in the cloud, enforcing security policy wherever they work without routing traffic through a VPN.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A VPC endpoint provides private connectivity to cloud services, not protection for users' web traffic.",
+      "C": "Deep packet inspection is a technique used by other devices, not a remote-work solution by itself.",
+      "D": "A next-generation firewall protects a network perimeter that remote users are not behind."
+    },
     "references": [],
     "source": "bank.pdf#p130",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
+    "needsReview": false,
+    "inferenceConfidence": 0.556,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0308",
+    "domain": 3,
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "type": "single",
+    "question": "A systems administrator is redesigning how devices will perform network authentication. The following requirements need to be met:\n- An existing internal certificate must be used.\n- Wired and wireless networks must be supported\n- Any unapproved device should be isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources Which of the following would best meet the requirements?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "802.1X"
+      },
+      {
+        "key": "B",
+        "text": "EAP"
+      },
+      {
+        "key": "C",
+        "text": "RADIUS"
+      },
+      {
+        "key": "D",
+        "text": "WPA2"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "802.1X port-based network access control works on wired and wireless networks, can use the existing internal certificates (via EAP-TLS), and with NAC can quarantine unapproved devices and require updates before granting access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "EAP is the authentication framework 802.1X uses, but on its own it does not provide port-based access control and quarantine.",
+      "C": "RADIUS is the authentication server behind 802.1X, not the complete solution.",
+      "D": "WPA2 covers wireless only."
+    },
+    "references": [],
+    "source": "bank.pdf#p132",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1989,51 +2721,59 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The IT manager is creating a Business Continuity Plan (BCP). A BCP describes how an organization will continue to operate during and after a disaster or global incident. It ensures that critical business functions remain operational despite adverse conditions, with a focus on minimizing downtime and maintaining essential services.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A plan for how the organization keeps operating during a major incident is a business continuity plan. Disaster recovery covers restoring IT systems, which is part of the wider continuity plan.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Physical security protects facilities, not continued operations.",
+      "C": "Change management governs planned changes.",
+      "D": "Disaster recovery focuses on restoring IT systems after a disaster; the question is about keeping the whole organization operating."
+    },
     "references": [],
     "source": "bank.pdf#p135",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0320",
+    "id": "q0329",
     "domain": 3,
-    "objective": "3.4",
-    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
+    "objective": "3.2",
+    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Which of the following describes an executive team that is meeting in a board room and testing the company's incident response plan?",
+    "question": "A security engineer is installing an IPS to block signature-based attacks in the environment.\nWhich of the following modes will best accomplish this task?",
     "choices": [
       {
         "key": "A",
-        "text": "Continuity of operations"
+        "text": "Monitor"
       },
       {
         "key": "B",
-        "text": "Capacity planning"
+        "text": "Sensor"
       },
       {
         "key": "C",
-        "text": "Tabletop exercise"
+        "text": "Audit"
       },
       {
         "key": "D",
-        "text": "Parallel processing"
+        "text": "Active"
       }
     ],
     "correct": [
-      "C"
+      "D"
     ],
-    "explanation": "A tabletop exercise involves the executive team or key stakeholders discussing and testing the company's incident response plan in a simulated environment. These exercises are low-stress, discussion-based, and help to validate the plan's effectiveness by walking through different scenarios without disrupting actual operations. It is an essential part of testing business continuity and incident response strategies.\nContinuity of operations refers to the ability of an organization to continue functioning during and after a disaster but doesn't specifically involve simulations like tabletop exercises.\nCapacity planning is related to ensuring the infrastructure can handle growth, not incident response testing.\nParallel processing refers to running multiple processes simultaneously, which is unrelated to testing an incident response plan.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "To block attacks, an IPS must sit inline in active mode, dropping malicious traffic as it passes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Monitor mode only watches and alerts, like an IDS.",
+      "B": "Sensor mode passively collects traffic without blocking.",
+      "C": "Audit mode logs activity without blocking."
+    },
     "references": [],
-    "source": "bank.pdf#p136",
-    "needsReview": true,
-    "inferenceConfidence": 0.467,
+    "source": "bank.pdf#p140",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2065,12 +2805,16 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Port security is the best solution to prevent unauthorized devices, like a visitor's laptop, from connecting to the company's network. Port security can limit the number of devices that can connect to a network switch port and block unauthorized MAC addresses, effectively stopping unauthorized access attempts.\nWeb application firewall (WAF) protects against web-based attacks, not unauthorized network access.\nTransport Layer Security (TLS) ensures encrypted communication but does not manage physical network access.\nVirtual Private Network (VPN) secures remote connections but does not control access through physical network ports.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port security on the switch controls which devices can use a physical port, for example by allowing only known MAC addresses or requiring 802.1X, so a visitor's laptop gets no access.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A web application firewall protects web applications, not physical network ports.",
+      "C": "TLS encrypts sessions; it does not control who can plug into the network.",
+      "D": "A VPN secures remote connections; it does not stop someone using an open jack."
+    },
     "references": [],
     "source": "bank.pdf#p141",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.871,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2078,14 +2822,14 @@ export const domain3Questions = [
   {
     "id": "q0337",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.1",
+    "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
     "question": "A security team is setting up a new environment for hosting the organization's on-premises software application as a cloud-based service. Which of the following should the team ensure is in place in order for the organization to follow security best practices?",
     "choices": [
       {
         "key": "A",
-        "text": "Visualization and isolation of resources"
+        "text": "Virtualization and isolation of resources"
       },
       {
         "key": "B",
@@ -2103,13 +2847,17 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When hosting an on-premises software application in a cloud-based service, ensuring visualization and isolation of resources is crucial for maintaining security best practices. This involves using virtualization techniques to create isolated environments (e.g., virtual machines or containers) for different applications and services, reducing the risk of cross-tenant attacks or resource leakage.\nNetwork segmentation is important but pertains more to securing network traffic rather than isolating computing resources.\nData encryption is also essential but doesn't specifically address resource isolation in a cloud environment.\nStrong authentication policies are critical for access control but do not address the need for isolating resources within the cloud environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Offering the application as a cloud service means many customers share infrastructure. Virtualization with strong isolation between tenants' resources keeps one customer's environment from reaching another's -- the foundational best practice for multitenant hosting.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Network segmentation helps, but tenant isolation at the resource level is more fundamental for a hosted service.",
+      "C": "Encryption protects data, but does not keep tenants' resources separate.",
+      "D": "Strong authentication protects access, but not isolation between customers sharing infrastructure."
+    },
     "references": [],
     "source": "bank.pdf#p143",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2141,12 +2889,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A warm site is the best option for a business that does not require immediate failover but wants to reduce the workload required for recovery. A warm site has some pre-installed equipment and data, allowing for quicker recovery than a cold site, but it still requires some setup before becoming fully operational.\nHot sites provide immediate failover but are more expensive and require constant maintenance.\nCold sites require significant time and effort to get up and running after an outage.\nGeographically dispersed sites refer to a specific location strategy rather than the readiness of the recovery site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A warm site has equipment and connectivity ready, so recovery takes less work than a cold site, but it does not provide the immediate failover of a hot site, and costs less.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hot site gives immediate failover, which the business does not need and would pay for.",
+      "B": "A cold site is only space and power, requiring the most recovery work.",
+      "D": "Geographic dispersion describes where sites are, not how ready they are."
+    },
     "references": [],
     "source": "bank.pdf#p144",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2221,13 +2973,59 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "To mitigate the risk of sensitive data being exfiltrated from the environment, the IT manager should implement a Data Loss Prevention (DLP) solution. DLP monitors and controls the movement of sensitive data, ensuring that unauthorized transfers are blocked and potential data breaches are prevented.\nXDR (Extended Detection and Response) is useful for threat detection across multiple environments but doesn't specifically address data exfiltration.\nSPF (Sender Policy Framework) helps prevent email spoofing, not data exfiltration.\nDMARC (Domain-based Message Authentication, Reporting & Conformance) also addresses email security and spoofing, not data exfiltration.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Now that sensitive data is classified, data loss prevention can recognize it and block it from leaving by email, web upload or removable media.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "XDR detects and responds to threats across endpoints and networks, but is not built around stopping classified data leaving.",
+      "B": "SPF lets receiving mail servers verify which servers may send a domain's email.",
+      "D": "DMARC tells receiving servers how to handle mail that fails authentication -- email spoofing protection, not exfiltration control."
+    },
     "references": [],
     "source": "bank.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.692,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0354",
+    "domain": 3,
+    "objective": "3.3",
+    "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
+    "type": "single",
+    "question": "Which of the following security measures is required when using a cloud-based platform for IoT management?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Encrypted connection"
+      },
+      {
+        "key": "B",
+        "text": "Federated identity"
+      },
+      {
+        "key": "C",
+        "text": "Firewall"
+      },
+      {
+        "key": "D",
+        "text": "Single sign-on"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "IoT devices talk to a cloud management platform across the internet. Encrypting those connections protects commands and data in transit and is a baseline requirement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Federated identity is useful for user logins, but not required for device communication.",
+      "C": "A firewall is good practice, but does not protect data travelling over the internet to the cloud.",
+      "D": "Single sign-on simplifies user logins; devices do not use it."
+    },
+    "references": [],
+    "source": "bank.pdf#p150",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3030,12 +3828,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Privacy data includes information such as Personally Identifiable Information (PII), which relates to employees' or customers' personal data. Organizations often maintain policies and standards specifically addressing how such sensitive information should be handled.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An employee's personal information is covered by the organization's privacy policies and standards, which govern how personal data is stored and protected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Legal data refers to legal records and matters, not employees' personal information.",
+      "B": "Financial data covers financial records.",
+      "D": "Intellectual property is the organization's creative and business assets."
+    },
     "references": [],
     "source": "bank.pdf#p188",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4699,14 +5501,18 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "An IPSec VPN terminates on the existing public address, giving remote users an encrypted tunnel into the internal network without re-architecting it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "PAT shares one public address among internal hosts for outbound traffic; it does not provide secure remote access.",
+      "C": "A perimeter network (DMZ) would mean redesigning the network.",
+      "D": "A reverse proxy publishes specific web applications, not general access to the internal network."
+    },
     "references": [],
     "source": "bank.pdf#p255",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -4863,21 +5669,25 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A hot site is fully equipped and running with current data, so operations can resume almost immediately -- the fastest option.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A cold site provides space and power only, taking the longest to bring online.",
+      "C": "Geographic dispersion is about location, not how quickly operations resume.",
+      "D": "A warm site needs time to finish setup and load data."
+    },
     "references": [],
     "source": "bank.pdf#p258",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.955,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0714",
     "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
+    "objective": "3.4",
+    "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
     "question": "A company has a website in a server cluster. One server is experiencing very high usage, while others are nearly unused. Which of the following should the company configure to help distribute traffic quickly?",
     "choices": [
@@ -4901,12 +5711,16 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A load balancer distributes incoming traffic evenly across multiple servers to prevent any single server from becoming overloaded. This ensures high availability, scalability, and optimal performance of the company's website.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A load balancer spreads incoming requests across all servers in the cluster, so no single server is overwhelmed while others sit idle.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Server multiprocessing uses multiple CPUs within one server, not traffic distribution.",
+      "B": "A warm site is a disaster recovery location.",
+      "D": "A proxy server forwards requests but is not designed to balance load across a cluster."
+    },
     "references": [],
     "source": "bank.pdf#p260",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5286,44 +6100,6 @@ export const domain3Questions = [
     "source": "bank.pdf#p274",
     "needsReview": false,
     "inferenceConfidence": 0.562,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0760",
-    "domain": 3,
-    "objective": "3.2",
-    "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
-    "type": "single",
-    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious links. Which of the following configuration items does the security administrator need to review?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Intrusion prevention system"
-      },
-      {
-        "key": "B",
-        "text": "Content categorization"
-      },
-      {
-        "key": "C",
-        "text": "Encryption"
-      },
-      {
-        "key": "D",
-        "text": "Encryption"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Content categorization defines how websites are classified (e.g., gambling, malicious, social media) within the web-filtering product. If users are still accessing malicious links, it likely means the categorization settings need to be reviewed or updated to block those sites effectively.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p277",
-    "needsReview": true,
-    "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
   },

@@ -72,12 +72,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An ISOW is a document that outlines the project, the cost, and the completion time frame for a security company to provide a service to a client. ISOW stands for Information Security Operations Work, and it is a type of contract that specifies the scope, deliverables, milestones, and payment terms of a security project. An ISOW is usually used for one-time or short-term projects that have a clear and defined objective and outcome. For example, an ISOW can be used for a security assessment, a penetration test, a security audit, or a security training. The other options are not correct because they are not documents that outline the project, the cost, and the completion time frame for a security company to provide a service to a client. A MSA is a master service agreement, which is a type of contract that establishes the general terms and conditions for a long-term or ongoing relationship between a security company and a client. A MSA does not specify the details of each individual project, but rather sets the framework for future projects that will be governed by separate statements of work (SOWs). A SLA is a service level agreement, which is a type of contract that defines the quality and performance standards for a security service provided by a security company to a client. A SLA usually includes the metrics, targets, responsibilities, and penalties for measuring and ensuring the service level. A BPA is a business partnership agreement, which is a type of contract that establishes the roles and expectations for a strategic alliance between two or more security companies that collaborate to provide a joint service to a client. A BPA usually covers the objectives, benefits, risks, and obligations of the partnership.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A statement of work spells out a specific project: the work to be done, the deliverables, the cost and the timeline. That matches the client's request exactly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A master service agreement sets general terms for an ongoing relationship. Individual projects are then defined in SOWs under it.",
+      "B": "A service-level agreement defines measurable service levels such as uptime and response time, not a project scope and timeline.",
+      "C": "A business partnership agreement governs a partnership between organizations, such as profit sharing and responsibilities."
+    },
     "references": [],
     "source": "bank.pdf#p6",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -110,59 +114,25 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "What are the consequences of not being PCI DSS compliant?\nThe fines imposed by the Card Brands and Acquiring Banks on merchants for non-compliance can range from $5,000 to $100,000 per month. These fines, along with credit monitoring fees, can impose substantial financial strain on businesses, underscoring the necessity of abiding by the PCI DSS requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "PCI DSS is enforced by the card brands and acquiring banks, whose standard penalty for non-compliance is fines, often charged monthly until the problem is fixed. Some argue that an internal assessment would first produce audit findings, but this question keys the monetary penalty as the most likely outcome.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Audit findings document the failures. They are the record of the problem, not the consequence the bank faces.",
+      "C": "Sanctions are penalties typically imposed by governments or regulators, which is broader than PCI DSS enforcement.",
+      "D": "Reputation damage follows mainly from public breaches, not from failing an internal assessment."
+    },
     "references": [],
     "source": "bank.pdf#p9",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.7,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0018",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "An organization is building a new backup data center with cost-benefit as the primary requirement and RTO and RPO values around two days. Which of the following types of sites is the best for this scenario?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Real-time recovery"
-      },
-      {
-        "key": "B",
-        "text": "Hot"
-      },
-      {
-        "key": "C",
-        "text": "Cold"
-      },
-      {
-        "key": "D",
-        "text": "Warm"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Warm Sites\n- Not fully equipped, but fundamentals in place\n- Can be up and running within a few days\n- Cheaper than hot sites but with a slight delay Cold Sites\n- Fewer facilities than warm sites\n- May be just an empty building, ready in 1-2 months\n- Cost-effective but adds more recovery time",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p10",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0021",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "A U.S.-based cloud-hosting provider wants to expand its data centers to new international locations. Which of the following should the hosting provider consider first?",
     "choices": [
@@ -186,165 +156,59 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Local data protection regulations are the first thing that a cloud-hosting provider should consider before expanding its data centers to new international locations. Data protection regulations are laws or standards that govern how personal or sensitive data is collected, stored, processed, and transferred across borders. Different countries or regions may have different data protection regulations, such as the General Data Protection Regulation (GDPR) in the European Union, the Personal Information Protection and Electronic Documents Act (PIPEDA) in Canada, or the California Consumer Privacy Act (CCPA) in the United States. A cloud-hosting provider must comply with the local data protection regulations of the countries or regions where it operates or serves customers, or else it may face legal penalties, fines, or reputational damage. Therefore, a cloud-hosting provider should research and understand the local data protection regulations of the new international locations before expanding its data centers there.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Moving data centers abroad places data under new jurisdictions, and local data protection laws dictate how data may be stored, processed and transferred there. They must be understood first, because they can decide whether and how the expansion can happen at all.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Foreign attackers are a concern everywhere, not a first consideration specific to choosing a location.",
+      "C": "Contracts matter, but legal compliance in the new country comes first and shapes the contracts.",
+      "D": "Time zones affect log correlation, which is an operational detail far down the list."
+    },
     "references": [],
     "source": "bank.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0027",
+    "id": "q0023",
     "domain": 5,
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A security practitioner completes a vulnerability assessment on a company's network and finds several vulnerabilities, which the operations team remediates. Which of the following should be done next?",
+    "question": "A company hired a consultant to perform an offensive security assessment covering penetration testing and social engineering.\nWhich of the following teams will conduct this assessment activity?",
     "choices": [
       {
         "key": "A",
-        "text": "Conduct an audit."
+        "text": "White"
       },
       {
         "key": "B",
-        "text": "Initiate a penetration test."
+        "text": "Purple"
       },
       {
         "key": "C",
-        "text": "Rescan the network."
+        "text": "Blue"
       },
       {
         "key": "D",
-        "text": "Submit a report."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p14",
-    "needsReview": true,
-    "inferenceConfidence": 0.667,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0028",
-    "domain": 5,
-    "objective": "5.5",
-    "objectiveTitle": "Explain types and purposes of audits and assessments",
-    "type": "single",
-    "question": "An administrator was notified that a user logged in remotely after hours and copied large amounts of data to a personal device.\nWhich of the following best describes the user's activity?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Penetration testing"
-      },
-      {
-        "key": "B",
-        "text": "Phishing campaign"
-      },
-      {
-        "key": "C",
-        "text": "External audit"
-      },
-      {
-        "key": "D",
-        "text": "Insider threat"
+        "text": "Red"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": "An insider threat is a security risk that originates from within the organization, such as an employee, contractor, or business partner, who has authorized access to the organization's data and systems. An insider threat can be malicious, such as stealing, leaking, or sabotaging sensitive data, or unintentional, such as falling victim to phishing or social engineering. An insider threat can cause significant damage to the organization's reputation, finances, operations, and legal compliance. The user's activity of logging in remotely after hours and copying large amounts of data to a personal device is an example of a malicious insider threat, as it violates the organization's security policies and compromises the confidentiality and integrity of the data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The red team plays the attacker, carrying out offensive testing such as penetration testing and social engineering to find weaknesses the defenders missed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The white team referees and manages an exercise; it does not attack.",
+      "B": "The purple team combines red and blue to share findings and improve defenses together.",
+      "C": "The blue team defends and responds -- the opposite role."
+    },
     "references": [],
-    "source": "bank.pdf#p14",
-    "needsReview": true,
-    "inferenceConfidence": 0.263,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0030",
-    "domain": 5,
-    "objective": "5.5",
-    "objectiveTitle": "Explain types and purposes of audits and assessments",
-    "type": "single",
-    "question": "Which of the following is the best way to consistently determine on a daily basis whether security settings on servers have been modified?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Automation"
-      },
-      {
-        "key": "B",
-        "text": "Compliance checklist"
-      },
-      {
-        "key": "C",
-        "text": "Attestation"
-      },
-      {
-        "key": "D",
-        "text": "Manual audit"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p15",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0033",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "A security analyst and the management team are reviewing the organizational performance of a recent phishing campaign. The user click-through rate exceeded the acceptable risk threshold, and the management team wants to reduce the impact when a user clicks on a link in a phishing message. Which of the following should the analyst do?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Place posters around the office to raise awareness of common phishing activities."
-      },
-      {
-        "key": "B",
-        "text": "Implement email security filters to prevent phishing emails from being delivered"
-      },
-      {
-        "key": "C",
-        "text": "Update the EDR policies to block automatic execution of downloaded programs."
-      },
-      {
-        "key": "D",
-        "text": "Create additional training for users to recognize the signs of phishing attempts."
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "An endpoint detection and response (EDR) system is a security tool that monitors and analyzes the activities and behaviors of endpoints, such as computers, laptops, mobile devices, and servers. An EDR system can detect, prevent, and respond to various types of threats, such as malware, ransomware, phishing, and advanced persistent threats (APTs). One of the features of an EDR system is to block the automatic execution of downloaded programs, which can prevent malicious code from running on the endpoint when a user clicks on a link in a phishing message.\nThis can reduce the impact of a phishing attack and protect the endpoint from compromise.\nUpdating the EDR policies to block automatic execution of downloaded programs is a technical control that can mitigate the risk of phishing, regardless of the user's awareness or behavior.\nTherefore, this is the best answer among the given options.\nThe other options are not as effective as updating the EDR policies, because they rely on administrative or physical controls that may not be sufficient to prevent or stop a phishing attack.\nPlacing posters around the office to raise awareness of common phishing activities is a physical control that can increase the user's knowledge of phishing, but it may not change their behavior or prevent them from clicking on a link in a phishing message. Implementing email security filters to prevent phishing emails from being delivered is an administrative control that can reduce the exposure to phishing, but it may not be able to block all phishing emails, especially if they are crafted to bypass the filters. Creating additional training for users to recognize the signs of phishing attempts is an administrative control that can improve the user's skills of phishing detection, but it may not guarantee that they will always be vigilant or cautious when receiving an email. Therefore, these options are not the best answer for this question.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p16",
-    "needsReview": true,
-    "inferenceConfidence": 0.3,
+    "source": "bank.pdf#p12",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -376,14 +240,18 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Dropping coverage for one kind of attack is a judgement about how often it is expected to happen. The annualized rate of occurrence (ARO) estimates that frequency; if ransomware is judged rare enough, the cost of insuring against it outweighs the expected loss.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Mean time to repair measures how long fixes take. It says nothing about how likely an attack is.",
+      "B": "Recovery time objective is the maximum acceptable downtime, a recovery target rather than an insurance input.",
+      "D": "Mean time between failures measures hardware reliability, not attack likelihood."
+    },
     "references": [],
     "source": "bank.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.727,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -414,14 +282,18 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Awareness programs teach users what to do, and a core message is how and where to report phishing and other suspicious activity. Clear reporting channels turn every employee into a sensor.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Detecting insiders through anomalous behaviour is done by security tools and analysts, not communicated to all staff.",
+      "C": "Verifying wire transfer changes is a finance procedure, not a general awareness communication.",
+      "D": "Social engineering tests are run by penetration testers, not taught as a communication element."
+    },
     "references": [],
     "source": "bank.pdf#p20",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.348,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -463,6 +335,95 @@ export const domain5Questions = [
     "source": "bank.pdf#p36",
     "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0063",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "An administrator assists the legal and compliance team with ensuring information about customer transactions is archived for the proper time period. Which of the following data policies is the administrator carrying out?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Compromise"
+      },
+      {
+        "key": "B",
+        "text": "Retention"
+      },
+      {
+        "key": "C",
+        "text": "Analysis"
+      },
+      {
+        "key": "D",
+        "text": "Transfer"
+      },
+      {
+        "key": "E",
+        "text": "Inventory"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Keeping records of customer transactions for the period required by law and policy is data retention.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Compromise describes a security breach, not a data policy.",
+      "C": "Analysis examines data for insight; it does not govern how long it is kept.",
+      "D": "Transfer covers moving data between systems or jurisdictions, not archiving it for a set time.",
+      "E": "Inventory records what data exists and where, not how long it must be kept."
+    },
+    "references": [],
+    "source": "bank.pdf#p37",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0069",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "A company's marketing department collects, modifies, and stores sensitive customer data. The infrastructure team is responsible for securing the data while in transit and at rest. Which of the following data roles describes the customer?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Processor"
+      },
+      {
+        "key": "B",
+        "text": "Custodian"
+      },
+      {
+        "key": "C",
+        "text": "Subject"
+      },
+      {
+        "key": "D",
+        "text": "Owner"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "The data subject is the person the data is about. The customers whose data is collected and stored are the subjects.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "The processor handles data on behalf of the controller, such as the department using it.",
+      "B": "The custodian is responsible for safeguarding data day to day, like the infrastructure team here.",
+      "D": "The owner is accountable for the data within the organization, such as a business unit leader, not the customer."
+    },
+    "references": [],
+    "source": "bank.pdf#p40",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -536,13 +497,59 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A service level agreement (SLA) is a document that defines the level of service expected by a customer from a service provider, indicating the metrics by which that service is measured, and the remedies or penalties, if any, should the agreed-upon levels not be achieved. An SLA can specify the minimum uptime or availability of a service, such as 99.99%, and the consequences for failing to meet that standard. A memorandum of agreement (MOA), a statement of work (SOW), and a memorandum of understanding (MOU) are other types of documents that can be used to establish a relationship between parties, but they do not typically include the details of service levels and performance metrics that an SLA does.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An uptime guarantee such as 99.99% is a measurable service level, and service levels -- with penalties for missing them -- are written into a service-level agreement.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A memorandum of agreement documents cooperation between parties, usually without measurable service targets.",
+      "B": "A statement of work defines project deliverables and timelines, not ongoing uptime.",
+      "C": "A memorandum of understanding is a non-binding statement of intent."
+    },
     "references": [],
     "source": "bank.pdf#p42",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0076",
+    "domain": 5,
+    "objective": "5.3",
+    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "type": "single",
+    "question": "Which of the following practices would be best to prevent an insider from introducing malicious code into a company's development process?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Code scanning for vulnerabilities"
+      },
+      {
+        "key": "B",
+        "text": "Open-source component usage"
+      },
+      {
+        "key": "C",
+        "text": "Quality assurance testing"
+      },
+      {
+        "key": "D",
+        "text": "Peer review and approval"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Requiring another developer to review and approve every change means one insider cannot slip malicious code in alone. It is separation of duties applied to the development process.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Vulnerability scanning looks for known flaws, not deliberately hidden malicious logic.",
+      "B": "Using open-source components introduces third-party code; it does not stop an insider.",
+      "C": "QA testing checks that features work, not that code lacks hidden malicious behaviour."
+    },
+    "references": [],
+    "source": "bank.pdf#p42",
+    "needsReview": false,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -574,13 +581,69 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Social engineering is the practice of manipulating people into performing actions or divulging confidential information, often by impersonating someone else or creating a sense of urgency or trust. The suspicious caller in this scenario was trying to use social engineering to trick the user into giving away credit card information by pretending to be the CFO and asking for a payment.\nThe user recognized this as a potential scam and reported it to the IT help desk. The other topics are not relevant to this situation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A caller pretending to act for the CFO to get card details is manipulating the user through false authority and urgency. The user recognized social engineering.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An insider threat comes from someone with legitimate access; this caller is an outsider posing as one.",
+      "B": "Email phishing arrives by email. This was a phone call.",
+      "D": "Whaling targets executives themselves. Here the attacker impersonates an executive to target an ordinary user."
+    },
     "references": [],
     "source": "bank.pdf#p46",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.421,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0123",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "multi",
+    "question": "Several employees received a fraudulent text message from someone claiming to be the Chief Executive Officer (CEO). The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to following email address.\"\nWhich of the following are the best responses to this situation? (Choose two).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Cancel current employee recognition gift cards."
+      },
+      {
+        "key": "B",
+        "text": "Add a smishing exercise to the annual company training."
+      },
+      {
+        "key": "C",
+        "text": "Issue a general email warning to the company."
+      },
+      {
+        "key": "D",
+        "text": "Have the CEO change phone numbers."
+      },
+      {
+        "key": "E",
+        "text": "Conduct a forensic investigation on the CEO's phone."
+      },
+      {
+        "key": "F",
+        "text": "Implement mobile device management."
+      }
+    ],
+    "correct": [
+      "B",
+      "C"
+    ],
+    "explanation": "The message is a smishing attempt with a CEO impersonation lure. The right responses warn everyone now with a company-wide notice and prepare them for next time by adding smishing to training.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Cancelling legitimate gift cards punishes employees and does nothing about the attack.",
+      "D": "The attacker never had the CEO's number, so changing it does nothing.",
+      "E": "Nothing suggests the CEO's phone was compromised; the attacker only claimed to be the CEO.",
+      "F": "MDM manages company devices; it would not stop texts reaching personal phones."
+    },
+    "references": [],
+    "source": "bank.pdf#p62",
+    "needsReview": false,
+    "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -623,6 +686,58 @@ export const domain5Questions = [
     "source": "bank.pdf#p63",
     "needsReview": false,
     "inferenceConfidence": 0.895,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0131",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "multi",
+    "question": "Which of the following factors are the most important to address when formulating a training curriculum plan for a security awareness program? (Select two).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Channels by which the organization communicates with customers"
+      },
+      {
+        "key": "B",
+        "text": "The reporting mechanisms for ethics violations"
+      },
+      {
+        "key": "C",
+        "text": "Threat vectors based on the industry in which the organization operates"
+      },
+      {
+        "key": "D",
+        "text": "Secure software development training for all personnel"
+      },
+      {
+        "key": "E",
+        "text": "Cadence and duration of training events"
+      },
+      {
+        "key": "F",
+        "text": "Retraining requirements for individuals who fail phishing simulations"
+      }
+    ],
+    "correct": [
+      "C",
+      "E"
+    ],
+    "explanation": "A curriculum is shaped by what to teach -- the threats most relevant to the organization's industry -- and how to deliver it -- the cadence and duration of training so it is frequent enough to stick without overloading staff.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Customer communication channels matter for marketing, not for designing staff awareness training.",
+      "B": "Ethics reporting is a compliance topic rather than a core security curriculum factor.",
+      "D": "Secure coding training is for developers, not all personnel.",
+      "F": "Retraining after failed simulations is a program detail within the plan, not a primary planning factor."
+    },
+    "references": [],
+    "source": "bank.pdf#p65",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -671,8 +786,8 @@ export const domain5Questions = [
   {
     "id": "q0134",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "Which of the following provides the details about the terms of a test with a third-party penetration tester?",
     "choices": [
@@ -696,12 +811,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Rules of engagement are the detailed guidelines and constraints regarding the execution of information security testing, such as penetration testing. They define the scope, objectives, methods, and boundaries of the test, as well as the roles and responsibilities of the testers and the clients. Rules of engagement help to ensure that the test is conducted in a legal, ethical, and professional manner, and that the results are accurate and reliable.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The rules of engagement set the terms of a penetration test: scope, timing, allowed techniques, contacts, and how sensitive findings are handled.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Supply chain analysis assesses risks from vendors and suppliers.",
+      "C": "A right-to-audit clause lets a customer audit a vendor. It does not define a test's terms.",
+      "D": "Due diligence is investigating a partner or vendor before engaging them."
+    },
     "references": [],
     "source": "bank.pdf#p66",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.958,
     "needsExplanation": false,
     "keyCorrected": false
@@ -709,8 +828,8 @@ export const domain5Questions = [
   {
     "id": "q0135",
     "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
     "question": "A penetration tester begins an engagement by performing port and service scans against the client environment according to the rules of engagement. Which of the following reconnaissance types is the tester performing?",
     "choices": [
@@ -734,51 +853,17 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Active reconnaissance is a type of reconnaissance that involves sending packets or requests to a target and analyzing the responses. Active reconnaissance can reveal information such as open ports, services, operating systems, and vulnerabilities. However, active reconnaissance is also more likely to be detected by the target or its security devices, such as firewalls or intrusion detection systems. Port and service scans are examples of active reconnaissance techniques, as they involve probing the target for specific information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Port and service scans send traffic directly to the target and read its responses. Interacting with the target is active reconnaissance.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Passive reconnaissance gathers information without touching the target, such as searching public records.",
+      "C": "'Defensive' is not a reconnaissance type.",
+      "D": "'Offensive' describes the overall red team activity, not the type of reconnaissance."
+    },
     "references": [],
     "source": "bank.pdf#p67",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.9,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0136",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "Which of the following is required for an organization to properly manage its restore process in the event of system failure?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "IRP"
-      },
-      {
-        "key": "B",
-        "text": "DRP"
-      },
-      {
-        "key": "C",
-        "text": "RPO"
-      },
-      {
-        "key": "D",
-        "text": "SDLC"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "A disaster recovery plan (DRP) is a set of policies and procedures that aim to restore the normal operations of an organization in the event of a system failure, natural disaster, or other emergency.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p67",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -825,91 +910,6 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0145",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "Which of the following should a security administrator adhere to when setting up a new set of firewall rules?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Disaster recovery plan"
-      },
-      {
-        "key": "B",
-        "text": "Incident response procedure"
-      },
-      {
-        "key": "C",
-        "text": "Business continuity plan"
-      },
-      {
-        "key": "D",
-        "text": "Change management procedure"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p70",
-    "needsReview": true,
-    "inferenceConfidence": 0.528,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0150",
-    "domain": 5,
-    "objective": "5.6",
-    "objectiveTitle": "Given a scenario, implement security awareness practices",
-    "type": "multi",
-    "question": "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security benefits do these actions provide? (Choose two.)",
-    "choices": [
-      {
-        "key": "A",
-        "text": "If a security incident occurs on the device, the correct employee can be notified."
-      },
-      {
-        "key": "B",
-        "text": "The security team will be able to send user awareness training to the appropriate device."
-      },
-      {
-        "key": "C",
-        "text": "Users can be mapped to their devices when configuring software MFA tokens."
-      },
-      {
-        "key": "D",
-        "text": "User-based firewall policies can be correctly targeted to the appropriate laptops."
-      },
-      {
-        "key": "E",
-        "text": "When conducting penetration testing, the security team will be able to target the desired laptops."
-      },
-      {
-        "key": "F",
-        "text": "Company data can be accounted for when the employee leaves the organization."
-      }
-    ],
-    "correct": [
-      "A",
-      "F"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p72",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": true,
-    "keyCorrected": false
-  },
-  {
     "id": "q0151",
     "domain": 5,
     "objective": "5.6",
@@ -937,12 +937,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Recurring training is a type of security awareness training that is conducted periodically to refresh and update the knowledge and skills of the users. Recurring training can help improve the situational and environmental awareness of existing users as they transition from remote to in- office work, as it can cover the latest threats, best practices, and policies that are relevant to their work environment. Modifying the content of recurring training can ensure that the users are aware of the current security landscape and the expectations of their roles.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Existing users already attend recurring training, so updating its content to cover office-specific risks -- such as tailgating, visitors and physical security -- reaches exactly the people who are changing environments.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Periodic reminders reinforce known points but do not cover the new environment in depth.",
+      "B": "New hire documentation only reaches new employees, not the existing users changing environment.",
+      "D": "A phishing campaign tests email awareness, not situational awareness in the office."
+    },
     "references": [],
     "source": "bank.pdf#p72",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -984,50 +988,17 @@ export const domain5Questions = [
       "D",
       "E"
     ],
-    "explanation": "Software that is outsourced to vendors and third parties is vulnerable to malware being injected into the product from the supply chain.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Vulnerable code usually enters a product through code the company did not write itself: third-party libraries bundled into the build, and components or services from vendors in the supply chain.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A certificate mismatch is a TLS configuration problem, not a way code enters a release.",
+      "B": "Penetration-testing tools find vulnerabilities; they do not insert code into releases.",
+      "C": "Weak passwords are an access risk, not a route for vulnerable code into software.",
+      "F": "Outdated anti-malware weakens endpoint protection but does not put vulnerable code in a release."
+    },
     "references": [],
     "source": "bank.pdf#p73",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0175",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "Which of the following would help ensure a security analyst is able to accurately measure the overall risk to an organization when a new vulnerability is disclosed?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "A full inventory of all hardware and software"
-      },
-      {
-        "key": "B",
-        "text": "Documentation of system classifications"
-      },
-      {
-        "key": "C",
-        "text": "A list of system owners and their departments"
-      },
-      {
-        "key": "D",
-        "text": "Third-party risk assessment documentation"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "A full inventory of all hardware and software is essential for measuring the overall risk to an organization when a new vulnerability is disclosed, because it allows the security analyst to identify which systems are affected by the vulnerability and prioritize the remediation efforts.\nWithout a full inventory, the security analyst may miss some vulnerable systems or waste time and resources on irrelevant ones. Documentation of system classifications, a list of system owners and their departments, and third-party risk assessment documentation are all useful for risk management, but they are not sufficient to measure the impact of a new vulnerability.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p81",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1060,13 +1031,59 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk threshold is the maximum amount of risk that an organization is willing to accept for a given activity or decision. It is also known as risk appetite or risk tolerance. Risk threshold helps an organization to prioritize and allocate resources for risk management. Risk indicator, risk level, and risk score are different ways of measuring or expressing the likelihood and impact of a risk, but they do not describe the maximum allowance of accepted risk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The risk threshold is the line an organization sets for how much risk it will accept; anything above it must be treated. It is the maximum allowance of accepted risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A risk indicator is a metric that signals changing risk, not an acceptance limit.",
+      "B": "Risk level describes how high a particular risk is.",
+      "C": "A risk score is a calculated value for one risk, not the maximum the organization will accept."
+    },
     "references": [],
     "source": "bank.pdf#p83",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.833,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0182",
+    "domain": 5,
+    "objective": "5.2",
+    "objectiveTitle": "Explain elements of the risk management process",
+    "type": "single",
+    "question": "Which of the following risk management strategies should an enterprise adopt first if a legacy application is critical to business operations and there are preventative controls that are not yet implemented?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Mitigate"
+      },
+      {
+        "key": "B",
+        "text": "Accept"
+      },
+      {
+        "key": "C",
+        "text": "Transfer"
+      },
+      {
+        "key": "D",
+        "text": "Avoid"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The application is needed, so avoiding the risk by removing it is not an option, and there are preventive controls available but not yet in place. The first step is to mitigate: implement those controls to reduce the risk.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Accepting the risk while available controls sit unimplemented is not justified.",
+      "C": "Transferring the risk, such as through insurance, does not address the vulnerabilities the controls would fix.",
+      "D": "Avoiding the risk would mean retiring an application the business depends on."
+    },
+    "references": [],
+    "source": "bank.pdf#p84",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1140,12 +1157,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A statement of work (SOW) is a document that defines the scope, objectives, deliverables, timeline, and costs of a project or service. It typically includes an estimate of the number of hours required to complete the engagement, as well as the roles and responsibilities of the parties involved. A SOW is often used for penetration testing projects to ensure that both the client and the vendor have a clear and mutual understanding of what is expected and how the work will be performed. A business partnership agreement (BPA), a service level agreement (SLA), and a non-disclosure agreement (NDA) are different types of contracts that may be related to a penetration testing project, but they do not include an estimate of the number of hours required to complete the engagement.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The statement of work defines a specific engagement -- scope, deliverables, schedule and the estimated hours and cost.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A business partnership agreement governs an ongoing partnership, not a single engagement's hours.",
+      "C": "An SLA defines service performance levels, not project effort.",
+      "D": "An NDA protects confidential information shared during the engagement."
+    },
     "references": [],
     "source": "bank.pdf#p85",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1182,13 +1203,60 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The Annual Loss Expectancy (ALE) is most useful in determining whether the long-term cost to transfer a risk is less than the impact of the risk. ALE is calculated by multiplying the Single Loss Expectancy (SLE) by the Annualized Rate of Occurrence (ARO), which provides an estimate of the annual expected loss due to a specific risk, making it valuable for long-term financial planning and risk management decisions.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Annualized loss expectancy (SLE x ARO) is the expected yearly cost of a risk. Comparing it with the yearly cost of insurance or another transfer shows whether transferring the risk is worth it.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The ARO is the expected frequency; on its own it has no cost to compare.",
+      "B": "RTO is a recovery time target, not a cost measure.",
+      "C": "RPO is a data loss target, not a cost measure.",
+      "E": "SLE is the cost of one occurrence; a long-term comparison needs the yearly figure, ALE."
+    },
     "references": [],
     "source": "bank.pdf#p86",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0195",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge. Which of the following types of tests does this represent?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Defensive"
+      },
+      {
+        "key": "B",
+        "text": "Passive"
+      },
+      {
+        "key": "C",
+        "text": "Offensive"
+      },
+      {
+        "key": "D",
+        "text": "Physical"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Defensive testing is not a penetration test type.",
+      "B": "Passive testing gathers information without interacting with the target.",
+      "C": "Offensive describes penetration testing in general, not the physical nature of this test."
+    },
+    "references": [],
+    "source": "bank.pdf#p89",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1240,44 +1308,6 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0212",
-    "domain": 5,
-    "objective": "5.2",
-    "objectiveTitle": "Explain elements of the risk management process",
-    "type": "single",
-    "question": "An organization would like to calculate the time needed to resolve a hardware issue with a server.\nWhich of the following risk management processes describes this example?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Recovery point objective"
-      },
-      {
-        "key": "B",
-        "text": "Mean time between failures"
-      },
-      {
-        "key": "C",
-        "text": "Recovery time objective"
-      },
-      {
-        "key": "D",
-        "text": "Mean time to repair"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Mean time to repair (MTTR) describes the time needed to resolve a hardware issue with a server.\nMTTR is a key metric in risk management and maintenance that measures the average time required to repair a failed component or system and restore it to operational status.\nRecovery point objective (RPO): Defines the maximum acceptable amount of data loss measured in time. It is the point in time to which data must be restored after a disaster.\nMean time between failures (MTBF): Measures the average time between failures of a system or component, indicating reliability.\nRecovery time objective (RTO): Defines the maximum acceptable length of time to restore a system after a disaster or disruption.\nMean time to repair (MTTR): Measures the average time required to repair a failed component or system.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p94",
-    "needsReview": true,
-    "inferenceConfidence": 0.943,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0216",
     "domain": 5,
     "objective": "5.2",
@@ -1305,13 +1335,59 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "When calculating risk ratings, the concepts of impact and likelihood are most likely to be considered. Risk assessment typically involves evaluating the potential impact of a threat (how severe the consequences would be if the threat materialized) and the likelihood of the threat occurring (how probable it is that the threat will occur).\nImpact: Measures the severity of the consequences if a particular threat exploits a vulnerability. It considers factors such as financial loss, reputational damage, and operational disruption.\nLikelihood: Measures the probability of a threat exploiting a vulnerability. This can be based on historical data, current threat landscape, and expert judgment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Risk is rated by combining how likely something is to happen with how bad it would be. Impact and likelihood are the two inputs of a risk rating.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Owners are responsible for risks and thresholds decide what is acceptable -- neither is an input to the rating.",
+      "C": "Appetite and tolerance decide how much risk is acceptable; they are compared with the rating, not used to calculate it.",
+      "D": "Exposure factor belongs to quantitative loss calculations (SLE), not a general risk rating."
+    },
     "references": [],
     "source": "bank.pdf#p96",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0221",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "An organization is required to maintain financial data records for three years and customer data for five years. Which of the following data management policies should the organization implement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Retention"
+      },
+      {
+        "key": "B",
+        "text": "Destruction"
+      },
+      {
+        "key": "C",
+        "text": "Inventory"
+      },
+      {
+        "key": "D",
+        "text": "Certification"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Keeping each type of record for a defined period -- three years for financial data, five for customer data -- is a data retention policy.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Destruction deals with disposing of data at the end of its life, not keeping it for set periods.",
+      "C": "An inventory tracks what data exists and where.",
+      "D": "Certification documents that data was destroyed or sanitized."
+    },
+    "references": [],
+    "source": "bank.pdf#p98",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1358,6 +1434,90 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0230",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "Which of the following penetration testing teams is focused only on trying to compromise an organization using an attacker's tactics?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "White"
+      },
+      {
+        "key": "B",
+        "text": "Red"
+      },
+      {
+        "key": "C",
+        "text": "Purple"
+      },
+      {
+        "key": "D",
+        "text": "Blue"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The red team plays the attacker and focuses solely on compromising the organization with real adversary tactics.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The white team manages and referees the exercise.",
+      "C": "The purple team combines attack and defense to share lessons.",
+      "D": "The blue team defends the organization."
+    },
+    "references": [],
+    "source": "bank.pdf#p102",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0231",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A manager receives an email that contains a link to receive a refund. After hovering over the link, the manager notices that the domain's URL points to a suspicious link. Which of the following security practices helped the manager to identify the attack?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "End user training"
+      },
+      {
+        "key": "B",
+        "text": "Policy review"
+      },
+      {
+        "key": "C",
+        "text": "URL scanning"
+      },
+      {
+        "key": "D",
+        "text": "Plain text email"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Hovering over a link to check where it really goes is a habit taught in end-user security training. The manager's own trained check spotted the phishing link.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Policy review updates rules; it did not help the manager inspect this link.",
+      "C": "URL scanning is an automated tool; here the manager checked the link manually.",
+      "D": "Plain text email shows raw URLs, but the manager found the domain by hovering, a trained behaviour."
+    },
+    "references": [],
+    "source": "bank.pdf#p102",
+    "needsReview": false,
+    "inferenceConfidence": 0.444,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0235",
     "domain": 5,
     "objective": "5.6",
@@ -1400,40 +1560,44 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0238",
+    "id": "q0242",
     "domain": 5,
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A company that is located in an area prone to hurricanes is developing a disaster recovery plan and looking at site considerations that allow the company to immediately continue operations.\nWhich of the following is the best type of site for this company?",
+    "question": "A company hired a security manager from outside the organization to lead security operations.\nWhich of the following actions should the security manager perform first in this new role?",
     "choices": [
       {
         "key": "A",
-        "text": "Cold"
+        "text": "Establish a security baseline."
       },
       {
         "key": "B",
-        "text": "Tertiary"
+        "text": "Review security policies."
       },
       {
         "key": "C",
-        "text": "Warm"
+        "text": "Adopt security benchmarks."
       },
       {
         "key": "D",
-        "text": "Hot"
+        "text": "Perform a user ID revalidation."
       }
     ],
     "correct": [
-      "D"
+      "B"
     ],
-    "explanation": "For a company located in an area prone to hurricanes and needing to immediately continue operations, the best type of site is a hot site. A hot site is a fully operational offsite data center that is equipped with hardware, software, and network connectivity and is ready to take over operations with minimal downtime.\nHot site: Fully operational and can take over business operations almost immediately after a disaster.\nCold site: A basic site with infrastructure in place but without hardware or data, requiring significant time to become operational.\nTertiary site: Not a standard term in disaster recovery; it usually refers to an additional backup location but lacks the specifics of readiness.\nWarm site: Equipped with hardware and connectivity but requires some time and effort to become fully operational, not as immediate as a hot site.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A new security manager must first understand the organization's current policies -- what the rules are, what they cover and where the gaps are -- before changing baselines, adopting benchmarks or revalidating users.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Establishing a baseline comes after understanding the policies and requirements it must meet.",
+      "C": "Adopting benchmarks is a later implementation decision.",
+      "D": "Revalidating user IDs is a specific operational task, not the first thing to do."
+    },
     "references": [],
-    "source": "bank.pdf#p106",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
+    "source": "bank.pdf#p107",
+    "needsReview": false,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1443,7 +1607,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "Which of the following best describe a penetration test that resembles an actual external attach?",
+    "question": "Which of the following best describes a penetration test that resembles an actual external attack?",
     "choices": [
       {
         "key": "A",
@@ -1465,89 +1629,17 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An unknown environment in penetration testing, also known as a black-box test, simulates an actual external attack where the tester has no prior knowledge of the system. This type of penetration test is designed to mimic real-world attack scenarios, where an attacker has little to no information about the target environment. The tester must rely on various reconnaissance and attack techniques to uncover vulnerabilities, much like a real-world attacker would. This approach helps organizations understand their security posture from an external perspective, providing insights into how their defenses would hold up against a true outsider threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A real external attacker starts with no inside knowledge. An unknown-environment (black box) test gives the testers none either, so it most closely mimics a real attack.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A known-environment test gives testers full details, unlike a real outside attacker.",
+      "B": "A partially known environment gives testers some inside information that an outsider would not have.",
+      "C": "A bug bounty invites many researchers to find flaws, but it is a program, not a type of test simulating an outsider."
+    },
     "references": [],
     "source": "bank.pdf#p109",
-    "needsReview": true,
-    "inferenceConfidence": 0.81,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0247",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "A company is implementing a vendor's security tool in the cloud. The security director does not want to manage users and passwords specific to this tool but would rather utilize the company's standard user directory. Which of the following should the company implement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "802.1X"
-      },
-      {
-        "key": "B",
-        "text": "SAML"
-      },
-      {
-        "key": "C",
-        "text": "RADIUS"
-      },
-      {
-        "key": "D",
-        "text": "CHAP"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "The company should implement Security Assertion Markup Language (SAML) to integrate the vendor's security tool with their existing user directory. SAML is an open standard that allows identity providers (IdP) to pass authorization credentials to service providers (SP), enabling Single Sign-On (SSO). This allows the company to use its existing directory services for authentication, avoiding the need to manage a separate set of user credentials for the new tool.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p110",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0250",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "A security team created a document that details the order in which critical systems should be through back online after a major outage. Which of the following documents did the team create?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Communication plan"
-      },
-      {
-        "key": "B",
-        "text": "Incident response plan"
-      },
-      {
-        "key": "C",
-        "text": "Data retention policy"
-      },
-      {
-        "key": "D",
-        "text": "Disaster recovery plan"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "The document described in the question is a Disaster Recovery Plan (DRP). A DRP outlines the process and procedures for restoring critical systems and operations after a major disruption or outage. It includes the order in which systems should be brought back online to ensure minimal impact on business operations, prioritizing the most critical systems to recover first.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p111",
-    "needsReview": true,
-    "inferenceConfidence": 0.511,
+    "needsReview": false,
+    "inferenceConfidence": 0.68,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1557,7 +1649,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "The application development teams have been asked to answer the following questions:\n- Does this application receive patches from an external source?\n- Does this application contain open-source code?\n- is this application accessible by external users?\n- Does this application meet the corporate password standard?\nWhich of the following are these questions port of?",
+    "question": "The application development teams have been asked to answer the following questions:\n- Does this application receive patches from an external source?\n- Does this application contain open-source code?\n- Is this application accessible by external users?\n- Does this application meet the corporate password standard?\nWhich of the following are these questions part of?",
     "choices": [
       {
         "key": "A",
@@ -1579,13 +1671,143 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The questions listed are part of a Risk Control Self-Assessment (RCSA), which is a process where teams evaluate the risks associated with their operations and assess the effectiveness of existing controls. The questions focus on aspects such as patch management, the use of open- source code, external access, and compliance with corporate standards, all of which are critical for identifying and mitigating risks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Teams answering structured questions about their own applications' risks -- external patches, open-source code, exposure, password compliance -- is a risk control self-assessment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A risk management strategy is the overall approach to risk, not a questionnaire.",
+      "C": "Risk acceptance is a decision to live with a risk.",
+      "D": "A risk matrix plots likelihood against impact to rank risks."
+    },
     "references": [],
     "source": "bank.pdf#p112",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0256",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "An employee recently resigned from a company. The employee was responsible for managing and supporting weekly batch jobs over the past five years. A few weeks after the employee resigned, one of the batch jobs failed and caused a major disruption. Which of the following would work best to prevent this type of incident from reoccurring?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Job rotation"
+      },
+      {
+        "key": "B",
+        "text": "Retention"
+      },
+      {
+        "key": "C",
+        "text": "Outsourcing"
+      },
+      {
+        "key": "D",
+        "text": "Separation of duties"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Only one person understood the batch jobs, so their knowledge left with them. Job rotation spreads knowledge of each role across several people, so no process depends on a single employee.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Retention keeps data or staff for a period. It would not have prevented the knowledge gap.",
+      "C": "Outsourcing moves the work to another company, but the same single point of knowledge could exist there.",
+      "D": "Separation of duties splits critical tasks to prevent fraud, not to share operational knowledge."
+    },
+    "references": [],
+    "source": "bank.pdf#p113",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0262",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Two companies are in the process of merging. The companies need to decide how to standardize their information security programs. Which of the following would best align the security programs?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Shared deployment of CIS baselines"
+      },
+      {
+        "key": "B",
+        "text": "Joint cybersecurity best practices"
+      },
+      {
+        "key": "C",
+        "text": "Both companies following the same CSF"
+      },
+      {
+        "key": "D",
+        "text": "Assessment of controls in a vulnerability report"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "A cybersecurity framework such as the NIST CSF defines the structure of a whole security program. Having both companies follow the same framework aligns their programs at the program level.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CIS baselines standardize system configurations, only one part of a security program.",
+      "B": "Shared best practices are too informal to align two programs.",
+      "D": "A vulnerability report assesses current weaknesses; it does not align the programs."
+    },
+    "references": [],
+    "source": "bank.pdf#p115",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0264",
+    "domain": 5,
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
+    "type": "single",
+    "question": "Which of the following is best used to detect fraud by assigning employees to different roles?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Least privilege"
+      },
+      {
+        "key": "B",
+        "text": "Mandatory vacation"
+      },
+      {
+        "key": "C",
+        "text": "Separation of duties"
+      },
+      {
+        "key": "D",
+        "text": "Job rotation"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Moving employees between roles means someone new regularly takes over each job and can notice irregularities the previous person was hiding. Job rotation is used to detect fraud.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Least privilege limits access to reduce the chance of fraud, rather than detecting it.",
+      "B": "Mandatory vacation also detects fraud, but by making someone take time off, not by assigning different roles.",
+      "C": "Separation of duties prevents fraud by splitting tasks; it does not move employees between roles."
+    },
+    "references": [],
+    "source": "bank.pdf#p116",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1603,11 +1825,11 @@ export const domain5Questions = [
       },
       {
         "key": "B",
-        "text": "Deploy an authentication factor that requires ln-person action before printing."
+        "text": "Deploy an authentication factor that requires in-person action before printing."
       },
       {
         "key": "C",
-        "text": "Install a software client m every computer authorized to use the MFPs."
+        "text": "Install a software client on every computer authorized to use the MFPs."
       },
       {
         "key": "D",
@@ -1617,136 +1839,17 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To mitigate the risk of confidential documents being left unattended in Multi-Function Printers (MFPs), implementing an authentication factor that requires in-person action before printing (such as PIN codes or badge scanning) is the most effective measure. This ensures that documents are only printed when the authorized user is present to collect them, reducing the risk of sensitive information being exposed.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Print release requires the user to authenticate at the printer -- a badge or PIN -- before the job prints, so documents are only printed when the owner is standing there.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Shredders dispose of printed pages; they do not stop pages sitting unattended in the tray.",
+      "C": "Installing clients on computers does not keep printouts from being left out.",
+      "D": "Encrypting management traffic protects the printer's network communications, not paper in the tray."
+    },
     "references": [],
     "source": "bank.pdf#p121",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0280",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "A systems administrator is auditing all company servers to ensure. They meet the minimum security baseline While auditing a Linux server, the systems administrator observes the /etc/shadow file has permissions beyond the baseline recommendation. Which of the following commands should the systems administrator use to resolve this issue?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "chmod"
-      },
-      {
-        "key": "B",
-        "text": "grep"
-      },
-      {
-        "key": "C",
-        "text": "dd"
-      },
-      {
-        "key": "D",
-        "text": "passwd"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The chmod command is used to change file permissions on Unix and Linux systems. If the /etc/shadow file has permissions beyond the baseline recommendation, the systems administrator should use chmod to modify the file's permissions, ensuring it adheres to the security baseline and limits access to authorized users only.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p121",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0291",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "A security analyst is creating base for the server team to follow when hardening new devices for deployment. Which of the following beet describes what the analyst is creating?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Change management procedure"
-      },
-      {
-        "key": "B",
-        "text": "Information security policy"
-      },
-      {
-        "key": "C",
-        "text": "Cybersecurity framework"
-      },
-      {
-        "key": "D",
-        "text": "Secure configuration guide"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "The security analyst is creating a \"secure configuration guide,\" which is a set of instructions or guidelines used to configure devices securely before deployment. This guide ensures that the devices are set up according to best practices to minimize vulnerabilities and protect against potential security threats.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p125",
-    "needsReview": true,
-    "inferenceConfidence": 0.647,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0294",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "multi",
-    "question": "A vendor needs to remotely and securely transfer files from one server to another using the command line. Which of the following protocols should be Implemented to allow for this type of access? (Select two).",
-    "choices": [
-      {
-        "key": "A",
-        "text": "SSH"
-      },
-      {
-        "key": "B",
-        "text": "SNMP"
-      },
-      {
-        "key": "C",
-        "text": "RDP"
-      },
-      {
-        "key": "D",
-        "text": "S/MIME"
-      },
-      {
-        "key": "E",
-        "text": "SMTP"
-      },
-      {
-        "key": "F",
-        "text": "SFTP"
-      }
-    ],
-    "correct": [
-      "A",
-      "F"
-    ],
-    "explanation": "Secure Shell (SSH) is a protocol used for secure command-line access to remote systems, while Secure File Transfer Protocol (SFTP) is an extension of SSH used specifically for securely transferring files. Both SSH and SFTP ensure that data is encrypted during transmission, protecting it from interception or tampering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p127",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1793,44 +1896,6 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0296",
-    "domain": 5,
-    "objective": "5.1",
-    "objectiveTitle": "Summarize elements of effective security governance",
-    "type": "single",
-    "question": "Various stakeholders are meeting to discuss their hypothetical roles and responsibilities in a specific situation, such as a security incident or major disaster. Which of the following best describes this meeting?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Penetration test"
-      },
-      {
-        "key": "B",
-        "text": "Continuity of operations planning"
-      },
-      {
-        "key": "C",
-        "text": "Tabletop exercise"
-      },
-      {
-        "key": "D",
-        "text": "Simulation"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "A tabletop exercise is a discussion-based exercise where stakeholders gather to walk through the roles and responsibilities they would have during a specific situation, such as a security incident or disaster. This type of exercise is designed to identify gaps in planning and improve coordination among team members without the need for physical execution.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p127",
-    "needsReview": true,
-    "inferenceConfidence": 0.625,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0305",
     "domain": 5,
     "objective": "5.2",
@@ -1858,51 +1923,17 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Risk appetite refers to the level of risk that an organization is willing to accept in order to achieve its objectives. In this scenario, the security engineer is concerned that the timeframe for implementing a new application does not allow for sufficient cybersecurity due diligence. This reflects a situation where the organization's risk appetite might be too high if it proceeds without the necessary security checks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Risk appetite is the amount of risk an organization is willing to pursue for its goals. The engineer judging that rushing without due diligence exceeds that appetite is applying it. Published answers disagree between appetite and tolerance for this question.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Risk tolerance is the acceptable variation around the appetite for a specific risk; the engineer's judgement is about the organization's overall willingness.",
+      "B": "Risk acceptance is deciding to live with a risk; the engineer is objecting, not accepting.",
+      "C": "'Risk importance' is not a standard risk management term."
+    },
     "references": [],
     "source": "bank.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.619,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0306",
-    "domain": 5,
-    "objective": "5.3",
-    "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
-    "type": "single",
-    "question": "An organization has too many variations of a single operating system and needs to standardize the arrangement prior to pushing the system image to users. Which of the following should the organization implement first?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Standard naming convention"
-      },
-      {
-        "key": "B",
-        "text": "Mashing"
-      },
-      {
-        "key": "C",
-        "text": "Network diagrams"
-      },
-      {
-        "key": "D",
-        "text": "Baseline configuration"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Baseline configuration is the process of standardizing the configuration settings for a system or network. In this scenario, the organization needs to standardize the operating system configurations before deploying them across the network. Establishing a baseline configuration ensures that all systems adhere to the organization's security policies and operational requirements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p131",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1934,12 +1965,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A Service Level Agreement (SLA) is a formal document between a service provider and a client that defines the expected level of service, including what resources will be provided and the agreed-upon time frames. It typically includes metrics to evaluate performance, uptime guarantees, and response times.\nMOU (Memorandum of Understanding) and MOA (Memorandum of Agreement) are less formal and may not specify the exact level of service.\nBPA (Business Partners Agreement) focuses more on the long-term relationship between partners.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A service-level agreement defines what a provider will deliver and within what time frames, such as response and resolution times.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An MOU is a non-binding statement of intent, without measurable commitments.",
+      "C": "An MOA sets out agreed responsibilities, but not service levels and time frames.",
+      "D": "A BPA governs a business partnership."
+    },
     "references": [],
     "source": "bank.pdf#p136",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1947,8 +1982,8 @@ export const domain5Questions = [
   {
     "id": "q0322",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "Which of the following considerations is the most important for an organization to evaluate as it establishes and maintains a data privacy program?",
     "choices": [
@@ -1970,17 +2005,21 @@ export const domain5Questions = [
       }
     ],
     "correct": [
-      "B"
+      "C"
     ],
-    "explanation": "This is one of the most important considerations because it involves how individuals can access, correct or delete their personal data as required by data protection regulations such as GDPR.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Whether the organization acts as a data controller or a data processor determines which privacy obligations apply to it at all -- including whether it must handle data subject requests. It is the foundation of the program, so it comes first. The key in the source picks the access request process, which only matters once the role is known.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "The privacy officer's reporting line matters, but not before knowing what the organization's obligations are.",
+      "B": "Data subject access requests are an important process, but whether and how the organization handles them depends on its role.",
+      "D": "Location affects which laws apply, but the controller/processor role defines the obligations under them."
+    },
     "references": [],
     "source": "bank.pdf#p137",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.818,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0326",
@@ -2021,6 +2060,48 @@ export const domain5Questions = [
     "source": "bank.pdf#p139",
     "needsReview": false,
     "inferenceConfidence": 0.37,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0332",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge Which of the following types of tests does this represent?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Defensive"
+      },
+      {
+        "key": "B",
+        "text": "Passive"
+      },
+      {
+        "key": "C",
+        "text": "Offensive"
+      },
+      {
+        "key": "D",
+        "text": "Physical"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Defensive testing is not a penetration test type.",
+      "B": "Passive testing gathers information without interacting with the target.",
+      "C": "Offensive describes penetration testing in general, not the physical nature of this test."
+    },
+    "references": [],
+    "source": "bank.pdf#p141",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2136,12 +2217,16 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An external examination (also known as an external audit or external review) is the best method for the Chief Information Security Officer (CISO) to gain an understanding of how the company's security policies compare to external regulatory requirements. External examinations are conducted by third- party entities that assess an organization's compliance with laws, regulations, and industry standards.\nPenetration tests focus on identifying vulnerabilities, not compliance.\nInternal audits assess internal controls but are not impartial or focused on regulatory requirements.\nAttestation is a formal declaration but does not involve the actual evaluation of compliance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An external examination by an independent assessor compares the company's practices against regulators' requirements, giving the CISO an objective view of how policies measure up.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A penetration test finds technical weaknesses, not regulatory alignment.",
+      "B": "An internal audit is useful, but lacks the independence an external regulatory comparison provides.",
+      "C": "Attestation is a formal statement of compliance, the output of an assessment rather than the comparison itself."
+    },
     "references": [],
     "source": "bank.pdf#p147",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2174,14 +2259,18 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Breaking privacy regulations directly exposes the company to regulatory fines -- a concrete, quantifiable consequence that justifies a budget request.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Reputational damage is real, but indirect and hard to quantify.",
+      "C": "Sanctions are possible, but fines are the typical direct regulatory penalty.",
+      "D": "Contractual implications depend on specific contracts, not the regulation itself."
+    },
     "references": [],
     "source": "bank.pdf#p150",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.867,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2590,12 +2679,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "This is simulating phishing attacks to educate employees about recognizing and handling of phishing attempts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Posters and online training teach people what to watch for; a phishing campaign then tests whether they apply it, measuring and reinforcing the awareness program.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A password policy is a technical/administrative rule, not part of an awareness program's activities.",
+      "B": "Access badges are a physical control.",
+      "D": "A risk assessment evaluates risks; it is not an awareness activity."
+    },
     "references": [],
     "source": "bank.pdf#p174",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.414,
     "needsExplanation": false,
     "keyCorrected": false
@@ -4706,6 +4799,48 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0710",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media. Which of the following policies will the HR employee most likely need to review after this incident?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Hybrid work environment"
+      },
+      {
+        "key": "B",
+        "text": "Operations security"
+      },
+      {
+        "key": "C",
+        "text": "Data loss prevention"
+      },
+      {
+        "key": "D",
+        "text": "Social engineering"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Operations security is about protecting sensitive information in everyday work, such as not leaving a screen open where others can read it. The HR employee's lapse is an OPSEC failure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hybrid work policy covers where and when people work, not the specific information-protection behaviour that failed here.",
+      "C": "DLP is a technical control for data leaving systems; this leak happened by someone reading a screen.",
+      "D": "No one was manipulated, so this was not social engineering."
+    },
+    "references": [],
+    "source": "bank.pdf#p258",
+    "needsReview": false,
+    "inferenceConfidence": 0.529,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0711",
     "domain": 5,
     "objective": "5.6",
@@ -4792,8 +4927,8 @@ export const domain5Questions = [
   {
     "id": "q0715",
     "domain": 5,
-    "objective": "5.4",
-    "objectiveTitle": "Summarize elements of effective security compliance",
+    "objective": "5.1",
+    "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
     "question": "Which of the following actions must an organization take to comply with a person's request for the right to be forgotten?",
     "choices": [
@@ -4817,12 +4952,16 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The right to be forgotten, as outlined in regulations such as the General Data Protection Regulation (GDPR), requires organizations to permanently delete an individual's personal data upon request, unless there is a legal or contractual obligation to retain it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The right to be forgotten requires the organization to erase all of the individual's personal data it holds on request.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Purging only identifying attributes may leave personal data behind; the request covers all of the person's data.",
+      "B": "Encrypted data still exists.",
+      "D": "Obfuscated data still exists and may be reversible."
+    },
     "references": [],
     "source": "bank.pdf#p260",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5510,6 +5649,43 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0818",
+    "domain": 5,
+    "objective": "5.5",
+    "objectiveTitle": "Explain types and purposes of audits and assessments",
+    "type": "single",
+    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel. Which of the following penetration testing methods is most likely being used?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Unknown"
+      },
+      {
+        "key": "B",
+        "text": "Known"
+      },
+      {
+        "key": "C",
+        "text": "Integrated"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Testing without telling the internal IT team shows how the security tools, trained staff and SOC respond to an attack they do not expect. An unknown-environment test also means the testers start with no inside information, like a real attacker.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A known-environment test gives the testers full details, which would not validate real-world defenses.",
+      "C": "An integrated test works with the internal team, the opposite of what the CEO wants."
+    },
+    "references": [],
+    "source": "bank.pdf#p295",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0827",
     "domain": 5,
     "objective": "5.4",
@@ -5548,6 +5724,43 @@ export const domain5Questions = [
     "source": "bank.pdf#p298",
     "needsReview": false,
     "inferenceConfidence": 0.76,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0836",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat. Which of the following would most likely help the security awareness team address this potential threat?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Immediately disable the accounts of staff who are likely to be terminated."
+      },
+      {
+        "key": "B",
+        "text": "Train supervisors to identify and manage disgruntled employees."
+      },
+      {
+        "key": "C",
+        "text": "Configure DLP to monitor staff who will be terminated."
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Awareness efforts should help supervisors recognize warning signs of disgruntlement and handle them early. It targets the human side of insider risk during layoffs, which is the security awareness team's job.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Disabling accounts of people who might be let go, before any decision, disrupts work and creates resentment.",
+      "C": "DLP monitoring is a technical control run by security operations, not an awareness activity."
+    },
+    "references": [],
+    "source": "bank.pdf#p301",
+    "needsReview": false,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5873,12 +6086,16 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A third-party audit provides independent verification that the SaaS vendor's security controls and processes meet industry standards, which helps the security analyst assess the actual security posture of the application before purchase.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "An independent third-party audit report, such as a SOC 2, gives objective evidence of the vendor's security controls -- the key document when assessing a SaaS vendor.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An SLA covers uptime and support commitments, not security controls.",
+      "C": "A statement of work defines a specific project's scope.",
+      "D": "A data privacy agreement sets obligations for handling data, but does not show how well the vendor's controls actually work."
+    },
     "references": [],
     "source": "bank.pdf#p316",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.462,
     "needsExplanation": false,
     "keyCorrected": false
@@ -6453,7 +6670,7 @@ export const domain5Questions = [
       },
       {
         "key": "B",
-        "text": "Data breachesloss"
+        "text": "Data breaches or loss"
       },
       {
         "key": "C",
@@ -6467,12 +6684,16 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failing to comply with right-to-be-forgotten regulations, such as GDPR requirements, can lead to legal penalties and fines from regulatory authorities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Ignoring right-to-be-forgotten obligations violates privacy laws such as GDPR, which can impose substantial fines.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Failing to delete data is a compliance failure, not in itself a breach.",
+      "C": "Revenue loss is indirect and uncertain; fines are the direct regulatory impact.",
+      "D": "Blackmail is a criminal act by others, not a consequence of non-compliance."
+    },
     "references": [],
     "source": "bank.pdf#p338",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false

@@ -18,7 +18,7 @@ const BAND_CLASS = {
  * score you cannot interrogate is a score you cannot act on.
  */
 export function readinessCard(r, { compact = false, navigate = null } = {}) {
-  const card = el('div', { class: 'card' }, [
+  const card = el('div', { class: 'card hero' }, [
     el('h2', { text: 'Exam readiness' }),
     el('div', { class: 'readiness' }, [
       el('span', { class: 'score', text: String(r.score) }),

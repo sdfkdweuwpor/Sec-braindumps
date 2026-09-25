@@ -30,12 +30,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Endpoint logs are the most suitable data source for gathering additional information about the executable running on the employee's corporate laptop. These logs contain detailed information about processes, executables, and activities occurring on the endpoint, enabling the security analyst to understand the behavior of the executable and its potential impact on the system and network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The analyst needs detail about an executable running on one laptop, and only the endpoint itself records that: process creation, file hashes, parent processes and what the program touched. Endpoint logs (from EDR or the OS) are the data source that sees inside the host.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record events from a specific application, not which executables ran on the host or how they behaved.",
+      "B": "IPS/IDS logs show suspicious network traffic, not what an executable did on the laptop.",
+      "C": "Network logs show connections and flows, which the SIEM already alerted on. They cannot describe the executable itself."
+    },
     "references": [],
     "source": "bank.pdf#p4",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.893,
     "needsExplanation": false,
     "keyCorrected": false
@@ -68,12 +72,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Threat hunting is the process of proactively searching for signs of malicious activity or compromise in a network, rather than waiting for alerts or indicators of compromise (IOCs) to appear. Threat hunting can help identify new tactics, techniques, and procedures (TTPs) used by malicious actors, as well as uncover hidden or stealthy threats that may have evaded detection by security tools. Threat hunting requires a combination of skills, tools, and methodologies, such as hypothesis generation, data collection and analysis, threat intelligence, and incident response.\nThreat hunting can also help improve the security posture of an organization by providing feedback and recommendations for security improvements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "With no alerts configured, the analyst has to go looking: threat hunting is proactively searching the environment for signs of a known tactic before any detection fires. New intelligence about attacker behaviour is the classic trigger for a hunt.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Digital forensics examines evidence after an incident is known, to establish what happened.",
+      "B": "E-discovery collects electronic information for legal proceedings, not for finding attackers.",
+      "C": "Incident response begins once an incident has been identified. Here nothing has been detected yet."
+    },
     "references": [],
     "source": "bank.pdf#p4",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
@@ -106,12 +114,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Input validation is a technique that checks the user input for any malicious or unexpected data before processing it by the web application. Input validation can prevent cross-site scripting (XSS) attacks, which exploit the vulnerability of a web application to execute malicious scripts in the browser of a victim. XSS attacks can compromise the confidentiality, integrity, and availability of the web application and its users. Input validation can be implemented on both the client-side and the server-side, but server-side validation is more reliable and secure. Input validation can use various methods, such as whitelisting, blacklisting, filtering, escaping, encoding, and sanitizing the input data.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Cross-site scripting works by getting a script accepted through a form field and then echoed back to a browser. Input validation checks and rejects or sanitizes that input before the application uses it, closing the hole the penetration test found.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure cookies protect cookies from being sent over unencrypted connections. They do not stop scripts being injected through a form.",
+      "B": "Version control tracks code changes. It does not fix a vulnerability in how input is handled.",
+      "D": "Code signing proves who published the code and that it is unaltered. It does nothing about malicious input at runtime."
+    },
     "references": [],
     "source": "bank.pdf#p7",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
@@ -126,7 +138,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "To gather loCs for the investigation"
+        "text": "To gather IoCs for the investigation"
       },
       {
         "key": "B",
@@ -144,12 +156,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Root cause analysis is a process of identifying and resolving the underlying factors that led to an incident. By conducting root cause analysis as part of incident response, security professionals can learn from the incident and implement corrective actions to prevent future incidents of the same nature. For example, if the root cause of a data breach was a weak password policy, the security team can enforce a stronger password policy and educate users on the importance of password security. Root cause analysis can also help to improve security processes, policies, and procedures, and to enhance security awareness and culture within the organization. Root cause analysis is not meant to gather loCs (indicators of compromise) for the investigation, as this is a task performed during the identification and analysis phases of incident response. Root cause analysis is also not meant to discover which systems have been affected or to eradicate any trace of malware on the network, as these are tasks performed during the containment and eradication phases of incident response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Root cause analysis looks past the symptoms to the underlying reason an incident happened, such as a weak policy or an unpatched system, so it can be fixed and the same kind of incident does not happen again.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Gathering indicators of compromise is part of investigation and detection, not the purpose of root cause analysis.",
+      "B": "Identifying affected systems is scoping during analysis and containment.",
+      "C": "Removing malware is eradication, a separate phase."
+    },
     "references": [],
     "source": "bank.pdf#p8",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.895,
     "needsExplanation": false,
     "keyCorrected": false
@@ -182,12 +198,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Sanitization is the process of removing sensitive data from a storage device or a system before it is disposed of or reused. Sanitization can be done by using software tools or hardware devices that overwrite the data with random patterns or zeros, making it unrecoverable. Sanitization is different from destruction, which is the physical damage of the storage device to render it unusable. Sanitization is also different from enumeration, which is the identification of network resources or devices, and inventory, which is the tracking of assets and their locations. The policy of securely wiping hard drives before sending decommissioned systems to recycling is an example of sanitization, as it ensures that no confidential data can be retrieved from the recycled devices.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Wiping drives so that data cannot be recovered, while leaving the hardware usable for recycling, is sanitization.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Enumeration lists resources such as users, hosts or services. It does not remove data.",
+      "C": "Destruction physically destroys the media. Here the drives are wiped and sent for recycling.",
+      "D": "Inventory tracks what assets exist. It does not remove data from them."
+    },
     "references": [],
     "source": "bank.pdf#p11",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -214,18 +234,22 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Ensuring secure cookies are use"
+        "text": "Ensuring secure cookies are used"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": "Code signing is a technique that uses cryptography to verify the authenticity and integrity of the code created by the company. Code signing involves applying a digital signature to the code using a private key that only the company possesses. The digital signature can be verified by anyone who has the corresponding public key, which can be distributed through a trusted certificate authority. Code signing can prevent unauthorized modifications, tampering, or malware injection into the code, and it can also assure the users that the code is from a legitimate source.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Code signing attaches a digital signature, made with the company's private key, that proves the software came from the company and has not been altered. That is exactly what 'authenticity of the code' asks for.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Input validation protects against malicious input at runtime. It says nothing about who wrote the code.",
+      "C": "Static code analysis finds bugs and vulnerabilities in source code, not proof of origin.",
+      "D": "Secure cookies protect session data in transit. They do not prove authorship."
+    },
     "references": [],
     "source": "bank.pdf#p13",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.955,
     "needsExplanation": false,
     "keyCorrected": false
@@ -258,13 +282,101 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Analysis is the incident response activity that describes the process of understanding the source of an incident. Analysis involves collecting and examining evidence, identifying the root cause, determining the scope and impact, and assessing the threat actor's motives and capabilities.\nAnalysis helps the incident response team to formulate an appropriate response strategy, as well as to prevent or mitigate future incidents. Analysis is usually performed after detection and before containment, eradication, recovery, and lessons learned.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Working out where an incident came from and how it unfolded is the analysis phase, which follows detection and informs containment.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Lessons learned comes at the end, reviewing what went well and what to improve.",
+      "C": "Detection is noticing that something happened, before its source is understood.",
+      "D": "Containment limits the damage once the incident is understood."
+    },
     "references": [],
     "source": "bank.pdf#p14",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.909,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0027",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "A security practitioner completes a vulnerability assessment on a company's network and finds several vulnerabilities, which the operations team remediates. Which of the following should be done next?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Conduct an audit."
+      },
+      {
+        "key": "B",
+        "text": "Initiate a penetration test."
+      },
+      {
+        "key": "C",
+        "text": "Rescan the network."
+      },
+      {
+        "key": "D",
+        "text": "Submit a report."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "After remediation, you rescan to confirm the fixes actually worked and no new issues appeared. Validating remediation comes before reporting that the work is done.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "An audit checks compliance against a standard, not whether specific fixes took effect.",
+      "B": "A penetration test is a larger exercise. The immediate step is confirming the patched vulnerabilities are gone.",
+      "D": "Reporting comes once remediation has been verified by the rescan."
+    },
+    "references": [],
+    "source": "bank.pdf#p14",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0030",
+    "domain": 4,
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "type": "single",
+    "question": "Which of the following is the best way to consistently determine on a daily basis whether security settings on servers have been modified?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Automation"
+      },
+      {
+        "key": "B",
+        "text": "Compliance checklist"
+      },
+      {
+        "key": "C",
+        "text": "Attestation"
+      },
+      {
+        "key": "D",
+        "text": "Manual audit"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Checking every server's settings every day, consistently, is a job for automation: a scheduled script or configuration tool compares settings against the baseline and flags drift without relying on anyone remembering to do it.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "A compliance checklist still has to be worked through by hand, which is slow and inconsistent every day.",
+      "C": "Attestation is a formal statement that something is true. It is not a daily technical check.",
+      "D": "A manual audit is too slow and error-prone to repeat daily across servers."
+    },
+    "references": [],
+    "source": "bank.pdf#p15",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -282,7 +394,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Net Flow"
+        "text": "NetFlow"
       },
       {
         "key": "C",
@@ -296,13 +408,17 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "DLP stands for Data Loss Prevention, which is a tool that can assist with detecting and preventing the unauthorized transmission or leakage of sensitive data, such as a customer's PII (Personally Identifiable Information). DLP can monitor, filter, and block data in motion (such as emails), data at rest (such as files), and data in use (such as applications). DLP can also alert the sender, the recipient, or the administrator of the data breach, and apply remediation actions, such as encryption, quarantine, or deletion. DLP can help an organization comply with data protection regulations, such as GDPR, HIPAA, or PCI DSS, and protect its reputation and assets.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Data loss prevention inspects outgoing content such as email attachments for sensitive data like PII, and can alert on or block it -- exactly the accidental send described.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SCAP is a set of standards for automated vulnerability and configuration checks. It does not inspect email content.",
+      "B": "NetFlow records traffic metadata such as source, destination and volume, not what is in a file.",
+      "C": "Antivirus detects malware, not sensitive information in legitimate files."
+    },
     "references": [],
     "source": "bank.pdf#p15",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -334,14 +450,60 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Stripping characters such as $, |, ; and & from form fields before they are used is input validation (sanitization). Those characters are what command and injection attacks rely on.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Identifying embedded keys means finding hard-coded secrets in code, not filtering user input.",
+      "B": "Debugging finds and fixes errors during development. It is not a runtime defense.",
+      "D": "Static code analysis reviews source code for flaws. It does not filter input as the application runs."
+    },
     "references": [],
     "source": "bank.pdf#p15",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.929,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0033",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A security analyst and the management team are reviewing the organizational performance of a recent phishing campaign. The user click-through rate exceeded the acceptable risk threshold, and the management team wants to reduce the impact when a user clicks on a link in a phishing message. Which of the following should the analyst do?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Place posters around the office to raise awareness of common phishing activities."
+      },
+      {
+        "key": "B",
+        "text": "Implement email security filters to prevent phishing emails from being delivered"
+      },
+      {
+        "key": "C",
+        "text": "Update the EDR policies to block automatic execution of downloaded programs."
+      },
+      {
+        "key": "D",
+        "text": "Create additional training for users to recognize the signs of phishing attempts."
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Management wants to reduce the impact once a user has already clicked. Blocking automatic execution of downloaded programs through EDR policy means a click no longer turns into running malware. Training and filtering reduce clicks, but do not limit what happens after one.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Posters raise awareness, which may reduce clicks, but do nothing once someone clicks.",
+      "B": "Email filtering stops phishing reaching inboxes. It reduces exposure, not the impact of a click that still happens.",
+      "D": "More training aims to reduce click-through, not the impact of a click."
+    },
+    "references": [],
+    "source": "bank.pdf#p16",
+    "needsReview": false,
+    "inferenceConfidence": 0.3,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -372,12 +534,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A user provisioning script is an automation technique that uses a predefined set of instructions or commands to create, modify, or delete user accounts and assign appropriate access or permissions. A user provisioning script can help to streamline account creation by reducing manual errors, ensuring consistency and compliance, and saving time and resources. The other options are not automation techniques that can streamline account creation:\nGuard rail script: This is a script that monitors and enforces the security policies and rules on a system or a network. A guard rail script can help to prevent unauthorized or malicious actions, such as changing security settings, accessing restricted resources, or installing unwanted software. Ticketing workflow: This is a process that tracks and manages the requests, issues, or incidents that are reported by users or customers. A ticketing workflow can help to improve the communication, collaboration, and resolution of problems, but it does not automate the account creation process. Escalation script: This is a script that triggers an alert or a notification when a certain condition or threshold is met or exceeded. An escalation script can help to inform the relevant parties or authorities of a critical situation, such as a security breach, a performance degradation, or a service outage.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A user provisioning script creates accounts from a defined template, applying the correct groups and permissions every time. It removes the manual errors management noticed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Guard rail scripts enforce limits and block unsafe actions, not account creation.",
+      "B": "A ticketing workflow routes requests but still leaves the account setup to be done manually.",
+      "C": "Escalation scripts route issues to the right people. They do not create accounts."
+    },
     "references": [],
     "source": "bank.pdf#p17",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -410,12 +576,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Tuning is the activity of adjusting the configuration or parameters of a security tool or system to optimize its performance and reduce false positives or false negatives. Tuning can help to filter out the normal or benign activity that is detected by the security tool or system, and focus on the malicious or anomalous activity that requires further investigation or response. Tuning can also help to improve the efficiency and effectiveness of the security operations center by reducing the workload and alert fatigue of the analysts. Tuning is different from aggregating, which is the activity of collecting and combining data from multiple sources or sensors to provide a comprehensive view of the security posture. Tuning is also different from quarantining, which is the activity of isolating a potentially infected or compromised device or system from the rest of the network to prevent further damage or spread. Tuning is also different from archiving, which is the activity of storing and preserving historical data or records for future reference or compliance. The act of ignoring detected activity in the future that is deemed normal by the security operations center is an example of tuning, as it involves modifying the settings or rules of the security tool or system to exclude the activity from the detection scope. Therefore, this is the best answer among the given options.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Once activity is confirmed as normal, the detection rules are adjusted so it is no longer flagged. Adjusting tools to reduce false positives is tuning.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Aggregation collects data from many sources into one place, not suppressing specific detections.",
+      "C": "Quarantining isolates a suspicious file or system -- the opposite of ignoring it.",
+      "D": "Archiving stores old data for retention. It does not change what gets detected."
+    },
     "references": [],
     "source": "bank.pdf#p18",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -448,12 +618,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A legal hold (also known as a litigation hold) is a notification sent from an organization's legal team to employees instructing them not to delete electronically stored information (ESI) or discard paper documents that may be relevant to a new or imminent legal case. A legal hold is intended to preserve evidence and prevent spoliation, which is the intentional or negligent destruction of evidence that could harm a party's case. A legal hold can be triggered by various events, such as a lawsuit, a regulatory investigation, or a subpoena.\nIn this scenario, the company's attorneys have requested that the security team initiate a legal hold in response to the lawsuit filed by the customers after the company was compromised. This means that the security team will most likely be required to retain any communications related to the security breach until further notice. This could include emails, instant messages, reports, logs, memos, or any other documents that could be relevant to the lawsuit. The security team should also inform the relevant custodians (the employees who have access to or control over the ESI) of their preservation obligations and monitor their compliance. The security team should also document the legal hold process and its scope, as well as take steps to protect the ESI from alteration, deletion, or loss.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A legal hold preserves everything relevant to the case, in any form, until the legal team releases it. That means all communications related to the breach, with no fixed end date.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A 30-day limit contradicts a legal hold, which lasts until the matter is resolved.",
+      "C": "Only covering security team members' messages is too narrow; relevant communications from anyone must be kept.",
+      "D": "Keeping every email to customers forever is both too broad and not tied to the case."
+    },
     "references": [],
     "source": "bank.pdf#p32",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -468,7 +642,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Domain name, PKI, GeolP lookup"
+        "text": "Domain name, PKI, GeoIP lookup"
       },
       {
         "key": "B",
@@ -486,14 +660,18 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "A password is something you know, an authentication token is something you have, and a thumbprint is something you are. It is the only option with one of each factor.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "A domain name is not a secret, PKI is an infrastructure, and a GeoIP lookup is a location attribute -- no real 'know' or 'are' factor.",
+      "B": "A VPN IP address and company ID are identifiers anyone could learn. Only the facial structure is a true factor.",
+      "D": "A company URL and home address are not secrets, and a TLS certificate authenticates a server, not the user."
+    },
     "references": [],
     "source": "bank.pdf#p33",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.816,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -566,12 +744,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A content filter is a device or software that blocks or allows access to web content based on predefined rules or categories. In this case, the new retail website is mistakenly categorized as gambling by the content filter, which prevents users from accessing it. To resolve this issue, the content filter's categorization needs to be updated to reflect the correct category of the website, such as shopping or retail. This will allow the content filter to allow access to the website instead of blocking it.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The content filter has put the new retail site in the wrong category (gambling). Correcting the site's categorization in the content filter lets users reach it without weakening any other control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "HTTPS is already allowed; the block comes from the content filter's category, not the firewall.",
+      "B": "IPS rules look for attack signatures, not website categories such as shopping.",
+      "C": "DLP detects sensitive data leaving the network. It is not what blocks the site."
+    },
     "references": [],
     "source": "bank.pdf#p33",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -604,12 +786,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Disabling access is an automation use case that would best enhance the security posture of an organization by rapidly updating permissions when employees leave a company. Disabling access is the process of revoking or suspending the access rights of a user account, such as login credentials, email, VPN, cloud services, etc. Disabling access can prevent unauthorized or malicious use of the account by former employees or attackers who may have compromised the account. Disabling access can also reduce the attack surface and the risk of data breaches or leaks. Disabling access can be automated by using scripts, tools, or workflows that can trigger the action based on predefined events, such as employee termination, resignation, or transfer.\nAutomation can ensure that the access is disabled in a timely, consistent, and efficient manner, without relying on manual intervention or human error.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When an employee leaves, their accounts and permissions should be switched off immediately. Automating access disabling on departure removes the delay and the forgotten accounts that manual offboarding leaves behind.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Provisioning creates resources and access, the opposite of what is needed when someone leaves.",
+      "C": "Reviewing change approvals is change management, unrelated to leavers.",
+      "D": "Escalating permission requests routes requests for more access, not removal of it."
+    },
     "references": [],
     "source": "bank.pdf#p34",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -642,57 +828,71 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SIEM stands for Security Information and Event Management. It is a security alerting and monitoring tool that collects system, application, and network logs from multiple sources in a centralized system. SIEM can analyze the collected data, correlate events, generate alerts, and provide reports and dashboards. SIEM can also integrate with other security tools and support compliance requirements. SIEM helps organizations to detect and respond to cyber threats, improve security posture, and reduce operational costs.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A SIEM collects and centralizes logs from systems, applications and network devices, correlates them and raises alerts. That is exactly the description.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "DLP monitors for sensitive data leaving the organization. It does not centralize logs from everything.",
+      "C": "An IDS monitors traffic or hosts for attacks, producing one source of alerts rather than collecting all logs.",
+      "D": "SNMP is a protocol for managing and monitoring network devices, not a central log analysis tool."
+    },
     "references": [],
     "source": "bank.pdf#p37",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0063",
+    "id": "q0062",
     "domain": 4,
     "objective": "4.2",
     "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
-    "type": "single",
-    "question": "An administrator assists the legal and compliance team with ensuring information about customer transactions is archived for the proper time period. Which of the following data policies is the administrator carrying out?",
+    "type": "multi",
+    "question": "Which of the following are cases in which an engineer should recommend the decommissioning of a network device? (Select two).",
     "choices": [
       {
         "key": "A",
-        "text": "Compromise"
+        "text": "The device has been moved from a production environment to a test environment."
       },
       {
         "key": "B",
-        "text": "Retention"
+        "text": "The device is configured to use cleartext passwords."
       },
       {
         "key": "C",
-        "text": "Analysis"
+        "text": "The device is moved to an isolated segment on the enterprise network."
       },
       {
         "key": "D",
-        "text": "Transfer"
+        "text": "The device is moved to a different location in the enterprise."
       },
       {
         "key": "E",
-        "text": "Inventory"
+        "text": "The device's encryption level cannot meet organizational standards."
+      },
+      {
+        "key": "F",
+        "text": "The device is unable to receive authorized updates."
       }
     ],
     "correct": [
-      "B"
+      "E",
+      "F"
     ],
-    "explanation": "A data retention policy is a set of rules that defines how long data should be stored and when it should be deleted or archived. An administrator assists the legal and compliance team with ensuring information about customer transactions is archived for the proper time period by following the data retention policy of the organization. This policy helps the organization to comply with legal and regulatory requirements, optimize storage space, and protect data privacy and security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Decommissioning is for problems that cannot be fixed. A device whose encryption cannot reach the organization's standard, or that can no longer receive authorized updates, will stay vulnerable no matter how it is configured, so it should be replaced.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Moving a device into a test environment is a change of use, not a reason to retire it.",
+      "B": "Cleartext passwords are a configuration choice. Change the setting to encrypted authentication rather than replacing the device.",
+      "C": "Moving a device to an isolated segment reduces risk; it does not call for removing the device.",
+      "D": "Moving a device to another location changes nothing about its security."
+    },
     "references": [],
     "source": "bank.pdf#p37",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
+    "needsReview": false,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0065",
@@ -764,12 +964,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Preparation is the phase in the incident response process when a security analyst reviews roles and responsibilities, as well as the policies and procedures for handling incidents. Preparation also involves gathering and maintaining the necessary tools, resources, and contacts for responding to incidents. Preparation can help a security analyst to be ready and proactive when an incident occurs, as well as to reduce the impact and duration of the incident. Some of the activities that a security analyst performs during the preparation phase are:",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Defining and reviewing who does what during an incident happens before any incident, in the preparation phase, along with tools, contacts and procedures.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Recovery restores systems after the threat is removed.",
+      "C": "Lessons learned reviews an incident after it closes. It may lead to role changes, but roles are set up in preparation.",
+      "D": "Analysis investigates an incident underway, when roles need to be settled already."
+    },
     "references": [],
     "source": "bank.pdf#p39",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.621,
     "needsExplanation": false,
     "keyCorrected": false
@@ -802,52 +1006,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The company should request a certification from the vendor that confirms the storage array has been disposed of securely and in compliance with the company's policies and standards. A certification provides evidence that the vendor has followed the proper procedures and methods to destroy the classified data and prevent unauthorized access or recovery. A certification may also include details such as the date, time, location, and method of disposal, as well as the names and signatures of the personnel involved.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When a vendor disposes of classified media, the company needs proof it was done properly. A certificate of destruction or sanitization documents what was destroyed, how and when.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An inventory list shows what was handed over, but not that it was destroyed securely.",
+      "C": "Classification is set by the data owner. The vendor does not provide it.",
+      "D": "Proof of ownership establishes who owns the asset, not that it was disposed of correctly."
+    },
     "references": [],
     "source": "bank.pdf#p39",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0069",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "A company's marketing department collects, modifies, and stores sensitive customer data. The infrastructure team is responsible for securing the data while in transit and at rest. Which of the following data roles describes the customer?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Processor"
-      },
-      {
-        "key": "B",
-        "text": "Custodian"
-      },
-      {
-        "key": "C",
-        "text": "Subject"
-      },
-      {
-        "key": "D",
-        "text": "Owner"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p40",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": true,
     "keyCorrected": false
   },
   {
@@ -878,13 +1048,101 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Full packet capture is a technique that records all network traffic passing through a device, such as a router or firewall. It allows for detailed analysis and investigation of network events, such as SQLi attacks, by providing the complete content and context of the packets. Full packet capture can help identify the source, destination, payload, and timing of an SQLi attack, as well as the impact on the server and database. Logging NetFlow traffic, network traffic sensors, and endpoint and OS-specific security logs can provide some information about network activity, but they do not capture the full content of the packets, which may limit the scope and depth of the investigation.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Investigating SQL injection needs the actual requests the attacker sent. Full packet capture on the servers' traffic, made readable by the existing SSL decryption, records complete payloads for detection and later investigation.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "NetFlow records metadata such as addresses and volumes, not the SQL payloads needed to investigate the attack.",
+      "B": "Sensors on the same subnet say where to watch, but not what is recorded; without full capture the payloads are still lost.",
+      "C": "Endpoint and OS logs rarely record the web requests that carry an injection."
+    },
     "references": [],
     "source": "bank.pdf#p41",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.765,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0077",
+    "domain": 4,
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
+    "type": "single",
+    "question": "A systems administrator is creating a script that would save time and prevent human error when performing account creation for a large number of end users. Which of the following would be a good use case for this task?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Off-the-shelf software"
+      },
+      {
+        "key": "B",
+        "text": "Orchestration"
+      },
+      {
+        "key": "C",
+        "text": "Baseline"
+      },
+      {
+        "key": "D",
+        "text": "Policy enforcement"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Scripting a repetitive, multi-step task such as creating accounts for many users, to save time and remove human error, is orchestration -- automation coordinated across systems.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Off-the-shelf software is a purchased product, not a use case for a script the administrator writes.",
+      "C": "A baseline is the standard configuration systems are measured against.",
+      "D": "Policy enforcement ensures rules are followed; it does not describe bulk account creation."
+    },
+    "references": [],
+    "source": "bank.pdf#p43",
+    "needsReview": false,
+    "inferenceConfidence": 0.333,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0078",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "After an audit, an administrator discovers all users have access to confidential data on a file server. Which of the following should the administrator use to restrict access to the data quickly?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Group Policy"
+      },
+      {
+        "key": "B",
+        "text": "Content filtering"
+      },
+      {
+        "key": "C",
+        "text": "Data loss prevention"
+      },
+      {
+        "key": "D",
+        "text": "Access control lists"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "File server access is governed by the permissions on the files and folders. Editing the access control lists to allow only authorized users restricts the confidential data immediately.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Group Policy manages computer and user settings in a domain. It is not the direct way to change who can open specific files.",
+      "B": "Content filtering controls web access, not file server permissions.",
+      "C": "DLP watches data leaving; it does not stop users opening files they have permission to."
+    },
+    "references": [],
+    "source": "bank.pdf#p43",
+    "needsReview": false,
+    "inferenceConfidence": 0.237,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -916,14 +1174,60 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "The exhibits (not reproduced in the source) show the scanner flagging Telnet as an insecure protocol, and the analyst's follow-up test showing the Telnet server supports encryption. The risk the scanner reported is mitigated by another measure, so compensating controls exist; some sources call it a false positive instead.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Telnet really is running on the port, so the finding is accurate; what the test shows is a mitigation.",
+      "B": "A rescan would report the same finding. The analyst's manual test already answered the question.",
+      "C": "Noise means irrelevant alerts. An exposed Telnet service is a relevant finding."
+    },
     "references": [],
     "source": "bank.pdf#p45",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.706,
-    "needsExplanation": true,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0085",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "Which of the following actions could a security engineer take to ensure workstations and servers are properly monitored for unauthorized changes and software?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Configure all systems to log scheduled tasks."
+      },
+      {
+        "key": "B",
+        "text": "Collect and monitor all traffic exiting the network."
+      },
+      {
+        "key": "C",
+        "text": "Block traffic based on known malicious signatures."
+      },
+      {
+        "key": "D",
+        "text": "Install endpoint management software on all systems."
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Endpoint management software sits on every workstation and server and reports configuration changes and installed software centrally, so unauthorized changes are spotted.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Logging scheduled tasks catches one persistence method, not changes and software generally.",
+      "B": "Monitoring traffic leaving the network does not show what changed on a host.",
+      "C": "Blocking known malicious signatures stops known threats but does not monitor for unauthorized changes."
+    },
+    "references": [],
+    "source": "bank.pdf#p46",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -954,12 +1258,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A tabletop exercise is a simulated scenario that tests the organization's incident response plan and procedures. It involves key stakeholders and decision-makers who discuss their roles and actions in response to a hypothetical incident. It can help identify gaps, weaknesses, and improvement areas in the incident response process. It can also enhance communication, coordination, and collaboration among the participants.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A tabletop exercise walks the incident response team through a realistic scenario in discussion, exposing gaps in the plan and in roles without disrupting systems. It is the standard way to improve the process.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Replication copies data for redundancy; it is not an exercise.",
+      "C": "Failover testing checks that redundant systems take over. It tests infrastructure, not the incident response process.",
+      "D": "Recovery is a phase of incident response, not an exercise format."
+    },
     "references": [],
     "source": "bank.pdf#p47",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.824,
     "needsExplanation": false,
     "keyCorrected": false
@@ -992,12 +1300,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CVSS stands for Common Vulnerability Scoring System, which is a framework that provides a standardized way to assess and communicate the severity and risk of vulnerabilities. CVSS uses a set of metrics and formulas to calculate a numerical score ranging from 0 to 10, where higher scores indicate higher criticality. CVSS can help organizations prioritize remediation efforts and compare vulnerabilities across different systems and vendors. The other options are not used to measure the criticality of a vulnerability, but rather to identify, classify, or report them.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The Common Vulnerability Scoring System gives each vulnerability a numeric score from 0 to 10 based on factors such as exploitability and impact -- a quantitative measure of criticality.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CVE gives each vulnerability a unique identifier. It does not score severity.",
+      "C": "The CIA triad (confidentiality, integrity, availability) is a set of security goals, not a scoring system.",
+      "D": "CERT teams coordinate responses and publish advisories; they are not a scoring system."
+    },
     "references": [],
     "source": "bank.pdf#p50",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1005,8 +1317,8 @@ export const domain4Questions = [
   {
     "id": "q0105",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A security analyst locates a potentially malicious video file on a server and needs to identify both the creation date and the file's creator. Which of the following actions would most likely give the security analyst the information required?",
     "choices": [
@@ -1030,12 +1342,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Metadata is data that describes other data, such as its format, origin, creation date, author, and other attributes. Video files, like other types of files, can contain metadata that can provide useful information for forensic analysis. For example, metadata can reveal the camera model, location, date and time, and software used to create or edit the video file. To query the file's metadata, a security analyst can use various tools, such as MediaInfo, ffprobe, or hexdump, to extract and display the metadata from the video file. By querying the file's metadata, the security analyst can most likely identify both the creation date and the file's creator, as well as other relevant information. Obtaining the file's SHA-256 hash, checking endpoint logs, or using hexdump on the file's contents are other possible actions, but they are not the most appropriate to answer the question. The file's SHA-256 hash is a cryptographic value that can be used to verify the integrity or uniqueness of the file, but it does not reveal any information about the file's creation date or creator. Checking endpoint logs can provide some clues about the file's origin or activity, but it may not be reliable or accurate, especially if the logs are tampered with or incomplete. Using hexdump on the file's contents can show the raw binary data of the file, but it may not be easy or feasible to interpret the metadata from the hex output, especially if the file is large or encrypted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Metadata is data about the file itself, including when it was created and by whom (or which account and device). Querying it gives the analyst both answers directly.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A hash identifies the file's contents for integrity or reputation lookups, but says nothing about creation date or creator.",
+      "B": "A hex dump shows raw bytes and would require manually decoding the metadata anyway.",
+      "C": "Endpoint logs may show activity, but not who originally created a file that may have come from elsewhere."
+    },
     "references": [],
     "source": "bank.pdf#p54",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1043,8 +1359,8 @@ export const domain4Questions = [
   {
     "id": "q0106",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "After a recent vulnerability scan, a security engineer needs to harden the routers within the corporate network. Which of the following is the most appropriate to disable?",
     "choices": [
@@ -1068,12 +1384,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Web-based administration is a feature that allows users to configure and manage routers through a web browser interface. While this feature can provide convenience and ease of use, it can also pose a security risk, especially if the web interface is exposed to the internet or uses weak authentication or encryption methods. Web-based administration can be exploited by attackers to gain unauthorized access to the router's settings, firmware, or data, or to launch attacks such as cross-site scripting (XSS) or cross-site request forgery (CSRF). Therefore, disabling web-based administration is a good practice to harden the routers within the corporate network. Console access, routing protocols, and VLANs are other features that can be configured on routers, but they are not the most appropriate to disable for hardening purposes. Console access is a physical connection to the router that requires direct access to the device, which can be secured by locking the router in a cabinet or using a strong password. Routing protocols are essential for routers to exchange routing information and maintain network connectivity, and they can be secured by using authentication or encryption mechanisms. VLANs are logical segments of a network that can enhance network performance and security by isolating traffic and devices, and they can be secured by using VLAN access control lists (VACLs) or private VLANs (PVLANs).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Web-based administration adds a network-facing interface -- often HTTP with weak authentication and its own vulnerabilities -- that is not needed if administrators use secure methods such as SSH. Disabling it removes a common attack surface.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Console access is physical and local, and is needed for recovery. It is not a remote attack surface.",
+      "B": "Routing protocols are what a router is for; disabling them breaks the network.",
+      "C": "VLANs segment traffic and improve security. Disabling them makes things worse."
+    },
     "references": [],
     "source": "bank.pdf#p55",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1081,8 +1401,8 @@ export const domain4Questions = [
   {
     "id": "q0108",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
     "question": "An enterprise has been experiencing attacks focused on exploiting vulnerabilities in older browser versions with well-known exploits. Which of the following security solutions should be configured to best provide the ability to monitor and block these known signature-based attacks?",
     "choices": [
@@ -1106,12 +1426,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An intrusion prevention system (IPS) is a security device that monitors network traffic and blocks or modifies malicious packets based on predefined rules or signatures. An IPS can prevent attacks that exploit known vulnerabilities in older browser versions by detecting and dropping the malicious packets before they reach the target system. An IPS can also perform other functions, such as rate limiting, encryption, or redirection.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Known exploits have known signatures. An intrusion prevention system sits inline, matches traffic against those signatures and blocks it -- monitoring and blocking in one control.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An ACL filters by addresses and ports; it cannot recognize exploit signatures.",
+      "B": "DLP looks for sensitive data leaving, not exploits arriving.",
+      "C": "An IDS detects signatures but only alerts; it cannot block."
+    },
     "references": [],
     "source": "bank.pdf#p55",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1153,13 +1477,60 @@ export const domain4Questions = [
       "A",
       "C"
     ],
-    "explanation": "Federation is an access management concept that allows users to authenticate once and access multiple resources or services across different domains or organizations. Federation relies on a trusted third party that stores the user's credentials and provides them to the requested resources or services without exposing them. Password complexity is a security measure that requires users to create passwords that meet certain criteria, such as length, character types, and uniqueness. Password complexity can help prevent brute-force attacks, password guessing, and credential stuffing by making passwords harder to crack or guess.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The ten-character rule with numbers, letters and special characters is password complexity, protecting the intranet account. Using that one account to reach other company sites is federation -- trusting one identity across multiple services.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Identity proofing verifies who someone is before creating an account, such as checking ID documents.",
+      "D": "Changing default passwords applies to devices and preset accounts, not a new password the employee creates.",
+      "E": "A password manager stores many passwords; here one identity is reused across sites.",
+      "F": "OAuth ('open authorization') delegates access between services; the scenario describes federated identity."
+    },
     "references": [],
     "source": "bank.pdf#p56",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.542,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0112",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A hacker gained access to a system via a phishing attempt that was a direct result of a user clicking a suspicious link. The link laterally deployed ransomware, which laid dormant for multiple weeks, across the network. Which of the following would have mitigated the spread?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IPS"
+      },
+      {
+        "key": "B",
+        "text": "IDS"
+      },
+      {
+        "key": "C",
+        "text": "WAF"
+      },
+      {
+        "key": "D",
+        "text": "UAT"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The ransomware spread laterally across the network and sat dormant for weeks. An intrusion prevention system inspecting internal traffic can recognize and block that lateral movement, containing the spread.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "An IDS could detect the spread but only alerts; it cannot stop it.",
+      "C": "A web application firewall protects web applications from HTTP attacks, not lateral malware movement.",
+      "D": "User acceptance testing validates software features before release; it is not a security control."
+    },
+    "references": [],
+    "source": "bank.pdf#p58",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1185,18 +1556,22 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Access list outbound permit 10.50.10.25 32 0.0.0.0/0 port 53 Access list outbound deny 0.0.0.0.0.0.0.0.0/0 port 53"
+        "text": "Access list outbound permit 10.50.10.25 32 0.0.0.0/0 port 53 Access list outbound deny 0.0.0.0 0 0.0.0.0/0 port 53"
       }
     ],
     "correct": [
       "D"
     ],
-    "explanation": "The correct answer is D because it allows only the device with the IP address 10.50.10.25 to send outbound DNS requests on port 53, and denies all other devices from doing so. The other options are incorrect because they either allow all devices to send outbound DNS requests (A and C), or they allow no devices to send outbound DNS requests (B).",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Firewall rules are processed top-down. The first rule must permit DNS (port 53) from the single host 10.50.10.25/32 to any destination, and the second must deny DNS from every other source. Only this option has that order and direction.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Permitting all sources first lets every host through; the deny rule is never reached.",
+      "B": "The permit rule has source and destination reversed, allowing traffic to 10.50.10.25 rather than from it.",
+      "C": "Permitting all sources first again allows everyone, and the deny rule targets the wrong direction."
+    },
     "references": [],
     "source": "bank.pdf#p59",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1229,12 +1604,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SSO stands for single sign-on, which is a method of authentication that allows users to access multiple applications or services with one set of credentials. SSO reduces the number of credentials employees need to maintain and simplifies the login process. SSO can also improve security by reducing the risk of password reuse, phishing, and credential theft. SSO can be implemented using various protocols, such as SAML, OAuth, OpenID Connect, and Kerberos, that enable the exchange of authentication information between different domains or systems.\nSSO is commonly used for accessing SaaS applications, such as Office 365, Google Workspace, Salesforce, and others, using domain credentials.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Single sign-on lets employees use their existing domain credentials to log in to the SaaS application, typically through federation with SAML or OpenID Connect. It reduces the number of credentials they need.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "LEAP is an old, insecure wireless authentication protocol.",
+      "C": "MFA adds more authentication factors; it does not reduce the number of credentials.",
+      "D": "PEAP protects EAP authentication for wireless and 802.1X networks, not SaaS logins."
+    },
     "references": [],
     "source": "bank.pdf#p60",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1267,98 +1646,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The correct answer is A because multifactor authentication (MFA) is a method of verifying a user's identity by requiring more than one factor, such as something the user knows (e.g., password), something the user has (e.g., token), or something the user is (e.g., biometric). MFA can prevent unauthorized access even if the user's password is compromised, as the attacker would need to provide another factor to log in. The other options are incorrect because they do not address the root cause of the attack, which is weak authentication. Permissions assignment (B) is the process of granting or denying access to resources based on the user's role or identity.\nAccess management is the process of controlling who can access what and under what conditions. Password complexity (D) is the requirement of using strong passwords that are hard to guess or crack, but it does not prevent an attacker from using a stolen password.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The attackers had the users' passwords. Multifactor authentication requires something besides the password, so stolen passwords alone would no longer be enough to log in.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Changing permissions limits what an account can do, not whether an attacker can log in with it.",
+      "C": "Access management is the broad discipline; MFA is the specific control that stops stolen passwords working.",
+      "D": "Stronger passwords help against guessing, but not against passwords that have already been stolen."
+    },
     "references": [],
     "source": "bank.pdf#p62",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0123",
-    "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
-    "type": "multi",
-    "question": "Several employees received a fraudulent text message from someone claiming to be the Chief Executive Officer (CEO). The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to following email address.\"\nWhich of the following are the best responses to this situation? (Choose two).",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Cancel current employee recognition gift cards."
-      },
-      {
-        "key": "B",
-        "text": "Add a smishing exercise to the annual company training."
-      },
-      {
-        "key": "C",
-        "text": "Issue a general email warning to the company."
-      },
-      {
-        "key": "D",
-        "text": "Have the CEO change phone numbers."
-      },
-      {
-        "key": "E",
-        "text": "Conduct a forensic investigation on the CEO's phone."
-      },
-      {
-        "key": "F",
-        "text": "Implement mobile device management."
-      }
-    ],
-    "correct": [
-      "B",
-      "C"
-    ],
-    "explanation": "This situation is an example of smishing, which is a type of phishing that uses text messages (SMS) to entice individuals into providing personal or sensitive information to cybercriminals. The best responses to this situation are to add a smishing exercise to the annual company training and to issue a general email warning to the company. A smishing exercise can help raise awareness and educate employees on how to recognize and avoid smishing attacks. An email warning can alert employees to the fraudulent text message and remind them to verify the identity and legitimacy of any requests for information or money.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p62",
-    "needsReview": true,
-    "inferenceConfidence": 0.643,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0139",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
-    "type": "single",
-    "question": "A systems administrator receives the following alert from a file integrity monitoring tool:\nThe hash of the cmd.exe file has changed.\nThe systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "The end user changed the file permissions."
-      },
-      {
-        "key": "B",
-        "text": "A cryptographic collision was detected."
-      },
-      {
-        "key": "C",
-        "text": "A snapshot of the file system was taken."
-      },
-      {
-        "key": "D",
-        "text": "A rootkit was deployed."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "A rootkit is a type of malware that modifies or replaces system files or processes to hide its presence and activity. A rootkit can change the hash of the cmd.exe file, which is a command-line interpreter for Windows systems, to avoid detection by antivirus or file integrity monitoring tools. A rootkit can also grant the attacker remote access and control over the infected system, as well as perform malicious actions such as stealing data, installing backdoors, or launching attacks on other systems. A rootkit is one of the most difficult types of malware to remove, as it can persist even after rebooting or reinstalling the OS.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p68",
-    "needsReview": true,
-    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1390,12 +1688,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "http:// is an insecure protocol running on port 80 that uses unencrypted traceable data for communication on uncertified, & unprotected websites. It is indicated that you are on one of these insecure websites by a warning, or lack of padlock in your web search URL.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Unencrypted websites are the ones reached over plain HTTP, so their URLs begin with http://. Blocking that string blocks non-encrypted sites while still allowing https://.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "'encryption=off' is not a standard part of URLs, so it would match almost nothing.",
+      "C": "www.*.com matches most commercial sites regardless of encryption.",
+      "D": ":443 is the HTTPS port -- blocking it would block encrypted sites instead."
+    },
     "references": [],
     "source": "bank.pdf#p69",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1428,51 +1730,17 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "/32 would cover all possible subnets, & their communicating devices within the IP range, & destination 0.0.0.0/0 would cover the gateway surface of your network.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "To stop the malicious host reaching the network, the inbound rule must deny traffic whose source is 10.1.4.9/32 (that single address) to any destination (0.0.0.0/0).",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "This denies traffic going to 10.1.4.9, not traffic coming from it.",
+      "C": "This permits the malicious address -- the opposite of the goal.",
+      "D": "This permits traffic to the malicious address and blocks nothing."
+    },
     "references": [],
     "source": "bank.pdf#p69",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0143",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "A company needs to provide administrative access to internal resources while minimizing the traffic allowed through the security boundary. Which of the following methods is most secure?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Implementing a bastion host"
-      },
-      {
-        "key": "B",
-        "text": "Deploying a perimeter network"
-      },
-      {
-        "key": "C",
-        "text": "Installing a WAF"
-      },
-      {
-        "key": "D",
-        "text": "Utilizing single sign-on"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "Implementing a bastion host provides a highly secure method for administrative access to internal resources while minimizing traffic through the security boundary. It serves as a single entry point for remote administrative access, enforcing strong authentication and access controls before allowing access to internal systems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p70",
-    "needsReview": true,
-    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1504,13 +1772,69 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A bug bounty is a program that rewards security researchers for finding and reporting vulnerabilities in an application or system. Bug bounties are often used by companies to improve their security posture and incentivize ethical hacking. A bug bounty program typically defines the scope, rules, and compensation for the researchers.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Inviting outside researchers to test the application and paying them per valid vulnerability found is a bug bounty program.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Open-source intelligence is gathering publicly available information, not paid vulnerability testing.",
+      "C": "A red team is a hired or internal group simulating attackers, not open participation paid per finding.",
+      "D": "A penetration test is a contracted engagement paid for the work, not per vulnerability by anyone who participates."
+    },
     "references": [],
     "source": "bank.pdf#p71",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.75,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0150",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "multi",
+    "question": "A company has begun labeling all laptops with asset inventory stickers and associating them with employee IDs. Which of the following security benefits do these actions provide? (Choose two.)",
+    "choices": [
+      {
+        "key": "A",
+        "text": "If a security incident occurs on the device, the correct employee can be notified."
+      },
+      {
+        "key": "B",
+        "text": "The security team will be able to send user awareness training to the appropriate device."
+      },
+      {
+        "key": "C",
+        "text": "Users can be mapped to their devices when configuring software MFA tokens."
+      },
+      {
+        "key": "D",
+        "text": "User-based firewall policies can be correctly targeted to the appropriate laptops."
+      },
+      {
+        "key": "E",
+        "text": "When conducting penetration testing, the security team will be able to target the desired laptops."
+      },
+      {
+        "key": "F",
+        "text": "Company data can be accounted for when the employee leaves the organization."
+      }
+    ],
+    "correct": [
+      "A",
+      "F"
+    ],
+    "explanation": "Tying each asset tag to an employee means that if something happens on a laptop, the right person can be contacted, and when an employee leaves, the company knows which device -- and data -- must be returned.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Training is sent to users, not devices, and does not depend on asset tags.",
+      "C": "Software MFA tokens are tied to user accounts, not to stickers on laptops.",
+      "D": "User-based firewall policies follow the user's identity, not a physical label.",
+      "E": "Penetration testers target systems by network identity; asset stickers do not help them."
+    },
+    "references": [],
+    "source": "bank.pdf#p72",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1542,51 +1866,59 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A dashboard is a graphical user interface that provides a visual representation of key performance indicators, metrics, and trends related to security events and incidents. A dashboard can help the board of directors to understand the number and impact of incidents that affected the organization in a given period, as well as the status and effectiveness of the security controls and processes. A dashboard can also allow the board of directors to drill down into specific details or filter the data by various criteria.\nA packet capture is a method of capturing and analyzing the network traffic that passes through a device or a network segment. A packet capture can provide detailed information about the source, destination, protocol, and content of each packet, but it is not a suitable way to present a summary of incidents to the board of directors.\nA vulnerability scan is a process of identifying and assessing the weaknesses and exposures in a system or a network that could be exploited by attackers. A vulnerability scan can help the organization to prioritize and remediate the risks and improve the security posture, but it is not a relevant way to report the number of incidents that occurred in a quarter14. Metadata is data that describes other data, such as its format, origin, structure, or context. Metadata can provide useful information about the characteristics and properties of data, but it is not a meaningful way to communicate the impact and frequency of incidents to the board of directors.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "A board needs a clear, high-level view of incident counts over time. A dashboard summarizes metrics visually and suits a quarterly executive report.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Packet captures are raw network data, far too detailed for a board.",
+      "B": "Vulnerability scans list weaknesses, not incidents.",
+      "C": "Metadata describes data; it is not a way to present incident trends."
+    },
     "references": [],
     "source": "bank.pdf#p73",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0157",
+    "id": "q0156",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company's public-facing website, https://www.organization.com, has an IP address of 166.18.75.6. However, over the past hour the SOC has received reports of the site's homepage displaying incorrect information. A quick nslookup search shows https://www.organization.com is pointing to 151.191.122.115. Which of the following is occurring?",
+    "question": "Local guidelines require that all information systems meet a minimum security baseline to be compliant. Which of the following can security administrators use to assess their system configurations against the baseline?",
     "choices": [
       {
         "key": "A",
-        "text": "DoS attack"
+        "text": "SOAR playbook"
       },
       {
         "key": "B",
-        "text": "ARP poisoning"
+        "text": "Security control matrix"
       },
       {
         "key": "C",
-        "text": "DNS spoofing"
+        "text": "Risk management framework"
       },
       {
         "key": "D",
-        "text": "NXDOMAIN attack"
+        "text": "Benchmarks"
       }
     ],
     "correct": [
-      "C"
+      "D"
     ],
-    "explanation": "Domain Name Server (DNS) spoofing, or DNS cache poisoning, is an attack involving manipulating DNS records to redirect users toward a fraudulent, malicious website that may resemble the user's intended destination.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Benchmarks such as the CIS Benchmarks are detailed, published secure-configuration standards. Scanning systems against them shows exactly where settings fall short of the required baseline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A SOAR playbook automates incident response steps; it does not assess configurations.",
+      "B": "A security control matrix maps controls to requirements, but does not check actual system settings.",
+      "C": "A risk management framework is a process for managing risk overall, not a configuration check."
+    },
     "references": [],
-    "source": "bank.pdf#p75",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "bank.pdf#p74",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1638,6 +1970,90 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0161",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A security analyst needs to harden access to a network. One of the requirements is to authenticate users with smart cards. Which of the following should the analyst enable to best meet this requirement?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "CHAP"
+      },
+      {
+        "key": "B",
+        "text": "PEAP"
+      },
+      {
+        "key": "C",
+        "text": "MS-CHAPv2"
+      },
+      {
+        "key": "D",
+        "text": "EAP-TLS"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "EAP-TLS authenticates users with certificates, which is exactly what a smart card holds. It is the 802.1X method designed for certificate- and smart-card-based network authentication.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "CHAP is a challenge-response password protocol with no certificate support.",
+      "B": "PEAP protects password-based inner authentication inside a TLS tunnel; the user still logs in with a password.",
+      "C": "MS-CHAPv2 is password-based and has known weaknesses."
+    },
+    "references": [],
+    "source": "bank.pdf#p76",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0162",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "A recent malware outbreak across a subnet included successful rootkit installations on many PCs, ensuring persistence by rendering remediation efforts ineffective. Which of the following would best detect the presence of a rootkit in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "FDE"
+      },
+      {
+        "key": "B",
+        "text": "NIDS"
+      },
+      {
+        "key": "C",
+        "text": "EDR"
+      },
+      {
+        "key": "D",
+        "text": "DLP"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Rootkits hide from normal tools, so detecting them takes deep visibility on the host itself. EDR monitors endpoint behaviour continuously and can spot the tampering and persistence techniques rootkits use.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Full disk encryption protects data at rest; it does not detect malware.",
+      "B": "A network IDS sees traffic, not what is hidden inside each host's operating system.",
+      "D": "DLP watches for sensitive data leaving, not malware on endpoints."
+    },
+    "references": [],
+    "source": "bank.pdf#p76",
+    "needsReview": false,
+    "inferenceConfidence": 0.286,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0165",
     "domain": 4,
     "objective": "4.6",
@@ -1665,13 +2081,101 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "It's using sign-in credentials from OTHER popular websites. An example of this would be logging into CompTIA using a google/gmail account. OpenID uses SSO. However, SSO is more broad and I feel OpenID perfectly fits this scenario.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "OpenID (OpenID Connect) lets users sign in with an account from another provider, such as a well-known email or social platform, instead of creating new credentials. That is what 'log in with other popular websites' describes.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SSO is the broad concept; OpenID is the specific standard for signing in with third-party identities.",
+      "B": "CHAP is a password challenge-response protocol for network connections.",
+      "C": "802.1X controls access to network ports, not logins to web applications."
+    },
     "references": [],
     "source": "bank.pdf#p77",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0169",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "Which of the following is used to protect a computer from viruses, malware, and Trojans being installed and moving laterally across the network?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "IDS"
+      },
+      {
+        "key": "B",
+        "text": "ACL"
+      },
+      {
+        "key": "C",
+        "text": "EDR"
+      },
+      {
+        "key": "D",
+        "text": "NAC"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "EDR protects endpoints by detecting and blocking malware as it tries to install, and by stopping it spreading from host to host.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IDS detects suspicious traffic but cannot block anything or protect the host.",
+      "B": "An ACL filters traffic by address or port; it cannot recognize malware.",
+      "D": "NAC decides which devices may join the network, not what runs on them."
+    },
+    "references": [],
+    "source": "bank.pdf#p79",
+    "needsReview": false,
+    "inferenceConfidence": 0.429,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0175",
+    "domain": 4,
+    "objective": "4.2",
+    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "type": "single",
+    "question": "Which of the following would help ensure a security analyst is able to accurately measure the overall risk to an organization when a new vulnerability is disclosed?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "A full inventory of all hardware and software"
+      },
+      {
+        "key": "B",
+        "text": "Documentation of system classifications"
+      },
+      {
+        "key": "C",
+        "text": "A list of system owners and their departments"
+      },
+      {
+        "key": "D",
+        "text": "Third-party risk assessment documentation"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "To know how exposed the organization is to a new vulnerability, the analyst must know where the affected hardware and software are. A complete asset inventory makes that possible; without it, affected systems are missed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "System classifications help prioritize, but not if you do not know which systems run the vulnerable software.",
+      "C": "System owners tell you whom to contact, not which systems are affected.",
+      "D": "Third-party risk assessments cover vendors, not the organization's own exposure."
+    },
+    "references": [],
+    "source": "bank.pdf#p81",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1703,12 +2207,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A group policy object (GPO) is a mechanism for applying configuration settings to computers and users in an Active Directory domain. By pushing a GPO update, the systems administrator can quickly and uniformly enforce the new password policy across all systems in the domain.\nDeploying PowerShell scripts, enabling PAP, and updating EDR profiles are not the most efficient or effective ways to change the password policy within an enterprise environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "In an Active Directory environment, a password policy is set in a Group Policy Object and pushed to every domain-joined system at once -- the fastest, most consistent method.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "PowerShell scripts could do it, but would need distributing and running everywhere -- slower and less reliable than Group Policy.",
+      "C": "PAP is an old, insecure authentication protocol that sends passwords in cleartext.",
+      "D": "EDR profiles govern threat detection, not password policies."
+    },
     "references": [],
     "source": "bank.pdf#p82",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1771,7 +2279,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following incident response activities ensures evidence is properly handied?",
+    "question": "Which of the following incident response activities ensures evidence is properly handled?",
     "choices": [
       {
         "key": "A",
@@ -1793,51 +2301,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Chain of custody is the process of documenting and preserving the integrity of evidence collected during an incident response. It involves recording the details of each person who handled the evidence, the time and date of each transfer, and the location where the evidence was stored.\nChain of custody ensures that the evidence is admissible in legal proceedings and can be traced back to its source. E-discovery, legal hold, and preservation are related concepts, but they do not ensure evidence is properly handled.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Chain of custody documents everyone who handled a piece of evidence, when and why, from collection onward. It proves the evidence was handled properly and not tampered with.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "E-discovery is collecting electronic information for legal cases, not documenting evidence handling.",
+      "C": "A legal hold stops relevant data being deleted, but does not track who handled the evidence.",
+      "D": "Preservation keeps evidence intact, but chain of custody is what documents proper handling."
+    },
     "references": [],
     "source": "bank.pdf#p84",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0191",
+    "id": "q0189",
     "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A technician is deploying a new security camera. Which of the following should the technician do?",
+    "question": "An engineer moved to another team and is unable to access the new team's shared folders while still being able to access the shared folders from the former team. After opening a ticket, the engineer discovers that the account was never moved to the new group. Which of the following access controls is most likely causing the lack of access?",
     "choices": [
       {
         "key": "A",
-        "text": "Configure the correct VLAN."
+        "text": "Role-based"
       },
       {
         "key": "B",
-        "text": "Perform a vulnerability scan."
+        "text": "Discretionary"
       },
       {
         "key": "C",
-        "text": "Disable unnecessary ports."
+        "text": "Time of day"
       },
       {
         "key": "D",
-        "text": "Conduct a site survey."
+        "text": "Least privilege"
       }
     ],
     "correct": [
-      "D"
+      "A"
     ],
-    "explanation": "Conducting a site survey is crucial when deploying new security cameras because it allows the technician to assess various factors such as the physical environment, potential obstacles, optimal camera placement, coverage areas, and lighting conditions. This ensures that the security camera is installed in the most effective location to fulfill its surveillance objectives.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Access here follows group membership: the engineer's account still sits in the old team's group and was never added to the new one, so their access still reflects the old role. That is role-based access control.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Discretionary access control lets owners grant access to individuals; here access depends on group membership.",
+      "C": "Time-of-day restrictions depend on when access is attempted, not group membership.",
+      "D": "Least privilege is a principle; the mechanism giving the wrong access is role-based group membership."
+    },
     "references": [],
-    "source": "bank.pdf#p88",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
+    "source": "bank.pdf#p87",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1878,12 +2394,17 @@ export const domain4Questions = [
       "D",
       "E"
     ],
-    "explanation": "Network logs (Option D): These logs can help identify network connections to the command-and- control server and provide information about source IP addresses (the impacted host) and destination IP addresses (the command-and-control server).\nFirewall logs (Option E): Firewall logs also track network traffic and can provide valuable information about source and destination IP addresses, helping identify the impacted host and its communication with the command-and-control server.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Command-and-control traffic travels over the network to an external server. Network and firewall logs record the internal source address of connections to that server, identifying which host is infected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Application logs record events inside software, not which host contacted an outside server.",
+      "B": "Authentication logs show logins, not network connections to a C2 server.",
+      "C": "DHCP logs map IP addresses to devices once you have an address, but do not reveal which host talked to the C2 server.",
+      "F": "Database logs record queries and access to the database."
+    },
     "references": [],
     "source": "bank.pdf#p88",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -1925,14 +2446,19 @@ export const domain4Questions = [
       "B",
       "E"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Before the laptop goes to someone else, the old data must be sanitized so it cannot be recovered, and the sanitization should be certified -- documented as properly done.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Retention keeps data for a required period. The laptop's data needs removing, not keeping.",
+      "C": "Destruction would ruin the laptop that is being reissued.",
+      "D": "Classification labels data by sensitivity; it does not prepare a device for reuse.",
+      "F": "Enumeration lists resources; it does not handle data."
+    },
     "references": [],
     "source": "bank.pdf#p89",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.875,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -1963,14 +2489,18 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "A": "Full disk encryption protects data if the disk is stolen, but not from modification by users with access.",
+      "B": "Network access control decides which devices may connect, not whether files change.",
+      "D": "User behaviour analytics spots unusual user activity, but does not track changes to specific files."
+    },
     "references": [],
     "source": "bank.pdf#p90",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.73,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2001,12 +2531,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Patch availability most impacts an administrator's ability to address Common Vulnerabilities and Exposures (CVEs) discovered on a server. If a patch is not available for a discovered vulnerability, the administrator cannot remediate the issue directly through patching, which leaves the system exposed until a patch is released.\nPatch availability: Directly determines whether a discovered vulnerability can be fixed promptly.\nWithout available patches, administrators must look for other mitigation strategies.\nRescanning requirements: Important for verifying the effectiveness of patches but secondary to the availability of the patches themselves.\nOrganizational impact: Considers the potential consequences of vulnerabilities but does not directly impact the ability to apply patches.\nRisk tolerance: Influences how the organization prioritizes addressing vulnerabilities but does not affect the actual availability of patches.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Fixing a CVE usually means applying the vendor's patch. If no patch exists, the administrator can only work around the problem, so patch availability most determines whether it can be addressed.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Rescanning confirms fixes afterwards; it does not limit the ability to fix.",
+      "C": "Organizational impact affects timing and prioritization, but a fix can be scheduled if one exists.",
+      "D": "Risk tolerance decides which vulnerabilities to prioritize, not whether they can be fixed."
+    },
     "references": [],
     "source": "bank.pdf#p91",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2039,14 +2573,18 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": null,
-    "explanationSource": null,
-    "incorrectExplanations": {},
+    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "SNMP traps are status alerts from network devices, not content inspection.",
+      "C": "SCAP automates configuration and vulnerability checks, not monitoring what is emailed.",
+      "D": "An IPS blocks attacks coming in, not sensitive files going out."
+    },
     "references": [],
     "source": "bank.pdf#p93",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
-    "needsExplanation": true,
+    "needsExplanation": false,
     "keyCorrected": false
   },
   {
@@ -2088,44 +2626,6 @@ export const domain4Questions = [
     "source": "bank.pdf#p98",
     "needsReview": false,
     "inferenceConfidence": 0.474,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0221",
-    "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
-    "type": "single",
-    "question": "An organization is required to maintain financial data records for three years and customer data for five years. Which of the following data management policies should the organization implement?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Retention"
-      },
-      {
-        "key": "B",
-        "text": "Destruction"
-      },
-      {
-        "key": "C",
-        "text": "Inventory"
-      },
-      {
-        "key": "D",
-        "text": "Certification"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The organization should implement a retention policy to ensure that financial data records are kept for three years and customer data for five years. A retention policy specifies how long different types of data should be maintained and when they should be deleted.\nRetention: Ensures that data is kept for a specific period to comply with legal, regulatory, or business requirements.\nDestruction: Involves securely deleting data that is no longer needed, which is part of the retention lifecycle but not the primary focus here.\nInventory: Involves keeping track of data assets, not specifically about how long to retain data.\nCertification: Ensures that processes and systems meet certain standards, not directly related to data retention periods.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p98",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2199,12 +2699,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Configuring devices to log to an off-site location for possible future reference is best described as log aggregation. Log aggregation involves collecting logs from multiple sources and storing them in a centralized location, often off-site, to ensure they are preserved and can be analyzed in the future.\nLog aggregation: Centralizes log data from multiple devices, making it easier to analyze and ensuring logs are available for future reference.\nDLP (Data Loss Prevention): Focuses on preventing unauthorized data transfer and ensuring data security.\nArchiving: Involves storing data for long-term retention, which could be part of log aggregation but is broader in scope.\nSCAP (Security Content Automation Protocol): A standard for automating vulnerability management and policy compliance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Setting devices to send their logs to a central server at another location is log aggregation: logs from many devices collected in one place, where they are preserved for later analysis. Published answers disagree, with some choosing archiving because of 'future reference'.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "DLP detects sensitive data leaving the organization; it does not collect logs.",
+      "C": "Archiving stores data long-term, but configuring devices to send logs to a central location is aggregation.",
+      "D": "SCAP automates configuration and vulnerability assessment."
+    },
     "references": [],
     "source": "bank.pdf#p100",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2294,82 +2798,6 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0230",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "Which of the following penetration testing teams is focused only on trying to compromise an organization using an attacker's tactics?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "White"
-      },
-      {
-        "key": "B",
-        "text": "Red"
-      },
-      {
-        "key": "C",
-        "text": "Purple"
-      },
-      {
-        "key": "D",
-        "text": "Blue"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Red teams are focused only on trying to compromise an organization using an attacker's tactics.\nThey simulate real-world attacks to test the effectiveness of the organization's security defenses and identify vulnerabilities.\nRed team: Acts as adversaries to simulate attacks and find security weaknesses.\nWhite team: Oversees and ensures the rules of engagement are followed during the penetration test.\nPurple team: Facilitates collaboration between the red team and the blue team to improve security.\nBlue team: Defends against attacks and responds to security incidents.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p102",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0231",
-    "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
-    "type": "single",
-    "question": "A manager receives an email that contains a link to receive a refund. After hovering over the link, the manager notices that the domain's URL points to a suspicious link. Which of the following security practices helped the manager to identify the attack?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "End user training"
-      },
-      {
-        "key": "B",
-        "text": "Policy review"
-      },
-      {
-        "key": "C",
-        "text": "URL scanning"
-      },
-      {
-        "key": "D",
-        "text": "Plain text email"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "The security practice that helped the manager identify the suspicious link is end-user training.\nTraining users to recognize phishing attempts and other social engineering attacks, such as hovering over links to check the actual URL, is a critical component of an organization's security awareness program.\nEnd user training: Educates employees on how to identify and respond to security threats, including suspicious emails and phishing attempts.\nPolicy review: Ensures that policies are understood and followed but does not directly help in identifying specific attacks.\nURL scanning: Automatically checks URLs for threats, but the manager identified the issue manually.\nPlain text email: Ensures email content is readable without executing scripts, but the identification in this case was due to user awareness.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p102",
-    "needsReview": true,
-    "inferenceConfidence": 0.444,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0233",
     "domain": 4,
     "objective": "4.6",
@@ -2397,12 +2825,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "To prevent the issuance of an MFA bypass code to an attacker posing as an employee, implementing identity proofing would be most effective. Identity proofing involves verifying the identity of individuals before granting access or providing sensitive information.\nIdentity proofing: Ensures that the person requesting the MFA bypass is who they claim to be, thereby preventing social engineering attacks where attackers pose as legitimate employees.\nHardware token MFA: Provides an additional factor for authentication but does not address verifying the requester's identity.\nBiometrics: Offers strong authentication based on physical characteristics but is not related to the process of issuing MFA bypass codes.\nLeast privilege: Limits access rights for users to the bare minimum necessary to perform their work but does not prevent social engineering attacks targeting the service desk.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The service desk gave a bypass code to a caller without confirming who they were. Identity proofing -- verifying a requester's identity before resetting credentials or issuing codes -- would have stopped the attacker.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Hardware token MFA would still be bypassed if the help desk issues bypass codes to impostors.",
+      "B": "Biometrics would likewise be bypassed by the same social engineering.",
+      "D": "Least privilege limits what compromised accounts can do; it does not stop the help desk being fooled."
+    },
     "references": [],
     "source": "bank.pdf#p103",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2435,51 +2867,17 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "To restrict activity from employees after hours, the systems administrator should implement time- of-day restrictions. This method allows access to network resources to be limited to specific times, ensuring that employees can only access systems during approved working hours. This is an effective part of a defense-in-depth strategy to mitigate risks associated with unauthorized access during off- hours, which could be a time when security monitoring might be less stringent.\nTime-of-day restrictions: These control access based on the time of day, preventing users from logging in or accessing certain systems outside of designated hours.\nRole-based restrictions: Control access based on a user's role within the organization.\nAttribute-based restrictions: Use various attributes (such as location, department, or project) to determine access rights.\nMandatory restrictions: Typically refer to non-discretionary access controls, such as those based on government or organizational policy.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Time-of-day restrictions allow logins and access only during approved hours, directly blocking employee activity after hours.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Role-based restrictions grant access by job role, regardless of time.",
+      "B": "Attribute-based restrictions can include time as an attribute, but time-of-day restrictions are the specific control named for this.",
+      "C": "Mandatory access control uses security labels and clearances, not schedules."
+    },
     "references": [],
     "source": "bank.pdf#p104",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0242",
-    "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "A company hired a security manager from outside the organization to lead security operations.\nWhich of the following actions should the security manager perform first in this new role?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Establish a security baseline."
-      },
-      {
-        "key": "B",
-        "text": "Review security policies."
-      },
-      {
-        "key": "C",
-        "text": "Adopt security benchmarks."
-      },
-      {
-        "key": "D",
-        "text": "Perform a user ID revalidation."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "When a security manager is hired from outside the organization to lead security operations, the first action should be to review the existing security policies. Understanding the current security policies provides a foundation for identifying strengths, weaknesses, and areas that require improvement, ensuring that the security program aligns with the organization's goals and regulatory requirements.\nReview security policies: Provides a comprehensive understanding of the existing security framework, helping the new manager to identify gaps and areas for enhancement.\nEstablish a security baseline: Important but should be based on a thorough understanding of existing policies and practices.\nAdopt security benchmarks: Useful for setting standards, but reviewing current policies is a necessary precursor.\nPerform a user ID revalidation: Important for ensuring user access is appropriate but not the first step in understanding overall security operations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p107",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2526,40 +2924,86 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0258",
+    "id": "q0247",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization implemented cloud-managed IP cameras to monitor building entry points and sensitive areas. The service provider enables direct TCP/IP connection to stream live video footage from each camera. The organization wants to ensure this stream is encrypted and authenticated. Which of the following protocols should be implemented to best meet this objective?",
+    "question": "A company is implementing a vendor's security tool in the cloud. The security director does not want to manage users and passwords specific to this tool but would rather utilize the company's standard user directory. Which of the following should the company implement?",
     "choices": [
       {
         "key": "A",
-        "text": "SSH"
+        "text": "802.1X"
       },
       {
         "key": "B",
-        "text": "SRTP"
+        "text": "SAML"
       },
       {
         "key": "C",
-        "text": "S/MIME"
+        "text": "RADIUS"
       },
       {
         "key": "D",
-        "text": "PPTP"
+        "text": "CHAP"
       }
     ],
     "correct": [
       "B"
     ],
-    "explanation": "Secure Real-Time Transport Protocol (SRTP) is a security protocol used to encrypt and authenticate the streaming of audio and video over IP networks. It ensures that the video streams from the IP cameras are both encrypted to prevent unauthorized access and authenticated to verify the integrity of the stream, making it the ideal choice for securing video surveillance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SAML lets the cloud tool trust the company's identity provider: users log in with their normal directory credentials and the tool receives an assertion of who they are. No separate usernames or passwords are needed for the tool.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "802.1X controls access to network ports, not logins to cloud applications.",
+      "C": "RADIUS centralizes authentication for network access, such as VPN and Wi-Fi, not web-based cloud tools.",
+      "D": "CHAP is a password challenge-response protocol for network links."
+    },
     "references": [],
-    "source": "bank.pdf#p114",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "bank.pdf#p110",
+    "needsReview": false,
+    "inferenceConfidence": 0.4,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0268",
+    "domain": 4,
+    "objective": "4.9",
+    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "type": "single",
+    "question": "An analyst is reviewing an incident in which a user clicked on a link in a phishing email. Which of the following log sources would the analyst utilize to determine whether the connection was successful?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Network"
+      },
+      {
+        "key": "B",
+        "text": "System"
+      },
+      {
+        "key": "C",
+        "text": "Application"
+      },
+      {
+        "key": "D",
+        "text": "Authentication"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Whether the user's machine actually reached the phishing site shows up in network logs, such as proxy, DNS or firewall records of the outbound connection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "System logs record operating system events, not outbound web connections.",
+      "C": "Application logs cover events within applications, not network connections.",
+      "D": "Authentication logs show logins, not whether a connection to a website succeeded."
+    },
+    "references": [],
+    "source": "bank.pdf#p117",
+    "needsReview": false,
+    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2569,7 +3013,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "Sine?a recent upgrade (o a WLAN infrastructure, several mobile users have been unable to access the internet from the lobby. The networking team performs a heat map survey of the building and finds several WAPs in the area. The WAPs are using similar frequencies with high power settings. Which of the following installation considerations should the security team evaluate next?",
+    "question": "Since a recent upgrade to a WLAN infrastructure, several mobile users have been unable to access the internet from the lobby. The networking team performs a heat map survey of the building and finds several WAPs in the area. The WAPs are using similar frequencies with high power settings. Which of the following installation considerations should the security team evaluate next?",
     "choices": [
       {
         "key": "A",
@@ -2591,12 +3035,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When multiple Wireless Access Points (WAPs) are using similar frequencies with high power settings, it can cause channel overlap, leading to interference and connectivity issues. This is likely the reason why mobile users are unable to access the internet in the lobby. Evaluating and adjusting the channel settings on the WAPs to avoid overlap is crucial to resolving the connectivity problems.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Several access points on similar frequencies at high power are interfering with each other. Channel overlap is the installation consideration to evaluate next, assigning non-overlapping channels and adjusting power.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Encryption type affects security, not interference between access points.",
+      "C": "A new WLAN deployment is unnecessary; the existing one needs its channels planned.",
+      "D": "Placement matters, but the survey already points to interference from overlapping frequencies."
+    },
     "references": [],
     "source": "bank.pdf#p118",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2607,7 +3055,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A security analyst is assessing several company firewalls. Which of the following cools would The analyst most likely use to generate custom packets to use during the assessment?",
+    "question": "A security analyst is assessing several company firewalls. Which of the following tools would the analyst most likely use to generate custom packets to use during the assessment?",
     "choices": [
       {
         "key": "A",
@@ -2629,13 +3077,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Monitoring outbound traffic is essential for detecting unauthorized data exfiltration from a system.\nA new vulnerability that allows malware to move data unauthorizedly would typically attempt to send this data out of the network. By monitoring outbound traffic, security tools can detect unusual data transfers, trigger alerts, and help prevent the exfiltration of sensitive information.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "hping crafts custom TCP, UDP and ICMP packets with chosen flags and fields, which makes it ideal for testing how firewalls handle specific traffic.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Wireshark captures and analyzes packets; it does not generate them.",
+      "C": "PowerShell is a scripting shell, not a packet crafting tool.",
+      "D": "netstat lists a host's connections and listening ports."
+    },
     "references": [],
     "source": "bank.pdf#p119",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0274",
+    "domain": 4,
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "type": "single",
+    "question": "A new vulnerability enables a type of malware that allows the unauthorized movement of data from a system. Which of the following would detect this behavior?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Implementing encryption"
+      },
+      {
+        "key": "B",
+        "text": "Monitoring outbound traffic"
+      },
+      {
+        "key": "C",
+        "text": "Using default settings"
+      },
+      {
+        "key": "D",
+        "text": "Closing all open ports"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Unauthorized movement of data off a system appears as unusual outbound traffic. Monitoring outbound traffic is how exfiltration is detected.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Encryption protects data but does not detect it leaving -- attackers can exfiltrate encrypted data too.",
+      "C": "Default settings are usually weak and detect nothing.",
+      "D": "Closing all ports is impractical and prevents rather than detects; malware can use allowed ports."
+    },
+    "references": [],
+    "source": "bank.pdf#p120",
+    "needsReview": false,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2667,13 +3161,59 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The Common Vulnerability Scoring System (CVSS) is a standardized framework for assessing the severity of security vulnerabilities. It helps organizations prioritize vulnerability patching by providing a numerical score that reflects the potential impact and exploitability of a vulnerability.\nCVSS scores are used to gauge the urgency of patching vulnerabilities within a company's IT environment.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "CVSS gives each vulnerability a severity score from 0 to 10, a consistent basis for deciding what to patch first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "SOAR automates security responses, not prioritization of patching.",
+      "C": "A SIEM correlates logs and alerts; it does not score vulnerabilities.",
+      "D": "CVE identifies vulnerabilities by ID but does not rank their severity."
+    },
     "references": [],
     "source": "bank.pdf#p120",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0280",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A systems administrator is auditing all company servers to ensure they meet the minimum security baseline. While auditing a Linux server, the systems administrator observes the /etc/shadow file has permissions beyond the baseline recommendation. Which of the following commands should the systems administrator use to resolve this issue?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "chmod"
+      },
+      {
+        "key": "B",
+        "text": "grep"
+      },
+      {
+        "key": "C",
+        "text": "dd"
+      },
+      {
+        "key": "D",
+        "text": "passwd"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "chmod changes file permissions, which is what fixes a file whose permissions are wider than the baseline allows. /etc/shadow should be readable only by root.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "grep searches text; it cannot change permissions.",
+      "C": "dd copies raw data at the block level.",
+      "D": "passwd changes a user's password, not file permissions."
+    },
+    "references": [],
+    "source": "bank.pdf#p121",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2730,7 +3270,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security audit of an organization revealed that most of the IT staff members have domain administrator credentials and do not change the passwords regularly. Which of the following solutions should the security learn propose to resolve the findings in the most complete way?",
+    "question": "A security audit of an organization revealed that most of the IT staff members have domain administrator credentials and do not change the passwords regularly. Which of the following solutions should the security team propose to resolve the findings in the most complete way?",
     "choices": [
       {
         "key": "A",
@@ -2752,65 +3292,73 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Using a Privileged Access Management (PAM) vault to secure domain administrator credentials and enforcing role-based access control (RBAC) is the most comprehensive solution. PAM systems help manage and control access to privileged accounts, ensuring that only authorized personnel can access sensitive credentials. This approach also facilitates password rotation, auditing, and ensures that credentials are not misused or left unchanged. Integrating PAM with RBAC ensures that access is granted based on the user's role, further enhancing security.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The problems are too many people holding powerful credentials and passwords that never change. A privileged access management vault holds the domain admin credentials, checks them out only to authorized roles, rotates them automatically and logs every use -- fixing both findings completely.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Forcing rotation addresses stale passwords, but most of IT would still hold domain admin rights.",
+      "B": "Pruning the group and rotating passwords once helps, but passwords go stale again with no ongoing control.",
+      "C": "SSO with MFA strengthens authentication, but does not reduce who holds domain admin rights or manage the credentials."
+    },
     "references": [],
     "source": "bank.pdf#p123",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0287",
+    "id": "q0286",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A website user is locked out of an account after clicking an email link and visiting a different website Web server logs show the user's password was changed, even though the user did not change the password. Which of the following is the most likely cause?",
+    "question": "Which of the following best describes why the SMS OTP authentication method is more risky to implement than the TOTP method?",
     "choices": [
       {
         "key": "A",
-        "text": "Cross-sue request forgery"
+        "text": "The SMS OTP method requires an end user to have an active mobile telephone service and SIM card."
       },
       {
         "key": "B",
-        "text": "Directory traversal"
+        "text": "Generally. SMS OTP codes are valid for up to 15 minutes while the TOTP time frame is 30 to 60 seconds"
       },
       {
         "key": "C",
-        "text": "ARP poisoning"
+        "text": "The SMS OTP is more likely to be intercepted and lead to unauthorized disclosure of the code than the TOTP method."
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "The algorithm used to generate on SMS OTP code is weaker than the one used to generate a TOTP code"
       }
     ],
     "correct": [
-      "A"
+      "C"
     ],
-    "explanation": "The scenario describes a situation where a user unknowingly triggers an unwanted action, such as changing their password, by clicking a malicious link. This is indicative of a Cross-Site Request Forgery (CSRF) attack, where an attacker tricks the user into executing actions they did not intend to perform on a web application in which they are authenticated.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SMS codes travel over the phone network, where they can be intercepted through SIM swapping or SS7 attacks. A TOTP code is generated on the user's device and never transmitted, so it is harder to steal.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Needing phone service is an inconvenience, not the main security risk.",
+      "B": "Validity windows vary by implementation; the core weakness of SMS is interception, not a fixed 15-minute lifetime.",
+      "D": "SMS OTP codes are not generated with a weaker algorithm; the risk is in how they are delivered."
+    },
     "references": [],
     "source": "bank.pdf#p124",
-    "needsReview": true,
-    "inferenceConfidence": 0.52,
+    "needsReview": false,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0289",
     "domain": 4,
-    "objective": "4.5",
-    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A cybersecurity incident response team at a large company receives notification that malware is present on several corporate desktops No known Indicators of compromise have been found on the network. Which of the following should the team do first to secure the environment?",
+    "question": "A cybersecurity incident response team at a large company receives notification that malware is present on several corporate desktops. No known indicators of compromise have been found on the network. Which of the following should the team do first to secure the environment?",
     "choices": [
       {
         "key": "A",
-        "text": "Contain the Impacted hosts"
+        "text": "Contain the impacted hosts"
       },
       {
         "key": "B",
@@ -2828,12 +3376,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The first step in responding to a cybersecurity incident, particularly when malware is detected, is to contain the impacted hosts. This action prevents the spread of malware to other parts of the network, limiting the potential damage while further investigation and remediation actions are planned.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Malware is confirmed on several desktops, so the priority is to stop it spreading: containing the affected hosts, by isolating them from the network, comes first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Adding the malware to a blocklist helps later, but the infected hosts are already compromised.",
+      "C": "Segmenting one database server does not stop malware spreading between desktops.",
+      "D": "No indicators of beaconing have been found, so blocking it is speculative; isolating known infected hosts is concrete."
+    },
     "references": [],
     "source": "bank.pdf#p125",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
@@ -2844,7 +3396,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following is a reason why a forensic specialist would create a plan to preserve data after an modem and prioritize the sequence for performing forensic analysis?",
+    "question": "Which of the following is a reason why a forensic specialist would create a plan to preserve data after an incident and prioritize the sequence for performing forensic analysis?",
     "choices": [
       {
         "key": "A",
@@ -2866,13 +3418,59 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When conducting a forensic analysis after an incident, it's essential to prioritize the data collection process based on the \"order of volatility.\" This principle dictates that more volatile data (e.g., data in memory, network connections) should be captured before less volatile data (e.g., disk drives, logs). The idea is to preserve the most transient and potentially valuable evidence first, as it is more likely to be lost or altered quickly.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Some evidence disappears faster than others -- CPU cache and memory before disk, disk before archives. The order of volatility decides the sequence of collection so the most fragile evidence is preserved first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Preserving event logs is one task, not the principle for sequencing collection.",
+      "C": "Chain of custody documents who handled evidence, not the order in which to collect it.",
+      "D": "A legal hold stops relevant data being deleted, but does not prioritize forensic collection."
+    },
     "references": [],
     "source": "bank.pdf#p125",
-    "needsReview": true,
-    "inferenceConfidence": 0.882,
+    "needsReview": false,
+    "inferenceConfidence": 0.923,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0291",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "A security analyst is creating a baseline for the server team to follow when hardening new devices for deployment. Which of the following best describes what the analyst is creating?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Change management procedure"
+      },
+      {
+        "key": "B",
+        "text": "Information security policy"
+      },
+      {
+        "key": "C",
+        "text": "Cybersecurity framework"
+      },
+      {
+        "key": "D",
+        "text": "Secure configuration guide"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "A document telling the server team exactly how to harden new devices before deployment is a secure configuration guide (baseline).",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A change management procedure governs how changes are approved and made.",
+      "B": "An information security policy states high-level rules and goals, not device-level hardening steps.",
+      "C": "A cybersecurity framework structures an entire security program."
+    },
+    "references": [],
+    "source": "bank.pdf#p125",
+    "needsReview": false,
+    "inferenceConfidence": 0.647,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2904,51 +3502,59 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The scenario shows MD5 hashed password values. The most likely reason the security administrator is focusing on these values is to protect against pass-the-hash attacks. In this type of attack, an attacker can use a captured hash to authenticate without needing to know the actual plaintext password. By managing and monitoring these hashes, the administrator can implement strategies to mitigate this type of threat.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The values (not reproduced in the source) show each machine's local account now has a different password hash. Pass-the-hash relies on the same local admin hash working across many machines; unique local passwords stop one stolen hash opening them all.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Account sharing is people using the same account; resetting local passwords per machine does not address it.",
+      "B": "Password complexity concerns how hard passwords are to guess, not whether hashes are reused across systems.",
+      "D": "Password compromise is broad; the specific threat mitigated by unique local passwords is pass-the-hash."
+    },
     "references": [],
     "source": "bank.pdf#p126",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
-    "id": "q0298",
+    "id": "q0296",
     "domain": 4,
-    "objective": "4.9",
-    "objectiveTitle": "Given a scenario, use data sources to support an investigation",
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "The security operations center is researching an event concerning a suspicious IP address. A security analyst looks at the following event logs and discovers that a significant portion of the user accounts have experienced failed log-in attempts when authenticating from the same IP address:\nWhich of the following most likely describes the attack that took place?",
+    "question": "Various stakeholders are meeting to discuss their hypothetical roles and responsibilities in a specific situation, such as a security incident or major disaster. Which of the following best describes this meeting?",
     "choices": [
       {
         "key": "A",
-        "text": "Spraying"
+        "text": "Penetration test"
       },
       {
         "key": "B",
-        "text": "Brute-force"
+        "text": "Continuity of operations planning"
       },
       {
         "key": "C",
-        "text": "Dictionary"
+        "text": "Tabletop exercise"
       },
       {
         "key": "D",
-        "text": "Rainbow table"
+        "text": "Simulation"
       }
     ],
     "correct": [
-      "A"
+      "C"
     ],
-    "explanation": "Password spraying is a type of attack where an attacker tries a small number of commonly used passwords across a large number of accounts. The event logs showing failed login attempts for many user accounts from the same IP address are indicative of a password spraying attack, where the attacker is attempting to gain access by guessing common passwords.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Stakeholders talking through their roles in a hypothetical incident, without touching real systems, is a tabletop exercise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A penetration test actively attacks systems.",
+      "B": "Continuity of operations planning is the plan-writing process, not a discussion-based exercise.",
+      "D": "A simulation acts out a scenario with realistic activity, beyond a discussion of roles."
+    },
     "references": [],
-    "source": "bank.pdf#p128",
-    "needsReview": true,
-    "inferenceConfidence": 1.0,
+    "source": "bank.pdf#p127",
+    "needsReview": false,
+    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2958,7 +3564,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A company is currently utilizing usernames and passwords, and it wants to integrate an MFA method that is seamless, can Integrate easily into a user's workflow, and can utilize employee- owned devices. Which of the following will meet these requirements?",
+    "question": "A company is currently utilizing usernames and passwords, and it wants to integrate an MFA method that is seamless, can integrate easily into a user's workflow, and can utilize employee- owned devices. Which of the following will meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -2980,23 +3586,69 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Push notifications offer a seamless and user-friendly method of multi-factor authentication (MFA) that can easily integrate into a user's workflow. This method leverages employee-owned devices, like smartphones, to approve authentication requests through a push notification. It's convenient, quick, and doesn't require the user to input additional codes, making it a preferred choice for seamless integration with existing workflows.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Push notifications to an authenticator app on the employee's own phone need only a tap to approve -- seamless, easily part of the workflow, and using devices employees already carry.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A phone call interrupts the user and is slower.",
+      "C": "Smart cards need readers and company-issued cards, not employee-owned devices.",
+      "D": "Offline backup codes are an emergency fallback, not a seamless everyday method."
+    },
     "references": [],
     "source": "bank.pdf#p129",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0306",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "single",
+    "question": "An organization has too many variations of a single operating system and needs to standardize the arrangement prior to pushing the system image to users. Which of the following should the organization implement first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Standard naming convention"
+      },
+      {
+        "key": "B",
+        "text": "Hashing"
+      },
+      {
+        "key": "C",
+        "text": "Network diagrams"
+      },
+      {
+        "key": "D",
+        "text": "Baseline configuration"
+      }
+    ],
+    "correct": [
+      "D"
+    ],
+    "explanation": "Before pushing one standard image, the organization must define the approved configuration all systems should match. That baseline configuration comes first.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Naming conventions help organize assets, but do not standardize configurations.",
+      "B": "Hashing verifies integrity; it does not standardize configurations.",
+      "C": "Network diagrams document topology, not operating system settings."
+    },
+    "references": [],
+    "source": "bank.pdf#p131",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0307",
     "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
+    "objective": "4.7",
+    "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A growing company would like to enhance the ability of its security operations center to detect threats but reduce the amount of manual work required tor the security analysts. Which of the following would best enable the reduction in manual work?",
+    "question": "A growing company would like to enhance the ability of its security operations center to detect threats but reduce the amount of manual work required for the security analysts. Which of the following would best enable the reduction in manual work?",
     "choices": [
       {
         "key": "A",
@@ -3018,21 +3670,119 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Security Orchestration, Automation, and Response (SOAR) systems help organizations automate repetitive security tasks, reduce manual intervention, and improve the efficiency of security operations. By integrating with various security tools, SOAR can automatically respond to incidents, helping to enhance threat detection while reducing the manual workload on security analysts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SOAR automates repetitive SOC tasks -- enriching alerts, running playbooks and taking response actions -- reducing analysts' manual work while improving response.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "A SIEM collects and correlates alerts, but analysts still work each one by hand.",
+      "C": "MDM manages mobile devices.",
+      "D": "DLP prevents data leaving; it does not automate SOC work."
+    },
     "references": [],
     "source": "bank.pdf#p131",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0309",
+    "domain": 4,
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "type": "multi",
+    "question": "A company implemented an MDM policy to mitigate risks after repeated instances of employees losing company-provided mobile phones. In several cases, the lost phones were used maliciously to perform social engineering attacks against other employees. Which of the following MDM features should be configured to best address this issue? (Select two).",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Screen locks"
+      },
+      {
+        "key": "B",
+        "text": "Remote wipe"
+      },
+      {
+        "key": "C",
+        "text": "Full device encryption"
+      },
+      {
+        "key": "D",
+        "text": "Push notifications"
+      },
+      {
+        "key": "E",
+        "text": "Application management"
+      },
+      {
+        "key": "F",
+        "text": "Geolocation"
+      }
+    ],
+    "correct": [
+      "A",
+      "B"
+    ],
+    "explanation": "Lost phones were unlocked and used to attack colleagues. Screen locks stop a finder using the phone, and remote wipe erases it once reported lost.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "C": "Full device encryption protects data if storage is removed, but an unlocked phone is already decrypted.",
+      "D": "Push notifications deliver messages; they do not secure a lost device.",
+      "E": "Application management controls which apps are installed, not access to a lost phone.",
+      "F": "Geolocation can help find a phone, but does not stop it being misused."
+    },
+    "references": [],
+    "source": "bank.pdf#p132",
+    "needsReview": false,
+    "inferenceConfidence": 0.571,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0310",
+    "domain": 4,
+    "objective": "4.6",
+    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
+    "type": "single",
+    "question": "A security analyst needs to propose a remediation plan for each item in a risk register. The item with the highest priority requires employees to have separate logins for SaaS solutions and different password complexity requirements for each solution. Which of the following implementation plans will most likely resolve this security issue?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Creating a unified password complexity standard"
+      },
+      {
+        "key": "B",
+        "text": "Integrating each SaaS solution with the identity provider"
+      },
+      {
+        "key": "C",
+        "text": "Securing access to each SaaS by using a single wildcard certificate"
+      },
+      {
+        "key": "D",
+        "text": "Configuring geofencing on each SaaS solution"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "The risk is separate logins with inconsistent password rules for each SaaS application. Integrating every application with the company identity provider (SSO) replaces them with one centrally managed identity and policy.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A unified password standard still leaves separate logins per application.",
+      "C": "A wildcard certificate secures TLS for subdomains; it has nothing to do with user logins.",
+      "D": "Geofencing restricts access by location, not login management."
+    },
+    "references": [],
+    "source": "bank.pdf#p133",
+    "needsReview": false,
+    "inferenceConfidence": 0.278,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0312",
     "domain": 4,
-    "objective": "4.8",
-    "objectiveTitle": "Explain appropriate incident response activities",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following is the first step to take when creating an anomaly detection process?",
     "choices": [
@@ -3056,12 +3806,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The first step in creating an anomaly detection process is building a baseline of normal behavior within the system. This baseline serves as a reference point to identify deviations or anomalies that could indicate a security incident. By understanding what normal activity looks like, security teams can more effectively detect and respond to suspicious behavior.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Anomalies are deviations from normal, so normal must be defined first. Building a baseline of typical activity is the first step of anomaly detection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Selecting events comes after knowing what normal looks like.",
+      "C": "Logging options support data collection, which follows deciding what normal looks like.",
+      "D": "Creating an event log is data collection, not the defining first step."
+    },
     "references": [],
     "source": "bank.pdf#p133",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3072,7 +3826,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following is the final step of the modem response process?",
+    "question": "Which of the following is the final step of the incident response process?",
     "choices": [
       {
         "key": "A",
@@ -3094,13 +3848,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The final step in the incident response process is \"Lessons learned.\" This step involves reviewing and analyzing the incident to understand what happened, how it was handled, and what could be improved. The goal is to improve future response efforts and prevent similar incidents from occurring. It's essential for refining the incident response plan and enhancing overall security posture.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Incident response ends with lessons learned: reviewing what happened and improving the process for next time.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Eradication removes the threat, before recovery.",
+      "C": "Containment limits the damage early in the response.",
+      "D": "Recovery restores systems, before the lessons-learned review."
+    },
     "references": [],
     "source": "bank.pdf#p134",
-    "needsReview": true,
-    "inferenceConfidence": 0.75,
+    "needsReview": false,
+    "inferenceConfidence": 0.905,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3110,7 +3868,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "While investigating a recent security breach an analyst finds that an attacker gained access by SOL infection through a company website. Which of the following should the analyst recommend to the website developers to prevent this from reoccurring?",
+    "question": "While investigating a recent security breach an analyst finds that an attacker gained access by SQL injection through a company website. Which of the following should the analyst recommend to the website developers to prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -3132,13 +3890,17 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Input sanitization is a critical security measure to prevent SQL injection attacks, which occur when an attacker exploits vulnerabilities in a website's input fields to execute malicious SQL code. By properly sanitizing and validating all user inputs, developers can prevent malicious code from being executed, thereby securing the website against such attacks.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SQL injection succeeds when user input goes straight into database queries. Input sanitization (with parameterized queries) removes or neutralizes malicious input so it cannot alter the query.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Secure cookies protect session tokens, not database queries.",
+      "C": "Code signing proves code's origin; it does not stop injection.",
+      "D": "A blocklist of bad input is easy to bypass and is weaker than proper sanitization."
+    },
     "references": [],
     "source": "bank.pdf#p134",
-    "needsReview": true,
-    "inferenceConfidence": 0.889,
+    "needsReview": false,
+    "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3185,6 +3947,48 @@ export const domain4Questions = [
     "keyCorrected": true
   },
   {
+    "id": "q0320",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "Which of the following describes an executive team that is meeting in a board room and testing the company's incident response plan?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Continuity of operations"
+      },
+      {
+        "key": "B",
+        "text": "Capacity planning"
+      },
+      {
+        "key": "C",
+        "text": "Tabletop exercise"
+      },
+      {
+        "key": "D",
+        "text": "Parallel processing"
+      }
+    ],
+    "correct": [
+      "C"
+    ],
+    "explanation": "Executives around a table walking through the incident response plan in discussion is a tabletop exercise.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Continuity of operations is a planning discipline, not a meeting format.",
+      "B": "Capacity planning estimates required resources.",
+      "D": "Parallel processing runs recovery systems alongside production to test them, not a discussion."
+    },
+    "references": [],
+    "source": "bank.pdf#p136",
+    "needsReview": false,
+    "inferenceConfidence": 0.467,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0321",
     "domain": 4,
     "objective": "4.3",
@@ -3227,44 +4031,6 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0329",
-    "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "A security engineer is installing an IPS to block signature-based attacks in the environment.\nWhich of the following modes will best accomplish this task?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Monitor"
-      },
-      {
-        "key": "B",
-        "text": "Sensor"
-      },
-      {
-        "key": "C",
-        "text": "Audit"
-      },
-      {
-        "key": "D",
-        "text": "Active"
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "To block signature-based attacks, the Intrusion Prevention System (IPS) must be in active mode.\nIn this mode, the IPS can actively monitor and block malicious traffic in real time based on predefined signatures. This is the best mode to prevent known attack types from reaching the internal network.\nMonitor mode and sensor mode are typically passive, meaning they only observe and log traffic without actively blocking it.\nAudit mode is used for review purposes and does not actively block traffic.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p140",
-    "needsReview": true,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0334",
     "domain": 4,
     "objective": "4.8",
@@ -3292,12 +4058,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A playbook is a documented set of procedures that outlines the step-by-step response to specific types of cybersecurity incidents. Security Operations Centers (SOCs) use playbooks to improve consistency, efficiency, and accuracy during incident response. Playbooks help ensure that the correct procedures are followed based on the type of incident, ensuring swift and effective remediation.\nFrameworks provide general guidelines for implementing security but are not specific enough for incident response procedures.\nBaselines represent normal system behavior and are used for anomaly detection, not incident response guidance.\nBenchmarks are performance standards and are not directly related to incident response.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Playbooks are step-by-step procedures for specific incident types, so analysts respond the same, correct way every time. Adding and refining them directly improves the SOC's incident response procedure.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Frameworks give high-level structure to a security program, not step-by-step response actions.",
+      "C": "Baselines define normal configuration or behaviour, not how to respond.",
+      "D": "Benchmarks are secure configuration standards, not response procedures."
+    },
     "references": [],
     "source": "bank.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3330,12 +4100,16 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The administrator is using a Data Loss Prevention (DLP) tool, which is designed to identify, monitor, and protect sensitive data. By fingerprinting specific files, DLP ensures that these files cannot be emailed or sent outside the organization without triggering an alert or blocking the action. This is a key feature of DLP systems, which prevent data exfiltration and ensure data security compliance.\nSNMP traps are used for network management and monitoring, not data protection.\nSCAP (Security Content Automation Protocol) is a set of standards for automating vulnerability management and policy compliance, unrelated to file monitoring.\nIPS (Intrusion Prevention System) blocks network-based attacks but does not handle file fingerprinting.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "SNMP traps are status alerts from network devices, not content inspection.",
+      "C": "SCAP automates configuration and vulnerability checks.",
+      "D": "An IPS blocks attacks coming in, not sensitive files going out."
+    },
     "references": [],
     "source": "bank.pdf#p142",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.857,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3368,12 +4142,16 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Since the logs on the endpoint were deleted, the next best option for the analyst is to examine firewall logs. Firewall logs can reveal external communication, including outbound traffic to a command-and-control (C2) server. These logs would contain information about the IP addresses, ports, and protocols used, which can help in identifying suspicious connections.\nIPS logs may provide information about network intrusions, but firewall logs are better for tracking communication patterns.\nACL logs (Access Control List) are useful for tracking access permissions but not for identifying C2 communication.\nWindows security logs would have been ideal if they had not been deleted.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "With the endpoint's logs deleted, the evidence has to come from somewhere the attacker could not reach. The firewall records outbound connections from the workstation, including to the command-and-control server.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "IPS logs only record traffic matching attack signatures, which C2 traffic may not.",
+      "C": "An ACL is a set of rules, not a log source.",
+      "D": "Windows security logs live on the endpoint, where the logs were deleted."
+    },
     "references": [],
     "source": "bank.pdf#p143",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.935,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3468,7 +4246,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A bank set up a new server that contains customers' Pll. Which of the following should the bank use to make sure the sensitive data is not modified?",
+    "question": "A bank set up a new server that contains customers' PII. Which of the following should the bank use to make sure the sensitive data is not modified?",
     "choices": [
       {
         "key": "A",
@@ -3490,21 +4268,25 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "To ensure that sensitive data, such as Personally Identifiable Information (PII), is not modified, the bank should implement file integrity monitoring (FIM). FIM tracks changes to files and provides alerts if unauthorized modifications are detected, ensuring data integrity.\nFull disk encryption protects data at rest but does not prevent or monitor modifications.\nNetwork access control (NAC) manages access to the network but doesn't monitor file changes.\nUser behavior analytics (UBA) detects suspicious user activities but is not focused on file integrit.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Full disk encryption protects data if the disk is stolen, but not from modification by users with access.",
+      "B": "Network access control decides which devices may connect, not whether files change.",
+      "D": "User behaviour analytics spots unusual activity, but does not track changes to specific files."
+    },
     "references": [],
     "source": "bank.pdf#p145",
-    "needsReview": true,
-    "inferenceConfidence": 0.75,
+    "needsReview": false,
+    "inferenceConfidence": 0.73,
     "needsExplanation": false,
     "keyCorrected": false
   },
   {
     "id": "q0345",
     "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "objective": "4.4",
+    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
     "question": "Which of the following alert types is the most likely to be ignored over time?",
     "choices": [
@@ -3528,12 +4310,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A false positive is an alert that incorrectly identifies benign activity as malicious. Over time, if an alerting system generates too many false positives, security teams are likely to ignore these alerts, resulting in \"alert fatigue.\" This increases the risk of missing genuine threats.\nTrue positives and true negatives are accurate and should be acted upon.\nFalse negatives are more dangerous because they fail to identify real threats, but they are not \"ignored\" since they do not trigger alerts.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "When an alert keeps firing on harmless activity, analysts learn to ignore it -- alert fatigue. False positives are the alerts most likely to be ignored, which is dangerous when a real event looks the same.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "True positives are real threats and get acted on.",
+      "B": "True negatives generate no alert at all.",
+      "D": "False negatives also generate no alert -- the threat is simply missed."
+    },
     "references": [],
     "source": "bank.pdf#p146",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.941,
     "needsExplanation": false,
     "keyCorrected": false
@@ -3581,6 +4367,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0349",
+    "domain": 4,
+    "objective": "4.3",
+    "objectiveTitle": "Explain various activities associated with vulnerability management",
+    "type": "single",
+    "question": "Which of the following would best explain why a security analyst is running daily vulnerability scans on all corporate endpoints?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "To track the status of patching installations"
+      },
+      {
+        "key": "B",
+        "text": "To find shadow IT cloud deployments"
+      },
+      {
+        "key": "C",
+        "text": "To continuously monitor the hardware inventory"
+      },
+      {
+        "key": "D",
+        "text": "To hunt for active attackers in the network"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "Daily scans of every endpoint show which vulnerabilities remain and so whether patches were installed. They track patching progress.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Endpoint scans do not discover cloud services bought outside IT.",
+      "C": "Hardware inventory is tracked by asset management tools, not vulnerability scans.",
+      "D": "Hunting for active attackers is threat hunting, which looks for behaviour rather than missing patches."
+    },
+    "references": [],
+    "source": "bank.pdf#p148",
+    "needsReview": false,
+    "inferenceConfidence": 0.263,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
     "id": "q0353",
     "domain": 4,
     "objective": "4.2",
@@ -3608,51 +4436,17 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "To ensure that all systems requiring the patch are updated, the systems administrator must maintain an accurate asset inventory. This inventory lists all hardware and software assets within the organization, allowing the administrator to identify which systems are affected by the patch and ensuring that none are missed during the update process.\nNetwork enumeration is used to discover devices on a network but doesn't track software that requires patching.\nData certification and procurement process are unrelated to tracking systems for patching purposes.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "You can only patch the systems you know about. An accurate asset inventory, including which software runs where, identifies every system that needs the patch.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Network enumeration discovers hosts on the network, but not reliably which run a given application.",
+      "C": "Data certification documents data destruction or quality, not systems needing patches.",
+      "D": "Procurement governs buying assets, not tracking what is deployed."
+    },
     "references": [],
     "source": "bank.pdf#p149",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0354",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "Which of the following security measures is required when using a cloud-based platform for IoT management?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Encrypted connection"
-      },
-      {
-        "key": "B",
-        "text": "Federated identity"
-      },
-      {
-        "key": "C",
-        "text": "Firewall"
-      },
-      {
-        "key": "D",
-        "text": "Single sign-on"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "IOT devices often transmit sensitive data over networks and encryption ensures that this data is securely transmitted and protected from interception or tampering.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p150",
-    "needsReview": true,
-    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5115,12 +5909,16 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The logs show an SQL injection attack. The first step is to verify if new accounts have been created, indicating a successful injection.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "The log entries (not reproduced in the source) show SQL injection attempts through query.php that insert new user accounts. The first job is to check the users table for accounts the attacker created, confirming whether the attack succeeded and what access now exists.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "A WAF helps prevent future attempts, but first establish whether this one succeeded.",
+      "B": "Disabling the script stops further attempts, but does not reveal whether accounts were already created.",
+      "C": "The logs show injection, not brute-force attempts."
+    },
     "references": [],
     "source": "bank.pdf#p182",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
@@ -5884,8 +6682,8 @@ export const domain4Questions = [
   {
     "id": "q0498",
     "domain": 4,
-    "objective": "4.2",
-    "objectiveTitle": "Explain the security implications of proper hardware, software, and data asset management",
+    "objective": "4.1",
+    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
     "question": "A systems administrator creates a script that validates OS version, patch levels, and installed applications when users log in. Which of the following examples best describes the purpose of this script?",
     "choices": [
@@ -5909,12 +6707,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Baseline enforcement ensures that all systems adhere to predefined security configurations, such as approved OS versions and patch levels, improving compliance and reducing vulnerabilities.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "Checking OS version, patch level and installed applications against the required standard at every login enforces the organization's security baseline.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Resource scaling adjusts capacity to demand.",
+      "B": "'Policy enumeration' is listing policies, not checking systems against them.",
+      "D": "Guardrails prevent unsafe actions, such as blocking insecure deployments, rather than validating each login."
+    },
     "references": [],
     "source": "bank.pdf#p198",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
@@ -8589,44 +9391,6 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0710",
-    "domain": 4,
-    "objective": "4.4",
-    "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
-    "type": "single",
-    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media. Which of the following policies will the HR employee most likely need to review after this incident?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Hybrid work environment"
-      },
-      {
-        "key": "B",
-        "text": "Operations security"
-      },
-      {
-        "key": "C",
-        "text": "Data loss prevention"
-      },
-      {
-        "key": "D",
-        "text": "Social engineering"
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "Operations security (OPSEC) focuses on identifying and protecting sensitive information to prevent unauthorized disclosure. In this scenario, the HR employee failed to safeguard confidential company information, leading to its exposure on social media. Training in OPSEC would reinforce the need to maintain security best practices, such as locking screens when away from a device and ensuring that sensitive data is not exposed in unsecured locations.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p258",
-    "needsReview": true,
-    "inferenceConfidence": 0.529,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0713",
     "domain": 4,
     "objective": "4.1",
@@ -9263,6 +10027,43 @@ export const domain4Questions = [
     "source": "bank.pdf#p275",
     "needsReview": false,
     "inferenceConfidence": 0.294,
+    "needsExplanation": false,
+    "keyCorrected": false
+  },
+  {
+    "id": "q0760",
+    "domain": 4,
+    "objective": "4.5",
+    "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
+    "type": "single",
+    "question": "An administrator implements web-filtering products but still sees that users are visiting malicious links. Which of the following configuration items does the security administrator need to review?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Intrusion prevention system"
+      },
+      {
+        "key": "B",
+        "text": "Content categorization"
+      },
+      {
+        "key": "C",
+        "text": "Encryption"
+      }
+    ],
+    "correct": [
+      "B"
+    ],
+    "explanation": "Web filters decide what to block based on site categories. If malicious links still get through, the content categorization settings -- which categories are blocked and whether new sites are categorized -- need reviewing.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "An IPS inspects traffic for attack signatures; it is not how web filtering decides what to block.",
+      "C": "Encryption protects data in transit; it does not decide which sites are allowed."
+    },
+    "references": [],
+    "source": "bank.pdf#p277",
+    "needsReview": false,
+    "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10029,44 +10830,6 @@ export const domain4Questions = [
     "source": "bank.pdf#p294",
     "needsReview": false,
     "inferenceConfidence": 0.562,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0818",
-    "domain": 4,
-    "objective": "4.3",
-    "objectiveTitle": "Explain various activities associated with vulnerability management",
-    "type": "single",
-    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel. Which of the following penetration testing methods is most likely being used?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Unknown"
-      },
-      {
-        "key": "B",
-        "text": "Known"
-      },
-      {
-        "key": "C",
-        "text": "Integrated"
-      },
-      {
-        "key": "D",
-        "text": "Integrated"
-      }
-    ],
-    "correct": [
-      "A"
-    ],
-    "explanation": "An \"unknown\" (black-box) test gives the testers no prior information or coordination with internal teams, mimicking an external attacker and validating defenses without internal assistance.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p295",
-    "needsReview": true,
-    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -14358,12 +15121,16 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "SCAP standardizes how vulnerability and configuration data is formatted and shared, allowing different security tools to interoperate and exchange information consistently across vendors.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
+    "explanation": "SCAP defines common languages and formats for describing vulnerabilities and configurations, so tools from different vendors can scan and report consistently and share results.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "A": "Benchmarks and baselines define configurations; SCAP is the standard format tools use to check them.",
+      "B": "SCAP is a machine-readable format, not a reporting layout for executives.",
+      "D": "SCAP does not reduce the cost of a breach through compliance."
+    },
     "references": [],
     "source": "bank.pdf#p408",
-    "needsReview": true,
+    "needsReview": false,
     "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
@@ -14953,44 +15720,6 @@ export const domain4Questions = [
     "source": "bank.pdf#p418",
     "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q1189",
-    "domain": 4,
-    "objective": "4.6",
-    "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
-    "type": "single",
-    "question": "A software company currently secures access using a combination of traditional username/password configurations and one-time passwords for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its employees. Which of the following solutions will best satisfy the company's needs?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "An IT employee upgrades systems to the newest version of an encryption library."
-      },
-      {
-        "key": "B",
-        "text": "A user shares their unique credentials with peers within their team."
-      },
-      {
-        "key": "C",
-        "text": "A finance user scrutinizes an employee's reimbursement form after a business trip."
-      },
-      {
-        "key": "D",
-        "text": "A user traveling abroad logs in outside of normal operating hours."
-      }
-    ],
-    "correct": [
-      "D"
-    ],
-    "explanation": "Logging in from an unusual location and outside normal operating hours is a behavioral anomaly that can indicate potential credential misuse or compromise, which is relevant when evaluating authentication security improvements.",
-    "explanationSource": "pdf",
-    "incorrectExplanations": {},
-    "references": [],
-    "source": "bank.pdf#p418",
-    "needsReview": true,
-    "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
