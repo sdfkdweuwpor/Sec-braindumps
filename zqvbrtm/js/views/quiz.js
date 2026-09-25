@@ -6,6 +6,9 @@ import {
   createSession, similarQuestions, letterMap,
 } from '../quizEngine.js';
 import { icon } from '../icons.js';
+import {
+  slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, growBar,
+} from '../motion.js';
 
 const DRILL_SIZE = 10;
 
@@ -78,15 +81,19 @@ export async function renderQuiz(view, { navigate }) {
   const body = el('div', { class: 'quizbody' });
   view.append(body);
 
+  // How the next draw should move: 'first' (the screen's own entrance runs),
+  // 'next' / 'prev' (slide in from that side), or 'reveal' (answer checked).
+  let motion = 'first';
+  let lastPct = 0;
+
   const draw = () => {
+    const how = motion;
+    motion = 'next';
     // Each draw registers a fresh keydown handler, so drop the previous one
     // first. Without this they accumulate and every shortcut fires twice --
     // which made F toggle the flag on and straight back off.
     if (keyHandler) { window.removeEventListener('keydown', keyHandler); keyHandler = null; }
     clear(body);
-    body.classList.remove('q-enter');
-    void body.offsetWidth;
-    body.classList.add('q-enter');
     const question = QUESTIONS_BY_ID.get(session.questionIds[session.index]);
     if (!question) { finish(session, navigate); return; }
 
@@ -110,6 +117,7 @@ export async function renderQuiz(view, { navigate }) {
       onclick: () => {
         const on = store.toggleFlag(question.id);
         flagBtn.setAttribute('aria-pressed', String(on));
+        if (on) { pop(flagBtn.firstChild, { scale: 1.35 }); ring(flagBtn, 'rgba(233,191,98,.55)'); }
       },
     }, [icon('flag')]);
 
@@ -139,11 +147,13 @@ export async function renderQuiz(view, { navigate }) {
       ]),
     ]));
 
-    body.append(el('div', { class: 'progress', role: 'progressbar',
+    const pct = (n / total) * 100;
+    const fill = el('span', { style: `width:${pct}%` });
+    body.append(el('div', { class: 'progress qprogress', role: 'progressbar',
       'aria-valuenow': String(n), 'aria-valuemin': '1', 'aria-valuemax': String(total),
-      style: 'margin:.6rem 0' }, [
-      el('span', { style: `width:${(n / total) * 100}%` }),
-    ]));
+      style: 'margin:.6rem 0' }, [fill]));
+    if (how !== 'reveal' && pct !== lastPct) growBar(fill, { from: `${lastPct}%`, duration: 520 });
+    lastPct = pct;
 
     body.append(el('div', { class: 'qmeta' }, [
       el('span', { class: 'pill',
@@ -205,7 +215,10 @@ export async function renderQuiz(view, { navigate }) {
           correct: isCorrect(question, picked), selected: picked, quizId: session.id,
         });
         session.revealed[question.id] = true;
+        const right = isCorrect(question, picked);
+        session.streak = right ? (session.streak || 0) + 1 : 0;
         store.setActiveQuiz(session);
+        motion = 'reveal';
         draw();
       } else {
         store.setActiveQuiz(session);
@@ -227,10 +240,12 @@ export async function renderQuiz(view, { navigate }) {
             session.answers[question.id] = [...picked];
             store.setActiveQuiz(session);
             paint();
+            if (i === -1) pop(btn.querySelector('.key'), { scale: 1.2 });
             submitBtn.disabled = picked.length === 0;
           } else {
             picked.length = 0;
             picked.push(key);
+            if (session.feedbackMode !== 'immediate') { paint(); pop(btn.querySelector('.key'), { scale: 1.2 }); }
             commit();
           }
         },
@@ -244,6 +259,11 @@ export async function renderQuiz(view, { navigate }) {
     }
     body.append(group);
     paint();
+    if (how === 'next' || how === 'prev' || how === 'first') {
+      if (how !== 'first') slideIn(body, how === 'prev' ? -1 : 1);
+      rise(qtext, { delay: how === 'first' ? 80 : 40, distance: 10 });
+      cascade(group.children, { start: how === 'first' ? 160 : 110, step: 50 });
+    }
 
     /* ---- submit / next ---- */
     if (multi && !revealed) {
@@ -263,7 +283,12 @@ export async function renderQuiz(view, { navigate }) {
 
       const panel = el('div', { class: `explain ${got ? 'is-right' : 'is-wrong'}` }, [
         el('div', { class: 'explain-head' }, [
-          el('span', { class: 'verdict' }, [icon(got ? 'check' : 'x', { size: 20 }), got ? 'Correct' : 'Incorrect']),
+          el('span', { class: 'verdict' }, [
+            icon(got ? 'check' : 'x', { size: 20 }), got ? 'Correct' : 'Incorrect',
+            got && how === 'reveal' && (session.streak || 0) >= 3
+              ? el('span', { class: 'streak' }, [icon('flame', { size: 15 }), `${session.streak} in a row`])
+              : null,
+          ]),
           el('div', { class: 'explain-tools' }, [
             session.feedbackMode === 'immediate' && !drill
               ? el('button', {
@@ -306,6 +331,23 @@ export async function renderQuiz(view, { navigate }) {
       details.append(inner);
       panel.append(details);
       body.append(panel);
+
+      if (how === 'reveal') {
+        const shownRight = [...buttons].filter(([k]) => correctKeys.includes(k)).map(([, b]) => b);
+        const shownWrong = [...buttons].filter(([k]) => picked.includes(k) && !correctKeys.includes(k)).map(([, b]) => b);
+        shownWrong.forEach((b) => shake(b));
+        shownRight.forEach((b, i) => {
+          pop(b, { scale: 1.015, duration: 520 });
+          pop(b.querySelector('.key'), { scale: 1.25 });
+          ring(b, 'rgba(10,125,79,.28)');
+          drawIcon(b.querySelector('.mark .icon'), { delay: 120 + i * 80 });
+        });
+        rise(panel, { delay: 140, distance: 16, duration: 480 });
+        drawIcon(panel.querySelector('.verdict .icon'), { delay: 260, duration: 480 });
+        const chip = panel.querySelector('.streak');
+        if (chip) pop(chip, { scale: 1.25, duration: 600 });
+        if (got && shownRight[0]) burst(shownRight[0].querySelector('.key'));
+      }
     }
 
     /* ---- previous / next ---- */
@@ -375,6 +417,7 @@ export async function renderQuiz(view, { navigate }) {
 
   function goTo(i) {
     if (i < 0 || i >= session.questionIds.length) return;
+    motion = i < session.index ? 'prev' : 'next';
     session.index = i;
     store.setActiveQuiz(session);
     draw();

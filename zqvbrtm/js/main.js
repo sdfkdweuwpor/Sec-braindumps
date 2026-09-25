@@ -4,6 +4,7 @@ import * as store from './store.js';
 import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon } from './icons.js';
+import { themeReveal, animateScreen, pop } from './motion.js';
 import { renderHome } from './views/home.js';
 import { renderQuiz } from './views/quiz.js';
 import { renderResults } from './views/results.js';
@@ -48,6 +49,7 @@ function applyTheme(theme) {
   if (btn) {
     const dark = theme === 'dark';
     btn.replaceChildren(icon(dark ? 'sun' : 'moon'));
+    btn.firstChild.classList.add('theme-ic');
     btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
     btn.setAttribute('title', btn.getAttribute('aria-label'));
   }
@@ -58,6 +60,7 @@ function buildShell() {
   clear(root);
 
   const nav = el('nav', { class: 'nav', 'aria-label': 'Sections' }, [
+    el('span', { class: 'nav-pill', 'aria-hidden': 'true' }),
     el('span', { class: 'navtitle' }, [el('span', { class: 'brandmark' }, [icon('shield', { size: 22 })]), NAV_TITLE]),
     ...NAV.map((n) => el('a', { href: n.href, 'data-nav': n.match.join(' ') }, [
       el('span', { class: 'ic' }, [icon(n.ic, { size: 22 })]),
@@ -70,7 +73,7 @@ function buildShell() {
     onclick: () => {
       const next = store.getSettings().theme === 'dark' ? 'light' : 'dark';
       store.setSettings({ theme: next });
-      applyTheme(next);
+      themeReveal(themeBtn, () => applyTheme(next));
     },
   });
 
@@ -89,12 +92,34 @@ function buildShell() {
   return main;
 }
 
+// The highlight behind the current section glides from tab to tab.
+function placeNavPill({ instant = false } = {}) {
+  const pill = document.querySelector('.nav-pill');
+  const cur = document.querySelector('.nav a[aria-current="page"]');
+  if (!pill) return;
+  if (!cur) { pill.style.opacity = '0'; return; }
+  if (instant) pill.classList.add('no-anim');
+  pill.style.width = `${cur.offsetWidth}px`;
+  pill.style.height = `${cur.offsetHeight}px`;
+  pill.style.transform = `translate(${cur.offsetLeft}px, ${cur.offsetTop}px)`;
+  pill.style.opacity = '1';
+  if (instant) { void pill.offsetWidth; pill.classList.remove('no-anim'); }
+}
+
+let navPlaced = false;
+
 function markActiveNav(path) {
+  let changed = null;
   for (const a of document.querySelectorAll('.nav a')) {
     const matches = (a.dataset.nav || '').split(' ');
-    if (matches.includes(path)) a.setAttribute('aria-current', 'page');
+    const on = matches.includes(path);
+    if (on && a.getAttribute('aria-current') !== 'page') changed = a;
+    if (on) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
+  placeNavPill({ instant: !navPlaced });
+  navPlaced = true;
+  if (changed) pop(changed.querySelector('.ic'), { scale: 1.18 });
 }
 
 function storageBanner() {
@@ -135,6 +160,7 @@ async function render() {
   }
 
   await fn(view, { params, navigate });
+  animateScreen(view);
   view.focus({ preventScroll: true });
   window.scrollTo(0, 0);
 }
@@ -145,6 +171,9 @@ export function start() {
   buildShell();
   applyTheme(store.getSettings().theme);
   window.addEventListener('hashchange', render);
+  window.addEventListener('resize', () => placeNavPill({ instant: true }));
+  // The font can change link sizes after first paint.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeNavPill({ instant: true }));
   // Views ask for a fresh render after changing stored data (import, reset,
   // discard). Reloading the page does not work inside every embedded viewer.
   window.addEventListener('app:refresh', () => {

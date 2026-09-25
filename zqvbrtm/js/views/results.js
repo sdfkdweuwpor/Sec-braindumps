@@ -5,6 +5,39 @@ import {
   PASSING_SCALED, PRACTICE_THRESHOLD, createSession, selectQuestions, letterMap,
 } from '../quizEngine.js';
 import { icon } from '../icons.js';
+import { countUp, reduced, EASE, burst } from '../motion.js';
+
+const SVGNS = 'http://www.w3.org/2000/svg';
+
+// Score ring: the arc sweeps round to the percentage while the number counts up.
+function scoreRing(pct, passed) {
+  const R = 52;
+  const C = 2 * Math.PI * R;
+  const svg = document.createElementNS(SVGNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 128 128');
+  svg.setAttribute('class', 'ring-svg');
+  svg.setAttribute('aria-hidden', 'true');
+  const mk = (cls) => {
+    const c = document.createElementNS(SVGNS, 'circle');
+    c.setAttribute('cx', '64'); c.setAttribute('cy', '64'); c.setAttribute('r', String(R));
+    c.setAttribute('class', cls);
+    return c;
+  };
+  const track = mk('ring-track');
+  const arc = mk(`ring-arc ${passed ? 'is-pass' : 'is-fail'}`);
+  arc.setAttribute('stroke-dasharray', `${C}`);
+  arc.setAttribute('stroke-dashoffset', `${C * (1 - pct / 100)}`);
+  svg.append(track, arc);
+  const num = el('span', { class: 'ring-num', text: `${pct}%` });
+  const wrap = el('div', { class: 'ring' }, [svg, num]);
+  if (!reduced() && pct > 0) {
+    arc.animate([{ strokeDashoffset: C }, { strokeDashoffset: C * (1 - pct / 100) }],
+      { duration: 1200, delay: 200, easing: EASE, fill: 'backwards' });
+    countUp(num, pct, { duration: 1200, delay: 200, format: (n) => `${n}%` });
+    if (passed) setTimeout(() => { if (wrap.isConnected) burst(wrap, { count: 28 }); }, 1250);
+  }
+  return wrap;
+}
 
 function domainBars(questions, answers) {
   const rows = [];
@@ -65,9 +98,20 @@ export async function renderResults(view, { params, navigate }) {
     ]));
   }
 
+  const passedHere = isMock
+    ? scaledScore(pct) >= PASSING_SCALED
+    : pct >= PRACTICE_THRESHOLD;
   const head = el('div', { class: 'card' }, [
-    el('div', { style: 'font-size:2rem;font-weight:700' },
-      `${result.score} / ${result.total} · ${pct}%`),
+    el('div', { class: 'score-head' }, [
+      scoreRing(pct, passedHere),
+      el('div', {}, [
+        el('div', { class: 'score-big' }, [
+          el('span', { text: String(result.score) }),
+          el('span', { class: 'qof', text: ` / ${result.total}` }),
+        ]),
+        el('p', { class: 'muted', style: 'margin:0', text: 'questions correct' }),
+      ]),
+    ]),
   ]);
 
   if (isMock) {
