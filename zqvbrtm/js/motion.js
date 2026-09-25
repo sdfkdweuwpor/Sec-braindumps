@@ -195,7 +195,7 @@ export function themeReveal(fromEl, apply) {
  */
 export function animateScreen(root) {
   if (!root || reduced()) return;
-  root.querySelectorAll('.bar > span, .progress:not(.qprogress) > span').forEach((s, i) => {
+  root.querySelectorAll('.bar > span, .progress:not(.qprogress) > span, .rmeter-fill').forEach((s, i) => {
     growBar(s, { delay: 120 + Math.min(i, 12) * 45 });
   });
   root.querySelectorAll('.sparkline .line').forEach((p) => drawLine(p, { delay: 200 }));

@@ -13,6 +13,7 @@ import { renderBuildQuiz } from './views/buildQuiz.js';
 import { renderStats } from './views/stats.js';
 import { renderReview } from './views/review.js';
 import { renderSaved } from './views/saved.js';
+import { renderSearch } from './views/search.js';
 
 const ROUTES = {
   '/home': renderHome,
@@ -22,10 +23,11 @@ const ROUTES = {
   '/stats': renderStats,
   '/review': renderReview,
   '/saved': renderSaved,
+  '/search': renderSearch,
 };
 
 const NAV = [
-  { href: '#/home', ic: 'study', label: 'Study', match: ['/home', '/build', '/quiz', '/results'] },
+  { href: '#/home', ic: 'study', label: 'Study', match: ['/home', '/build', '/quiz', '/results', '/search'] },
   { href: '#/stats', ic: 'stats', label: 'Stats', match: ['/stats'] },
   { href: '#/review', ic: 'review', label: 'Review', match: ['/review'] },
   { href: '#/saved', ic: 'saved', label: 'Saved', match: ['/saved'] },

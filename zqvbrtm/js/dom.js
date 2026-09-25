@@ -72,3 +72,35 @@ export function fmtDuration(ms) {
   if (m < 60) return `${m}m ${String(s % 60).padStart(2, '0')}s`;
   return `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, '0')}m`;
 }
+
+/**
+ * Wrap every match of `re` (a global regex) inside `root` in <mark>. Walks
+ * text nodes only, so it is safe on any rendered content and never parses
+ * user text as HTML. Skips buttons and existing marks.
+ */
+export function highlightIn(root, re) {
+  if (!root || !re) return root;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => (n.parentElement && n.parentElement.closest('button, mark')
+      ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (const node of nodes) {
+    const text = node.nodeValue;
+    re.lastIndex = 0;
+    if (!re.test(text)) continue;
+    re.lastIndex = 0;
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    for (const m of text.matchAll(re)) {
+      if (!m[0]) continue;
+      if (m.index > last) frag.append(text.slice(last, m.index));
+      frag.append(el('mark', { text: m[0] }));
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) frag.append(text.slice(last));
+    node.replaceWith(frag);
+  }
+  return root;
+}

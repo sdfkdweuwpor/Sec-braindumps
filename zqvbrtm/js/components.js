@@ -1,6 +1,6 @@
 /** Shared UI pieces used by more than one view. */
 
-import { el, clear, renderQuestionText, fmtDate } from './dom.js';
+import { el, clear, renderQuestionText, fmtDate, highlightIn } from './dom.js';
 import * as store from './store.js';
 import { icon } from './icons.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
@@ -55,6 +55,47 @@ export function readinessCard(r, { compact = false, navigate = null } = {}) {
     }
   }
   return card;
+}
+
+/**
+ * Readiness as one box of the Study grid: the score, a meter with the band
+ * thresholds marked, and the biggest thing holding it down. The full card
+ * with the formula lives on the Stats screen.
+ */
+export function readinessTile(r, { answered = 0 } = {}) {
+  const has = answered > 0;
+  const bandCls = BAND_CLASS[r.band] || '';
+  const meter = el('div', {
+    class: `rmeter ${bandCls}`, role: 'meter',
+    'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': String(r.score),
+    'aria-label': `Readiness ${r.score} out of 100: ${r.band}. Exam ready at 85.`,
+  }, [
+    el('div', { class: 'rmeter-track' }, [
+      el('span', { class: 'rmeter-fill', style: `width:${Math.max(r.score, 1.5)}%` }),
+      ...[60, 75, 85].map((t) => el('span', { class: 'rmeter-tick', style: `left:${t}%` })),
+    ]),
+    el('div', { class: 'rmeter-scale', 'aria-hidden': 'true' },
+      [0, 60, 75, 85, 100].map((t) => el('span', { style: `left:${t}%`, class: t === 85 ? 'is-target' : null },
+        t === 85 ? ['85', el('span', { class: 'rt-ready', text: ' ready' })] : [String(t)]))),
+  ]);
+  const drag = has && r.drags.length && r.score < 100 ? r.drags[0].text : null;
+  return el('div', { class: 'card hero mode-card readiness-tile' }, [
+    el('div', { class: 'mode-head' }, [
+      el('span', { class: 'mode-ic' }, [icon('shield', { size: 24 })]),
+      el('div', { class: 'rt-title' }, [
+        el('h2', { text: 'Exam readiness' }),
+        el('p', { class: 'hero-sub' }, has
+          ? (drag ? [el('b', { text: 'Holding you back: ' }), drag] : ['Every domain is pulling its weight.'])
+          : ['Answer a few questions and your score shows up here.']),
+      ]),
+      has ? el('div', { class: 'readiness rt-score' }, [
+        el('span', { class: 'score', text: String(r.score) }),
+        el('span', { class: `band ${bandCls}`, text: r.band }),
+      ]) : null,
+    ]),
+    has ? meter : null,
+    el('a', { class: 'btn secondary block', href: '#/stats' }, [icon('stats', { size: 18 }), 'See the full breakdown']),
+  ]);
 }
 
 export function accuracyBar(accuracy) {
@@ -113,7 +154,12 @@ export function sparkline(points, { label = 'Accuracy over time' } = {}) {
 /* Rows are always `{ question, ...meta }`. An earlier version accepted a bare
    question too, via `row.question || row` -- which silently broke, because a
    question object has its own `.question` string property. */
-export function questionList(rows, { pageSize = 25, emptyMessage, onChange, showMissCount = false }) {
+const WHERE_LABEL = { answers: 'Match in the answers', explanation: 'Match in the explanation' };
+
+export function questionList(rows, {
+  pageSize = 25, emptyMessage, onChange, showMissCount = false,
+  highlight = null, showNumber = false,
+}) {
   const wrap = el('div');
   let page = 0;
 
@@ -132,7 +178,10 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
       const det = el('details', { class: 'qrow' }, [
         el('summary', {}, [
           el('span', { class: 'stem' }, [
-            el('span', { text: q.question.split('\n')[0].slice(0, 95) }),
+            showNumber ? el('span', { class: 'qnum', text: `Q${Number(q.id.slice(1))}` }) : null,
+            el('span', { class: 'stem-text', text: highlight
+              ? q.question.replace(/\s+/g, ' ').slice(0, 170) + (q.question.length > 170 ? '…' : '')
+              : q.question.split('\n')[0].slice(0, 95) }),
             el('span', { class: 'tags' }, [
               el('span', { class: 'pill', text: `D${q.domain}` }),
               q.objective ? el('span', { class: 'pill', text: q.objective }) : null,
@@ -143,6 +192,8 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
               showMissCount && row.recovered
                 ? el('span', { class: 'pill', text: '✓ Recovered' })
                 : null,
+              row.status ? el('span', { class: `pill status-${row.status.key}`, text: row.status.text }) : null,
+              WHERE_LABEL[row.where] ? el('span', { class: 'pill pill-where', text: WHERE_LABEL[row.where] }) : null,
             ]),
           ]),
         ]),
@@ -181,6 +232,10 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
           if (onChange) onChange();
         },
       }, [icon('flag')]));
+      if (highlight) {
+        highlightIn(det.querySelector('.stem-text'), highlight);
+        highlightIn(inner, highlight);
+      }
       det.append(inner);
       wrap.append(det);
     }

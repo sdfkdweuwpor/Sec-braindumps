@@ -1,9 +1,10 @@
 import { el } from '../dom.js';
 import * as store from '../store.js';
 import * as stats from '../stats.js';
-import { readinessCard, confirmDialog } from '../components.js';
+import { readinessTile, confirmDialog } from '../components.js';
 import { icon } from '../icons.js';
 import { smartReviewCard } from '../smartReview.js';
+import { SUGGESTIONS } from './search.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -77,10 +78,6 @@ export async function renderHome(view, { navigate }) {
       ? `${o.answered} answered · ${Math.round(o.accuracy * 100)}% lifetime accuracy · ${o.unseen} of ${o.total} still unseen`
       : `${o.total} questions in the bank. Nothing answered yet — start anywhere.`,
   ]));
-
-  if (o.answered) {
-    view.append(readinessCard(stats.readiness(ALL_QUESTIONS, attempts), { compact: true }));
-  }
 
   // --- Build your own -------------------------------------------------
   const grid = el('div', { class: 'mode-grid' });
@@ -158,4 +155,39 @@ export async function renderHome(view, { navigate }) {
       }), navigate);
     },
   }));
+
+  // --- Search and readiness close the grid: left and right of the last row.
+  grid.append(searchCard(navigate));
+  grid.append(readinessTile(stats.readiness(ALL_QUESTIONS, attempts), { answered: o.answered }));
+}
+
+function searchCard(navigate) {
+  const input = el('input', {
+    id: 'home-search', class: 'search-input', type: 'search', autocomplete: 'off',
+    placeholder: 'SAML, tabletop, 802.1X…', 'aria-label': 'Search the question bank',
+    enterkeyhint: 'search',
+  });
+  const go = (q) => navigate(q ? `#/search?q=${encodeURIComponent(q)}` : '#/search');
+  const form = el('form', { class: 'search-form', role: 'search' }, [
+    el('span', { class: 'search-ic', 'aria-hidden': 'true' }, [icon('search', { size: 20 })]),
+    input,
+    el('button', { class: 'btn', type: 'submit', text: 'Search' }),
+  ]);
+  form.addEventListener('submit', (ev) => { ev.preventDefault(); go(input.value.trim()); });
+  return el('div', { class: 'card mode-card search-home' }, [
+    el('div', { class: 'mode-head' }, [
+      el('span', { class: 'mode-ic' }, [icon('search', { size: 24 })]),
+      el('div', {}, [
+        el('h2', { text: 'Search questions' }),
+        el('p', { class: 'muted', style: 'margin:0',
+          text: 'Find every question on a topic, then quiz yourself on just those.' }),
+      ]),
+    ]),
+    el('div', { class: 'search-home-bottom' }, [
+      form,
+      el('div', { class: 'chips' }, SUGGESTIONS.slice(0, 4).map((t) => el('button', {
+        class: 'chip', type: 'button', text: t, onclick: () => go(t),
+      }))),
+    ]),
+  ]);
 }

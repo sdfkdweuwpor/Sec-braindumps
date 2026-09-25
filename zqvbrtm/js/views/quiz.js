@@ -409,6 +409,8 @@ export async function renderQuiz(view, { navigate }) {
 
     /* ---- keyboard ---- */
     keyHandler = (ev) => {
+      // Left the quiz screen: this handler belongs to a quiz no longer shown.
+      if (!body.isConnected) { teardown(); return; }
       if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
       if (document.querySelector('.modal-backdrop')) return;
       const tag = (ev.target.tagName || '').toLowerCase();

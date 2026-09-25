@@ -1,8 +1,9 @@
 /**
  * Sound effects, synthesised with the Web Audio API: no audio files, no
  * network. Each effect is a few short sine or triangle notes with a soft
- * attack and decay, through one master gain and a gentle low-pass so nothing
- * is shrill.
+ * attack and decay, through one master gain, a compressor and a gentle
+ * low-pass so they are clearly audible without being shrill. Notes stay above
+ * about 300 Hz because laptop and phone speakers barely play anything lower.
  *
  * Browsers only start audio after the viewer interacts, so the context is
  * created or resumed on the first tap or key press (see unlock). On by
@@ -20,12 +21,20 @@ function audio() {
   if (!AC) return null;
   try {
     ctx = new AC();
+    // Loud but never clipped: a compressor catches the peaks when notes of
+    // a chord overlap, then a gentle low-pass takes the edge off.
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -8;
+    comp.knee.value = 6;
+    comp.ratio.value = 6;
+    comp.attack.value = 0.003;
+    comp.release.value = 0.2;
     const lp = ctx.createBiquadFilter();
     lp.type = 'lowpass';
-    lp.frequency.value = 5200;
+    lp.frequency.value = 6500;
     out = ctx.createGain();
-    out.gain.value = 0.9;
-    out.connect(lp).connect(ctx.destination);
+    out.gain.value = 1.6;
+    out.connect(comp).connect(lp).connect(ctx.destination);
   } catch {
     ctx = null;
   }
@@ -68,41 +77,41 @@ const C5 = 523.25, E5 = 659.25, G5 = 783.99, A5 = 880,
 
 const EFFECTS = {
   // A light tap: picking an answer when the result is not shown yet.
-  select: (c) => note(c, { freq: 1250, dur: 0.05, type: 'triangle', gain: 0.05, glide: 0.7, partial: 0 }),
+  select: (c) => note(c, { freq: 1250, dur: 0.06, type: 'triangle', gain: 0.16, glide: 0.7, partial: 0 }),
   // Rising major third.
   correct: (c) => {
-    note(c, { freq: C6, dur: 0.32, gain: 0.12 });
-    note(c, { freq: E6, at: 0.085, dur: 0.42, gain: 0.12 });
+    note(c, { freq: C6, dur: 0.34, gain: 0.3 });
+    note(c, { freq: E6, at: 0.085, dur: 0.46, gain: 0.3 });
   },
-  // Two soft, low, falling notes. Clear, not harsh.
+  // Two falling notes with a buzzy edge: clear on small speakers, not harsh.
   wrong: (c) => {
-    note(c, { freq: 311, dur: 0.2, type: 'triangle', gain: 0.13, partial: 0 });
-    note(c, { freq: 233, at: 0.13, dur: 0.3, type: 'triangle', gain: 0.13, glide: 0.94, partial: 0 });
+    note(c, { freq: 392, dur: 0.2, type: 'triangle', gain: 0.34, partial: 0.3 });
+    note(c, { freq: 294, at: 0.13, dur: 0.34, type: 'triangle', gain: 0.34, glide: 0.94, partial: 0.3 });
   },
   // Three in a row and more: a quick arpeggio.
   streak: (c) => {
-    [C6, E6, G6].forEach((f, i) => note(c, { freq: f, at: i * 0.07, dur: 0.34, gain: 0.11 }));
-    note(c, { freq: C7, at: 0.21, dur: 0.5, gain: 0.07 });
+    [C6, E6, G6].forEach((f, i) => note(c, { freq: f, at: i * 0.07, dur: 0.36, gain: 0.26 }));
+    note(c, { freq: C7, at: 0.21, dur: 0.55, gain: 0.17 });
   },
   // A question leaves Smart review: arpeggio with a shimmering top note.
   mastered: (c) => {
-    [C6, E6, G6, C7].forEach((f, i) => note(c, { freq: f, at: i * 0.075, dur: 0.4, gain: 0.11 }));
-    [0, 0.09, 0.18].forEach((d) => note(c, { freq: C7 * 1.5, at: 0.34 + d, dur: 0.18, gain: 0.03, partial: 0 }));
+    [C6, E6, G6, C7].forEach((f, i) => note(c, { freq: f, at: i * 0.075, dur: 0.42, gain: 0.26 }));
+    [0, 0.09, 0.18].forEach((d) => note(c, { freq: C7 * 1.5, at: 0.34 + d, dur: 0.2, gain: 0.08, partial: 0 }));
   },
   // Passing score on the results screen.
   finish: (c) => {
-    [G5, C6, E6].forEach((f, i) => note(c, { freq: f, at: i * 0.1, dur: 0.3, gain: 0.11 }));
-    [C6, E6, G6].forEach((f) => note(c, { freq: f, at: 0.32, dur: 0.9, gain: 0.07 }));
+    [G5, C6, E6].forEach((f, i) => note(c, { freq: f, at: i * 0.1, dur: 0.32, gain: 0.26 }));
+    [C6, E6, G6].forEach((f) => note(c, { freq: f, at: 0.32, dur: 0.95, gain: 0.16 }));
   },
   // Quiz done, below the line: a calm, neutral chord.
   done: (c) => {
-    [C5, G5].forEach((f) => note(c, { freq: f, dur: 0.7, gain: 0.08 }));
+    [C5, G5].forEach((f) => note(c, { freq: f, dur: 0.75, gain: 0.2 }));
   },
-  flag: (c) => note(c, { freq: A5, dur: 0.12, type: 'triangle', gain: 0.07, glide: 1.5, partial: 0 }),
+  flag: (c) => note(c, { freq: A5, dur: 0.14, type: 'triangle', gain: 0.18, glide: 1.5, partial: 0 }),
   // Sounds switched back on.
   on: (c) => {
-    note(c, { freq: E5, dur: 0.18, gain: 0.08 });
-    note(c, { freq: A5, at: 0.07, dur: 0.26, gain: 0.08 });
+    note(c, { freq: E5, dur: 0.2, gain: 0.2 });
+    note(c, { freq: A5, at: 0.07, dur: 0.28, gain: 0.2 });
   },
 };
 

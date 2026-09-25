@@ -32,6 +32,12 @@ name is deliberately random so the URL does not name the vendor.
   back to 1 day, and answering before a check is due changes nothing. The
   schedule is rebuilt from the answer history (`js/srs.js`), so nothing
   extra is stored and it applies to history from before the feature.
+- **Search.** A box on the Study screen and a Search page (`js/search.js`):
+  every word must appear in the question, its answers, its explanations or
+  its objective; short words such as WAF or IP match whole words only; a
+  number like 62 or #62 jumps to that question. Matches are highlighted,
+  each result shows whether you last got it right, and *Quiz me on these*
+  starts a quiz from the results (up to 50).
 - **Sound effects.** Synthesised in the browser (`js/sound.js`, no audio
   files): a chime for right, a soft low tone for wrong, an arpeggio for
   streaks and mastered questions, a finish chord on results. On by default;
@@ -98,6 +104,7 @@ js/store.js             the only module that touches localStorage
 js/quizEngine.js        pool filtering, selection, scoring
 js/stats.js             derived analytics and the readiness formula
 js/srs.js               Smart review schedule, worked out from the answer history
+js/search.js            question search and match highlighting patterns
 js/smartReview.js       Smart review card and session start
 js/sound.js             synthesised sound effects
 js/motion.js            animation helpers (Web Animations API)
@@ -122,7 +129,7 @@ tests/                  node --test suites
 npm test          # or: node --test
 ```
 
-82 tests covering pool filtering, the Smart review schedule, count clamping, no-duplicates-within-a-quiz,
+90 tests covering pool filtering, the Smart review schedule, search, count clamping, no-duplicates-within-a-quiz,
 all-or-nothing multi-answer scoring, the readiness maths, the localStorage
 migration path, storage-failure fallback, refusing another app's progress
 file, and the integrity of the shipped bank. The five bank tests are skipped
