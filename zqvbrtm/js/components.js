@@ -202,3 +202,57 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
   draw();
   return { node: wrap, redraw: draw };
 }
+
+/**
+ * In-page confirmation, used instead of window.confirm(). Some embedded
+ * viewers never show browser dialogs (confirm() returns false at once), and
+ * the native box cannot be styled. Resolves true on confirm; false on
+ * cancel, Escape or a click on the backdrop. While open it swallows key
+ * presses so quiz shortcuts underneath do not fire.
+ */
+export function confirmDialog({ title, message = '', confirmText = 'OK', cancelText = 'Cancel', danger = false }) {
+  return new Promise((resolve) => {
+    const returnFocus = document.activeElement;
+    const titleId = `dlg-${Date.now().toString(36)}`;
+    let done = false;
+    const okBtn = el('button', {
+      class: danger ? 'btn danger-solid' : 'btn', type: 'button', text: confirmText,
+      onclick: () => close(true),
+    });
+    const cancelBtn = el('button', {
+      class: 'btn secondary', type: 'button', text: cancelText, onclick: () => close(false),
+    });
+    const backdrop = el('div', { class: 'modal-backdrop' }, [
+      el('div', { class: 'modal', role: 'alertdialog', 'aria-modal': 'true', 'aria-labelledby': titleId }, [
+        el('h2', { id: titleId, text: title }),
+        message ? el('p', { class: 'muted', text: message }) : null,
+        el('div', { class: 'modal-actions' }, [cancelBtn, okBtn]),
+      ]),
+    ]);
+    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(false); });
+
+    function onKey(e) {
+      if (e.key === 'Escape') {
+        e.preventDefault(); e.stopPropagation(); close(false);
+      } else if (e.key === 'Tab') {
+        // Keep focus on the two buttons while the panel is open.
+        e.preventDefault(); e.stopPropagation();
+        (document.activeElement === okBtn ? cancelBtn : okBtn).focus();
+      } else {
+        e.stopPropagation();   // Enter/Space still activate the focused button
+      }
+    }
+    function close(result) {
+      if (done) return;
+      done = true;
+      document.removeEventListener('keydown', onKey, true);
+      backdrop.remove();
+      if (returnFocus && document.contains(returnFocus)) returnFocus.focus({ preventScroll: true });
+      resolve(result);
+    }
+
+    document.addEventListener('keydown', onKey, true);
+    document.body.append(backdrop);
+    okBtn.focus();
+  });
+}

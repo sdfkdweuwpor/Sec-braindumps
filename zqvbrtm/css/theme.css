@@ -1,6 +1,7 @@
 /* Design tokens. Light is the default; [data-theme="dark"] overrides the same
    names so nothing else in the app needs to know which theme is on. */
 :root {
+  color-scheme: light;
   --bg:            #f3f5fa;
   --bg-raised:     #f8f9fc;
   --bg-card:       #ffffff;
@@ -48,6 +49,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg:            #0b0f1c;
   --bg-raised:     #10162a;
   --bg-card:       #141b31;

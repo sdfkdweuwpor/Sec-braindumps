@@ -2,7 +2,7 @@ import { el, clear } from '../dom.js';
 import * as store from '../store.js';
 import * as st from '../stats.js';
 import { ALL_QUESTIONS, DOMAINS } from '../quizEngine.js';
-import { readinessCard, accuracyBar, sparkline } from '../components.js';
+import { readinessCard, accuracyBar, sparkline, confirmDialog } from '../components.js';
 
 function pct(v) { return v === null ? '—' : `${Math.round(v * 100)}%`; }
 
@@ -112,38 +112,106 @@ export async function renderStats(view, { navigate }) {
   /* ---- settings / data ---- */
   const dataCard = el('div', { class: 'card' }, [el('h2', { text: 'Your data' })]);
   dataCard.append(el('p', { class: 'muted',
-    text: 'Progress lives in this browser only. Export it to move between devices.' }));
-  dataCard.append(el('div', { class: 'row' }, [
-    el('button', {
-      class: 'btn secondary', type: 'button', text: 'Export progress',
-      onclick: () => {
-        const blob = new Blob([JSON.stringify(store.exportProgress(), null, 2)],
-          { type: 'application/json' });
-        const a = el('a', {
-          href: URL.createObjectURL(blob),
-          download: `${store.APP_ID}-progress-${new Date().toISOString().slice(0, 10)}.json`,
-        });
-        document.body.append(a); a.click(); a.remove();
-        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    text: 'Progress lives in this browser only. To move it to another device, export it here and import it there.' }));
+  const panel = el('div', { class: 'datapanel' });
+  const refresh = () => window.dispatchEvent(new Event('app:refresh'));
+
+  // Errors go under whatever is in the panel, so a bad paste can be fixed in place.
+  const showError = (text) => {
+    let p = panel.querySelector('.reason');
+    if (!p) { p = el('p', { class: 'reason', role: 'alert' }); panel.append(p); }
+    p.textContent = text;
+  };
+
+  const importText = async (raw) => {
+    panel.querySelector('.reason')?.remove();
+    let payload;
+    try {
+      payload = JSON.parse(raw);
+    } catch {
+      showError('That is not exported progress. Paste the whole text from Export progress, including the braces.');
+      return;
+    }
+    const ok = await confirmDialog({
+      title: 'Replace your progress?',
+      message: 'Importing replaces every answer, flag and quiz stored in this browser.',
+      confirmText: 'Replace', danger: true,
+    });
+    if (!ok) return;
+    try {
+      store.importProgress(payload);
+      refresh();
+    } catch (err) {
+      showError(`Could not import that progress. ${err.message}`);
+    }
+  };
+
+  const exportProgress = () => {
+    const json = JSON.stringify(store.exportProgress(), null, 2);
+    // Some embedded viewers block downloads, so the same text is always
+    // shown for copying as well.
+    try {
+      const a = el('a', {
+        href: URL.createObjectURL(new Blob([json], { type: 'application/json' })),
+        download: `${store.APP_ID}-progress-${new Date().toISOString().slice(0, 10)}.json`,
+      });
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    } catch { /* the copy box below still works */ }
+    clear(panel);
+    const box = el('textarea', {
+      id: 'export-text', class: 'codebox', rows: '6', readonly: '',
+      'aria-label': 'Exported progress',
+    });
+    box.value = json;
+    const copyBtn = el('button', {
+      class: 'btn secondary', type: 'button', text: 'Copy to clipboard',
+      onclick: async () => {
+        try {
+          await navigator.clipboard.writeText(json);
+          copyBtn.textContent = 'Copied';
+        } catch {
+          box.focus(); box.select();
+          copyBtn.textContent = 'Selected — copy with Ctrl+C or ⌘C';
+        }
       },
-    }),
+    });
+    panel.append(
+      el('p', { class: 'faint',
+        text: 'If no file downloaded, copy this text and use Paste progress on the other device.' }),
+      box, el('div', { class: 'row' }, [copyBtn]),
+    );
+  };
+
+  const pasteProgress = () => {
+    clear(panel);
+    const box = el('textarea', {
+      id: 'import-text', class: 'codebox', rows: '6',
+      placeholder: 'Paste exported progress here', 'aria-label': 'Paste exported progress',
+    });
+    panel.append(box, el('div', { class: 'row' }, [
+      el('button', { class: 'btn', type: 'button', text: 'Import pasted progress',
+        onclick: () => importText(box.value) }),
+    ]));
+    box.focus();
+  };
+
+  dataCard.append(el('div', { class: 'row' }, [
+    el('button', { class: 'btn secondary', type: 'button', text: 'Export progress', onclick: exportProgress }),
     el('label', { class: 'btn secondary', style: 'cursor:pointer' }, [
-      'Import progress',
+      'Import file',
       el('input', {
-        type: 'file', accept: 'application/json,.json', style: 'display:none',
+        id: 'import-file', type: 'file', accept: 'application/json,.json', style: 'display:none',
         onchange: async (ev) => {
           const file = ev.currentTarget.files[0];
-          if (!file) return;
-          try {
-            store.importProgress(JSON.parse(await file.text()));
-            window.location.reload();
-          } catch (err) {
-            window.alert(`Could not import that file.\n\n${err.message}`);
-          }
+          ev.currentTarget.value = '';
+          if (file) importText(await file.text());
         },
       }),
     ]),
+    el('button', { class: 'btn secondary', type: 'button', text: 'Paste progress', onclick: pasteProgress }),
   ]));
+  dataCard.append(panel);
 
   const resetWrap = el('div', { style: 'margin-top:1rem' });
   resetWrap.append(el('button', {
@@ -167,7 +235,7 @@ export async function renderStats(view, { navigate }) {
                 return;
               }
               store.resetProgress();
-              window.location.reload();
+              refresh();
             },
           }),
           el('button', {

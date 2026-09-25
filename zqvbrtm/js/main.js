@@ -140,6 +140,12 @@ export function start() {
   buildShell();
   applyTheme(store.getSettings().theme);
   window.addEventListener('hashchange', render);
+  // Views ask for a fresh render after changing stored data (import, reset,
+  // discard). Reloading the page does not work inside every embedded viewer.
+  window.addEventListener('app:refresh', () => {
+    applyTheme(store.getSettings().theme);
+    render();
+  });
   render();
 }
 

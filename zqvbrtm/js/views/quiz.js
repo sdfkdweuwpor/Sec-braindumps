@@ -1,5 +1,6 @@
 import { el, clear, renderQuestionText } from '../dom.js';
 import * as store from '../store.js';
+import { confirmDialog } from '../components.js';
 import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scoreQuiz, sessionQuestions, remainingMs,
 } from '../quizEngine.js';
@@ -15,6 +16,9 @@ function teardown() {
 }
 
 function finish(session, navigate) {
+  // The mock timer and a confirmation can both reach here; score once.
+  if (session.finished) return;
+  session.finished = true;
   const questions = sessionQuestions(session);
   if (session.feedbackMode === 'end') {
     // Answers stay editable until submission, so they are only recorded now;
@@ -100,17 +104,7 @@ export async function renderQuiz(view, { navigate }) {
         flagBtn,
         el('button', {
           class: 'btn secondary', type: 'button', text: 'End quiz',
-          onclick: () => {
-            const answered = Object.keys(session.answers).length;
-            const msg = answered === total
-              ? 'Submit this quiz now?'
-              : answered
-              ? `End this quiz now? ${answered} of ${total} answered — the rest count as unanswered.`
-              : 'End this quiz? Nothing has been answered yet, so it will be discarded.';
-            if (!window.confirm(msg)) return;
-            if (!answered) { store.clearActiveQuiz(); teardown(); navigate('#/home'); return; }
-            finish(session, navigate);
-          },
+          onclick: () => endQuiz(),
         }),
       ]),
     ]));
@@ -321,6 +315,7 @@ export async function renderQuiz(view, { navigate }) {
     /* ---- keyboard ---- */
     keyHandler = (ev) => {
       if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+      if (document.querySelector('.modal-backdrop')) return;
       const tag = (ev.target.tagName || '').toLowerCase();
       if (tag === 'input' || tag === 'textarea') return;
 
@@ -340,10 +335,7 @@ export async function renderQuiz(view, { navigate }) {
         ev.preventDefault(); flagBtn.click();
       } else if (ev.key === 'Escape') {
         ev.preventDefault();
-        if (window.confirm('End this quiz?')) {
-          if (Object.keys(session.answers).length) finish(session, navigate);
-          else { store.clearActiveQuiz(); teardown(); navigate('#/home'); }
-        }
+        endQuiz();
       }
     };
     window.addEventListener('keydown', keyHandler);
@@ -385,17 +377,46 @@ export async function renderQuiz(view, { navigate }) {
     else submitAll();
   }
 
-  function submitAll() {
+  const answeredCount = () =>
+    session.questionIds.filter((id) => (session.answers[id] || []).length).length;
+
+  // One path for the End quiz button and the Escape key.
+  async function endQuiz() {
     const total = session.questionIds.length;
-    const answered = session.questionIds.filter((id) => (session.answers[id] || []).length).length;
+    const answered = answeredCount();
     if (!answered) {
-      if (window.confirm('Nothing has been answered yet, so this quiz will be discarded. End it?')) {
-        store.clearActiveQuiz(); teardown(); navigate('#/home');
-      }
+      const ok = await confirmDialog({
+        title: 'End this quiz?',
+        message: 'Nothing has been answered yet, so the quiz will be discarded.',
+        confirmText: 'Discard quiz', cancelText: 'Keep going', danger: true,
+      });
+      if (ok) { store.clearActiveQuiz(); teardown(); navigate('#/home'); }
       return;
     }
-    if (answered < total && !window.confirm(
-      `${total - answered} question${total - answered === 1 ? ' is' : 's are'} still unanswered and will count as wrong. Submit anyway?`)) return;
+    const all = answered === total;
+    const ok = await confirmDialog({
+      title: all ? 'Submit this quiz?' : 'End this quiz now?',
+      message: all
+        ? 'Every question is answered. Your score is worked out when you submit.'
+        : `${answered} of ${total} answered. The other ${total - answered} will count as wrong.`,
+      confirmText: all ? 'Submit' : 'End and score', cancelText: 'Keep going',
+    });
+    if (ok) finish(session, navigate);
+  }
+
+  async function submitAll() {
+    const total = session.questionIds.length;
+    const answered = answeredCount();
+    if (!answered) { endQuiz(); return; }
+    if (answered < total) {
+      const left = total - answered;
+      const ok = await confirmDialog({
+        title: `${left} question${left === 1 ? '' : 's'} unanswered`,
+        message: `Unanswered questions count as wrong. Submit now, or go back and answer ${left === 1 ? 'it' : 'them'}?`,
+        confirmText: 'Submit anyway', cancelText: 'Keep going',
+      });
+      if (!ok) return;
+    }
     finish(session, navigate);
   }
 

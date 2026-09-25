@@ -1,7 +1,7 @@
 import { el } from '../dom.js';
 import * as store from '../store.js';
 import * as stats from '../stats.js';
-import { readinessCard } from '../components.js';
+import { readinessCard, confirmDialog } from '../components.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -52,7 +52,16 @@ export async function renderHome(view, { navigate }) {
         el('a', { class: 'btn', href: '#/quiz', text: 'Resume quiz' }),
         el('button', {
           class: 'btn danger', type: 'button', text: 'Discard',
-          onclick: () => { store.clearActiveQuiz(); navigate('#/home'); window.location.reload(); },
+          onclick: async () => {
+            const ok = await confirmDialog({
+              title: 'Discard this quiz?',
+              message: 'The quiz in progress closes. Answers you already checked stay in your history.',
+              confirmText: 'Discard', danger: true,
+            });
+            if (!ok) return;
+            store.clearActiveQuiz();
+            window.dispatchEvent(new Event('app:refresh'));
+          },
         }),
       ]),
     ]));

@@ -43,16 +43,17 @@ no stamp — because import replaces everything.
 
 ## Running it
 
-Open `index.html`. That is the whole procedure — it works straight off the
-filesystem, which is why the question data is `.js` files exporting consts
-rather than JSON fetched at runtime (`fetch()` on a local file is blocked over
-`file://`).
+Serve the folder over HTTP. Double-clicking `index.html` does **not** work in
+Chrome, Edge or Brave: they refuse to load JavaScript modules from a
+`file://` page, so it opens blank. The simplest options:
 
-If you prefer a server:
+- **GitHub Pages** (see *Deploying to GitHub Pages* below) gives you a link
+  that works on any device.
+- **Locally**, from the repository folder:
 
 ```bash
 python3 -m http.server 8000
-# then http://localhost:8000
+# then open http://localhost:8000/app-template/
 ```
 
 ## What's in it
