@@ -9,6 +9,8 @@ import { icon } from '../icons.js';
 import {
   slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, growBar,
 } from '../motion.js';
+import { play } from '../sound.js';
+import { reviewState, STEPS } from '../srs.js';
 
 const DRILL_SIZE = 10;
 
@@ -107,6 +109,9 @@ export async function renderQuiz(view, { navigate }) {
     const L = letterMap(order);            // original key -> letter shown
     const byShown = (a, b) => L[a].localeCompare(L[b]);
     const drill = session.mode === 'similar';
+    // Smart review: the rung this question was on when the review started.
+    const srsStep = session.mode === 'smart' && session.srs && Number.isInteger(session.srs[question.id])
+      ? session.srs[question.id] : null;
 
     /* ---- header ---- */
     const flagBtn = el('button', {
@@ -117,7 +122,7 @@ export async function renderQuiz(view, { navigate }) {
       onclick: () => {
         const on = store.toggleFlag(question.id);
         flagBtn.setAttribute('aria-pressed', String(on));
-        if (on) { pop(flagBtn.firstChild, { scale: 1.35 }); ring(flagBtn, 'rgba(233,191,98,.55)'); }
+        if (on) { pop(flagBtn.firstChild, { scale: 1.35 }); ring(flagBtn, 'rgba(233,191,98,.55)'); play('flag'); }
       },
     }, [icon('flag')]);
 
@@ -160,6 +165,9 @@ export async function renderQuiz(view, { navigate }) {
         text: `Domain ${question.domain} · ${DOMAINS[question.domain]?.title || ''}` }),
       question.objective
         ? el('span', { class: 'pill', text: `${question.objective} ${question.objectiveTitle || ''}` })
+        : null,
+      srsStep !== null
+        ? el('span', { class: 'pill pill-srs' }, [icon('smart', { size: 14 }), `Smart review · ${STEPS[srsStep]}-day check`])
         : null,
     ]));
 
@@ -241,11 +249,14 @@ export async function renderQuiz(view, { navigate }) {
             store.setActiveQuiz(session);
             paint();
             if (i === -1) pop(btn.querySelector('.key'), { scale: 1.2 });
+            play('select');
             submitBtn.disabled = picked.length === 0;
           } else {
             picked.length = 0;
             picked.push(key);
-            if (session.feedbackMode !== 'immediate') { paint(); pop(btn.querySelector('.key'), { scale: 1.2 }); }
+            if (session.feedbackMode !== 'immediate') {
+              paint(); pop(btn.querySelector('.key'), { scale: 1.2 }); play('select');
+            }
             commit();
           }
         },
@@ -281,6 +292,22 @@ export async function renderQuiz(view, { navigate }) {
         .map((c) => `${L[c.key]}. ${c.text}`)
         .join('  |  ');
 
+      // Smart review outcome: where this answer moved the question.
+      let srsChip = null;
+      let masteredNow = false;
+      if (srsStep !== null) {
+        const after = reviewState(store.attemptsFor(question.id));
+        const chip = (ic, text, cls = '') => el('span', { class: `srs-chip ${cls}` }, [icon(ic, { size: 15 }), text]);
+        if (got && !after.state && after.mastered) {
+          masteredNow = true;
+          srsChip = chip('trophy', 'Mastered', 'is-mastered');
+        } else if (got && after.state && after.state.step > srsStep) {
+          srsChip = chip('clock', `Next check in ${STEPS[after.state.step]} days`);
+        } else if (!got) {
+          srsChip = chip('clock', srsStep === 0 ? 'Check again tomorrow' : 'Back to the 1-day check', 'is-reset');
+        }
+      }
+
       const panel = el('div', { class: `explain ${got ? 'is-right' : 'is-wrong'}` }, [
         el('div', { class: 'explain-head' }, [
           el('span', { class: 'verdict' }, [
@@ -288,6 +315,7 @@ export async function renderQuiz(view, { navigate }) {
             got && how === 'reveal' && (session.streak || 0) >= 3
               ? el('span', { class: 'streak' }, [icon('flame', { size: 15 }), `${session.streak} in a row`])
               : null,
+            srsChip,
           ]),
           el('div', { class: 'explain-tools' }, [
             session.feedbackMode === 'immediate' && !drill
@@ -346,7 +374,14 @@ export async function renderQuiz(view, { navigate }) {
         drawIcon(panel.querySelector('.verdict .icon'), { delay: 260, duration: 480 });
         const chip = panel.querySelector('.streak');
         if (chip) pop(chip, { scale: 1.25, duration: 600 });
-        if (got && shownRight[0]) burst(shownRight[0].querySelector('.key'));
+        const srsEl = panel.querySelector('.srs-chip');
+        if (srsEl) pop(srsEl, { scale: masteredNow ? 1.3 : 1.15, duration: 620 });
+        if (got && shownRight[0]) burst(shownRight[0].querySelector('.key'), { count: masteredNow ? 40 : 22 });
+
+        const streak = session.streak || 0;
+        if (masteredNow) play('mastered');
+        else if (got) play(streak >= 3 && (streak === 3 || streak % 5 === 0) ? 'streak' : 'correct');
+        else play('wrong');
       }
     }
 

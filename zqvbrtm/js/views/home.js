@@ -3,6 +3,7 @@ import * as store from '../store.js';
 import * as stats from '../stats.js';
 import { readinessCard, confirmDialog } from '../components.js';
 import { icon } from '../icons.js';
+import { smartReviewCard } from '../smartReview.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -67,6 +68,9 @@ export async function renderHome(view, { navigate }) {
       ]),
     ]));
   }
+
+  // The daily habit sits first: whatever Smart review says is due today.
+  view.append(smartReviewCard(navigate));
 
   view.append(el('p', { class: 'muted' }, [
     o.answered

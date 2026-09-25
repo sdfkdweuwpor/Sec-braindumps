@@ -5,6 +5,7 @@ import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon } from './icons.js';
 import { themeReveal, animateScreen, pop } from './motion.js';
+import * as sound from './sound.js';
 import { renderHome } from './views/home.js';
 import { renderQuiz } from './views/quiz.js';
 import { renderResults } from './views/results.js';
@@ -55,6 +56,15 @@ function applyTheme(theme) {
   }
 }
 
+function paintSound() {
+  const btn = document.getElementById('sound-toggle');
+  if (!btn) return;
+  const on = sound.enabled();
+  btn.replaceChildren(icon(on ? 'volume' : 'mute'));
+  btn.setAttribute('aria-label', on ? 'Sound effects on. Turn them off' : 'Sound effects off. Turn them on');
+  btn.setAttribute('title', on ? 'Sound effects: on' : 'Sound effects: off');
+}
+
 function buildShell() {
   const root = document.getElementById('app');
   clear(root);
@@ -77,11 +87,23 @@ function buildShell() {
     },
   });
 
+  const soundBtn = el('button', {
+    class: 'iconbtn', id: 'sound-toggle', type: 'button',
+    onclick: () => {
+      const next = !sound.enabled();
+      store.setSettings({ sound: next });
+      paintSound();
+      pop(soundBtn.firstChild, { scale: 1.25 });
+      if (next) { sound.unlock(); sound.play('on'); }
+    },
+  });
+
   const topbar = el('header', { class: 'topbar' }, [
     el('span', { class: 'brand' }, [
       el('span', { class: 'brandmark' }, [icon('shield', { size: 20 })]),
       el('span', { class: 'brandtext' }, [APP_TITLE, el('small', { text: APP_SUBTITLE })]),
     ]),
+    soundBtn,
     themeBtn,
   ]);
 
@@ -170,6 +192,11 @@ export function start() {
   store.init();
   buildShell();
   applyTheme(store.getSettings().theme);
+  paintSound();
+  // Browsers start audio only from a user gesture; wake it on the first one.
+  for (const type of ['pointerdown', 'keydown', 'touchend']) {
+    window.addEventListener(type, () => sound.unlock(), { passive: true, capture: true });
+  }
   window.addEventListener('hashchange', render);
   window.addEventListener('resize', () => placeNavPill({ instant: true }));
   // The font can change link sizes after first paint.
@@ -178,6 +205,7 @@ export function start() {
   // discard). Reloading the page does not work inside every embedded viewer.
   window.addEventListener('app:refresh', () => {
     applyTheme(store.getSettings().theme);
+    paintSound();
     render();
   });
   render();

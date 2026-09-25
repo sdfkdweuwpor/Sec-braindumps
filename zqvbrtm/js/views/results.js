@@ -6,11 +6,14 @@ import {
 } from '../quizEngine.js';
 import { icon } from '../icons.js';
 import { countUp, reduced, EASE, burst } from '../motion.js';
+import { play } from '../sound.js';
+import { reviewChanges } from '../srs.js';
+import { currentSummary, startSmartReview, reviewButtonLabel } from '../smartReview.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
 // Score ring: the arc sweeps round to the percentage while the number counts up.
-function scoreRing(pct, passed) {
+function scoreRing(pct, passed, fresh) {
   const R = 52;
   const C = 2 * Math.PI * R;
   const svg = document.createElementNS(SVGNS, 'svg');
@@ -30,11 +33,19 @@ function scoreRing(pct, passed) {
   svg.append(track, arc);
   const num = el('span', { class: 'ring-num', text: `${pct}%` });
   const wrap = el('div', { class: 'ring' }, [svg, num]);
-  if (!reduced() && pct > 0) {
+  const still = reduced();
+  if (!still && pct > 0) {
     arc.animate([{ strokeDashoffset: C }, { strokeDashoffset: C * (1 - pct / 100) }],
       { duration: 1200, delay: 200, easing: EASE, fill: 'backwards' });
     countUp(num, pct, { duration: 1200, delay: 200, format: (n) => `${n}%` });
-    if (passed) setTimeout(() => { if (wrap.isConnected) burst(wrap, { count: 28 }); }, 1250);
+  }
+  // Celebrate only a result that was just finished, not one reopened later.
+  if (fresh) {
+    setTimeout(() => {
+      if (!wrap.isConnected) return;
+      if (passed) burst(wrap, { count: 28 });
+      play(passed ? 'finish' : 'done');
+    }, still || pct === 0 ? 150 : 1250);
   }
   return wrap;
 }
@@ -63,6 +74,33 @@ function domainBars(questions, answers) {
   ]);
 }
 
+// How this quiz moved questions through Smart review, and a way to keep going.
+function srsCard(result, isSmart, navigate) {
+  const c = reviewChanges(store.getAttempts(), result.questionIds, result.id);
+  const due = currentSummary().due.length;
+  const plural = (n) => (n === 1 ? '' : 's');
+  const items = [
+    c.mastered && { cls: 'is-mastered', ic: 'trophy', text: `${c.mastered} mastered` },
+    c.up && { cls: 'is-up', ic: 'right', text: `${c.up} moved up` },
+    c.reset && { cls: 'is-reset', ic: 'review', text: `${c.reset} back to 1 day` },
+    c.added && { cls: 'is-added', ic: 'smart', text: `${c.added} new question${plural(c.added)} to review, first check tomorrow` },
+  ].filter(Boolean);
+  if (!items.length && !(isSmart && due)) return null;
+  return el('div', { class: 'card srs-result' }, [
+    el('div', { class: 'srs-result-head' }, [
+      el('span', { class: 'mode-ic' }, [icon('smart', { size: 22 })]),
+      el('h2', { text: 'Smart review' }),
+    ]),
+    items.length
+      ? el('ul', { class: 'srs-moves' }, items.map((it) => el('li', { class: it.cls }, [icon(it.ic, { size: 16 }), it.text])))
+      : null,
+    isSmart && due
+      ? el('button', { class: 'btn', type: 'button', onclick: () => startSmartReview(navigate) },
+        [icon('smart', { size: 18 }), `Keep going: ${reviewButtonLabel(due).replace(/^Review/, 'review')}`])
+      : null,
+  ]);
+}
+
 export async function renderResults(view, { params, navigate }) {
   const wanted = params.get('id');
   const quizzes = store.getQuizzes();
@@ -85,7 +123,9 @@ export async function renderResults(view, { params, navigate }) {
   const isDrill = result.mode === 'similar';
   const resumable = isDrill ? store.getActiveQuiz() : null;
 
-  view.append(el('h1', { text: isMock ? 'Mock exam results' : isDrill ? 'Similar questions' : 'Results' }));
+  const isSmart = result.mode === 'smart';
+  view.append(el('h1', { text: isMock ? 'Mock exam results' : isDrill ? 'Similar questions'
+    : isSmart ? 'Smart review' : 'Results' }));
 
   if (resumable) {
     const at = (resumable.index || 0) + 1;
@@ -103,7 +143,7 @@ export async function renderResults(view, { params, navigate }) {
     : pct >= PRACTICE_THRESHOLD;
   const head = el('div', { class: 'card' }, [
     el('div', { class: 'score-head' }, [
-      scoreRing(pct, passedHere),
+      scoreRing(pct, passedHere, Date.now() - (result.ts || 0) < 20000),
       el('div', {}, [
         el('div', { class: 'score-big' }, [
           el('span', { text: String(result.score) }),
@@ -142,6 +182,9 @@ export async function renderResults(view, { params, navigate }) {
   }
   head.append(el('p', { class: 'muted', text: `Time taken: ${fmtDuration(result.durationMs)}` }));
   view.append(head);
+
+  const moves = srsCard(result, isSmart, navigate);
+  if (moves) view.append(moves);
 
   view.append(domainBars(questions, result.answers));
 

@@ -30,6 +30,7 @@ export const DEFAULT_SETTINGS = {
   shuffleQuestions: true,
   shuffleChoices: true,
   feedbackMode: 'immediate',
+  sound: true,
 };
 
 const memory = new Map();

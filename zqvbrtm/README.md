@@ -18,14 +18,28 @@ name is deliberately random so the URL does not name the vendor.
   restored, exact-duplicate choices removed, one corrupted question
   (`q1189`, which pairs one question's stem with another's choices)
   dropped.
-- **Quiz navigation.** Previous / Next under every question, arrow keys,
-  and a question map. Practice answers lock once revealed; mock exam
+- **Quiz navigation.** Previous / Next under every question and arrow
+  keys. Practice answers lock once revealed; mock exam
   answers stay editable until you submit and are recorded once, at submit.
 - **Similar questions.** After answering, *Similar questions?* pauses the
   quiz and runs 10 real bank questions on the same topic (ranked by how
   closely their question, correct answer and explanation match, same
   objective preferred, nothing from the paused quiz). *Back to my quiz*
   returns to the exact question.
+- **Smart review.** Spaced repetition on the Study screen. A missed
+  question comes back after 1 day; right at a check moves it to 3 days,
+  then 7, and right at the 7-day check masters it. A miss anywhere sends it
+  back to 1 day, and answering before a check is due changes nothing. The
+  schedule is rebuilt from the answer history (`js/srs.js`), so nothing
+  extra is stored and it applies to history from before the feature.
+- **Sound effects.** Synthesised in the browser (`js/sound.js`, no audio
+  files): a chime for right, a soft low tone for wrong, an arpeggio for
+  streaks and mastered questions, a finish chord on results. On by default;
+  the speaker button in the top bar turns them off. The mock exam only
+  ever plays the neutral tap, so it never gives an answer away.
+- **Motion.** Direction-aware question slides, answer reveal effects, count-ups
+  and a sliding nav highlight (`js/motion.js`), all off under
+  `prefers-reduced-motion`.
 - **Letters by position.** Choices are shuffled, but the top choice always
   reads A; explanations and results use the same letters.
 - **Look.** Light theme by default (dark is one tap away), and a
@@ -76,18 +90,23 @@ social, anything with a paywall.
 
 ```
 index.html              entry point
-css/theme.css           design tokens; dark by default, light under [data-theme="light"]
+css/theme.css           design tokens; light by default, dark under [data-theme="dark"]
 css/app.css             layout and components
 js/config.js            app name and storage namespace -- unique per app
 js/main.js              hash router, theme toggle, app bootstrap
 js/store.js             the only module that touches localStorage
 js/quizEngine.js        pool filtering, selection, scoring
 js/stats.js             derived analytics and the readiness formula
+js/srs.js               Smart review schedule, worked out from the answer history
+js/smartReview.js       Smart review card and session start
+js/sound.js             synthesised sound effects
+js/motion.js            animation helpers (Web Animations API)
+js/icons.js             inline SVG line icons
 js/components.js        readiness card, bars, sparkline, paginated question list
 js/dom.js               element helper, code-snippet rendering
 js/views/               one module per screen
 data/domains.js         exam domains and objectives (generated from tools/objectives.py)
-data/domain1..5.js      the question bank, one file per domain (empty here)
+data/domain1..5.js      the question bank, one file per domain
 data/index.js           ALL_QUESTIONS and QUESTIONS_BY_ID
 data/questions.json     the same data as portable JSON (backup; the app does not read it)
 data/unsupported.js     performance-based items the schema does not model
@@ -103,7 +122,7 @@ tests/                  node --test suites
 npm test          # or: node --test
 ```
 
-68 tests covering pool filtering, count clamping, no-duplicates-within-a-quiz,
+82 tests covering pool filtering, the Smart review schedule, count clamping, no-duplicates-within-a-quiz,
 all-or-nothing multi-answer scoring, the readiness maths, the localStorage
 migration path, storage-failure fallback, refusing another app's progress
 file, and the integrity of the shipped bank. The five bank tests are skipped

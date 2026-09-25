@@ -203,6 +203,10 @@ export function animateScreen(root) {
     run(d, [{ opacity: 0, transform: 'scale(0)' }, { opacity: 1, transform: 'scale(1)' }],
       { duration: 300, delay: 400 + i * 50, easing: SPRING, fill: 'backwards' });
   });
+  root.querySelectorAll('[data-countup]').forEach((s) => {
+    const n = Number(s.dataset.countup);
+    if (Number.isFinite(n)) countUp(s, n, { duration: 900, delay: 250 });
+  });
   root.querySelectorAll('.readiness .score').forEach((s) => {
     const n = Number(s.textContent);
     if (Number.isFinite(n)) countUp(s, n, { duration: 1100, delay: 150 });

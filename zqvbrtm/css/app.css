@@ -751,3 +751,102 @@ h1 { font-weight: 800; }
   .brandmark::after, .card.hero::before, .card.hero::after, .progress > span::after { animation: none; }
   .nav-pill { transition: none; }
 }
+
+/* =====================================================================
+   Smart review: the Study-screen card, the check ladder, and the labels
+   the quiz and results screens show for it.
+   ===================================================================== */
+.srs-card { padding: 1.2rem 1.3rem 1.05rem; }
+.srs-head { display: flex; align-items: flex-start; gap: .85rem; flex-wrap: wrap; }
+.srs-title { flex: 1 1 13rem; min-width: 0; }
+.srs-title h2 { font-size: 1.2rem; margin-bottom: .2rem; }
+.srs-title p { margin: 0; }
+.srs-due { margin-left: auto; text-align: right; }
+.srs-due-n {
+  display: block; font-size: 2.5rem; font-weight: 800; line-height: 1;
+  letter-spacing: -.035em; color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.srs-due-l { font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); }
+.srs-due.is-clear { display: flex; align-items: center; gap: .4rem; color: var(--correct); padding-top: .35rem; }
+.srs-due.is-clear .srs-due-l { color: var(--correct); }
+
+/* the ladder: 1 day -> 3 days -> 7 days -> mastered */
+.srs-ladder {
+  position: relative; list-style: none; margin: 1.15rem 0 .3rem; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem;
+}
+.srs-ladder::before {
+  content: ""; position: absolute; left: 12.5%; right: 12.5%; top: 22px; height: 3px;
+  border-radius: 3px; background: linear-gradient(90deg, var(--accent), var(--correct));
+  opacity: .35; transform-origin: left center;
+  animation: track-in .8s var(--ease) .15s both;
+}
+@keyframes track-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.srs-step { position: relative; display: flex; flex-direction: column; align-items: center; gap: .35rem; text-align: center; min-width: 0;
+            animation: step-in .55s var(--spring) both; }
+.srs-step:nth-child(1) { animation-delay: .18s; }
+.srs-step:nth-child(2) { animation-delay: .26s; }
+.srs-step:nth-child(3) { animation-delay: .34s; }
+.srs-step:nth-child(4) { animation-delay: .42s; }
+@keyframes step-in { from { opacity: 0; transform: translateY(8px) scale(.8); } to { opacity: 1; transform: none; } }
+.srs-n {
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 1.12rem; font-weight: 800; font-variant-numeric: tabular-nums;
+  color: var(--accent); background: var(--bg-card);
+  border: 2.5px solid var(--accent); box-shadow: var(--shadow-sm);
+}
+.srs-step.is-empty .srs-n { color: var(--text-faint); border-color: var(--border-strong); }
+.srs-step.is-mastered .srs-n { color: var(--correct); border-color: var(--correct); background: var(--correct-bg); }
+.srs-step.is-mastered.is-empty .srs-n { color: var(--text-faint); border-color: var(--border-strong); background: var(--bg-card); }
+.srs-l { font-size: .72rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--text-dim); }
+
+.srs-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem 1rem; margin-top: .95rem; }
+.srs-next { display: flex; align-items: center; gap: .45rem; margin: 0; font-weight: 700; color: var(--text-dim); }
+.srs-rule { margin: 0; }
+@media (max-width: 520px) {
+  .srs-foot .btn { width: 100%; }
+  .srs-due-n { font-size: 2.2rem; }
+}
+
+/* quiz: which check this is, and where the answer moved it */
+.pill-srs {
+  color: var(--secondary-dim);
+  background: color-mix(in srgb, var(--secondary) 14%, transparent);
+}
+.explain .verdict { flex-wrap: wrap; row-gap: .35rem; }
+.srs-chip {
+  display: inline-flex; align-items: center; gap: .3rem; margin-left: .35rem;
+  padding: .12rem .6rem; border-radius: 999px;
+  font-size: .78rem; font-weight: 800; letter-spacing: 0;
+  color: var(--secondary-dim);
+  background: color-mix(in srgb, var(--secondary) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary) 40%, transparent);
+}
+.srs-chip.is-mastered { color: var(--correct); background: var(--correct-bg); border-color: var(--correct-brd); }
+.srs-chip.is-reset { color: var(--text-dim); background: var(--bg-raised); border-color: var(--border-strong); }
+
+/* results: how the quiz moved things */
+.srs-result-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem; }
+.srs-result-head h2 { margin: 0; }
+.srs-result .mode-ic { width: 38px; height: 38px; }
+.srs-moves { list-style: none; margin: 0 0 .85rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.srs-moves:last-child { margin-bottom: 0; }
+.srs-moves li {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .38rem .85rem; border-radius: 999px;
+  font-size: .9rem; font-weight: 700;
+  color: var(--text-dim); background: var(--bg-raised); border: 1px solid var(--border);
+  animation: step-in .5s var(--spring) both;
+}
+.srs-moves li:nth-child(2) { animation-delay: .08s; }
+.srs-moves li:nth-child(3) { animation-delay: .16s; }
+.srs-moves li:nth-child(4) { animation-delay: .24s; }
+.srs-moves .is-mastered { color: var(--correct); background: var(--correct-bg); border-color: var(--correct-brd); }
+.srs-moves .is-up { color: var(--accent); background: var(--accent-soft); border-color: transparent; }
+.srs-moves .is-added { color: var(--secondary-dim); background: color-mix(in srgb, var(--secondary) 12%, transparent);
+                       border-color: color-mix(in srgb, var(--secondary) 35%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .srs-ladder::before, .srs-step, .srs-moves li { animation: none; }
+}
