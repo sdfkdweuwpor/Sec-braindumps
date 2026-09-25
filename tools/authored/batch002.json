@@ -1,173 +1,222 @@
 {
-"q0022": {"objective":"1.2",
- "explanation":"RADIUS is a centralised authentication service, and the concept it implements is AAA — authentication (proving who you are), authorisation (deciding what you may do), and accounting (recording what you did). Installing a RADIUS server is how an organisation delivers all three from one place.",
- "incorrect":{
-  "A":"CIA is the confidentiality, integrity and availability triad — the goals security works towards. It is a model for what you are protecting, not a service you install.",
-  "C":"An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorisation decisions but provides no authentication or accounting.",
-  "D":"PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."}},
-
-"q0023": {"objective":"1.3",
- "explanation":"Version control tracks successive revisions of a document, recording what changed, when and by whom, and allowing an earlier version to be recovered. A contract that has been through three revisions needs exactly that history.",
- "incorrect":{
-  "A":"Version validation is not a recognised process. Validating a document checks it is correct, which says nothing about keeping a history of its revisions.",
-  "B":"Version changes describes the edits themselves rather than the process for tracking them. The department needs the discipline, not a label for the diffs.",
-  "C":"Version updates likewise names the act of updating. Updating without a controlled history is precisely the problem being solved."}},
-
-"q0024": {"objective":"3.4",
- "explanation":"A cold site is the cheapest recovery option: space, power and cooling but no pre-installed systems, data or standing network links. With no budget for extra internet connections, it is the only choice the constraints leave open, accepting a much longer recovery time in exchange.",
- "incorrect":{
-  "A":"A hot site is fully equipped and continuously synchronised, ready to take over almost immediately. It is by far the most expensive option and requires the very connectivity the company cannot fund.",
-  "C":"A failover site is a general term for any site traffic can be switched to. Where it is meaningful it implies hot-site capability and cost.",
-  "D":"A warm site sits between the two, with hardware and connectivity in place but data restored at failover time. It still needs standing links, so it exceeds the stated budget."}},
-
-"q0025": {"objective":"5.6",
- "explanation":"The web filter is working — it is catching spoofed sites and blocking them. The problem is that employees keep navigating to them, which is a user-behaviour problem. Security awareness training teaches people to recognise spoofed links before they click, reducing the attempts rather than the blocks.",
- "incorrect":{
-  "A":"Multifactor authentication protects accounts when credentials are stolen. It is worth having, but it does nothing to stop users visiting spoofed sites in the first place.",
-  "B":"Decreasing the web filter settings would let the spoofed sites through. That removes the symptom — the support calls — by removing the protection.",
-  "D":"Updating the acceptable use policy changes what the rules say. A policy nobody has been trained on will not change what users click."}},
-
-"q0026": {"objective":"5.5",
- "explanation":"The red team performs the offensive role, actively attempting to exploit weaknesses the way a real attacker would. Determining whether a known vulnerability is genuinely exploitable on your systems requires someone to try it, which is the red team's job.",
- "incorrect":{
-  "A":"The purple team is the coordinating function that keeps offence and defence sharing findings. It improves how the two work together rather than carrying out the exploitation itself.",
-  "B":"The blue team defends — monitoring, detecting and responding. They would harden against the vulnerability, not prove it can be exploited.",
-  "D":"The white team sets the rules of engagement and adjudicates an exercise. They oversee rather than test."}},
-
-"q0027": {"objective":"4.6",
- "explanation":"Trusted devices let an already-registered device act as an authentication factor, so a known laptop or phone satisfies the second factor automatically. That gives a seamless login anywhere in the world with no extra hardware to issue, which is exactly the three constraints listed.",
- "incorrect":{
-  "B":"Geotagging records where a device is. Staff work remotely and from offices worldwide, so tying login to location would block legitimate access rather than enable it.",
-  "C":"Smart cards are strong, but they are additional equipment that must be issued, replaced and paired with readers. That breaks the requirement to limit equipment.",
-  "D":"Time-based logins restrict when someone may sign in. With employees spread across the world there is no common window, so this would obstruct rather than secure."}},
-
-"q0028": {"objective":"1.2",
- "explanation":"Both are deception and disruption technologies that reveal an intruder already inside. A honeypot is a decoy system with no legitimate purpose, so any interaction with it is suspicious by definition. A DNS sinkhole redirects lookups for known-malicious domains, exposing which internal hosts are trying to reach an attacker's infrastructure.",
- "incorrect":{
-  "A":"Tokenisation replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
-  "B":"CI/CD is an automated build-and-release pipeline. It is a development practice and has no detection role.",
-  "D":"Threat modelling is a design-time exercise to anticipate how a system might be attacked. It is predictive, performed before deployment, not a live detection method.",
-  "F":"Data obfuscation makes data harder to interpret. Like tokenisation it reduces the value of stolen data without revealing an intruder."}},
-
-"q0029": {"objective":"1.4",
- "explanation":"Hashing produces a fixed-length fingerprint of the software. Publishing that hash lets anyone recompute it and confirm the file is bit-for-bit what was released — any tampering, however small, produces a completely different value. That is integrity verification.",
- "incorrect":{
-  "B":"Encryption protects confidentiality by making content unreadable without the key. An attacker can still alter ciphertext, and legitimate users must be able to run the software anyway.",
-  "C":"Baselines record a known-good configuration to compare systems against. They govern how a system is set up, not whether a released binary has been altered.",
-  "D":"Tokenisation swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."}},
-
-"q0030": {"objective":"4.6",
- "explanation":"SAML is the standard for exchanging authentication and authorisation assertions between an identity provider and a service provider, and it is what web-based SSO to cloud applications runs on. Bringing a new cloud accounting product into an existing SSO estate means configuring a SAML trust.",
- "incorrect":{
-  "A":"RADIUS centralises authentication for network access — VPN concentrators, wireless controllers, switches. It is not how a browser-based cloud application federates identity.",
-  "C":"EAP is an authentication framework used inside network access protocols such as 802.1X. It operates at the network layer, not between web applications.",
-  "D":"OpenID Connect is a genuine federation option, but it is the newer OAuth-based protocol. Where an enterprise SSO deployment already exists across business applications, SAML is the established choice."}},
-
-"q0031": {"objective":"2.4",
- "explanation":"On public Wi-Fi an attacker can position themselves between the user and the site. The security warning the user dismissed was the browser reporting an untrusted certificate — the signature of interception. With the session intercepted, the attacker captured the card details used for the purchase.",
- "incorrect":{
-  "A":"A replay attack recaptures and resends a valid transmission to repeat an action. The charges here are new and unrelated to the seat purchase, and a replay would not hand over the card number.",
-  "B":"A memory leak is a programming defect where memory is never released. It degrades performance and is not an attack that steals card data.",
-  "C":"A buffer overflow writes beyond an allocated region to corrupt memory or run code. It targets a vulnerable program, and nothing here suggests the airline's software was exploited."}},
-
-"q0032": {"objective":"3.4",
- "explanation":"Redundant switches remove one single point of failure, but a single ISP connection simply creates another. If that one link goes down, the resilient switch stack behind it is unreachable — availability is only as good as the weakest element in the path.",
- "incorrect":{
-  "A":"An unknown MTBF makes failure rates hard to predict, but it is a gap in information. The concrete architectural weakness is the one link.",
-  "B":"A missing SLA means no contractual guarantee of uptime or repair time. That is a commercial concern; even a strong SLA would not stop the outage.",
-  "C":"An RPO defines how much data loss is tolerable after an incident. It relates to backup and recovery planning, not to a single network path."}},
-
-"q0033": {"objective":"1.1",
- "explanation":"Two axes are being asked about. By type the control is technical — a VLAN and access restrictions implemented in the network. By function it is compensating: the server is end of life and cannot be patched, so segmentation stands in for the primary control the team is unable to apply.",
- "incorrect":{
-  "A":"Managerial controls are policies, risk assessments and procedures. This is a configuration change on network equipment.",
-  "B":"Physical controls are locks, fences, guards and cameras. The server has been isolated logically, not physically moved or fenced off.",
-  "C":"Corrective controls restore a system after an incident. Nothing has happened yet; this is preventing exposure.",
-  "D":"Detective controls identify that something has occurred. A VLAN restriction blocks access rather than reporting it.",
-  "G":"Deterrent controls discourage an attacker who is aware of them. An internal VLAN boundary is invisible to an attacker and stops them regardless of intent."}},
-
-"q0034": {"objective":"4.1",
- "explanation":"The device is already stolen and the attacker already has valid credentials, so preventive measures on that handset have been bypassed. Remote wipe is the control that still helps: it destroys the data on the device from the management console, and applied across the fleet it limits the damage of any future loss.",
- "incorrect":{
-  "A":"Application management controls which apps may be installed and how they behave. It does not remove data from a device an attacker has already logged into.",
-  "B":"Full disk encryption protects data when the device is off or locked. It has already been defeated here, because logging in with a valid password unlocks the volume.",
-  "D":"Containerisation separates corporate data from personal data on the device. Useful, but the attacker authenticated as the user and so reaches inside the container too."}},
-
-"q0035": {"objective":"5.2",
- "explanation":"Residual risk is what remains after controls and mitigating factors have been applied. No control set reduces risk to zero, and the leftover exposure is what management formally accepts.",
- "incorrect":{
-  "B":"Avoided risk is risk eliminated by not undertaking the activity at all. If it were avoided there would be nothing left to measure.",
-  "C":"Inherent risk is the level before any controls are applied. That is the starting point of the calculation, not the end of it.",
-  "D":"Operational risk is a category of risk arising from processes, people and systems. It describes where a risk comes from, not how much of it survives treatment."}},
-
-"q0036": {"objective":"1.4",
- "explanation":"Obfuscation deliberately rewrites code so it is functionally identical but far harder for a human to read — renaming symbols, flattening control flow, stripping debugging information. Since reverse engineering depends on making sense of the code, obfuscation directly raises the cost of that analysis.",
- "incorrect":{
-  "A":"Digitally signing software proves who published it and that it has not been altered. It is an integrity and authenticity control and does nothing to hide the code's logic.",
-  "C":"Limiting third-party libraries reduces supply-chain and dependency risk. It shrinks the attack surface but leaves your own code just as readable.",
-  "D":"Compile flags can strip symbols and enable protections, which helps a little, but they are a build setting rather than the recognised technique for resisting reverse engineering."}},
-
-"q0037": {"objective":"4.6",
- "explanation":"The recognised authentication factors are something you know, something you have, and something you are, with somewhere you are and something you do treated as attributes. Something you have — a token, smart card or phone — is a true factor.",
- "incorrect":{
-  "A":"Something you exhibit refers to behaviour such as typing rhythm or gait. It is an authentication attribute, not one of the three factors.",
-  "C":"Somewhere you are is location. It is also classed as an attribute, used to add context rather than to stand as a factor in its own right.",
-  "D":"Someone you know is a trust-relationship attribute, sometimes used for vouching. It is not a factor either."}},
-
-"q0038": {"objective":"4.6",
- "explanation":"The failure was easy-to-guess passwords, so the fix must increase how hard a password is to guess. Raising the minimum length to 14 characters enlarges the search space far more than any other single change, and requiring a special character widens the character set beyond alphanumerics. Both attack the actual weakness.",
- "incorrect":{
-  "B":"Upgrading from MD5 to SHA-512 is worth doing, but hashing protects stored passwords if the database is stolen. It makes a guessable password no harder to guess.",
-  "C":"Increasing the maximum age to 120 days lets a weak password stay in use longer. That makes the situation worse, not better.",
-  "D":"Reducing the minimum length to ten characters shrinks the search space, making guessing easier.",
-  "E":"Reducing the minimum age to zero lets users cycle through changes quickly to return to a favourite password, defeating password history."}},
-
-"q0039": {"objective":"2.4",
- "explanation":"A backdoor is hidden functionality that gives an attacker access to the system. The giveaway here is the direction and shape of the traffic — an external host connecting in on an uncommon port immediately after installing software from an untrusted forum is a listener the software opened.",
- "incorrect":{
-  "A":"A keylogger records keystrokes and typically sends them out to the attacker. That is an outbound exfiltration pattern, not inbound connections on a listening port.",
-  "B":"Ransomware encrypts files and demands payment. Its presence is unmistakable and it does not quietly accept inbound connections.",
-  "C":"A fileless virus runs in memory without writing to disk, often through scripting. The user installed a file, so the infection is not fileless."}},
-
-"q0040": {"objective":"3.1",
- "explanation":"All three requirements are about elastic, resilient capacity rather than any single component. An IaaS provider supplies pooled compute so a memory baseline can be met and grown, storage that scales on demand, and infrastructure already engineered to survive the loss of a single circuit — without the company buying any of it.",
- "incorrect":{
-  "A":"Dual PDUs and redundant power supplies address power resilience only. They do nothing for the memory baseline or storage scalability.",
-  "C":"Network load balancing across multiple paths improves network availability. It does not provide compute headroom or scalable storage.",
-  "D":"Large NAS devices per host add storage capacity, but bought in fixed increments rather than scaling on demand, and they address neither memory nor circuit resilience."}},
-
-"q0041": {"objective":"4.5",
- "explanation":"A DNS sinkhole answers lookups for known-malicious domains with a controlled address instead of the real one. That both stops the connection and, crucially, logs which internal hosts tried to make it — turning the DNS layer into a detection point for already-infected machines.",
- "incorrect":{
-  "A":"A sinkhole is an internal control that returns false answers for bad domains. It reveals nothing about your domain structure, and attackers do not query it.",
-  "B":"Drawing users away from good sites to malicious ones describes DNS poisoning — an attack. A sinkhole does the opposite, steering traffic away from malicious destinations.",
-  "D":"Attracting attackers away from real resources describes a honeypot. A sinkhole intercepts outbound lookups rather than luring inbound attackers."}},
-
-"q0042": {"objective":"4.9",
- "explanation":"Metadata is data describing the file rather than its visible content — for an image, the EXIF block holding camera model, timestamps and GPS coordinates. Geolocation embedded in a photograph lives there, which is why it is so valuable in an investigation.",
- "incorrect":{
-  "A":"Log data records events produced by systems and applications. It is generated separately from the file, not carried inside it.",
-  "C":"Encrypted data is content deliberately made unreadable without a key. The coordinates are stored in the clear in the file header.",
-  "D":"Sensitive data describes how information is classified. Geolocation may well be sensitive, but the question asks what kind of information it is structurally."}},
-
-"q0043": {"objective":"1.4",
- "explanation":"An S/MIME signature is created with the sender's private key, which only the sender holds. Anyone can verify it with the matching public key, so the sender cannot later deny having sent the message — that is non-repudiation, and it also proves the content was not altered.",
- "incorrect":{
-  "A":"Compliance may be a reason an organisation adopts signing, but it describes an external obligation rather than what the control technically achieves.",
-  "B":"Delivery rates are affected by reputation, SPF, DKIM and DMARC. S/MIME signing is applied to message content and does not improve deliverability.",
-  "C":"Signing outbound mail does not filter inbound phishing. It helps recipients verify your genuine mail, but it blocks nothing arriving at your organisation."}},
-
-"q0044": {"objective":"2.2",
- "explanation":"Print centres accumulate discarded drafts, misprints and abandoned output. Dumpster diving is sifting through discarded material for useful information, and the classic guidance for printing areas — shred waste, use pull printing, do not leave output on the tray — exists precisely because of it.",
- "incorrect":{
-  "A":"Whaling is phishing aimed at a senior executive. It arrives electronically and has nothing to do with physical printed output.",
-  "B":"Credential harvesting collects usernames and passwords, usually through a fake login page. It describes the goal of an online attack rather than a printing-centre risk.",
-  "C":"Prepending adds text to a message to manipulate how it is treated, such as a fake external warning. It is an email technique."}},
-
-"q0045": {"objective":"1.4",
- "explanation":"IoT devices typically run on very limited processing power, memory and battery. Cryptography must be chosen to fit within those resource constraints — a cipher that is secure but too heavy will drain the battery, slow the device, or simply not run, which is why lightweight algorithms exist for this class of hardware.",
- "incorrect":{
-  "B":"Available bandwidth matters for what the device can transmit, and it is a real IoT constraint, but cryptographic feasibility is limited by the processor and power budget first.",
-  "C":"Block ciphers versus stream ciphers is a design decision made after establishing what the hardware can support. It is a consequence of the constraint, not the primary consideration.",
-  "D":"TLS version compatibility matters for interoperability, but it is a protocol question that only arises once the device can perform the cryptography at all."}}
+ "q0022": {
+  "objective": "1.2",
+  "explanation": "RADIUS is a centralised authentication service, and the concept it implements is AAA — authentication (proving who you are), authorisation (deciding what you may do), and accounting (recording what you did). Installing a RADIUS server is how an organisation delivers all three from one place.",
+  "incorrect": {
+   "A": "CIA is the confidentiality, integrity and availability triad — the goals security works towards. It is a model for what you are protecting, not a service you install.",
+   "C": "An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorisation decisions but provides no authentication or accounting.",
+   "D": "PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."
+  }
+ },
+ "q0023": {
+  "objective": "1.3",
+  "explanation": "Version control tracks successive revisions of a document, recording what changed, when and by whom, and allowing an earlier version to be recovered. A contract that has been through three revisions needs exactly that history.",
+  "incorrect": {
+   "A": "Version validation is not a recognised process. Validating a document checks it is correct, which says nothing about keeping a history of its revisions.",
+   "B": "Version changes describes the edits themselves rather than the process for tracking them. The department needs the discipline, not a label for the diffs.",
+   "C": "Version updates likewise names the act of updating. Updating without a controlled history is precisely the problem being solved."
+  }
+ },
+ "q0024": {
+  "objective": "3.4",
+  "explanation": "A cold site is the cheapest recovery option: space, power and cooling but no pre-installed systems, data or standing network links. With no budget for extra internet connections, it is the only choice the constraints leave open, accepting a much longer recovery time in exchange.",
+  "incorrect": {
+   "A": "A hot site is fully equipped and continuously synchronised, ready to take over almost immediately. It is by far the most expensive option and requires the very connectivity the company cannot fund.",
+   "C": "A failover site is a general term for any site traffic can be switched to. Where it is meaningful it implies hot-site capability and cost.",
+   "D": "A warm site sits between the two, with hardware and connectivity in place but data restored at failover time. It still needs standing links, so it exceeds the stated budget."
+  }
+ },
+ "q0025": {
+  "objective": "5.6",
+  "explanation": "The web filter is working — it is catching spoofed sites and blocking them. The problem is that employees keep navigating to them, which is a user-behaviour problem. Security awareness training teaches people to recognise spoofed links before they click, reducing the attempts rather than the blocks.",
+  "incorrect": {
+   "A": "Multifactor authentication protects accounts when credentials are stolen. It is worth having, but it does nothing to stop users visiting spoofed sites in the first place.",
+   "B": "Decreasing the web filter settings would let the spoofed sites through. That removes the symptom — the support calls — by removing the protection.",
+   "D": "Updating the acceptable use policy changes what the rules say. A policy nobody has been trained on will not change what users click."
+  }
+ },
+ "q0026": {
+  "objective": "5.5",
+  "explanation": "The red team performs the offensive role, actively attempting to exploit weaknesses the way a real attacker would. Determining whether a known vulnerability is genuinely exploitable on your systems requires someone to try it, which is the red team's job.",
+  "incorrect": {
+   "A": "The purple team is the coordinating function that keeps offence and defence sharing findings. It improves how the two work together rather than carrying out the exploitation itself.",
+   "B": "The blue team defends — monitoring, detecting and responding. They would harden against the vulnerability, not prove it can be exploited.",
+   "D": "The white team sets the rules of engagement and adjudicates an exercise. They oversee rather than test."
+  }
+ },
+ "q0027": {
+  "objective": "4.6",
+  "explanation": "Trusted devices let an already-registered device act as an authentication factor, so a known laptop or phone satisfies the second factor automatically. That gives a seamless login anywhere in the world with no extra hardware to issue, which is exactly the three constraints listed.",
+  "incorrect": {
+   "B": "Geotagging records where a device is. Staff work remotely and from offices worldwide, so tying login to location would block legitimate access rather than enable it.",
+   "C": "Smart cards are strong, but they are additional equipment that must be issued, replaced and paired with readers. That breaks the requirement to limit equipment.",
+   "D": "Time-based logins restrict when someone may sign in. With employees spread across the world there is no common window, so this would obstruct rather than secure."
+  }
+ },
+ "q0028": {
+  "objective": "1.2",
+  "explanation": "Both are deception and disruption technologies that reveal an intruder already inside. A honeypot is a decoy system with no legitimate purpose, so any interaction with it is suspicious by definition. A DNS sinkhole redirects lookups for known-malicious domains, exposing which internal hosts are trying to reach an attacker's infrastructure.",
+  "incorrect": {
+   "A": "Tokenisation replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
+   "B": "CI/CD is an automated build-and-release pipeline. It is a development practice and has no detection role.",
+   "D": "Threat modelling is a design-time exercise to anticipate how a system might be attacked. It is predictive, performed before deployment, not a live detection method.",
+   "F": "Data obfuscation makes data harder to interpret. Like tokenisation it reduces the value of stolen data without revealing an intruder."
+  }
+ },
+ "q0029": {
+  "objective": "1.4",
+  "explanation": "Hashing produces a fixed-length fingerprint of the software. Publishing that hash lets anyone recompute it and confirm the file is bit-for-bit what was released — any tampering, however small, produces a completely different value. That is integrity verification.",
+  "incorrect": {
+   "B": "Encryption protects confidentiality by making content unreadable without the key. An attacker can still alter ciphertext, and legitimate users must be able to run the software anyway.",
+   "C": "Baselines record a known-good configuration to compare systems against. They govern how a system is set up, not whether a released binary has been altered.",
+   "D": "Tokenisation swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
+  }
+ },
+ "q0030": {
+  "objective": "4.6",
+  "explanation": "SAML is the standard for exchanging authentication and authorisation assertions between an identity provider and a service provider, and it is what web-based SSO to cloud applications runs on. Bringing a new cloud accounting product into an existing SSO estate means configuring a SAML trust.",
+  "incorrect": {
+   "A": "RADIUS centralises authentication for network access — VPN concentrators, wireless controllers, switches. It is not how a browser-based cloud application federates identity.",
+   "C": "EAP is an authentication framework used inside network access protocols such as 802.1X. It operates at the network layer, not between web applications.",
+   "D": "OpenID Connect is a genuine federation option, but it is the newer OAuth-based protocol. Where an enterprise SSO deployment already exists across business applications, SAML is the established choice."
+  }
+ },
+ "q0031": {
+  "objective": "2.4",
+  "explanation": "On public Wi-Fi an attacker can position themselves between the user and the site. The security warning the user dismissed was the browser reporting an untrusted certificate — the signature of interception. With the session intercepted, the attacker captured the card details used for the purchase.",
+  "incorrect": {
+   "A": "A replay attack recaptures and resends a valid transmission to repeat an action. The charges here are new and unrelated to the seat purchase, and a replay would not hand over the card number.",
+   "B": "A memory leak is a programming defect where memory is never released. It degrades performance and is not an attack that steals card data.",
+   "C": "A buffer overflow writes beyond an allocated region to corrupt memory or run code. It targets a vulnerable program, and nothing here suggests the airline's software was exploited."
+  }
+ },
+ "q0032": {
+  "objective": "3.4",
+  "explanation": "Redundant switches remove one single point of failure, but a single ISP connection simply creates another. If that one link goes down, the resilient switch stack behind it is unreachable — availability is only as good as the weakest element in the path.",
+  "incorrect": {
+   "A": "An unknown MTBF makes failure rates hard to predict, but it is a gap in information. The concrete architectural weakness is the one link.",
+   "B": "A missing SLA means no contractual guarantee of uptime or repair time. That is a commercial concern; even a strong SLA would not stop the outage.",
+   "C": "An RPO defines how much data loss is tolerable after an incident. It relates to backup and recovery planning, not to a single network path."
+  }
+ },
+ "q0033": {
+  "objective": "1.1",
+  "explanation": "Two axes are being asked about. By type the control is technical — a VLAN and access restrictions implemented in the network. By function it is compensating: the server is end of life and cannot be patched, so segmentation stands in for the primary control the team is unable to apply.",
+  "incorrect": {
+   "A": "Managerial controls are policies, risk assessments and procedures. This is a configuration change on network equipment.",
+   "B": "Physical controls are locks, fences, guards and cameras. The server has been isolated logically, not physically moved or fenced off.",
+   "C": "Corrective controls restore a system after an incident. Nothing has happened yet; this is preventing exposure.",
+   "D": "Detective controls identify that something has occurred. A VLAN restriction blocks access rather than reporting it.",
+   "G": "Deterrent controls discourage an attacker who is aware of them. An internal VLAN boundary is invisible to an attacker and stops them regardless of intent."
+  }
+ },
+ "q0034": {
+  "objective": "4.1",
+  "explanation": "The device is already stolen and the attacker already has valid credentials, so preventive measures on that handset have been bypassed. Remote wipe is the control that still helps: it destroys the data on the device from the management console, and applied across the fleet it limits the damage of any future loss.",
+  "incorrect": {
+   "A": "Application management controls which apps may be installed and how they behave. It does not remove data from a device an attacker has already logged into.",
+   "B": "Full disk encryption protects data when the device is off or locked. It has already been defeated here, because logging in with a valid password unlocks the volume.",
+   "D": "Containerisation separates corporate data from personal data on the device. Useful, but the attacker authenticated as the user and so reaches inside the container too."
+  }
+ },
+ "q0035": {
+  "objective": "5.2",
+  "explanation": "Residual risk is what remains after controls and mitigating factors have been applied. No control set reduces risk to zero, and the leftover exposure is what management formally accepts.",
+  "incorrect": {
+   "B": "Avoided risk is risk eliminated by not undertaking the activity at all. If it were avoided there would be nothing left to measure.",
+   "C": "Inherent risk is the level before any controls are applied. That is the starting point of the calculation, not the end of it.",
+   "D": "Operational risk is a category of risk arising from processes, people and systems. It describes where a risk comes from, not how much of it survives treatment."
+  }
+ },
+ "q0036": {
+  "objective": "1.4",
+  "explanation": "Obfuscation deliberately rewrites code so it is functionally identical but far harder for a human to read — renaming symbols, flattening control flow, stripping debugging information. Since reverse engineering depends on making sense of the code, obfuscation directly raises the cost of that analysis.",
+  "incorrect": {
+   "A": "Digitally signing software proves who published it and that it has not been altered. It is an integrity and authenticity control and does nothing to hide the code's logic.",
+   "C": "Limiting third-party libraries reduces supply-chain and dependency risk. It shrinks the attack surface but leaves your own code just as readable.",
+   "D": "Compile flags can strip symbols and enable protections, which helps a little, but they are a build setting rather than the recognised technique for resisting reverse engineering."
+  }
+ },
+ "q0037": {
+  "objective": "4.6",
+  "explanation": "The recognised authentication factors are something you know, something you have, and something you are, with somewhere you are and something you do treated as attributes. Something you have — a token, smart card or phone — is a true factor.",
+  "incorrect": {
+   "A": "Something you exhibit refers to behaviour such as typing rhythm or gait. It is an authentication attribute, not one of the three factors.",
+   "C": "Somewhere you are is location. It is also classed as an attribute, used to add context rather than to stand as a factor in its own right.",
+   "D": "Someone you know is a trust-relationship attribute, sometimes used for vouching. It is not a factor either."
+  }
+ },
+ "q0038": {
+  "objective": "4.6",
+  "explanation": "The failure was easy-to-guess passwords, so the fix must increase how hard a password is to guess. Raising the minimum length to 14 characters enlarges the search space far more than any other single change, and requiring a special character widens the character set beyond alphanumerics. Both attack the actual weakness.",
+  "incorrect": {
+   "B": "Upgrading from MD5 to SHA-512 is worth doing, but hashing protects stored passwords if the database is stolen. It makes a guessable password no harder to guess.",
+   "C": "Increasing the maximum age to 120 days lets a weak password stay in use longer. That makes the situation worse, not better.",
+   "D": "Reducing the minimum length to ten characters shrinks the search space, making guessing easier.",
+   "E": "Reducing the minimum age to zero lets users cycle through changes quickly to return to a favourite password, defeating password history."
+  }
+ },
+ "q0039": {
+  "objective": "2.4",
+  "explanation": "A backdoor is hidden functionality that gives an attacker access to the system. The giveaway here is the direction and shape of the traffic — an external host connecting in on an uncommon port immediately after installing software from an untrusted forum is a listener the software opened.",
+  "incorrect": {
+   "A": "A keylogger records keystrokes and typically sends them out to the attacker. That is an outbound exfiltration pattern, not inbound connections on a listening port.",
+   "B": "Ransomware encrypts files and demands payment. Its presence is unmistakable and it does not quietly accept inbound connections.",
+   "C": "A fileless virus runs in memory without writing to disk, often through scripting. The user installed a file, so the infection is not fileless."
+  }
+ },
+ "q0040": {
+  "objective": "3.1",
+  "explanation": "All three requirements are about elastic, resilient capacity rather than any single component. An IaaS provider supplies pooled compute so a memory baseline can be met and grown, storage that scales on demand, and infrastructure already engineered to survive the loss of a single circuit — without the company buying any of it.",
+  "incorrect": {
+   "A": "Dual PDUs and redundant power supplies address power resilience only. They do nothing for the memory baseline or storage scalability.",
+   "C": "Network load balancing across multiple paths improves network availability. It does not provide compute headroom or scalable storage.",
+   "D": "Large NAS devices per host add storage capacity, but bought in fixed increments rather than scaling on demand, and they address neither memory nor circuit resilience."
+  }
+ },
+ "q0041": {
+  "objective": "4.5",
+  "explanation": "A DNS sinkhole answers lookups for known-malicious domains with a controlled address instead of the real one. That both stops the connection and, crucially, logs which internal hosts tried to make it — turning the DNS layer into a detection point for already-infected machines.",
+  "incorrect": {
+   "A": "A sinkhole is an internal control that returns false answers for bad domains. It reveals nothing about your domain structure, and attackers do not query it.",
+   "B": "Drawing users away from good sites to malicious ones describes DNS poisoning — an attack. A sinkhole does the opposite, steering traffic away from malicious destinations.",
+   "D": "Attracting attackers away from real resources describes a honeypot. A sinkhole intercepts outbound lookups rather than luring inbound attackers."
+  }
+ },
+ "q0042": {
+  "objective": "4.9",
+  "explanation": "Metadata is data describing the file rather than its visible content — for an image, the EXIF block holding camera model, timestamps and GPS coordinates. Geolocation embedded in a photograph lives there, which is why it is so valuable in an investigation.",
+  "incorrect": {
+   "A": "Log data records events produced by systems and applications. It is generated separately from the file, not carried inside it.",
+   "C": "Encrypted data is content deliberately made unreadable without a key. The coordinates are stored in the clear in the file header.",
+   "D": "Sensitive data describes how information is classified. Geolocation may well be sensitive, but the question asks what kind of information it is structurally."
+  }
+ },
+ "q0043": {
+  "objective": "1.4",
+  "explanation": "An S/MIME signature is created with the sender's private key, which only the sender holds. Anyone can verify it with the matching public key, so the sender cannot later deny having sent the message — that is non-repudiation, and it also proves the content was not altered.",
+  "incorrect": {
+   "A": "Compliance may be a reason an organisation adopts signing, but it describes an external obligation rather than what the control technically achieves.",
+   "B": "Delivery rates are affected by reputation, SPF, DKIM and DMARC. S/MIME signing is applied to message content and does not improve deliverability.",
+   "C": "Signing outbound mail does not filter inbound phishing. It helps recipients verify your genuine mail, but it blocks nothing arriving at your organisation."
+  }
+ },
+ "q0044": {
+  "objective": "2.2",
+  "explanation": "Print centres accumulate discarded drafts, misprints and abandoned output. Dumpster diving is sifting through discarded material for useful information, and the classic guidance for printing areas — shred waste, use pull printing, do not leave output on the tray — exists precisely because of it.",
+  "incorrect": {
+   "A": "Whaling is phishing aimed at a senior executive. It arrives electronically and has nothing to do with physical printed output.",
+   "B": "Credential harvesting collects usernames and passwords, usually through a fake login page. It describes the goal of an online attack rather than a printing-centre risk.",
+   "C": "Prepending adds text to a message to manipulate how it is treated, such as a fake external warning. It is an email technique."
+  }
+ },
+ "q0045": {
+  "objective": "1.4",
+  "explanation": "IoT devices typically run on very limited processing power, memory and battery. Cryptography must be chosen to fit within those resource constraints — a cipher that is secure but too heavy will drain the battery, slow the device, or simply not run, which is why lightweight algorithms exist for this class of hardware.",
+  "incorrect": {
+   "B": "Available bandwidth matters for what the device can transmit, and it is a real IoT constraint, but cryptographic feasibility is limited by the processor and power budget first.",
+   "C": "Block ciphers versus stream ciphers is a design decision made after establishing what the hardware can support. It is a consequence of the constraint, not the primary consideration.",
+   "D": "TLS version compatibility matters for interoperability, but it is a protocol question that only arises once the device can perform the cryptography at all."
+  }
+ }
 }

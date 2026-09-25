@@ -4498,6 +4498,48 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0332",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
+    "type": "single",
+    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "Advise the user to change passwords."
+      },
+      {
+        "key": "B",
+        "text": "Reimage the end user's machine."
+      },
+      {
+        "key": "C",
+        "text": "Check the policy on personal email at work."
+      },
+      {
+        "key": "D",
+        "text": "Check host firewall logs."
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The file is a keylogger capture that already holds the user's email address and password, so that credential must be treated as compromised now. The first action is to have the user change passwords from a clean device; reimaging the machine is the next step, removing the keylogger itself. Some published answers put reimaging first.",
+    "explanationSource": "authored",
+    "incorrectExplanations": {
+      "B": "Reimaging removes the keylogger, but the captured password is already exposed. The account stays at risk until the password is changed.",
+      "C": "Personal email policy is beside the point; the priority is the compromised credential.",
+      "D": "Firewall logs might show exfiltration, but checking them does not protect the exposed account."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p148",
+    "needsReview": false,
+    "inferenceConfidence": 0.667,
+    "needsExplanation": false,
+    "keyCorrected": true
+  },
+  {
     "id": "q0333",
     "domain": 4,
     "objective": "4.3",
@@ -6233,48 +6275,6 @@ export const domain4Questions = [
     "keyCorrected": false
   },
   {
-    "id": "q0475",
-    "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
-    "type": "single",
-    "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's computer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "User awareness training"
-      },
-      {
-        "key": "B",
-        "text": "Network monitoring"
-      },
-      {
-        "key": "C",
-        "text": "Endpoint protection"
-      },
-      {
-        "key": "D",
-        "text": "Data loss prevention"
-      }
-    ],
-    "correct": [
-      "C"
-    ],
-    "explanation": "The chain was click, download, execute, exfiltrate. Endpoint protection acts at the execution step — detecting and blocking the malicious payload on the workstation before it installs, which stops everything downstream.",
-    "explanationSource": "pdf+authored",
-    "incorrectExplanations": {
-      "A": "User awareness training addresses the click and is genuinely valuable, but some proportion of users will always click. The question asks what best prevents the outcome.",
-      "B": "Network monitoring detects the exfiltration in progress. Detection after thousands of records have moved is too late.",
-      "D": "DLP could block the outbound transfer, which helps, but it acts at the final step rather than preventing the compromise."
-    },
-    "references": [],
-    "source": "SY0-701_en.pdf#p204",
-    "needsReview": false,
-    "inferenceConfidence": 0.5,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
     "id": "q0476",
     "domain": 4,
     "objective": "4.9",
@@ -6725,21 +6725,21 @@ export const domain4Questions = [
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": "The signal is reaching neighbouring buildings, which is a coverage problem. A site survey measures where the signal actually propagates so access point placement, transmit power and antenna direction can be adjusted to keep coverage inside the premises.",
+    "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighbouring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Mobile device management controls enrolled devices. It has no influence on how far a radio signal travels.",
-      "B": "Pre-shared keys control who may join. They stop unauthorised association but the network is still visible and attackable from outside.",
-      "C": "A heat map is the visual output produced from survey measurements. It is a deliverable rather than the activity that fixes the spill."
+      "A": "MDM manages the devices the company owns. It cannot stop outside devices from seeing the network.",
+      "B": "A pre-shared key controls who can join, but the network stays just as visible to outsiders.",
+      "D": "A site survey plans coverage and identifies interference, but the heat map is the specific tool that shows signal leaking outside the building."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p214",
     "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0504",

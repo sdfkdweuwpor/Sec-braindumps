@@ -1,240 +1,309 @@
 {
-"q0253": {"objective":"5.1",
- "explanation":"An acceptable use policy defines what employees may and may not do with company systems, including which sites and services are permitted. Accessing an unauthorised website is a breach of that policy, which is why the AUP is the document the employee violated.",
- "incorrect":{
-  "A":"An MOU is a non-binding statement of intent between organisations. It governs relationships between parties, not employee conduct.",
-  "C":"An NDA binds someone not to disclose confidential information. Browsing an unauthorised site discloses nothing.",
-  "D":"An MOA is a formal agreement of cooperation between organisations. Again it is external, not an internal conduct rule."}},
-
-"q0254": {"objective":"2.1",
- "explanation":"Company data is being copied from an internal file server out to an unfamiliar external address, outside normal hours to avoid notice. Unauthorised transfer of data out of the organisation is data exfiltration, whatever the attacker's ultimate purpose.",
- "incorrect":{
-  "A":"Typosquatting registers look-alike domains to catch users who mistype an address. Nothing here involves a user visiting a fake site.",
-  "B":"Root of trust is the trusted anchor a cryptographic system is built on. It is a PKI concept, not a threat.",
-  "D":"Blackmail coerces a victim with a threat. No demand has been made — data is simply leaving."}},
-
-"q0256": {"objective":"1.2",
- "explanation":"A honeytoken is a piece of fake data — here a user account — planted specifically so that any use of it is proof of malicious activity. Because the account has no legitimate purpose, transactions attached to it are an unambiguous alarm rather than something requiring interpretation.",
- "incorrect":{
-  "B":"A honeynet is an entire decoy network of systems built to study attacker behaviour. This is a single account inside a real system.",
-  "C":"A honeypot is a decoy host or service. Again the scale is wrong — no system was stood up, just a record.",
-  "D":"A honeyfile is a decoy file with an enticing name. Close in spirit, but the trap here is an account and its transactions, not a file."}},
-
-"q0257": {"objective":"4.1",
- "explanation":"Telnet carries credentials and session data in plaintext, so anyone able to observe the traffic can take over device management. Replacing it with SSH encrypts and authenticates the session, and removing the insecure protocol is a core hardening step for network devices.",
- "incorrect":{
-  "A":"Centralised logging improves visibility and investigation. It is valuable but detective — it records attacks rather than making the device harder to attack.",
-  "B":"Generating local administrator accounts adds more credentials to manage and more ways in. Hardening reduces accounts rather than creating them.",
-  "D":"Enabling HTTP administration adds another plaintext management interface, which increases the attack surface instead of shrinking it."}},
-
-"q0258": {"objective":"2.2",
- "explanation":"Business email compromise uses a trusted-looking sender and manufactured urgency to trigger a fraudulent payment. The combination of a message appearing to come from the bank's domain, the accounting department as target, and a rushed wire transfer is the standard shape of BEC.",
- "incorrect":{
-  "B":"Vishing is voice phishing conducted over the phone. This arrived as an email message.",
-  "C":"Spear phishing is targeted phishing, usually to harvest credentials or deliver malware. BEC is the specific variant aimed at fraudulent financial transfers.",
-  "D":"Impersonation is the technique being used within the attack. The question asks for the attack, and BEC is the precise name for it."}},
-
-"q0259": {"objective":"5.3",
- "explanation":"A non-disclosure agreement is what legally binds a third party not to reveal confidential information they encounter. Auditors reaching the company's confidential data without one in place means there was no enforceable obligation of secrecy, which is what the complaint is about.",
- "incorrect":{
-  "A":"An MOU with template clauses is weak but it is a statement of intent, not the instrument that protects confidentiality.",
-  "B":"An SOW defines the deliverables and scope of a piece of work. Its absence would be a scoping dispute, not a confidentiality breach.",
-  "C":"A work order authorises specific tasks under an existing agreement. Again it concerns what work is done, not how information is protected."}},
-
-"q0260": {"objective":"4.2",
- "explanation":"Regulations routinely specify how long particular records must be kept — tax data for years, health records for decades, personal data no longer than necessary. Retention is therefore the life-cycle stage most directly dictated by local and international law.",
- "incorrect":{
-  "A":"Destruction is governed by retention rules rather than being regulated on its own. Laws say when data must go, and destruction carries that out.",
-  "B":"Certification is the proof that disposal happened, typically a certificate of destruction from a vendor. It is evidence, not a regulated duration.",
-  "D":"Sanitisation is a technical method for rendering data unrecoverable. Standards describe how to do it; regulations mostly govern when."}},
-
-"q0265": {"objective":"3.2",
- "explanation":"An intrusion prevention system sits inline at the network boundary, inspects packets against attack signatures and behaviour, and drops malicious ones before they reach anything internal. Against externally crafted packets, blocking at the perimeter is the strongest position.",
- "incorrect":{
-  "A":"Anti-malware solutions inspect files on endpoints. They act after something has already arrived on a host.",
-  "B":"Host-based firewalls protect individual machines. They help in depth but leave each host defending itself rather than stopping the packet at the boundary.",
-  "D":"Network access control decides which devices may join the network. It governs admission, not the content of packets from outside.",
-  "E":"A network allow list permits only known sources. It is useful but coarse, and malicious packets can arrive from an allowed address."}},
-
-"q0261": {"objective":"2.2",
- "explanation":"Job adverts often list the exact products and versions a team runs, which hands an attacker a target list without any scanning. Knowing a specific version lets them look up its known vulnerabilities directly, so software versions are what the analyst is watching for.",
- "incorrect":{
-  "A":"Office addresses are usually public anyway and appear on the company's own website.",
-  "C":"A list of board members is typically published in corporate filings and investor material.",
-  "D":"Government identification numbers would never appear in a job posting, and an analyst reviewing recruitment content is not looking for personal identifiers."}},
-
-"q0262": {"objective":"2.5",
- "explanation":"Patches, OS updates and current definitions all address flaws that are already public and catalogued. Keeping them current closes the vulnerabilities attackers most commonly reuse, so known exploits are what these actions prevent.",
- "incorrect":{
-  "A":"Zero-day attacks target flaws with no patch available. By definition no update exists yet, so patching cannot prevent them.",
-  "B":"Insider threats come from people with legitimate access. Patching changes nothing about what an authorised user can do.",
-  "C":"End-of-life support is a product lifecycle status. Applying updates does not extend a vendor's support commitment."}},
-
-"q0263": {"objective":"3.1",
- "explanation":"The discriminator is low-cost. Cheap IoT hardware often comes from unvetted manufacturers with opaque firmware and no patch commitment, so country of origin stands in for supply-chain risk — the possibility of backdoors or compromised components reaching critical infrastructure.",
- "incorrect":{
-  "B":"Device responsiveness is a performance characteristic. Slow devices are frustrating rather than insecure.",
-  "C":"Ease of deployment is a benefit of low-cost devices, not a security concern.",
-  "D":"Storage of data is a genuine IoT concern, but it applies to IoT devices at any price. It does not follow from the devices being inexpensive, which is what the question emphasises."}},
-
-"q0264": {"objective":"5.4",
- "explanation":"A weekly manual review means an attack on Monday goes unnoticed until Friday. Automated alerting on anomalies collapses that window to minutes and removes reliance on someone reading a report, which is the substantive improvement to compliance monitoring.",
- "incorrect":{
-  "A":"Recording who reviewed the report and when improves the audit trail. It documents the process without making it faster or more reliable.",
-  "C":"A weekly statement that no exceptions were noted is more paperwork. It attests to the review rather than improving it.",
-  "D":"Masking usernames protects privacy but removes the very detail needed to investigate excessive attempts against a specific account."}},
-
-"q0266": {"objective":"2.5",
- "explanation":"MAC filtering tells the switch which hardware addresses a port may accept, so an unknown laptop plugged into the phone's port is refused network access outright. Stopping the device joining is what prevents it scanning for anything.",
- "incorrect":{
-  "B":"Segmentation limits where a connected device can reach. It contains the damage but the unauthorised laptop is still on the network and still scanning its segment.",
-  "C":"Certification is a compliance or attestation concept. It provides no technical enforcement at a switch port.",
-  "D":"Isolation confines a system away from others. Like segmentation it reduces reach rather than denying the connection."}},
-
-"q0267": {"objective":"3.1",
- "explanation":"Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
- "incorrect":{
-  "A":"Replication copies data to additional systems. That adds hardware rather than reducing it.",
-  "B":"Isolation separates systems from one another. It limits lateral movement but does not reduce the number of physical devices.",
-  "C":"Centralisation concentrates management in one place. It can simplify administration while leaving the same hardware in service."}},
-
-"q0268": {"objective":"4.6",
- "explanation":"A phone the employee already owns supplies all three factors at no cost: the app's one-time code is something you have, facial recognition is something you are, and the device unlock or account password is something you know. No third-party licence or dedicated hardware is required.",
- "incorrect":{
-  "A":"A smart card with PIN and password covers only something you have and something you know, and it needs cards and readers purchased and issued.",
-  "B":"Security questions and an emailed code are both weak variations on something you know, and email is not a reliable possession factor.",
-  "C":"Voice and fingerprint are two instances of something you are, and SMS requires carrier delivery and is vulnerable to SIM swapping."}},
-
-"q0269": {"objective":"3.3",
- "explanation":"SSH tunnelling wraps the existing FTP session inside an encrypted SSH channel, so the financial data is protected in transit without changing the legacy server. That is precisely the definition of a compensating control — a substitute that achieves the same protection when the primary control is unavailable.",
- "incorrect":{
-  "A":"Telnet is itself an unencrypted protocol. Adding it makes the situation worse.",
-  "C":"Patch installation keeps software current, but no patch will add SFTP support to a system that does not have it.",
-  "D":"Full disk encryption protects data at rest on the server. It does nothing once the data leaves over the network."}},
-
-"q0270": {"objective":"4.7",
- "explanation":"SOAR strings tool actions together into automated playbooks, so a recognised basic threat can be enriched, triaged and contained without an analyst performing each step manually. Reducing the number of human steps is exactly what it is built for.",
- "incorrect":{
-  "B":"A SIEM aggregates logs and raises alerts. It tells the analyst what is happening; the responding steps remain manual.",
-  "C":"DMARC is an email authentication policy that reduces spoofing of your domain. It addresses one threat and automates no response.",
-  "D":"A NIDS detects suspicious network activity and alerts. Detection without action again leaves every containment step to a person."}},
-
-"q0271": {"objective":"5.4",
- "explanation":"An attestation of compliance is a formal statement asserting which framework objectives are met, signed by the party making the claim. A report plus a signed letter confirming 17 of 21 objectives is exactly that form of assertion.",
- "incorrect":{
-  "A":"Penetration test results describe whether systems could be breached. They report technical findings, not coverage against a compliance framework.",
-  "B":"Self-assessment findings are an internal review without a formal signed assertion. The signed letter is what makes this an attestation.",
-  "D":"A third-party audit report is produced by an independent auditor who performed the examination. Here the vendor is asserting its own compliance."}},
-
-"q0272": {"objective":"2.5",
- "explanation":"A patch is the vendor's fix for the specific defect. Applying it removes the vulnerability rather than making it harder to reach, which is why patching is the definitive remediation once an OS flaw is identified.",
- "incorrect":{
-  "A":"Endpoint protection detects and blocks malicious activity. It may stop an exploit attempt while leaving the underlying flaw in place.",
-  "B":"Removing unnecessary software reduces the attack surface generally. It does not fix a vulnerability in software you still need.",
-  "C":"Configuration enforcement keeps settings at a known-good baseline. Useful hardening, but a correctly configured system can still be vulnerable."}},
-
-"q0273": {"objective":"4.1",
- "explanation":"Mobile device management pushes configuration, applications and settings to enrolled devices centrally. Missing features across a fleet of company tablets can be corrected in one policy change and delivered within hours, without touching each device.",
- "incorrect":{
-  "A":"EDR detects and responds to malicious activity on endpoints. It is a security monitoring tool with no configuration-deployment role.",
-  "B":"COPE is a device ownership model describing who owns the hardware. It is a policy choice, not a tool that fixes anything.",
-  "D":"FDE encrypts the storage on a device. It protects data and does nothing about missing features."}},
-
-"q0274": {"objective":"4.1",
- "explanation":"Mobile device management enrols the personal device under policy and can enforce an application allow list, blocking anything not approved. It is the control layer that lets a BYOD programme dictate what may be installed on hardware the company does not own.",
- "incorrect":{
-  "B":"Containerisation separates work data from personal data on the device. It protects corporate data but does not govern which applications the user installs.",
-  "C":"DLP watches for sensitive data leaving the organisation. It monitors data movement, not software installation.",
-  "D":"FIM alerts when protected files change. It watches integrity on servers and workstations rather than controlling app installs."}},
-
-"q0275": {"objective":"1.1",
- "explanation":"There is no patch for a zero-day, so the primary control is unavailable. Placing a bastion host substitutes a different measure that reduces the same risk while the real fix is awaited, which is what makes it compensating.",
- "incorrect":{
-  "B":"Detective controls identify that something has happened. A bastion host restricts the access path rather than reporting on it.",
-  "C":"Operational describes how a control is implemented — through people and process. This is a technical change to the architecture.",
-  "D":"Physical controls act on the physical environment. A bastion host is a network system."}},
-
-"q0276": {"objective":"4.6",
- "explanation":"Pass the hash works because a reusable credential for a privileged account sits in memory on machines the administrator logs into. Privileged access management brokers those sessions and issues short-lived or vaulted credentials, so there is no durable hash worth stealing.",
- "incorrect":{
-  "A":"Weekly password compliance audits check that passwords meet standards. The attack never needs the password, only its hash.",
-  "C":"IDS policies monitoring domain controller access detect the attack after it succeeds. Detection is not prevention.",
-  "D":"Password expiration forces periodic changes. A stolen hash is used immediately, long before any expiry window matters."}},
-
-"q0277": {"objective":"2.3",
- "explanation":"Memory injection writes attacker code into the address space of a process that is already running, then causes it to execute. Because the code never touches disk and runs under a legitimate process, it evades file-based detection.",
- "incorrect":{
-  "A":"Two processes racing over the same variable describes a race condition or TOC/TOU flaw.",
-  "B":"A process receiving more data than expected and executing code describes a buffer overflow.",
-  "D":"Overwriting an executable on disk so malicious code runs next time describes file infection or a malicious update — the opposite of an in-memory technique."}},
-
-"q0278": {"objective":"1.2",
- "explanation":"Encryption renders data unreadable without the key, so only authorised parties can make sense of it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
- "incorrect":{
-  "A":"Integrity means data has not been altered, and is assured by hashing and signatures. Encrypted data can still be corrupted.",
-  "B":"Authentication proves who someone is. Encryption protects the data itself rather than verifying identity.",
-  "C":"Zero Trust is an architectural model based on never assuming trust from network position. Disk encryption is a single control, not an architecture."}},
-
-"q0279": {"objective":"4.5",
- "explanation":"A quarantine subnet exists so a device can be checked before it is trusted. Compliance attestation is that check — confirming patch level, antivirus state and configuration meet policy — and passing it is what justifies releasing the device onto the corporate network.",
- "incorrect":{
-  "A":"Device fingerprinting identifies what a device is. Knowing it is a Windows laptop says nothing about whether it is safely configured.",
-  "C":"A penetration test assesses whether a system can be breached. Running one against every guest device is neither practical nor relevant.",
-  "D":"An application vulnerability test examines software for flaws. It is a development and assessment activity, not a network admission check."}},
-
-"q0280": {"objective":"3.1",
- "explanation":"The cloud responsibility matrix is the document that divides security duties between provider and customer for each service model. For IaaS it states precisely which controls remain the customer's to implement, which is what the question asks for.",
- "incorrect":{
-  "A":"A statement of work defines deliverables and tasks for a specific engagement. It scopes work rather than allocating security responsibility.",
-  "C":"A service-level agreement commits the provider to measurable performance such as uptime. It covers service quality, not control ownership.",
-  "D":"A master service agreement establishes the general commercial terms. Specific responsibilities are described elsewhere."}},
-
-"q0281": {"objective":"4.8",
- "explanation":"Detective and corrective activities for phishing, social engineering and business email compromise are all incident handling steps. The incident response plan is the document that defines how such events are detected, triaged, contained and recovered from, so that is what needs revising.",
- "incorrect":{
-  "A":"The SDLC governs how software is designed, built and released. These threats target people and email, not the development process.",
-  "C":"A business continuity plan keeps the organisation operating through major disruption. It addresses availability rather than detecting and correcting phishing.",
-  "D":"An acceptable use policy tells staff what conduct is permitted. It is preventive guidance, not a procedure for responding to an incident."}},
-
-"q0282": {"objective":"5.5",
- "explanation":"In the extended team-colour model the yellow team is the builders — developers and engineers. Bringing offensive and defensive practice to them during development is what produces securely built applications, rather than testing security in after release.",
- "incorrect":{
-  "A":"The blue team defends: monitoring, detection and response against live attacks.",
-  "C":"The red team attacks, simulating an adversary against systems that already exist.",
-  "D":"Green is the pairing of yellow with blue, focused on improving how defenders and builders work together. The question specifies both offensive and defensive with developers, which is yellow."}},
-
-"q0283": {"objective":"4.7",
- "explanation":"User provisioning automates the creation, modification and removal of accounts and their entitlements from an authoritative source. Updating permissions across a large number of accounts is exactly the bulk, rule-driven work it exists to handle.",
- "incorrect":{
-  "A":"Security groups are the mechanism permissions are usually attached to. They make the change simpler but something still has to apply it at scale.",
-  "B":"Federation lets identities be trusted across organisations. It handles authentication between domains, not bulk permission changes.",
-  "D":"Vertical scaling adds resources to an existing system. It is a capacity concept with no bearing on account administration."}},
-
-"q0284": {"objective":"5.3",
- "explanation":"An attestation report already exists — the supplier commissioned it once and shares it with every customer who asks. Requesting and reading it costs almost nothing compared with commissioning your own assessment, which is what makes it the fastest and cheapest confirmation.",
- "incorrect":{
-  "B":"A third-party audit commissioned for you gives stronger assurance but takes weeks or months and is expensive.",
-  "C":"A vulnerability assessment identifies technical weaknesses in systems. It says little about whether contractual security obligations are being met.",
-  "D":"Penetration testing is the most costly and time-consuming option here, and it tests exploitability rather than compliance."}},
-
-"q0285": {"objective":"4.8",
- "explanation":"Stakeholders sitting down to talk through their roles in a hypothetical breach is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing coordination and finding gaps in the plan before a genuine incident.",
- "incorrect":{
-  "B":"A penetration test actively attacks systems to find weaknesses. It is technical and hands-on.",
-  "C":"Geographic dispersion spreads infrastructure across locations for resilience. The offshore offices are the subject of the discussion, not the concept being demonstrated.",
-  "D":"Incident response is the overall discipline being rehearsed. The question asks what this activity is, and a tabletop exercise is the specific name for it."}},
-
-"q0286": {"objective":"3.3",
- "explanation":"Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
- "incorrect":{
-  "A":"Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
-  "C":"Removing sensitive data from production is data minimisation. It reduces exposure by elimination rather than by substitution.",
-  "D":"Hashing produces an irreversible digest. Unlike a token it cannot be exchanged back for the original value when the business needs it."}},
-
-"q0287": {"objective":"2.3",
- "explanation":"Side loading installs an application from a source other than the official store, bypassing the vetting and signing checks that store normally applies. The app arrives unreviewed, which is what makes it a vulnerability class in its own right.",
- "incorrect":{
-  "A":"Cross-site scripting injects script into a web page to run in another user's browser. It is a web application flaw.",
-  "B":"A buffer overflow writes past an allocated memory region to corrupt memory or execute code. It exploits a program, not an install path.",
-  "C":"Jailbreaking removes the manufacturer's restrictions on the device itself. It is related and often enables side loading, but the act of installing from outside the store is side loading specifically."}}
+ "q0253": {
+  "objective": "5.1",
+  "explanation": "An acceptable use policy defines what employees may and may not do with company systems, including which sites and services are permitted. Accessing an unauthorised website is a breach of that policy, which is why the AUP is the document the employee violated.",
+  "incorrect": {
+   "A": "An MOU is a non-binding statement of intent between organisations. It governs relationships between parties, not employee conduct.",
+   "C": "An NDA binds someone not to disclose confidential information. Browsing an unauthorised site discloses nothing.",
+   "D": "An MOA is a formal agreement of cooperation between organisations. Again it is external, not an internal conduct rule."
+  }
+ },
+ "q0254": {
+  "objective": "2.1",
+  "explanation": "Company data is being copied from an internal file server out to an unfamiliar external address, outside normal hours to avoid notice. Unauthorised transfer of data out of the organisation is data exfiltration, whatever the attacker's ultimate purpose.",
+  "incorrect": {
+   "A": "Typosquatting registers look-alike domains to catch users who mistype an address. Nothing here involves a user visiting a fake site.",
+   "B": "Root of trust is the trusted anchor a cryptographic system is built on. It is a PKI concept, not a threat.",
+   "D": "Blackmail coerces a victim with a threat. No demand has been made — data is simply leaving."
+  }
+ },
+ "q0256": {
+  "objective": "1.2",
+  "explanation": "A honeytoken is a piece of fake data — here a user account — planted specifically so that any use of it is proof of malicious activity. Because the account has no legitimate purpose, transactions attached to it are an unambiguous alarm rather than something requiring interpretation.",
+  "incorrect": {
+   "B": "A honeynet is an entire decoy network of systems built to study attacker behaviour. This is a single account inside a real system.",
+   "C": "A honeypot is a decoy host or service. Again the scale is wrong — no system was stood up, just a record.",
+   "D": "A honeyfile is a decoy file with an enticing name. Close in spirit, but the trap here is an account and its transactions, not a file."
+  }
+ },
+ "q0257": {
+  "objective": "4.1",
+  "explanation": "Telnet carries credentials and session data in plaintext, so anyone able to observe the traffic can take over device management. Replacing it with SSH encrypts and authenticates the session, and removing the insecure protocol is a core hardening step for network devices.",
+  "incorrect": {
+   "A": "Centralised logging improves visibility and investigation. It is valuable but detective — it records attacks rather than making the device harder to attack.",
+   "B": "Generating local administrator accounts adds more credentials to manage and more ways in. Hardening reduces accounts rather than creating them.",
+   "D": "Enabling HTTP administration adds another plaintext management interface, which increases the attack surface instead of shrinking it."
+  }
+ },
+ "q0258": {
+  "objective": "2.2",
+  "explanation": "Business email compromise uses a trusted-looking sender and manufactured urgency to trigger a fraudulent payment. The combination of a message appearing to come from the bank's domain, the accounting department as target, and a rushed wire transfer is the standard shape of BEC.",
+  "incorrect": {
+   "B": "Vishing is voice phishing conducted over the phone. This arrived as an email message.",
+   "C": "Spear phishing is targeted phishing, usually to harvest credentials or deliver malware. BEC is the specific variant aimed at fraudulent financial transfers.",
+   "D": "Impersonation is the technique being used within the attack. The question asks for the attack, and BEC is the precise name for it."
+  }
+ },
+ "q0259": {
+  "objective": "5.3",
+  "explanation": "A non-disclosure agreement is what legally binds a third party not to reveal confidential information they encounter. Auditors reaching the company's confidential data without one in place means there was no enforceable obligation of secrecy, which is what the complaint is about.",
+  "incorrect": {
+   "A": "An MOU with template clauses is weak but it is a statement of intent, not the instrument that protects confidentiality.",
+   "B": "An SOW defines the deliverables and scope of a piece of work. Its absence would be a scoping dispute, not a confidentiality breach.",
+   "C": "A work order authorises specific tasks under an existing agreement. Again it concerns what work is done, not how information is protected."
+  }
+ },
+ "q0260": {
+  "objective": "4.2",
+  "explanation": "Regulations routinely specify how long particular records must be kept — tax data for years, health records for decades, personal data no longer than necessary. Retention is therefore the life-cycle stage most directly dictated by local and international law.",
+  "incorrect": {
+   "A": "Destruction is governed by retention rules rather than being regulated on its own. Laws say when data must go, and destruction carries that out.",
+   "B": "Certification is the proof that disposal happened, typically a certificate of destruction from a vendor. It is evidence, not a regulated duration.",
+   "D": "Sanitisation is a technical method for rendering data unrecoverable. Standards describe how to do it; regulations mostly govern when."
+  }
+ },
+ "q0265": {
+  "objective": "3.2",
+  "explanation": "An intrusion prevention system sits inline at the network boundary, inspects packets against attack signatures and behaviour, and drops malicious ones before they reach anything internal. Against externally crafted packets, blocking at the perimeter is the strongest position.",
+  "incorrect": {
+   "A": "Anti-malware solutions inspect files on endpoints. They act after something has already arrived on a host.",
+   "B": "Host-based firewalls protect individual machines. They help in depth but leave each host defending itself rather than stopping the packet at the boundary.",
+   "D": "Network access control decides which devices may join the network. It governs admission, not the content of packets from outside.",
+   "E": "A network allow list permits only known sources. It is useful but coarse, and malicious packets can arrive from an allowed address."
+  }
+ },
+ "q0261": {
+  "objective": "2.2",
+  "explanation": "Job adverts often list the exact products and versions a team runs, which hands an attacker a target list without any scanning. Knowing a specific version lets them look up its known vulnerabilities directly, so software versions are what the analyst is watching for.",
+  "incorrect": {
+   "A": "Office addresses are usually public anyway and appear on the company's own website.",
+   "C": "A list of board members is typically published in corporate filings and investor material.",
+   "D": "Government identification numbers would never appear in a job posting, and an analyst reviewing recruitment content is not looking for personal identifiers."
+  }
+ },
+ "q0262": {
+  "objective": "2.5",
+  "explanation": "Patches, OS updates and current definitions all address flaws that are already public and catalogued. Keeping them current closes the vulnerabilities attackers most commonly reuse, so known exploits are what these actions prevent.",
+  "incorrect": {
+   "A": "Zero-day attacks target flaws with no patch available. By definition no update exists yet, so patching cannot prevent them.",
+   "B": "Insider threats come from people with legitimate access. Patching changes nothing about what an authorised user can do.",
+   "C": "End-of-life support is a product lifecycle status. Applying updates does not extend a vendor's support commitment."
+  }
+ },
+ "q0263": {
+  "objective": "3.1",
+  "explanation": "The discriminator is low-cost. Cheap IoT hardware often comes from unvetted manufacturers with opaque firmware and no patch commitment, so country of origin stands in for supply-chain risk — the possibility of backdoors or compromised components reaching critical infrastructure.",
+  "incorrect": {
+   "B": "Device responsiveness is a performance characteristic. Slow devices are frustrating rather than insecure.",
+   "C": "Ease of deployment is a benefit of low-cost devices, not a security concern.",
+   "D": "Storage of data is a genuine IoT concern, but it applies to IoT devices at any price. It does not follow from the devices being inexpensive, which is what the question emphasises."
+  }
+ },
+ "q0264": {
+  "objective": "5.4",
+  "explanation": "A weekly manual review means an attack on Monday goes unnoticed until Friday. Automated alerting on anomalies collapses that window to minutes and removes reliance on someone reading a report, which is the substantive improvement to compliance monitoring.",
+  "incorrect": {
+   "A": "Recording who reviewed the report and when improves the audit trail. It documents the process without making it faster or more reliable.",
+   "C": "A weekly statement that no exceptions were noted is more paperwork. It attests to the review rather than improving it.",
+   "D": "Masking usernames protects privacy but removes the very detail needed to investigate excessive attempts against a specific account."
+  }
+ },
+ "q0266": {
+  "objective": "2.5",
+  "explanation": "MAC filtering tells the switch which hardware addresses a port may accept, so an unknown laptop plugged into the phone's port is refused network access outright. Stopping the device joining is what prevents it scanning for anything.",
+  "incorrect": {
+   "B": "Segmentation limits where a connected device can reach. It contains the damage but the unauthorised laptop is still on the network and still scanning its segment.",
+   "C": "Certification is a compliance or attestation concept. It provides no technical enforcement at a switch port.",
+   "D": "Isolation confines a system away from others. Like segmentation it reduces reach rather than denying the connection."
+  }
+ },
+ "q0267": {
+  "objective": "3.1",
+  "explanation": "Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
+  "incorrect": {
+   "A": "Replication copies data to additional systems. That adds hardware rather than reducing it.",
+   "B": "Isolation separates systems from one another. It limits lateral movement but does not reduce the number of physical devices.",
+   "C": "Centralisation concentrates management in one place. It can simplify administration while leaving the same hardware in service."
+  }
+ },
+ "q0268": {
+  "objective": "4.6",
+  "explanation": "A phone the employee already owns supplies all three factors at no cost: the app's one-time code is something you have, facial recognition is something you are, and the device unlock or account password is something you know. No third-party licence or dedicated hardware is required.",
+  "incorrect": {
+   "A": "A smart card with PIN and password covers only something you have and something you know, and it needs cards and readers purchased and issued.",
+   "B": "Security questions and an emailed code are both weak variations on something you know, and email is not a reliable possession factor.",
+   "C": "Voice and fingerprint are two instances of something you are, and SMS requires carrier delivery and is vulnerable to SIM swapping."
+  }
+ },
+ "q0269": {
+  "objective": "3.3",
+  "explanation": "SSH tunnelling wraps the existing FTP session inside an encrypted SSH channel, so the financial data is protected in transit without changing the legacy server. That is precisely the definition of a compensating control — a substitute that achieves the same protection when the primary control is unavailable.",
+  "incorrect": {
+   "A": "Telnet is itself an unencrypted protocol. Adding it makes the situation worse.",
+   "C": "Patch installation keeps software current, but no patch will add SFTP support to a system that does not have it.",
+   "D": "Full disk encryption protects data at rest on the server. It does nothing once the data leaves over the network."
+  }
+ },
+ "q0270": {
+  "objective": "4.7",
+  "explanation": "SOAR strings tool actions together into automated playbooks, so a recognised basic threat can be enriched, triaged and contained without an analyst performing each step manually. Reducing the number of human steps is exactly what it is built for.",
+  "incorrect": {
+   "B": "A SIEM aggregates logs and raises alerts. It tells the analyst what is happening; the responding steps remain manual.",
+   "C": "DMARC is an email authentication policy that reduces spoofing of your domain. It addresses one threat and automates no response.",
+   "D": "A NIDS detects suspicious network activity and alerts. Detection without action again leaves every containment step to a person."
+  }
+ },
+ "q0271": {
+  "objective": "5.4",
+  "explanation": "An attestation of compliance is a formal statement asserting which framework objectives are met, signed by the party making the claim. A report plus a signed letter confirming 17 of 21 objectives is exactly that form of assertion.",
+  "incorrect": {
+   "A": "Penetration test results describe whether systems could be breached. They report technical findings, not coverage against a compliance framework.",
+   "B": "Self-assessment findings are an internal review without a formal signed assertion. The signed letter is what makes this an attestation.",
+   "D": "A third-party audit report is produced by an independent auditor who performed the examination. Here the vendor is asserting its own compliance."
+  }
+ },
+ "q0272": {
+  "objective": "2.5",
+  "explanation": "A patch is the vendor's fix for the specific defect. Applying it removes the vulnerability rather than making it harder to reach, which is why patching is the definitive remediation once an OS flaw is identified.",
+  "incorrect": {
+   "A": "Endpoint protection detects and blocks malicious activity. It may stop an exploit attempt while leaving the underlying flaw in place.",
+   "B": "Removing unnecessary software reduces the attack surface generally. It does not fix a vulnerability in software you still need.",
+   "C": "Configuration enforcement keeps settings at a known-good baseline. Useful hardening, but a correctly configured system can still be vulnerable."
+  }
+ },
+ "q0273": {
+  "objective": "4.1",
+  "explanation": "Mobile device management pushes configuration, applications and settings to enrolled devices centrally. Missing features across a fleet of company tablets can be corrected in one policy change and delivered within hours, without touching each device.",
+  "incorrect": {
+   "A": "EDR detects and responds to malicious activity on endpoints. It is a security monitoring tool with no configuration-deployment role.",
+   "B": "COPE is a device ownership model describing who owns the hardware. It is a policy choice, not a tool that fixes anything.",
+   "D": "FDE encrypts the storage on a device. It protects data and does nothing about missing features."
+  }
+ },
+ "q0274": {
+  "objective": "4.1",
+  "explanation": "Mobile device management enrols the personal device under policy and can enforce an application allow list, blocking anything not approved. It is the control layer that lets a BYOD programme dictate what may be installed on hardware the company does not own.",
+  "incorrect": {
+   "B": "Containerisation separates work data from personal data on the device. It protects corporate data but does not govern which applications the user installs.",
+   "C": "DLP watches for sensitive data leaving the organisation. It monitors data movement, not software installation.",
+   "D": "FIM alerts when protected files change. It watches integrity on servers and workstations rather than controlling app installs."
+  }
+ },
+ "q0275": {
+  "objective": "1.1",
+  "explanation": "There is no patch for a zero-day, so the primary control is unavailable. Placing a bastion host substitutes a different measure that reduces the same risk while the real fix is awaited, which is what makes it compensating.",
+  "incorrect": {
+   "B": "Detective controls identify that something has happened. A bastion host restricts the access path rather than reporting on it.",
+   "C": "Operational describes how a control is implemented — through people and process. This is a technical change to the architecture.",
+   "D": "Physical controls act on the physical environment. A bastion host is a network system."
+  }
+ },
+ "q0276": {
+  "objective": "4.6",
+  "explanation": "Pass the hash works because a reusable credential for a privileged account sits in memory on machines the administrator logs into. Privileged access management brokers those sessions and issues short-lived or vaulted credentials, so there is no durable hash worth stealing.",
+  "incorrect": {
+   "A": "Weekly password compliance audits check that passwords meet standards. The attack never needs the password, only its hash.",
+   "C": "IDS policies monitoring domain controller access detect the attack after it succeeds. Detection is not prevention.",
+   "D": "Password expiration forces periodic changes. A stolen hash is used immediately, long before any expiry window matters."
+  }
+ },
+ "q0277": {
+  "objective": "2.3",
+  "explanation": "Memory injection writes attacker code into the address space of a process that is already running, then causes it to execute. Because the code never touches disk and runs under a legitimate process, it evades file-based detection.",
+  "incorrect": {
+   "A": "Two processes racing over the same variable describes a race condition or TOC/TOU flaw.",
+   "B": "A process receiving more data than expected and executing code describes a buffer overflow.",
+   "D": "Overwriting an executable on disk so malicious code runs next time describes file infection or a malicious update — the opposite of an in-memory technique."
+  }
+ },
+ "q0278": {
+  "objective": "1.2",
+  "explanation": "Encryption renders data unreadable without the key, so only authorised parties can make sense of it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
+  "incorrect": {
+   "A": "Integrity means data has not been altered, and is assured by hashing and signatures. Encrypted data can still be corrupted.",
+   "B": "Authentication proves who someone is. Encryption protects the data itself rather than verifying identity.",
+   "C": "Zero Trust is an architectural model based on never assuming trust from network position. Disk encryption is a single control, not an architecture."
+  }
+ },
+ "q0279": {
+  "objective": "4.5",
+  "explanation": "A quarantine subnet exists so a device can be checked before it is trusted. Compliance attestation is that check — confirming patch level, antivirus state and configuration meet policy — and passing it is what justifies releasing the device onto the corporate network.",
+  "incorrect": {
+   "A": "Device fingerprinting identifies what a device is. Knowing it is a Windows laptop says nothing about whether it is safely configured.",
+   "C": "A penetration test assesses whether a system can be breached. Running one against every guest device is neither practical nor relevant.",
+   "D": "An application vulnerability test examines software for flaws. It is a development and assessment activity, not a network admission check."
+  }
+ },
+ "q0280": {
+  "objective": "3.1",
+  "explanation": "The cloud responsibility matrix is the document that divides security duties between provider and customer for each service model. For IaaS it states precisely which controls remain the customer's to implement, which is what the question asks for.",
+  "incorrect": {
+   "A": "A statement of work defines deliverables and tasks for a specific engagement. It scopes work rather than allocating security responsibility.",
+   "C": "A service-level agreement commits the provider to measurable performance such as uptime. It covers service quality, not control ownership.",
+   "D": "A master service agreement establishes the general commercial terms. Specific responsibilities are described elsewhere."
+  }
+ },
+ "q0281": {
+  "objective": "4.8",
+  "explanation": "Detective and corrective activities for phishing, social engineering and business email compromise are all incident handling steps. The incident response plan is the document that defines how such events are detected, triaged, contained and recovered from, so that is what needs revising.",
+  "incorrect": {
+   "A": "The SDLC governs how software is designed, built and released. These threats target people and email, not the development process.",
+   "C": "A business continuity plan keeps the organisation operating through major disruption. It addresses availability rather than detecting and correcting phishing.",
+   "D": "An acceptable use policy tells staff what conduct is permitted. It is preventive guidance, not a procedure for responding to an incident."
+  }
+ },
+ "q0282": {
+  "objective": "5.5",
+  "explanation": "In the extended team-colour model the yellow team is the builders — developers and engineers. Bringing offensive and defensive practice to them during development is what produces securely built applications, rather than testing security in after release.",
+  "incorrect": {
+   "A": "The blue team defends: monitoring, detection and response against live attacks.",
+   "C": "The red team attacks, simulating an adversary against systems that already exist.",
+   "D": "Green is the pairing of yellow with blue, focused on improving how defenders and builders work together. The question specifies both offensive and defensive with developers, which is yellow."
+  }
+ },
+ "q0283": {
+  "objective": "4.7",
+  "explanation": "User provisioning automates the creation, modification and removal of accounts and their entitlements from an authoritative source. Updating permissions across a large number of accounts is exactly the bulk, rule-driven work it exists to handle.",
+  "incorrect": {
+   "A": "Security groups are the mechanism permissions are usually attached to. They make the change simpler but something still has to apply it at scale.",
+   "B": "Federation lets identities be trusted across organisations. It handles authentication between domains, not bulk permission changes.",
+   "D": "Vertical scaling adds resources to an existing system. It is a capacity concept with no bearing on account administration."
+  }
+ },
+ "q0284": {
+  "objective": "5.3",
+  "explanation": "An attestation report already exists — the supplier commissioned it once and shares it with every customer who asks. Requesting and reading it costs almost nothing compared with commissioning your own assessment, which is what makes it the fastest and cheapest confirmation.",
+  "incorrect": {
+   "B": "A third-party audit commissioned for you gives stronger assurance but takes weeks or months and is expensive.",
+   "C": "A vulnerability assessment identifies technical weaknesses in systems. It says little about whether contractual security obligations are being met.",
+   "D": "Penetration testing is the most costly and time-consuming option here, and it tests exploitability rather than compliance."
+  }
+ },
+ "q0285": {
+  "objective": "4.8",
+  "explanation": "Stakeholders sitting down to talk through their roles in a hypothetical breach is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing coordination and finding gaps in the plan before a genuine incident.",
+  "incorrect": {
+   "B": "A penetration test actively attacks systems to find weaknesses. It is technical and hands-on.",
+   "C": "Geographic dispersion spreads infrastructure across locations for resilience. The offshore offices are the subject of the discussion, not the concept being demonstrated.",
+   "D": "Incident response is the overall discipline being rehearsed. The question asks what this activity is, and a tabletop exercise is the specific name for it."
+  }
+ },
+ "q0286": {
+  "objective": "3.3",
+  "explanation": "Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
+  "incorrect": {
+   "A": "Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
+   "C": "Removing sensitive data from production is data minimisation. It reduces exposure by elimination rather than by substitution.",
+   "D": "Hashing produces an irreversible digest. Unlike a token it cannot be exchanged back for the original value when the business needs it."
+  }
+ },
+ "q0287": {
+  "objective": "2.3",
+  "explanation": "Side loading installs an application from a source other than the official store, bypassing the vetting and signing checks that store normally applies. The app arrives unreviewed, which is what makes it a vulnerability class in its own right.",
+  "incorrect": {
+   "A": "Cross-site scripting injects script into a web page to run in another user's browser. It is a web application flaw.",
+   "B": "A buffer overflow writes past an allocated memory region to corrupt memory or execute code. It exploits a program, not an install path.",
+   "C": "Jailbreaking removes the manufacturer's restrictions on the device itself. It is related and often enables side loading, but the act of installing from outside the store is side loading specifically."
+  }
+ }
 }

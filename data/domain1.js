@@ -567,21 +567,21 @@ export const domain1Questions = [
       }
     ],
     "correct": [
-      "B"
+      "A"
     ],
-    "explanation": "The root cause was a flaw in the certificate authority that let crafted certificates be issued. Cleanup has to remove the defect itself, so patching the CA is the remediation — anything else leaves the same certificates issuable tomorrow.",
+    "explanation": "The attack worked by issuing specially crafted certificates, and those certificates stay valid until they are revoked. Cleanup means removing what the test left behind, so the crafted certificates must be revoked and the CRL updated to publish that revocation. Patching the CA fixes the underlying flaw, but that is remediation of the vulnerability, not cleanup of the artifacts. Published answers split between these two.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Updating the CRL revokes the certificates the testers created, which is necessary housekeeping. It undoes the symptom while leaving the flaw that produced them.",
-      "C": "Changing passwords is sensible after a compromise of domain administrator rights, but the attack did not rely on passwords — it forged certificates.",
-      "D": "Implementing SOAR automates response workflows. It is a programme improvement, not remediation of a specific PKI vulnerability."
+      "B": "Patching the CA fixes the vulnerability so it cannot be exploited again, but the certificates already issued remain valid until revoked.",
+      "C": "Changing passwords does not invalidate certificates, which authenticate independently of passwords.",
+      "D": "SOAR automates incident response workflows. It does not remove the rogue certificates."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p31",
     "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0077",
@@ -703,21 +703,21 @@ export const domain1Questions = [
       }
     ],
     "correct": [
-      "D"
+      "B"
     ],
-    "explanation": "An acceptable use policy governs how people behave day to day — what they may do with company systems. Controls implemented and enforced through people and process are operational, as distinct from managerial controls, which direct the security programme itself.",
+    "explanation": "An acceptable use policy is a written policy set by management that governs how people may use company systems. Policies, procedures and governance documents are managerial controls in CompTIA's categories.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Physical controls act on the physical environment: locks, fences, guards, cameras. A written policy is not one of them.",
-      "B": "Managerial controls are the planning and oversight layer — risk assessments, security planning, control selection. An AUP directs user conduct rather than managing the programme.",
-      "C": "Technical controls are implemented in hardware or software, such as firewalls and encryption. A policy is enforced by people."
+      "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
+      "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+      "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
     "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0113",

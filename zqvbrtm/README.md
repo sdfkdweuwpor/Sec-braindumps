@@ -1,45 +1,32 @@
-# Practice exam app — template
+# Security+ SY0-701 — second question bank
 
-The layout of the Security+ braindump app (one folder up) with its question
-bank taken out. Copy this folder to start a new practice-exam app from a
-different question PDF; the braindump app stays exactly as it is.
+The same app as the braindump one (repo root), built from a second
+question PDF (in `source/`), with a few upgrades of its own. The folder
+name is deliberately random so the URL does not name the vendor.
 
-It is set up for **CompTIA Security+ SY0-701** (domains, weights, the 90-question
-mock exam). For another exam, change the pieces listed under *Exam-specific
-pieces* below.
+- **1,279 questions**, every one with an explanation and a note on each
+  wrong choice. 936 explanations came from the braindump bank where the
+  two share a question; the other 343 were written for this bank.
+- **Answer keys checked.** Where the two banks share a question with
+  identical choices, both must key the same answer; 23 disagreed and were
+  settled one by one. Every other key was reviewed while its explanation
+  was written; 6 more were wrong in the PDF. All 21 corrections, and the 4
+  blank keys in the PDF, are recorded with reasons in
+  `tools/corrections.py`. Contested items say so in their explanation.
+- **Text cleaned.** 105 OCR and typing fixes across 64 questions
+  (`TEXT_FIXES` in `tools/corrections.py`), two pieces of missing content
+  restored, exact-duplicate choices removed, one corrupted question
+  (`q1189`, which pairs one question's stem with another's choices)
+  dropped.
+- **Quiz navigation.** Previous / Next under every question, arrow keys,
+  and a question map. Practice answers lock once revealed; mock exam
+  answers stay editable until you submit and are recorded once, at submit.
+- **Look.** Light theme by default (dark is one tap away), and a
+  Pocket Prep-style explanation panel that opens by itself when you get a
+  question wrong and sits behind *Show explanation* when you get it right.
 
-Vanilla HTML, CSS and ES modules. No framework, no build step, no bundler, no
-runtime dependencies, no backend, no accounts, no network calls. All progress
-lives in `localStorage`.
-
-## Making a new app from this
-
-1. **Copy the folder** (e.g. `cp -r app-template my-new-bank`). Keep this one
-   empty so it stays reusable.
-2. **Edit `js/config.js`.** `STORAGE_NAMESPACE` must be unique per app:
-   localStorage is shared by every app on one origin — all of one account's
-   GitHub Pages sites are a single origin — so two apps with the same
-   namespace overwrite each other's progress. Question ids restart at
-   `q0001` in every bank, so the mix-up would be invisible. The titles are
-   what shows in the header and browser tab.
-3. **Put exactly one PDF in `source/`** and run the pipeline (below).
-   `tools/extract.py` is tuned to the braindump PDF's layout — expect to
-   adjust its page-furniture patterns and question/answer parsing for a PDF
-   from another vendor, and check the numbers before trusting any key.
-4. **Write explanations** into `tools/authored/` and re-run the extractor.
-
-Progress exports are stamped with the app's namespace, and import refuses a
-file from any other app — including the braindump app, whose exports carry
-no stamp — because import replaces everything.
-
-### Exam-specific pieces
-
-| What | Where |
-|---|---|
-| Domains, objectives, exam weights, inference keywords | `tools/objectives.py` (generates `data/domains.js`) |
-| Mock exam length and timer | `MOCK_COUNT`, `MOCK_MINUTES` in `js/views/home.js` |
-| Pass mark and 100–900 scale | `PASSING_SCALED`, `scaledScore` in `js/quizEngine.js`; wording in `js/views/results.js` |
-| Metadata the tests expect | the two domain/objective tests in `tests/data.test.js` |
+Progress is stored under its own namespace (`js/config.js`), separate
+from the braindump app, even though both are served from one origin.
 
 ## Running it
 

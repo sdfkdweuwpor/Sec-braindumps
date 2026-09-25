@@ -1,241 +1,310 @@
 {
-"q0185": {"objective":"2.2",
- "explanation":"Tailgating is following an authorised person through a controlled door so their badge opens it for you. Walking in alongside a group is the textbook version — it exploits politeness and the fact that one badge swipe holds the door for several people.",
- "incorrect":{
-  "B":"Shoulder surfing is watching someone enter a password or PIN. It steals information by observation rather than gaining physical entry.",
-  "C":"RFID cloning copies the data from a legitimate badge onto another card. That requires capturing a badge first, and the tester has no badge at all.",
-  "D":"Forgery is producing a counterfeit document or credential. Again it means presenting something fake, whereas the tester presented nothing."}},
-
-"q0186": {"objective":"4.4",
- "explanation":"A SIEM collects log data from firewalls, servers, endpoints and applications, normalises the differing formats and presents them together. Producing one consolidated view and report across many device types is its defining capability.",
- "incorrect":{
-  "A":"An IPS inspects traffic and blocks recognised attacks. It reports on what it sees at its own position in the network, not on other devices.",
-  "B":"DLP watches for sensitive data leaving the organisation. It reports on data movement, a single narrow slice of activity.",
-  "D":"A firewall logs the connections it permits and denies. It is one of the sources feeding the consolidated report, not the thing producing it."}},
-
-"q0187": {"objective":"4.3",
- "explanation":"CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what lets an organisation rank a backlog of findings consistently. Prioritisation needs a common yardstick, and CVSS exists to provide one.",
- "incorrect":{
-  "A":"Exposure factor is the proportion of an asset's value lost in an incident. It is a risk-calculation input used in ALE, not a vulnerability ranking.",
-  "C":"CVE is the naming catalogue that gives each vulnerability a unique identifier. The identifier carries no severity information at all.",
-  "D":"Industry impact is genuine context that should adjust priorities, but it is a qualitative consideration layered on top of a score rather than the primary basis for it."}},
-
-"q0188": {"objective":"4.5",
- "explanation":"Insiders use legitimate credentials, so nothing they do looks unauthorised to an access control. Behavioural analytics learns what normal activity looks like for each user and flags the deviation — unusual hours, unusual systems, unusual data volumes — which is the only signal an insider actually produces.",
- "incorrect":{
-  "B":"Access control lists define who may reach what. They limit damage but generate no visibility into how granted access is used.",
-  "C":"Identity and access management governs provisioning and permissions. It decides what access exists rather than monitoring its use.",
-  "D":"A network intrusion detection system looks for attack patterns in traffic. An insider browsing systems they are permitted to reach produces entirely ordinary traffic."}},
-
-"q0189": {"objective":"2.2",
- "explanation":"Vishing is phishing carried out by voice call. The spoofed caller ID showing the company's real main number is the trust-building element, and the goal — extracting card details by impersonating a trusted organisation — is classic voice phishing.",
- "incorrect":{
-  "A":"Phishing is the general category, and in exam usage it means the email form. The channel here is specifically a phone call.",
-  "B":"Whaling targets a senior executive as the victim. The victim here is an ordinary customer.",
-  "C":"Smishing is phishing over SMS. No text message is involved."}},
-
-"q0190": {"objective":"4.9",
- "explanation":"Command and control traffic leaves the network to reach the attacker's server, so it must cross the firewall. Firewall logs record the source, destination address, port and protocol of every connection, which is precisely the destination information the analyst needs.",
- "incorrect":{
-  "A":"IDS logs record traffic matching attack signatures. C2 beacons are often designed to look like ordinary traffic and may never trigger a signature.",
-  "B":"Antivirus logs record files detected on hosts. They may name the malware but say nothing about where it connects.",
-  "D":"Application logs record activity inside a particular application. Malware communicating out does not pass through the business application's log."}},
-
-"q0191": {"objective":"1.4",
- "explanation":"A self-signed certificate is not issued by an authority the browser already trusts, so the chain of trust cannot be built and the browser warns the user. Internal sites are the most common place to find them, because organisations avoid paying for public certificates on private hostnames.",
- "incorrect":{
-  "A":"A wildcard certificate covers subdomains of one domain. If issued by a trusted CA it produces no warning; a mismatch would give a name error, not an insecure-site prompt.",
-  "B":"A root of trust is the anchor certificate a CA signs with. Sites are not issued root certificates.",
-  "C":"A third-party certificate comes from a public CA already in the browser's trust store, which is exactly the case that does not warn."}},
-
-"q0192": {"objective":"1.2",
- "explanation":"A honeypot is a deliberately exposed decoy with no production role. Because nobody has a legitimate reason to touch it, everything it records is attacker activity — which makes it the tool for studying real techniques safely.",
- "incorrect":{
-  "A":"A firewall permits or denies traffic at a boundary. It logs decisions but captures nothing about what an attacker would do once inside.",
-  "B":"An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
-  "D":"A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."}},
-
-"q0193": {"objective":"4.8",
- "explanation":"A tabletop exercise gathers the response team to talk through a scenario against the written plan. Its value is that everyone rehearses their role and finds the gaps in the process while nothing is actually on fire — familiarisation rather than technical validation.",
- "incorrect":{
-  "B":"Rules of engagement for red and blue teams are agreed before an exercise, in a planning document. That is a scoping step, not the purpose of a tabletop.",
-  "C":"Determining the impact of an actual breach happens during a live incident, using real telemetry. A tabletop deals in hypotheticals.",
-  "D":"Running parallel investigations is operational work requiring real tooling and evidence."}},
-
-"q0194": {"objective":"1.4",
- "explanation":"A stolen private key means the old certificate must no longer be trusted by anyone, even though it has not expired. Publishing it on the certificate revocation list is how the CA tells the world to reject it.",
- "incorrect":{
-  "A":"SCEP is a protocol for enrolling devices and issuing certificates automatically. It handles provisioning, not revocation.",
-  "C":"OCSP is the protocol clients use to ask about a certificate's status in real time. It reports revocation that has already been recorded, so the CRL or its database has to be updated first.",
-  "D":"A CSR requests a new certificate. That step has already happened — a replacement has been issued."}},
-
-"q0195": {"objective":"5.1",
- "explanation":"An acceptable use policy tells staff what is and is not appropriate when using company systems, and is the document organisations use to state expectations about integrity and conduct. It is usually signed at onboarding for exactly that reason.",
- "incorrect":{
-  "B":"An SLA commits a provider to measurable service levels. It governs performance between organisations, not employee behaviour.",
-  "C":"A EULA sets out the terms under which software may be used. It is between a vendor and a user about the product.",
-  "D":"An MOA is a formal statement of intent between organisations. It describes cooperation, not internal conduct."}},
-
-"q0196": {"objective":"3.3",
- "explanation":"Data sovereignty is the principle that data stays subject to the laws of the country it came from, wherever it is subsequently stored. That is how an organisation determines which global regulations apply to a data set independently of hosting location.",
- "incorrect":{
-  "A":"Geographic dispersion spreads infrastructure across locations for resilience. It is an availability strategy with no legal meaning.",
-  "C":"Geographic restrictions block access based on location. They are a control you might apply in order to comply, not the concept that determines what applies.",
-  "D":"Data segmentation separates data into distinct stores or zones. It affects architecture rather than jurisdiction."}},
-
-"q0197": {"objective":"2.5",
- "explanation":"Two layers address the injection directly. A web application firewall inspects HTTP requests and blocks script injection attempts before they reach the application, while keeping server software patched removes the known flaws that make the servers exploitable in the first place.",
- "incorrect":{
-  "B":"Strong password policies protect accounts against guessing. Injection needs no account at all.",
-  "C":"Encrypting data at rest and in transit protects it from interception and theft of storage. An injected script runs with the application's own access, so encryption does not stop it.",
-  "E":"Regular vulnerability scans find weaknesses. Finding is not preventing — the fix has to follow.",
-  "F":"Removing payment information reduces what an attacker gains, which limits impact. The servers remain just as vulnerable to the injection."}},
-
-"q0198": {"objective":"4.4",
- "explanation":"Cloud environments generate logs from many services, accounts and regions at once. A SIEM ingests all of it, normalises the differing formats and correlates across them, which is what makes centralised logging and monitoring workable at cloud scale.",
- "incorrect":{
-  "A":"An IPS blocks malicious traffic inline at a network point. It is a preventive control, and it monitors traffic rather than logs.",
-  "B":"FIM alerts when protected files are modified. It covers one narrow signal on individual hosts.",
-  "C":"NAC decides whether a device may join a network. It is an admission control with no logging or monitoring role."}},
-
-"q0199": {"objective":"2.3",
- "explanation":"The attacker altered something during the update process itself, so the system accepted attacker-controlled content as part of a trusted change. A malicious update is that category of vulnerability — the update path becomes the way in.",
- "incorrect":{
-  "A":"A race condition exploits the timing gap between checking a condition and acting on it. Here the field was substituted as part of the update rather than through a timing window.",
-  "B":"Memory injection writes code into a running process's memory. This attack modified a database field during an update, not process memory.",
-  "D":"Side loading installs an application from outside an official store. It applies to devices and apps, not database updates."}},
-
-"q0200": {"objective":"4.6",
- "explanation":"A shared privileged account is the hardest kind to control, because nobody owns it and everyone knows the password. Privileged access management vaults the credential, brokers each session, records who used it and when, and keeps working when SSO is unavailable because it is a separate control plane.",
- "incorrect":{
-  "A":"RAS is remote access service — a way to connect to a network. It provides connectivity, not credential control.",
-  "B":"EAP is an authentication framework used inside network access protocols. It does not manage shared account credentials.",
-  "C":"SAML federates authentication to an identity provider. Since the scenario is an SSO failure, depending on the same federation is exactly what cannot be relied on."}},
-
-"q0201": {"objective":"4.8",
- "explanation":"Preservation is the forensic discipline of keeping evidence in an unaltered state — write-blocking, hashing the image, and documenting handling so the data can be shown to be the same as when collected. Integrity of evidence is what it exists to guarantee.",
- "incorrect":{
-  "B":"E-discovery is the legal process of identifying and producing electronically stored information for litigation. It governs disclosure, not integrity.",
-  "C":"Acquisition is the act of collecting the evidence. Integrity has to be maintained through acquisition and everything after it, which is preservation's job.",
-  "D":"Containment is an incident response step that limits ongoing damage. It happens alongside forensics but is not about evidence handling."}},
-
-"q0202": {"objective":"4.9",
- "explanation":"30GB leaving the network has to cross the perimeter, so the firewall and network logs hold both halves of the answer: which internal host sent it and which external address received it. A single query for large outbound flows surfaces both efficiently.",
- "incorrect":{
-  "B":"IPS and IDS logs record reconnaissance and signature matches. Scanning activity is a different phase and will not show the bulk transfer or its destination.",
-  "C":"Endpoint and application logs might show a file-sharing tool running, but that assumes a specific method and covers only the source, never the destination.",
-  "D":"Vulnerability scans and automated reports describe weaknesses that exist. They explain how an attacker might have got in, not what left or where it went."}},
-
-"q0203": {"objective":"5.5",
- "explanation":"Rules of engagement define exactly how a penetration test must be conducted — scope, permitted techniques, testing windows, escalation contacts and what is off limits. They are agreed before testing starts and are what keep the engagement lawful and safe.",
- "incorrect":{
-  "B":"Rules of acceptance is not a recognised term in this context. Acceptance criteria belong to project delivery.",
-  "C":"Rules of understanding is not a standard document either; it echoes memorandum of understanding, which is an agreement between organisations.",
-  "D":"Rules of execution is likewise not a recognised penetration testing artefact."}},
-
-"q0204": {"objective":"4.5",
- "explanation":"EDR continuously records process, file and network behaviour on endpoints and compares it against expected patterns, so it surfaces activity that deviates from the baseline rather than matching a known signature. Detecting behavioural deviation is exactly what the analyst asked for.",
- "incorrect":{
-  "A":"An intrusion prevention system blocks traffic matching known attack patterns. It is signature-driven and sits on the network, not on the endpoint.",
-  "B":"A sandbox detonates a suspicious file in isolation to observe it. It analyses individual samples rather than ongoing user and device behaviour.",
-  "D":"Antivirus matches files against known malware signatures. It detects known bad rather than unusual."}},
-
-"q0205": {"objective":"4.2",
- "explanation":"The devices themselves are gone, yet the legal department still requires the information to exist. Keeping data for a defined period to satisfy legal or regulatory obligations, independent of the hardware it once lived on, is data retention.",
- "incorrect":{
-  "B":"Certification here means a certificate of destruction — the third party's proof that the devices were destroyed. That documents the disposal, not the surviving backup.",
-  "C":"Sanitisation removes data while leaving the medium reusable. These drives were shredded, so they were not sanitised.",
-  "D":"Destruction is what happened to the devices. The requirement being described concerns what is kept, not what was destroyed."}},
-
-"q0206": {"objective":"2.3",
- "explanation":"A real-time operating system typically runs with minimal memory protection, no modern exploit mitigations and often a single privilege level, so writing code directly into its memory is both feasible and immediately effective. Memory injection is the realistic compromise path for that class of system.",
- "incorrect":{
-  "A":"Cross-site scripting requires a web browser rendering a page. An RTOS controlling a device has no browser.",
-  "C":"A replay attack resends captured valid traffic. It may cause an RTOS device to repeat an action but does not compromise the system itself.",
-  "D":"Ransomware encrypts files and demands payment. An RTOS often has no conventional file system or user to extort."}},
-
-"q0207": {"objective":"2.1",
- "explanation":"Website defacement is loud, public and delivers no money or intelligence — its payoff is attention. That matches the unskilled attacker, who uses readily available tools and is motivated by notoriety rather than profit or strategy.",
- "incorrect":{
-  "B":"Organised crime is motivated by money. Defacing a band's site generates none and draws exactly the attention criminals avoid.",
-  "C":"Nation-states pursue espionage and strategic disruption, quietly. A music group has nothing of state interest.",
-  "D":"An insider threat acts from within the organisation. Nothing suggests the attacker had legitimate access."}},
-
-"q0208": {"objective":"4.5",
- "explanation":"To stop an attachment reaching an inbox, the solution has to sit in the mail flow and hold the message while it inspects it. Inline scanning does exactly that — the email is examined and blocked before delivery rather than after.",
- "incorrect":{
-  "A":"IP reputation data blocks mail from known-bad senders. It is a useful first filter but says nothing about the attachment when the sender is unknown or compromised.",
-  "B":"Tapping and monitoring the feed gives a copy of the traffic for analysis. By the time it detects something, the original has already been delivered.",
-  "D":"SPF records verify that a sending server is authorised for the domain. That fights spoofing, not malicious attachments from legitimately authorised senders."}},
-
-"q0209": {"objective":"4.8",
- "explanation":"Of the activities offered, detection comes first: something must be noticed before anyone can declare an incident, verify it or contain it. Note that the full CompTIA process begins with preparation, which happens before any incident exists and is not among these options.",
- "incorrect":{
-  "B":"Declaration is the formal decision that an incident is underway. It can only follow detection and initial assessment.",
-  "C":"Containment limits the damage once the incident is confirmed. It is several steps later.",
-  "D":"Verification confirms that what was detected is genuine rather than a false positive. It necessarily comes after detection."}},
-
-"q0210": {"objective":"3.4",
- "explanation":"An irreplaceable legacy system that the business depends on concentrates risk in one unsupported component. If it fails there is no vendor to call, no patch to apply and often no second instance, so the overriding consideration is that it has become a single point of failure.",
- "incorrect":{
-  "A":"Resource provisioning is about allocating capacity. It is an operational concern rather than the risk the system represents.",
-  "B":"Cost is why the system has not been replaced. It explains the situation instead of describing the consequence.",
-  "D":"Complexity makes the system hard to maintain and understand. It contributes to the problem but the critical exposure is loss of the system entirely."}},
-
-"q0211": {"objective":"1.1",
- "explanation":"The business needs access to the site, so the primary control — simply blocking it — cannot be used. Turning on threat prevention at the firewall substitutes a different control that reduces the same risk, which is what makes it compensating.",
- "incorrect":{
-  "B":"Capturing all web traffic in a SIEM gives visibility after the fact. It is detective, and it reduces no risk at the moment of access.",
-  "C":"Allowing traffic from any port to that destination widens the exposure. That is the opposite of a control.",
-  "D":"Blocking the website on endpoint protection is the primary control being worked around. The requirement is to permit access."}},
-
-"q0212": {"objective":"4.1",
- "explanation":"COPE devices are company property carrying company data, so the organisation must be able to protect that data. Encryption keeps it unreadable if the device is lost, and remote wipe lets the organisation destroy it when the device goes missing or the employee leaves.",
- "incorrect":{
-  "C":"An eight-character password requirement is weak by current guidance and is an arbitrary detail rather than a core COPE control.",
-  "D":"Data usage caps manage cellular cost. That is a billing concern, not device security.",
-  "E":"Employee data ownership contradicts the model — COPE means the organisation owns the device.",
-  "F":"Personal application store access is the 'personally enabled' convenience. It expands the attack surface rather than securing anything."}},
-
-"q0213": {"objective":"2.4",
- "explanation":"The repeated ../ sequences are an attempt to climb out of the web root and reach an arbitrary file on the filesystem — here /etc/passwd. Escaping the intended directory this way is directory traversal, also called path traversal.",
- "incorrect":{
-  "A":"Privilege escalation gains higher rights than those already held. This request is reading a file with whatever rights the web server already has.",
-  "B":"Credential replay reuses captured authentication material. No credentials appear in the request.",
-  "C":"Brute force tries many values until one works. This is a single crafted request, not repeated guessing."}},
-
-"q0214": {"objective":"5.5",
- "explanation":"Giving the tester some information but not full internal detail is a partially known environment, often called grey box. It models an attacker who has done reconnaissance or has limited insider knowledge, which is usually the most realistic and time-efficient scenario.",
- "incorrect":{
-  "B":"An unknown environment, or black box, means the tester is told nothing and must discover everything. Basic device information has been provided.",
-  "C":"Integrated testing combines offensive and defensive teams working together. It describes how teams cooperate, not how much information is shared.",
-  "D":"A known environment, or white box, gives the tester full documentation, architecture and often source or credentials. Basic details fall well short of that."}},
-
-"q0215": {"objective":"4.1",
- "explanation":"Hardening removes what should not be there in the first place — default accounts, unnecessary services, weak configuration — and shrinks the attack surface everything else has to defend. Doing it before go-live is cheapest and means the later controls protect a smaller target.",
- "incorrect":{
-  "B":"WAF rules protect the application from malicious requests. They are valuable, but layering them over an unhardened host leaves the underlying weaknesses in place.",
-  "C":"Network intrusion detection alerts on suspicious traffic. Detection assumes an attack is already underway.",
-  "D":"Patch management is part of hardening and must certainly be done, but hardening is the broader first step that includes it along with configuration and service reduction."}},
-
-"q0216": {"objective":"4.2",
- "explanation":"A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. That combination — unrecoverable data, reusable hardware — is exactly what repurposing requires.",
- "incorrect":{
-  "A":"Degaussing destroys the magnetic structure of the platters. It is thorough and permanent, and it renders the drive unusable.",
-  "B":"A drive shredder physically destroys the device. Nothing is left to repurpose.",
-  "C":"A retention platform stores data for a required period. It is a storage system, not a sanitisation method."}},
-
-"q0217": {"objective":"2.3",
- "explanation":"Submitting unexpected characters so that input is interpreted as database syntax rather than data is SQL injection. Quotes, semicolons and comment markers break out of the intended query and let the attacker read or alter what the underlying database holds.",
- "incorrect":{
-  "A":"Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
-  "B":"Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
-  "C":"Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."}},
-
-"q0218": {"objective":"5.2",
- "explanation":"ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualised rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
- "incorrect":{
-  "A":"$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
-  "C":"$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualising it.",
-  "D":"$30,000 is two full losses, which would be the total across the three years rather than the annual figure."}}
+ "q0185": {
+  "objective": "2.2",
+  "explanation": "Tailgating is following an authorised person through a controlled door so their badge opens it for you. Walking in alongside a group is the textbook version — it exploits politeness and the fact that one badge swipe holds the door for several people.",
+  "incorrect": {
+   "B": "Shoulder surfing is watching someone enter a password or PIN. It steals information by observation rather than gaining physical entry.",
+   "C": "RFID cloning copies the data from a legitimate badge onto another card. That requires capturing a badge first, and the tester has no badge at all.",
+   "D": "Forgery is producing a counterfeit document or credential. Again it means presenting something fake, whereas the tester presented nothing."
+  }
+ },
+ "q0186": {
+  "objective": "4.4",
+  "explanation": "A SIEM collects log data from firewalls, servers, endpoints and applications, normalises the differing formats and presents them together. Producing one consolidated view and report across many device types is its defining capability.",
+  "incorrect": {
+   "A": "An IPS inspects traffic and blocks recognised attacks. It reports on what it sees at its own position in the network, not on other devices.",
+   "B": "DLP watches for sensitive data leaving the organisation. It reports on data movement, a single narrow slice of activity.",
+   "D": "A firewall logs the connections it permits and denies. It is one of the sources feeding the consolidated report, not the thing producing it."
+  }
+ },
+ "q0187": {
+  "objective": "4.3",
+  "explanation": "CVSS turns exploitability and impact into a comparable 0 to 10 score, which is what lets an organisation rank a backlog of findings consistently. Prioritisation needs a common yardstick, and CVSS exists to provide one.",
+  "incorrect": {
+   "A": "Exposure factor is the proportion of an asset's value lost in an incident. It is a risk-calculation input used in ALE, not a vulnerability ranking.",
+   "C": "CVE is the naming catalogue that gives each vulnerability a unique identifier. The identifier carries no severity information at all.",
+   "D": "Industry impact is genuine context that should adjust priorities, but it is a qualitative consideration layered on top of a score rather than the primary basis for it."
+  }
+ },
+ "q0188": {
+  "objective": "4.5",
+  "explanation": "Insiders use legitimate credentials, so nothing they do looks unauthorised to an access control. Behavioural analytics learns what normal activity looks like for each user and flags the deviation — unusual hours, unusual systems, unusual data volumes — which is the only signal an insider actually produces.",
+  "incorrect": {
+   "B": "Access control lists define who may reach what. They limit damage but generate no visibility into how granted access is used.",
+   "C": "Identity and access management governs provisioning and permissions. It decides what access exists rather than monitoring its use.",
+   "D": "A network intrusion detection system looks for attack patterns in traffic. An insider browsing systems they are permitted to reach produces entirely ordinary traffic."
+  }
+ },
+ "q0189": {
+  "objective": "2.2",
+  "explanation": "Vishing is phishing carried out by voice call. The spoofed caller ID showing the company's real main number is the trust-building element, and the goal — extracting card details by impersonating a trusted organisation — is classic voice phishing.",
+  "incorrect": {
+   "A": "Phishing is the general category, and in exam usage it means the email form. The channel here is specifically a phone call.",
+   "B": "Whaling targets a senior executive as the victim. The victim here is an ordinary customer.",
+   "C": "Smishing is phishing over SMS. No text message is involved."
+  }
+ },
+ "q0190": {
+  "objective": "4.9",
+  "explanation": "Command and control traffic leaves the network to reach the attacker's server, so it must cross the firewall. Firewall logs record the source, destination address, port and protocol of every connection, which is precisely the destination information the analyst needs.",
+  "incorrect": {
+   "A": "IDS logs record traffic matching attack signatures. C2 beacons are often designed to look like ordinary traffic and may never trigger a signature.",
+   "B": "Antivirus logs record files detected on hosts. They may name the malware but say nothing about where it connects.",
+   "D": "Application logs record activity inside a particular application. Malware communicating out does not pass through the business application's log."
+  }
+ },
+ "q0191": {
+  "objective": "1.4",
+  "explanation": "A self-signed certificate is not issued by an authority the browser already trusts, so the chain of trust cannot be built and the browser warns the user. Internal sites are the most common place to find them, because organisations avoid paying for public certificates on private hostnames.",
+  "incorrect": {
+   "A": "A wildcard certificate covers subdomains of one domain. If issued by a trusted CA it produces no warning; a mismatch would give a name error, not an insecure-site prompt.",
+   "B": "A root of trust is the anchor certificate a CA signs with. Sites are not issued root certificates.",
+   "C": "A third-party certificate comes from a public CA already in the browser's trust store, which is exactly the case that does not warn."
+  }
+ },
+ "q0192": {
+  "objective": "1.2",
+  "explanation": "A honeypot is a deliberately exposed decoy with no production role. Because nobody has a legitimate reason to touch it, everything it records is attacker activity — which makes it the tool for studying real techniques safely.",
+  "incorrect": {
+   "A": "A firewall permits or denies traffic at a boundary. It logs decisions but captures nothing about what an attacker would do once inside.",
+   "B": "An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
+   "D": "A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."
+  }
+ },
+ "q0193": {
+  "objective": "4.8",
+  "explanation": "A tabletop exercise gathers the response team to talk through a scenario against the written plan. Its value is that everyone rehearses their role and finds the gaps in the process while nothing is actually on fire — familiarisation rather than technical validation.",
+  "incorrect": {
+   "B": "Rules of engagement for red and blue teams are agreed before an exercise, in a planning document. That is a scoping step, not the purpose of a tabletop.",
+   "C": "Determining the impact of an actual breach happens during a live incident, using real telemetry. A tabletop deals in hypotheticals.",
+   "D": "Running parallel investigations is operational work requiring real tooling and evidence."
+  }
+ },
+ "q0194": {
+  "objective": "1.4",
+  "explanation": "A stolen private key means the old certificate must no longer be trusted by anyone, even though it has not expired. Publishing it on the certificate revocation list is how the CA tells the world to reject it.",
+  "incorrect": {
+   "A": "SCEP is a protocol for enrolling devices and issuing certificates automatically. It handles provisioning, not revocation.",
+   "C": "OCSP is the protocol clients use to ask about a certificate's status in real time. It reports revocation that has already been recorded, so the CRL or its database has to be updated first.",
+   "D": "A CSR requests a new certificate. That step has already happened — a replacement has been issued."
+  }
+ },
+ "q0195": {
+  "objective": "5.1",
+  "explanation": "An acceptable use policy tells staff what is and is not appropriate when using company systems, and is the document organisations use to state expectations about integrity and conduct. It is usually signed at onboarding for exactly that reason.",
+  "incorrect": {
+   "B": "An SLA commits a provider to measurable service levels. It governs performance between organisations, not employee behaviour.",
+   "C": "A EULA sets out the terms under which software may be used. It is between a vendor and a user about the product.",
+   "D": "An MOA is a formal statement of intent between organisations. It describes cooperation, not internal conduct."
+  }
+ },
+ "q0196": {
+  "objective": "3.3",
+  "explanation": "Data sovereignty is the principle that data stays subject to the laws of the country it came from, wherever it is subsequently stored. That is how an organisation determines which global regulations apply to a data set independently of hosting location.",
+  "incorrect": {
+   "A": "Geographic dispersion spreads infrastructure across locations for resilience. It is an availability strategy with no legal meaning.",
+   "C": "Geographic restrictions block access based on location. They are a control you might apply in order to comply, not the concept that determines what applies.",
+   "D": "Data segmentation separates data into distinct stores or zones. It affects architecture rather than jurisdiction."
+  }
+ },
+ "q0197": {
+  "objective": "2.5",
+  "explanation": "Two layers address the injection directly. A web application firewall inspects HTTP requests and blocks script injection attempts before they reach the application, while keeping server software patched removes the known flaws that make the servers exploitable in the first place.",
+  "incorrect": {
+   "B": "Strong password policies protect accounts against guessing. Injection needs no account at all.",
+   "C": "Encrypting data at rest and in transit protects it from interception and theft of storage. An injected script runs with the application's own access, so encryption does not stop it.",
+   "E": "Regular vulnerability scans find weaknesses. Finding is not preventing — the fix has to follow.",
+   "F": "Removing payment information reduces what an attacker gains, which limits impact. The servers remain just as vulnerable to the injection."
+  }
+ },
+ "q0198": {
+  "objective": "4.4",
+  "explanation": "Cloud environments generate logs from many services, accounts and regions at once. A SIEM ingests all of it, normalises the differing formats and correlates across them, which is what makes centralised logging and monitoring workable at cloud scale.",
+  "incorrect": {
+   "A": "An IPS blocks malicious traffic inline at a network point. It is a preventive control, and it monitors traffic rather than logs.",
+   "B": "FIM alerts when protected files are modified. It covers one narrow signal on individual hosts.",
+   "C": "NAC decides whether a device may join a network. It is an admission control with no logging or monitoring role."
+  }
+ },
+ "q0199": {
+  "objective": "2.3",
+  "explanation": "The attacker altered something during the update process itself, so the system accepted attacker-controlled content as part of a trusted change. A malicious update is that category of vulnerability — the update path becomes the way in.",
+  "incorrect": {
+   "A": "A race condition exploits the timing gap between checking a condition and acting on it. Here the field was substituted as part of the update rather than through a timing window.",
+   "B": "Memory injection writes code into a running process's memory. This attack modified a database field during an update, not process memory.",
+   "D": "Side loading installs an application from outside an official store. It applies to devices and apps, not database updates."
+  }
+ },
+ "q0200": {
+  "objective": "4.6",
+  "explanation": "A shared privileged account is the hardest kind to control, because nobody owns it and everyone knows the password. Privileged access management vaults the credential, brokers each session, records who used it and when, and keeps working when SSO is unavailable because it is a separate control plane.",
+  "incorrect": {
+   "A": "RAS is remote access service — a way to connect to a network. It provides connectivity, not credential control.",
+   "B": "EAP is an authentication framework used inside network access protocols. It does not manage shared account credentials.",
+   "C": "SAML federates authentication to an identity provider. Since the scenario is an SSO failure, depending on the same federation is exactly what cannot be relied on."
+  }
+ },
+ "q0201": {
+  "objective": "4.8",
+  "explanation": "Preservation is the forensic discipline of keeping evidence in an unaltered state — write-blocking, hashing the image, and documenting handling so the data can be shown to be the same as when collected. Integrity of evidence is what it exists to guarantee.",
+  "incorrect": {
+   "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation. It governs disclosure, not integrity.",
+   "C": "Acquisition is the act of collecting the evidence. Integrity has to be maintained through acquisition and everything after it, which is preservation's job.",
+   "D": "Containment is an incident response step that limits ongoing damage. It happens alongside forensics but is not about evidence handling."
+  }
+ },
+ "q0202": {
+  "objective": "4.9",
+  "explanation": "30GB leaving the network has to cross the perimeter, so the firewall and network logs hold both halves of the answer: which internal host sent it and which external address received it. A single query for large outbound flows surfaces both efficiently.",
+  "incorrect": {
+   "B": "IPS and IDS logs record reconnaissance and signature matches. Scanning activity is a different phase and will not show the bulk transfer or its destination.",
+   "C": "Endpoint and application logs might show a file-sharing tool running, but that assumes a specific method and covers only the source, never the destination.",
+   "D": "Vulnerability scans and automated reports describe weaknesses that exist. They explain how an attacker might have got in, not what left or where it went."
+  }
+ },
+ "q0203": {
+  "objective": "5.5",
+  "explanation": "Rules of engagement define exactly how a penetration test must be conducted — scope, permitted techniques, testing windows, escalation contacts and what is off limits. They are agreed before testing starts and are what keep the engagement lawful and safe.",
+  "incorrect": {
+   "B": "Rules of acceptance is not a recognised term in this context. Acceptance criteria belong to project delivery.",
+   "C": "Rules of understanding is not a standard document either; it echoes memorandum of understanding, which is an agreement between organisations.",
+   "D": "Rules of execution is likewise not a recognised penetration testing artefact."
+  }
+ },
+ "q0204": {
+  "objective": "4.5",
+  "explanation": "EDR continuously records process, file and network behaviour on endpoints and compares it against expected patterns, so it surfaces activity that deviates from the baseline rather than matching a known signature. Detecting behavioural deviation is exactly what the analyst asked for.",
+  "incorrect": {
+   "A": "An intrusion prevention system blocks traffic matching known attack patterns. It is signature-driven and sits on the network, not on the endpoint.",
+   "B": "A sandbox detonates a suspicious file in isolation to observe it. It analyses individual samples rather than ongoing user and device behaviour.",
+   "D": "Antivirus matches files against known malware signatures. It detects known bad rather than unusual."
+  }
+ },
+ "q0205": {
+  "objective": "4.2",
+  "explanation": "The devices themselves are gone, yet the legal department still requires the information to exist. Keeping data for a defined period to satisfy legal or regulatory obligations, independent of the hardware it once lived on, is data retention.",
+  "incorrect": {
+   "B": "Certification here means a certificate of destruction — the third party's proof that the devices were destroyed. That documents the disposal, not the surviving backup.",
+   "C": "Sanitisation removes data while leaving the medium reusable. These drives were shredded, so they were not sanitised.",
+   "D": "Destruction is what happened to the devices. The requirement being described concerns what is kept, not what was destroyed."
+  }
+ },
+ "q0206": {
+  "objective": "2.3",
+  "explanation": "A real-time operating system typically runs with minimal memory protection, no modern exploit mitigations and often a single privilege level, so writing code directly into its memory is both feasible and immediately effective. Memory injection is the realistic compromise path for that class of system.",
+  "incorrect": {
+   "A": "Cross-site scripting requires a web browser rendering a page. An RTOS controlling a device has no browser.",
+   "C": "A replay attack resends captured valid traffic. It may cause an RTOS device to repeat an action but does not compromise the system itself.",
+   "D": "Ransomware encrypts files and demands payment. An RTOS often has no conventional file system or user to extort."
+  }
+ },
+ "q0207": {
+  "objective": "2.1",
+  "explanation": "Website defacement is loud, public and delivers no money or intelligence — its payoff is attention. That matches the unskilled attacker, who uses readily available tools and is motivated by notoriety rather than profit or strategy.",
+  "incorrect": {
+   "B": "Organised crime is motivated by money. Defacing a band's site generates none and draws exactly the attention criminals avoid.",
+   "C": "Nation-states pursue espionage and strategic disruption, quietly. A music group has nothing of state interest.",
+   "D": "An insider threat acts from within the organisation. Nothing suggests the attacker had legitimate access."
+  }
+ },
+ "q0208": {
+  "objective": "4.5",
+  "explanation": "To stop an attachment reaching an inbox, the solution has to sit in the mail flow and hold the message while it inspects it. Inline scanning does exactly that — the email is examined and blocked before delivery rather than after.",
+  "incorrect": {
+   "A": "IP reputation data blocks mail from known-bad senders. It is a useful first filter but says nothing about the attachment when the sender is unknown or compromised.",
+   "B": "Tapping and monitoring the feed gives a copy of the traffic for analysis. By the time it detects something, the original has already been delivered.",
+   "D": "SPF records verify that a sending server is authorised for the domain. That fights spoofing, not malicious attachments from legitimately authorised senders."
+  }
+ },
+ "q0209": {
+  "objective": "4.8",
+  "explanation": "Of the activities offered, detection comes first: something must be noticed before anyone can declare an incident, verify it or contain it. Note that the full CompTIA process begins with preparation, which happens before any incident exists and is not among these options.",
+  "incorrect": {
+   "B": "Declaration is the formal decision that an incident is underway. It can only follow detection and initial assessment.",
+   "C": "Containment limits the damage once the incident is confirmed. It is several steps later.",
+   "D": "Verification confirms that what was detected is genuine rather than a false positive. It necessarily comes after detection."
+  }
+ },
+ "q0210": {
+  "objective": "3.4",
+  "explanation": "An irreplaceable legacy system that the business depends on concentrates risk in one unsupported component. If it fails there is no vendor to call, no patch to apply and often no second instance, so the overriding consideration is that it has become a single point of failure.",
+  "incorrect": {
+   "A": "Resource provisioning is about allocating capacity. It is an operational concern rather than the risk the system represents.",
+   "B": "Cost is why the system has not been replaced. It explains the situation instead of describing the consequence.",
+   "D": "Complexity makes the system hard to maintain and understand. It contributes to the problem but the critical exposure is loss of the system entirely."
+  }
+ },
+ "q0211": {
+  "objective": "1.1",
+  "explanation": "The business needs access to the site, so the primary control — simply blocking it — cannot be used. Turning on threat prevention at the firewall substitutes a different control that reduces the same risk, which is what makes it compensating.",
+  "incorrect": {
+   "B": "Capturing all web traffic in a SIEM gives visibility after the fact. It is detective, and it reduces no risk at the moment of access.",
+   "C": "Allowing traffic from any port to that destination widens the exposure. That is the opposite of a control.",
+   "D": "Blocking the website on endpoint protection is the primary control being worked around. The requirement is to permit access."
+  }
+ },
+ "q0212": {
+  "objective": "4.1",
+  "explanation": "COPE devices are company property carrying company data, so the organisation must be able to protect that data. Encryption keeps it unreadable if the device is lost, and remote wipe lets the organisation destroy it when the device goes missing or the employee leaves.",
+  "incorrect": {
+   "C": "An eight-character password requirement is weak by current guidance and is an arbitrary detail rather than a core COPE control.",
+   "D": "Data usage caps manage cellular cost. That is a billing concern, not device security.",
+   "E": "Employee data ownership contradicts the model — COPE means the organisation owns the device.",
+   "F": "Personal application store access is the 'personally enabled' convenience. It expands the attack surface rather than securing anything."
+  }
+ },
+ "q0213": {
+  "objective": "2.4",
+  "explanation": "The repeated ../ sequences are an attempt to climb out of the web root and reach an arbitrary file on the filesystem — here /etc/passwd. Escaping the intended directory this way is directory traversal, also called path traversal.",
+  "incorrect": {
+   "A": "Privilege escalation gains higher rights than those already held. This request is reading a file with whatever rights the web server already has.",
+   "B": "Credential replay reuses captured authentication material. No credentials appear in the request.",
+   "C": "Brute force tries many values until one works. This is a single crafted request, not repeated guessing."
+  }
+ },
+ "q0214": {
+  "objective": "5.5",
+  "explanation": "Giving the tester some information but not full internal detail is a partially known environment, often called grey box. It models an attacker who has done reconnaissance or has limited insider knowledge, which is usually the most realistic and time-efficient scenario.",
+  "incorrect": {
+   "B": "An unknown environment, or black box, means the tester is told nothing and must discover everything. Basic device information has been provided.",
+   "C": "Integrated testing combines offensive and defensive teams working together. It describes how teams cooperate, not how much information is shared.",
+   "D": "A known environment, or white box, gives the tester full documentation, architecture and often source or credentials. Basic details fall well short of that."
+  }
+ },
+ "q0215": {
+  "objective": "4.1",
+  "explanation": "Hardening removes what should not be there in the first place — default accounts, unnecessary services, weak configuration — and shrinks the attack surface everything else has to defend. Doing it before go-live is cheapest and means the later controls protect a smaller target.",
+  "incorrect": {
+   "B": "WAF rules protect the application from malicious requests. They are valuable, but layering them over an unhardened host leaves the underlying weaknesses in place.",
+   "C": "Network intrusion detection alerts on suspicious traffic. Detection assumes an attack is already underway.",
+   "D": "Patch management is part of hardening and must certainly be done, but hardening is the broader first step that includes it along with configuration and service reduction."
+  }
+ },
+ "q0216": {
+  "objective": "4.2",
+  "explanation": "A wipe tool overwrites every addressable block so the previous contents cannot be recovered, while leaving the drive fully functional. That combination — unrecoverable data, reusable hardware — is exactly what repurposing requires.",
+  "incorrect": {
+   "A": "Degaussing destroys the magnetic structure of the platters. It is thorough and permanent, and it renders the drive unusable.",
+   "B": "A drive shredder physically destroys the device. Nothing is left to repurpose.",
+   "C": "A retention platform stores data for a required period. It is a storage system, not a sanitisation method."
+  }
+ },
+ "q0217": {
+  "objective": "2.3",
+  "explanation": "Submitting unexpected characters so that input is interpreted as database syntax rather than data is SQL injection. Quotes, semicolons and comment markers break out of the intended query and let the attacker read or alter what the underlying database holds.",
+  "incorrect": {
+   "A": "Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
+   "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
+   "C": "Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."
+  }
+ },
+ "q0218": {
+  "objective": "5.2",
+  "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualised rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
+  "incorrect": {
+   "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
+   "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualising it.",
+   "D": "$30,000 is two full losses, which would be the total across the three years rather than the annual figure."
+  }
+ }
 }

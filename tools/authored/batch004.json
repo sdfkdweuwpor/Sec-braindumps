@@ -1,243 +1,312 @@
 {
-"q0080": {"objective":"2.3",
- "explanation":"Once an application passes end of life the vendor stops issuing security updates, so every vulnerability discovered from that day forward stays exploitable forever. That is the critical risk, because unlike the others it cannot be worked around and its severity only grows with time.",
- "incorrect":{
-  "B":"Lack of new features is a functional limitation. The application keeps doing what it already did, which is an inconvenience rather than a security risk.",
-  "C":"Lack of support means no help when something breaks. It is a genuine operational problem, but a broken feature is far less dangerous than an unpatchable flaw.",
-  "D":"Lack of source code access limits what the company could fix itself. Most commercial software never provides it, so nothing changes at end of life."}},
-
-"q0081": {"objective":"4.9",
- "explanation":"The claim is that credentials cross the network in cleartext. Proving that requires actually looking at the packets, and Wireshark captures and dissects live traffic so the analyst can see the credentials in the payload for themselves.",
- "incorrect":{
-  "B":"netcat opens raw connections for testing reachability or banner-grabbing. It can talk to a port but will not capture an authentication exchange between a printer and a client.",
-  "C":"Nessus would report that the flaw exists based on version fingerprinting or a plugin check. That repeats the report rather than validating it against observed traffic.",
-  "D":"Nmap discovers hosts, ports and service versions. It tells you the printer is there and what it runs, not what its traffic contains."}},
-
-"q0082": {"objective":"4.1",
- "explanation":"Fuzzing floods an application with malformed, unexpected and random input to see what makes it crash or behave incorrectly. That is precisely the attack the CISO described, so fuzzing during development finds those inputs before an attacker does.",
- "incorrect":{
-  "B":"Continuous deployment automates releasing code to production. It changes delivery speed and does nothing to test input handling.",
-  "C":"Static code analysis inspects source without running it. It catches many defect classes but cannot observe how the running system reacts to malformed input.",
-  "D":"Manual peer review has humans read the code. It is valuable but will not systematically discover the specific inputs that destabilise a system."}},
-
-"q0083": {"objective":"1.3",
- "explanation":"The design is already released, so altering it is a change to a live system. Best practice routes that through the change control process, which brings approval, impact analysis, testing and a backout plan before anything is modified.",
- "incorrect":{
-  "A":"The risk management process evaluates and treats risk. It might justify making the change but is not the mechanism for implementing one safely.",
-  "B":"The product design process creates the design in the first place. That stage has already been completed and released.",
-  "C":"The design review process is what just happened — the annual review that found the issues. The next step is acting on them."}},
-
-"q0084": {"objective":"4.3",
- "explanation":"CVSS is the Common Vulnerability Scoring System, which produces a 0 to 10 severity score from exploitability and impact metrics. It exists specifically to express how severe a vulnerability is and to let findings be compared and prioritised.",
- "incorrect":{
-  "A":"CVE is the identifier catalogue — it gives each vulnerability a unique name so everyone means the same flaw. The identifier carries no severity.",
-  "B":"OSINT is intelligence gathered from public sources. It can inform whether a flaw is being exploited but does not score it.",
-  "C":"SOAR automates and orchestrates response actions. It acts on prioritised findings rather than establishing the priority."}},
-
-"q0085": {"objective":"2.4",
- "explanation":"The command is mimikatz invoking sekurlsa::pth with an NTLM hash — a pass-the-hash attack. The attacker never needed the plaintext password: they took the hash for a local administrator account from the compromised PC and authenticated to the hardened PC with it, which works whenever that account is shared across machines.",
- "incorrect":{
-  "A":"Fileless malware hosted by the banking platform would mean the bank's own site delivered the attack. The evidence is a tool run locally on an internal PC.",
-  "C":"Living off the land means abusing built-in system binaries to avoid dropping tools. mimikatz is an external tool written to disk, which is the opposite.",
-  "D":"Social engineering the accountant would show a person being manipulated into acting. The command history shows a technical credential attack instead."}},
-
-"q0086": {"objective":"4.3",
- "explanation":"OWASP publishes the definitive community resources on how web applications are attacked, most notably the OWASP Top 10, with detailed descriptions of each exploitation method and its defences. For the most common application exploitation techniques it is the reference to reach for.",
- "incorrect":{
-  "B":"STIX is a structured format for expressing and exchanging threat intelligence. It is a data language, not a body of knowledge about exploitation.",
-  "C":"OVAL is a language for describing system state and configuration checks. It supports automated assessment rather than explaining attack methods.",
-  "D":"A threat intelligence feed delivers current indicators such as malicious addresses and hashes. It reports live activity rather than teaching exploitation classes.",
-  "E":"CVE catalogues individual vulnerabilities in specific products. It lists instances rather than the general methods used to exploit applications."}},
-
-"q0087": {"objective":"4.9",
- "explanation":"A run of DNS lookups against internal hostnames is reconnaissance: the attacker is using the organisation's own name service to map what exists inside the network without touching the hosts themselves. Building that picture of internal systems is footprinting.",
- "incorrect":{
-  "A":"Determining ISP-assigned address space is external reconnaissance, done through public registries such as WHOIS. Internal hostname queries reveal nothing about public allocations.",
-  "B":"Bypassing DNS sinkholing would mean evading a control that redirects malicious domains. The queries here are for internal names, which a sinkhole does not cover.",
-  "D":"Achieving initial access to the DNS server would involve exploiting the service itself. These are ordinary, well-formed queries the server is designed to answer.",
-  "E":"Exfiltrating data over DNS shows up as long, high-entropy labels encoding payload. Normal internal hostname lookups carry no data out."}},
-
-"q0088": {"objective":"4.6",
- "explanation":"External logins with valid credentials mean the credentials are compromised, so the fix must make a stolen password insufficient. Additional authentication factors stop a password alone from working, and conditional access policies evaluate context — location, device, risk — and block or challenge logins that do not fit the expected pattern.",
- "incorrect":{
-  "A":"Disciplinary action punishes users after the fact. It does not stop an attacker who already holds working credentials.",
-  "C":"More regular account audits improve how quickly you notice a problem. Detection is valuable but does not reduce the likelihood of the attack succeeding.",
-  "E":"Content filtering controls which sites users may reach. It might block a phishing page but does nothing about logins arriving from outside.",
-  "F":"Reviewing account permissions limits the damage once an account is misused. It reduces impact rather than likelihood."}},
-
-"q0089": {"objective":"3.2",
- "explanation":"Port 443 is the web application itself, so the two layers worth adding are one that understands the application and one that watches the network. A WAF inspects HTTP requests and blocks application attacks such as injection and cross-site scripting; a NIDS monitors network traffic and alerts on suspicious patterns the WAF does not cover.",
- "incorrect":{
-  "B":"A honeypot is a decoy that detects attackers who interact with it. It adds no protection to the real application handling live customer traffic.",
-  "C":"A certificate revocation list records certificates that are no longer valid. It is PKI hygiene and provides no attack surface reduction.",
-  "D":"HIPS protects an individual host from malicious activity on that machine. It is useful but is host-level rather than the network security capability the team lacks.",
-  "F":"A SIEM aggregates and correlates logs to support detection and investigation. It analyses what other controls report and blocks nothing itself."}},
-
-"q0090": {"objective":"3.4",
- "explanation":"A snapshot captures the exact state of a virtual machine — disk, and optionally memory — at one instant, so it can be rolled back to that point later. Point-in-time capture of a VM is the definition of a snapshot.",
- "incorrect":{
-  "A":"Replication continuously copies data to another system to keep it current. It maintains an ongoing mirror rather than preserving a single moment.",
-  "B":"Simulation models a scenario to test how something would behave. It is an exercise technique and produces no backup.",
-  "D":"Containerisation packages an application and its dependencies to run on a shared kernel. It is a deployment model, not a backup method."}},
-
-"q0091": {"objective":"2.5",
- "explanation":"The desktops are both unused and non-compliant, so there is no business reason to keep them and every reason to remove the risk. Decommissioning takes them off the network entirely, eliminating an unpatched, unmonitored attack surface rather than managing it indefinitely.",
- "incorrect":{
-  "A":"Monitoring watches the systems for trouble. It maintains visibility into machines that should not be there at all.",
-  "C":"Patching brings them into compliance, which is effort spent on systems nobody uses. It fixes the wrong problem.",
-  "D":"Isolating confines them to a restricted segment. That is the right approach when a non-compliant system is still needed, which these are not."}},
-
-"q0092": {"objective":"4.2",
- "explanation":"Sanitisation removes data so it cannot be reconstructed while leaving the medium serviceable. That is exactly the requirement — a repeatable process that renders sensitive data unrecoverable but allows the drive to be reused.",
- "incorrect":{
-  "B":"Formatting rebuilds the file system structure but usually leaves the underlying data blocks intact and recoverable with ordinary tools.",
-  "C":"Degaussing destroys the magnetic structure of the platters. It is thorough but permanently ruins the drive, so it cannot be reused.",
-  "D":"Defragmentation reorganises data for performance. It removes nothing and is not a data-removal technique at all."}},
-
-"q0093": {"objective":"4.6",
- "explanation":"A time-based token generates a one-time code from a shared secret and the current time, so it works with any application, runs on any manufacturer's hardware or an app, and needs no connectivity to produce a code. That satisfies all three requirements at once.",
- "incorrect":{
-  "A":"Username and password is the method being improved on. It is neither an additional factor nor any stronger than what is already failing.",
-  "B":"Biometrics ties authentication to specific sensor hardware, which breaks the manufacturer-agnostic requirement and does not extend cleanly to SaaS applications.",
-  "C":"SMS verification requires cellular connectivity to receive the code, so it fails the offline requirement outright — and it is vulnerable to SIM swapping."}},
-
-"q0094": {"objective":"5.4",
- "explanation":"GDPR governs how personal data belonging to people in the European Union is collected, processed, stored and transferred, and it applies to any organisation doing business there regardless of where it is based. Its penalties are what make it the privacy concern for a global company.",
- "incorrect":{
-  "A":"ISO 27001 is a certifiable standard for an information security management system. It is voluntary and is about security governance, not privacy law.",
-  "B":"PCI DSS is a contractual standard for handling payment card data. It is enforced by the card brands, not by privacy regulators.",
-  "D":"SOC 2 is an auditing framework producing a report on service organisation controls. It demonstrates control effectiveness to customers rather than satisfying privacy legislation."}},
-
-"q0095": {"objective":"2.2",
- "explanation":"The attacker compromised something upstream — a trusted software platform — and let its normal update mechanism deliver the damage to every downstream organisation. Turning a trusted supplier into the delivery path is a supply chain attack.",
- "incorrect":{
-  "A":"A DDoS attack floods a target with traffic to exhaust it. Services failed here because of a bad update, not because of traffic volume.",
-  "B":"A rogue employee acts maliciously from inside one organisation. The damage here spread across many organisations through a shared vendor.",
-  "C":"An insider threat likewise originates within the affected organisation. Every victim here was harmed by an external supplier's product."}},
-
-"q0096": {"objective":"2.4",
- "explanation":"An unauthenticated page that accepts uploads is the classic route for a web shell: the attacker uploads a script disguised as an image, requests it, and gains command execution as the web server. That explains both the unfamiliar process and the outbound connection to a low-reputation address.",
- "incorrect":{
-  "B":"A worm spreads itself automatically to other hosts. The evidence shows one compromised server beaconing out, with no sign of propagation.",
-  "C":"Cryptomining is driven by CPU consumption and connects to mining pools. Traffic to a single low-reputation host on a non-standard port looks like command and control, not mining.",
-  "D":"A rootkit over exposed RDP requires RDP to be reachable. The described exposure is an unauthenticated upload page on a web server."}},
-
-"q0097": {"objective":"5.3",
- "explanation":"Supply chain illumination tools map an organisation's suppliers and, crucially, their suppliers in turn, exposing the multi-tier dependencies and concentration risk that a full-spectrum analysis is meant to reveal. Nothing else listed looks beyond your own perimeter.",
- "incorrect":{
-  "A":"A vulnerability scanner finds technical weaknesses on hosts you control. It cannot see into a vendor's estate, let alone their vendors'.",
-  "B":"A penetration test assesses whether your own systems can be breached. It is depth against one target, not breadth across a supply chain.",
-  "C":"SCAP automates configuration and compliance checking against defined benchmarks. It measures system state, not supplier relationships."}},
-
-"q0098": {"objective":"4.4",
- "explanation":"An agentless solution monitors endpoints without installing software on them, typically by querying them over the network with existing credentials and protocols. Monitoring without anything installed on the target is the defining characteristic.",
- "incorrect":{
-  "B":"A client-based solution is the opposite — it depends on software running on each endpoint, which is what the administrator avoided.",
-  "C":"An open port is a listening network service. Agentless monitoring uses ports, but a port is not a type of monitoring solution.",
-  "D":"File-based is not a monitoring architecture. It describes how something is stored or delivered rather than how endpoints are observed."}},
-
-"q0099": {"objective":"4.3",
- "explanation":"Static analysis examines source code without executing it, which is what reading the code for misconfigurations and vulnerabilities means. It can reach every path in the code, including ones that would be hard to trigger at runtime.",
- "incorrect":{
-  "A":"Dynamic analysis tests the application while it runs, observing real behaviour against real input. The analyst here is reading code, not running it.",
-  "C":"Gap analysis compares a current state against a desired state or standard. It is a programme-level assessment rather than a code review.",
-  "D":"Impact analysis estimates the consequences of a change or an incident. It evaluates effect, not code quality."}},
-
-"q0100": {"objective":"5.3",
- "explanation":"A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
- "incorrect":{
-  "A":"A business partners agreement sets out how two organisations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
-  "C":"A service-level agreement commits a provider to measurable performance levels. It governs service quality, not disclosure.",
-  "D":"A master service agreement establishes the general terms under which future work will be done. Individual engagements are then scoped beneath it."}},
-
-"q0101": {"objective":"5.3",
- "explanation":"Requesting evidence about a prospective vendor's controls before adopting their product is due diligence — the investigation an organisation performs to understand the risk it is about to take on. The SOC 2 report is one of the artefacts gathered during it.",
- "incorrect":{
-  "A":"An internal audit examines your own organisation's controls using your own staff. This is an assessment of a third party.",
-  "B":"Penetration testing actively attempts to breach a system. The analyst is reviewing documentation, not attacking anything.",
-  "C":"Attestation is what the SOC 2 report itself is — an independent auditor's formal opinion. The vendor's auditor performed the attestation; the analyst is consuming it."}},
-
-"q0102": {"objective":"3.3",
- "explanation":"Masking replaces part of a value with a placeholder so the record stays useful without exposing the sensitive data — showing only the last four digits of a card number in a log, for example. That is the standard treatment for card data written to logs.",
- "incorrect":{
-  "A":"Tokenisation swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
-  "C":"Hashing produces an irreversible digest. Card numbers have a small enough keyspace to be recovered from a hash by brute force, so it is not the recommended treatment.",
-  "D":"Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique, and the question asks for the precise one."}},
-
-"q0104": {"objective":"3.2",
- "explanation":"The new exposure is a web portal, so the control has to understand HTTP. A web application firewall inspects requests and responses at the application layer and blocks injection, cross-site scripting and similar attacks that a general-purpose firewall cannot see.",
- "incorrect":{
-  "A":"A layer 4 firewall filters on addresses and ports. It can permit traffic to 443 but has no visibility into the requests inside that session.",
-  "B":"An NGFW adds application and identity awareness to boundary filtering. It is broader but not specialised in protecting a single web application.",
-  "D":"A UTM bundles several security functions into one appliance. It is a general-purpose device rather than the targeted control for a web portal."}},
-
-"q0105": {"objective":"5.1",
- "explanation":"Branch protection requirements — mandatory review, status checks and restrictions on who can merge — govern how code moves through the repository. They are a software development lifecycle control, which is why they sit in the SDLC rather than in a general policy.",
- "incorrect":{
-  "A":"Service-level agreements commit a provider to performance levels for a running service. They belong to vendor management and operations.",
-  "B":"An information security policy is the organisation-wide statement of security intent. The SDLC sits under it rather than containing it.",
-  "C":"Penetration testing methodology defines how assessments are conducted. It is part of the assessment programme, and testing may be scheduled against software without living inside the SDLC."}},
-
-"q0106": {"objective":"1.1",
- "explanation":"An acceptable use policy governs how people behave day to day — what they may do with company systems. Controls implemented and enforced through people and process are operational, as distinct from managerial controls, which direct the security programme itself.",
- "incorrect":{
-  "A":"Physical controls act on the physical environment: locks, fences, guards, cameras. A written policy is not one of them.",
-  "B":"Managerial controls are the planning and oversight layer — risk assessments, security planning, control selection. An AUP directs user conduct rather than managing the programme.",
-  "C":"Technical controls are implemented in hardware or software, such as firewalls and encryption. A policy is enforced by people."}},
-
-"q0107": {"objective":"4.6",
- "explanation":"Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterwards.",
- "incorrect":{
-  "A":"Enabling SAML is how each application is then connected to the IdP. You cannot configure the trust before deciding who the identity provider is.",
-  "B":"Creating OAuth tokens is an implementation detail of authorising access once federation exists. It is several steps downstream.",
-  "C":"Password vaulting stores the separate credentials more safely. It manages the problem rather than reducing the number of credentials."}},
-
-"q0108": {"objective":"2.4",
- "explanation":"Malicious code appearing in what should be a routine backup job, triggering on a date, points to an attacker having injected it through the application. Reviewing the WAF logs shows whether a command injection request reached the server and when, which establishes how the code got there.",
- "incorrect":{
-  "A":"Checking terminated DBAs investigates an insider with legitimate database access. That is worth ruling out but is speculation until the injection path is checked.",
-  "C":"Scanning for malware looks for known malicious files. The problem is attacker-supplied code inside a legitimate database job, which a scanner will not flag.",
-  "D":"Searching for ransomware notes assumes an extortion attack. The site is unusable because of destructive code, and no ransom demand has been reported."}},
-
-"q0109": {"objective":"3.4",
- "explanation":"A production failover actually cuts primary power and proves the systems carry on. Only a real failover exercises the generators, transfer switches, batteries and the procedures together under genuine load — which is why it is the strongest test of resilience.",
- "incorrect":{
-  "A":"Parallel processing runs a secondary system alongside the primary to compare results. It validates a replacement system rather than testing power resilience.",
-  "B":"A tabletop exercise walks through the plan in a meeting. It finds gaps in thinking but touches no equipment.",
-  "C":"Simulation testing models the failure without genuinely losing power. It is safer and more realistic than a tabletop, but it still does not prove the hardware behaves."}},
-
-"q0110": {"objective":"3.3",
- "explanation":"TLS 1.3 is the current standard for encrypting data as it crosses a network, and it removes the legacy cipher suites and handshake weaknesses of earlier versions. Protecting data in transit is exactly what it exists for.",
- "incorrect":{
-  "A":"SHA-256 is a hashing algorithm. It verifies integrity but provides no confidentiality, so anyone on the path still reads the data.",
-  "B":"SSL 3.0 is a deprecated predecessor to TLS with known breaks such as POODLE. It must not be used.",
-  "D":"AES-256 is a symmetric cipher. It is the encryption TLS uses internally, but on its own it is not a protocol for securing a connection."}},
-
-"q0111": {"objective":"5.5",
- "explanation":"Passive reconnaissance gathers information without sending anything to the target. Open-source intelligence — public registries, certificate transparency logs, social media, job adverts — builds a picture of the organisation while leaving no trace in its logs.",
- "incorrect":{
-  "B":"Port scanning sends packets to the target and appears in its logs. That makes it active reconnaissance.",
-  "C":"Pivoting moves laterally through an already-compromised network. It happens well after the early phases and requires a foothold.",
-  "D":"Exploit validation confirms a vulnerability can actually be exploited. It is active, intrusive and comes late in the engagement."}},
-
-"q0112": {"objective":"2.1",
- "explanation":"Organised crime is motivated by profit above all else, and ransomware is the most direct way to convert access into payment. These groups are well resourced enough to run ransomware as a business, complete with affiliates and negotiation.",
- "incorrect":{
-  "B":"An insider threat acts from within, usually driven by grievance or personal gain through data theft. Deploying ransomware across the organisation that employs them is an unusual route.",
-  "C":"Nation-states pursue espionage, disruption or strategic advantage. They occasionally use ransomware as cover, but revenue is not their purpose.",
-  "D":"Hacktivists act for ideological reasons — publicity, protest, embarrassment. Extorting money would undercut the cause they are advancing."}},
-
-"q0113": {"objective":"1.3",
- "explanation":"Upgrading router firmware means the device reboots and the network drops. A maintenance window is the pre-agreed period for exactly that kind of disruptive change, scheduled when usage is lowest and communicated in advance so the outage is expected.",
- "incorrect":{
-  "A":"The software development life cycle governs how software is designed, built and released. An administrator applying a vendor's firmware is not developing anything.",
-  "B":"Risk tolerance expresses how much risk the organisation will accept. It may inform whether the upgrade is approved but is not a procedure to follow.",
-  "C":"A certificate signing request asks a CA to issue a certificate. It has no role in a firmware upgrade."}},
-
-"q0116": {"objective":"3.3",
- "explanation":"IPSec authenticates and encrypts each IP packet, so it protects any traffic between systems regardless of the application generating it. For securing sensitive data moving inside a private cloud that is the right layer to work at.",
- "incorrect":{
-  "B":"SHA-1 is a hashing algorithm, and a deprecated one with practical collision attacks. It offers no confidentiality even where it is still used.",
-  "C":"RSA is an asymmetric algorithm used for key exchange and signatures. It is a building block that protocols such as IPSec use, not a way to secure communications on its own.",
-  "D":"A TGT is a Kerberos ticket-granting ticket used during authentication. It proves identity but does not encrypt the data that flows afterwards."}}
+ "q0080": {
+  "objective": "2.3",
+  "explanation": "Once an application passes end of life the vendor stops issuing security updates, so every vulnerability discovered from that day forward stays exploitable forever. That is the critical risk, because unlike the others it cannot be worked around and its severity only grows with time.",
+  "incorrect": {
+   "B": "Lack of new features is a functional limitation. The application keeps doing what it already did, which is an inconvenience rather than a security risk.",
+   "C": "Lack of support means no help when something breaks. It is a genuine operational problem, but a broken feature is far less dangerous than an unpatchable flaw.",
+   "D": "Lack of source code access limits what the company could fix itself. Most commercial software never provides it, so nothing changes at end of life."
+  }
+ },
+ "q0081": {
+  "objective": "4.9",
+  "explanation": "The claim is that credentials cross the network in cleartext. Proving that requires actually looking at the packets, and Wireshark captures and dissects live traffic so the analyst can see the credentials in the payload for themselves.",
+  "incorrect": {
+   "B": "netcat opens raw connections for testing reachability or banner-grabbing. It can talk to a port but will not capture an authentication exchange between a printer and a client.",
+   "C": "Nessus would report that the flaw exists based on version fingerprinting or a plugin check. That repeats the report rather than validating it against observed traffic.",
+   "D": "Nmap discovers hosts, ports and service versions. It tells you the printer is there and what it runs, not what its traffic contains."
+  }
+ },
+ "q0082": {
+  "objective": "4.1",
+  "explanation": "Fuzzing floods an application with malformed, unexpected and random input to see what makes it crash or behave incorrectly. That is precisely the attack the CISO described, so fuzzing during development finds those inputs before an attacker does.",
+  "incorrect": {
+   "B": "Continuous deployment automates releasing code to production. It changes delivery speed and does nothing to test input handling.",
+   "C": "Static code analysis inspects source without running it. It catches many defect classes but cannot observe how the running system reacts to malformed input.",
+   "D": "Manual peer review has humans read the code. It is valuable but will not systematically discover the specific inputs that destabilise a system."
+  }
+ },
+ "q0083": {
+  "objective": "1.3",
+  "explanation": "The design is already released, so altering it is a change to a live system. Best practice routes that through the change control process, which brings approval, impact analysis, testing and a backout plan before anything is modified.",
+  "incorrect": {
+   "A": "The risk management process evaluates and treats risk. It might justify making the change but is not the mechanism for implementing one safely.",
+   "B": "The product design process creates the design in the first place. That stage has already been completed and released.",
+   "C": "The design review process is what just happened — the annual review that found the issues. The next step is acting on them."
+  }
+ },
+ "q0084": {
+  "objective": "4.3",
+  "explanation": "CVSS is the Common Vulnerability Scoring System, which produces a 0 to 10 severity score from exploitability and impact metrics. It exists specifically to express how severe a vulnerability is and to let findings be compared and prioritised.",
+  "incorrect": {
+   "A": "CVE is the identifier catalogue — it gives each vulnerability a unique name so everyone means the same flaw. The identifier carries no severity.",
+   "B": "OSINT is intelligence gathered from public sources. It can inform whether a flaw is being exploited but does not score it.",
+   "C": "SOAR automates and orchestrates response actions. It acts on prioritised findings rather than establishing the priority."
+  }
+ },
+ "q0085": {
+  "objective": "2.4",
+  "explanation": "The command is mimikatz invoking sekurlsa::pth with an NTLM hash — a pass-the-hash attack. The attacker never needed the plaintext password: they took the hash for a local administrator account from the compromised PC and authenticated to the hardened PC with it, which works whenever that account is shared across machines.",
+  "incorrect": {
+   "A": "Fileless malware hosted by the banking platform would mean the bank's own site delivered the attack. The evidence is a tool run locally on an internal PC.",
+   "C": "Living off the land means abusing built-in system binaries to avoid dropping tools. mimikatz is an external tool written to disk, which is the opposite.",
+   "D": "Social engineering the accountant would show a person being manipulated into acting. The command history shows a technical credential attack instead."
+  }
+ },
+ "q0086": {
+  "objective": "4.3",
+  "explanation": "OWASP publishes the definitive community resources on how web applications are attacked, most notably the OWASP Top 10, with detailed descriptions of each exploitation method and its defences. For the most common application exploitation techniques it is the reference to reach for.",
+  "incorrect": {
+   "B": "STIX is a structured format for expressing and exchanging threat intelligence. It is a data language, not a body of knowledge about exploitation.",
+   "C": "OVAL is a language for describing system state and configuration checks. It supports automated assessment rather than explaining attack methods.",
+   "D": "A threat intelligence feed delivers current indicators such as malicious addresses and hashes. It reports live activity rather than teaching exploitation classes.",
+   "E": "CVE catalogues individual vulnerabilities in specific products. It lists instances rather than the general methods used to exploit applications."
+  }
+ },
+ "q0087": {
+  "objective": "4.9",
+  "explanation": "A run of DNS lookups against internal hostnames is reconnaissance: the attacker is using the organisation's own name service to map what exists inside the network without touching the hosts themselves. Building that picture of internal systems is footprinting.",
+  "incorrect": {
+   "A": "Determining ISP-assigned address space is external reconnaissance, done through public registries such as WHOIS. Internal hostname queries reveal nothing about public allocations.",
+   "B": "Bypassing DNS sinkholing would mean evading a control that redirects malicious domains. The queries here are for internal names, which a sinkhole does not cover.",
+   "D": "Achieving initial access to the DNS server would involve exploiting the service itself. These are ordinary, well-formed queries the server is designed to answer.",
+   "E": "Exfiltrating data over DNS shows up as long, high-entropy labels encoding payload. Normal internal hostname lookups carry no data out."
+  }
+ },
+ "q0088": {
+  "objective": "4.6",
+  "explanation": "External logins with valid credentials mean the credentials are compromised, so the fix must make a stolen password insufficient. Additional authentication factors stop a password alone from working, and conditional access policies evaluate context — location, device, risk — and block or challenge logins that do not fit the expected pattern.",
+  "incorrect": {
+   "A": "Disciplinary action punishes users after the fact. It does not stop an attacker who already holds working credentials.",
+   "C": "More regular account audits improve how quickly you notice a problem. Detection is valuable but does not reduce the likelihood of the attack succeeding.",
+   "E": "Content filtering controls which sites users may reach. It might block a phishing page but does nothing about logins arriving from outside.",
+   "F": "Reviewing account permissions limits the damage once an account is misused. It reduces impact rather than likelihood."
+  }
+ },
+ "q0089": {
+  "objective": "3.2",
+  "explanation": "Port 443 is the web application itself, so the two layers worth adding are one that understands the application and one that watches the network. A WAF inspects HTTP requests and blocks application attacks such as injection and cross-site scripting; a NIDS monitors network traffic and alerts on suspicious patterns the WAF does not cover.",
+  "incorrect": {
+   "B": "A honeypot is a decoy that detects attackers who interact with it. It adds no protection to the real application handling live customer traffic.",
+   "C": "A certificate revocation list records certificates that are no longer valid. It is PKI hygiene and provides no attack surface reduction.",
+   "D": "HIPS protects an individual host from malicious activity on that machine. It is useful but is host-level rather than the network security capability the team lacks.",
+   "F": "A SIEM aggregates and correlates logs to support detection and investigation. It analyses what other controls report and blocks nothing itself."
+  }
+ },
+ "q0090": {
+  "objective": "3.4",
+  "explanation": "A snapshot captures the exact state of a virtual machine — disk, and optionally memory — at one instant, so it can be rolled back to that point later. Point-in-time capture of a VM is the definition of a snapshot.",
+  "incorrect": {
+   "A": "Replication continuously copies data to another system to keep it current. It maintains an ongoing mirror rather than preserving a single moment.",
+   "B": "Simulation models a scenario to test how something would behave. It is an exercise technique and produces no backup.",
+   "D": "Containerisation packages an application and its dependencies to run on a shared kernel. It is a deployment model, not a backup method."
+  }
+ },
+ "q0091": {
+  "objective": "2.5",
+  "explanation": "The desktops are both unused and non-compliant, so there is no business reason to keep them and every reason to remove the risk. Decommissioning takes them off the network entirely, eliminating an unpatched, unmonitored attack surface rather than managing it indefinitely.",
+  "incorrect": {
+   "A": "Monitoring watches the systems for trouble. It maintains visibility into machines that should not be there at all.",
+   "C": "Patching brings them into compliance, which is effort spent on systems nobody uses. It fixes the wrong problem.",
+   "D": "Isolating confines them to a restricted segment. That is the right approach when a non-compliant system is still needed, which these are not."
+  }
+ },
+ "q0092": {
+  "objective": "4.2",
+  "explanation": "Sanitisation removes data so it cannot be reconstructed while leaving the medium serviceable. That is exactly the requirement — a repeatable process that renders sensitive data unrecoverable but allows the drive to be reused.",
+  "incorrect": {
+   "B": "Formatting rebuilds the file system structure but usually leaves the underlying data blocks intact and recoverable with ordinary tools.",
+   "C": "Degaussing destroys the magnetic structure of the platters. It is thorough but permanently ruins the drive, so it cannot be reused.",
+   "D": "Defragmentation reorganises data for performance. It removes nothing and is not a data-removal technique at all."
+  }
+ },
+ "q0093": {
+  "objective": "4.6",
+  "explanation": "A time-based token generates a one-time code from a shared secret and the current time, so it works with any application, runs on any manufacturer's hardware or an app, and needs no connectivity to produce a code. That satisfies all three requirements at once.",
+  "incorrect": {
+   "A": "Username and password is the method being improved on. It is neither an additional factor nor any stronger than what is already failing.",
+   "B": "Biometrics ties authentication to specific sensor hardware, which breaks the manufacturer-agnostic requirement and does not extend cleanly to SaaS applications.",
+   "C": "SMS verification requires cellular connectivity to receive the code, so it fails the offline requirement outright — and it is vulnerable to SIM swapping."
+  }
+ },
+ "q0094": {
+  "objective": "5.4",
+  "explanation": "GDPR governs how personal data belonging to people in the European Union is collected, processed, stored and transferred, and it applies to any organisation doing business there regardless of where it is based. Its penalties are what make it the privacy concern for a global company.",
+  "incorrect": {
+   "A": "ISO 27001 is a certifiable standard for an information security management system. It is voluntary and is about security governance, not privacy law.",
+   "B": "PCI DSS is a contractual standard for handling payment card data. It is enforced by the card brands, not by privacy regulators.",
+   "D": "SOC 2 is an auditing framework producing a report on service organisation controls. It demonstrates control effectiveness to customers rather than satisfying privacy legislation."
+  }
+ },
+ "q0095": {
+  "objective": "2.2",
+  "explanation": "The attacker compromised something upstream — a trusted software platform — and let its normal update mechanism deliver the damage to every downstream organisation. Turning a trusted supplier into the delivery path is a supply chain attack.",
+  "incorrect": {
+   "A": "A DDoS attack floods a target with traffic to exhaust it. Services failed here because of a bad update, not because of traffic volume.",
+   "B": "A rogue employee acts maliciously from inside one organisation. The damage here spread across many organisations through a shared vendor.",
+   "C": "An insider threat likewise originates within the affected organisation. Every victim here was harmed by an external supplier's product."
+  }
+ },
+ "q0096": {
+  "objective": "2.4",
+  "explanation": "An unauthenticated page that accepts uploads is the classic route for a web shell: the attacker uploads a script disguised as an image, requests it, and gains command execution as the web server. That explains both the unfamiliar process and the outbound connection to a low-reputation address.",
+  "incorrect": {
+   "B": "A worm spreads itself automatically to other hosts. The evidence shows one compromised server beaconing out, with no sign of propagation.",
+   "C": "Cryptomining is driven by CPU consumption and connects to mining pools. Traffic to a single low-reputation host on a non-standard port looks like command and control, not mining.",
+   "D": "A rootkit over exposed RDP requires RDP to be reachable. The described exposure is an unauthenticated upload page on a web server."
+  }
+ },
+ "q0097": {
+  "objective": "5.3",
+  "explanation": "Supply chain illumination tools map an organisation's suppliers and, crucially, their suppliers in turn, exposing the multi-tier dependencies and concentration risk that a full-spectrum analysis is meant to reveal. Nothing else listed looks beyond your own perimeter.",
+  "incorrect": {
+   "A": "A vulnerability scanner finds technical weaknesses on hosts you control. It cannot see into a vendor's estate, let alone their vendors'.",
+   "B": "A penetration test assesses whether your own systems can be breached. It is depth against one target, not breadth across a supply chain.",
+   "C": "SCAP automates configuration and compliance checking against defined benchmarks. It measures system state, not supplier relationships."
+  }
+ },
+ "q0098": {
+  "objective": "4.4",
+  "explanation": "An agentless solution monitors endpoints without installing software on them, typically by querying them over the network with existing credentials and protocols. Monitoring without anything installed on the target is the defining characteristic.",
+  "incorrect": {
+   "B": "A client-based solution is the opposite — it depends on software running on each endpoint, which is what the administrator avoided.",
+   "C": "An open port is a listening network service. Agentless monitoring uses ports, but a port is not a type of monitoring solution.",
+   "D": "File-based is not a monitoring architecture. It describes how something is stored or delivered rather than how endpoints are observed."
+  }
+ },
+ "q0099": {
+  "objective": "4.3",
+  "explanation": "Static analysis examines source code without executing it, which is what reading the code for misconfigurations and vulnerabilities means. It can reach every path in the code, including ones that would be hard to trigger at runtime.",
+  "incorrect": {
+   "A": "Dynamic analysis tests the application while it runs, observing real behaviour against real input. The analyst here is reading code, not running it.",
+   "C": "Gap analysis compares a current state against a desired state or standard. It is a programme-level assessment rather than a code review.",
+   "D": "Impact analysis estimates the consequences of a change or an incident. It evaluates effect, not code quality."
+  }
+ },
+ "q0100": {
+  "objective": "5.3",
+  "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
+  "incorrect": {
+   "A": "A business partners agreement sets out how two organisations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
+   "C": "A service-level agreement commits a provider to measurable performance levels. It governs service quality, not disclosure.",
+   "D": "A master service agreement establishes the general terms under which future work will be done. Individual engagements are then scoped beneath it."
+  }
+ },
+ "q0101": {
+  "objective": "5.3",
+  "explanation": "Requesting evidence about a prospective vendor's controls before adopting their product is due diligence — the investigation an organisation performs to understand the risk it is about to take on. The SOC 2 report is one of the artefacts gathered during it.",
+  "incorrect": {
+   "A": "An internal audit examines your own organisation's controls using your own staff. This is an assessment of a third party.",
+   "B": "Penetration testing actively attempts to breach a system. The analyst is reviewing documentation, not attacking anything.",
+   "C": "Attestation is what the SOC 2 report itself is — an independent auditor's formal opinion. The vendor's auditor performed the attestation; the analyst is consuming it."
+  }
+ },
+ "q0102": {
+  "objective": "3.3",
+  "explanation": "Masking replaces part of a value with a placeholder so the record stays useful without exposing the sensitive data — showing only the last four digits of a card number in a log, for example. That is the standard treatment for card data written to logs.",
+  "incorrect": {
+   "A": "Tokenisation swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
+   "C": "Hashing produces an irreversible digest. Card numbers have a small enough keyspace to be recovered from a hash by brute force, so it is not the recommended treatment.",
+   "D": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique, and the question asks for the precise one."
+  }
+ },
+ "q0104": {
+  "objective": "3.2",
+  "explanation": "The new exposure is a web portal, so the control has to understand HTTP. A web application firewall inspects requests and responses at the application layer and blocks injection, cross-site scripting and similar attacks that a general-purpose firewall cannot see.",
+  "incorrect": {
+   "A": "A layer 4 firewall filters on addresses and ports. It can permit traffic to 443 but has no visibility into the requests inside that session.",
+   "B": "An NGFW adds application and identity awareness to boundary filtering. It is broader but not specialised in protecting a single web application.",
+   "D": "A UTM bundles several security functions into one appliance. It is a general-purpose device rather than the targeted control for a web portal."
+  }
+ },
+ "q0105": {
+  "objective": "5.1",
+  "explanation": "Branch protection requirements — mandatory review, status checks and restrictions on who can merge — govern how code moves through the repository. They are a software development lifecycle control, which is why they sit in the SDLC rather than in a general policy.",
+  "incorrect": {
+   "A": "Service-level agreements commit a provider to performance levels for a running service. They belong to vendor management and operations.",
+   "B": "An information security policy is the organisation-wide statement of security intent. The SDLC sits under it rather than containing it.",
+   "C": "Penetration testing methodology defines how assessments are conducted. It is part of the assessment programme, and testing may be scheduled against software without living inside the SDLC."
+  }
+ },
+ "q0106": {
+  "objective": "1.1",
+  "explanation": "An acceptable use policy is a written policy set by management that governs how people may use company systems. Policies, procedures and governance documents are managerial controls in CompTIA's categories.",
+  "incorrect": {
+   "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
+   "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+   "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
+  }
+ },
+ "q0107": {
+  "objective": "4.6",
+  "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterwards.",
+  "incorrect": {
+   "A": "Enabling SAML is how each application is then connected to the IdP. You cannot configure the trust before deciding who the identity provider is.",
+   "B": "Creating OAuth tokens is an implementation detail of authorising access once federation exists. It is several steps downstream.",
+   "C": "Password vaulting stores the separate credentials more safely. It manages the problem rather than reducing the number of credentials."
+  }
+ },
+ "q0108": {
+  "objective": "2.4",
+  "explanation": "Malicious code appearing in what should be a routine backup job, triggering on a date, points to an attacker having injected it through the application. Reviewing the WAF logs shows whether a command injection request reached the server and when, which establishes how the code got there.",
+  "incorrect": {
+   "A": "Checking terminated DBAs investigates an insider with legitimate database access. That is worth ruling out but is speculation until the injection path is checked.",
+   "C": "Scanning for malware looks for known malicious files. The problem is attacker-supplied code inside a legitimate database job, which a scanner will not flag.",
+   "D": "Searching for ransomware notes assumes an extortion attack. The site is unusable because of destructive code, and no ransom demand has been reported."
+  }
+ },
+ "q0109": {
+  "objective": "3.4",
+  "explanation": "A production failover actually cuts primary power and proves the systems carry on. Only a real failover exercises the generators, transfer switches, batteries and the procedures together under genuine load — which is why it is the strongest test of resilience.",
+  "incorrect": {
+   "A": "Parallel processing runs a secondary system alongside the primary to compare results. It validates a replacement system rather than testing power resilience.",
+   "B": "A tabletop exercise walks through the plan in a meeting. It finds gaps in thinking but touches no equipment.",
+   "C": "Simulation testing models the failure without genuinely losing power. It is safer and more realistic than a tabletop, but it still does not prove the hardware behaves."
+  }
+ },
+ "q0110": {
+  "objective": "3.3",
+  "explanation": "TLS 1.3 is the current standard for encrypting data as it crosses a network, and it removes the legacy cipher suites and handshake weaknesses of earlier versions. Protecting data in transit is exactly what it exists for.",
+  "incorrect": {
+   "A": "SHA-256 is a hashing algorithm. It verifies integrity but provides no confidentiality, so anyone on the path still reads the data.",
+   "B": "SSL 3.0 is a deprecated predecessor to TLS with known breaks such as POODLE. It must not be used.",
+   "D": "AES-256 is a symmetric cipher. It is the encryption TLS uses internally, but on its own it is not a protocol for securing a connection."
+  }
+ },
+ "q0111": {
+  "objective": "5.5",
+  "explanation": "Passive reconnaissance gathers information without sending anything to the target. Open-source intelligence — public registries, certificate transparency logs, social media, job adverts — builds a picture of the organisation while leaving no trace in its logs.",
+  "incorrect": {
+   "B": "Port scanning sends packets to the target and appears in its logs. That makes it active reconnaissance.",
+   "C": "Pivoting moves laterally through an already-compromised network. It happens well after the early phases and requires a foothold.",
+   "D": "Exploit validation confirms a vulnerability can actually be exploited. It is active, intrusive and comes late in the engagement."
+  }
+ },
+ "q0112": {
+  "objective": "2.1",
+  "explanation": "Organised crime is motivated by profit above all else, and ransomware is the most direct way to convert access into payment. These groups are well resourced enough to run ransomware as a business, complete with affiliates and negotiation.",
+  "incorrect": {
+   "B": "An insider threat acts from within, usually driven by grievance or personal gain through data theft. Deploying ransomware across the organisation that employs them is an unusual route.",
+   "C": "Nation-states pursue espionage, disruption or strategic advantage. They occasionally use ransomware as cover, but revenue is not their purpose.",
+   "D": "Hacktivists act for ideological reasons — publicity, protest, embarrassment. Extorting money would undercut the cause they are advancing."
+  }
+ },
+ "q0113": {
+  "objective": "1.3",
+  "explanation": "Upgrading router firmware means the device reboots and the network drops. A maintenance window is the pre-agreed period for exactly that kind of disruptive change, scheduled when usage is lowest and communicated in advance so the outage is expected.",
+  "incorrect": {
+   "A": "The software development life cycle governs how software is designed, built and released. An administrator applying a vendor's firmware is not developing anything.",
+   "B": "Risk tolerance expresses how much risk the organisation will accept. It may inform whether the upgrade is approved but is not a procedure to follow.",
+   "C": "A certificate signing request asks a CA to issue a certificate. It has no role in a firmware upgrade."
+  }
+ },
+ "q0116": {
+  "objective": "3.3",
+  "explanation": "IPSec authenticates and encrypts each IP packet, so it protects any traffic between systems regardless of the application generating it. For securing sensitive data moving inside a private cloud that is the right layer to work at.",
+  "incorrect": {
+   "B": "SHA-1 is a hashing algorithm, and a deprecated one with practical collision attacks. It offers no confidentiality even where it is still used.",
+   "C": "RSA is an asymmetric algorithm used for key exchange and signatures. It is a building block that protocols such as IPSec use, not a way to secure communications on its own.",
+   "D": "A TGT is a Kerberos ticket-granting ticket used during authentication. It proves identity but does not encrypt the data that flows afterwards."
+  }
+ }
 }

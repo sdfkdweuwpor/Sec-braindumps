@@ -1,240 +1,309 @@
 {
-"q0836": {"objective":"4.2",
- "explanation":"Once the contract ends, any third-party data still held is pure liability — it can be breached, subpoenaed or fall foul of privacy rules, with no business reason for keeping it. A retention policy defines when that data must be destroyed, so it does not linger past its purpose.",
- "incorrect":{
-  "A":"Data encryption protects data while you hold it. It reduces breach impact without addressing whether you should still have it.",
-  "B":"Data classification assigns sensitivity levels and handling rules. It governs protection, not lifespan.",
-  "D":"A data inventory records what you hold and where. It tells you the data exists; retention tells you when it must go."}},
-
-"q0837": {"objective":"3.4",
- "explanation":"Using more than one cloud provider means no single provider's outage, breach or regional failure can take the application down. That deliberate avoidance of dependence on one platform is platform diversity.",
- "incorrect":{
-  "A":"Load balancing across providers is technically possible but complex, and reducing overhead is not the security reason for the design.",
-  "C":"Parallel processing runs work concurrently for performance. It is not what multiple providers deliver.",
-  "D":"A hot site is a recovery facility. Selecting one is a different strategy from spreading across cloud providers."}},
-
-"q0838": {"objective":"5.2",
- "explanation":"A risk register is the living record of identified risks — each with its owner, likelihood, impact, threshold and agreed treatment — so risks stay visible and tracked rather than being rediscovered each cycle.",
- "incorrect":{
-  "B":"No document mitigates anything automatically. The register records decisions; people and controls implement them.",
-  "C":"Penetration testing produces findings that feed the register. It is not replaced by it.",
-  "D":"Compliance reports may draw on the register, but generating them is not its purpose."}},
-
-"q0839": {"objective":"5.5",
- "explanation":"A gap analysis compares current controls against the requirements the audit will test. Doing that internally uses staff who already know the environment and costs nothing beyond their time, which makes it the cheapest way to find the gaps before the auditor does.",
- "incorrect":{
-  "B":"Active reconnaissance probes systems for information. It is an attack technique, not a compliance comparison.",
-  "C":"A red team penetration test simulates a determined attacker. It is expensive and tests defences rather than control coverage against a standard.",
-  "D":"A tabletop exercise rehearses incident response. It measures readiness to respond, not compliance."}},
-
-"q0840": {"objective":"2.3",
- "explanation":"Input validation constrains user-supplied data to what the application actually expects, so text containing SQL syntax is rejected before it can reach the database interpreter. Removing that path is what prevents injection.",
- "incorrect":{
-  "A":"DNS hijacking redirects name resolution. It happens at the network or registrar level, nowhere near application input.",
-  "B":"A time-of-check to time-of-use flaw is a timing race between validating something and using it. Validating harder does not close the window.",
-  "D":"Sideloading installs software from outside an official store. It is a device and distribution concern."}},
-
-"q0841": {"objective":"4.4",
- "explanation":"The closed network must stay isolated but its telemetry has to reach a cloud SIEM. A span port copies traffic to the sensor without affecting the network, and a one-way data diode physically permits data out while making inbound connections impossible — visibility with the isolation intact.",
- "incorrect":{
-  "A":"Opening port 22 to the cloud creates exactly the internet connection the policy forbids, whatever rules sit around it.",
-  "C":"A local log server with weekly manual audits gives no active monitoring and never reaches the enterprise SIEM.",
-  "D":"Connecting a firewall on the closed network to the corporate ISP breaches the isolation policy regardless of how strict the ACLs are."}},
-
-"q0842": {"objective":"5.6",
- "explanation":"Sharing unique credentials destroys accountability — actions can no longer be attributed to an individual — and it is a deliberate violation of access control policy. That makes it a specific insider-threat indicator worth teaching staff to recognise and report.",
- "incorrect":{
-  "A":"An IT employee upgrading an encryption library is routine maintenance and good practice.",
-  "C":"A finance user scrutinising a reimbursement form is exactly the control doing its job.",
-  "D":"Logging in abroad outside normal hours is an anomalous access indicator, but it is usually explained by travel rather than signalling an insider."}},
-
-"q0843": {"objective":"4.8",
- "explanation":"Chain of custody is the documented record of every person who handled each piece of evidence, when and why. Maintaining that unbroken trail is what allows the evidence to be shown as unaltered and therefore admissible.",
- "incorrect":{
-  "A":"Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterwards.",
-  "B":"E-discovery is the legal process of identifying and producing electronically stored information for litigation.",
-  "D":"Forensic tabletop exercises rehearse process in discussion. They do not handle real evidence."}},
-
-"q0844": {"objective":"2.1",
- "explanation":"ARP poisoning tools are free and require no real understanding, and taking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points squarely at an unskilled attacker, typically a student.",
- "incorrect":{
-  "B":"Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
-  "C":"Credential stuffing replays breached username and password pairs against a login. It is a technique, not a threat actor.",
-  "D":"DMARC failure is an email authentication result, neither an actor nor related to ARP."}},
-
-"q0845": {"objective":"5.2",
- "explanation":"Annualised rate of occurrence is the expected number of times an event happens in a year. It is the frequency term that turns a single loss figure into an annual one.",
- "incorrect":{
-  "A":"RTO is the maximum tolerable downtime after an incident. It is a recovery target.",
-  "B":"ALE is the annual monetary loss, calculated by multiplying SLE by ARO.",
-  "C":"SLE is the monetary loss from one occurrence."}},
-
-"q0846": {"objective":"4.2",
- "explanation":"You cannot protect what you do not know you have. An asset inventory establishes what systems, devices and data exist, and every later activity — risk assessment, patching, monitoring, incident response — depends on that visibility.",
- "incorrect":{
-  "A":"A playbook gives step-by-step response guidance for a specific situation. It presumes you know what you are defending.",
-  "B":"An acceptable use policy governs user conduct. Important, but it protects nothing until you know the estate.",
-  "D":"A tabletop exercise rehearses a response plan that does not exist yet."}},
-
-"q0847": {"objective":"5.2",
- "explanation":"Likelihood is the probability that a threat will actually materialise against a vulnerability. Combined with impact it produces the risk rating, and it is specifically the chance side of that calculation.",
- "incorrect":{
-  "A":"Exposure factor is the percentage of an asset's value lost if the event occurs. It quantifies damage, not chance.",
-  "B":"Impact measures how badly the organisation is affected. Again the consequence side.",
-  "C":"Severity is generally used for the overall rating or the seriousness of a finding rather than its probability."}},
-
-"q0848": {"objective":"2.3",
- "explanation":"Copying unvalidated input into a fixed-size array in C lets data run past the end of the allocation and overwrite adjacent memory. That is the textbook buffer overflow, and it can lead to crashes or attacker-controlled execution.",
- "incorrect":{
-  "A":"Sideloading installs an application from outside an official store. It is unrelated to memory handling.",
-  "B":"SQL injection manipulates database queries through input. No database is involved.",
-  "D":"Cross-site scripting injects script that runs in a browser. C applications do not render web pages to other users."}},
-
-"q0849": {"objective":"4.3",
- "explanation":"Prioritisation weighs impact as well as exploitability. A control system failure in an energy provider stops essential service delivery with potential safety and regulatory consequences, so the consequence alone justifies high priority even with no exploit yet published.",
- "incorrect":{
-  "A":"Existing antivirus protection would be an argument for lowering priority, and control systems rarely support it anyway.",
-  "C":"Public internet exposure would raise priority further, but the question states the concern exists despite no known exploits, pointing at impact rather than reachability.",
-  "D":"A CVSS score below 7.0 would ordinarily reduce priority, which contradicts treating it as high."}},
-
-"q0850": {"objective":"4.4",
- "explanation":"The requirement is to keep 90 days searchable in fast storage. Compression shrinks the footprint so that full retention period fits on live media, preserving search speed instead of pushing older data to slow archive.",
- "incorrect":{
-  "A":"Deduplication removes redundant copies. Log entries are largely unique, so the saving is small.",
-  "B":"Archiving moves data to slower, cheaper storage — the opposite of keeping it live and quickly searchable.",
-  "C":"Aggregation combines events into summaries, which loses the detail investigations depend on."}},
-
-"q0851": {"objective":"4.9",
- "explanation":"PowerShell activity happens on the endpoint, and EDR records process creation, parent-child relationships, command lines and what the script subsequently did. That depth is what reveals whether the execution was an attempted compromise.",
- "incorrect":{
-  "A":"SNMP logs report device health and performance metrics. They capture no process activity.",
-  "B":"Firewall logs show connections crossing the boundary. They would confirm an outbound call but not what the script did locally.",
-  "D":"IPS logs record traffic matching attack signatures. Legitimate-looking outbound HTTP from PowerShell may match nothing."}},
-
-"q0853": {"objective":"3.4",
- "explanation":"Resilience in a parallel processing system means the loss of one processor does not stop the work. Rerouting tasks to the remaining processors keeps the workload moving and lets recovery happen without an outage.",
- "incorrect":{
-  "B":"A backup system running only off hours provides no protection during the working day, when failures matter most.",
-  "C":"Limiting the number of processors reduces both capacity and redundancy, making failure more damaging.",
-  "D":"Journaling records changes to aid troubleshooting and recovery of data. It helps after the fact rather than keeping processing alive."}},
-
-"q0854": {"objective":"5.6",
- "explanation":"Stable, well-established patterns make a reliable baseline, and anomalous behaviour recognition compares ongoing activity against it automatically. That scales to a large workforce in a way individual monitoring cannot.",
- "incorrect":{
-  "A":"Insider threat monitoring names the concern rather than the detection method, and typically implies focused attention on specific individuals.",
-  "C":"Social engineering detection addresses manipulation attempts against staff, which is a different threat.",
-  "D":"Operational security policies state what staff should do. Policies define expectations; they detect nothing."}},
-
-"q0855": {"objective":"5.5",
- "explanation":"Rules of engagement set out in advance what the testers may do, to which systems, when, and what is out of bounds. Agreeing that beforehand keeps the test lawful, prevents unintended disruption and gives both sides a shared definition of success.",
- "incorrect":{
-  "A":"Pricing structures belong in the commercial contract, not the rules of engagement.",
-  "C":"Ownership of test results is a contractual matter usually settled in the master agreement.",
-  "D":"Penalties for missed deadlines are a service-level or contractual concern."}},
-
-"q0856": {"objective":"1.2",
- "explanation":"Two layers stop vehicles. Fencing establishes the perimeter and denies casual vehicle approach, and bollards provide the reinforced barrier at entrances and building faces that stops a vehicle being driven at the structure.",
- "incorrect":{
-  "B":"Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
-  "D":"Lighting improves visibility and deters. It presents no barrier.",
-  "E":"Access badges authenticate people at doors. A vehicle does not present a badge.",
-  "F":"Cameras record what happened. Detective rather than preventive."}},
-
-"q0857": {"objective":"3.4",
- "explanation":"A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is precisely what defines it.",
- "incorrect":{
-  "A":"Recovery site is the generic umbrella term covering hot, warm and cold. It specifies no readiness level.",
-  "C":"A cold site has space and power but no equipment or data, taking days or weeks to bring up.",
-  "D":"A warm site has hardware and connectivity but data must be restored at failover, so recovery takes hours."}},
-
-"q0858": {"objective":"3.4",
- "explanation":"Patching an edge router means rebooting it, which drops every connection crossing it. Redundancy is what makes that acceptable — traffic reroutes through a peer while the first device is patched, so a critical fix does not require an outage.",
- "incorrect":{
-  "B":"Physical location affects who can access the device and how quickly staff can reach it. It is logistics rather than the patching consideration.",
-  "C":"Scalability is about handling growth in load. It does not govern whether a patch can be applied safely.",
-  "D":"Cost is a general factor in any work, but it does not determine whether a critical patch can be applied without disruption."}},
-
-"q0859": {"objective":"5.5",
- "explanation":"Every activity listed — testing door locks, finding camera blind spots, trying server rack doors — probes physical barriers and surveillance rather than systems or networks. That is a physical penetration test.",
- "incorrect":{
-  "A":"Defensive describes the blue team's role of protecting and detecting. A tester attacking controls is not defending.",
-  "C":"A compliance assessment checks controls against a standard using documentation and configuration review, not by trying doors.",
-  "D":"Offensive describes the general posture of penetration testing. The question asks for the specific type, which is physical."}},
-
-"q0860": {"objective":"3.4",
- "explanation":"Ransomware deliberately seeks out and encrypts backups so victims have no choice but to pay. Immutable backups cannot be modified or deleted for a defined period once written, so a clean recovery point survives even when the attacker has administrative access.",
- "incorrect":{
-  "B":"Destruction removes data at end of life. It has nothing to do with protecting backups.",
-  "C":"Sanitisation renders data unrecoverable from media, again a disposal activity.",
-  "D":"Retention defines how long backups are kept. Keeping an encrypted backup longer does not make it usable."}},
-
-"q0861": {"objective":"5.1",
- "explanation":"The board holds ultimate accountability for the organisation, so it provides oversight of the security programme and decides how much risk the organisation is willing to accept. Setting risk appetite is a governance decision at that level.",
- "incorrect":{
-  "A":"Government regulators impose external requirements. They do not set an individual organisation's appetite.",
-  "C":"Steering committees coordinate delivery and advise. They operate below the board and within the appetite it sets.",
-  "D":"Data owners make decisions about specific data sets, not about organisation-wide risk appetite."}},
-
-"q0862": {"objective":"1.2",
- "explanation":"Confidentiality is the principle that information is accessible only to those authorised to see it. Preventing unauthorised disclosure is its definition within the CIA triad.",
- "incorrect":{
-  "A":"Integrity means data has not been altered without authorisation.",
-  "B":"Availability means systems and data are accessible when needed.",
-  "C":"Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."}},
-
-"q0863": {"objective":"4.1",
- "explanation":"Every listening port and running service is a way in that must be patched, configured and monitored. On an externally facing server that exposure is maximal, so disabling what is not needed removes those entry points entirely.",
- "incorrect":{
-  "A":"Reducing patching effort is a welcome side effect, but the security reason is removing exploitable exposure rather than saving work.",
-  "B":"Duplicating firewall blocks is defence in depth, but the server should be hardened regardless of what the firewall does.",
-  "C":"Conserving memory is a performance benefit, not a security one."}},
-
-"q0864": {"objective":"4.5",
- "explanation":"DNSSEC responses carry signatures and keys that frequently exceed what fits in a UDP datagram, so resolvers fall back to TCP on port 53. Replacing the existing DNS rule so it permits both UDP and TCP to the DNS server allows DNSSEC to be tested while ordinary DNS keeps working.",
- "incorrect":{
-  "A":"Inserting a rule above rule 1 changes evaluation order for traffic the first rule was written to handle, which risks disrupting existing connectivity.",
-  "B":"Replacing rule 1 modifies the wrong rule — rule 1 governs different traffic, not DNS to the DNS server.",
-  "D":"Placing the rule after rule 2 means the existing DNS rule matches first, so the new permission never takes effect."}},
-
-"q0865": {"objective":"2.5",
- "explanation":"A hardened appliance degrades through configuration drift — small changes accumulating over months. Monitoring the configuration against the hardened baseline detects that drift as it happens, so the posture can be restored before it matters.",
- "incorrect":{
-  "A":"Logging retention determines how long records are kept. It supports investigation without detecting drift.",
-  "C":"Least privilege limits what accounts can do. It reduces who can change the configuration but does not reveal changes that occur.",
-  "D":"Network segmentation limits reachability. It protects the appliance's surroundings rather than its settings."}},
-
-"q0866": {"objective":"4.1",
- "explanation":"The failure is code reaching production without review or testing. Branch protection enforces those requirements at the repository — no direct commits to the protected branch, mandatory reviews and passing checks before a merge — so the gate cannot be skipped.",
- "incorrect":{
-  "A":"Regression testing verifies existing functionality still works. It is one check that branch protection can require, not the control preventing unreviewed commits.",
-  "C":"An impact assessment evaluates the consequences of a change. It informs approval rather than enforcing it.",
-  "D":"Static analysis finds defects in code. Again a useful check to require, but it does not stop someone committing directly."}},
-
-"q0867": {"objective":"3.1",
- "explanation":"Under any cloud model the customer owns what it builds and configures. Infrastructure-as-code definitions are the customer's own artefacts, so versioning, reviewing and securing them is entirely their responsibility.",
- "incorrect":{
-  "A":"PaaS identity and access management is largely provided and operated by the platform, though the customer configures its own users within it.",
-  "C":"Utility uptime — power and cooling at the facility — is wholly the provider's responsibility.",
-  "D":"SaaS scaling is handled by the provider as part of delivering the service."}},
-
-"q0868": {"objective":"5.5",
- "explanation":"Giving testers some information but withholding full infrastructure detail is a partially known environment, often called grey box. It balances realism against efficiency by letting them skip pure discovery without handing over everything.",
- "incorrect":{
-  "A":"Passive reconnaissance is an information-gathering technique within a test, not the engagement type.",
-  "C":"Integrated testing has offensive and defensive teams deliberately working together throughout.",
-  "D":"Defensive testing is not a recognised penetration testing category; defence is the blue team's role."}},
-
-"q0869": {"objective":"4.2",
- "explanation":"An asset tracking system establishes what should be on the network. Anything appearing that is not in the inventory stands out immediately as unauthorised or unmanaged, which is visibility no other control provides as directly.",
- "incorrect":{
-  "B":"Preventing data exfiltration is DLP's function. Asset tracking records devices rather than inspecting data.",
-  "C":"Automated root cause analysis is far beyond what an inventory does. It records what exists, not why something happened.",
-  "D":"Backup and recovery procedures are a separate discipline, informed by the inventory but not ensured by it."}},
-
-"q0870": {"objective":"4.5",
- "explanation":"File staging means collecting intellectual property into one place before exfiltrating it. DLP is the tool that understands content, so it can recognise sensitive files appearing somewhere they should not be and alert on the staging itself.",
- "incorrect":{
-  "A":"EDR detections based on process names identify known malicious tooling. Staging often uses ordinary utilities and legitimate file operations.",
-  "C":"SOAR orchestrates and automates response workflows. It acts on detections rather than producing content-aware ones.",
-  "D":"An IPS inspecting cleartext payloads sees data in transit at the network. Staging happens on the server before anything is sent, and modern traffic is encrypted anyway."}}
+ "q0836": {
+  "objective": "4.2",
+  "explanation": "Once the contract ends, any third-party data still held is pure liability — it can be breached, subpoenaed or fall foul of privacy rules, with no business reason for keeping it. A retention policy defines when that data must be destroyed, so it does not linger past its purpose.",
+  "incorrect": {
+   "A": "Data encryption protects data while you hold it. It reduces breach impact without addressing whether you should still have it.",
+   "B": "Data classification assigns sensitivity levels and handling rules. It governs protection, not lifespan.",
+   "D": "A data inventory records what you hold and where. It tells you the data exists; retention tells you when it must go."
+  }
+ },
+ "q0837": {
+  "objective": "3.4",
+  "explanation": "Using more than one cloud provider means no single provider's outage, breach or regional failure can take the application down. That deliberate avoidance of dependence on one platform is platform diversity.",
+  "incorrect": {
+   "A": "Load balancing across providers is technically possible but complex, and reducing overhead is not the security reason for the design.",
+   "C": "Parallel processing runs work concurrently for performance. It is not what multiple providers deliver.",
+   "D": "A hot site is a recovery facility. Selecting one is a different strategy from spreading across cloud providers."
+  }
+ },
+ "q0838": {
+  "objective": "5.2",
+  "explanation": "A risk register is the living record of identified risks — each with its owner, likelihood, impact, threshold and agreed treatment — so risks stay visible and tracked rather than being rediscovered each cycle.",
+  "incorrect": {
+   "B": "No document mitigates anything automatically. The register records decisions; people and controls implement them.",
+   "C": "Penetration testing produces findings that feed the register. It is not replaced by it.",
+   "D": "Compliance reports may draw on the register, but generating them is not its purpose."
+  }
+ },
+ "q0839": {
+  "objective": "5.5",
+  "explanation": "A gap analysis compares current controls against the requirements the audit will test. Doing that internally uses staff who already know the environment and costs nothing beyond their time, which makes it the cheapest way to find the gaps before the auditor does.",
+  "incorrect": {
+   "B": "Active reconnaissance probes systems for information. It is an attack technique, not a compliance comparison.",
+   "C": "A red team penetration test simulates a determined attacker. It is expensive and tests defences rather than control coverage against a standard.",
+   "D": "A tabletop exercise rehearses incident response. It measures readiness to respond, not compliance."
+  }
+ },
+ "q0840": {
+  "objective": "2.3",
+  "explanation": "Input validation constrains user-supplied data to what the application actually expects, so text containing SQL syntax is rejected before it can reach the database interpreter. Removing that path is what prevents injection.",
+  "incorrect": {
+   "A": "DNS hijacking redirects name resolution. It happens at the network or registrar level, nowhere near application input.",
+   "B": "A time-of-check to time-of-use flaw is a timing race between validating something and using it. Validating harder does not close the window.",
+   "D": "Sideloading installs software from outside an official store. It is a device and distribution concern."
+  }
+ },
+ "q0841": {
+  "objective": "4.4",
+  "explanation": "The closed network must stay isolated but its telemetry has to reach a cloud SIEM. A span port copies traffic to the sensor without affecting the network, and a one-way data diode physically permits data out while making inbound connections impossible — visibility with the isolation intact.",
+  "incorrect": {
+   "A": "Opening port 22 to the cloud creates exactly the internet connection the policy forbids, whatever rules sit around it.",
+   "C": "A local log server with weekly manual audits gives no active monitoring and never reaches the enterprise SIEM.",
+   "D": "Connecting a firewall on the closed network to the corporate ISP breaches the isolation policy regardless of how strict the ACLs are."
+  }
+ },
+ "q0842": {
+  "objective": "5.6",
+  "explanation": "Sharing unique credentials destroys accountability — actions can no longer be attributed to an individual — and it is a deliberate violation of access control policy. That makes it a specific insider-threat indicator worth teaching staff to recognise and report.",
+  "incorrect": {
+   "A": "An IT employee upgrading an encryption library is routine maintenance and good practice.",
+   "C": "A finance user scrutinising a reimbursement form is exactly the control doing its job.",
+   "D": "Logging in abroad outside normal hours is an anomalous access indicator, but it is usually explained by travel rather than signalling an insider."
+  }
+ },
+ "q0843": {
+  "objective": "4.8",
+  "explanation": "Chain of custody is the documented record of every person who handled each piece of evidence, when and why. Maintaining that unbroken trail is what allows the evidence to be shown as unaltered and therefore admissible.",
+  "incorrect": {
+   "A": "Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterwards.",
+   "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation.",
+   "D": "Forensic tabletop exercises rehearse process in discussion. They do not handle real evidence."
+  }
+ },
+ "q0844": {
+  "objective": "2.1",
+  "explanation": "ARP poisoning tools are free and require no real understanding, and taking out internet access during state testing is disruption for its own sake. Commodity tooling plus a chaos motive points squarely at an unskilled attacker, typically a student.",
+  "incorrect": {
+   "B": "Shadow IT is unsanctioned technology adopted for convenience. It causes risk through neglect, not deliberate disruption.",
+   "C": "Credential stuffing replays breached username and password pairs against a login. It is a technique, not a threat actor.",
+   "D": "DMARC failure is an email authentication result, neither an actor nor related to ARP."
+  }
+ },
+ "q0845": {
+  "objective": "5.2",
+  "explanation": "Annualised rate of occurrence is the expected number of times an event happens in a year. It is the frequency term that turns a single loss figure into an annual one.",
+  "incorrect": {
+   "A": "RTO is the maximum tolerable downtime after an incident. It is a recovery target.",
+   "B": "ALE is the annual monetary loss, calculated by multiplying SLE by ARO.",
+   "C": "SLE is the monetary loss from one occurrence."
+  }
+ },
+ "q0846": {
+  "objective": "4.2",
+  "explanation": "You cannot protect what you do not know you have. An asset inventory establishes what systems, devices and data exist, and every later activity — risk assessment, patching, monitoring, incident response — depends on that visibility.",
+  "incorrect": {
+   "A": "A playbook gives step-by-step response guidance for a specific situation. It presumes you know what you are defending.",
+   "B": "An acceptable use policy governs user conduct. Important, but it protects nothing until you know the estate.",
+   "D": "A tabletop exercise rehearses a response plan that does not exist yet."
+  }
+ },
+ "q0847": {
+  "objective": "5.2",
+  "explanation": "Likelihood is the probability that a threat will actually materialise against a vulnerability. Combined with impact it produces the risk rating, and it is specifically the chance side of that calculation.",
+  "incorrect": {
+   "A": "Exposure factor is the percentage of an asset's value lost if the event occurs. It quantifies damage, not chance.",
+   "B": "Impact measures how badly the organisation is affected. Again the consequence side.",
+   "C": "Severity is generally used for the overall rating or the seriousness of a finding rather than its probability."
+  }
+ },
+ "q0848": {
+  "objective": "2.3",
+  "explanation": "Copying unvalidated input into a fixed-size array in C lets data run past the end of the allocation and overwrite adjacent memory. That is the textbook buffer overflow, and it can lead to crashes or attacker-controlled execution.",
+  "incorrect": {
+   "A": "Sideloading installs an application from outside an official store. It is unrelated to memory handling.",
+   "B": "SQL injection manipulates database queries through input. No database is involved.",
+   "D": "Cross-site scripting injects script that runs in a browser. C applications do not render web pages to other users."
+  }
+ },
+ "q0849": {
+  "objective": "4.3",
+  "explanation": "Prioritisation weighs impact as well as exploitability. A control system failure in an energy provider stops essential service delivery with potential safety and regulatory consequences, so the consequence alone justifies high priority even with no exploit yet published.",
+  "incorrect": {
+   "A": "Existing antivirus protection would be an argument for lowering priority, and control systems rarely support it anyway.",
+   "C": "Public internet exposure would raise priority further, but the question states the concern exists despite no known exploits, pointing at impact rather than reachability.",
+   "D": "A CVSS score below 7.0 would ordinarily reduce priority, which contradicts treating it as high."
+  }
+ },
+ "q0850": {
+  "objective": "4.4",
+  "explanation": "The requirement is to keep 90 days searchable in fast storage. Compression shrinks the footprint so that full retention period fits on live media, preserving search speed instead of pushing older data to slow archive.",
+  "incorrect": {
+   "A": "Deduplication removes redundant copies. Log entries are largely unique, so the saving is small.",
+   "B": "Archiving moves data to slower, cheaper storage — the opposite of keeping it live and quickly searchable.",
+   "C": "Aggregation combines events into summaries, which loses the detail investigations depend on."
+  }
+ },
+ "q0851": {
+  "objective": "4.9",
+  "explanation": "PowerShell activity happens on the endpoint, and EDR records process creation, parent-child relationships, command lines and what the script subsequently did. That depth is what reveals whether the execution was an attempted compromise.",
+  "incorrect": {
+   "A": "SNMP logs report device health and performance metrics. They capture no process activity.",
+   "B": "Firewall logs show connections crossing the boundary. They would confirm an outbound call but not what the script did locally.",
+   "D": "IPS logs record traffic matching attack signatures. Legitimate-looking outbound HTTP from PowerShell may match nothing."
+  }
+ },
+ "q0853": {
+  "objective": "3.4",
+  "explanation": "Resilience in a parallel processing system means the loss of one processor does not stop the work. Rerouting tasks to the remaining processors keeps the workload moving and lets recovery happen without an outage.",
+  "incorrect": {
+   "B": "A backup system running only off hours provides no protection during the working day, when failures matter most.",
+   "C": "Limiting the number of processors reduces both capacity and redundancy, making failure more damaging.",
+   "D": "Journaling records changes to aid troubleshooting and recovery of data. It helps after the fact rather than keeping processing alive."
+  }
+ },
+ "q0854": {
+  "objective": "5.6",
+  "explanation": "Stable, well-established patterns make a reliable baseline, and anomalous behaviour recognition compares ongoing activity against it automatically. That scales to a large workforce in a way individual monitoring cannot.",
+  "incorrect": {
+   "A": "Insider threat monitoring names the concern rather than the detection method, and typically implies focused attention on specific individuals.",
+   "C": "Social engineering detection addresses manipulation attempts against staff, which is a different threat.",
+   "D": "Operational security policies state what staff should do. Policies define expectations; they detect nothing."
+  }
+ },
+ "q0855": {
+  "objective": "5.5",
+  "explanation": "Rules of engagement set out in advance what the testers may do, to which systems, when, and what is out of bounds. Agreeing that beforehand keeps the test lawful, prevents unintended disruption and gives both sides a shared definition of success.",
+  "incorrect": {
+   "A": "Pricing structures belong in the commercial contract, not the rules of engagement.",
+   "C": "Ownership of test results is a contractual matter usually settled in the master agreement.",
+   "D": "Penalties for missed deadlines are a service-level or contractual concern."
+  }
+ },
+ "q0856": {
+  "objective": "1.2",
+  "explanation": "Two layers stop vehicles. Fencing establishes the perimeter and denies casual vehicle approach, and bollards provide the reinforced barrier at entrances and building faces that stops a vehicle being driven at the structure.",
+  "incorrect": {
+   "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
+   "D": "Lighting improves visibility and deters. It presents no barrier.",
+   "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
+   "F": "Cameras record what happened. Detective rather than preventive."
+  }
+ },
+ "q0857": {
+  "objective": "3.4",
+  "explanation": "A hot site is a fully equipped duplicate kept continuously synchronised, so operations move across almost immediately. Quick failover to an identical site is precisely what defines it.",
+  "incorrect": {
+   "A": "Recovery site is the generic umbrella term covering hot, warm and cold. It specifies no readiness level.",
+   "C": "A cold site has space and power but no equipment or data, taking days or weeks to bring up.",
+   "D": "A warm site has hardware and connectivity but data must be restored at failover, so recovery takes hours."
+  }
+ },
+ "q0858": {
+  "objective": "3.4",
+  "explanation": "Patching an edge router means rebooting it, which drops every connection crossing it. Redundancy is what makes that acceptable — traffic reroutes through a peer while the first device is patched, so a critical fix does not require an outage.",
+  "incorrect": {
+   "B": "Physical location affects who can access the device and how quickly staff can reach it. It is logistics rather than the patching consideration.",
+   "C": "Scalability is about handling growth in load. It does not govern whether a patch can be applied safely.",
+   "D": "Cost is a general factor in any work, but it does not determine whether a critical patch can be applied without disruption."
+  }
+ },
+ "q0859": {
+  "objective": "5.5",
+  "explanation": "Every activity listed — testing door locks, finding camera blind spots, trying server rack doors — probes physical barriers and surveillance rather than systems or networks. That is a physical penetration test.",
+  "incorrect": {
+   "A": "Defensive describes the blue team's role of protecting and detecting. A tester attacking controls is not defending.",
+   "C": "A compliance assessment checks controls against a standard using documentation and configuration review, not by trying doors.",
+   "D": "Offensive describes the general posture of penetration testing. The question asks for the specific type, which is physical."
+  }
+ },
+ "q0860": {
+  "objective": "3.4",
+  "explanation": "Ransomware deliberately seeks out and encrypts backups so victims have no choice but to pay. Immutable backups cannot be modified or deleted for a defined period once written, so a clean recovery point survives even when the attacker has administrative access.",
+  "incorrect": {
+   "B": "Destruction removes data at end of life. It has nothing to do with protecting backups.",
+   "C": "Sanitisation renders data unrecoverable from media, again a disposal activity.",
+   "D": "Retention defines how long backups are kept. Keeping an encrypted backup longer does not make it usable."
+  }
+ },
+ "q0861": {
+  "objective": "5.1",
+  "explanation": "The board holds ultimate accountability for the organisation, so it provides oversight of the security programme and decides how much risk the organisation is willing to accept. Setting risk appetite is a governance decision at that level.",
+  "incorrect": {
+   "A": "Government regulators impose external requirements. They do not set an individual organisation's appetite.",
+   "C": "Steering committees coordinate delivery and advise. They operate below the board and within the appetite it sets.",
+   "D": "Data owners make decisions about specific data sets, not about organisation-wide risk appetite."
+  }
+ },
+ "q0862": {
+  "objective": "1.2",
+  "explanation": "Confidentiality is the principle that information is accessible only to those authorised to see it. Preventing unauthorised disclosure is its definition within the CIA triad.",
+  "incorrect": {
+   "A": "Integrity means data has not been altered without authorisation.",
+   "B": "Availability means systems and data are accessible when needed.",
+   "C": "Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."
+  }
+ },
+ "q0863": {
+  "objective": "4.1",
+  "explanation": "Every listening port and running service is a way in that must be patched, configured and monitored. On an externally facing server that exposure is maximal, so disabling what is not needed removes those entry points entirely.",
+  "incorrect": {
+   "A": "Reducing patching effort is a welcome side effect, but the security reason is removing exploitable exposure rather than saving work.",
+   "B": "Duplicating firewall blocks is defence in depth, but the server should be hardened regardless of what the firewall does.",
+   "C": "Conserving memory is a performance benefit, not a security one."
+  }
+ },
+ "q0864": {
+  "objective": "4.5",
+  "explanation": "DNSSEC responses carry signatures and keys that frequently exceed what fits in a UDP datagram, so resolvers fall back to TCP on port 53. Replacing the existing DNS rule so it permits both UDP and TCP to the DNS server allows DNSSEC to be tested while ordinary DNS keeps working.",
+  "incorrect": {
+   "A": "Inserting a rule above rule 1 changes evaluation order for traffic the first rule was written to handle, which risks disrupting existing connectivity.",
+   "B": "Replacing rule 1 modifies the wrong rule — rule 1 governs different traffic, not DNS to the DNS server.",
+   "D": "Placing the rule after rule 2 means the existing DNS rule matches first, so the new permission never takes effect."
+  }
+ },
+ "q0865": {
+  "objective": "2.5",
+  "explanation": "A hardened appliance degrades through configuration drift — small changes accumulating over months. Monitoring the configuration against the hardened baseline detects that drift as it happens, so the posture can be restored before it matters.",
+  "incorrect": {
+   "A": "Logging retention determines how long records are kept. It supports investigation without detecting drift.",
+   "C": "Least privilege limits what accounts can do. It reduces who can change the configuration but does not reveal changes that occur.",
+   "D": "Network segmentation limits reachability. It protects the appliance's surroundings rather than its settings."
+  }
+ },
+ "q0866": {
+  "objective": "4.1",
+  "explanation": "The failure is code reaching production without review or testing. Branch protection enforces those requirements at the repository — no direct commits to the protected branch, mandatory reviews and passing checks before a merge — so the gate cannot be skipped.",
+  "incorrect": {
+   "A": "Regression testing verifies existing functionality still works. It is one check that branch protection can require, not the control preventing unreviewed commits.",
+   "C": "An impact assessment evaluates the consequences of a change. It informs approval rather than enforcing it.",
+   "D": "Static analysis finds defects in code. Again a useful check to require, but it does not stop someone committing directly."
+  }
+ },
+ "q0867": {
+  "objective": "3.1",
+  "explanation": "Under any cloud model the customer owns what it builds and configures. Infrastructure-as-code definitions are the customer's own artefacts, so versioning, reviewing and securing them is entirely their responsibility.",
+  "incorrect": {
+   "A": "PaaS identity and access management is largely provided and operated by the platform, though the customer configures its own users within it.",
+   "C": "Utility uptime — power and cooling at the facility — is wholly the provider's responsibility.",
+   "D": "SaaS scaling is handled by the provider as part of delivering the service."
+  }
+ },
+ "q0868": {
+  "objective": "5.5",
+  "explanation": "Giving testers some information but withholding full infrastructure detail is a partially known environment, often called grey box. It balances realism against efficiency by letting them skip pure discovery without handing over everything.",
+  "incorrect": {
+   "A": "Passive reconnaissance is an information-gathering technique within a test, not the engagement type.",
+   "C": "Integrated testing has offensive and defensive teams deliberately working together throughout.",
+   "D": "Defensive testing is not a recognised penetration testing category; defence is the blue team's role."
+  }
+ },
+ "q0869": {
+  "objective": "4.2",
+  "explanation": "An asset tracking system establishes what should be on the network. Anything appearing that is not in the inventory stands out immediately as unauthorised or unmanaged, which is visibility no other control provides as directly.",
+  "incorrect": {
+   "B": "Preventing data exfiltration is DLP's function. Asset tracking records devices rather than inspecting data.",
+   "C": "Automated root cause analysis is far beyond what an inventory does. It records what exists, not why something happened.",
+   "D": "Backup and recovery procedures are a separate discipline, informed by the inventory but not ensured by it."
+  }
+ },
+ "q0870": {
+  "objective": "4.5",
+  "explanation": "File staging means collecting intellectual property into one place before exfiltrating it. DLP is the tool that understands content, so it can recognise sensitive files appearing somewhere they should not be and alert on the staging itself.",
+  "incorrect": {
+   "A": "EDR detections based on process names identify known malicious tooling. Staging often uses ordinary utilities and legitimate file operations.",
+   "C": "SOAR orchestrates and automates response workflows. It acts on detections rather than producing content-aware ones.",
+   "D": "An IPS inspecting cleartext payloads sees data in transit at the network. Staging happens on the server before anything is sent, and modern traffic is encrypted anyway."
+  }
+ }
 }

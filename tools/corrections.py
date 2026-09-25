@@ -10,6 +10,46 @@ surfaces in the validation report rather than silently changing.
 
 # qid -> (pdf_key, corrected_key, reason, corroboration)
 KEY_CORRECTIONS = {
+    "q0106": (['D'], ['B'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0327): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0072": (['B'], ['A'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0406): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0178": (['C'], ['A'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0553): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0241": (['C'], ['D'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0606): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0300": (['A'], ['C'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0647): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0475": (['C'], ['A'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0711): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0501": (['D'], ['C'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0853): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
+    "q0332": (['B'], ['A'],
+             "Found in the cross-check against the Lead2Pass bank (zqvbrtm q0670): "
+             "the two vendors disagreed and this key is the one CompTIA's "
+             "definitions support. See the explanation and zqvbrtm/tools/corrections.py.",
+             "Settled with published answer discussions and SY0-701 objective definitions."),
     "q0357": (["C"], ["A"],
               "Duplicate of q0844, which keys A. ARP poisoning during school "
               "state testing is the textbook 'unskilled attacker' scenario -- "

@@ -1,243 +1,312 @@
 {
-"q0768": {"objective":"3.4",
- "explanation":"Keeping configured spares for critical infrastructure means a failed device can be swapped or failed over to immediately rather than waiting on procurement. Eliminating that downtime is the definition of designing for high availability.",
- "incorrect":{
-  "A":"Software-defined networking separates network control from forwarding. It is an architecture, not a reason to buy spare hardware.",
-  "B":"Scalability is the ability to handle more load. Spares sit idle and add no capacity.",
-  "D":"Decentralisation spreads systems and authority across locations. The spares here are at the same site as the primaries."}},
-
-"q0769": {"objective":"5.5",
- "explanation":"Testing whether controls actually stop unauthorised access requires someone to attempt it. A penetration test simulates a real attacker against authentication, access restrictions and network defences, which measures effectiveness rather than mere presence.",
- "incorrect":{
-  "B":"A risk assessment evaluates likelihood and impact. It reasons about risk without testing whether controls hold.",
-  "C":"A vulnerability scan enumerates known weaknesses. It reports what could be exploited without proving that it can be.",
-  "D":"An internal audit review checks that controls exist and policy is followed. It examines documentation and configuration rather than attacking them."}},
-
-"q0770": {"objective":"4.4",
- "explanation":"Abnormal only has meaning relative to normal. Establishing a baseline of the server's usual performance, traffic, resource use and account activity is what lets any later deviation be recognised as abnormal rather than merely unfamiliar.",
- "incorrect":{
-  "A":"Disabling unnecessary ports reduces the attack surface. It is hardening, not detection.",
-  "B":"Patching removes known vulnerabilities. Again preventive rather than a way to spot unusual behaviour.",
-  "D":"Alert tuning refines existing rules to cut false positives. It presumes you already know what normal looks like."}},
-
-"q0771": {"objective":"1.4",
- "explanation":"Hashing runs data through a one-way function producing a fixed-length digest, and any change to the input produces a completely different output. Comparing digests proves the data is unaltered, which is integrity assurance.",
- "incorrect":{
-  "B":"Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
-  "C":"Segmentation divides a network into zones. It is a network control with no cryptographic function.",
-  "D":"Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."}},
-
-"q0772": {"objective":"4.4",
- "explanation":"Alert fatigue comes from volume, most of it noise. Tuning the rules — adjusting thresholds, adding conditions, suppressing known-benign patterns — cuts false positives so what reaches an analyst is worth their attention.",
- "incorrect":{
-  "A":"Penetration testing assesses whether systems can be breached. It produces findings rather than reducing alerts.",
-  "B":"Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
-  "D":"Log aggregation gathers more data into one place, which tends to increase alert volume without tuning."}},
-
-"q0773": {"objective":"2.5",
- "explanation":"Legacy manufacturing systems cannot be patched or run modern agents, so the answer is to control what can reach them. Segmentation isolates them from the wider network, and a jump server gives the engineers who must administer them one controlled, monitored path in.",
- "incorrect":{
-  "B":"Antivirus needs an agent and a supported operating system. Legacy industrial equipment typically supports neither.",
-  "C":"An application allow list also requires agent support on the host, which these systems generally lack.",
-  "E":"Patching is unavailable — the vendor no longer issues updates, which is why compensating controls are needed.",
-  "F":"An IDS detects and alerts. Visibility is useful but it protects nothing by itself."}},
-
-"q0774": {"objective":"5.2",
- "explanation":"The recovery point objective states how much data the business can afford to lose, expressed as time. Backups must run at least that often, so the RPO dictates the schedule rather than any fixed rule of thumb.",
- "incorrect":{
-  "A":"Nightly backups are a common default, but they impose a 24-hour data loss window regardless of whether the business can tolerate it.",
-  "C":"Triggering on 5% data change is arbitrary and ignores how valuable or time-sensitive the changed data is.",
-  "D":"Daily incrementals with weekly fulls is a sensible pattern, but it is an implementation detail chosen to meet an RPO rather than the principle setting frequency."}},
-
-"q0775": {"objective":"2.3",
- "explanation":"An HTML tag supplied as input and then rendered by the browser means the application echoed user content into the page without neutralising it. Injecting markup or script that executes in another user's browser is cross-site scripting.",
- "incorrect":{
-  "A":"Directory traversal uses path sequences to read files outside the web root. This payload is markup, not a path.",
-  "B":"A buffer overflow writes past an allocated memory region. It targets memory handling, not page rendering.",
-  "C":"SQL injection inserts database syntax to manipulate a query. An image tag means nothing to a database."}},
-
-"q0776": {"objective":"4.5",
- "explanation":"Listing the authorised mail servers in DNS is publishing an SPF record. Receiving servers compare the sending address against that record to confirm the mail came from a permitted source, which is what reduces spam classification.",
- "incorrect":{
-  "A":"DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail. It comes after SPF exists.",
-  "B":"DLP inspects outbound content for sensitive data. It has no influence on spam scoring.",
-  "C":"DKIM signs messages cryptographically to prove they were not altered. It is complementary but is not the DNS record listing the servers."}},
-
-"q0777": {"objective":"4.1",
- "explanation":"More powerful access points mean the signal reaches further, including outside the building where an attacker could sit in the car park. A heat map shows exactly how far coverage extends so placement and transmit power can be tuned before deployment.",
- "incorrect":{
-  "B":"IPSec tunnels from access points to the controller protect management traffic. They do nothing about signal spilling outside.",
-  "C":"Enabling WPA2-PSK would downgrade from WPA3, weakening the design rather than improving it.",
-  "D":"Disabling SSH administration is good hardening but addresses management access, not the coverage risk the scenario raises."}},
-
-"q0778": {"objective":"4.4",
- "explanation":"A legitimate script triggering alerts is a rule matching too broadly. Alert tuning adjusts the conditions, thresholds or exclusions so that known-good activity stops generating alerts while genuine detections still fire.",
- "incorrect":{
-  "A":"File validation checks that a file is what it claims to be. It does not change SIEM rules.",
-  "C":"File quarantining isolates a suspicious file. Quarantining a legitimate script would break the process it supports.",
-  "D":"Log aggregation collects data from more sources, which increases volume rather than reducing false positives."}},
-
-"q0779": {"objective":"3.1",
- "explanation":"SDN centralises network control in a programmable controller, so configuration can be changed by software in seconds. That enables automated security responses — isolating a compromised host, tightening access, rerouting suspect traffic — the moment a threat is detected.",
- "incorrect":{
-  "B":"SDN integrates readily with analysis tooling through its APIs. Reduced alerting is not a characteristic of it.",
-  "C":"SDN does not inherently change intrusion detection accuracy. Detection quality depends on the sensors and rules.",
-  "D":"SDN is a way of managing your own network programmatically. It is not outsourcing."}},
-
-"q0780": {"objective":"3.2",
- "explanation":"Cross-site scripting arrives as malicious content inside an HTTP request. A web application firewall inspects those requests at the application layer and blocks recognised script injection before it reaches the application.",
- "incorrect":{
-  "A":"An NGFW filters traffic at a boundary with application awareness, but it is not specialised in web application attack patterns the way a WAF is.",
-  "B":"A UTM bundles several perimeter security functions. Again general-purpose rather than targeted at web application attacks.",
-  "D":"NAC controls which devices may join a network. It has no visibility into HTTP request content."}},
-
-"q0781": {"objective":"2.2",
- "explanation":"Rather than attacking the journalists directly, the attacker compromised a site they habitually visit and let the victims come to it. Poisoning a trusted destination used by a specific group is a watering-hole attack.",
- "incorrect":{
-  "A":"An on-path attack intercepts traffic between two parties. It requires network position rather than compromising a site.",
-  "C":"Typosquatting registers a lookalike domain for users who mistype. The journalists visited the genuine site.",
-  "D":"Brand impersonation mimics an organisation's identity. The real site was used, not an imitation of it."}},
-
-"q0782": {"objective":"5.2",
- "explanation":"Knowing about a risk and deciding to take no action is risk acceptance. It is a legitimate treatment when formally decided and documented, though ignoring findings without recording the rationale is acceptance done badly.",
- "incorrect":{
-  "A":"Transfer shifts the financial consequence to a third party, typically through insurance. Nothing has been shifted.",
-  "B":"Avoid means ceasing the activity that creates the risk. Operations continue unchanged.",
-  "C":"Mitigate means applying controls to reduce likelihood or impact. No control has been applied."}},
-
-"q0783": {"objective":"5.2",
- "explanation":"Impact measures how badly the organisation is affected if the event occurs — the disruption, loss or damage that follows. Combined with likelihood it produces the overall risk score, and a low impact is what limits that score even for a probable event.",
- "incorrect":{
-  "A":"Severity is often used loosely as a synonym for the overall rating rather than the specific factor describing operational effect.",
-  "B":"Likelihood is how probable the event is. It is the other axis of the calculation.",
-  "D":"Probability is another word for likelihood, again the frequency side rather than the consequence side."}},
-
-"q0784": {"objective":"1.4",
- "explanation":"The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
- "incorrect":{
-  "A":"Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
-  "B":"Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
-  "D":"Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."}},
-
-"q0785": {"objective":"1.3",
- "explanation":"A change management policy written for a traditional environment assumes infrequent, scheduled releases. Moving to a cloud platform built for frequent automated updates breaks those assumptions, so the policy has to be rewritten around faster cycles and automated approval gates.",
- "incorrect":{
-  "A":"An engineer adding a feature is a change the existing policy already covers.",
-  "B":"A server running at maximum load is a capacity problem, addressed by scaling rather than by revising change policy.",
-  "D":"A legacy server lacking regulatory support drives a remediation or replacement decision, not a change to how changes are managed."}},
-
-"q0786": {"objective":"1.2",
- "explanation":"Badge access authenticates each person at the door so only those with approved credentials get in. An access control vestibule then ensures one authenticated person passes at a time, which closes the tailgating gap a badge alone leaves open.",
- "incorrect":{
-  "A":"Fencing marks and deters at a perimeter. It does not authenticate anyone.",
-  "B":"Video surveillance records who entered. It is detective rather than preventive.",
-  "E":"A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
-  "F":"A sensor detects presence or movement and raises an alert."}},
-
-"q0787": {"objective":"5.6",
- "explanation":"Effectiveness has to be measured against real behaviour. A simulated phishing campaign puts a realistic lure in front of staff and records who clicks and who reports it, producing objective figures that can be compared before and after training.",
- "incorrect":{
-  "A":"A honeypot attracts attackers to a decoy system. It measures adversary behaviour, not employee awareness.",
-  "B":"A survey measures what people say they would do, which reliably overstates how they actually behave.",
-  "C":"A focus group gathers opinions and impressions. Again self-reported rather than observed."}},
-
-"q0788": {"objective":"4.8",
- "explanation":"The process begins with preparation — building the plan, tooling and training before anything happens. Detection then identifies a candidate incident, and analysis validates it and establishes scope before any containment begins.",
- "incorrect":{
-  "A":"Containment cannot precede detection; you cannot contain what you have not found.",
-  "B":"Lessons learned is the final phase, and this ordering omits preparation entirely.",
-  "C":"Eradication and recovery are late-stage activities that follow containment."}},
-
-"q0789": {"objective":"1.2",
- "explanation":"Non-repudiation means the sender cannot credibly deny having sent the message. A digital signature achieves it because only the sender holds the private key that produced it, and anyone can verify that fact independently.",
- "incorrect":{
-  "A":"Confidentiality keeps content from unauthorised readers. It says nothing about who sent it.",
-  "C":"Authorisation determines what an authenticated party may do.",
-  "D":"Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."}},
-
-"q0790": {"objective":"4.2",
- "explanation":"Asset enumeration systematically discovers and catalogues the hardware, software and services present in the environment. Producing that comprehensive inventory is exactly the task described, and everything else in security depends on it.",
- "incorrect":{
-  "A":"Data deduplication removes redundant copies of data to save storage. It is a storage efficiency technique.",
-  "C":"Dynamic analysis tests a running application for flaws. It examines one application rather than inventorying the estate.",
-  "D":"A vulnerability scan finds weaknesses on hosts it can reach. It produces findings about known systems rather than a complete technology inventory."}},
-
-"q0791": {"objective":"4.3",
- "explanation":"Antivirus matches known signatures, so a novel or packed sample passes cleanly. A sandbox runs the file in isolation and watches what it does — encrypting files, contacting command and control — which is the only way to catch behaviour no signature covers.",
- "incorrect":{
-  "A":"Reviewing the file in a code editor works for scripts but reveals nothing about a compiled or packed binary.",
-  "B":"Monitoring connections with netstat means the file is already running on a production machine, which is exactly what went wrong.",
-  "D":"Checking the hash against open sources is a quick and worthwhile step, but a newly generated sample will have no reputation at all."}},
-
-"q0792": {"objective":"4.5",
- "explanation":"File integrity monitoring records a baseline of file hashes, timestamps and permissions, then checks against it and alerts when something changes. That continuous verification is what gives the administrator a track record of every modification.",
- "incorrect":{
-  "A":"SPF authorises mail servers to send for a domain. It concerns email, not file changes.",
-  "B":"A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
-  "C":"NAC decides which devices may join the network."}},
-
-"q0793": {"objective":"3.3",
- "explanation":"Two first steps matter. Sensitivity labelling establishes what the data is and therefore how it must be handled, and limiting access to the share ensures only those who need it can reach it. Together they define and enforce the protection baseline everything else builds on.",
- "incorrect":{
-  "B":"A data retention policy governs how long data is kept. Important, but it does not protect the data now.",
-  "C":"RAID protects against drive failure. That is availability, not confidentiality.",
-  "E":"Encrypting the server drives protects data at rest and is worth doing, but it does nothing against an authorised user who should not have access to the share.",
-  "F":"Masking all customer PII would destroy the data's usefulness for the business processes that legitimately need it."}},
-
-"q0794": {"objective":"3.1",
- "explanation":"Infrastructure as code defines servers in version-controlled files that a pipeline applies. Every build comes from the same reviewed definition, which standardises configuration, makes changes auditable and collapses build time from manual hours to a pipeline run.",
- "incorrect":{
-  "A":"IoT refers to networked embedded devices. It is a category of equipment.",
-  "C":"PaaS provides a managed application platform. It removes server management rather than standardising how servers are built.",
-  "D":"ICS is industrial control systems used in manufacturing and utilities."}},
-
-"q0795": {"objective":"4.4",
- "explanation":"A 1G interface cannot carry all north-south and east-west data centre traffic, so the appliance must see traffic without being in its path. A tap feeding it connection metadata provides visibility at scale, and API integration with the network devices lets it push blocking decisions to equipment that can actually enforce them.",
- "incorrect":{
-  "A":"In-line deployment forces every packet through a 1G interface, which becomes an immediate bottleneck and a single point of failure.",
-  "B":"Fail-closed on a bandwidth-limited in-line device would take the data centre down the moment it saturated.",
-  "C":"Restricting console access to a jump box is good management hygiene but addresses neither monitoring coverage nor scalability.",
-  "D":"An IPSec tunnel to the border routers encrypts a management path. It does not provide traffic visibility."}},
-
-"q0796": {"objective":"4.1",
- "explanation":"CIS benchmarks define what a securely configured system looks like for each platform. Measuring the existing estate against them exposes which systems are outdated or misconfigured, producing both the scope of the legacy problem and a severity-ranked basis for prioritising modernisation.",
- "incorrect":{
-  "A":"Angry IP Scanner discovers live hosts and open ports. It finds what exists without assessing how insecure it is.",
-  "B":"The OWASP Web Security Testing Guide covers testing web applications. It is narrow and does not address infrastructure generally.",
-  "D":"Metasploit is an exploitation framework. It proves individual flaws are exploitable rather than scoping an estate."}},
-
-"q0797": {"objective":"4.5",
- "explanation":"Access lists enumerate which devices are permitted, matching on identifiers such as MAC or IP address, and deny everything else. Restricting entry to an approved set is exactly what they express.",
- "incorrect":{
-  "B":"Remote connection describes how someone reaches the environment. It is not a control that filters devices.",
-  "C":"Screened subnets isolate public-facing services from the internal network. They segment rather than authorise specific devices.",
-  "D":"A centralised proxy mediates outbound requests. It governs what devices may reach, not which devices may connect."}},
-
-"q0798": {"objective":"2.1",
- "explanation":"The attacker is coercing the employee by threatening to publish damaging personal material unless they comply. Compelling action through threatened exposure is blackmail, and CompTIA lists it as a distinct attacker motivation.",
- "incorrect":{
-  "A":"Financial gain would mean the attacker is seeking money. The demand here is an action, not payment.",
-  "B":"Revenge would mean the attacker is acting out of grievance against the target. Nothing suggests that.",
-  "D":"Espionage is covert collection of information. The attacker is coercing someone into deploying malware."}},
-
-"q0799": {"objective":"5.5",
- "explanation":"A self-assessment is the organisation examining its own controls, which lets it find gaps and fix them quietly before an external party or an attacker does. Identifying weaknesses and improvement opportunities is exactly its purpose.",
- "incorrect":{
-  "B":"Using an objective third party describes an external audit. A self-assessment is by definition not independent.",
-  "C":"Regulatory compliance for a financial disclosure requires independent attestation, which a self-assessment cannot provide.",
-  "D":"Red team penetration tests validate defences through simulated attack. That is a separate technical exercise."}},
-
-"q0800": {"objective":"4.1",
- "explanation":"Every other channel is already controlled — devices are organisation-provided with strict endpoint security, and network access runs through a VPN. The remaining gap is physical: copying sensitive data onto a USB drive bypasses all of it, so disabling external storage closes the one path left open.",
- "incorrect":{
-  "A":"Time-of-day restrictions limit when people may work. Hybrid working makes rigid hours counterproductive, and they do nothing about data handling.",
-  "C":"Host file integrity monitoring detects changes to system files. That is malware detection, and endpoint security is already described as strict.",
-  "D":"Securing workers' home routers is largely outside the organisation's control, and the VPN already protects traffic crossing those networks."}},
-
-"q0801": {"objective":"3.1",
- "explanation":"Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
- "incorrect":{
-  "A":"Infrastructure as code standardises how systems are built. It improves consistency without reducing the hardware needed.",
-  "B":"Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
-  "D":"Containerisation is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."}}
+ "q0768": {
+  "objective": "3.4",
+  "explanation": "Keeping configured spares for critical infrastructure means a failed device can be swapped or failed over to immediately rather than waiting on procurement. Eliminating that downtime is the definition of designing for high availability.",
+  "incorrect": {
+   "A": "Software-defined networking separates network control from forwarding. It is an architecture, not a reason to buy spare hardware.",
+   "B": "Scalability is the ability to handle more load. Spares sit idle and add no capacity.",
+   "D": "Decentralisation spreads systems and authority across locations. The spares here are at the same site as the primaries."
+  }
+ },
+ "q0769": {
+  "objective": "5.5",
+  "explanation": "Testing whether controls actually stop unauthorised access requires someone to attempt it. A penetration test simulates a real attacker against authentication, access restrictions and network defences, which measures effectiveness rather than mere presence.",
+  "incorrect": {
+   "B": "A risk assessment evaluates likelihood and impact. It reasons about risk without testing whether controls hold.",
+   "C": "A vulnerability scan enumerates known weaknesses. It reports what could be exploited without proving that it can be.",
+   "D": "An internal audit review checks that controls exist and policy is followed. It examines documentation and configuration rather than attacking them."
+  }
+ },
+ "q0770": {
+  "objective": "4.4",
+  "explanation": "Abnormal only has meaning relative to normal. Establishing a baseline of the server's usual performance, traffic, resource use and account activity is what lets any later deviation be recognised as abnormal rather than merely unfamiliar.",
+  "incorrect": {
+   "A": "Disabling unnecessary ports reduces the attack surface. It is hardening, not detection.",
+   "B": "Patching removes known vulnerabilities. Again preventive rather than a way to spot unusual behaviour.",
+   "D": "Alert tuning refines existing rules to cut false positives. It presumes you already know what normal looks like."
+  }
+ },
+ "q0771": {
+  "objective": "1.4",
+  "explanation": "Hashing runs data through a one-way function producing a fixed-length digest, and any change to the input produces a completely different output. Comparing digests proves the data is unaltered, which is integrity assurance.",
+  "incorrect": {
+   "B": "Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
+   "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
+   "D": "Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
+  }
+ },
+ "q0772": {
+  "objective": "4.4",
+  "explanation": "Alert fatigue comes from volume, most of it noise. Tuning the rules — adjusting thresholds, adding conditions, suppressing known-benign patterns — cuts false positives so what reaches an analyst is worth their attention.",
+  "incorrect": {
+   "A": "Penetration testing assesses whether systems can be breached. It produces findings rather than reducing alerts.",
+   "B": "Compensating controls substitute for a primary control that cannot be applied. They change risk treatment, not alert quality.",
+   "D": "Log aggregation gathers more data into one place, which tends to increase alert volume without tuning."
+  }
+ },
+ "q0773": {
+  "objective": "2.5",
+  "explanation": "Legacy manufacturing systems cannot be patched or run modern agents, so the answer is to control what can reach them. Segmentation isolates them from the wider network, and a jump server gives the engineers who must administer them one controlled, monitored path in.",
+  "incorrect": {
+   "B": "Antivirus needs an agent and a supported operating system. Legacy industrial equipment typically supports neither.",
+   "C": "An application allow list also requires agent support on the host, which these systems generally lack.",
+   "E": "Patching is unavailable — the vendor no longer issues updates, which is why compensating controls are needed.",
+   "F": "An IDS detects and alerts. Visibility is useful but it protects nothing by itself."
+  }
+ },
+ "q0774": {
+  "objective": "5.2",
+  "explanation": "The recovery point objective states how much data the business can afford to lose, expressed as time. Backups must run at least that often, so the RPO dictates the schedule rather than any fixed rule of thumb.",
+  "incorrect": {
+   "A": "Nightly backups are a common default, but they impose a 24-hour data loss window regardless of whether the business can tolerate it.",
+   "C": "Triggering on 5% data change is arbitrary and ignores how valuable or time-sensitive the changed data is.",
+   "D": "Daily incrementals with weekly fulls is a sensible pattern, but it is an implementation detail chosen to meet an RPO rather than the principle setting frequency."
+  }
+ },
+ "q0775": {
+  "objective": "2.3",
+  "explanation": "An HTML tag supplied as input and then rendered by the browser means the application echoed user content into the page without neutralising it. Injecting markup or script that executes in another user's browser is cross-site scripting.",
+  "incorrect": {
+   "A": "Directory traversal uses path sequences to read files outside the web root. This payload is markup, not a path.",
+   "B": "A buffer overflow writes past an allocated memory region. It targets memory handling, not page rendering.",
+   "C": "SQL injection inserts database syntax to manipulate a query. An image tag means nothing to a database."
+  }
+ },
+ "q0776": {
+  "objective": "4.5",
+  "explanation": "Listing the authorised mail servers in DNS is publishing an SPF record. Receiving servers compare the sending address against that record to confirm the mail came from a permitted source, which is what reduces spam classification.",
+  "incorrect": {
+   "A": "DMARC builds on SPF and DKIM, telling receivers what to do when those checks fail. It comes after SPF exists.",
+   "B": "DLP inspects outbound content for sensitive data. It has no influence on spam scoring.",
+   "C": "DKIM signs messages cryptographically to prove they were not altered. It is complementary but is not the DNS record listing the servers."
+  }
+ },
+ "q0777": {
+  "objective": "4.1",
+  "explanation": "More powerful access points mean the signal reaches further, including outside the building where an attacker could sit in the car park. A heat map shows exactly how far coverage extends so placement and transmit power can be tuned before deployment.",
+  "incorrect": {
+   "B": "IPSec tunnels from access points to the controller protect management traffic. They do nothing about signal spilling outside.",
+   "C": "Enabling WPA2-PSK would downgrade from WPA3, weakening the design rather than improving it.",
+   "D": "Disabling SSH administration is good hardening but addresses management access, not the coverage risk the scenario raises."
+  }
+ },
+ "q0778": {
+  "objective": "4.4",
+  "explanation": "A legitimate script triggering alerts is a rule matching too broadly. Alert tuning adjusts the conditions, thresholds or exclusions so that known-good activity stops generating alerts while genuine detections still fire.",
+  "incorrect": {
+   "A": "File validation checks that a file is what it claims to be. It does not change SIEM rules.",
+   "C": "File quarantining isolates a suspicious file. Quarantining a legitimate script would break the process it supports.",
+   "D": "Log aggregation collects data from more sources, which increases volume rather than reducing false positives."
+  }
+ },
+ "q0779": {
+  "objective": "3.1",
+  "explanation": "SDN centralises network control in a programmable controller, so configuration can be changed by software in seconds. That enables automated security responses — isolating a compromised host, tightening access, rerouting suspect traffic — the moment a threat is detected.",
+  "incorrect": {
+   "B": "SDN integrates readily with analysis tooling through its APIs. Reduced alerting is not a characteristic of it.",
+   "C": "SDN does not inherently change intrusion detection accuracy. Detection quality depends on the sensors and rules.",
+   "D": "SDN is a way of managing your own network programmatically. It is not outsourcing."
+  }
+ },
+ "q0780": {
+  "objective": "3.2",
+  "explanation": "Cross-site scripting arrives as malicious content inside an HTTP request. A web application firewall inspects those requests at the application layer and blocks recognised script injection before it reaches the application.",
+  "incorrect": {
+   "A": "An NGFW filters traffic at a boundary with application awareness, but it is not specialised in web application attack patterns the way a WAF is.",
+   "B": "A UTM bundles several perimeter security functions. Again general-purpose rather than targeted at web application attacks.",
+   "D": "NAC controls which devices may join a network. It has no visibility into HTTP request content."
+  }
+ },
+ "q0781": {
+  "objective": "2.2",
+  "explanation": "Rather than attacking the journalists directly, the attacker compromised a site they habitually visit and let the victims come to it. Poisoning a trusted destination used by a specific group is a watering-hole attack.",
+  "incorrect": {
+   "A": "An on-path attack intercepts traffic between two parties. It requires network position rather than compromising a site.",
+   "C": "Typosquatting registers a lookalike domain for users who mistype. The journalists visited the genuine site.",
+   "D": "Brand impersonation mimics an organisation's identity. The real site was used, not an imitation of it."
+  }
+ },
+ "q0782": {
+  "objective": "5.2",
+  "explanation": "Knowing about a risk and deciding to take no action is risk acceptance. It is a legitimate treatment when formally decided and documented, though ignoring findings without recording the rationale is acceptance done badly.",
+  "incorrect": {
+   "A": "Transfer shifts the financial consequence to a third party, typically through insurance. Nothing has been shifted.",
+   "B": "Avoid means ceasing the activity that creates the risk. Operations continue unchanged.",
+   "C": "Mitigate means applying controls to reduce likelihood or impact. No control has been applied."
+  }
+ },
+ "q0783": {
+  "objective": "5.2",
+  "explanation": "Impact measures how badly the organisation is affected if the event occurs — the disruption, loss or damage that follows. Combined with likelihood it produces the overall risk score, and a low impact is what limits that score even for a probable event.",
+  "incorrect": {
+   "A": "Severity is often used loosely as a synonym for the overall rating rather than the specific factor describing operational effect.",
+   "B": "Likelihood is how probable the event is. It is the other axis of the calculation.",
+   "D": "Probability is another word for likelihood, again the frequency side rather than the consequence side."
+  }
+ },
+ "q0784": {
+  "objective": "1.4",
+  "explanation": "The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
+  "incorrect": {
+   "A": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
+   "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
+   "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
+  }
+ },
+ "q0785": {
+  "objective": "1.3",
+  "explanation": "A change management policy written for a traditional environment assumes infrequent, scheduled releases. Moving to a cloud platform built for frequent automated updates breaks those assumptions, so the policy has to be rewritten around faster cycles and automated approval gates.",
+  "incorrect": {
+   "A": "An engineer adding a feature is a change the existing policy already covers.",
+   "B": "A server running at maximum load is a capacity problem, addressed by scaling rather than by revising change policy.",
+   "D": "A legacy server lacking regulatory support drives a remediation or replacement decision, not a change to how changes are managed."
+  }
+ },
+ "q0786": {
+  "objective": "1.2",
+  "explanation": "Badge access authenticates each person at the door so only those with approved credentials get in. An access control vestibule then ensures one authenticated person passes at a time, which closes the tailgating gap a badge alone leaves open.",
+  "incorrect": {
+   "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
+   "B": "Video surveillance records who entered. It is detective rather than preventive.",
+   "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
+   "F": "A sensor detects presence or movement and raises an alert."
+  }
+ },
+ "q0787": {
+  "objective": "5.6",
+  "explanation": "Effectiveness has to be measured against real behaviour. A simulated phishing campaign puts a realistic lure in front of staff and records who clicks and who reports it, producing objective figures that can be compared before and after training.",
+  "incorrect": {
+   "A": "A honeypot attracts attackers to a decoy system. It measures adversary behaviour, not employee awareness.",
+   "B": "A survey measures what people say they would do, which reliably overstates how they actually behave.",
+   "C": "A focus group gathers opinions and impressions. Again self-reported rather than observed."
+  }
+ },
+ "q0788": {
+  "objective": "4.8",
+  "explanation": "The process begins with preparation — building the plan, tooling and training before anything happens. Detection then identifies a candidate incident, and analysis validates it and establishes scope before any containment begins.",
+  "incorrect": {
+   "A": "Containment cannot precede detection; you cannot contain what you have not found.",
+   "B": "Lessons learned is the final phase, and this ordering omits preparation entirely.",
+   "C": "Eradication and recovery are late-stage activities that follow containment."
+  }
+ },
+ "q0789": {
+  "objective": "1.2",
+  "explanation": "Non-repudiation means the sender cannot credibly deny having sent the message. A digital signature achieves it because only the sender holds the private key that produced it, and anyone can verify that fact independently.",
+  "incorrect": {
+   "A": "Confidentiality keeps content from unauthorised readers. It says nothing about who sent it.",
+   "C": "Authorisation determines what an authenticated party may do.",
+   "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."
+  }
+ },
+ "q0790": {
+  "objective": "4.2",
+  "explanation": "Asset enumeration systematically discovers and catalogues the hardware, software and services present in the environment. Producing that comprehensive inventory is exactly the task described, and everything else in security depends on it.",
+  "incorrect": {
+   "A": "Data deduplication removes redundant copies of data to save storage. It is a storage efficiency technique.",
+   "C": "Dynamic analysis tests a running application for flaws. It examines one application rather than inventorying the estate.",
+   "D": "A vulnerability scan finds weaknesses on hosts it can reach. It produces findings about known systems rather than a complete technology inventory."
+  }
+ },
+ "q0791": {
+  "objective": "4.3",
+  "explanation": "Antivirus matches known signatures, so a novel or packed sample passes cleanly. A sandbox runs the file in isolation and watches what it does — encrypting files, contacting command and control — which is the only way to catch behaviour no signature covers.",
+  "incorrect": {
+   "A": "Reviewing the file in a code editor works for scripts but reveals nothing about a compiled or packed binary.",
+   "B": "Monitoring connections with netstat means the file is already running on a production machine, which is exactly what went wrong.",
+   "D": "Checking the hash against open sources is a quick and worthwhile step, but a newly generated sample will have no reputation at all."
+  }
+ },
+ "q0792": {
+  "objective": "4.5",
+  "explanation": "File integrity monitoring records a baseline of file hashes, timestamps and permissions, then checks against it and alerts when something changes. That continuous verification is what gives the administrator a track record of every modification.",
+  "incorrect": {
+   "A": "SPF authorises mail servers to send for a domain. It concerns email, not file changes.",
+   "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
+   "C": "NAC decides which devices may join the network."
+  }
+ },
+ "q0793": {
+  "objective": "3.3",
+  "explanation": "Two first steps matter. Sensitivity labelling establishes what the data is and therefore how it must be handled, and limiting access to the share ensures only those who need it can reach it. Together they define and enforce the protection baseline everything else builds on.",
+  "incorrect": {
+   "B": "A data retention policy governs how long data is kept. Important, but it does not protect the data now.",
+   "C": "RAID protects against drive failure. That is availability, not confidentiality.",
+   "E": "Encrypting the server drives protects data at rest and is worth doing, but it does nothing against an authorised user who should not have access to the share.",
+   "F": "Masking all customer PII would destroy the data's usefulness for the business processes that legitimately need it."
+  }
+ },
+ "q0794": {
+  "objective": "3.1",
+  "explanation": "Infrastructure as code defines servers in version-controlled files that a pipeline applies. Every build comes from the same reviewed definition, which standardises configuration, makes changes auditable and collapses build time from manual hours to a pipeline run.",
+  "incorrect": {
+   "A": "IoT refers to networked embedded devices. It is a category of equipment.",
+   "C": "PaaS provides a managed application platform. It removes server management rather than standardising how servers are built.",
+   "D": "ICS is industrial control systems used in manufacturing and utilities."
+  }
+ },
+ "q0795": {
+  "objective": "4.4",
+  "explanation": "A 1G interface cannot carry all north-south and east-west data centre traffic, so the appliance must see traffic without being in its path. A tap feeding it connection metadata provides visibility at scale, and API integration with the network devices lets it push blocking decisions to equipment that can actually enforce them.",
+  "incorrect": {
+   "A": "In-line deployment forces every packet through a 1G interface, which becomes an immediate bottleneck and a single point of failure.",
+   "B": "Fail-closed on a bandwidth-limited in-line device would take the data centre down the moment it saturated.",
+   "C": "Restricting console access to a jump box is good management hygiene but addresses neither monitoring coverage nor scalability.",
+   "D": "An IPSec tunnel to the border routers encrypts a management path. It does not provide traffic visibility."
+  }
+ },
+ "q0796": {
+  "objective": "4.1",
+  "explanation": "CIS benchmarks define what a securely configured system looks like for each platform. Measuring the existing estate against them exposes which systems are outdated or misconfigured, producing both the scope of the legacy problem and a severity-ranked basis for prioritising modernisation.",
+  "incorrect": {
+   "A": "Angry IP Scanner discovers live hosts and open ports. It finds what exists without assessing how insecure it is.",
+   "B": "The OWASP Web Security Testing Guide covers testing web applications. It is narrow and does not address infrastructure generally.",
+   "D": "Metasploit is an exploitation framework. It proves individual flaws are exploitable rather than scoping an estate."
+  }
+ },
+ "q0797": {
+  "objective": "4.5",
+  "explanation": "Access lists enumerate which devices are permitted, matching on identifiers such as MAC or IP address, and deny everything else. Restricting entry to an approved set is exactly what they express.",
+  "incorrect": {
+   "B": "Remote connection describes how someone reaches the environment. It is not a control that filters devices.",
+   "C": "Screened subnets isolate public-facing services from the internal network. They segment rather than authorise specific devices.",
+   "D": "A centralised proxy mediates outbound requests. It governs what devices may reach, not which devices may connect."
+  }
+ },
+ "q0798": {
+  "objective": "2.1",
+  "explanation": "The attacker is coercing the employee by threatening to publish damaging personal material unless they comply. Compelling action through threatened exposure is blackmail, and CompTIA lists it as a distinct attacker motivation.",
+  "incorrect": {
+   "A": "Financial gain would mean the attacker is seeking money. The demand here is an action, not payment.",
+   "B": "Revenge would mean the attacker is acting out of grievance against the target. Nothing suggests that.",
+   "D": "Espionage is covert collection of information. The attacker is coercing someone into deploying malware."
+  }
+ },
+ "q0799": {
+  "objective": "5.5",
+  "explanation": "A self-assessment is the organisation examining its own controls, which lets it find gaps and fix them quietly before an external party or an attacker does. Identifying weaknesses and improvement opportunities is exactly its purpose.",
+  "incorrect": {
+   "B": "Using an objective third party describes an external audit. A self-assessment is by definition not independent.",
+   "C": "Regulatory compliance for a financial disclosure requires independent attestation, which a self-assessment cannot provide.",
+   "D": "Red team penetration tests validate defences through simulated attack. That is a separate technical exercise."
+  }
+ },
+ "q0800": {
+  "objective": "4.1",
+  "explanation": "Every other channel is already controlled — devices are organisation-provided with strict endpoint security, and network access runs through a VPN. The remaining gap is physical: copying sensitive data onto a USB drive bypasses all of it, so disabling external storage closes the one path left open.",
+  "incorrect": {
+   "A": "Time-of-day restrictions limit when people may work. Hybrid working makes rigid hours counterproductive, and they do nothing about data handling.",
+   "C": "Host file integrity monitoring detects changes to system files. That is malware detection, and endpoint security is already described as strict.",
+   "D": "Securing workers' home routers is largely outside the organisation's control, and the VPN already protects traffic crossing those networks."
+  }
+ },
+ "q0801": {
+  "objective": "3.1",
+  "explanation": "Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
+  "incorrect": {
+   "A": "Infrastructure as code standardises how systems are built. It improves consistency without reducing the hardware needed.",
+   "B": "Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
+   "D": "Containerisation is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."
+  }
+ }
 }

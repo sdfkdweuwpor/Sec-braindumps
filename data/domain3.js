@@ -1921,21 +1921,21 @@ export const domain3Questions = [
       }
     ],
     "correct": [
-      "C"
+      "D"
     ],
-    "explanation": "Journaling records every transaction as it happens, so the database can be rolled forward to within moments of the failure. Continuous capture gives the smallest possible data loss window and the fastest restoration to a consistent state.",
+    "explanation": "A hot site runs continuously with current, replicated data, so failover is near-instant (lowest RTO) and little or no data is lost (lowest RPO). Journaling gives an excellent RPO but still requires restoring and replaying to a working system, so its recovery time is longer. Some published answers pick journaling.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Snapshots capture the state at intervals. Anything written since the last snapshot is lost, so the RPO is as long as the gap between them.",
-      "B": "On-site backups are periodic copies. They are usually the slowest to restore and the furthest behind of these options.",
-      "D": "A hot site gives somewhere to run quickly, which helps RTO, but the data available there is only as current as whatever replication feeds it."
+      "A": "Snapshots are point-in-time copies. Anything written after the last snapshot is lost, and restoring takes time.",
+      "B": "On-site backups must be restored before service resumes and lose everything since the last backup, and they share the primary site's disaster risk.",
+      "C": "Journaling records every change and gives a very low RPO, but recovery still means restoring and replaying the log, so the RTO is higher than a hot site."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p107",
     "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0250",

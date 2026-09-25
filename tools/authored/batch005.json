@@ -1,244 +1,313 @@
 {
-"q0117": {"objective":"5.2",
- "explanation":"Policies and procedures define what the risk management programme is supposed to do — who owns risk, how it is identified, scored and treated, and what thresholds apply. An auditor has to read those first, because every other area is judged against what the documents say should be happening.",
- "incorrect":{
-  "B":"Asset management records what the organisation owns. It is an input to risk management, but auditing it first gives no standard to measure against.",
-  "C":"A vulnerability assessment finds technical weaknesses at a point in time. It is one activity within the programme rather than the framework governing it.",
-  "D":"A business impact analysis determines how badly the organisation is hurt when something fails. It is a product of the programme, produced under the policies the auditor should read first."}},
-
-"q0118": {"objective":"4.3",
- "explanation":"Vulnerability management is a cycle of identify, analyse, prioritise, remediate, validate and report. Prioritisation ranks findings by severity and exposure so limited effort goes where it matters, and reporting communicates status and tracks remediation — both are core stages of the process.",
- "incorrect":{
-  "C":"Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponising them.",
-  "D":"Correlation combines events from different sources to spot patterns. It belongs to monitoring and SIEM work, not to managing vulnerabilities.",
-  "E":"Containment limits damage during a live incident. It is an incident response activity that happens after something has already gone wrong.",
-  "F":"A tabletop exercise rehearses a response plan in discussion. It tests preparedness rather than managing the vulnerability backlog."}},
-
-"q0119": {"objective":"4.3",
- "explanation":"Open-source intelligence collects information from publicly available sources — registries, certificate logs, job adverts, social media, news. Because everything comes from outside the organisation, the administrator can build a risk picture without touching proprietary internal information.",
- "incorrect":{
-  "A":"Network scanning probes the organisation's own systems and produces internal technical data. That is exactly the proprietary information being avoided.",
-  "B":"Penetration testing actively attacks internal systems and generates highly sensitive internal findings.",
-  "D":"Configuration auditing compares internal system settings against a baseline. Both the baseline and the results are internal company information."}},
-
-"q0120": {"objective":"2.3",
- "explanation":"Cloud instances share physical hardware with other tenants. VM escape is the vulnerability where an attacker breaks out of their guest and reaches the hypervisor or neighbouring virtual machines, which is uniquely serious in cloud because it crosses the boundary between customers.",
- "incorrect":{
-  "A":"SQL injection attacks an application's database layer. It is a serious flaw but it exists identically whether the application runs in cloud or on a physical server.",
-  "B":"TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualised infrastructure.",
-  "D":"Tokenisation is a data-protection technique, not a vulnerability at all.",
-  "E":"Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."}},
-
-"q0121": {"objective":"1.4",
- "explanation":"Tokenisation replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenisation system, and the format is preserved so pending purchases still work.",
- "incorrect":{
-  "A":"Hashing is one-way, so the original card number could never be retrieved to complete the purchase. Card numbers are also short enough to be brute-forced from a hash.",
-  "B":"Obfuscation makes data harder to read but is reversible by design and offers no real cryptographic protection against a determined attacker.",
-  "D":"Masking hides part of the value for display, such as showing only the last four digits. It suits logs and screens, but the system still needs the full number to process the payment."}},
-
-"q0122": {"objective":"3.4",
- "explanation":"Vendor diversity means not every system depends on the same supplier's code. When a zero-day appears in one vendor's product, only the portion of the estate running it is exposed, so the organisation keeps functioning while that vendor is patched.",
- "incorrect":{
-  "A":"Patch availability depends on each vendor's own release practices. Using more vendors means tracking more patch streams, which makes this harder, not better.",
-  "C":"Secure configuration guides are vendor-specific. Diversity means needing several different guides, so applicability decreases.",
-  "D":"Load balancing distributes traffic for capacity and availability. It is a technique you deploy, not a benefit that follows from using multiple vendors."}},
-
-"q0123": {"objective":"4.9",
- "explanation":"The fraud happened inside the billing application using legitimate access, so the evidence is in what that application recorded — who issued which cheque, when and from which account. Application logs are the only source that captures actions at that level of business detail.",
- "incorrect":{
-  "B":"Vulnerability scanner logs record what weaknesses were found on hosts. No vulnerability was exploited; a trusted user abused normal functionality.",
-  "C":"IDS/IPS logs flag suspicious network traffic patterns. An employee using the billing system as intended generates entirely normal traffic.",
-  "D":"Firewall logs show which connections were permitted or denied. They confirm someone reached the system but say nothing about what they did inside it."}},
-
-"q0124": {"objective":"3.1",
- "explanation":"Containers share the host's kernel and bundle only the libraries an application actually needs, so there is no full guest operating system per workload. Fewer operating systems in the estate means fewer OS patches to test and apply.",
- "incorrect":{
-  "A":"Microservices is an application design pattern that splits a system into small services. It affects how software is structured, and typically increases the number of deployed instances.",
-  "B":"Virtualisation gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
-  "C":"A real-time operating system is used where timing guarantees matter, in embedded and industrial systems. It is not a consolidation strategy for general workloads."}},
-
-"q0125": {"objective":"5.2",
- "explanation":"A business impact analysis determines which processes are critical, how much disruption is tolerable, and therefore how quickly each system must be restored. Estimating that recovery time — the RTO — is a defining output of the BIA.",
- "incorrect":{
-  "B":"Identifying the communication strategy belongs to the continuity and incident plans. The BIA supplies the priorities those plans then act on.",
-  "C":"Evaluating the risk management plan is a governance review activity. The BIA measures impact of loss rather than assessing the programme.",
-  "D":"Establishing backup and recovery procedures is how the RTO is met. The BIA sets the target; the procedures are built afterwards to hit it.",
-  "E":"Developing the incident response plan addresses security incidents. It is informed by the BIA but is a separate deliverable."}},
-
-"q0126": {"objective":"4.3",
- "explanation":"Scanning sends real traffic to live systems, and fragile services, legacy devices and industrial equipment can slow, hang or crash under it. Disruption to business operations is the genuine risk of running an assessment, which is why scans are scheduled and tuned carefully.",
- "incorrect":{
-  "B":"Unauthorised access is a risk of a penetration test, where exploitation is the point. A vulnerability assessment identifies flaws without exploiting them.",
-  "C":"False positives are an inconvenience that wastes analyst time. They are an accuracy problem, not a risk to the organisation.",
-  "D":"Finding security gaps is the purpose of the assessment. It is the benefit, not the risk."}},
-
-"q0127": {"objective":"1.2",
- "explanation":"This is a honeyfile — a decoy with an enticing name and no legitimate purpose. Nobody has a business reason to open /docs/salaries, so any access to it is a strong signal that someone is looking where they should not be.",
- "incorrect":{
-  "B":"Setting weak passwords in /etc/shadow genuinely weakens the system. It creates a real way in rather than a monitored trap.",
-  "C":"Scheduling vulnerable cron jobs introduces an actual privilege escalation path. That endangers the host instead of detecting curiosity.",
-  "D":"A fake account in /etc/passwd is closer to the idea, but an account entry is passive — it does not attract attention or record who looked at it the way an enticingly named file does."}},
-
-"q0128": {"objective":"5.6",
- "explanation":"Intellectual property is most often lost to people who already have legitimate access to it. Training staff to recognise and report insider-threat indicators addresses that specific exposure, which perimeter-focused awareness topics do not.",
- "incorrect":{
-  "B":"Simulated threats are a delivery method for training rather than a concept to teach. They exercise whatever topic you have chosen.",
-  "C":"Phishing awareness protects against external attackers harvesting credentials. It is essential baseline training but does not address misuse by trusted insiders.",
-  "D":"Business continuity planning keeps operations running through disruption. It concerns availability, not the theft of proprietary information."}},
-
-"q0129": {"objective":"3.1",
- "explanation":"On-premises keeps hardware, software, network and data entirely under the organisation's control, so it can enforce its own access, physical and regulatory controls without depending on anyone else. Where maximum control is the goal, that is the model that offers it.",
- "incorrect":{
-  "A":"Cloud-based means accepting a shared responsibility model and trusting the provider with parts of the stack. It can be very secure, but control is divided.",
-  "B":"Peer-to-peer distributes data across participating nodes with no central authority. That is the weakest of these for protecting sensitive data.",
-  "D":"Hybrid combines on-premises and cloud, which means inheriting both sets of risks plus the complexity of the connection between them."}},
-
-"q0130": {"objective":"5.4",
- "explanation":"A data inventory records what personal data is held, where it lives and how sensitive it is. Without it a data protection officer cannot say who was affected or how badly when a breach occurs, which is the assessment regulators and notification deadlines demand.",
- "incorrect":{
-  "A":"Managing storage requirements is an operational benefit of knowing your data. It is useful but not a data protection officer's primary concern.",
-  "C":"An inventory does not extend retention periods. If anything it exposes data being kept longer than policy allows, shortening retention.",
-  "D":"Deduplication is a storage efficiency measure. Automating it is an IT optimisation, unrelated to privacy obligations."}},
-
-"q0131": {"objective":"1.4",
- "explanation":"Data at rest is data sitting on storage rather than moving or in use. Full disk encryption encrypts the whole volume so the contents are unreadable when the system is off or the drive is removed, which is exactly that state.",
- "incorrect":{
-  "A":"Digital signatures prove origin and integrity. They demonstrate a file has not been altered but leave its contents readable.",
-  "C":"A private key is a component used by cryptographic systems, not a solution in itself. It is the secret that makes an algorithm work.",
-  "D":"Steganography hides data inside another file so its existence is not obvious. It is concealment rather than encryption, and it fails once the carrier is identified."}},
-
-"q0132": {"objective":"3.2",
- "explanation":"A network intrusion prevention system sits inline on the traffic path, inspects packets against attack signatures and behaviour, and drops malicious traffic before it reaches the target. Against external attackers, blocking rather than merely observing is what protects the environment.",
- "incorrect":{
-  "A":"An ACL permits or denies based on addresses, ports and protocols. It is a coarse filter that cannot recognise an attack inside otherwise-allowed traffic.",
-  "B":"An IDS detects and alerts but does not block. The attack still reaches its target while somebody reads the alert.",
-  "C":"HIDS monitors a single host from the inside. It protects that machine only and is not an environment-wide defence against external attack."}},
-
-"q0133": {"objective":"3.4",
- "explanation":"A generator produces power continuously for as long as it has fuel, so it can carry a data centre through days without utility supply. That is a different job from bridging the seconds between an outage and the generator starting.",
- "incorrect":{
-  "B":"A UPS runs on batteries and is sized in minutes, not days. Its role is to keep systems alive until the generator comes online or shutdown completes.",
-  "C":"Replication copies data to another location. It supports recovery elsewhere but does nothing to keep this data centre powered.",
-  "D":"Parallel processing runs work on more than one system concurrently. It is a processing model, not a power strategy."}},
-
-"q0134": {"objective":"1.1",
- "explanation":"The signs deter — a visitor who knows they are being recorded is less likely to misbehave. The cameras detect — they capture and identify what actually happens. Neither physically stops anyone, which is what separates these from preventive controls.",
- "incorrect":{
-  "A":"Directive controls instruct people what to do, usually through policy. A warning sign edges towards this, but its purpose here is to discourage.",
-  "C":"Preventive controls physically stop an act before it occurs. A camera records but blocks nothing.",
-  "E":"Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
-  "F":"Technical describes how a control is implemented, not what it does. The question is asking about control function."}},
-
-"q0135": {"objective":"1.4",
- "explanation":"Key escrow deposits a copy of the key with a trusted custodian who releases it to authorised parties under defined conditions. That is the recognised way to let more than one entity obtain a key when needed without simply handing it around.",
- "incorrect":{
-  "A":"Public key infrastructure issues, distributes and revokes certificates. It manages trust in public keys rather than safeguarding a shared secret key.",
-  "B":"An open public ledger records transactions transparently for anyone to read. Publishing a key defeats the purpose entirely.",
-  "C":"Public key encryption protects data in transit between parties. It secures the exchange but does not store a key for later authorised retrieval."}},
-
-"q0136": {"objective":"1.4",
- "explanation":"Comparing a downloaded file against the hash the vendor published proves the bytes you received match the bytes they released, so the file was not corrupted or tampered with in transit. That is integrity verification. Note the question is loosely worded: 3DES is an encryption algorithm, not a hash — the intended answer is the integrity check a published hash provides.",
- "incorrect":{
-  "B":"Authenticity means proving who published the file, which requires a digital signature. A bare hash on the same website could be replaced by anyone who altered the file there.",
-  "C":"Activating a licence is a commercial step handled by a key or an account. It has no relationship to hashing.",
-  "D":"Calculating the checksum is the mechanism, not the reason. The administrator computes it in order to test integrity."}},
-
-"q0137": {"objective":"3.1",
- "explanation":"Virtualisation runs many virtual machines on one physical host, consolidating workloads that previously needed separate hardware. Reducing the physical server count is precisely what it was created to do.",
- "incorrect":{
-  "A":"Isolation separates systems so they cannot affect one another. It is a security property, and strict isolation often means more separation, not less hardware.",
-  "B":"Segmentation divides a network into zones. It changes network design without affecting how many servers exist.",
-  "D":"Redundancy adds duplicate components so failures are survivable. By definition it increases the amount of hardware."}},
-
-"q0138": {"objective":"1.2",
- "explanation":"A distributed denial of service attack works by making a service unreachable to legitimate users. Defending against it protects availability — the third leg of the CIA triad, concerned with systems being usable when needed.",
- "incorrect":{
-  "B":"Non-repudiation prevents someone denying an action they took, achieved through signatures and logging. A DDoS attack does not involve disputed actions.",
-  "C":"Integrity means data has not been altered. A DDoS floods a service without changing any data.",
-  "D":"Confidentiality keeps data from unauthorised eyes. Nothing is disclosed by a denial of service attack."}},
-
-"q0139": {"objective":"4.8",
- "explanation":"New incident response documentation is untested until people try to use it. A tabletop exercise walks the team through realistic scenarios against the new procedures, which surfaces gaps, ambiguities and missing contacts while there is no real incident underway.",
- "incorrect":{
-  "A":"Setting a data retention policy governs how long records are kept. It is unrelated to validating response procedures.",
-  "B":"Storing the documents on an air-gapped network would make them unreachable during exactly the incident they are written for. Offline copies are sensible; air-gapping is not.",
-  "C":"Reviewing the classification policy determines how the documents should be labelled and handled. That is administrative housekeeping, not validation."}},
-
-"q0140": {"objective":"5.4",
- "explanation":"Failing audits against a regulatory standard means the organisation is not meeting requirements it is legally obliged to meet. Non-compliance is what regulators fine, and repeated failure is why the penalty escalated to a financial one.",
- "incorrect":{
-  "B":"Contract violations are breaches of agreements between private parties, enforced through the contract or the courts, not by a government regulator.",
-  "C":"Government sanctions are restrictions imposed for policy reasons such as trade or foreign relations. The fine here is the consequence, and non-compliance is its cause.",
-  "D":"Rules of engagement define the scope and limits of a security test. They have no bearing on regulatory audits."}},
-
-"q0141": {"objective":"3.3",
- "explanation":"Government project information needs both a sensitivity level and an access limitation. Confidential marks the harm that disclosure would cause, and Restricted signals that access is limited to a specifically authorised group rather than to staff generally.",
- "incorrect":{
-  "A":"Private typically covers personal information about individuals, such as employee records. This is project material, not personal data.",
-  "C":"Public means disclosure causes no harm. Critical government project information is the opposite of that.",
-  "D":"Operational is not a standard classification level. It describes a type of data or control rather than its sensitivity.",
-  "E":"Urgent describes priority or timeliness, not how sensitive something is."}},
-
-"q0142": {"objective":"4.8",
- "explanation":"The post-incident review, or lessons learned phase, asks why the incident was possible at all. Determining root cause is what turns a single response into an improvement, because it identifies the underlying weakness rather than the symptom that was cleaned up.",
- "incorrect":{
-  "B":"Developing mitigation steps follows from the root cause. You cannot sensibly design fixes before you know what actually allowed the incident.",
-  "C":"Validating evidence accuracy happens during the investigation and analysis phase, while the evidence is being collected and handled.",
-  "D":"Reestablishing configuration and settings is recovery work, completed before the review begins."}},
-
-"q0143": {"objective":"1.4",
- "explanation":"When passwords are protected by a weak or fast algorithm — MD5, unsalted SHA-1, short key lengths — an attacker can compute enormous numbers of candidate hashes cheaply. The weakness of the algorithm is exactly what makes cracking feasible.",
- "incorrect":{
-  "B":"An on-path attack intercepts traffic between two parties. It exploits the network position, which is available whether the cryptography is strong or weak.",
-  "C":"Digital signing is a protective mechanism, not an attack.",
-  "D":"A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets the implementation, and works even against algorithms that are cryptographically strong."}},
-
-"q0144": {"objective":"1.2",
- "explanation":"A bollard is a physical barrier that stops a vehicle reaching a building. It prevents the act rather than recording it, which makes it the preventive control among these options.",
- "incorrect":{
-  "A":"A video surveillance system records what happens. Recording is detective, and deterrent where the cameras are visible.",
-  "C":"An alarm system announces that something has occurred. Notification after the event is detective.",
-  "D":"Motion sensors detect movement and trigger an alert. Like the alarm, they observe rather than obstruct."}},
-
-"q0145": {"objective":"5.1",
- "explanation":"A playbook is a short, prescriptive set of steps for handling one specific situation. Analysts open it mid-incident and follow it, which is what just-in-time reference means — guidance consulted at the moment of need rather than studied in advance.",
- "incorrect":{
-  "A":"A change management policy governs how changes are approved and implemented. It is a governance document, not something read during a live alert.",
-  "B":"A risk profile summarises the organisation's risk exposure. It informs strategy rather than telling an analyst what to do next.",
-  "D":"A SIEM profile is configuration within the tool. It shapes what the SIEM reports but is not reference material for a responder."}},
-
-"q0146": {"objective":"3.2",
- "explanation":"A client agent establishing an encrypted tunnel to the corporate network is the classic IPSec remote access VPN. IPSec authenticates and encrypts the IP traffic itself, protecting everything carried inside the tunnel.",
- "incorrect":{
-  "A":"GRE encapsulates traffic to build a tunnel but provides no encryption at all. It is often paired with IPSec precisely because it lacks that protection.",
-  "C":"SD-WAN manages and optimises traffic across multiple WAN links between sites. It is a site-to-site technology, not an endpoint remote access client.",
-  "D":"EAP is an authentication framework used within protocols such as 802.1X. It authenticates users but does not itself create the encrypted tunnel."}},
-
-"q0147": {"objective":"4.5",
- "explanation":"User behaviour analytics builds a baseline of what normal access looks like for each person and flags deviations. An employee reaching into systems unrelated to their role is a behavioural anomaly rather than a policy violation any static rule would catch, which is exactly what UBA is designed to surface.",
- "incorrect":{
-  "B":"EDR detects malicious activity on an endpoint — malware, suspicious processes, persistence. The employee is using ordinary tools with valid credentials.",
-  "C":"NAC decides whether a device may join the network at all. Once these employees are on, it has no view of what they access.",
-  "D":"DLP watches for sensitive data leaving the organisation. It would catch exfiltration but not mere unauthorised viewing."}},
-
-"q0148": {"objective":"5.5",
- "explanation":"A third-party attestation report is produced once by an independent auditor and shared with every customer who asks. That satisfies the demand for an independent opinion without the organisation absorbing separate audits from each client, which is where the efficiency comes from.",
- "incorrect":{
-  "A":"A penetration test assesses whether systems can be breached at a moment in time. It is not an opinion on whether controls operate effectively.",
-  "B":"A self-assessment is performed by the organisation on itself. Customers asked for independence, which a self-assessment cannot provide.",
-  "C":"Allowing each client a right to audit gives independence but is the least efficient option possible, multiplying the burden by the number of customers."}},
-
-"q0149": {"objective":"4.9",
- "explanation":"The question asks specifically about detecting the attempts. User activity logs record authentication events including repeated failures against administrator accounts, which is the evidence trail that reveals someone guessing credentials from inside.",
- "incorrect":{
-  "A":"Two-factor authentication would prevent the attempts from succeeding. Prevention is valuable, but it is not detection.",
-  "B":"A firewall controls traffic between networks. The employee is already on the academic server, so no boundary is crossed.",
-  "C":"An intrusion prevention system blocks recognised attack traffic. It might stop a fast brute force but is not the record used to detect and investigate the behaviour."}},
-
-"q0150": {"objective":"5.4",
- "explanation":"The question asks what the retailer faces from customers specifically. Fines, sanctions and contractual penalties come from regulators, card brands and acquiring banks. What customers impose is loss of trust — reputational damage that drives them to shop elsewhere.",
- "incorrect":{
-  "A":"Contractual impacts come from the acquiring bank or card brands under the merchant agreement, not from customers.",
-  "B":"Sanctions such as losing the ability to process cards are imposed by the payment industry, again not by customers.",
-  "C":"Fines are levied by the card brands through the acquirer. Customers have no mechanism to fine anyone."}}
+ "q0117": {
+  "objective": "5.2",
+  "explanation": "Policies and procedures define what the risk management programme is supposed to do — who owns risk, how it is identified, scored and treated, and what thresholds apply. An auditor has to read those first, because every other area is judged against what the documents say should be happening.",
+  "incorrect": {
+   "B": "Asset management records what the organisation owns. It is an input to risk management, but auditing it first gives no standard to measure against.",
+   "C": "A vulnerability assessment finds technical weaknesses at a point in time. It is one activity within the programme rather than the framework governing it.",
+   "D": "A business impact analysis determines how badly the organisation is hurt when something fails. It is a product of the programme, produced under the policies the auditor should read first."
+  }
+ },
+ "q0118": {
+  "objective": "4.3",
+  "explanation": "Vulnerability management is a cycle of identify, analyse, prioritise, remediate, validate and report. Prioritisation ranks findings by severity and exposure so limited effort goes where it matters, and reporting communicates status and tracks remediation — both are core stages of the process.",
+  "incorrect": {
+   "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponising them.",
+   "D": "Correlation combines events from different sources to spot patterns. It belongs to monitoring and SIEM work, not to managing vulnerabilities.",
+   "E": "Containment limits damage during a live incident. It is an incident response activity that happens after something has already gone wrong.",
+   "F": "A tabletop exercise rehearses a response plan in discussion. It tests preparedness rather than managing the vulnerability backlog."
+  }
+ },
+ "q0119": {
+  "objective": "4.3",
+  "explanation": "Open-source intelligence collects information from publicly available sources — registries, certificate logs, job adverts, social media, news. Because everything comes from outside the organisation, the administrator can build a risk picture without touching proprietary internal information.",
+  "incorrect": {
+   "A": "Network scanning probes the organisation's own systems and produces internal technical data. That is exactly the proprietary information being avoided.",
+   "B": "Penetration testing actively attacks internal systems and generates highly sensitive internal findings.",
+   "D": "Configuration auditing compares internal system settings against a baseline. Both the baseline and the results are internal company information."
+  }
+ },
+ "q0120": {
+  "objective": "2.3",
+  "explanation": "Cloud instances share physical hardware with other tenants. VM escape is the vulnerability where an attacker breaks out of their guest and reaches the hypervisor or neighbouring virtual machines, which is uniquely serious in cloud because it crosses the boundary between customers.",
+  "incorrect": {
+   "A": "SQL injection attacks an application's database layer. It is a serious flaw but it exists identically whether the application runs in cloud or on a physical server.",
+   "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualised infrastructure.",
+   "D": "Tokenisation is a data-protection technique, not a vulnerability at all.",
+   "E": "Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."
+  }
+ },
+ "q0121": {
+  "objective": "1.4",
+  "explanation": "Tokenisation replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenisation system, and the format is preserved so pending purchases still work.",
+  "incorrect": {
+   "A": "Hashing is one-way, so the original card number could never be retrieved to complete the purchase. Card numbers are also short enough to be brute-forced from a hash.",
+   "B": "Obfuscation makes data harder to read but is reversible by design and offers no real cryptographic protection against a determined attacker.",
+   "D": "Masking hides part of the value for display, such as showing only the last four digits. It suits logs and screens, but the system still needs the full number to process the payment."
+  }
+ },
+ "q0122": {
+  "objective": "3.4",
+  "explanation": "Vendor diversity means not every system depends on the same supplier's code. When a zero-day appears in one vendor's product, only the portion of the estate running it is exposed, so the organisation keeps functioning while that vendor is patched.",
+  "incorrect": {
+   "A": "Patch availability depends on each vendor's own release practices. Using more vendors means tracking more patch streams, which makes this harder, not better.",
+   "C": "Secure configuration guides are vendor-specific. Diversity means needing several different guides, so applicability decreases.",
+   "D": "Load balancing distributes traffic for capacity and availability. It is a technique you deploy, not a benefit that follows from using multiple vendors."
+  }
+ },
+ "q0123": {
+  "objective": "4.9",
+  "explanation": "The fraud happened inside the billing application using legitimate access, so the evidence is in what that application recorded — who issued which cheque, when and from which account. Application logs are the only source that captures actions at that level of business detail.",
+  "incorrect": {
+   "B": "Vulnerability scanner logs record what weaknesses were found on hosts. No vulnerability was exploited; a trusted user abused normal functionality.",
+   "C": "IDS/IPS logs flag suspicious network traffic patterns. An employee using the billing system as intended generates entirely normal traffic.",
+   "D": "Firewall logs show which connections were permitted or denied. They confirm someone reached the system but say nothing about what they did inside it."
+  }
+ },
+ "q0124": {
+  "objective": "3.1",
+  "explanation": "Containers share the host's kernel and bundle only the libraries an application actually needs, so there is no full guest operating system per workload. Fewer operating systems in the estate means fewer OS patches to test and apply.",
+  "incorrect": {
+   "A": "Microservices is an application design pattern that splits a system into small services. It affects how software is structured, and typically increases the number of deployed instances.",
+   "B": "Virtualisation gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
+   "C": "A real-time operating system is used where timing guarantees matter, in embedded and industrial systems. It is not a consolidation strategy for general workloads."
+  }
+ },
+ "q0125": {
+  "objective": "5.2",
+  "explanation": "A business impact analysis determines which processes are critical, how much disruption is tolerable, and therefore how quickly each system must be restored. Estimating that recovery time — the RTO — is a defining output of the BIA.",
+  "incorrect": {
+   "B": "Identifying the communication strategy belongs to the continuity and incident plans. The BIA supplies the priorities those plans then act on.",
+   "C": "Evaluating the risk management plan is a governance review activity. The BIA measures impact of loss rather than assessing the programme.",
+   "D": "Establishing backup and recovery procedures is how the RTO is met. The BIA sets the target; the procedures are built afterwards to hit it.",
+   "E": "Developing the incident response plan addresses security incidents. It is informed by the BIA but is a separate deliverable."
+  }
+ },
+ "q0126": {
+  "objective": "4.3",
+  "explanation": "Scanning sends real traffic to live systems, and fragile services, legacy devices and industrial equipment can slow, hang or crash under it. Disruption to business operations is the genuine risk of running an assessment, which is why scans are scheduled and tuned carefully.",
+  "incorrect": {
+   "B": "Unauthorised access is a risk of a penetration test, where exploitation is the point. A vulnerability assessment identifies flaws without exploiting them.",
+   "C": "False positives are an inconvenience that wastes analyst time. They are an accuracy problem, not a risk to the organisation.",
+   "D": "Finding security gaps is the purpose of the assessment. It is the benefit, not the risk."
+  }
+ },
+ "q0127": {
+  "objective": "1.2",
+  "explanation": "This is a honeyfile — a decoy with an enticing name and no legitimate purpose. Nobody has a business reason to open /docs/salaries, so any access to it is a strong signal that someone is looking where they should not be.",
+  "incorrect": {
+   "B": "Setting weak passwords in /etc/shadow genuinely weakens the system. It creates a real way in rather than a monitored trap.",
+   "C": "Scheduling vulnerable cron jobs introduces an actual privilege escalation path. That endangers the host instead of detecting curiosity.",
+   "D": "A fake account in /etc/passwd is closer to the idea, but an account entry is passive — it does not attract attention or record who looked at it the way an enticingly named file does."
+  }
+ },
+ "q0128": {
+  "objective": "5.6",
+  "explanation": "Intellectual property is most often lost to people who already have legitimate access to it. Training staff to recognise and report insider-threat indicators addresses that specific exposure, which perimeter-focused awareness topics do not.",
+  "incorrect": {
+   "B": "Simulated threats are a delivery method for training rather than a concept to teach. They exercise whatever topic you have chosen.",
+   "C": "Phishing awareness protects against external attackers harvesting credentials. It is essential baseline training but does not address misuse by trusted insiders.",
+   "D": "Business continuity planning keeps operations running through disruption. It concerns availability, not the theft of proprietary information."
+  }
+ },
+ "q0129": {
+  "objective": "3.1",
+  "explanation": "On-premises keeps hardware, software, network and data entirely under the organisation's control, so it can enforce its own access, physical and regulatory controls without depending on anyone else. Where maximum control is the goal, that is the model that offers it.",
+  "incorrect": {
+   "A": "Cloud-based means accepting a shared responsibility model and trusting the provider with parts of the stack. It can be very secure, but control is divided.",
+   "B": "Peer-to-peer distributes data across participating nodes with no central authority. That is the weakest of these for protecting sensitive data.",
+   "D": "Hybrid combines on-premises and cloud, which means inheriting both sets of risks plus the complexity of the connection between them."
+  }
+ },
+ "q0130": {
+  "objective": "5.4",
+  "explanation": "A data inventory records what personal data is held, where it lives and how sensitive it is. Without it a data protection officer cannot say who was affected or how badly when a breach occurs, which is the assessment regulators and notification deadlines demand.",
+  "incorrect": {
+   "A": "Managing storage requirements is an operational benefit of knowing your data. It is useful but not a data protection officer's primary concern.",
+   "C": "An inventory does not extend retention periods. If anything it exposes data being kept longer than policy allows, shortening retention.",
+   "D": "Deduplication is a storage efficiency measure. Automating it is an IT optimisation, unrelated to privacy obligations."
+  }
+ },
+ "q0131": {
+  "objective": "1.4",
+  "explanation": "Data at rest is data sitting on storage rather than moving or in use. Full disk encryption encrypts the whole volume so the contents are unreadable when the system is off or the drive is removed, which is exactly that state.",
+  "incorrect": {
+   "A": "Digital signatures prove origin and integrity. They demonstrate a file has not been altered but leave its contents readable.",
+   "C": "A private key is a component used by cryptographic systems, not a solution in itself. It is the secret that makes an algorithm work.",
+   "D": "Steganography hides data inside another file so its existence is not obvious. It is concealment rather than encryption, and it fails once the carrier is identified."
+  }
+ },
+ "q0132": {
+  "objective": "3.2",
+  "explanation": "A network intrusion prevention system sits inline on the traffic path, inspects packets against attack signatures and behaviour, and drops malicious traffic before it reaches the target. Against external attackers, blocking rather than merely observing is what protects the environment.",
+  "incorrect": {
+   "A": "An ACL permits or denies based on addresses, ports and protocols. It is a coarse filter that cannot recognise an attack inside otherwise-allowed traffic.",
+   "B": "An IDS detects and alerts but does not block. The attack still reaches its target while somebody reads the alert.",
+   "C": "HIDS monitors a single host from the inside. It protects that machine only and is not an environment-wide defence against external attack."
+  }
+ },
+ "q0133": {
+  "objective": "3.4",
+  "explanation": "A generator produces power continuously for as long as it has fuel, so it can carry a data centre through days without utility supply. That is a different job from bridging the seconds between an outage and the generator starting.",
+  "incorrect": {
+   "B": "A UPS runs on batteries and is sized in minutes, not days. Its role is to keep systems alive until the generator comes online or shutdown completes.",
+   "C": "Replication copies data to another location. It supports recovery elsewhere but does nothing to keep this data centre powered.",
+   "D": "Parallel processing runs work on more than one system concurrently. It is a processing model, not a power strategy."
+  }
+ },
+ "q0134": {
+  "objective": "1.1",
+  "explanation": "The signs deter — a visitor who knows they are being recorded is less likely to misbehave. The cameras detect — they capture and identify what actually happens. Neither physically stops anyone, which is what separates these from preventive controls.",
+  "incorrect": {
+   "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges towards this, but its purpose here is to discourage.",
+   "C": "Preventive controls physically stop an act before it occurs. A camera records but blocks nothing.",
+   "E": "Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
+   "F": "Technical describes how a control is implemented, not what it does. The question is asking about control function."
+  }
+ },
+ "q0135": {
+  "objective": "1.4",
+  "explanation": "Key escrow deposits a copy of the key with a trusted custodian who releases it to authorised parties under defined conditions. That is the recognised way to let more than one entity obtain a key when needed without simply handing it around.",
+  "incorrect": {
+   "A": "Public key infrastructure issues, distributes and revokes certificates. It manages trust in public keys rather than safeguarding a shared secret key.",
+   "B": "An open public ledger records transactions transparently for anyone to read. Publishing a key defeats the purpose entirely.",
+   "C": "Public key encryption protects data in transit between parties. It secures the exchange but does not store a key for later authorised retrieval."
+  }
+ },
+ "q0136": {
+  "objective": "1.4",
+  "explanation": "Comparing a downloaded file against the hash the vendor published proves the bytes you received match the bytes they released, so the file was not corrupted or tampered with in transit. That is integrity verification. Note the question is loosely worded: 3DES is an encryption algorithm, not a hash — the intended answer is the integrity check a published hash provides.",
+  "incorrect": {
+   "B": "Authenticity means proving who published the file, which requires a digital signature. A bare hash on the same website could be replaced by anyone who altered the file there.",
+   "C": "Activating a licence is a commercial step handled by a key or an account. It has no relationship to hashing.",
+   "D": "Calculating the checksum is the mechanism, not the reason. The administrator computes it in order to test integrity."
+  }
+ },
+ "q0137": {
+  "objective": "3.1",
+  "explanation": "Virtualisation runs many virtual machines on one physical host, consolidating workloads that previously needed separate hardware. Reducing the physical server count is precisely what it was created to do.",
+  "incorrect": {
+   "A": "Isolation separates systems so they cannot affect one another. It is a security property, and strict isolation often means more separation, not less hardware.",
+   "B": "Segmentation divides a network into zones. It changes network design without affecting how many servers exist.",
+   "D": "Redundancy adds duplicate components so failures are survivable. By definition it increases the amount of hardware."
+  }
+ },
+ "q0138": {
+  "objective": "1.2",
+  "explanation": "A distributed denial of service attack works by making a service unreachable to legitimate users. Defending against it protects availability — the third leg of the CIA triad, concerned with systems being usable when needed.",
+  "incorrect": {
+   "B": "Non-repudiation prevents someone denying an action they took, achieved through signatures and logging. A DDoS attack does not involve disputed actions.",
+   "C": "Integrity means data has not been altered. A DDoS floods a service without changing any data.",
+   "D": "Confidentiality keeps data from unauthorised eyes. Nothing is disclosed by a denial of service attack."
+  }
+ },
+ "q0139": {
+  "objective": "4.8",
+  "explanation": "New incident response documentation is untested until people try to use it. A tabletop exercise walks the team through realistic scenarios against the new procedures, which surfaces gaps, ambiguities and missing contacts while there is no real incident underway.",
+  "incorrect": {
+   "A": "Setting a data retention policy governs how long records are kept. It is unrelated to validating response procedures.",
+   "B": "Storing the documents on an air-gapped network would make them unreachable during exactly the incident they are written for. Offline copies are sensible; air-gapping is not.",
+   "C": "Reviewing the classification policy determines how the documents should be labelled and handled. That is administrative housekeeping, not validation."
+  }
+ },
+ "q0140": {
+  "objective": "5.4",
+  "explanation": "Failing audits against a regulatory standard means the organisation is not meeting requirements it is legally obliged to meet. Non-compliance is what regulators fine, and repeated failure is why the penalty escalated to a financial one.",
+  "incorrect": {
+   "B": "Contract violations are breaches of agreements between private parties, enforced through the contract or the courts, not by a government regulator.",
+   "C": "Government sanctions are restrictions imposed for policy reasons such as trade or foreign relations. The fine here is the consequence, and non-compliance is its cause.",
+   "D": "Rules of engagement define the scope and limits of a security test. They have no bearing on regulatory audits."
+  }
+ },
+ "q0141": {
+  "objective": "3.3",
+  "explanation": "Government project information needs both a sensitivity level and an access limitation. Confidential marks the harm that disclosure would cause, and Restricted signals that access is limited to a specifically authorised group rather than to staff generally.",
+  "incorrect": {
+   "A": "Private typically covers personal information about individuals, such as employee records. This is project material, not personal data.",
+   "C": "Public means disclosure causes no harm. Critical government project information is the opposite of that.",
+   "D": "Operational is not a standard classification level. It describes a type of data or control rather than its sensitivity.",
+   "E": "Urgent describes priority or timeliness, not how sensitive something is."
+  }
+ },
+ "q0142": {
+  "objective": "4.8",
+  "explanation": "The post-incident review, or lessons learned phase, asks why the incident was possible at all. Determining root cause is what turns a single response into an improvement, because it identifies the underlying weakness rather than the symptom that was cleaned up.",
+  "incorrect": {
+   "B": "Developing mitigation steps follows from the root cause. You cannot sensibly design fixes before you know what actually allowed the incident.",
+   "C": "Validating evidence accuracy happens during the investigation and analysis phase, while the evidence is being collected and handled.",
+   "D": "Reestablishing configuration and settings is recovery work, completed before the review begins."
+  }
+ },
+ "q0143": {
+  "objective": "1.4",
+  "explanation": "When passwords are protected by a weak or fast algorithm — MD5, unsalted SHA-1, short key lengths — an attacker can compute enormous numbers of candidate hashes cheaply. The weakness of the algorithm is exactly what makes cracking feasible.",
+  "incorrect": {
+   "B": "An on-path attack intercepts traffic between two parties. It exploits the network position, which is available whether the cryptography is strong or weak.",
+   "C": "Digital signing is a protective mechanism, not an attack.",
+   "D": "A side-channel attack infers secrets from physical characteristics such as timing or power draw. It targets the implementation, and works even against algorithms that are cryptographically strong."
+  }
+ },
+ "q0144": {
+  "objective": "1.2",
+  "explanation": "A bollard is a physical barrier that stops a vehicle reaching a building. It prevents the act rather than recording it, which makes it the preventive control among these options.",
+  "incorrect": {
+   "A": "A video surveillance system records what happens. Recording is detective, and deterrent where the cameras are visible.",
+   "C": "An alarm system announces that something has occurred. Notification after the event is detective.",
+   "D": "Motion sensors detect movement and trigger an alert. Like the alarm, they observe rather than obstruct."
+  }
+ },
+ "q0145": {
+  "objective": "5.1",
+  "explanation": "A playbook is a short, prescriptive set of steps for handling one specific situation. Analysts open it mid-incident and follow it, which is what just-in-time reference means — guidance consulted at the moment of need rather than studied in advance.",
+  "incorrect": {
+   "A": "A change management policy governs how changes are approved and implemented. It is a governance document, not something read during a live alert.",
+   "B": "A risk profile summarises the organisation's risk exposure. It informs strategy rather than telling an analyst what to do next.",
+   "D": "A SIEM profile is configuration within the tool. It shapes what the SIEM reports but is not reference material for a responder."
+  }
+ },
+ "q0146": {
+  "objective": "3.2",
+  "explanation": "A client agent establishing an encrypted tunnel to the corporate network is the classic IPSec remote access VPN. IPSec authenticates and encrypts the IP traffic itself, protecting everything carried inside the tunnel.",
+  "incorrect": {
+   "A": "GRE encapsulates traffic to build a tunnel but provides no encryption at all. It is often paired with IPSec precisely because it lacks that protection.",
+   "C": "SD-WAN manages and optimises traffic across multiple WAN links between sites. It is a site-to-site technology, not an endpoint remote access client.",
+   "D": "EAP is an authentication framework used within protocols such as 802.1X. It authenticates users but does not itself create the encrypted tunnel."
+  }
+ },
+ "q0147": {
+  "objective": "4.5",
+  "explanation": "User behaviour analytics builds a baseline of what normal access looks like for each person and flags deviations. An employee reaching into systems unrelated to their role is a behavioural anomaly rather than a policy violation any static rule would catch, which is exactly what UBA is designed to surface.",
+  "incorrect": {
+   "B": "EDR detects malicious activity on an endpoint — malware, suspicious processes, persistence. The employee is using ordinary tools with valid credentials.",
+   "C": "NAC decides whether a device may join the network at all. Once these employees are on, it has no view of what they access.",
+   "D": "DLP watches for sensitive data leaving the organisation. It would catch exfiltration but not mere unauthorised viewing."
+  }
+ },
+ "q0148": {
+  "objective": "5.5",
+  "explanation": "A third-party attestation report is produced once by an independent auditor and shared with every customer who asks. That satisfies the demand for an independent opinion without the organisation absorbing separate audits from each client, which is where the efficiency comes from.",
+  "incorrect": {
+   "A": "A penetration test assesses whether systems can be breached at a moment in time. It is not an opinion on whether controls operate effectively.",
+   "B": "A self-assessment is performed by the organisation on itself. Customers asked for independence, which a self-assessment cannot provide.",
+   "C": "Allowing each client a right to audit gives independence but is the least efficient option possible, multiplying the burden by the number of customers."
+  }
+ },
+ "q0149": {
+  "objective": "4.9",
+  "explanation": "The question asks specifically about detecting the attempts. User activity logs record authentication events including repeated failures against administrator accounts, which is the evidence trail that reveals someone guessing credentials from inside.",
+  "incorrect": {
+   "A": "Two-factor authentication would prevent the attempts from succeeding. Prevention is valuable, but it is not detection.",
+   "B": "A firewall controls traffic between networks. The employee is already on the academic server, so no boundary is crossed.",
+   "C": "An intrusion prevention system blocks recognised attack traffic. It might stop a fast brute force but is not the record used to detect and investigate the behaviour."
+  }
+ },
+ "q0150": {
+  "objective": "5.4",
+  "explanation": "The question asks what the retailer faces from customers specifically. Fines, sanctions and contractual penalties come from regulators, card brands and acquiring banks. What customers impose is loss of trust — reputational damage that drives them to shop elsewhere.",
+  "incorrect": {
+   "A": "Contractual impacts come from the acquiring bank or card brands under the merchant agreement, not from customers.",
+   "B": "Sanctions such as losing the ability to process cards are imposed by the payment industry, again not by customers.",
+   "C": "Fines are levied by the card brands through the acquirer. Customers have no mechanism to fine anyone."
+  }
+ }
 }

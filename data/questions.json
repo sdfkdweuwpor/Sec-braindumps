@@ -3040,21 +3040,21 @@
       }
     ],
     "correct": [
-      "B"
+      "A"
     ],
-    "explanation": "The root cause was a flaw in the certificate authority that let crafted certificates be issued. Cleanup has to remove the defect itself, so patching the CA is the remediation — anything else leaves the same certificates issuable tomorrow.",
+    "explanation": "The attack worked by issuing specially crafted certificates, and those certificates stay valid until they are revoked. Cleanup means removing what the test left behind, so the crafted certificates must be revoked and the CRL updated to publish that revocation. Patching the CA fixes the underlying flaw, but that is remediation of the vulnerability, not cleanup of the artifacts. Published answers split between these two.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Updating the CRL revokes the certificates the testers created, which is necessary housekeeping. It undoes the symptom while leaving the flaw that produced them.",
-      "C": "Changing passwords is sensible after a compromise of domain administrator rights, but the attack did not rely on passwords — it forged certificates.",
-      "D": "Implementing SOAR automates response workflows. It is a programme improvement, not remediation of a specific PKI vulnerability."
+      "B": "Patching the CA fixes the vulnerability so it cannot be exploited again, but the certificates already issued remain valid until revoked.",
+      "C": "Changing passwords does not invalidate certificates, which authenticate independently of passwords.",
+      "D": "SOAR automates incident response workflows. It does not remove the rogue certificates."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p31",
     "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0073",
@@ -4471,21 +4471,21 @@
       }
     ],
     "correct": [
-      "D"
+      "B"
     ],
-    "explanation": "An acceptable use policy governs how people behave day to day — what they may do with company systems. Controls implemented and enforced through people and process are operational, as distinct from managerial controls, which direct the security programme itself.",
+    "explanation": "An acceptable use policy is a written policy set by management that governs how people may use company systems. Policies, procedures and governance documents are managerial controls in CompTIA's categories.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Physical controls act on the physical environment: locks, fences, guards, cameras. A written policy is not one of them.",
-      "B": "Managerial controls are the planning and oversight layer — risk assessments, security planning, control selection. An AUP directs user conduct rather than managing the programme.",
-      "C": "Technical controls are implemented in hardware or software, such as firewalls and encryption. A policy is enforced by people."
+      "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
+      "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+      "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p50",
     "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0107",
@@ -7461,21 +7461,21 @@
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "Memory injection writes malicious code straight into the address space of a running, trusted process. Because nothing is written to disk and the code executes under a legitimate process, file-based scanning and normal operating system controls have nothing to inspect.",
+    "explanation": "Firmware runs beneath the operating system -- in the BIOS/UEFI, drive controllers or network cards -- and executes before the OS loads. Malicious code there is invisible to the OS and its security tools, which can only see what the firmware presents to them. Some published answers pick memory injection.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Firmware vulnerabilities sit below the operating system and are certainly stealthy, but they are flaws in device code rather than a technique for hiding a running exploit.",
-      "B": "Side loading installs an application from outside the official store. The app is a visible file on the device.",
-      "D": "Encrypted payloads hide the content of a file or transmission from inspection. The payload still has to be decrypted and executed somewhere, which is where detection can occur."
+      "B": "Side loading installs apps from outside the official store. The app still runs inside the OS, which can see it.",
+      "C": "Memory injection hides malicious code inside a legitimate process to evade some tools, but the code still runs within the operating system, where memory scanning and EDR can find it.",
+      "D": "Encrypted payloads hide content from network inspection in transit, but they must be decrypted and run on the OS to do anything."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p80",
     "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0179",
@@ -10147,21 +10147,21 @@
       }
     ],
     "correct": [
-      "C"
+      "D"
     ],
-    "explanation": "Journaling records every transaction as it happens, so the database can be rolled forward to within moments of the failure. Continuous capture gives the smallest possible data loss window and the fastest restoration to a consistent state.",
+    "explanation": "A hot site runs continuously with current, replicated data, so failover is near-instant (lowest RTO) and little or no data is lost (lowest RPO). Journaling gives an excellent RPO but still requires restoring and replaying to a working system, so its recovery time is longer. Some published answers pick journaling.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Snapshots capture the state at intervals. Anything written since the last snapshot is lost, so the RPO is as long as the gap between them.",
-      "B": "On-site backups are periodic copies. They are usually the slowest to restore and the furthest behind of these options.",
-      "D": "A hot site gives somewhere to run quickly, which helps RTO, but the data available there is only as current as whatever replication feeds it."
+      "A": "Snapshots are point-in-time copies. Anything written after the last snapshot is lost, and restoring takes time.",
+      "B": "On-site backups must be restored before service resumes and lose everything since the last backup, and they share the primary site's disaster risk.",
+      "C": "Journaling records every change and gives a very low RPO, but recovery still means restoring and replaying the log, so the RTO is higher than a hot site."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p107",
     "needsReview": false,
     "inferenceConfidence": 0.778,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0242",
@@ -12603,21 +12603,21 @@
       }
     ],
     "correct": [
-      "A"
+      "C"
     ],
-    "explanation": "A duplicate site that mimics the company's real mail interface is pretending to be the company in order to capture credentials. Assuming a trusted organisation's identity to deceive users is impersonation.",
+    "explanation": "A copy of the company's email site, run by someone else to collect logins, is a phishing site -- the fake page is the tool used to harvest the credentials users type in. Some published answers pick impersonation, but in CompTIA's terms impersonation means pretending to be a person, typically over the phone or in person.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "B": "Replication is copying data between systems for availability or backup. It is a legitimate technical process, not an attack.",
-      "C": "Phishing is the delivery method — the message that lures a user to the fake site. The question asks what is being used at the site itself, which is impersonation of the company.",
-      "D": "Smishing is phishing over SMS. No text messages are involved."
+      "A": "Impersonation is an attacker pretending to be someone else, such as help desk staff or an executive. A cloned website is the mechanism of phishing.",
+      "B": "Replication is copying data between systems for redundancy. It is not an attack.",
+      "D": "Smishing is phishing delivered by SMS text message. Nothing here involves text messages."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
     "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0301",
@@ -13933,9 +13933,9 @@
   },
   {
     "id": "q0332",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
+    "domain": 4,
+    "objective": "4.8",
+    "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
     "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
     "choices": [
@@ -13957,21 +13957,21 @@
       }
     ],
     "correct": [
-      "B"
+      "A"
     ],
-    "explanation": "The file is a keystroke log: it records the user's email address, their password and the literal key presses including backspaces and control characters. A keylogger is running, so the machine is compromised and must be reimaged before anything else is trusted.",
+    "explanation": "The file is a keylogger capture that already holds the user's email address and password, so that credential must be treated as compromised now. The first action is to have the user change passwords from a clean device; reimaging the machine is the next step, removing the keylogger itself. Some published answers put reimaging first.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Changing passwords matters and will be necessary, but doing it while the keylogger is still running simply captures the new password too.",
-      "C": "Checking the personal email policy is a governance question. There is an active compromise to deal with first.",
-      "D": "Checking host firewall logs is useful investigation, but it defers containment while the attacker continues collecting keystrokes."
+      "B": "Reimaging removes the keylogger, but the captured password is already exposed. The account stays at risk until the password is changed.",
+      "C": "Personal email policy is beside the point; the priority is the compromised credential.",
+      "D": "Firewall logs might show exfiltration, but checking them does not protect the exposed account."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p148",
     "needsReview": false,
     "inferenceConfidence": 0.667,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0333",
@@ -20049,9 +20049,9 @@
   },
   {
     "id": "q0475",
-    "domain": 4,
-    "objective": "4.1",
-    "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
     "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's computer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
     "choices": [
@@ -20073,21 +20073,21 @@
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "The chain was click, download, execute, exfiltrate. Endpoint protection acts at the execution step — detecting and blocking the malicious payload on the workstation before it installs, which stops everything downstream.",
+    "explanation": "The chain started with an employee clicking a malicious link, so the control that stops it recurring is user awareness training to recognize and avoid phishing. Technical controls can catch some of what follows, but the root cause is the click. Some published answers pick endpoint protection.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "User awareness training addresses the click and is genuinely valuable, but some proportion of users will always click. The question asks what best prevents the outcome.",
-      "B": "Network monitoring detects the exfiltration in progress. Detection after thousands of records have moved is too late.",
-      "D": "DLP could block the outbound transfer, which helps, but it acts at the final step rather than preventing the compromise."
+      "B": "Network monitoring may detect exfiltration after it starts, but it does not stop employees from clicking malicious links.",
+      "C": "Endpoint protection can block some malware, but it does not address the behaviour that let it in, and new malware can evade it.",
+      "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p204",
     "needsReview": false,
     "inferenceConfidence": 0.5,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0476",
@@ -21170,21 +21170,21 @@
       }
     ],
     "correct": [
-      "D"
+      "C"
     ],
-    "explanation": "The signal is reaching neighbouring buildings, which is a coverage problem. A site survey measures where the signal actually propagates so access point placement, transmit power and antenna direction can be adjusted to keep coverage inside the premises.",
+    "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighbouring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Mobile device management controls enrolled devices. It has no influence on how far a radio signal travels.",
-      "B": "Pre-shared keys control who may join. They stop unauthorised association but the network is still visible and attackable from outside.",
-      "C": "A heat map is the visual output produced from survey measurements. It is a deliverable rather than the activity that fixes the spill."
+      "A": "MDM manages the devices the company owns. It cannot stop outside devices from seeing the network.",
+      "B": "A pre-shared key controls who can join, but the network stays just as visible to outsiders.",
+      "D": "A site survey plans coverage and identifies interference, but the heat map is the specific tool that shows signal leaking outside the building."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p214",
     "needsReview": false,
     "inferenceConfidence": 1.0,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0502",

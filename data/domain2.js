@@ -1130,21 +1130,21 @@ export const domain2Questions = [
       }
     ],
     "correct": [
-      "C"
+      "A"
     ],
-    "explanation": "Memory injection writes malicious code straight into the address space of a running, trusted process. Because nothing is written to disk and the code executes under a legitimate process, file-based scanning and normal operating system controls have nothing to inspect.",
+    "explanation": "Firmware runs beneath the operating system -- in the BIOS/UEFI, drive controllers or network cards -- and executes before the OS loads. Malicious code there is invisible to the OS and its security tools, which can only see what the firmware presents to them. Some published answers pick memory injection.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Firmware vulnerabilities sit below the operating system and are certainly stealthy, but they are flaws in device code rather than a technique for hiding a running exploit.",
-      "B": "Side loading installs an application from outside the official store. The app is a visible file on the device.",
-      "D": "Encrypted payloads hide the content of a file or transmission from inspection. The payload still has to be decrypted and executed somewhere, which is where detection can occur."
+      "B": "Side loading installs apps from outside the official store. The app still runs inside the OS, which can see it.",
+      "C": "Memory injection hides malicious code inside a legitimate process to evade some tools, but the code still runs within the operating system, where memory scanning and EDR can find it.",
+      "D": "Encrypted payloads hide content from network inspection in transit, but they must be decrypted and run on the OS to do anything."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p80",
     "needsReview": false,
     "inferenceConfidence": 0.889,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0184",
@@ -2274,21 +2274,21 @@ export const domain2Questions = [
       }
     ],
     "correct": [
-      "A"
+      "C"
     ],
-    "explanation": "A duplicate site that mimics the company's real mail interface is pretending to be the company in order to capture credentials. Assuming a trusted organisation's identity to deceive users is impersonation.",
+    "explanation": "A copy of the company's email site, run by someone else to collect logins, is a phishing site -- the fake page is the tool used to harvest the credentials users type in. Some published answers pick impersonation, but in CompTIA's terms impersonation means pretending to be a person, typically over the phone or in person.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "B": "Replication is copying data between systems for availability or backup. It is a legitimate technical process, not an attack.",
-      "C": "Phishing is the delivery method — the message that lures a user to the fake site. The question asks what is being used at the site itself, which is impersonation of the company.",
-      "D": "Smishing is phishing over SMS. No text messages are involved."
+      "A": "Impersonation is an attacker pretending to be someone else, such as help desk staff or an executive. A cloned website is the mechanism of phishing.",
+      "B": "Replication is copying data between systems for redundancy. It is not an attack.",
+      "D": "Smishing is phishing delivered by SMS text message. Nothing here involves text messages."
     },
     "references": [],
     "source": "SY0-701_en.pdf#p134",
     "needsReview": false,
     "inferenceConfidence": 0.75,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0313",
@@ -2371,48 +2371,6 @@ export const domain2Questions = [
     "source": "SY0-701_en.pdf#p147",
     "needsReview": false,
     "inferenceConfidence": 1.0,
-    "needsExplanation": false,
-    "keyCorrected": false
-  },
-  {
-    "id": "q0332",
-    "domain": 2,
-    "objective": "2.4",
-    "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
-    "type": "single",
-    "question": "A SOC analyst establishes a remote control session on an end user's machine and discovers the following in a file:\ngmail.com[ENT]my.name@gmail.com[ENT]NoOneCanGuessThis123! [ENT]Hello Susan, it was great to see you the other day! Let's plan a followup[BACKSPACE]follow-up meeting soon. Here is the link to register. [RTN][CTRL]c [CTRL]v [RTN]after [BACKSPACE]After you register give me a call on my cellphone.\nWhich of the following actions should the SOC analyst perform first?",
-    "choices": [
-      {
-        "key": "A",
-        "text": "Advise the user to change passwords."
-      },
-      {
-        "key": "B",
-        "text": "Reimage the end user's machine."
-      },
-      {
-        "key": "C",
-        "text": "Check the policy on personal email at work."
-      },
-      {
-        "key": "D",
-        "text": "Check host firewall logs."
-      }
-    ],
-    "correct": [
-      "B"
-    ],
-    "explanation": "The file is a keystroke log: it records the user's email address, their password and the literal key presses including backspaces and control characters. A keylogger is running, so the machine is compromised and must be reimaged before anything else is trusted.",
-    "explanationSource": "authored",
-    "incorrectExplanations": {
-      "A": "Changing passwords matters and will be necessary, but doing it while the keylogger is still running simply captures the new password too.",
-      "C": "Checking the personal email policy is a governance question. There is an active compromise to deal with first.",
-      "D": "Checking host firewall logs is useful investigation, but it defers containment while the attacker continues collecting keystrokes."
-    },
-    "references": [],
-    "source": "SY0-701_en.pdf#p148",
-    "needsReview": false,
-    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },

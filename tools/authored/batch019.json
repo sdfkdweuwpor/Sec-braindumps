@@ -1,239 +1,308 @@
 {
-"q0595": {"objective":"4.8",
- "explanation":"The incident is already resolved and stakeholders are meeting to discuss what should change. Reviewing the response and identifying improvements after the fact is the lessons learned phase, the final stage of the incident response process.",
- "incorrect":{
-  "A":"Recovery restores affected systems to normal operation. That work is finished before this meeting takes place.",
-  "B":"Analysis determines what happened and how far it reached, during the incident rather than after it.",
-  "D":"Containment limits damage while the incident is live."}},
-
-"q0596": {"objective":"3.3",
- "explanation":"Obfuscation scrambles or replaces sensitive fields so the records keep their shape and remain usable for testing while no longer containing real customer information. That is the balance the engineer needs — realistic data without exposure.",
- "incorrect":{
-  "B":"RBAC limits who may reach the data. The engineer legitimately needs access, and the real data would still be there.",
-  "C":"Tokenisation substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
-  "D":"Filtering returns fewer records. A smaller set of real customer data is still real customer data."}},
-
-"q0597": {"objective":"1.4",
- "explanation":"A lost laptop means someone else has the hardware. Full disk encryption encrypts the entire volume, so removing the drive or booting another operating system yields ciphertext rather than files.",
- "incorrect":{
-  "A":"Volume encryption covers one logical volume. Data written outside it, including some system areas, stays readable.",
-  "C":"Partition encryption protects a single partition, leaving others on the same disk exposed.",
-  "D":"File encryption protects only the files chosen. Temporary copies, swap and anything not selected remain in the clear."}},
-
-"q0598": {"objective":"4.3",
- "explanation":"Determining whether an attachment is malicious means watching what it actually does. A sandbox executes it in an isolated environment and records its behaviour, so the analyst gets a verdict without risking a production system.",
- "incorrect":{
-  "A":"Sanitisation removes data from media. It is a disposal technique, not an analysis one.",
-  "C":"Static analysis inspects the file without running it. Useful and fast, but packed or novel samples reveal little until they execute.",
-  "D":"Enumeration lists resources such as users or shares during an assessment."}},
-
-"q0599": {"objective":"4.5",
- "explanation":"A customer list leaving by email is sensitive data in motion. DLP inspects outbound content against policy and flags or blocks protected information heading to an unauthorised destination, which is exactly this scenario.",
- "incorrect":{
-  "B":"FIM alerts when protected files are modified. Copying a file into an email changes nothing on disk.",
-  "C":"An IDS looks for attack patterns in network traffic. A staff member sending an email generates entirely normal traffic.",
-  "D":"EDR watches for malicious activity on endpoints. Attaching a file to a message is not malicious behaviour by any technical measure."}},
-
-"q0600": {"objective":"4.8",
- "explanation":"The team ran a simulated scenario against their updated playbook and then assessed how they did. Walking through an incident in discussion to rehearse and evaluate the response is a tabletop exercise.",
- "incorrect":{
-  "A":"Lessons learned is the review that follows a real incident. Nothing actually happened here.",
-  "B":"Root cause analysis determines why an incident occurred. There is no incident to analyse.",
-  "C":"Disaster recovery planning covers restoring systems after a major disruption. Ransomware response is incident response, and the activity described is the rehearsal, not the plan."}},
-
-"q0601": {"objective":"4.3",
- "explanation":"SCAP is a set of standards that lets tools express, exchange and check security configuration and vulnerability data in a machine-readable way. That interoperability is what makes automated vulnerability and compliance assessment possible across different products.",
- "incorrect":{
-  "A":"CVE is a naming catalogue giving each vulnerability a unique identifier. Identifiers alone automate nothing.",
-  "C":"OSINT is intelligence gathered from public sources. It is a research discipline, not an automation framework.",
-  "D":"CVSS scores severity. It helps prioritise findings without automating how they are discovered or checked."}},
-
-"q0602": {"objective":"5.2",
- "explanation":"A one-time assessment fits a discrete event with a beginning and an end. Decommissioning an application is exactly that — a specific change whose risks are evaluated once, then the application is gone and there is nothing left to reassess.",
- "incorrect":{
-  "A":"Quantifying annual loss expectancy is a calculation within an assessment rather than a reason to run one.",
-  "B":"Updating the risk register periodically is by definition recurring.",
-  "C":"Complying with a regulation almost always requires ongoing or recurring assessment, not a single exercise."}},
-
-"q0603": {"objective":"2.2",
- "explanation":"The employee went to a site they routinely use for work and it delivered malware. Compromising a legitimate site that a specific group is known to visit, so the victims come to the attacker, is a watering hole attack.",
- "incorrect":{
-  "A":"Cross-site scripting injects script that runs in the browser. It steals sessions or data rather than downloading and installing a desktop application.",
-  "C":"Typosquatting relies on the user mistyping an address. The employee reached the genuine payment site.",
-  "D":"A buffer overflow is a memory-handling defect. It might be exploited somewhere in the chain but does not describe the attack."}},
-
-"q0604": {"objective":"4.8",
- "explanation":"Outbound traffic to a known-malicious address means the workstation is actively communicating with an attacker. Isolating it immediately severs that channel, stopping both further instructions arriving and any data still leaving — which is what containment means.",
- "incorrect":{
-  "A":"Changing passwords is a sensible follow-up, but doing it first leaves the compromised machine connected and able to capture the new credentials.",
-  "C":"Patching addresses how the machine may have been compromised. That is remediation, and it does nothing about the live connection.",
-  "D":"Reviewing hardening and policy is a longer-term improvement. The threat is active now."}},
-
-"q0605": {"objective":"2.5",
- "explanation":"The system is business-critical so it must keep running, and it is end of life so it cannot be patched. Isolation removes the attacker's route to it — segmenting it away and restricting what may reach it — which reduces exposure without taking it offline.",
- "incorrect":{
-  "A":"Monitoring tells you when someone attacks it. Detection does not prevent exploitation.",
-  "C":"Decommissioning removes the system, which the business-critical requirement forbids.",
-  "D":"Encryption protects data confidentiality. It does nothing about a vulnerable service being exploited."}},
-
-"q0606": {"objective":"2.1",
- "explanation":"A hacktivist attacks in service of a cause, so the reward is the message rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
- "incorrect":{
-  "A":"Financial gain motivates organised crime.",
-  "B":"Service disruption is often the method a hacktivist uses to draw attention. It is the tactic, not the underlying motive.",
-  "D":"Corporate espionage seeks commercial advantage through stolen information."}},
-
-"q0607": {"objective":"1.2",
- "explanation":"A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
- "incorrect":{
-  "A":"A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
-  "B":"Fencing marks a boundary and deters people on foot. Standard fencing will not withstand a vehicle.",
-  "C":"Lighting improves visibility and deters. It presents no physical barrier."}},
-
-"q0608": {"objective":"3.1",
- "explanation":"Defining security configuration as code, so WAF policies are provisioned automatically whenever an application deploys, is infrastructure as code. The policy lives in version control alongside the application and is applied by the same pipeline.",
- "incorrect":{
-  "B":"IoT refers to networked embedded devices.",
-  "C":"IoC means indicator of compromise — an artefact such as a hash or address showing a system was attacked.",
-  "D":"IaaS is a cloud service model providing compute and storage. It supplies the platform rather than automating configuration on it."}},
-
-"q0609": {"objective":"3.1",
- "explanation":"Industrial control systems run manufacturing and utility processes on proprietary protocols and hardware, are installed for decades in physically demanding environments, and are deliberately kept with minimal remote management. Every element of the description matches ICS.",
- "incorrect":{
-  "B":"Microservers are small general-purpose computers. They use standard operating systems and protocols.",
-  "C":"Containers package applications to run on a shared kernel. They are a software deployment model, not field equipment.",
-  "D":"IoT devices are networked and often cloud-managed, which is the opposite of limited remote access, and they use standard protocols rather than proprietary industrial ones."}},
-
-"q0610": {"objective":"3.4",
- "explanation":"Note the question asks for low cost, and of these options a cold site is the cheapest recovery strategy — space, power and cooling with no standing equipment or data. Be aware the trade-off is a slow recovery, so 'quick' fits poorly; cold is nonetheless the only low-cost option offered.",
- "incorrect":{
-  "A":"A hot site is fully equipped and continuously synchronised, giving the fastest recovery at the highest cost.",
-  "C":"Manual is not a recognised recovery site type.",
-  "D":"A warm site has hardware and connectivity with data restored at failover. It sits between the two on both speed and cost."}},
-
-"q0611": {"objective":"4.4",
- "explanation":"Benchmarks such as the CIS guides define a known-good configuration for a product. Building a template from a benchmark gives the MSSP one vetted standard to apply and audit across hundreds of client firewalls rather than configuring each from scratch.",
- "incorrect":{
-  "A":"SNMP monitors and manages device state. It reports and sets values rather than defining a configuration standard.",
-  "C":"NetFlow records traffic flow metadata. It is a visibility tool.",
-  "D":"SCAP automates configuration and compliance checking against defined content. It is the machinery for verifying compliance with a benchmark rather than the standard itself."}},
-
-"q0612": {"objective":"5.6",
- "explanation":"Turning awareness into a contest with rewards for good behaviour is gamification. It borrows competition and incentive from games to motivate staff, which is a recognised technique for executing a security awareness programme.",
- "incorrect":{
-  "A":"Computer-based training is the delivery format for online modules. No training is being delivered here.",
-  "B":"Insider threat awareness is a training topic about recognising malicious colleagues.",
-  "C":"A SOAR playbook automates security response workflows. It is a technical control with no role in awareness."}},
-
-"q0613": {"objective":"2.3",
- "explanation":"The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
- "incorrect":{
-  "B":"A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
-  "C":"A malicious update delivers hostile code through an update channel. A legitimate internal policy rollout is not that.",
-  "D":"Supply chain risk comes from a compromised vendor or component. The change originated inside the organisation."}},
-
-"q0614": {"objective":"2.1",
- "explanation":"A logic bomb hidden inside an internally developed application has to be written into the code by someone with commit access and knowledge of the system. A trusted insider is the only actor with both, which is why they are the likely source.",
- "incorrect":{
-  "A":"A nation-state pursues espionage or strategic disruption, usually through external intrusion rather than by writing code into your internal application.",
-  "C":"Organised crime is motivated by profit and favours ransomware or fraud, which monetise quickly.",
-  "D":"A hacktivist wants publicity. A hidden logic bomb is the opposite of a public statement, and they lack internal code access."}},
-
-"q0615": {"objective":"4.1",
- "explanation":"MDM on corporate-owned devices enforces which applications may be installed and run. Blocking unsupported or unapproved software across the fleet is one of the core reasons organisations deploy it.",
- "incorrect":{
-  "A":"Malware outbreaks are addressed primarily by endpoint protection. MDM contributes indirectly by controlling what installs.",
-  "B":"Phishing attacks target the user's judgement and are addressed by mail filtering and training.",
-  "D":"Data masking obscures values for display in applications and reports. It is a data protection technique, not a device management one."}},
-
-"q0616": {"objective":"5.4",
- "explanation":"The right to be forgotten is a statutory obligation under privacy law such as GDPR. Failing to honour erasure requests is non-compliance, and the enforcement mechanism regulators use is monetary penalty.",
- "incorrect":{
-  "B":"Data breaches result from a security failure. Retaining data longer than permitted is a compliance failure, though it does enlarge what a future breach would expose.",
-  "C":"Revenue loss may follow reputational harm, but it is an indirect downstream effect rather than the impact of the regulatory failure itself.",
-  "D":"Blackmail is a criminal act by an attacker, unrelated to a compliance shortfall."}},
-
-"q0617": {"objective":"4.5",
- "explanation":"Departing employees use their legitimate access, so nothing they do is technically unauthorised. User behaviour analytics baselines what normal looks like for each person and flags the deviation — bulk access to customer records by someone who rarely touches them.",
- "incorrect":{
-  "A":"FIM alerts when protected files change. Reading and copying records modifies nothing.",
-  "B":"NAC decides which devices may join the network. It has no view of what an admitted user does.",
-  "C":"An IDS matches traffic against attack signatures. An employee querying a CRM produces entirely ordinary traffic."}},
-
-"q0618": {"objective":"3.1",
- "explanation":"The failure was that a breach in development could reach production at all. Separate VPCs place the two environments in genuinely distinct networks with no implicit path between them, so compromising one provides no route to the other.",
- "incorrect":{
-  "B":"Deploying firewalls adds filtering, but within a shared VPC the underlying network adjacency remains and the firewall becomes one misconfiguration away from failure.",
-  "C":"Migrating development on-premises moves the problem rather than solving it, and creates a hybrid connection that can itself be pivoted through.",
-  "D":"Security groups restricting access between environments is the right instinct at the wrong layer — they are instance-level rules within a shared network, weaker and easier to misconfigure than true network separation."}},
-
-"q0619": {"objective":"1.2",
- "explanation":"Encryption makes data unreadable without the key, so only authorised parties can interpret it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
- "incorrect":{
-  "B":"Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
-  "C":"Availability means systems and data are accessible when needed. Encryption can even work against it if keys are lost.",
-  "D":"Integrity means data has not been altered, and is assured by hashing and signatures."}},
-
-"q0620": {"objective":"1.4",
- "explanation":"Key escrow deposits a copy of the encryption key with a trusted custodian under controlled conditions. If the working key is corrupted or deleted, the escrowed copy is what allows the data to be decrypted rather than lost permanently.",
- "incorrect":{
-  "A":"Self-signed certificates are certificates an organisation issues to itself. They do not provide key recovery.",
-  "C":"Tokenisation substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
-  "D":"A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."}},
-
-"q0621": {"objective":"5.2",
- "explanation":"A licence is an annual cost, so it has to be weighed against an annual expected loss. ALE gives that yearly figure by combining the cost of one incident with how often it is expected, which makes the two numbers directly comparable.",
- "incorrect":{
-  "B":"SLE is the loss from a single incident. Without frequency it cannot be compared to an annual licence fee.",
-  "C":"RTO is the maximum tolerable downtime. It is a recovery target, not a financial measure.",
-  "D":"ARO is how often the event is expected per year. It is one input to ALE rather than the comparable figure."}},
-
-"q0622": {"objective":"2.5",
- "explanation":"Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is what inaccessibility requires.",
- "incorrect":{
-  "A":"Disabling unused services closes individual ports. The device stays reachable on whatever remains running.",
-  "B":"A web application firewall filters HTTP traffic to a web application. It inspects rather than disconnects, and only for one protocol.",
-  "D":"A network-based IDS watches traffic and alerts. It is passive and blocks nothing."}},
-
-"q0623": {"objective":"4.9",
- "explanation":"The log-in happened inside the webmail application, so the application's own authentication log holds the session details including the source address the credentials were used from. That is the record tying the compromise to an origin.",
- "incorrect":{
-  "A":"Network logs show traffic flows in aggregate. They may show a connection without attributing it to a specific account's log-in.",
-  "C":"System logs record operating system events on a host. Webmail authentication is handled by the application.",
-  "D":"Firewall logs record permitted and denied connections. They show traffic reaching the service but not which account authenticated."}},
-
-"q0624": {"objective":"3.3",
- "explanation":"Classification is the process of assigning a sensitivity label based on a file's value, how damaging disclosure would be, and any regulations governing it. That label then drives the handling and protection requirements.",
- "incorrect":{
-  "A":"Verification confirms that something is accurate or genuine. It does not assign sensitivity.",
-  "B":"Certification is formal attestation that a requirement has been met, such as a certificate of destruction.",
-  "D":"Inventory records what data or assets exist. It catalogues without judging sensitivity."}},
-
-"q0625": {"objective":"1.3",
- "explanation":"The change failed and there was no rehearsed way to undo it, so the outage ran past the window and reached customers. A backout plan defines in advance exactly how to revert, which caps the damage of a failed change at the length of the rollback.",
- "incorrect":{
-  "A":"User notification tells customers something is happening. It manages expectations without shortening the outage.",
-  "B":"Change approval authorises the work. The change was already approved and correctly scheduled.",
-  "C":"Risk analysis assesses what might go wrong beforehand. It informs the decision but supplies no way out once it has gone wrong."}},
-
-"q0626": {"objective":"4.8",
- "explanation":"Chain of custody is the unbroken documented record of who handled each piece of evidence, when, and what they did with it. Without it the defence can argue the evidence may have been altered, and a court can refuse it.",
- "incorrect":{
-  "B":"A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling.",
-  "C":"E-discovery is the legal process of identifying and producing electronically stored information.",
-  "D":"A tabletop exercise rehearses incident response in discussion. It has no evidentiary role."}},
-
-"q0627": {"objective":"2.3",
- "explanation":"VM escape breaks out of a guest into the hypervisor, and from there every other virtual machine on the same host becomes reachable. Attacking one system to reach its neighbours is precisely what that vulnerability enables.",
- "incorrect":{
-  "B":"Side loading installs an application from outside the official store. It affects one device.",
-  "C":"Remote code execution runs attacker code on a target. It gains a foothold on that host without inherently crossing to adjacent ones.",
-  "D":"Resource exhaustion consumes memory, CPU or connections until a service fails. It denies availability rather than granting access."}},
-
-"q0628": {"objective":"4.3",
- "explanation":"Hard-coded credentials are visible in the source itself, so a tool that reads the code finds them. Static analysis runs in the development pipeline without executing anything, which is why it catches secrets before they ever reach production.",
- "incorrect":{
-  "A":"A vulnerability scan probes a running system for known flaws. Credentials embedded in source are invisible to it.",
-  "B":"A penetration test attacks a deployed system. It might eventually find the credentials, but only after they are already in production.",
-  "D":"Quality assurance verifies the software behaves as specified. Hard-coded credentials work perfectly, so functional testing passes."}}
+ "q0595": {
+  "objective": "4.8",
+  "explanation": "The incident is already resolved and stakeholders are meeting to discuss what should change. Reviewing the response and identifying improvements after the fact is the lessons learned phase, the final stage of the incident response process.",
+  "incorrect": {
+   "A": "Recovery restores affected systems to normal operation. That work is finished before this meeting takes place.",
+   "B": "Analysis determines what happened and how far it reached, during the incident rather than after it.",
+   "D": "Containment limits damage while the incident is live."
+  }
+ },
+ "q0596": {
+  "objective": "3.3",
+  "explanation": "Obfuscation scrambles or replaces sensitive fields so the records keep their shape and remain usable for testing while no longer containing real customer information. That is the balance the engineer needs — realistic data without exposure.",
+  "incorrect": {
+   "B": "RBAC limits who may reach the data. The engineer legitimately needs access, and the real data would still be there.",
+   "C": "Tokenisation substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
+   "D": "Filtering returns fewer records. A smaller set of real customer data is still real customer data."
+  }
+ },
+ "q0597": {
+  "objective": "1.4",
+  "explanation": "A lost laptop means someone else has the hardware. Full disk encryption encrypts the entire volume, so removing the drive or booting another operating system yields ciphertext rather than files.",
+  "incorrect": {
+   "A": "Volume encryption covers one logical volume. Data written outside it, including some system areas, stays readable.",
+   "C": "Partition encryption protects a single partition, leaving others on the same disk exposed.",
+   "D": "File encryption protects only the files chosen. Temporary copies, swap and anything not selected remain in the clear."
+  }
+ },
+ "q0598": {
+  "objective": "4.3",
+  "explanation": "Determining whether an attachment is malicious means watching what it actually does. A sandbox executes it in an isolated environment and records its behaviour, so the analyst gets a verdict without risking a production system.",
+  "incorrect": {
+   "A": "Sanitisation removes data from media. It is a disposal technique, not an analysis one.",
+   "C": "Static analysis inspects the file without running it. Useful and fast, but packed or novel samples reveal little until they execute.",
+   "D": "Enumeration lists resources such as users or shares during an assessment."
+  }
+ },
+ "q0599": {
+  "objective": "4.5",
+  "explanation": "A customer list leaving by email is sensitive data in motion. DLP inspects outbound content against policy and flags or blocks protected information heading to an unauthorised destination, which is exactly this scenario.",
+  "incorrect": {
+   "B": "FIM alerts when protected files are modified. Copying a file into an email changes nothing on disk.",
+   "C": "An IDS looks for attack patterns in network traffic. A staff member sending an email generates entirely normal traffic.",
+   "D": "EDR watches for malicious activity on endpoints. Attaching a file to a message is not malicious behaviour by any technical measure."
+  }
+ },
+ "q0600": {
+  "objective": "4.8",
+  "explanation": "The team ran a simulated scenario against their updated playbook and then assessed how they did. Walking through an incident in discussion to rehearse and evaluate the response is a tabletop exercise.",
+  "incorrect": {
+   "A": "Lessons learned is the review that follows a real incident. Nothing actually happened here.",
+   "B": "Root cause analysis determines why an incident occurred. There is no incident to analyse.",
+   "C": "Disaster recovery planning covers restoring systems after a major disruption. Ransomware response is incident response, and the activity described is the rehearsal, not the plan."
+  }
+ },
+ "q0601": {
+  "objective": "4.3",
+  "explanation": "SCAP is a set of standards that lets tools express, exchange and check security configuration and vulnerability data in a machine-readable way. That interoperability is what makes automated vulnerability and compliance assessment possible across different products.",
+  "incorrect": {
+   "A": "CVE is a naming catalogue giving each vulnerability a unique identifier. Identifiers alone automate nothing.",
+   "C": "OSINT is intelligence gathered from public sources. It is a research discipline, not an automation framework.",
+   "D": "CVSS scores severity. It helps prioritise findings without automating how they are discovered or checked."
+  }
+ },
+ "q0602": {
+  "objective": "5.2",
+  "explanation": "A one-time assessment fits a discrete event with a beginning and an end. Decommissioning an application is exactly that — a specific change whose risks are evaluated once, then the application is gone and there is nothing left to reassess.",
+  "incorrect": {
+   "A": "Quantifying annual loss expectancy is a calculation within an assessment rather than a reason to run one.",
+   "B": "Updating the risk register periodically is by definition recurring.",
+   "C": "Complying with a regulation almost always requires ongoing or recurring assessment, not a single exercise."
+  }
+ },
+ "q0603": {
+  "objective": "2.2",
+  "explanation": "The employee went to a site they routinely use for work and it delivered malware. Compromising a legitimate site that a specific group is known to visit, so the victims come to the attacker, is a watering hole attack.",
+  "incorrect": {
+   "A": "Cross-site scripting injects script that runs in the browser. It steals sessions or data rather than downloading and installing a desktop application.",
+   "C": "Typosquatting relies on the user mistyping an address. The employee reached the genuine payment site.",
+   "D": "A buffer overflow is a memory-handling defect. It might be exploited somewhere in the chain but does not describe the attack."
+  }
+ },
+ "q0604": {
+  "objective": "4.8",
+  "explanation": "Outbound traffic to a known-malicious address means the workstation is actively communicating with an attacker. Isolating it immediately severs that channel, stopping both further instructions arriving and any data still leaving — which is what containment means.",
+  "incorrect": {
+   "A": "Changing passwords is a sensible follow-up, but doing it first leaves the compromised machine connected and able to capture the new credentials.",
+   "C": "Patching addresses how the machine may have been compromised. That is remediation, and it does nothing about the live connection.",
+   "D": "Reviewing hardening and policy is a longer-term improvement. The threat is active now."
+  }
+ },
+ "q0605": {
+  "objective": "2.5",
+  "explanation": "The system is business-critical so it must keep running, and it is end of life so it cannot be patched. Isolation removes the attacker's route to it — segmenting it away and restricting what may reach it — which reduces exposure without taking it offline.",
+  "incorrect": {
+   "A": "Monitoring tells you when someone attacks it. Detection does not prevent exploitation.",
+   "C": "Decommissioning removes the system, which the business-critical requirement forbids.",
+   "D": "Encryption protects data confidentiality. It does nothing about a vulnerable service being exploited."
+  }
+ },
+ "q0606": {
+  "objective": "2.1",
+  "explanation": "A hacktivist attacks in service of a cause, so the reward is the message rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
+  "incorrect": {
+   "A": "Financial gain motivates organised crime.",
+   "B": "Service disruption is often the method a hacktivist uses to draw attention. It is the tactic, not the underlying motive.",
+   "D": "Corporate espionage seeks commercial advantage through stolen information."
+  }
+ },
+ "q0607": {
+  "objective": "1.2",
+  "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
+  "incorrect": {
+   "A": "A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
+   "B": "Fencing marks a boundary and deters people on foot. Standard fencing will not withstand a vehicle.",
+   "C": "Lighting improves visibility and deters. It presents no physical barrier."
+  }
+ },
+ "q0608": {
+  "objective": "3.1",
+  "explanation": "Defining security configuration as code, so WAF policies are provisioned automatically whenever an application deploys, is infrastructure as code. The policy lives in version control alongside the application and is applied by the same pipeline.",
+  "incorrect": {
+   "B": "IoT refers to networked embedded devices.",
+   "C": "IoC means indicator of compromise — an artefact such as a hash or address showing a system was attacked.",
+   "D": "IaaS is a cloud service model providing compute and storage. It supplies the platform rather than automating configuration on it."
+  }
+ },
+ "q0609": {
+  "objective": "3.1",
+  "explanation": "Industrial control systems run manufacturing and utility processes on proprietary protocols and hardware, are installed for decades in physically demanding environments, and are deliberately kept with minimal remote management. Every element of the description matches ICS.",
+  "incorrect": {
+   "B": "Microservers are small general-purpose computers. They use standard operating systems and protocols.",
+   "C": "Containers package applications to run on a shared kernel. They are a software deployment model, not field equipment.",
+   "D": "IoT devices are networked and often cloud-managed, which is the opposite of limited remote access, and they use standard protocols rather than proprietary industrial ones."
+  }
+ },
+ "q0610": {
+  "objective": "3.4",
+  "explanation": "Note the question asks for low cost, and of these options a cold site is the cheapest recovery strategy — space, power and cooling with no standing equipment or data. Be aware the trade-off is a slow recovery, so 'quick' fits poorly; cold is nonetheless the only low-cost option offered.",
+  "incorrect": {
+   "A": "A hot site is fully equipped and continuously synchronised, giving the fastest recovery at the highest cost.",
+   "C": "Manual is not a recognised recovery site type.",
+   "D": "A warm site has hardware and connectivity with data restored at failover. It sits between the two on both speed and cost."
+  }
+ },
+ "q0611": {
+  "objective": "4.4",
+  "explanation": "Benchmarks such as the CIS guides define a known-good configuration for a product. Building a template from a benchmark gives the MSSP one vetted standard to apply and audit across hundreds of client firewalls rather than configuring each from scratch.",
+  "incorrect": {
+   "A": "SNMP monitors and manages device state. It reports and sets values rather than defining a configuration standard.",
+   "C": "NetFlow records traffic flow metadata. It is a visibility tool.",
+   "D": "SCAP automates configuration and compliance checking against defined content. It is the machinery for verifying compliance with a benchmark rather than the standard itself."
+  }
+ },
+ "q0612": {
+  "objective": "5.6",
+  "explanation": "Turning awareness into a contest with rewards for good behaviour is gamification. It borrows competition and incentive from games to motivate staff, which is a recognised technique for executing a security awareness programme.",
+  "incorrect": {
+   "A": "Computer-based training is the delivery format for online modules. No training is being delivered here.",
+   "B": "Insider threat awareness is a training topic about recognising malicious colleagues.",
+   "C": "A SOAR playbook automates security response workflows. It is a technical control with no role in awareness."
+  }
+ },
+ "q0613": {
+  "objective": "2.3",
+  "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
+  "incorrect": {
+   "B": "A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
+   "C": "A malicious update delivers hostile code through an update channel. A legitimate internal policy rollout is not that.",
+   "D": "Supply chain risk comes from a compromised vendor or component. The change originated inside the organisation."
+  }
+ },
+ "q0614": {
+  "objective": "2.1",
+  "explanation": "A logic bomb hidden inside an internally developed application has to be written into the code by someone with commit access and knowledge of the system. A trusted insider is the only actor with both, which is why they are the likely source.",
+  "incorrect": {
+   "A": "A nation-state pursues espionage or strategic disruption, usually through external intrusion rather than by writing code into your internal application.",
+   "C": "Organised crime is motivated by profit and favours ransomware or fraud, which monetise quickly.",
+   "D": "A hacktivist wants publicity. A hidden logic bomb is the opposite of a public statement, and they lack internal code access."
+  }
+ },
+ "q0615": {
+  "objective": "4.1",
+  "explanation": "MDM on corporate-owned devices enforces which applications may be installed and run. Blocking unsupported or unapproved software across the fleet is one of the core reasons organisations deploy it.",
+  "incorrect": {
+   "A": "Malware outbreaks are addressed primarily by endpoint protection. MDM contributes indirectly by controlling what installs.",
+   "B": "Phishing attacks target the user's judgement and are addressed by mail filtering and training.",
+   "D": "Data masking obscures values for display in applications and reports. It is a data protection technique, not a device management one."
+  }
+ },
+ "q0616": {
+  "objective": "5.4",
+  "explanation": "The right to be forgotten is a statutory obligation under privacy law such as GDPR. Failing to honour erasure requests is non-compliance, and the enforcement mechanism regulators use is monetary penalty.",
+  "incorrect": {
+   "B": "Data breaches result from a security failure. Retaining data longer than permitted is a compliance failure, though it does enlarge what a future breach would expose.",
+   "C": "Revenue loss may follow reputational harm, but it is an indirect downstream effect rather than the impact of the regulatory failure itself.",
+   "D": "Blackmail is a criminal act by an attacker, unrelated to a compliance shortfall."
+  }
+ },
+ "q0617": {
+  "objective": "4.5",
+  "explanation": "Departing employees use their legitimate access, so nothing they do is technically unauthorised. User behaviour analytics baselines what normal looks like for each person and flags the deviation — bulk access to customer records by someone who rarely touches them.",
+  "incorrect": {
+   "A": "FIM alerts when protected files change. Reading and copying records modifies nothing.",
+   "B": "NAC decides which devices may join the network. It has no view of what an admitted user does.",
+   "C": "An IDS matches traffic against attack signatures. An employee querying a CRM produces entirely ordinary traffic."
+  }
+ },
+ "q0618": {
+  "objective": "3.1",
+  "explanation": "The failure was that a breach in development could reach production at all. Separate VPCs place the two environments in genuinely distinct networks with no implicit path between them, so compromising one provides no route to the other.",
+  "incorrect": {
+   "B": "Deploying firewalls adds filtering, but within a shared VPC the underlying network adjacency remains and the firewall becomes one misconfiguration away from failure.",
+   "C": "Migrating development on-premises moves the problem rather than solving it, and creates a hybrid connection that can itself be pivoted through.",
+   "D": "Security groups restricting access between environments is the right instinct at the wrong layer — they are instance-level rules within a shared network, weaker and easier to misconfigure than true network separation."
+  }
+ },
+ "q0619": {
+  "objective": "1.2",
+  "explanation": "Encryption makes data unreadable without the key, so only authorised parties can interpret it. Preventing unauthorised disclosure is the definition of confidentiality in the CIA triad.",
+  "incorrect": {
+   "B": "Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
+   "C": "Availability means systems and data are accessible when needed. Encryption can even work against it if keys are lost.",
+   "D": "Integrity means data has not been altered, and is assured by hashing and signatures."
+  }
+ },
+ "q0620": {
+  "objective": "1.4",
+  "explanation": "Key escrow deposits a copy of the encryption key with a trusted custodian under controlled conditions. If the working key is corrupted or deleted, the escrowed copy is what allows the data to be decrypted rather than lost permanently.",
+  "incorrect": {
+   "A": "Self-signed certificates are certificates an organisation issues to itself. They do not provide key recovery.",
+   "C": "Tokenisation substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
+   "D": "A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."
+  }
+ },
+ "q0621": {
+  "objective": "5.2",
+  "explanation": "A licence is an annual cost, so it has to be weighed against an annual expected loss. ALE gives that yearly figure by combining the cost of one incident with how often it is expected, which makes the two numbers directly comparable.",
+  "incorrect": {
+   "B": "SLE is the loss from a single incident. Without frequency it cannot be compared to an annual licence fee.",
+   "C": "RTO is the maximum tolerable downtime. It is a recovery target, not a financial measure.",
+   "D": "ARO is how often the event is expected per year. It is one input to ALE rather than the comparable figure."
+  }
+ },
+ "q0622": {
+  "objective": "2.5",
+  "explanation": "Host isolation cuts the device off from the network entirely, typically by moving it to a quarantine VLAN or blocking its traffic at the switch. Nothing on the network can reach it and it can reach nothing, which is what inaccessibility requires.",
+  "incorrect": {
+   "A": "Disabling unused services closes individual ports. The device stays reachable on whatever remains running.",
+   "B": "A web application firewall filters HTTP traffic to a web application. It inspects rather than disconnects, and only for one protocol.",
+   "D": "A network-based IDS watches traffic and alerts. It is passive and blocks nothing."
+  }
+ },
+ "q0623": {
+  "objective": "4.9",
+  "explanation": "The log-in happened inside the webmail application, so the application's own authentication log holds the session details including the source address the credentials were used from. That is the record tying the compromise to an origin.",
+  "incorrect": {
+   "A": "Network logs show traffic flows in aggregate. They may show a connection without attributing it to a specific account's log-in.",
+   "C": "System logs record operating system events on a host. Webmail authentication is handled by the application.",
+   "D": "Firewall logs record permitted and denied connections. They show traffic reaching the service but not which account authenticated."
+  }
+ },
+ "q0624": {
+  "objective": "3.3",
+  "explanation": "Classification is the process of assigning a sensitivity label based on a file's value, how damaging disclosure would be, and any regulations governing it. That label then drives the handling and protection requirements.",
+  "incorrect": {
+   "A": "Verification confirms that something is accurate or genuine. It does not assign sensitivity.",
+   "B": "Certification is formal attestation that a requirement has been met, such as a certificate of destruction.",
+   "D": "Inventory records what data or assets exist. It catalogues without judging sensitivity."
+  }
+ },
+ "q0625": {
+  "objective": "1.3",
+  "explanation": "The change failed and there was no rehearsed way to undo it, so the outage ran past the window and reached customers. A backout plan defines in advance exactly how to revert, which caps the damage of a failed change at the length of the rollback.",
+  "incorrect": {
+   "A": "User notification tells customers something is happening. It manages expectations without shortening the outage.",
+   "B": "Change approval authorises the work. The change was already approved and correctly scheduled.",
+   "C": "Risk analysis assesses what might go wrong beforehand. It informs the decision but supplies no way out once it has gone wrong."
+  }
+ },
+ "q0626": {
+  "objective": "4.8",
+  "explanation": "Chain of custody is the unbroken documented record of who handled each piece of evidence, when, and what they did with it. Without it the defence can argue the evidence may have been altered, and a court can refuse it.",
+  "incorrect": {
+   "B": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling.",
+   "C": "E-discovery is the legal process of identifying and producing electronically stored information.",
+   "D": "A tabletop exercise rehearses incident response in discussion. It has no evidentiary role."
+  }
+ },
+ "q0627": {
+  "objective": "2.3",
+  "explanation": "VM escape breaks out of a guest into the hypervisor, and from there every other virtual machine on the same host becomes reachable. Attacking one system to reach its neighbours is precisely what that vulnerability enables.",
+  "incorrect": {
+   "B": "Side loading installs an application from outside the official store. It affects one device.",
+   "C": "Remote code execution runs attacker code on a target. It gains a foothold on that host without inherently crossing to adjacent ones.",
+   "D": "Resource exhaustion consumes memory, CPU or connections until a service fails. It denies availability rather than granting access."
+  }
+ },
+ "q0628": {
+  "objective": "4.3",
+  "explanation": "Hard-coded credentials are visible in the source itself, so a tool that reads the code finds them. Static analysis runs in the development pipeline without executing anything, which is why it catches secrets before they ever reach production.",
+  "incorrect": {
+   "A": "A vulnerability scan probes a running system for known flaws. Credentials embedded in source are invisible to it.",
+   "B": "A penetration test attacks a deployed system. It might eventually find the credentials, but only after they are already in production.",
+   "D": "Quality assurance verifies the software behaves as specified. Hard-coded credentials work perfectly, so functional testing passes."
+  }
+ }
 }

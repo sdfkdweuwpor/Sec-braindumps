@@ -1,241 +1,310 @@
 {
-"q0871": {"objective":"4.3",
- "explanation":"A false negative is a vulnerability that exists but the scanner failed to report. The visible symptom is a clean report — no known vulnerabilities — while the exposure is still there, which is what makes it more dangerous than a false positive.",
- "incorrect":{
-  "A":"A vulnerability that does not actually exist but was reported is a false positive, the opposite error.",
-  "B":"A vulnerability already remediated but still reported is also a false positive, usually caused by stale scan data.",
-  "D":"A zero-day with a known remediation is a contradiction, and a reported finding is not a negative of any kind."}},
-
-"q0872": {"objective":"3.4",
- "explanation":"A generator produces power continuously for as long as it has fuel, so it can carry a data centre through an extended grid outage. That sustained output is what distinguishes it from stored-energy solutions.",
- "incorrect":{
-  "A":"A UPS runs on batteries, sized in minutes. Its role is to bridge the gap until the generator starts or shutdown completes.",
-  "C":"An inverter converts DC to AC. It is a component within a power system rather than a source of energy.",
-  "D":"A power conditioner smooths voltage irregularities. It improves power quality but supplies none of its own."}},
-
-"q0873": {"objective":"3.2",
- "explanation":"Fail-open means that when the firewall crashes, traffic keeps flowing rather than stopping. Everything then crosses the boundary without being examined, so the network is exposed to whatever arrives for as long as the failure lasts.",
- "incorrect":{
-  "A":"Increased latency during failover is a performance concern, and fail-open specifically avoids interrupting the path.",
-  "B":"Authentication tokens are issued by identity systems. A firewall failure does not invalidate them.",
-  "D":"Blocking all encrypted traffic describes fail-closed behaviour, which is the opposite configuration."}},
-
-"q0874": {"objective":"3.4",
- "explanation":"How often backups run determines how much work is lost when you restore, which is precisely what the recovery point objective measures. Frequency is therefore the attribute that decides whether the backups actually satisfy the recovery plan.",
- "incorrect":{
-  "B":"Hashing verifies that a backup has not been altered. It confirms integrity rather than sufficiency.",
-  "C":"Deduplication reduces storage consumption. It is an efficiency measure with no bearing on recovery objectives.",
-  "D":"Replication copies data to another location. It supports availability but is distinct from backup cadence."}},
-
-"q0875": {"objective":"2.2",
- "explanation":"Every open port is a running service accepting connections. If that service is not needed, or is left unrestricted, it becomes an entry point an attacker can probe and exploit — which is exactly what enlarging the attack surface means.",
- "incorrect":{
-  "A":"Antivirus scans files on a host. Ports are a network concern and are not what endpoint antivirus examines.",
-  "B":"Remote entry points exposed to the internet is one specific case, but open ports enlarge the attack surface internally too.",
-  "C":"Automatic updates are a patching mechanism and reduce vulnerability windows. That is a benefit, not an increase in exposure."}},
-
-"q0876": {"objective":"3.4",
- "explanation":"Journaling writes each pending change to a log before committing it. After a crash the system replays or rolls back that log to reach a consistent, known state, which is what makes recovery both fast and reliable.",
- "incorrect":{
-  "A":"Replication to remote secondary media is a separate availability strategy. Journaling operates within one filesystem.",
-  "B":"Saying recovery always exceeds RTO and RPO describes a failure, not the importance of journaling.",
-  "C":"A point-in-time backup is a snapshot. Journaling is a continuous change log rather than a periodic copy."}},
-
-"q0877": {"objective":"4.7",
- "explanation":"Manual ticket handling is slow and inconsistent — steps get skipped, priorities misjudged, records mistyped. Automating and orchestrating the process removes those human variations so each request is handled the same way every time.",
- "incorrect":{
-  "A":"Employee satisfaction may improve as a side effect, but it is not the security or operational rationale.",
-  "C":"Updating computing baselines with patches is patch management, a different automation use case.",
-  "D":"Single sign-on during onboarding is an identity capability, not a benefit of ticket automation."}},
-
-"q0878": {"objective":"2.3",
- "explanation":"A race condition arises when concurrent operations are not properly synchronised, so an attacker can slip an action into the window between a check and its use. Duplicate and simultaneous requests are exactly how that window is forced open.",
- "incorrect":{
-  "A":"Sideloading installs software from outside an official store. It is unrelated to request handling.",
-  "B":"VM escape breaks out of a guest into the hypervisor. It concerns virtualisation boundaries.",
-  "D":"SQL injection manipulates database queries through input. It exploits parsing, not timing."}},
-
-"q0879": {"objective":"4.6",
- "explanation":"Phishing resistance means the credential cannot be relayed to an attacker. Security keys bind authentication cryptographically to the legitimate domain, so a fake site gets nothing usable. Passwordless methods remove the shared secret entirely, leaving nothing for a user to be tricked into typing.",
- "incorrect":{
-  "A":"An instant-message one-time code is still a value the user can be persuaded to read out.",
-  "B":"Phone calls are the channel for vishing, which is social engineering rather than resistance to it.",
-  "D":"SMS codes can be relayed by a user in real time and are also vulnerable to SIM swapping.",
-  "F":"Email-delivered codes are similarly relayable, and a compromised mailbox exposes them directly."}},
-
-"q0880": {"objective":"1.4",
- "explanation":"A digital signature is created with the sender's private key over a hash of the message. A sound algorithm is what makes that signature unforgeable and the hash collision-resistant, so verification genuinely proves both who sent it and that the content is unchanged.",
- "incorrect":{
-  "A":"Hiding message contents is confidentiality, which requires encryption. A signed message is still readable.",
-  "C":"Automated key exchange is handled by key agreement protocols, not by the signature itself.",
-  "D":"Restricting who can decrypt a file is an encryption and key management function."}},
-
-"q0881": {"objective":"4.5",
- "explanation":"The administrator asked specifically for technical defences. A more capable secure email gateway filters phishing before it reaches a mailbox, which reduces exposure without depending on every user making the right judgement every time.",
- "incorrect":{
-  "A":"Phishing campaigns and training are valuable, but they are awareness measures rather than technical controls.",
-  "C":"EDR detects malicious activity on the endpoint. Payroll fraud through credential theft may involve no malware at all.",
-  "D":"Browser patching and DNS block lists help against malicious sites, but they act after the user has already clicked."}},
-
-"q0882": {"objective":"4.5",
- "explanation":"Mail is being sent by several providers, but the SPF record presumably lists only some of them. Receiving servers see unauthorised senders and mark the messages as spam, so listing every legitimate sending source resolves it.",
- "incorrect":{
-  "A":"Disabling DKIM removes a signature that helps authenticate mail, which would make the problem worse.",
-  "B":"A DMARC reject policy while SPF is incomplete would cause legitimate mail to be rejected outright rather than merely flagged.",
-  "C":"An MX record governs where inbound mail is delivered. It has no effect on outbound authentication."}},
-
-"q0883": {"objective":"4.4",
- "explanation":"The SIEM logs into each Unix server over SSH to gather data, with nothing installed on the target. Collecting remotely using existing protocols and credentials is agentless monitoring.",
- "incorrect":{
-  "A":"API integration means the target exposes a programmatic interface the SIEM calls. SSH login is not an API integration.",
-  "B":"OAuth 2.0 single sign-on is a delegated authorisation mechanism for applications, not a server monitoring method.",
-  "C":"SNMP is a separate monitoring protocol. The scenario specifies SSH credentials only."}},
-
-"q0884": {"objective":"2.2",
- "explanation":"The attacker did not break into the victim at all — they subverted a trusted vendor's update channel and let it deliver the payload. Turning a supplier's legitimate distribution into the attack path is a supply chain compromise.",
- "incorrect":{
-  "B":"A zero-day is a flaw with no available patch. The update mechanism itself was abused rather than a software defect exploited.",
-  "C":"Sideloading installs software from outside an official channel. Here the official channel was used.",
-  "D":"Operating system names a category of software rather than an attack technique."}},
-
-"q0885": {"objective":"3.4",
- "explanation":"A warm site keeps hardware and connectivity ready but not data or live services, so it costs far less than a hot site while recovering far faster than a cold one. That deliberate middle position is the reason to choose it.",
- "incorrect":{
-  "A":"Real-time replication across identical environments describes a hot site.",
-  "B":"Nothing eliminates the need for backup testing; untested backups fail when relied on.",
-  "C":"Fully automated failover with no intervention again describes a hot site."}},
-
-"q0886": {"objective":"3.4",
- "explanation":"Mean time between failures expresses how long an asset typically runs before failing. Combined with repair time it gives the proportion of time the asset is expected to be operational, which is the availability estimate.",
- "incorrect":{
-  "B":"SLE is the monetary loss from a single incident. It is a financial risk measure.",
-  "C":"RTO is the maximum tolerable downtime after a failure. It is a recovery target rather than an availability estimate.",
-  "D":"RPO concerns how much data loss is acceptable."}},
-
-"q0887": {"objective":"5.3",
- "explanation":"Vulnerability assessment results are a map of where the organisation is weakest, so they must not be disclosed. A non-disclosure agreement is the legally binding instrument that obliges the assessor to keep them confidential.",
- "incorrect":{
-  "A":"An MOU records mutual intent and is generally not legally binding.",
-  "B":"An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a separate NDA or a clause within it.",
-  "C":"An SLA commits a provider to measurable performance levels. It concerns service quality."}},
-
-"q0888": {"objective":"1.4",
- "explanation":"A salt is unique random data added to each password before hashing, so identical passwords produce different digests. That defeats rainbow tables and other precomputed lookups, because an attacker would need a separate table for every salt.",
- "incorrect":{
-  "A":"Salting does not make passwords reversible. Hashing remains one-way, which is the point.",
-  "C":"Salting does not lengthen an encryption key. Hashing uses no key at all.",
-  "D":"Adding rounds to slow cracking is key stretching, a related but distinct technique."}},
-
-"q0889": {"objective":"4.5",
- "explanation":"Two controls cover detection and prevention. File integrity monitoring compares the static files against a known-good baseline and alerts the moment one changes, and a web application firewall blocks the malicious requests an attacker would use to write those changes in the first place.",
- "incorrect":{
-  "A":"Network access control decides which devices may join a network. The attackers are external.",
-  "B":"Web content categorisation classifies sites for outbound filtering. It governs what staff browse.",
-  "C":"A centralised proxy mediates outbound requests, again the wrong direction.",
-  "F":"URL scanning judges whether a destination is safe to visit. It protects users browsing out, not the hosted page."}},
-
-"q0890": {"objective":"2.2",
- "explanation":"The tester got through badged doors by exploiting the natural reluctance of employees to challenge someone walking with them. Tailgating is a social engineering technique, and the finding is that people, not locks, were the weak point.",
- "incorrect":{
-  "A":"Role-based access governs what permissions an identity holds. The tester had no identity in the system at all.",
-  "B":"Shoulder surfing is observing someone entering a credential. Nothing was observed or stolen.",
-  "C":"An insider threat comes from someone inside the organisation. The tester is an authorised outsider."}},
-
-"q0891": {"objective":"1.4",
- "explanation":"A TPM is a dedicated hardware chip that generates and stores cryptographic keys so they never exist in ordinary memory, and performs operations such as sealing and attestation internally. Keeping keys out of software is what protects them from extraction.",
- "incorrect":{
-  "A":"A TPM supplements the operating system's cryptographic services rather than replacing them.",
-  "B":"Verifying website certificates is done by the browser against its trust store.",
-  "C":"Keeping keys in software is exactly what a TPM avoids, because software-held keys can be read from memory."}},
-
-"q0892": {"objective":"1.3",
- "explanation":"Deciding when updates may be applied to company devices, and telling staff in advance, is change management in practice — the change is planned, scheduled and communicated rather than applied whenever someone feels like it.",
- "incorrect":{
-  "A":"Onboarding covers bringing a new employee or device into the organisation.",
-  "B":"Sideloading installs software from outside an official store. These are sanctioned vendor updates.",
-  "D":"Playbook guidelines give step-by-step response instructions for specific incidents."}},
-
-"q0893": {"objective":"4.1",
- "explanation":"A saved definition file containing the security parameters is infrastructure as code. Every instance is created from the same reviewed template, so configuration is identical, repeatable and verifiable before anything reaches production.",
- "incorrect":{
-  "A":"Accepting the provider's basic setup and fixing it later guarantees inconsistency and leaves insecure defaults live.",
-  "B":"A shared document checked monthly relies on people following it and detects drift a month late.",
-  "D":"Occasional compliance scans find problems after deployment rather than preventing them."}},
-
-"q0894": {"objective":"1.3",
- "explanation":"Technical detail describes what the change does; it says nothing about what happens if it fails. A change advisory board requires a documented rollback strategy before approving production work, because without one a failed update becomes an open-ended outage.",
- "incorrect":{
-  "B":"Fail forward means fixing forward rather than reverting. It is one approach, but boards expect a rollback plan as the default risk control.",
-  "C":"Test results matter and are often required, but the request already includes technical requirements and the universal blocking omission is the lack of a way back.",
-  "D":"Developer approval is internal to the team. The CAB is the approving authority."}},
-
-"q0895": {"objective":"4.6",
- "explanation":"Accounting is the third element of AAA: recording what an authenticated and authorised user actually did. Login events and session duration are accounting data, used for auditing, billing and investigation.",
- "incorrect":{
-  "A":"Availability means a service is reachable when needed. It is a CIA-triad goal.",
-  "C":"Authentication proves identity at the point of access. It happens at login but records nothing afterwards.",
-  "D":"Authorisation decides what an authenticated user may do."}},
-
-"q0896": {"objective":"4.1",
- "explanation":"Code signing attaches a signature created with the publisher's private key to the compiled binary. Production systems verify it before execution, so any binary that has been altered or did not come from the trusted build process fails the check.",
- "incorrect":{
-  "A":"Input validation protects a running application from malicious input. It does not verify the binary itself.",
-  "C":"SQL injection is an attack, not a security measure.",
-  "D":"Static analysis reads source code for defects during development. It improves quality without proving the deployed binary is unmodified."}},
-
-"q0897": {"objective":"1.1",
- "explanation":"An access control list decides in advance which traffic or users are permitted and denies everything else. Blocking the action before it occurs is what makes it preventive.",
- "incorrect":{
-  "A":"A SIEM correlates logs and raises alerts. Reporting after the fact is detective.",
-  "B":"A honeypot attracts and observes attackers. It is a detective and deception control.",
-  "D":"Video surveillance records events, which is detective, and deters where visible."}},
-
-"q0898": {"objective":"2.2",
- "explanation":"The target is the chief executive and the lure is crafted around their specific authority to approve payments. Phishing aimed at a senior executive is whaling, and the external sending domain is the giveaway that it is fraudulent.",
- "incorrect":{
-  "B":"Vishing is phishing by voice call. This arrived as email.",
-  "C":"Phishing is the general category; whaling is the precise term when the victim is a top executive.",
-  "D":"Smishing is phishing over SMS."}},
-
-"q0899": {"objective":"4.9",
- "explanation":"Exfiltration is defined by where the data went. NetFlow records the volume and endpoints of every conversation, and sorting by destination address surfaces the external hosts that received large outbound transfers.",
- "incorrect":{
-  "A":"Sorting by source address tells you which internal host was involved, which matters but does not identify the destination.",
-  "B":"Endpoint logs sorted by file extension assume you know the file type and only cover hosts running an agent.",
-  "C":"Endpoint logs sorted by file name likewise require knowing what to look for and reveal nothing about where data went."}},
-
-"q0900": {"objective":"5.3",
- "explanation":"When a single external developer builds all the critical software, the organisation cannot easily change supplier — the code, knowledge and tooling all sit with one party. That dependence is vendor lock-in, and it weakens negotiating position and continuity alike.",
- "incorrect":{
-  "B":"Support cost is a consequence of lock-in rather than the underlying concern.",
-  "C":"Complexity is a general software concern, not specific to outsourcing critical development.",
-  "D":"Technical debt is accumulated shortcuts needing rework. It can occur with in-house development just as easily."}},
-
-"q0901": {"objective":"5.5",
- "explanation":"Passive reconnaissance gathers information about a target using public sources and ordinary interaction with public servers, without probing, injecting or attempting to exploit anything. The absence of intrusive activity is what keeps it passive and largely undetectable.",
- "incorrect":{
-  "A":"Injecting a payload is exploitation, which is unmistakably active.",
-  "C":"Connecting to public servers generally, without reference to the target, does not describe reconnaissance of anyone.",
-  "D":"Injecting random parameters is fuzzing, an active testing technique."}},
-
-"q0902": {"objective":"2.1",
- "explanation":"The supervisor is acting out of worry about what might happen rather than in response to a threat, demand or belief. Action driven by apprehension of a possible attack is the fear motivator.",
- "incorrect":{
-  "A":"Extortion involves a demand backed by a threat. Nobody is demanding anything.",
-  "C":"Ideological motivation drives action in service of a political or social cause.",
-  "D":"Ethical motivation describes acting on principle, as an ethical hacker does."}},
-
-"q0903": {"objective":"1.4",
- "explanation":"Obfuscation rewrites code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information. Since reverse engineering depends on comprehending the code, obfuscation directly protects the intellectual property inside an application.",
- "incorrect":{
-  "A":"Masking hides parts of a data value for display. It applies to records, not program logic.",
-  "B":"Encryption protects data but the application must decrypt its own code to run, so it does not prevent analysis of running software.",
-  "C":"Hashing is one-way and produces a digest. Nothing executable can be recovered from it."}},
-
-"q0904": {"objective":"4.1",
- "explanation":"Community images ship with a broad set of packages so they suit many uses, and most of them are unnecessary and unpatched for any particular deployment. Failing to strip that software back leaves every one of those components as a finding and as attack surface.",
- "incorrect":{
-  "A":"Disabling unused ports is part of hardening too, but ports reflect services, and it is the unnecessary software providing those services that generates the vulnerability count.",
-  "B":"Deleting temporary update files is housekeeping. It reclaims space rather than removing vulnerable components.",
-  "D":"Installing a scan agent is how the vulnerabilities were found. Its absence would produce fewer findings, not more."}}
+ "q0871": {
+  "objective": "4.3",
+  "explanation": "A false negative is a vulnerability that exists but the scanner failed to report. The visible symptom is a clean report — no known vulnerabilities — while the exposure is still there, which is what makes it more dangerous than a false positive.",
+  "incorrect": {
+   "A": "A vulnerability that does not actually exist but was reported is a false positive, the opposite error.",
+   "B": "A vulnerability already remediated but still reported is also a false positive, usually caused by stale scan data.",
+   "D": "A zero-day with a known remediation is a contradiction, and a reported finding is not a negative of any kind."
+  }
+ },
+ "q0872": {
+  "objective": "3.4",
+  "explanation": "A generator produces power continuously for as long as it has fuel, so it can carry a data centre through an extended grid outage. That sustained output is what distinguishes it from stored-energy solutions.",
+  "incorrect": {
+   "A": "A UPS runs on batteries, sized in minutes. Its role is to bridge the gap until the generator starts or shutdown completes.",
+   "C": "An inverter converts DC to AC. It is a component within a power system rather than a source of energy.",
+   "D": "A power conditioner smooths voltage irregularities. It improves power quality but supplies none of its own."
+  }
+ },
+ "q0873": {
+  "objective": "3.2",
+  "explanation": "Fail-open means that when the firewall crashes, traffic keeps flowing rather than stopping. Everything then crosses the boundary without being examined, so the network is exposed to whatever arrives for as long as the failure lasts.",
+  "incorrect": {
+   "A": "Increased latency during failover is a performance concern, and fail-open specifically avoids interrupting the path.",
+   "B": "Authentication tokens are issued by identity systems. A firewall failure does not invalidate them.",
+   "D": "Blocking all encrypted traffic describes fail-closed behaviour, which is the opposite configuration."
+  }
+ },
+ "q0874": {
+  "objective": "3.4",
+  "explanation": "How often backups run determines how much work is lost when you restore, which is precisely what the recovery point objective measures. Frequency is therefore the attribute that decides whether the backups actually satisfy the recovery plan.",
+  "incorrect": {
+   "B": "Hashing verifies that a backup has not been altered. It confirms integrity rather than sufficiency.",
+   "C": "Deduplication reduces storage consumption. It is an efficiency measure with no bearing on recovery objectives.",
+   "D": "Replication copies data to another location. It supports availability but is distinct from backup cadence."
+  }
+ },
+ "q0875": {
+  "objective": "2.2",
+  "explanation": "Every open port is a running service accepting connections. If that service is not needed, or is left unrestricted, it becomes an entry point an attacker can probe and exploit — which is exactly what enlarging the attack surface means.",
+  "incorrect": {
+   "A": "Antivirus scans files on a host. Ports are a network concern and are not what endpoint antivirus examines.",
+   "B": "Remote entry points exposed to the internet is one specific case, but open ports enlarge the attack surface internally too.",
+   "C": "Automatic updates are a patching mechanism and reduce vulnerability windows. That is a benefit, not an increase in exposure."
+  }
+ },
+ "q0876": {
+  "objective": "3.4",
+  "explanation": "Journaling writes each pending change to a log before committing it. After a crash the system replays or rolls back that log to reach a consistent, known state, which is what makes recovery both fast and reliable.",
+  "incorrect": {
+   "A": "Replication to remote secondary media is a separate availability strategy. Journaling operates within one filesystem.",
+   "B": "Saying recovery always exceeds RTO and RPO describes a failure, not the importance of journaling.",
+   "C": "A point-in-time backup is a snapshot. Journaling is a continuous change log rather than a periodic copy."
+  }
+ },
+ "q0877": {
+  "objective": "4.7",
+  "explanation": "Manual ticket handling is slow and inconsistent — steps get skipped, priorities misjudged, records mistyped. Automating and orchestrating the process removes those human variations so each request is handled the same way every time.",
+  "incorrect": {
+   "A": "Employee satisfaction may improve as a side effect, but it is not the security or operational rationale.",
+   "C": "Updating computing baselines with patches is patch management, a different automation use case.",
+   "D": "Single sign-on during onboarding is an identity capability, not a benefit of ticket automation."
+  }
+ },
+ "q0878": {
+  "objective": "2.3",
+  "explanation": "A race condition arises when concurrent operations are not properly synchronised, so an attacker can slip an action into the window between a check and its use. Duplicate and simultaneous requests are exactly how that window is forced open.",
+  "incorrect": {
+   "A": "Sideloading installs software from outside an official store. It is unrelated to request handling.",
+   "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualisation boundaries.",
+   "D": "SQL injection manipulates database queries through input. It exploits parsing, not timing."
+  }
+ },
+ "q0879": {
+  "objective": "4.6",
+  "explanation": "Phishing resistance means the credential cannot be relayed to an attacker. Security keys bind authentication cryptographically to the legitimate domain, so a fake site gets nothing usable. Passwordless methods remove the shared secret entirely, leaving nothing for a user to be tricked into typing.",
+  "incorrect": {
+   "A": "An instant-message one-time code is still a value the user can be persuaded to read out.",
+   "B": "Phone calls are the channel for vishing, which is social engineering rather than resistance to it.",
+   "D": "SMS codes can be relayed by a user in real time and are also vulnerable to SIM swapping.",
+   "F": "Email-delivered codes are similarly relayable, and a compromised mailbox exposes them directly."
+  }
+ },
+ "q0880": {
+  "objective": "1.4",
+  "explanation": "A digital signature is created with the sender's private key over a hash of the message. A sound algorithm is what makes that signature unforgeable and the hash collision-resistant, so verification genuinely proves both who sent it and that the content is unchanged.",
+  "incorrect": {
+   "A": "Hiding message contents is confidentiality, which requires encryption. A signed message is still readable.",
+   "C": "Automated key exchange is handled by key agreement protocols, not by the signature itself.",
+   "D": "Restricting who can decrypt a file is an encryption and key management function."
+  }
+ },
+ "q0881": {
+  "objective": "4.5",
+  "explanation": "The administrator asked specifically for technical defences. A more capable secure email gateway filters phishing before it reaches a mailbox, which reduces exposure without depending on every user making the right judgement every time.",
+  "incorrect": {
+   "A": "Phishing campaigns and training are valuable, but they are awareness measures rather than technical controls.",
+   "C": "EDR detects malicious activity on the endpoint. Payroll fraud through credential theft may involve no malware at all.",
+   "D": "Browser patching and DNS block lists help against malicious sites, but they act after the user has already clicked."
+  }
+ },
+ "q0882": {
+  "objective": "4.5",
+  "explanation": "Mail is being sent by several providers, but the SPF record presumably lists only some of them. Receiving servers see unauthorised senders and mark the messages as spam, so listing every legitimate sending source resolves it.",
+  "incorrect": {
+   "A": "Disabling DKIM removes a signature that helps authenticate mail, which would make the problem worse.",
+   "B": "A DMARC reject policy while SPF is incomplete would cause legitimate mail to be rejected outright rather than merely flagged.",
+   "C": "An MX record governs where inbound mail is delivered. It has no effect on outbound authentication."
+  }
+ },
+ "q0883": {
+  "objective": "4.4",
+  "explanation": "The SIEM logs into each Unix server over SSH to gather data, with nothing installed on the target. Collecting remotely using existing protocols and credentials is agentless monitoring.",
+  "incorrect": {
+   "A": "API integration means the target exposes a programmatic interface the SIEM calls. SSH login is not an API integration.",
+   "B": "OAuth 2.0 single sign-on is a delegated authorisation mechanism for applications, not a server monitoring method.",
+   "C": "SNMP is a separate monitoring protocol. The scenario specifies SSH credentials only."
+  }
+ },
+ "q0884": {
+  "objective": "2.2",
+  "explanation": "The attacker did not break into the victim at all — they subverted a trusted vendor's update channel and let it deliver the payload. Turning a supplier's legitimate distribution into the attack path is a supply chain compromise.",
+  "incorrect": {
+   "B": "A zero-day is a flaw with no available patch. The update mechanism itself was abused rather than a software defect exploited.",
+   "C": "Sideloading installs software from outside an official channel. Here the official channel was used.",
+   "D": "Operating system names a category of software rather than an attack technique."
+  }
+ },
+ "q0885": {
+  "objective": "3.4",
+  "explanation": "A warm site keeps hardware and connectivity ready but not data or live services, so it costs far less than a hot site while recovering far faster than a cold one. That deliberate middle position is the reason to choose it.",
+  "incorrect": {
+   "A": "Real-time replication across identical environments describes a hot site.",
+   "B": "Nothing eliminates the need for backup testing; untested backups fail when relied on.",
+   "C": "Fully automated failover with no intervention again describes a hot site."
+  }
+ },
+ "q0886": {
+  "objective": "3.4",
+  "explanation": "Mean time between failures expresses how long an asset typically runs before failing. Combined with repair time it gives the proportion of time the asset is expected to be operational, which is the availability estimate.",
+  "incorrect": {
+   "B": "SLE is the monetary loss from a single incident. It is a financial risk measure.",
+   "C": "RTO is the maximum tolerable downtime after a failure. It is a recovery target rather than an availability estimate.",
+   "D": "RPO concerns how much data loss is acceptable."
+  }
+ },
+ "q0887": {
+  "objective": "5.3",
+  "explanation": "Vulnerability assessment results are a map of where the organisation is weakest, so they must not be disclosed. A non-disclosure agreement is the legally binding instrument that obliges the assessor to keep them confidential.",
+  "incorrect": {
+   "A": "An MOU records mutual intent and is generally not legally binding.",
+   "B": "An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a separate NDA or a clause within it.",
+   "C": "An SLA commits a provider to measurable performance levels. It concerns service quality."
+  }
+ },
+ "q0888": {
+  "objective": "1.4",
+  "explanation": "A salt is unique random data added to each password before hashing, so identical passwords produce different digests. That defeats rainbow tables and other precomputed lookups, because an attacker would need a separate table for every salt.",
+  "incorrect": {
+   "A": "Salting does not make passwords reversible. Hashing remains one-way, which is the point.",
+   "C": "Salting does not lengthen an encryption key. Hashing uses no key at all.",
+   "D": "Adding rounds to slow cracking is key stretching, a related but distinct technique."
+  }
+ },
+ "q0889": {
+  "objective": "4.5",
+  "explanation": "Two controls cover detection and prevention. File integrity monitoring compares the static files against a known-good baseline and alerts the moment one changes, and a web application firewall blocks the malicious requests an attacker would use to write those changes in the first place.",
+  "incorrect": {
+   "A": "Network access control decides which devices may join a network. The attackers are external.",
+   "B": "Web content categorisation classifies sites for outbound filtering. It governs what staff browse.",
+   "C": "A centralised proxy mediates outbound requests, again the wrong direction.",
+   "F": "URL scanning judges whether a destination is safe to visit. It protects users browsing out, not the hosted page."
+  }
+ },
+ "q0890": {
+  "objective": "2.2",
+  "explanation": "The tester got through badged doors by exploiting the natural reluctance of employees to challenge someone walking with them. Tailgating is a social engineering technique, and the finding is that people, not locks, were the weak point.",
+  "incorrect": {
+   "A": "Role-based access governs what permissions an identity holds. The tester had no identity in the system at all.",
+   "B": "Shoulder surfing is observing someone entering a credential. Nothing was observed or stolen.",
+   "C": "An insider threat comes from someone inside the organisation. The tester is an authorised outsider."
+  }
+ },
+ "q0891": {
+  "objective": "1.4",
+  "explanation": "A TPM is a dedicated hardware chip that generates and stores cryptographic keys so they never exist in ordinary memory, and performs operations such as sealing and attestation internally. Keeping keys out of software is what protects them from extraction.",
+  "incorrect": {
+   "A": "A TPM supplements the operating system's cryptographic services rather than replacing them.",
+   "B": "Verifying website certificates is done by the browser against its trust store.",
+   "C": "Keeping keys in software is exactly what a TPM avoids, because software-held keys can be read from memory."
+  }
+ },
+ "q0892": {
+  "objective": "1.3",
+  "explanation": "Deciding when updates may be applied to company devices, and telling staff in advance, is change management in practice — the change is planned, scheduled and communicated rather than applied whenever someone feels like it.",
+  "incorrect": {
+   "A": "Onboarding covers bringing a new employee or device into the organisation.",
+   "B": "Sideloading installs software from outside an official store. These are sanctioned vendor updates.",
+   "D": "Playbook guidelines give step-by-step response instructions for specific incidents."
+  }
+ },
+ "q0893": {
+  "objective": "4.1",
+  "explanation": "A saved definition file containing the security parameters is infrastructure as code. Every instance is created from the same reviewed template, so configuration is identical, repeatable and verifiable before anything reaches production.",
+  "incorrect": {
+   "A": "Accepting the provider's basic setup and fixing it later guarantees inconsistency and leaves insecure defaults live.",
+   "B": "A shared document checked monthly relies on people following it and detects drift a month late.",
+   "D": "Occasional compliance scans find problems after deployment rather than preventing them."
+  }
+ },
+ "q0894": {
+  "objective": "1.3",
+  "explanation": "Technical detail describes what the change does; it says nothing about what happens if it fails. A change advisory board requires a documented rollback strategy before approving production work, because without one a failed update becomes an open-ended outage.",
+  "incorrect": {
+   "B": "Fail forward means fixing forward rather than reverting. It is one approach, but boards expect a rollback plan as the default risk control.",
+   "C": "Test results matter and are often required, but the request already includes technical requirements and the universal blocking omission is the lack of a way back.",
+   "D": "Developer approval is internal to the team. The CAB is the approving authority."
+  }
+ },
+ "q0895": {
+  "objective": "4.6",
+  "explanation": "Accounting is the third element of AAA: recording what an authenticated and authorised user actually did. Login events and session duration are accounting data, used for auditing, billing and investigation.",
+  "incorrect": {
+   "A": "Availability means a service is reachable when needed. It is a CIA-triad goal.",
+   "C": "Authentication proves identity at the point of access. It happens at login but records nothing afterwards.",
+   "D": "Authorisation decides what an authenticated user may do."
+  }
+ },
+ "q0896": {
+  "objective": "4.1",
+  "explanation": "Code signing attaches a signature created with the publisher's private key to the compiled binary. Production systems verify it before execution, so any binary that has been altered or did not come from the trusted build process fails the check.",
+  "incorrect": {
+   "A": "Input validation protects a running application from malicious input. It does not verify the binary itself.",
+   "C": "SQL injection is an attack, not a security measure.",
+   "D": "Static analysis reads source code for defects during development. It improves quality without proving the deployed binary is unmodified."
+  }
+ },
+ "q0897": {
+  "objective": "1.1",
+  "explanation": "An access control list decides in advance which traffic or users are permitted and denies everything else. Blocking the action before it occurs is what makes it preventive.",
+  "incorrect": {
+   "A": "A SIEM correlates logs and raises alerts. Reporting after the fact is detective.",
+   "B": "A honeypot attracts and observes attackers. It is a detective and deception control.",
+   "D": "Video surveillance records events, which is detective, and deters where visible."
+  }
+ },
+ "q0898": {
+  "objective": "2.2",
+  "explanation": "The target is the chief executive and the lure is crafted around their specific authority to approve payments. Phishing aimed at a senior executive is whaling, and the external sending domain is the giveaway that it is fraudulent.",
+  "incorrect": {
+   "B": "Vishing is phishing by voice call. This arrived as email.",
+   "C": "Phishing is the general category; whaling is the precise term when the victim is a top executive.",
+   "D": "Smishing is phishing over SMS."
+  }
+ },
+ "q0899": {
+  "objective": "4.9",
+  "explanation": "Exfiltration is defined by where the data went. NetFlow records the volume and endpoints of every conversation, and sorting by destination address surfaces the external hosts that received large outbound transfers.",
+  "incorrect": {
+   "A": "Sorting by source address tells you which internal host was involved, which matters but does not identify the destination.",
+   "B": "Endpoint logs sorted by file extension assume you know the file type and only cover hosts running an agent.",
+   "C": "Endpoint logs sorted by file name likewise require knowing what to look for and reveal nothing about where data went."
+  }
+ },
+ "q0900": {
+  "objective": "5.3",
+  "explanation": "When a single external developer builds all the critical software, the organisation cannot easily change supplier — the code, knowledge and tooling all sit with one party. That dependence is vendor lock-in, and it weakens negotiating position and continuity alike.",
+  "incorrect": {
+   "B": "Support cost is a consequence of lock-in rather than the underlying concern.",
+   "C": "Complexity is a general software concern, not specific to outsourcing critical development.",
+   "D": "Technical debt is accumulated shortcuts needing rework. It can occur with in-house development just as easily."
+  }
+ },
+ "q0901": {
+  "objective": "5.5",
+  "explanation": "Passive reconnaissance gathers information about a target using public sources and ordinary interaction with public servers, without probing, injecting or attempting to exploit anything. The absence of intrusive activity is what keeps it passive and largely undetectable.",
+  "incorrect": {
+   "A": "Injecting a payload is exploitation, which is unmistakably active.",
+   "C": "Connecting to public servers generally, without reference to the target, does not describe reconnaissance of anyone.",
+   "D": "Injecting random parameters is fuzzing, an active testing technique."
+  }
+ },
+ "q0902": {
+  "objective": "2.1",
+  "explanation": "The supervisor is acting out of worry about what might happen rather than in response to a threat, demand or belief. Action driven by apprehension of a possible attack is the fear motivator.",
+  "incorrect": {
+   "A": "Extortion involves a demand backed by a threat. Nobody is demanding anything.",
+   "C": "Ideological motivation drives action in service of a political or social cause.",
+   "D": "Ethical motivation describes acting on principle, as an ethical hacker does."
+  }
+ },
+ "q0903": {
+  "objective": "1.4",
+  "explanation": "Obfuscation rewrites code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information. Since reverse engineering depends on comprehending the code, obfuscation directly protects the intellectual property inside an application.",
+  "incorrect": {
+   "A": "Masking hides parts of a data value for display. It applies to records, not program logic.",
+   "B": "Encryption protects data but the application must decrypt its own code to run, so it does not prevent analysis of running software.",
+   "C": "Hashing is one-way and produces a digest. Nothing executable can be recovered from it."
+  }
+ },
+ "q0904": {
+  "objective": "4.1",
+  "explanation": "Community images ship with a broad set of packages so they suit many uses, and most of them are unnecessary and unpatched for any particular deployment. Failing to strip that software back leaves every one of those components as a finding and as attack surface.",
+  "incorrect": {
+   "A": "Disabling unused ports is part of hardening too, but ports reflect services, and it is the unnecessary software providing those services that generates the vulnerability count.",
+   "B": "Deleting temporary update files is housekeeping. It reclaims space rather than removing vulnerable components.",
+   "D": "Installing a scan agent is how the vulnerabilities were found. Its absence would produce fewer findings, not more."
+  }
+ }
 }

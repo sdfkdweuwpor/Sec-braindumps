@@ -1,243 +1,312 @@
 {
-"q0458": {"objective":"1.3",
- "explanation":"A controlled release means the version that reaches production has been approved, tested and documented, with a way back if it fails. Change management procedures are what impose that discipline — approval, impact analysis, test results, a maintenance window and a backout plan.",
- "incorrect":{
-  "A":"Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline, not a release process.",
-  "B":"Quantified risk analysis puts numbers on risk exposure. It may justify caution but governs no release.",
-  "C":"Static code analysis finds defects in source code. It improves quality before release without controlling how the release happens."}},
-
-"q0459": {"objective":"2.5",
- "explanation":"The problem is that unvetted software ran at all. An application allow list permits only approved executables to run, so a program nobody reviewed — however useful it looks — is blocked before it can quietly ship contact data and org structure outward.",
- "incorrect":{
-  "B":"Workstation hardening reduces the attack surface by removing services and tightening configuration. It does not prevent a user installing a new program.",
-  "C":"Refusing unsigned code blocks unsigned binaries. Plenty of commercial data-harvesting software is properly signed, so this misses the case.",
-  "D":"An IP blocklist blocks known-bad destinations. The program's servers would not be on any list.",
-  "E":"Standard user accounts prevent system-wide installation, which helps — but much of this software installs per-user without administrative rights."}},
-
-"q0460": {"objective":"5.5",
- "explanation":"An unknown environment test — black box — gives the testers no internal information and no coordination with the IT team. That is the only way to see how the tools, training and SOC actually perform against an attacker who has to discover everything for themselves.",
- "incorrect":{
-  "B":"A known environment test supplies documentation, architecture and often credentials. That shortcut would bypass the very defences the CEO wants measured.",
-  "C":"Integrated testing has offensive and defensive teams working together deliberately. The premise here is that the internal team is not engaged.",
-  "D":"A partially known test gives limited information. Some coordination or detail would still undercut the validation being sought."}},
-
-"q0461": {"objective":"2.2",
- "explanation":"Smishing is phishing carried out over SMS. An unsolicited, threatening text from an unknown number demanding money is a text-message-based social engineering attempt, which is what the term names.",
- "incorrect":{
-  "A":"Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
-  "B":"Typosquatting registers look-alike domains. No domain is involved.",
-  "D":"Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."}},
-
-"q0462": {"objective":"2.2",
- "explanation":"Two things are happening at once. The delivery channel is SMS, which makes it smishing, and the attacker is posing as the chief executive to make the request credible, which is impersonation. Both terms apply to the same message.",
- "incorrect":{
-  "A":"Misinformation is false information spread to mislead a population. This is a targeted credential-harvesting attempt.",
-  "D":"Typosquatting registers a domain one character from the real one. The link may be malicious but no mistyped domain is described.",
-  "E":"Pretexting is inventing a backstory to justify a request. There is barely a story here — just assumed authority.",
-  "F":"Phishing is the general category, and by SMS it is specifically smishing. The question wants the two precise terms."}},
-
-"q0463": {"objective":"4.2",
- "explanation":"You cannot patch a laptop you do not know exists. A complete asset inventory is what tells the engineer how many corporate laptops there are and which ones have not yet reported the patch, so coverage can actually be proven rather than assumed.",
- "incorrect":{
-  "A":"Ownership records who is accountable for an asset. Useful for chasing stragglers, but it presumes the inventory already lists them.",
-  "C":"Classification assigns sensitivity levels. It affects handling requirements rather than patch coverage.",
-  "D":"Enumeration is the act of listing resources, often during discovery. The durable record it produces and is checked against is the inventory."}},
-
-"q0464": {"objective":"2.2",
- "explanation":"A QR code is a two-dimensional matrix barcode, and scanning one hands the phone a URL the user cannot read beforehand. Phishing delivered through malicious QR codes is called quishing.",
- "incorrect":{
-  "B":"Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
-  "C":"Vishing is phishing by voice call.",
-  "D":"Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."}},
-
-"q0465": {"objective":"3.1",
- "explanation":"Buying at the lowest price often means buying from unvetted manufacturers, where counterfeit or tampered hardware and firmware can carry backdoors or substandard components. That supply-chain exposure is what makes cheap IoT devices risky in infrastructure.",
- "incorrect":{
-  "B":"Device responsiveness is a performance characteristic. Slow devices are irritating rather than insecure.",
-  "C":"Ease of deployment is a selling point of low-cost devices, not a concern.",
-  "D":"Data remanence is residual data left on media after deletion. It matters at disposal and is not specific to cheap devices."}},
-
-"q0466": {"objective":"4.8",
- "explanation":"Containment starts by working out precisely what you are dealing with and how far it has reached, which is identifying the threat. Eradication then removes it — the malware, the backdoors, the accounts the attacker created — so the environment is clean before recovery begins.",
- "incorrect":{
-  "A":"Notifying stakeholders is communication that runs alongside the whole response. It is not a containment or eradication activity.",
-  "B":"Restoring the system belongs to the recovery phase, after eradication has finished.",
-  "E":"Developing a recovery plan is preparation work done before any incident.",
-  "F":"Analysing the incident is its own phase, sitting between detection and containment."}},
-
-"q0467": {"objective":"3.2",
- "explanation":"Network access control authenticates and posture-checks a device as it connects to a switchport, verifying patch level, antivirus state and configuration before granting access. Requiring posture analysis before reaching the internet is exactly what NAC enforces.",
- "incorrect":{
-  "A":"A VPN encrypts remote access into the network. These clients are already physically connected.",
-  "B":"A WAF protects a web application from malicious requests. It faces the wrong direction entirely.",
-  "C":"An IPS inspects traffic for attack patterns and blocks it. It examines what devices send, not whether they are compliant enough to connect."}},
-
-"q0468": {"objective":"4.1",
- "explanation":"Authenticating at the device before the job releases — pull printing — means the document only appears once the attorney is physically standing there. Nothing sits unattended in the output tray for anyone to take.",
- "incorrect":{
-  "A":"Moving the copier into the legal department reduces who walks past it, but colleagues can still pick up the wrong job and it does not scale to other confidential printing.",
-  "B":"DLP on the workstation controls what data may leave electronically. The document was printed legitimately and then taken physically.",
-  "D":"A physical penetration test would demonstrate the weakness again. It measures rather than fixes."}},
-
-"q0469": {"objective":"4.8",
- "explanation":"Quarantine means severing the infected host's ability to reach anything else, so malware cannot spread and cannot phone home. Placing it in an isolated, air-gapped environment achieves that while preserving the system for investigation.",
- "incorrect":{
-  "B":"Disabling remote log-in through Group Policy closes one access route. The malware keeps running and keeps communicating.",
-  "C":"Converting the device into a sandbox is not a quarantine action — a sandbox is a purpose-built analysis environment, not a repurposed infected host.",
-  "D":"Remote wiping destroys the evidence along with the malware, which forecloses any investigation."}},
-
-"q0470": {"objective":"3.4",
- "explanation":"An undervoltage event is a brownout — supply voltage sagging below the required level. A UPS rides through it on battery and regulates the output, keeping equipment on stable power until the mains recovers or a generator takes over.",
- "incorrect":{
-  "A":"Resource management allocates compute capacity. It has nothing to do with electrical supply.",
-  "B":"A load balancer distributes network traffic across servers.",
-  "C":"A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."}},
-
-"q0471": {"objective":"5.4",
- "explanation":"The right to be forgotten, also called the right of erasure, is the GDPR provision letting an individual require an organisation to delete the personal data it holds about them. The question describes that right precisely.",
- "incorrect":{
-  "B":"Attestation and acknowledgement is a formal confirmation that a requirement is met. It is a compliance mechanism, not an individual right.",
-  "C":"Data retention is how long an organisation keeps data. It is the organisation's obligation, sometimes in tension with an erasure request.",
-  "D":"Information deletion describes the action performed. The named right is the right to be forgotten."}},
-
-"q0472": {"objective":"1.4",
- "explanation":"A salt is a unique random value added to each password before hashing. Because every user's salt differs, identical passwords produce entirely different hashes — which is exactly the observation, and the reason precomputed rainbow tables fail.",
- "incorrect":{
-  "A":"Data masking obscures parts of a value for display. It is not applied to stored password hashes.",
-  "C":"Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
-  "D":"Tokenisation replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenised."}},
-
-"q0473": {"objective":"2.3",
- "explanation":"Booting into unauthorised software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
- "incorrect":{
-  "A":"A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
-  "B":"Side loading installs an app from outside the official store. The device would still boot normally into its own OS.",
-  "C":"A malicious update delivers hostile code through the update channel. The device here was tampered with before issue, not updated."}},
-
-"q0474": {"objective":"3.4",
- "explanation":"Using two different cloud providers for the same data means no single vendor's outage, breach or vulnerability takes everything down. Deliberately not depending on one technology or supplier is platform diversity.",
- "incorrect":{
-  "A":"A load balancer distributes requests across servers. It is a device, not an architectural diversity strategy.",
-  "B":"Parallel processing runs work concurrently across systems, typically for performance.",
-  "D":"Clustering groups servers so they act as one resilient unit. That is redundancy within a platform, not across two."}},
-
-"q0475": {"objective":"4.1",
- "explanation":"The chain was click, download, execute, exfiltrate. Endpoint protection acts at the execution step — detecting and blocking the malicious payload on the workstation before it installs, which stops everything downstream.",
- "incorrect":{
-  "A":"User awareness training addresses the click and is genuinely valuable, but some proportion of users will always click. The question asks what best prevents the outcome.",
-  "B":"Network monitoring detects the exfiltration in progress. Detection after thousands of records have moved is too late.",
-  "D":"DLP could block the outbound transfer, which helps, but it acts at the final step rather than preventing the compromise."}},
-
-"q0476": {"objective":"4.9",
- "explanation":"The injected SQL travelled through the application as user input, so the application's own log is what recorded the request and the statement it produced. That is where the exact payload the attacker used will be visible.",
- "incorrect":{
-  "A":"Metadata describes files and communications. It carries no record of executed queries.",
-  "C":"System logs record operating system events such as service starts and authentication. They do not capture application-level SQL.",
-  "D":"NetFlow records which hosts talked to which, and how much. It shows the connection without any payload content."}},
-
-"q0477": {"objective":"3.1",
- "explanation":"Programmable logic controllers are managed by SCADA systems, and the industrial protocols involved — Modbus, DNP3 and their relatives — were designed for reliability on isolated networks with no encryption at all. Unencrypted PLC management traffic is characteristic of SCADA environments.",
- "incorrect":{
-  "A":"SDN separates network control from forwarding, and its control channels are normally secured. It also does not manage PLCs.",
-  "B":"IoT devices are frequently unencrypted too, but PLCs specifically belong to industrial control systems rather than consumer or building IoT.",
-  "C":"A VPN exists to encrypt traffic, so finding plaintext inside one would defeat its purpose."}},
-
-"q0478": {"objective":"3.2",
- "explanation":"Two companies needing both connectivity and security between them describes a site-to-site VPN. It builds an encrypted tunnel across the public internet so the networks can exchange traffic privately without dedicated circuits.",
- "incorrect":{
-  "A":"A UTM bundles several security functions in one appliance at a boundary. It filters traffic rather than establishing inter-company connectivity.",
-  "C":"NAC decides whether a device may join a network. It is an admission control, not a link between organisations.",
-  "D":"An NGFW enforces policy on traffic crossing a boundary. It can terminate a VPN, but the solution being asked for is the VPN itself."}},
-
-"q0479": {"objective":"4.3",
- "explanation":"Static analysis inspects source code without executing it, so it can run in the build pipeline before anything reaches production. Scanning code at rest for vulnerabilities and insecure patterns is exactly what the manager described.",
- "incorrect":{
-  "B":"Threat analysis, or threat modelling, reasons about how a system might be attacked. It is a design-time exercise rather than a code scan.",
-  "C":"Packet analysis examines network traffic. It has no view of source code.",
-  "D":"Dynamic analysis tests the running application. That requires a deployed build, which is after the point the manager wants to check.",
-  "E":"Package analysis checks third-party dependencies for known flaws. Useful alongside, but it examines libraries rather than the team's own code."}},
-
-"q0480": {"objective":"4.7",
- "explanation":"A flood of misconfigurations means resources are being created outside any agreed standard. Guardrails encode the secure baseline as policy that is enforced at provisioning time, so non-compliant configurations are prevented rather than detected afterwards.",
- "incorrect":{
-  "A":"A CASB governs how users interact with cloud applications and what data moves. It does not define infrastructure baselines.",
-  "B":"IAM controls who may do what in the cloud account. Correctly authorised engineers can still deploy misconfigured resources.",
-  "D":"XDR correlates detection and response across the estate. It finds threats rather than enforcing configuration standards."}},
-
-"q0481": {"objective":"2.2",
- "explanation":"Registering a domain that closely resembles a real one, so that a mistyped or carelessly read address leads to the attacker's site, is typosquatting. It impersonates the URL itself rather than a person.",
- "incorrect":{
-  "A":"Pretexting is inventing a backstory to justify a request. It manipulates a person, not an address.",
-  "B":"Misinformation is false information spread to mislead. No domain is impersonated.",
-  "D":"A watering-hole attack compromises a legitimate site the targets already visit, rather than creating a lookalike."}},
-
-"q0482": {"objective":"5.6",
- "explanation":"Insider risk rises with grievance, and the people positioned to notice grievance are the supervisors who see their teams every day. Training them to recognise and manage disgruntlement lets the organisation intervene early, which is what an awareness team can realistically influence.",
- "incorrect":{
-  "A":"Disabling accounts of staff who are merely likely to be terminated is premature, damaging to morale, and would itself create the resentment feared.",
-  "C":"Configuring DLP to monitor staff being terminated is a technical control rather than an awareness measure, and singling people out raises legal and ethical issues.",
-  "D":"Social engineering awareness for business leaders addresses external manipulation. The threat here originates inside."}},
-
-"q0483": {"objective":"4.3",
- "explanation":"CVSS attaches a standard 0 to 10 severity score to each finding, derived from exploitability and impact. That makes it the quickest way to rank a scan's output consistently, without bespoke analysis of every entry.",
- "incorrect":{
-  "A":"A business impact analysis determines how badly the organisation suffers if a function is lost. It is valuable context but is a slow, separate exercise.",
-  "C":"A risk register records identified risks and treatments. It stores decisions rather than scoring new scan findings.",
-  "D":"Exposure factor is the percentage of asset value lost in an incident. It is one input to a quantitative risk calculation, not a ready-made ranking."}},
-
-"q0484": {"objective":"5.5",
- "explanation":"Downloading publicly served content is just visiting the site as any user would, so nothing unusual appears in the target's logs and no system is probed. Gathering information without interacting beyond normal use is passive reconnaissance.",
- "incorrect":{
-  "A":"Unknown environment testing describes how much information the tester was given. It characterises the whole engagement rather than this activity.",
-  "B":"A vulnerability scan actively probes the target and is plainly visible in its logs.",
-  "C":"Due diligence is the investigation performed before entering a business relationship. It is a commercial concept."}},
-
-"q0485": {"objective":"5.4",
- "explanation":"The right to be forgotten requires erasure, not concealment. The organisation must actually remove the person's personal data from its systems, so nothing remains that could be recovered or re-linked to them.",
- "incorrect":{
-  "A":"Purging only the identifying attributes is closer to anonymisation. It can be valid in some circumstances but is not what erasure requires.",
-  "B":"Encrypting the data keeps it, and whoever holds the key can still read it. The data still exists.",
-  "D":"Obfuscating the data likewise retains it in a reversible or partially recoverable form."}},
-
-"q0486": {"objective":"4.6",
- "explanation":"Federation establishes trust between two identity domains, so an assertion from the partner's identity provider is accepted as proof of authentication. Users authenticated against the partner's LDAP reach your systems without a second set of credentials.",
- "incorrect":{
-  "A":"Media access control is a hardware addressing scheme at the data link layer. It has no authentication role here.",
-  "B":"Interoperability is the general property of systems working together. It describes the goal rather than the mechanism.",
-  "C":"OAuth is an authorisation framework issuing access tokens. It delegates permissions rather than federating an existing LDAP authentication."}},
-
-"q0487": {"objective":"2.5",
- "explanation":"Outdated operating systems carry known, published vulnerabilities that malware is written specifically to exploit — which explains both the infections and the degraded performance. Patching closes those holes, so it is the mitigation to examine before anything else.",
- "incorrect":{
-  "B":"Segmentation limits how far an infection spreads. Useful containment, but the machines remain exploitable.",
-  "C":"Monitoring reveals what is happening. It improves visibility without fixing the cause.",
-  "D":"Isolation cuts affected machines off. That is an incident response measure, not the underlying mitigation."}},
-
-"q0488": {"objective":"4.2",
- "explanation":"Decommissioning is the formal retirement process: removing the equipment from service, securely wiping or destroying its data, updating the inventory and documenting the disposal. It is the umbrella activity that has to happen before hardware leaves the organisation.",
- "incorrect":{
-  "A":"Isolation separates a system from the network. It is a containment measure for a live system.",
-  "B":"Patching updates software on systems that remain in service. There is no point patching something being discarded.",
-  "D":"Monitoring observes an operational system. Equipment at end of life is being removed, not watched."}},
-
-"q0489": {"objective":"4.7",
- "explanation":"SOAR playbooks handle routine alerts automatically — enriching them, checking them against known-benign patterns and closing the ones that do not warrant attention. The analyst then sees only what survived that triage, which is a direct reduction in manual false-positive review.",
- "incorrect":{
-  "B":"Redefining patch management reduces vulnerabilities. It does not change how alerts are triaged.",
-  "C":"Replacing EDR with XDR widens telemetry coverage, which typically increases alert volume rather than reducing it.",
-  "D":"Disabling heuristic scanning would cut false positives by also cutting real detections. That trades security for quiet."}},
-
-"q0490": {"objective":"5.4",
- "explanation":"Once a breach is publicly reported, customers and partners reassess whether the organisation can be trusted with their data. That loss of confidence drives existing contracts away and deters new ones, which is reputational damage.",
- "incorrect":{
-  "A":"Fines and penalties are imposed by regulators. They hurt financially but do not themselves drive customers away.",
-  "C":"Board oversight is internal governance attention following an incident. It is a management consequence, not a commercial one.",
-  "D":"Conflicts of interest concern improper influence on decisions. They are unrelated to breach disclosure."}},
-
-"q0491": {"objective":"4.2",
- "explanation":"A disposal provider issues a certificate of destruction confirming what was destroyed, when and by what method. That certification is the documented assurance the customer retains as evidence for auditors and regulators.",
- "incorrect":{
-  "A":"Insurance transfers financial loss if something goes wrong. It compensates rather than assuring the work was done.",
-  "C":"Classification assigns sensitivity levels to data. It determines how disposal must be handled, not that it was.",
-  "D":"Retention defines how long data is kept. It governs the period before disposal."}}
+ "q0458": {
+  "objective": "1.3",
+  "explanation": "A controlled release means the version that reaches production has been approved, tested and documented, with a way back if it fails. Change management procedures are what impose that discipline — approval, impact analysis, test results, a maintenance window and a backout plan.",
+  "incorrect": {
+   "A": "Business continuity planning keeps the organisation running through major disruption. It is a recovery discipline, not a release process.",
+   "B": "Quantified risk analysis puts numbers on risk exposure. It may justify caution but governs no release.",
+   "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release happens."
+  }
+ },
+ "q0459": {
+  "objective": "2.5",
+  "explanation": "The problem is that unvetted software ran at all. An application allow list permits only approved executables to run, so a program nobody reviewed — however useful it looks — is blocked before it can quietly ship contact data and org structure outward.",
+  "incorrect": {
+   "B": "Workstation hardening reduces the attack surface by removing services and tightening configuration. It does not prevent a user installing a new program.",
+   "C": "Refusing unsigned code blocks unsigned binaries. Plenty of commercial data-harvesting software is properly signed, so this misses the case.",
+   "D": "An IP blocklist blocks known-bad destinations. The program's servers would not be on any list.",
+   "E": "Standard user accounts prevent system-wide installation, which helps — but much of this software installs per-user without administrative rights."
+  }
+ },
+ "q0460": {
+  "objective": "5.5",
+  "explanation": "An unknown environment test — black box — gives the testers no internal information and no coordination with the IT team. That is the only way to see how the tools, training and SOC actually perform against an attacker who has to discover everything for themselves.",
+  "incorrect": {
+   "B": "A known environment test supplies documentation, architecture and often credentials. That shortcut would bypass the very defences the CEO wants measured.",
+   "C": "Integrated testing has offensive and defensive teams working together deliberately. The premise here is that the internal team is not engaged.",
+   "D": "A partially known test gives limited information. Some coordination or detail would still undercut the validation being sought."
+  }
+ },
+ "q0461": {
+  "objective": "2.2",
+  "explanation": "Smishing is phishing carried out over SMS. An unsolicited, threatening text from an unknown number demanding money is a text-message-based social engineering attempt, which is what the term names.",
+  "incorrect": {
+   "A": "Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
+   "B": "Typosquatting registers look-alike domains. No domain is involved.",
+   "D": "Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."
+  }
+ },
+ "q0462": {
+  "objective": "2.2",
+  "explanation": "Two things are happening at once. The delivery channel is SMS, which makes it smishing, and the attacker is posing as the chief executive to make the request credible, which is impersonation. Both terms apply to the same message.",
+  "incorrect": {
+   "A": "Misinformation is false information spread to mislead a population. This is a targeted credential-harvesting attempt.",
+   "D": "Typosquatting registers a domain one character from the real one. The link may be malicious but no mistyped domain is described.",
+   "E": "Pretexting is inventing a backstory to justify a request. There is barely a story here — just assumed authority.",
+   "F": "Phishing is the general category, and by SMS it is specifically smishing. The question wants the two precise terms."
+  }
+ },
+ "q0463": {
+  "objective": "4.2",
+  "explanation": "You cannot patch a laptop you do not know exists. A complete asset inventory is what tells the engineer how many corporate laptops there are and which ones have not yet reported the patch, so coverage can actually be proven rather than assumed.",
+  "incorrect": {
+   "A": "Ownership records who is accountable for an asset. Useful for chasing stragglers, but it presumes the inventory already lists them.",
+   "C": "Classification assigns sensitivity levels. It affects handling requirements rather than patch coverage.",
+   "D": "Enumeration is the act of listing resources, often during discovery. The durable record it produces and is checked against is the inventory."
+  }
+ },
+ "q0464": {
+  "objective": "2.2",
+  "explanation": "A QR code is a two-dimensional matrix barcode, and scanning one hands the phone a URL the user cannot read beforehand. Phishing delivered through malicious QR codes is called quishing.",
+  "incorrect": {
+   "B": "Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
+   "C": "Vishing is phishing by voice call.",
+   "D": "Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."
+  }
+ },
+ "q0465": {
+  "objective": "3.1",
+  "explanation": "Buying at the lowest price often means buying from unvetted manufacturers, where counterfeit or tampered hardware and firmware can carry backdoors or substandard components. That supply-chain exposure is what makes cheap IoT devices risky in infrastructure.",
+  "incorrect": {
+   "B": "Device responsiveness is a performance characteristic. Slow devices are irritating rather than insecure.",
+   "C": "Ease of deployment is a selling point of low-cost devices, not a concern.",
+   "D": "Data remanence is residual data left on media after deletion. It matters at disposal and is not specific to cheap devices."
+  }
+ },
+ "q0466": {
+  "objective": "4.8",
+  "explanation": "Containment starts by working out precisely what you are dealing with and how far it has reached, which is identifying the threat. Eradication then removes it — the malware, the backdoors, the accounts the attacker created — so the environment is clean before recovery begins.",
+  "incorrect": {
+   "A": "Notifying stakeholders is communication that runs alongside the whole response. It is not a containment or eradication activity.",
+   "B": "Restoring the system belongs to the recovery phase, after eradication has finished.",
+   "E": "Developing a recovery plan is preparation work done before any incident.",
+   "F": "Analysing the incident is its own phase, sitting between detection and containment."
+  }
+ },
+ "q0467": {
+  "objective": "3.2",
+  "explanation": "Network access control authenticates and posture-checks a device as it connects to a switchport, verifying patch level, antivirus state and configuration before granting access. Requiring posture analysis before reaching the internet is exactly what NAC enforces.",
+  "incorrect": {
+   "A": "A VPN encrypts remote access into the network. These clients are already physically connected.",
+   "B": "A WAF protects a web application from malicious requests. It faces the wrong direction entirely.",
+   "C": "An IPS inspects traffic for attack patterns and blocks it. It examines what devices send, not whether they are compliant enough to connect."
+  }
+ },
+ "q0468": {
+  "objective": "4.1",
+  "explanation": "Authenticating at the device before the job releases — pull printing — means the document only appears once the attorney is physically standing there. Nothing sits unattended in the output tray for anyone to take.",
+  "incorrect": {
+   "A": "Moving the copier into the legal department reduces who walks past it, but colleagues can still pick up the wrong job and it does not scale to other confidential printing.",
+   "B": "DLP on the workstation controls what data may leave electronically. The document was printed legitimately and then taken physically.",
+   "D": "A physical penetration test would demonstrate the weakness again. It measures rather than fixes."
+  }
+ },
+ "q0469": {
+  "objective": "4.8",
+  "explanation": "Quarantine means severing the infected host's ability to reach anything else, so malware cannot spread and cannot phone home. Placing it in an isolated, air-gapped environment achieves that while preserving the system for investigation.",
+  "incorrect": {
+   "B": "Disabling remote log-in through Group Policy closes one access route. The malware keeps running and keeps communicating.",
+   "C": "Converting the device into a sandbox is not a quarantine action — a sandbox is a purpose-built analysis environment, not a repurposed infected host.",
+   "D": "Remote wiping destroys the evidence along with the malware, which forecloses any investigation."
+  }
+ },
+ "q0470": {
+  "objective": "3.4",
+  "explanation": "An undervoltage event is a brownout — supply voltage sagging below the required level. A UPS rides through it on battery and regulates the output, keeping equipment on stable power until the mains recovers or a generator takes over.",
+  "incorrect": {
+   "A": "Resource management allocates compute capacity. It has nothing to do with electrical supply.",
+   "B": "A load balancer distributes network traffic across servers.",
+   "C": "A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."
+  }
+ },
+ "q0471": {
+  "objective": "5.4",
+  "explanation": "The right to be forgotten, also called the right of erasure, is the GDPR provision letting an individual require an organisation to delete the personal data it holds about them. The question describes that right precisely.",
+  "incorrect": {
+   "B": "Attestation and acknowledgement is a formal confirmation that a requirement is met. It is a compliance mechanism, not an individual right.",
+   "C": "Data retention is how long an organisation keeps data. It is the organisation's obligation, sometimes in tension with an erasure request.",
+   "D": "Information deletion describes the action performed. The named right is the right to be forgotten."
+  }
+ },
+ "q0472": {
+  "objective": "1.4",
+  "explanation": "A salt is a unique random value added to each password before hashing. Because every user's salt differs, identical passwords produce entirely different hashes — which is exactly the observation, and the reason precomputed rainbow tables fail.",
+  "incorrect": {
+   "A": "Data masking obscures parts of a value for display. It is not applied to stored password hashes.",
+   "C": "Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
+   "D": "Tokenisation replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenised."
+  }
+ },
+ "q0473": {
+  "objective": "2.3",
+  "explanation": "Booting into unauthorised software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
+  "incorrect": {
+   "A": "A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
+   "B": "Side loading installs an app from outside the official store. The device would still boot normally into its own OS.",
+   "C": "A malicious update delivers hostile code through the update channel. The device here was tampered with before issue, not updated."
+  }
+ },
+ "q0474": {
+  "objective": "3.4",
+  "explanation": "Using two different cloud providers for the same data means no single vendor's outage, breach or vulnerability takes everything down. Deliberately not depending on one technology or supplier is platform diversity.",
+  "incorrect": {
+   "A": "A load balancer distributes requests across servers. It is a device, not an architectural diversity strategy.",
+   "B": "Parallel processing runs work concurrently across systems, typically for performance.",
+   "D": "Clustering groups servers so they act as one resilient unit. That is redundancy within a platform, not across two."
+  }
+ },
+ "q0475": {
+  "objective": "5.6",
+  "explanation": "The chain started with an employee clicking a malicious link, so the control that stops it recurring is user awareness training to recognize and avoid phishing. Technical controls can catch some of what follows, but the root cause is the click. Some published answers pick endpoint protection.",
+  "incorrect": {
+   "B": "Network monitoring may detect exfiltration after it starts, but it does not stop employees from clicking malicious links.",
+   "C": "Endpoint protection can block some malware, but it does not address the behaviour that let it in, and new malware can evade it.",
+   "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
+  }
+ },
+ "q0476": {
+  "objective": "4.9",
+  "explanation": "The injected SQL travelled through the application as user input, so the application's own log is what recorded the request and the statement it produced. That is where the exact payload the attacker used will be visible.",
+  "incorrect": {
+   "A": "Metadata describes files and communications. It carries no record of executed queries.",
+   "C": "System logs record operating system events such as service starts and authentication. They do not capture application-level SQL.",
+   "D": "NetFlow records which hosts talked to which, and how much. It shows the connection without any payload content."
+  }
+ },
+ "q0477": {
+  "objective": "3.1",
+  "explanation": "Programmable logic controllers are managed by SCADA systems, and the industrial protocols involved — Modbus, DNP3 and their relatives — were designed for reliability on isolated networks with no encryption at all. Unencrypted PLC management traffic is characteristic of SCADA environments.",
+  "incorrect": {
+   "A": "SDN separates network control from forwarding, and its control channels are normally secured. It also does not manage PLCs.",
+   "B": "IoT devices are frequently unencrypted too, but PLCs specifically belong to industrial control systems rather than consumer or building IoT.",
+   "C": "A VPN exists to encrypt traffic, so finding plaintext inside one would defeat its purpose."
+  }
+ },
+ "q0478": {
+  "objective": "3.2",
+  "explanation": "Two companies needing both connectivity and security between them describes a site-to-site VPN. It builds an encrypted tunnel across the public internet so the networks can exchange traffic privately without dedicated circuits.",
+  "incorrect": {
+   "A": "A UTM bundles several security functions in one appliance at a boundary. It filters traffic rather than establishing inter-company connectivity.",
+   "C": "NAC decides whether a device may join a network. It is an admission control, not a link between organisations.",
+   "D": "An NGFW enforces policy on traffic crossing a boundary. It can terminate a VPN, but the solution being asked for is the VPN itself."
+  }
+ },
+ "q0479": {
+  "objective": "4.3",
+  "explanation": "Static analysis inspects source code without executing it, so it can run in the build pipeline before anything reaches production. Scanning code at rest for vulnerabilities and insecure patterns is exactly what the manager described.",
+  "incorrect": {
+   "B": "Threat analysis, or threat modelling, reasons about how a system might be attacked. It is a design-time exercise rather than a code scan.",
+   "C": "Packet analysis examines network traffic. It has no view of source code.",
+   "D": "Dynamic analysis tests the running application. That requires a deployed build, which is after the point the manager wants to check.",
+   "E": "Package analysis checks third-party dependencies for known flaws. Useful alongside, but it examines libraries rather than the team's own code."
+  }
+ },
+ "q0480": {
+  "objective": "4.7",
+  "explanation": "A flood of misconfigurations means resources are being created outside any agreed standard. Guardrails encode the secure baseline as policy that is enforced at provisioning time, so non-compliant configurations are prevented rather than detected afterwards.",
+  "incorrect": {
+   "A": "A CASB governs how users interact with cloud applications and what data moves. It does not define infrastructure baselines.",
+   "B": "IAM controls who may do what in the cloud account. Correctly authorised engineers can still deploy misconfigured resources.",
+   "D": "XDR correlates detection and response across the estate. It finds threats rather than enforcing configuration standards."
+  }
+ },
+ "q0481": {
+  "objective": "2.2",
+  "explanation": "Registering a domain that closely resembles a real one, so that a mistyped or carelessly read address leads to the attacker's site, is typosquatting. It impersonates the URL itself rather than a person.",
+  "incorrect": {
+   "A": "Pretexting is inventing a backstory to justify a request. It manipulates a person, not an address.",
+   "B": "Misinformation is false information spread to mislead. No domain is impersonated.",
+   "D": "A watering-hole attack compromises a legitimate site the targets already visit, rather than creating a lookalike."
+  }
+ },
+ "q0482": {
+  "objective": "5.6",
+  "explanation": "Insider risk rises with grievance, and the people positioned to notice grievance are the supervisors who see their teams every day. Training them to recognise and manage disgruntlement lets the organisation intervene early, which is what an awareness team can realistically influence.",
+  "incorrect": {
+   "A": "Disabling accounts of staff who are merely likely to be terminated is premature, damaging to morale, and would itself create the resentment feared.",
+   "C": "Configuring DLP to monitor staff being terminated is a technical control rather than an awareness measure, and singling people out raises legal and ethical issues.",
+   "D": "Social engineering awareness for business leaders addresses external manipulation. The threat here originates inside."
+  }
+ },
+ "q0483": {
+  "objective": "4.3",
+  "explanation": "CVSS attaches a standard 0 to 10 severity score to each finding, derived from exploitability and impact. That makes it the quickest way to rank a scan's output consistently, without bespoke analysis of every entry.",
+  "incorrect": {
+   "A": "A business impact analysis determines how badly the organisation suffers if a function is lost. It is valuable context but is a slow, separate exercise.",
+   "C": "A risk register records identified risks and treatments. It stores decisions rather than scoring new scan findings.",
+   "D": "Exposure factor is the percentage of asset value lost in an incident. It is one input to a quantitative risk calculation, not a ready-made ranking."
+  }
+ },
+ "q0484": {
+  "objective": "5.5",
+  "explanation": "Downloading publicly served content is just visiting the site as any user would, so nothing unusual appears in the target's logs and no system is probed. Gathering information without interacting beyond normal use is passive reconnaissance.",
+  "incorrect": {
+   "A": "Unknown environment testing describes how much information the tester was given. It characterises the whole engagement rather than this activity.",
+   "B": "A vulnerability scan actively probes the target and is plainly visible in its logs.",
+   "C": "Due diligence is the investigation performed before entering a business relationship. It is a commercial concept."
+  }
+ },
+ "q0485": {
+  "objective": "5.4",
+  "explanation": "The right to be forgotten requires erasure, not concealment. The organisation must actually remove the person's personal data from its systems, so nothing remains that could be recovered or re-linked to them.",
+  "incorrect": {
+   "A": "Purging only the identifying attributes is closer to anonymisation. It can be valid in some circumstances but is not what erasure requires.",
+   "B": "Encrypting the data keeps it, and whoever holds the key can still read it. The data still exists.",
+   "D": "Obfuscating the data likewise retains it in a reversible or partially recoverable form."
+  }
+ },
+ "q0486": {
+  "objective": "4.6",
+  "explanation": "Federation establishes trust between two identity domains, so an assertion from the partner's identity provider is accepted as proof of authentication. Users authenticated against the partner's LDAP reach your systems without a second set of credentials.",
+  "incorrect": {
+   "A": "Media access control is a hardware addressing scheme at the data link layer. It has no authentication role here.",
+   "B": "Interoperability is the general property of systems working together. It describes the goal rather than the mechanism.",
+   "C": "OAuth is an authorisation framework issuing access tokens. It delegates permissions rather than federating an existing LDAP authentication."
+  }
+ },
+ "q0487": {
+  "objective": "2.5",
+  "explanation": "Outdated operating systems carry known, published vulnerabilities that malware is written specifically to exploit — which explains both the infections and the degraded performance. Patching closes those holes, so it is the mitigation to examine before anything else.",
+  "incorrect": {
+   "B": "Segmentation limits how far an infection spreads. Useful containment, but the machines remain exploitable.",
+   "C": "Monitoring reveals what is happening. It improves visibility without fixing the cause.",
+   "D": "Isolation cuts affected machines off. That is an incident response measure, not the underlying mitigation."
+  }
+ },
+ "q0488": {
+  "objective": "4.2",
+  "explanation": "Decommissioning is the formal retirement process: removing the equipment from service, securely wiping or destroying its data, updating the inventory and documenting the disposal. It is the umbrella activity that has to happen before hardware leaves the organisation.",
+  "incorrect": {
+   "A": "Isolation separates a system from the network. It is a containment measure for a live system.",
+   "B": "Patching updates software on systems that remain in service. There is no point patching something being discarded.",
+   "D": "Monitoring observes an operational system. Equipment at end of life is being removed, not watched."
+  }
+ },
+ "q0489": {
+  "objective": "4.7",
+  "explanation": "SOAR playbooks handle routine alerts automatically — enriching them, checking them against known-benign patterns and closing the ones that do not warrant attention. The analyst then sees only what survived that triage, which is a direct reduction in manual false-positive review.",
+  "incorrect": {
+   "B": "Redefining patch management reduces vulnerabilities. It does not change how alerts are triaged.",
+   "C": "Replacing EDR with XDR widens telemetry coverage, which typically increases alert volume rather than reducing it.",
+   "D": "Disabling heuristic scanning would cut false positives by also cutting real detections. That trades security for quiet."
+  }
+ },
+ "q0490": {
+  "objective": "5.4",
+  "explanation": "Once a breach is publicly reported, customers and partners reassess whether the organisation can be trusted with their data. That loss of confidence drives existing contracts away and deters new ones, which is reputational damage.",
+  "incorrect": {
+   "A": "Fines and penalties are imposed by regulators. They hurt financially but do not themselves drive customers away.",
+   "C": "Board oversight is internal governance attention following an incident. It is a management consequence, not a commercial one.",
+   "D": "Conflicts of interest concern improper influence on decisions. They are unrelated to breach disclosure."
+  }
+ },
+ "q0491": {
+  "objective": "4.2",
+  "explanation": "A disposal provider issues a certificate of destruction confirming what was destroyed, when and by what method. That certification is the documented assurance the customer retains as evidence for auditors and regulators.",
+  "incorrect": {
+   "A": "Insurance transfers financial loss if something goes wrong. It compensates rather than assuring the work was done.",
+   "C": "Classification assigns sensitivity levels to data. It determines how disposal must be handled, not that it was.",
+   "D": "Retention defines how long data is kept. It governs the period before disposal."
+  }
+ }
 }

@@ -3546,6 +3546,48 @@ export const domain5Questions = [
     "keyCorrected": false
   },
   {
+    "id": "q0475",
+    "domain": 5,
+    "objective": "5.6",
+    "objectiveTitle": "Given a scenario, implement security awareness practices",
+    "type": "single",
+    "question": "An employee clicked a malicious link in an email and downloaded malware onto the company's computer network. The malicious program exfiltrated thousands of customer records.\nWhich of the following should the company implement to best prevent this in the future?",
+    "choices": [
+      {
+        "key": "A",
+        "text": "User awareness training"
+      },
+      {
+        "key": "B",
+        "text": "Network monitoring"
+      },
+      {
+        "key": "C",
+        "text": "Endpoint protection"
+      },
+      {
+        "key": "D",
+        "text": "Data loss prevention"
+      }
+    ],
+    "correct": [
+      "A"
+    ],
+    "explanation": "The chain started with an employee clicking a malicious link, so the control that stops it recurring is user awareness training to recognize and avoid phishing. Technical controls can catch some of what follows, but the root cause is the click. Some published answers pick endpoint protection.",
+    "explanationSource": "pdf+authored",
+    "incorrectExplanations": {
+      "B": "Network monitoring may detect exfiltration after it starts, but it does not stop employees from clicking malicious links.",
+      "C": "Endpoint protection can block some malware, but it does not address the behaviour that let it in, and new malware can evade it.",
+      "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
+    },
+    "references": [],
+    "source": "SY0-701_en.pdf#p204",
+    "needsReview": false,
+    "inferenceConfidence": 0.5,
+    "needsExplanation": false,
+    "keyCorrected": true
+  },
+  {
     "id": "q0482",
     "domain": 5,
     "objective": "5.6",
