@@ -3,6 +3,7 @@
 import * as store from './store.js';
 import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
+import { icon } from './icons.js';
 import { renderHome } from './views/home.js';
 import { renderQuiz } from './views/quiz.js';
 import { renderResults } from './views/results.js';
@@ -22,10 +23,10 @@ const ROUTES = {
 };
 
 const NAV = [
-  { href: '#/home', ic: '◆', label: 'Study', match: ['/home', '/build', '/quiz', '/results'] },
-  { href: '#/stats', ic: '▦', label: 'Stats', match: ['/stats'] },
-  { href: '#/review', ic: '↺', label: 'Review', match: ['/review'] },
-  { href: '#/saved', ic: '⚑', label: 'Saved', match: ['/saved'] },
+  { href: '#/home', ic: 'study', label: 'Study', match: ['/home', '/build', '/quiz', '/results'] },
+  { href: '#/stats', ic: 'stats', label: 'Stats', match: ['/stats'] },
+  { href: '#/review', ic: 'review', label: 'Review', match: ['/review'] },
+  { href: '#/saved', ic: 'saved', label: 'Saved', match: ['/saved'] },
 ];
 
 export function parseHash() {
@@ -46,7 +47,7 @@ function applyTheme(theme) {
   const btn = document.getElementById('theme-toggle');
   if (btn) {
     const dark = theme === 'dark';
-    btn.textContent = dark ? '◑' : '◐';
+    btn.replaceChildren(icon(dark ? 'sun' : 'moon'));
     btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
     btn.setAttribute('title', btn.getAttribute('aria-label'));
   }
@@ -57,9 +58,9 @@ function buildShell() {
   clear(root);
 
   const nav = el('nav', { class: 'nav', 'aria-label': 'Sections' }, [
-    el('span', { class: 'navtitle' }, [el('span', { class: 'brandmark', 'aria-hidden': 'true', text: 'S+' }), NAV_TITLE]),
+    el('span', { class: 'navtitle' }, [el('span', { class: 'brandmark' }, [icon('shield', { size: 22 })]), NAV_TITLE]),
     ...NAV.map((n) => el('a', { href: n.href, 'data-nav': n.match.join(' ') }, [
-      el('span', { class: 'ic', 'aria-hidden': 'true', text: n.ic }),
+      el('span', { class: 'ic' }, [icon(n.ic, { size: 22 })]),
       el('span', { text: n.label }),
     ])),
   ]);
@@ -75,7 +76,7 @@ function buildShell() {
 
   const topbar = el('header', { class: 'topbar' }, [
     el('span', { class: 'brand' }, [
-      el('span', { class: 'brandmark', 'aria-hidden': 'true', text: 'S+' }),
+      el('span', { class: 'brandmark' }, [icon('shield', { size: 20 })]),
       el('span', { class: 'brandtext' }, [APP_TITLE, el('small', { text: APP_SUBTITLE })]),
     ]),
     themeBtn,
@@ -112,6 +113,10 @@ async function render() {
   const view = document.getElementById('view') || buildShell();
   markActiveNav(path);
   clear(view);
+  // Restart the entrance animation for the new screen.
+  view.classList.remove('enter');
+  void view.offsetWidth;
+  view.classList.add('enter');
 
   if (!bannerShown) {
     const b = storageBanner();
@@ -121,7 +126,7 @@ async function render() {
   const fn = ROUTES[path];
   if (!fn) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic', 'aria-hidden': 'true', text: '∅' }),
+      el('span', { class: 'ic' }, [icon('empty', { size: 34 })]),
       el('h1', { text: 'Page not found' }),
       el('p', { class: 'muted', text: `Nothing is routed at ${path}.` }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),

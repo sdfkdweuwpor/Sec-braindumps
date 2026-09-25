@@ -230,3 +230,21 @@ test('settings always come back with defaults filled in', async () => {
   assert.equal(s.shuffleQuestions, true, 'missing keys fall back to defaults');
   assert.equal(s.feedbackMode, 'immediate');
 });
+
+test('a similar-questions drill pauses the quiz and hands it back intact', async () => {
+  const store = await loadStore(fakeStorage());
+  store.init();
+  const quiz = { id: 'quiz_main', index: 6, questionIds: ['a', 'b'], answers: { a: ['B'] } };
+  const drill = { id: 'quiz_drill', mode: 'similar', questionIds: ['c'] };
+  store.setActiveQuiz(quiz);
+  store.pauseQuiz(quiz);
+  store.setActiveQuiz(drill);
+  assert.equal(store.getActiveQuiz().id, 'quiz_drill');
+  assert.deepEqual(store.getPausedQuiz(), quiz);
+
+  const back = store.resumePausedQuiz();
+  assert.deepEqual(back, quiz);
+  assert.deepEqual(store.getActiveQuiz(), quiz, 'the quiz comes back as it was, same question');
+  assert.equal(store.getPausedQuiz(), null);
+  assert.equal(store.resumePausedQuiz(), null, 'nothing paused, nothing resumed');
+});

@@ -21,6 +21,7 @@ const KEYS = {
   flagged: NS + 'flagged',
   quizzes: NS + 'quizzes',
   activeQuiz: NS + 'activeQuiz',
+  pausedQuiz: NS + 'pausedQuiz',
   settings: NS + 'settings',
 };
 
@@ -244,6 +245,25 @@ export function clearActiveQuiz() {
   write(KEYS.activeQuiz, null);
 }
 
+/* A "similar questions" drill runs as the active quiz while the quiz it was
+   launched from waits here, untouched, until the drill ends. */
+export function getPausedQuiz() {
+  return read(KEYS.pausedQuiz, null);
+}
+export function pauseQuiz(session) {
+  write(KEYS.pausedQuiz, session);
+}
+export function clearPausedQuiz() {
+  write(KEYS.pausedQuiz, null);
+}
+/** Put the paused quiz back as the active one. Returns it, or null. */
+export function resumePausedQuiz() {
+  const paused = getPausedQuiz();
+  write(KEYS.pausedQuiz, null);
+  if (paused) write(KEYS.activeQuiz, paused);
+  return paused;
+}
+
 /* ------------------------------------------------------- export / import */
 
 export function exportProgress() {
@@ -294,6 +314,7 @@ export function resetProgress() {
   write(KEYS.flagged, []);
   write(KEYS.quizzes, []);
   write(KEYS.activeQuiz, null);
+  write(KEYS.pausedQuiz, null);
 }
 
 export const __testing = { KEYS, read, write };

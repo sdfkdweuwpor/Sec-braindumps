@@ -21,6 +21,13 @@ name is deliberately random so the URL does not name the vendor.
 - **Quiz navigation.** Previous / Next under every question, arrow keys,
   and a question map. Practice answers lock once revealed; mock exam
   answers stay editable until you submit and are recorded once, at submit.
+- **Similar questions.** After answering, *Similar questions?* pauses the
+  quiz and runs 10 real bank questions on the same topic (ranked by how
+  closely their question, correct answer and explanation match, same
+  objective preferred, nothing from the paused quiz). *Back to my quiz*
+  returns to the exact question.
+- **Letters by position.** Choices are shuffled, but the top choice always
+  reads A; explanations and results use the same letters.
 - **Look.** Light theme by default (dark is one tap away), and a
   Pocket Prep-style explanation panel that opens by itself when you get a
   question wrong and sits behind *Show explanation* when you get it right.

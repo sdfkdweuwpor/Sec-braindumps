@@ -2,6 +2,7 @@
 
 import { el, clear, renderQuestionText, fmtDate } from './dom.js';
 import * as store from './store.js';
+import { icon } from './icons.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
 
 const BAND_CLASS = {
@@ -170,7 +171,7 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
       }
 
       inner.append(el('button', {
-        class: 'iconbtn', type: 'button', text: '⚑',
+        class: 'iconbtn', type: 'button',
         style: 'margin-top:.6rem',
         'aria-pressed': String(store.isFlagged(q.id)),
         'aria-label': store.isFlagged(q.id) ? 'Remove from saved' : 'Save this question',
@@ -179,7 +180,7 @@ export function questionList(rows, { pageSize = 25, emptyMessage, onChange, show
           ev.currentTarget.setAttribute('aria-pressed', String(on));
           if (onChange) onChange();
         },
-      }));
+      }, [icon('flag')]));
       det.append(inner);
       wrap.append(det);
     }

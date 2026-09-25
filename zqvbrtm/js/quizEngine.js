@@ -226,3 +226,94 @@ export function emptyPoolReason(config, ctx) {
 
 export { COVERAGE_TARGET } from './stats.js';
 export { DOMAINS, OBJECTIVES, ALL_QUESTIONS, QUESTIONS_BY_ID };
+
+/** Display letters by position, so the top choice always reads A even when
+ *  choices are shuffled. Maps each original key to the letter shown. */
+export function letterMap(order) {
+  return Object.fromEntries(order.map((key, i) => [key, String.fromCharCode(65 + i)]));
+}
+
+/* ---- similar questions --------------------------------------------------
+ * Ranks real bank questions by how closely their topic matches a given one:
+ * TF-IDF cosine over the question, its correct answer (weighted 3x, since the
+ * answer names the concept being tested) and its explanation, plus a small
+ * bonus for sharing the same exam objective. Built lazily on first use. */
+
+const STOP = new Set(('the and for that this with from are was were which what when where who '
+  + 'how following best most likely should would could will can may has have had not but '
+  + 'into than then them they their there these those been being its about after before '
+  + 'over under while also only such each other more some any all one two three company '
+  + 'organization organizations security analyst administrator engineer team user users '
+  + 'employee employees need needs wants want using use used new recently able ensure '
+  + 'describes describe option options choose select does did doing because').split(' '));
+
+function words(text) {
+  return (String(text).toLowerCase().match(/[a-z0-9][a-z0-9+.#-]*[a-z0-9+#]|[a-z0-9]{3,}/g) || [])
+    .filter((w) => w.length > 2 && !STOP.has(w));
+}
+
+let SIMILAR_INDEX = null;
+function similarIndex(questions) {
+  if (SIMILAR_INDEX && SIMILAR_INDEX.source === questions) return SIMILAR_INDEX;
+  const docs = questions.map((q) => {
+    const tf = new Map();
+    const add = (text, weight) => { for (const w of words(text)) tf.set(w, (tf.get(w) || 0) + weight); };
+    add(q.question, 1);
+    add(q.choices.filter((c) => q.correct.includes(c.key)).map((c) => c.text).join(' '), 3);
+    add(q.explanation || '', 1);
+    return { q, tf };
+  });
+  const df = new Map();
+  for (const d of docs) for (const w of d.tf.keys()) df.set(w, (df.get(w) || 0) + 1);
+  for (const d of docs) {
+    d.vec = new Map();
+    let sq = 0;
+    for (const [w, f] of d.tf) {
+      const weight = (1 + Math.log(f)) * Math.log(docs.length / df.get(w));
+      d.vec.set(w, weight);
+      sq += weight * weight;
+    }
+    d.norm = Math.sqrt(sq) || 1;
+  }
+  SIMILAR_INDEX = { source: questions, byId: new Map(docs.map((d) => [d.q.id, d])) };
+  return SIMILAR_INDEX;
+}
+
+const sameText = (a, b) => a.replace(/\s+/g, ' ').trim().toLowerCase() === b.replace(/\s+/g, ' ').trim().toLowerCase();
+function isDuplicate(a, b) {
+  if (!sameText(a.question, b.question)) return false;
+  const set = (q) => q.choices.map((c) => c.text.trim().toLowerCase()).sort().join('|');
+  return set(a) === set(b);
+}
+
+/**
+ * The `limit` bank questions most similar in topic to `question`, best first.
+ * Never returns the question itself, anything in `exclude`, or an exact
+ * duplicate of it (same stem and same choices).
+ */
+export function similarQuestions(question, { exclude = [], limit = 10, questions = ALL_QUESTIONS } = {}) {
+  const index = similarIndex(questions);
+  const me = index.byId.get(question.id);
+  if (!me) return [];
+  const skip = new Set([question.id, ...exclude]);
+  const scored = [];
+  for (const d of index.byId.values()) {
+    if (skip.has(d.q.id) || isDuplicate(d.q, question)) continue;
+    let dot = 0;
+    for (const [w, weight] of me.vec) {
+      const other = d.vec.get(w);
+      if (other) dot += weight * other;
+    }
+    let score = dot / (me.norm * d.norm);
+    if (question.objective && d.q.objective === question.objective) score += 0.08;
+    scored.push([score, d.q]);
+  }
+  scored.sort((a, b) => b[0] - a[0]);
+  // The bank repeats some questions verbatim; keep one copy of each.
+  const picked = [];
+  for (const [, q] of scored) {
+    if (picked.length >= limit) break;
+    if (!picked.some((p) => isDuplicate(p, q))) picked.push(q);
+  }
+  return picked;
+}

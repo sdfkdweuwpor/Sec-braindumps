@@ -3,7 +3,11 @@ import * as store from '../store.js';
 import { confirmDialog } from '../components.js';
 import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scoreQuiz, sessionQuestions, remainingMs,
+  createSession, similarQuestions, letterMap,
 } from '../quizEngine.js';
+import { icon } from '../icons.js';
+
+const DRILL_SIZE = 10;
 
 const NUM_WORD = { 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE' };
 
@@ -15,10 +19,7 @@ function teardown() {
   if (timerId) { clearInterval(timerId); timerId = null; }
 }
 
-function finish(session, navigate) {
-  // The mock timer and a confirmation can both reach here; score once.
-  if (session.finished) return;
-  session.finished = true;
+function saveResult(session) {
   const questions = sessionQuestions(session);
   if (session.feedbackMode === 'end') {
     // Answers stay editable until submission, so they are only recorded now;
@@ -41,9 +42,20 @@ function finish(session, navigate) {
     score: correct,
     total,
     durationMs: Date.now() - session.startedAt,
+    // Kept so the results screen shows the same letters the quiz showed.
+    choiceOrder: session.choiceOrder,
   };
   store.saveQuizResult(result);
+  return result;
+}
+
+function finish(session, navigate) {
+  // The mock timer and a confirmation can both reach here; score once.
+  if (session.finished) return;
+  session.finished = true;
+  const result = saveResult(session);
   store.clearActiveQuiz();
+  if (session.mode === 'similar') store.resumePausedQuiz();
   teardown();
   navigate(`#/results?id=${encodeURIComponent(result.id)}`);
 }
@@ -51,10 +63,11 @@ function finish(session, navigate) {
 export async function renderQuiz(view, { navigate }) {
   teardown();
   const session = store.getActiveQuiz();
+  if (session && session.mode !== 'similar' && store.getPausedQuiz()) store.clearPausedQuiz();
 
   if (!session) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic', 'aria-hidden': 'true', text: '◇' }),
+      el('span', { class: 'ic' }, [icon('study', { size: 34 })]),
       el('h1', { text: 'No quiz in progress' }),
       el('p', { class: 'muted', text: 'Start one from the Study screen.' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
@@ -62,7 +75,7 @@ export async function renderQuiz(view, { navigate }) {
     return;
   }
 
-  const body = el('div');
+  const body = el('div', { class: 'quizbody' });
   view.append(body);
 
   const draw = () => {
@@ -71,6 +84,9 @@ export async function renderQuiz(view, { navigate }) {
     // which made F toggle the flag on and straight back off.
     if (keyHandler) { window.removeEventListener('keydown', keyHandler); keyHandler = null; }
     clear(body);
+    body.classList.remove('q-enter');
+    void body.offsetWidth;
+    body.classList.add('q-enter');
     const question = QUESTIONS_BY_ID.get(session.questionIds[session.index]);
     if (!question) { finish(session, navigate); return; }
 
@@ -81,6 +97,9 @@ export async function renderQuiz(view, { navigate }) {
     const picked = session.answers[question.id] || [];
     const order = session.choiceOrder[question.id]
       || question.choices.map((c) => c.key);
+    const L = letterMap(order);            // original key -> letter shown
+    const byShown = (a, b) => L[a].localeCompare(L[b]);
+    const drill = session.mode === 'similar';
 
     /* ---- header ---- */
     const flagBtn = el('button', {
@@ -88,24 +107,35 @@ export async function renderQuiz(view, { navigate }) {
       'aria-pressed': String(store.isFlagged(question.id)),
       'aria-label': 'Flag this question to review later',
       title: 'Flag (F)',
-      text: '⚑',
       onclick: () => {
         const on = store.toggleFlag(question.id);
         flagBtn.setAttribute('aria-pressed', String(on));
       },
-    });
+    }, [icon('flag')]);
 
     const timerEl = session.durationMs ? el('span', { class: 'pill' }) : null;
 
-    body.append(el('div', { class: 'spread' }, [
-      el('h1', { style: 'font-size:1.15rem;margin:0', text: `Question ${n} of ${total}` }),
+    if (drill && session.from) {
+      body.append(el('div', { class: 'drill-banner' }, [
+        icon('similar', { size: 22 }),
+        el('div', {}, [
+          el('b', { text: 'Similar questions' }),
+          el('span', { text: `More practice on ${session.from.objective ? `${session.from.objective} ${session.from.objectiveTitle || ''}` : 'this topic'}, from question ${session.from.index} of your quiz. Your quiz is paused.` }),
+        ]),
+      ]));
+    }
+
+    body.append(el('div', { class: 'quizhead' }, [
+      el('h1', { class: 'qcount' }, [
+        el('span', { text: `Question ${n}` }), el('span', { class: 'qof', text: ` of ${total}` }),
+      ]),
       el('div', { class: 'row' }, [
         timerEl,
         flagBtn,
         el('button', {
-          class: 'btn secondary', type: 'button', text: 'End quiz',
-          onclick: () => endQuiz(),
-        }),
+          class: 'btn secondary', type: 'button',
+          onclick: () => (drill ? exitDrill() : endQuiz()),
+        }, drill ? [icon('back', { size: 18 }), 'Back to my quiz'] : ['End quiz']),
       ]),
     ]));
 
@@ -158,11 +188,11 @@ export async function renderQuiz(view, { navigate }) {
         const mark = btn.querySelector('.mark');
         clear(mark);
         if (st === 'correct') {
-          mark.append(el('span', { class: 'statelabel', text: '✓ Correct' }));
+          mark.append(el('span', { class: 'statelabel' }, [icon('check', { size: 16 }), 'Correct']));
         } else if (st === 'wrong') {
-          mark.append(el('span', { class: 'statelabel', text: '✗ Your answer' }));
+          mark.append(el('span', { class: 'statelabel' }, [icon('x', { size: 16 }), 'Your answer']));
         } else if (st === 'selected') {
-          mark.append(el('span', { class: 'statelabel', text: '● Selected' }));
+          mark.append(el('span', { class: 'statelabel', text: 'Selected' }));
         }
       }
     };
@@ -205,7 +235,7 @@ export async function renderQuiz(view, { navigate }) {
           }
         },
       }, [
-        el('span', { class: 'key', 'aria-hidden': 'true', text: key }),
+        el('span', { class: 'key', 'aria-hidden': 'true', text: L[key] }),
         el('span', { class: 'body' }, [renderQuestionText(choice.text)]),
         el('span', { class: 'mark' }),
       ]);
@@ -224,16 +254,26 @@ export async function renderQuiz(view, { navigate }) {
     if (revealed) {
       const correctKeys = question.correct;
       const got = isCorrect(question, picked);
-      const correctText = correctKeys
+      const shownCorrect = [...correctKeys].sort(byShown);
+      const correctText = shownCorrect
         .map((k) => question.choices.find((c) => c.key === k))
         .filter(Boolean)
-        .map((c) => `${c.key}. ${c.text}`)
+        .map((c) => `${L[c.key]}. ${c.text}`)
         .join('  |  ');
 
       const panel = el('div', { class: `explain ${got ? 'is-right' : 'is-wrong'}` }, [
         el('div', { class: 'explain-head' }, [
-          el('span', { class: 'verdict', text: got ? '✓ Correct' : '✗ Incorrect' }),
-          el('span', { class: 'explain-key', text: `Answer: ${correctKeys.join(', ')}` }),
+          el('span', { class: 'verdict' }, [icon(got ? 'check' : 'x', { size: 20 }), got ? 'Correct' : 'Incorrect']),
+          el('div', { class: 'explain-tools' }, [
+            session.feedbackMode === 'immediate' && !drill
+              ? el('button', {
+                class: 'similar-btn', type: 'button',
+                title: `Practise ${DRILL_SIZE} more questions from the bank on this topic`,
+                onclick: () => startSimilar(question),
+              }, [icon('similar', { size: 17 }), 'Similar questions?'])
+              : null,
+            el('span', { class: 'explain-key', text: `Answer: ${shownCorrect.map((k) => L[k]).join(', ')}` }),
+          ]),
         ]),
       ]);
 
@@ -241,6 +281,7 @@ export async function renderQuiz(view, { navigate }) {
       // wrong, and sits one tap away when you got it right.
       const details = el('details', { class: 'explain-more', open: got ? null : '' }, [
         el('summary', {}, [
+          icon('bulb', { size: 18 }),
           el('span', { class: 'when-closed', text: 'Show explanation' }),
           el('span', { class: 'when-open', text: 'Hide explanation' }),
         ]),
@@ -255,11 +296,12 @@ export async function renderQuiz(view, { navigate }) {
           text: 'No explanation available for this question yet.' }));
       }
       const wrongs = Object.entries(question.incorrectExplanations || {})
-        .filter(([k]) => !correctKeys.includes(k));
+        .filter(([k]) => !correctKeys.includes(k) && L[k])
+        .sort(([a], [b]) => byShown(a, b));
       if (wrongs.length) {
         inner.append(el('h3', { text: 'Why the others are wrong' }));
         inner.append(el('ul', { class: 'wrongs' },
-          wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: k }), el('span', { text: why })]))));
+          wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: L[k] }), el('span', { text: why })]))));
       }
       details.append(inner);
       panel.append(details);
@@ -268,48 +310,24 @@ export async function renderQuiz(view, { navigate }) {
 
     /* ---- previous / next ---- */
     const last = session.index >= total - 1;
-    const answeredCount = session.questionIds.filter((id) => (session.answers[id] || []).length).length;
     body.append(el('div', { class: 'qnav' }, [
       el('button', {
-        class: 'btn secondary', type: 'button', text: '← Previous',
+        class: 'btn secondary navbtn', type: 'button',
         disabled: session.index === 0, onclick: () => goTo(session.index - 1),
         'aria-keyshortcuts': 'ArrowLeft',
-      }),
-      el('span', { class: 'faint qnav-count', text: `${answeredCount}/${total} answered` }),
+      }, [icon('left', { size: 20 }), 'Previous']),
       last
-        ? el('button', { class: 'btn', type: 'button', text: 'Finish quiz', onclick: () => submitAll() })
+        ? el('button', { class: 'btn navbtn', type: 'button', onclick: () => submitAll() },
+          [drill ? 'Finish' : 'Finish quiz', icon('check', { size: 20 })])
         : el('button', {
-          class: revealed || picked.length ? 'btn' : 'btn secondary', type: 'button',
-          text: revealed || picked.length ? 'Next question →' : 'Skip →',
+          class: revealed || picked.length ? 'btn navbtn' : 'btn secondary navbtn', type: 'button',
           onclick: () => goTo(session.index + 1), 'aria-keyshortcuts': 'ArrowRight',
-        }),
+        }, [revealed || picked.length ? 'Next question' : 'Skip', icon('right', { size: 20 })]),
     ]));
 
-    /* ---- question map: jump anywhere, see what is answered and flagged ---- */
-    const map = el('div', { class: 'qmap', role: 'list' });
-    session.questionIds.forEach((id, i) => {
-      const ans = (session.answers[id] || []).length > 0;
-      const q = QUESTIONS_BY_ID.get(id);
-      let st = ans ? 'answered' : '';
-      if (ans && session.revealed[id] && q) st = isCorrect(q, session.answers[id]) ? 'right' : 'wrong';
-      map.append(el('button', {
-        type: 'button', role: 'listitem', class: 'qmap-cell', text: String(i + 1),
-        'data-state': st, 'data-flag': String(store.isFlagged(id)),
-        'aria-current': i === session.index ? 'step' : null,
-        'aria-label': `Question ${i + 1}${ans ? ', answered' : ''}${store.isFlagged(id) ? ', flagged' : ''}`,
-        onclick: () => goTo(i),
-      }));
-    });
-    body.append(el('details', { class: 'card qmap-wrap', open: total <= 30 ? '' : null }, [
-      el('summary', { text: 'All questions' }),
-      map,
-    ]));
-
-    /* ---- shortcut legend ---- */
-    body.append(el('details', { class: 'card', style: 'margin-top:1.2rem' }, [
-      el('summary', { class: 'faint', text: '? Keyboard shortcuts' }),
-      el('p', { class: 'faint', style: 'margin:.5rem 0 0',
-        text: '1–8 select a choice · Enter submit or next · ← → previous / next · F flag · Esc end quiz' }),
+    body.append(el('p', { class: 'kbd-hint' }, [
+      icon('keyboard', { size: 18 }),
+      'Keys: 1–6 pick an answer · Enter submit or next · ← → move · F flag · Esc end',
     ]));
 
     /* ---- keyboard ---- */
@@ -335,7 +353,7 @@ export async function renderQuiz(view, { navigate }) {
         ev.preventDefault(); flagBtn.click();
       } else if (ev.key === 'Escape') {
         ev.preventDefault();
-        endQuiz();
+        if (session.mode === 'similar') exitDrill(); else endQuiz();
       }
     };
     window.addEventListener('keydown', keyHandler);
@@ -379,6 +397,38 @@ export async function renderQuiz(view, { navigate }) {
 
   const answeredCount = () =>
     session.questionIds.filter((id) => (session.answers[id] || []).length).length;
+
+  // Pause this quiz and run a short quiz of the most similar bank questions.
+  function startSimilar(question) {
+    const picks = similarQuestions(question, { exclude: session.questionIds, limit: DRILL_SIZE });
+    if (!picks.length) return;
+    const drillSession = createSession({
+      questions: picks, mode: 'similar', feedbackMode: 'immediate',
+      config: { source: 'similar', from: question.id },
+      shuffleChoices: store.getSettings().shuffleChoices,
+    });
+    drillSession.from = {
+      id: question.id, index: session.index + 1,
+      objective: question.objective, objectiveTitle: question.objectiveTitle,
+    };
+    store.setActiveQuiz(session);
+    store.pauseQuiz(session);
+    store.setActiveQuiz(drillSession);
+    teardown();
+    window.dispatchEvent(new Event('app:refresh'));
+  }
+
+  // Leave a drill early: keep what was answered, then return to the quiz.
+  function exitDrill() {
+    if (answeredCount() && !session.finished) {
+      session.finished = true;
+      saveResult(session);
+    }
+    store.clearActiveQuiz();
+    store.resumePausedQuiz();
+    teardown();
+    window.dispatchEvent(new Event('app:refresh'));
+  }
 
   // One path for the End quiz button and the Escape key.
   async function endQuiz() {

@@ -483,3 +483,131 @@ select.numinput {
   color: var(--text); background: var(--bg-raised);
   border: 1px solid var(--border-strong); border-radius: 10px;
 }
+
+
+/* =====================================================================
+   Polish pass: bigger navigation, larger and bolder question text, icons,
+   and motion. Later rules here refine the base rules above.
+   ===================================================================== */
+
+.icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.icon svg { display: block; }
+.btn, .iconbtn { gap: .5rem; }
+.btn .icon, .iconbtn .icon { pointer-events: none; }
+
+/* ---- navigation ---- */
+.brandmark { color: #fff; }
+.nav a .ic { display: inline-flex; }
+@media (min-width: 880px) {
+  .nav { width: 264px; flex-basis: 264px; padding: 1.3rem .9rem; gap: .35rem; }
+  .nav .navtitle { font-size: 1.2rem; gap: .75rem; padding: .2rem .7rem 1.6rem; }
+  .nav .navtitle .brandmark { width: 40px; height: 40px; border-radius: 12px; }
+  .nav a { font-size: 1.08rem; font-weight: 700; min-height: 52px; padding: .75rem 1rem;
+           gap: .85rem; border-radius: 14px; transition: background .18s var(--ease), color .18s var(--ease); }
+  .nav a .ic { width: 26px; justify-content: center; }
+}
+@media (max-width: 879px) {
+  .nav a { font-size: .78rem; font-weight: 700; gap: 4px; padding-top: .5rem; }
+}
+.topbar .brandmark { width: 38px; height: 38px; }
+.topbar .brand { font-size: 1.05rem; }
+.iconbtn { border-radius: 12px; transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease); }
+
+/* ---- screen and question transitions ---- */
+@keyframes view-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes q-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+#view.enter > * { animation: view-in .32s var(--ease) both; }
+.quizbody.q-enter { animation: q-in .26s var(--ease) both; }
+.card, .choice, .btn, .chip, .mode-grid .card { transition-timing-function: var(--ease); }
+
+/* ---- quiz: give the question and answers the room ---- */
+.quizhead { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; margin-bottom: .4rem; }
+.qcount { font-size: 1.35rem; font-weight: 800; margin: 0; letter-spacing: -.02em; }
+.qcount .qof { color: var(--text-faint); font-weight: 700; }
+.progress { height: 10px; margin: .7rem 0 1rem !important; }
+.qmeta { margin-bottom: .2rem; }
+.qtext {
+  font-size: clamp(1.15rem, 1rem + .55vw, 1.42rem);
+  font-weight: 700; line-height: 1.55; letter-spacing: -.01em;
+  padding: 1.5rem 1.7rem; margin: .9rem 0 1.2rem;
+  border-radius: 20px;
+}
+.choices { gap: .8rem; }
+.choice {
+  padding: 1.05rem 1.25rem; gap: 1rem; min-height: 64px; align-items: center;
+  font-size: clamp(1.02rem, .95rem + .35vw, 1.18rem); font-weight: 600; line-height: 1.45;
+  border-radius: 16px; border-width: 2px;
+}
+.choice:hover:not(:disabled) { transform: translateY(-1px); box-shadow: var(--shadow); }
+.choice .key { flex-basis: 2.2rem; height: 2.2rem; border-radius: 11px; font-size: .95rem; font-weight: 800; }
+.choice .mark { align-self: center; }
+.statelabel { display: inline-flex; align-items: center; gap: .3rem; }
+.choice[data-state="correct"], .choice[data-state="wrong"] { box-shadow: var(--shadow-sm); }
+
+/* ---- explanation panel ---- */
+.explain { border-radius: 20px; margin-top: 1.2rem; }
+.explain-head { padding: .95rem 1.3rem; }
+.explain .verdict { display: inline-flex; align-items: center; gap: .45rem; font-size: 1.12rem; }
+.explain-tools { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
+.similar-btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  min-height: 40px; padding: .4rem .95rem;
+  font: inherit; font-size: .9rem; font-weight: 800; letter-spacing: -.005em;
+  color: var(--accent); background: var(--bg-card);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 999px; cursor: pointer;
+  transition: background .18s var(--ease), color .18s var(--ease), transform .12s var(--ease), box-shadow .18s var(--ease);
+}
+.similar-btn:hover { background: var(--accent); color: var(--accent-ink); box-shadow: 0 4px 14px rgba(75,77,250,.28); }
+.similar-btn:active { transform: scale(.97); }
+.explain-more > summary { font-size: 1.02rem; padding: .35rem 1.3rem; }
+.explain-more > summary::before { content: none; }
+.explain-more .explain-body { animation: reveal .28s var(--ease) both; }
+.explain-body { padding: 0 1.3rem 1.2rem; font-size: 1.04rem; line-height: 1.65; }
+.explain .wrongs li { font-size: 1rem; padding: .7rem 0; }
+.explain .wkey, .result-choices .wkey { flex-basis: 1.8rem; height: 1.8rem; }
+
+/* ---- previous / next ---- */
+.qnav { padding: .8rem; border-radius: 20px; margin-top: 1.3rem; }
+.qnav .navbtn { min-width: 10.5rem; min-height: 52px; font-size: 1.05rem; font-weight: 800; border-radius: 14px; }
+.qnav .navbtn:only-child { margin-left: auto; }
+@media (max-width: 520px) { .qnav .navbtn { min-width: 0; flex: 1 1 0; } }
+.kbd-hint { display: flex; align-items: center; justify-content: center; gap: .5rem;
+            margin: 1.1rem 0 0; font-size: .82rem; color: var(--text-faint); }
+@media (hover: none) { .kbd-hint { display: none; } }
+
+/* ---- similar-questions drill ---- */
+.drill-banner {
+  display: flex; gap: .85rem; align-items: flex-start;
+  padding: .9rem 1.1rem; margin-bottom: 1rem;
+  background: var(--accent-soft); color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 16px;
+}
+.drill-banner .icon { color: var(--accent); margin-top: .1rem; }
+.drill-banner b { display: block; font-weight: 800; color: var(--accent); }
+.drill-banner span { font-size: .95rem; }
+.resume-card { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+               border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.resume-card h2 { margin-bottom: .2rem; }
+.resume-card p { margin: 0; }
+
+/* ---- results: choices as they appeared in the quiz ---- */
+.result-choices { list-style: none; margin: .7rem 0 0; padding: 0; display: grid; gap: .45rem; }
+.result-choices li { display: flex; gap: .7rem; align-items: center; padding: .55rem .75rem;
+                     border: 1.5px solid var(--border); border-radius: 12px; background: var(--bg-card); }
+.result-choices li[data-state="correct"] { border-color: var(--correct-brd); background: var(--correct-bg); }
+.result-choices li[data-state="wrong"] { border-color: var(--incorrect-brd); background: var(--incorrect-bg); }
+.result-choices li .statelabel { margin-left: auto; font-size: .72rem; }
+.result-choices li[data-state="correct"] .statelabel { color: var(--correct); }
+.result-choices li[data-state="wrong"] .statelabel { color: var(--incorrect); }
+.result-choices .wkey { display: grid; place-items: center; border-radius: 8px; flex: 0 0 1.8rem;
+                        background: var(--bg-raised); font-weight: 800; font-size: .8rem; color: var(--text-dim); }
+
+/* ---- empty states and cards ---- */
+.empty .ic { display: inline-flex; color: var(--accent); background: var(--accent-soft);
+             width: 64px; height: 64px; border-radius: 18px; align-items: center; justify-content: center; }
+.mode-ic .icon { color: var(--accent); }
+.mode-head h2 { font-size: 1.2rem; }
+h1 { font-weight: 800; }
+.topbar { background: color-mix(in srgb, var(--bg) 97%, transparent); }

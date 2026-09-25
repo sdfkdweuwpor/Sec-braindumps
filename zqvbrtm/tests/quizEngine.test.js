@@ -208,3 +208,30 @@ test('empty pool reasons name the filter that emptied it', () => {
   assert.match(emptyPoolReason({ source: 'flagged' }, ctx()), /Nothing saved yet/);
   assert.match(emptyPoolReason({ source: 'domain', domains: [] }, ctx()), /at least one domain/);
 });
+
+/* ---------------------------------------------------------- display letters */
+test('letters follow position, so the top choice always reads A', async () => {
+  const { letterMap } = await import('../js/quizEngine.js');
+  assert.deepEqual(letterMap(['C', 'A', 'D', 'B']), { C: 'A', A: 'B', D: 'C', B: 'D' });
+  assert.deepEqual(letterMap(['F', 'E', 'D', 'C', 'B', 'A']).A, 'F');
+});
+
+/* -------------------------------------------------------- similar questions */
+test('similar questions come from the bank, on topic, without repeats', async () => {
+  const { similarQuestions, ALL_QUESTIONS, QUESTIONS_BY_ID } = await import('../js/quizEngine.js');
+  if (!ALL_QUESTIONS.length) return;          // template: no bank loaded
+  const sms = ALL_QUESTIONS.find((q) => /text message/i.test(q.question)
+    && q.choices.some((c) => q.correct.includes(c.key) && /smishing/i.test(c.text)));
+  assert.ok(sms, 'fixture: a smishing question exists');
+  const exclude = ALL_QUESTIONS.slice(0, 20).map((q) => q.id).filter((id) => id !== sms.id);
+  const picks = similarQuestions(sms, { exclude, limit: 10 });
+
+  assert.equal(picks.length, 10);
+  for (const q of picks) assert.equal(QUESTIONS_BY_ID.get(q.id), q, 'every pick is a real bank question');
+  assert.ok(!picks.some((q) => q.id === sms.id), 'never the question itself');
+  assert.ok(!picks.some((q) => exclude.includes(q.id)), 'never a question from the current quiz');
+  const stems = picks.map((q) => `${q.question}|${q.choices.map((c) => c.text).sort().join('|')}`.toLowerCase());
+  assert.equal(new Set(stems).size, stems.length, 'no exact duplicates among the picks');
+  const onTopic = picks.filter((q) => /smish|text message|sms/i.test(q.question + q.choices.map((c) => c.text).join(' ')));
+  assert.ok(onTopic.length >= 6, `only ${onTopic.length} of 10 picks are about text-message phishing`);
+});

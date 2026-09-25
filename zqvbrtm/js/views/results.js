@@ -2,8 +2,9 @@ import { el, clear, renderQuestionText, fmtDuration } from '../dom.js';
 import * as store from '../store.js';
 import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scaledScore,
-  PASSING_SCALED, PRACTICE_THRESHOLD, createSession, selectQuestions,
+  PASSING_SCALED, PRACTICE_THRESHOLD, createSession, selectQuestions, letterMap,
 } from '../quizEngine.js';
+import { icon } from '../icons.js';
 
 function domainBars(questions, answers) {
   const rows = [];
@@ -38,7 +39,7 @@ export async function renderResults(view, { params, navigate }) {
 
   if (!result) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic', 'aria-hidden': 'true', text: '○' }),
+      el('span', { class: 'ic' }, [icon('stats', { size: 34 })]),
       el('h1', { text: 'No results yet' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
     ]));
@@ -48,8 +49,21 @@ export async function renderResults(view, { params, navigate }) {
   const questions = result.questionIds.map((id) => QUESTIONS_BY_ID.get(id)).filter(Boolean);
   const pct = result.total ? Math.round((result.score / result.total) * 100) : 0;
   const isMock = result.mode === 'mock';
+  const isDrill = result.mode === 'similar';
+  const resumable = isDrill ? store.getActiveQuiz() : null;
 
-  view.append(el('h1', { text: isMock ? 'Mock exam results' : 'Results' }));
+  view.append(el('h1', { text: isMock ? 'Mock exam results' : isDrill ? 'Similar questions' : 'Results' }));
+
+  if (resumable) {
+    const at = (resumable.index || 0) + 1;
+    view.append(el('div', { class: 'card resume-card' }, [
+      el('div', {}, [
+        el('h2', { text: 'Your quiz is waiting' }),
+        el('p', { class: 'muted', text: `Pick up where you left off: question ${at} of ${resumable.questionIds.length}.` }),
+      ]),
+      el('a', { class: 'btn', href: '#/quiz' }, [icon('back', { size: 18 }), 'Back to my quiz']),
+    ]));
+  }
 
   const head = el('div', { class: 'card' }, [
     el('div', { style: 'font-size:2rem;font-weight:700' },
@@ -107,6 +121,10 @@ export async function renderResults(view, { params, navigate }) {
     for (const q of rows) {
       const picked = result.answers[q.id] || [];
       const right = isCorrect(q, picked);
+      // Same letters the quiz showed: A on top, in the order the choices appeared.
+      const order = (result.choiceOrder && result.choiceOrder[q.id]) || q.choices.map((c) => c.key);
+      const L = letterMap(order);
+      const shown = (keys) => keys.filter((k) => L[k]).map((k) => L[k]).sort().join(', ');
       const det = el('details', { style: 'border-top:1px solid var(--border);padding:.5rem 0' }, [
         el('summary', {}, [
           el('span', {
@@ -119,25 +137,39 @@ export async function renderResults(view, { params, navigate }) {
       ]);
       const inner = el('div', { style: 'padding:.6rem 0 .2rem' });
       inner.append(renderQuestionText(q.question));
+      inner.append(el('ul', { class: 'result-choices' }, order.map((k) => {
+        const c = q.choices.find((x) => x.key === k);
+        if (!c) return null;
+        const isRight = q.correct.includes(k);
+        const mine = picked.includes(k);
+        return el('li', { 'data-state': isRight ? 'correct' : mine ? 'wrong' : '' }, [
+          el('span', { class: 'wkey', text: L[k] }),
+          el('span', { text: c.text }),
+          isRight ? el('span', { class: 'statelabel', text: 'Correct' })
+            : mine ? el('span', { class: 'statelabel', text: 'Your answer' }) : null,
+        ]);
+      })));
       inner.append(el('p', { class: 'muted', style: 'margin-top:.5rem',
-        text: `Your answer: ${picked.join(', ') || '(none)'} · Correct: ${q.correct.join(', ')}` }));
+        text: `Your answer: ${shown(picked) || '(none)'} · Correct: ${shown(q.correct)}` }));
       if (q.explanation) inner.append(el('p', { text: q.explanation }));
       else inner.append(el('p', { class: 'faint', text: 'No explanation available for this question yet.' }));
       const wrongs = Object.entries(q.incorrectExplanations || {})
-        .filter(([k]) => !q.correct.includes(k));
+        .filter(([k]) => !q.correct.includes(k) && L[k])
+        .sort(([a], [b]) => L[a].localeCompare(L[b]));
       if (wrongs.length) {
+        inner.append(el('h3', { text: 'Why the others are wrong' }));
         inner.append(el('ul', { class: 'wrongs' },
-          wrongs.map(([k, why]) => el('li', {}, [el('b', { text: `${k}. ` }), why]))));
+          wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: L[k] }), el('span', { text: why })]))));
       }
       inner.append(el('button', {
-        class: 'iconbtn', type: 'button', text: '⚑',
+        class: 'iconbtn', type: 'button',
         'aria-pressed': String(store.isFlagged(q.id)),
         'aria-label': 'Flag this question',
         onclick: (ev) => {
           const on = store.toggleFlag(q.id);
           ev.currentTarget.setAttribute('aria-pressed', String(on));
         },
-      }));
+      }, [icon('flag')]));
       det.append(inner);
       list.append(det);
     }
@@ -162,6 +194,7 @@ export async function renderResults(view, { params, navigate }) {
 
   /* ---- actions ---- */
   const missedHere = questions.filter((q) => !isCorrect(q, result.answers[q.id] || []));
+  if (resumable) return;   // the waiting quiz is the next step, not a new one
   view.append(el('div', { class: 'row' }, [
     el('button', {
       class: 'btn', type: 'button', disabled: !missedHere.length,

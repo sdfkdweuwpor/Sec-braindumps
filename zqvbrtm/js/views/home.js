@@ -2,6 +2,7 @@ import { el } from '../dom.js';
 import * as store from '../store.js';
 import * as stats from '../stats.js';
 import { readinessCard, confirmDialog } from '../components.js';
+import { icon } from '../icons.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -15,12 +16,12 @@ function startSession(session, navigate) {
   navigate('#/quiz');
 }
 
-const MODE_ICON = { 'Build your own': '✎', 'Missed questions': '↺', 'Weakest subject': '◎', 'Mock exam': '⏱' };
+const MODE_ICON = { 'Build your own': 'build', 'Missed questions': 'missed', 'Weakest subject': 'target', 'Mock exam': 'timer' };
 
 function modeCard({ title, blurb, cta, disabled, note, onStart }) {
   return el('div', { class: 'card mode-card' }, [
     el('div', { class: 'mode-head' }, [
-      el('span', { class: 'mode-ic', 'aria-hidden': 'true', text: MODE_ICON[title] || '◆' }),
+      el('span', { class: 'mode-ic' }, [icon(MODE_ICON[title] || 'study', { size: 24 })]),
       el('div', {}, [
         el('h2', { text: title }),
         el('p', { class: 'muted', text: blurb, style: 'margin:0' }),

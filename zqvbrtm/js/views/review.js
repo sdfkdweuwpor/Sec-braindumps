@@ -1,4 +1,5 @@
 import { el, clear } from '../dom.js';
+import { icon } from '../icons.js';
 import * as store from '../store.js';
 import * as st from '../stats.js';
 import {
@@ -14,7 +15,7 @@ export async function renderReview(view, { navigate }) {
 
   if (!all.length) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic', 'aria-hidden': 'true', text: '↺' }),
+      el('span', { class: 'ic' }, [icon('review', { size: 34 })]),
       el('h2', { text: 'Nothing missed yet' }),
       el('p', { class: 'muted',
         text: 'Every question you answer incorrectly collects here, so you can come back to it.' }),
