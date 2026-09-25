@@ -1,0 +1,84 @@
+/* Design tokens. Light is the default; [data-theme="dark"] overrides the same
+   names so nothing else in the app needs to know which theme is on. */
+:root {
+  --bg:            #f3f5fa;
+  --bg-raised:     #f8f9fc;
+  --bg-card:       #ffffff;
+  --bg-hover:      #eef1fb;
+  --bg-sunken:     #e9edf6;
+  --border:        #e2e7f1;
+  --border-strong: #c9d2e4;
+
+  --text:      #0f172a;
+  --text-dim:  #475069;
+  --text-faint:#6b7590;
+
+  /* brand: a confident blue-violet, with a deep ink for the chrome */
+  --accent:      #4b4dfa;
+  --accent-dim:  #3a3bd6;
+  --accent-soft: #ecebff;
+  --accent-ink:  #ffffff;
+  --brand-grad:  linear-gradient(135deg, #5b5cff 0%, #3d3ad8 55%, #2a2a9e 100%);
+  --secondary:   #0ea5a4;
+  --secondary-dim:#0b8584;
+
+  --correct:      #0a7d4f;
+  --correct-bg:   #e8f8f0;
+  --correct-brd:  #6fcfa4;
+  --incorrect:    #c22a22;
+  --incorrect-bg: #fdeeed;
+  --incorrect-brd:#f0a6a1;
+  --flag:         #9a5b00;
+  --flag-bg:      #fff5de;
+  --flag-brd:     #e9bf62;
+
+  --radius:   16px;
+  --radius-sm: 12px;
+  --tap:      44px;
+  --maxw:     880px;
+
+  --shadow-sm: 0 1px 2px rgba(15,23,42,.05);
+  --shadow:    0 1px 2px rgba(15,23,42,.04), 0 6px 20px rgba(15,23,42,.06);
+  --shadow-lg: 0 2px 6px rgba(15,23,42,.06), 0 18px 40px rgba(15,23,42,.10);
+
+  --font: "Inter", "SF Pro Text", system-ui, -apple-system, "Segoe UI", Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", monospace;
+}
+
+[data-theme="dark"] {
+  --bg:            #0b0f1c;
+  --bg-raised:     #10162a;
+  --bg-card:       #141b31;
+  --bg-hover:      #1b2440;
+  --bg-sunken:     #0e1426;
+  --border:        #232d4b;
+  --border-strong: #34406a;
+
+  --text:      #e9edf8;
+  --text-dim:  #a4afca;
+  --text-faint:#7a86a6;
+
+  --accent:      #8b8cff;
+  --accent-dim:  #a5a6ff;
+  --accent-soft: #23264f;
+  --accent-ink:  #0b0d2a;
+  --brand-grad:  linear-gradient(135deg, #6667ff 0%, #4442d8 60%, #2c2b93 100%);
+  --secondary:   #2dd4bf;
+  --secondary-dim:#5eead4;
+
+  --correct:      #4ade80;
+  --correct-bg:   #0e2a1f;
+  --correct-brd:  #1f7a52;
+  --incorrect:    #f87171;
+  --incorrect-bg: #321417;
+  --incorrect-brd:#8f3a3a;
+  --flag:         #fbbf24;
+  --flag-bg:      #2e2410;
+  --flag-brd:     #8a6a17;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+  --shadow:    0 1px 2px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.25);
+  --shadow-lg: 0 2px 6px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.35);
+}

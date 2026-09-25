@@ -1,0 +1,211 @@
+{
+ "q0219": {
+  "objective": "3.4",
+  "explanation": "A hot site is a fully equipped, running facility the company can move operations to, so an outage that lasts hours or days does not stop the business. The word 'extended' is the discriminator: a UPS only bridges the gap for minutes until power returns or systems shut down cleanly. Published answers split between these two; the hot site is the one that actually covers a long outage.",
+  "incorrect": {
+   "B": "A UPS is battery backup for short outages -- enough to ride out a flicker or shut down gracefully, not to keep an environment running through an extended outage.",
+   "C": "Snapshots capture a point-in-time copy of a system or volume. They help recover data, but do nothing to keep systems powered or running.",
+   "D": "SOAR automates security operations and incident response workflows. It has no bearing on power or site availability."
+  }
+ },
+ "q0318": {
+  "objective": "4.1",
+  "explanation": "COBO (corporate-owned, business-only) meets every requirement with the least risk: the company owns the device, locks it down fully, and allows no personal use that could introduce apps or data it does not control. Nothing in the requirements asks for personal use, which is the only thing COPE adds. Some published answers pick COPE; COBO is the tighter fit for 'reduced security risk'.",
+  "incorrect": {
+   "A": "BYOD means employees use their own devices, which fails the 'company-owned' requirement and limits how far the company can harden them.",
+   "B": "CYOD lets employees pick from approved models, but personal use and ownership arrangements vary, and it adds nothing the requirements ask for over COBO.",
+   "C": "COPE is company-owned but personally enabled -- it permits personal use, which adds risk the requirements do not call for."
+  }
+ },
+ "q0702": {
+  "objective": "4.1",
+  "explanation": "COBO (corporate-owned, business-only) meets every requirement with the least risk: the company owns the device, locks it down fully, and allows no personal use that could introduce apps or data it does not control. Nothing in the requirements asks for personal use, which is the only thing COPE adds. Some published answers pick COPE; COBO is the tighter fit for 'reduced security risk'.",
+  "incorrect": {
+   "A": "BYOD means employees use their own devices, which fails the 'company-owned' requirement and limits how far the company can harden them.",
+   "B": "CYOD lets employees pick from approved models, but personal use and ownership arrangements vary, and it adds nothing the requirements ask for over COBO.",
+   "C": "COPE is company-owned but personally enabled -- it permits personal use, which adds risk the requirements do not call for."
+  }
+ },
+ "q0327": {
+  "objective": "1.1",
+  "explanation": "An acceptable use policy is a written policy set by management that governs how people may use company systems. Policies, procedures and governance documents are managerial controls in CompTIA's categories.",
+  "incorrect": {
+   "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
+   "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+   "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
+  }
+ },
+ "q0369": {
+  "objective": "4.1",
+  "explanation": "The attacker already has valid credentials, so anything that unlocks with a login -- including full disk encryption -- no longer protects the data. Remote wipe lets the company erase a lost or stolen device's data once it is reported, which is the control that still works after the credentials are compromised, and it applies to every company device through MDM.",
+  "incorrect": {
+   "A": "Application management controls which apps are installed and how they behave. It does not protect data on a device the attacker can already log in to.",
+   "B": "Full disk encryption protects data when the device is locked or powered off, but the attacker logged in with a valid username and password, which decrypts it.",
+   "D": "Containerization separates work data from personal data, but an attacker with the user's credentials can open the work container too."
+  }
+ },
+ "q0383": {
+  "objective": "5.1",
+  "explanation": "The disaster recovery plan is the document for exactly this moment: a destroyed data center and the steps to restore the IT systems that essential services depend on, from alternate sites and backups. The BCP is the broader strategy for keeping the whole organization running; the DRP is what staff execute immediately after the disaster. Some published answers pick BCP.",
+  "incorrect": {
+   "A": "The business continuity plan covers keeping the organization operating overall, including non-IT functions. It is broader than the immediate IT recovery the scenario describes.",
+   "B": "A communication plan covers who is told what and when. It does not restore the systems behind public services.",
+   "D": "An incident response plan handles security incidents such as breaches and malware, not a natural disaster destroying a facility."
+  }
+ },
+ "q0396": {
+  "objective": "2.3",
+  "explanation": "Once a vendor stops supporting a system, no more security patches arrive, so every newly discovered vulnerability stays open for good. Insecure protocols are a real problem too, but they can often be reconfigured or wrapped; lack of support cannot be fixed. Published answers split between these two.",
+  "incorrect": {
+   "A": "Instability is an operational reliability concern, not the primary security risk of legacy systems.",
+   "C": "Loss of availability may result from a legacy system failing, but it is a consequence, not the underlying security concern.",
+   "D": "Legacy systems often use insecure protocols, but those can sometimes be disabled, tunnelled or segmented. Missing patches from an unsupported vendor cannot be worked around."
+  }
+ },
+ "q0406": {
+  "objective": "1.4",
+  "explanation": "The attack worked by issuing specially crafted certificates, and those certificates stay valid until they are revoked. Cleanup means removing what the test left behind, so the crafted certificates must be revoked and the CRL updated to publish that revocation. Patching the CA fixes the underlying flaw, but that is remediation of the vulnerability, not cleanup of the artifacts. Published answers split between these two.",
+  "incorrect": {
+   "B": "Patching the CA fixes the vulnerability so it cannot be exploited again, but the certificates already issued remain valid until revoked.",
+   "C": "Changing passwords does not invalidate certificates, which authenticate independently of passwords.",
+   "D": "SOAR automates incident response workflows. It does not remove the rogue certificates."
+  }
+ },
+ "q0448": {
+  "objective": "3.1",
+  "explanation": "On-premises infrastructure gives the organization full control over the hardware, network, physical security and the location of its data, which is the strongest position when data security at a new international site is the priority. Cloud models trade some of that control for convenience and shared responsibility.",
+  "incorrect": {
+   "A": "Cloud-based models can be secure, but the organization shares responsibility with the provider and gives up direct control over infrastructure and, often, data location.",
+   "B": "Peer-to-peer has no central control point, which makes it the weakest model for securing data.",
+   "D": "A hybrid model combines on-premises and cloud, so it inherits the cloud side's reduced control and adds integration complexity."
+  }
+ },
+ "q0493": {
+  "objective": "1.1",
+  "explanation": "Corrective controls act after something has gone wrong, fixing the problem and limiting its effect. Stopping an error from propagating to downstream systems is exactly that. Preventing unauthorized changes is a preventive control, not a corrective one.",
+  "incorrect": {
+   "A": "Defending against insiders altering banking details is a preventive or detective goal, stopping or spotting the change rather than correcting it.",
+   "C": "Purchasing insurance is risk transference, not a corrective control.",
+   "D": "Preventing unauthorized changes describes a preventive control. Corrective controls act after the event."
+  }
+ },
+ "q0553": {
+  "objective": "2.3",
+  "explanation": "Firmware runs beneath the operating system -- in the BIOS/UEFI, drive controllers or network cards -- and executes before the OS loads. Malicious code there is invisible to the OS and its security tools, which can only see what the firmware presents to them. Some published answers pick memory injection.",
+  "incorrect": {
+   "B": "Side loading installs apps from outside the official store. The app still runs inside the OS, which can see it.",
+   "C": "Memory injection hides malicious code inside a legitimate process to evade some tools, but the code still runs within the operating system, where memory scanning and EDR can find it.",
+   "D": "Encrypted payloads hide content from network inspection in transit, but they must be decrypted and run on the OS to do anything."
+  }
+ },
+ "q0606": {
+  "objective": "3.4",
+  "explanation": "A hot site runs continuously with current, replicated data, so failover is near-instant (lowest RTO) and little or no data is lost (lowest RPO). Journaling gives an excellent RPO but still requires restoring and replaying to a working system, so its recovery time is longer. Some published answers pick journaling.",
+  "incorrect": {
+   "A": "Snapshots are point-in-time copies. Anything written after the last snapshot is lost, and restoring takes time.",
+   "B": "On-site backups must be restored before service resumes and lose everything since the last backup, and they share the primary site's disaster risk.",
+   "C": "Journaling records every change and gives a very low RPO, but recovery still means restoring and replaying the log, so the RTO is higher than a hot site."
+  }
+ },
+ "q0622": {
+  "objective": "3.1",
+  "explanation": "The discriminator is 'low-cost': cheap IoT hardware for infrastructure often comes from manufacturers the company cannot vet, raising supply-chain concerns such as hidden backdoors, compromised firmware and no security updates. Country of origin captures that risk. Two vendors key 'Storage of data', but data storage is a generic IoT concern that is not tied to cost.",
+  "incorrect": {
+   "B": "Device responsiveness is a performance issue, not a security concern.",
+   "C": "Ease of deployment is an operational benefit. It is not the security risk cheap devices introduce.",
+   "D": "Data storage matters for any IoT device regardless of price, so it does not answer why low-cost devices are specifically a concern."
+  }
+ },
+ "q0647": {
+  "objective": "2.2",
+  "explanation": "A copy of the company's email site, run by someone else to collect logins, is a phishing site -- the fake page is the tool used to harvest the credentials users type in. Some published answers pick impersonation, but in CompTIA's terms impersonation means pretending to be a person, typically over the phone or in person.",
+  "incorrect": {
+   "A": "Impersonation is an attacker pretending to be someone else, such as help desk staff or an executive. A cloned website is the mechanism of phishing.",
+   "B": "Replication is copying data between systems for redundancy. It is not an attack.",
+   "D": "Smishing is phishing delivered by SMS text message. Nothing here involves text messages."
+  }
+ },
+ "q0670": {
+  "objective": "4.8",
+  "explanation": "The file is a keylogger capture that already holds the user's email address and password, so that credential must be treated as compromised now. The first action is to have the user change passwords from a clean device; reimaging the machine is the next step, removing the keylogger itself. Some published answers put reimaging first.",
+  "incorrect": {
+   "B": "Reimaging removes the keylogger, but the captured password is already exposed. The account stays at risk until the password is changed.",
+   "C": "Personal email policy is beside the point; the priority is the compromised credential.",
+   "D": "Firewall logs might show exfiltration, but checking them does not protect the exposed account."
+  }
+ },
+ "q0674": {
+  "objective": "4.6",
+  "explanation": "A password audit finds weak passwords, so the fix is in the password policy itself: require length and complexity. Both directly strengthen the passwords the audit flagged. Some published answers pair length with 'something you have' instead.",
+  "incorrect": {
+   "C": "Least privilege limits what an account can do. It does not make passwords stronger.",
+   "D": "Something you have is an MFA factor. MFA is valuable, but it adds a separate factor rather than fixing the password weaknesses the audit found.",
+   "E": "Security keys are hardware authenticators -- another MFA factor, not a password policy element.",
+   "F": "Biometrics are an inherence factor, not a password policy element."
+  }
+ },
+ "q0678": {
+  "objective": "5.5",
+  "explanation": "Attestation is a formal statement, usually signed by management or an auditor, that something is true -- here, that the application is out of scope. Acknowledgement and attestation is the documented confirmation the question asks for.",
+  "incorrect": {
+   "A": "Data inventory and retention track what data exists and how long it is kept. They inform scope but do not formally confirm it.",
+   "B": "The right to be forgotten is an individual's privacy right to have their personal data erased. It is unrelated to reporting scope.",
+   "C": "Due care and due diligence describe the organization's duty to act responsibly and to investigate risks. They are not a confirmation of scope."
+  }
+ },
+ "q0682": {
+  "objective": "3.1",
+  "explanation": "Cheap, constrained IoT devices commonly ship with plaintext protocols such as HTTP, Telnet or MQTT without TLS, because encryption costs processing power and development effort. They are the most likely place to find unencrypted traffic. SCADA also often uses insecure legacy protocols, and some published answers pick it.",
+  "incorrect": {
+   "A": "Software-defined networking separates the control and data planes, and its controller traffic is normally secured.",
+   "C": "A VPN exists to encrypt traffic. It is the least likely place to find plaintext.",
+   "D": "SCADA systems often run legacy protocols without encryption, but they are usually isolated industrial networks. IoT devices are far more widespread on everyday networks."
+  }
+ },
+ "q0691": {
+  "objective": "2.1",
+  "explanation": "Disrupting a school's internet during state testing with freely available ARP-poisoning tools fits an unskilled attacker: someone, often a student, using ready-made tools for disruption rather than profit or espionage. Sources disagree here; insider threat is the other common answer, since the host was on the local network.",
+  "incorrect": {
+   "B": "Shadow IT is unauthorized technology set up by staff for convenience, not a deliberate attack.",
+   "C": "An insider threat is an employee or contractor abusing authorized access, typically with a motive like revenge or profit. Nothing suggests authorized access was abused.",
+   "D": "A nation-state actor would not spend advanced capabilities disrupting school testing."
+  }
+ },
+ "q0711": {
+  "objective": "5.6",
+  "explanation": "The chain started with an employee clicking a malicious link, so the control that stops it recurring is user awareness training to recognize and avoid phishing. Technical controls can catch some of what follows, but the root cause is the click. Some published answers pick endpoint protection.",
+  "incorrect": {
+   "B": "Network monitoring may detect exfiltration after it starts, but it does not stop employees from clicking malicious links.",
+   "C": "Endpoint protection can block some malware, but it does not address the behaviour that let it in, and new malware can evade it.",
+   "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
+  }
+ },
+ "q0773": {
+  "objective": "3.2",
+  "explanation": "TLS certificates let clients verify the server and set up an encrypted TLS channel, and a VPN encrypts the whole connection between the company and the cloud provider. Together they cover data in transit at both the application and network layers. HTTPS is itself TLS carrying web traffic, so pairing it with TLS certificates names the same protection twice; some published answers do exactly that.",
+  "incorrect": {
+   "B": "WPA2 encrypts only the local wireless link, not the path across the internet to the cloud server.",
+   "C": "HTTPS is HTTP over TLS -- the same mechanism as the TLS certificates already chosen, so it adds nothing distinct.",
+   "E": "Encryption key management governs how keys are stored and rotated. It supports encryption but does not itself secure the traffic.",
+   "F": "Digital signatures prove integrity and origin, but do not encrypt the data in transit."
+  }
+ },
+ "q0791": {
+  "objective": "3.4",
+  "explanation": "Load balancing spreads work across multiple servers, so when one fails the others carry on and the service keeps running without a restore. That keeps the system state available through the failure. A full backup can rebuild the state afterwards, but only by restoring it, which is slower.",
+  "incorrect": {
+   "A": "A hybrid cloud is a deployment model, not a mechanism for surviving a system failure.",
+   "B": "A cold site is empty space with power and connectivity, and takes the longest of any site to bring online.",
+   "C": "A full backup preserves data, but restoring it takes time and loses changes made since the backup."
+  }
+ },
+ "q0853": {
+  "objective": "4.1",
+  "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighbouring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
+  "incorrect": {
+   "A": "MDM manages the devices the company owns. It cannot stop outside devices from seeing the network.",
+   "B": "A pre-shared key controls who can join, but the network stays just as visible to outsiders.",
+   "D": "A site survey plans coverage and identifies interference, but the heat map is the specific tool that shows signal leaking outside the building."
+  }
+ }
+}

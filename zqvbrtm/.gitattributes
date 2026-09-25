@@ -1,0 +1,7 @@
+*.pdf binary -diff
+*.docx binary -diff
+*.pptx binary -diff
+*.xlsx binary -diff
+*.png binary -diff
+*.jpg binary -diff
+*.jpeg binary -diff
