@@ -1,0 +1,10 @@
+{
+  "name": "practice-exam-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline practice exam app template: the Security+ braindump app with its question bank removed. No dependencies, no build step.",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}
