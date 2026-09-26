@@ -238,6 +238,67 @@ export function slideBar(fill, fromPct, toPct, { duration = 520, delay = 0 } = {
   ], { duration, delay, easing: EASE, fill: 'backwards' });
 }
 
+/* ------------------------------------------------------------------ *
+ * Moving between questions: the block holding the question, its answers
+ * and the buttons hands over to the next one in one continuous sideways
+ * motion (Material's "shared axis"). The block being left stays exactly
+ * where it was on screen, drifts toward the side it leaves by and fades
+ * out quickly; the new one drifts in from the other side and fades in.
+ * Both ride the same easing, so the eye follows a single push, and no
+ * frame is ever empty. Transform and opacity only.
+ * ------------------------------------------------------------------ */
+// The new block glides in and settles; the old one drifts off and is all
+// but gone before the new one shows, so the two never double up.
+const AXIS_IN_MS = 440;
+const AXIS_OUT_MS = 200;
+const AXIS_FADE_OUT_MS = 120;
+const axisDistance = () => Math.round(Math.min(44, window.innerWidth * 0.07));
+
+/** The new question's block arrives: dir 1 = heading forward, -1 = back. */
+export function axisIn(elm, dir = 1) {
+  if (!elm || reduced() || typeof elm.animate !== 'function') return;
+  elm.animate([{ transform: `translateX(${dir * axisDistance()}px)` }, { transform: 'none' }],
+    { duration: AXIS_IN_MS, easing: 'cubic-bezier(.2, .8, .2, 1)' });
+  elm.animate([
+    { opacity: 0 },
+    { opacity: 0, offset: 0.18, easing: 'cubic-bezier(0, 0, .2, 1)' },
+    { opacity: 1 },
+  ], { duration: AXIS_IN_MS });
+}
+
+/**
+ * The block being left, taken out of the page (`rect` is where it was on
+ * screen before the redraw) and laid over the new one, clipped to what was
+ * visible and kept below the header, while it leaves. Then removed.
+ */
+export function axisOut(elm, rect, host, dir = 1) {
+  if (!elm || !rect || !host || reduced() || typeof elm.animate !== 'function') return;
+  const h = host.getBoundingClientRect();
+  const stage = host.querySelector('.qstage');
+  const floor = stage ? stage.getBoundingClientRect().top : h.top;
+  const top = Math.max(rect.top, floor);
+  const bottom = Math.min(rect.bottom, window.innerHeight);
+  if (bottom - top < 8) return;          // none of it was on screen
+  const pad = 28;                         // room for the cards' shadows
+  const wrap = document.createElement('div');
+  wrap.className = 'qstage-leaving';
+  wrap.setAttribute('aria-hidden', 'true');
+  wrap.inert = true;
+  Object.assign(wrap.style, {
+    left: `${rect.left - h.left - pad}px`, top: `${top - h.top}px`,
+    width: `${rect.width + pad * 2}px`, height: `${bottom - top}px`,
+  });
+  Object.assign(elm.style, { position: 'absolute', left: `${pad}px`, top: `${rect.top - top}px`, width: `${rect.width}px`, margin: '0' });
+  wrap.append(elm);
+  host.append(wrap);
+  wrap.animate([{ transform: 'none' }, { transform: `translateX(${-dir * axisDistance() * 0.7}px)` }],
+    { duration: AXIS_OUT_MS, easing: 'linear', fill: 'forwards' });
+  const fade = wrap.animate([{ opacity: 1 }, { opacity: 0 }],
+    { duration: AXIS_FADE_OUT_MS, easing: 'cubic-bezier(0, 0, .4, 1)', fill: 'forwards' });
+  const done = () => wrap.remove();
+  fade.finished.then(done, done);
+}
+
 /**
  * One sweep of light across the logo (and anything passed in, such as the
  * quiz progress bar) when a quiz starts. They used to shine on a loop,
@@ -433,7 +494,7 @@ export function installRipples() {
     if (!host.matches('.choice')) {
       const follow = () => {
         if (!layer.isConnected) return;
-        if (!host.isConnected) { a.cancel(); layer.remove(); return; }
+        if (!host.isConnected || host.closest('.qstage-leaving')) { a.cancel(); layer.remove(); return; }
         requestAnimationFrame(follow);
       };
       requestAnimationFrame(follow);

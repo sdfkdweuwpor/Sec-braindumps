@@ -730,6 +730,13 @@ h1 { font-weight: 800; }
    slideBar); --p is how much of it shows. It catches one sweep of light
    when the quiz starts, over the part that shows. */
 .qprogress > span { width: 100%; transition: none; will-change: transform; }
+/* the question being left, laid over the next one while it slides away
+   (js/motion.js axisOut) */
+.quizbody { position: relative; }
+.qstage-leaving { position: absolute; overflow: hidden; pointer-events: none; z-index: 1; }
+/* moving it restarts its CSS animations (the explanation's fade-in would
+   blank it for a moment); it leaves exactly as it was */
+.qstage-leaving * { animation: none !important; transition: none !important; }
 .qprogress > span::after {
   content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: var(--p, 100%);
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.5), transparent);

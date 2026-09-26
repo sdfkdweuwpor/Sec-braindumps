@@ -8,7 +8,8 @@ import {
 import { icon, iconPair } from '../icons.js';
 import { art } from '../art.js';
 import {
-  slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, slideBar, shineOnce, snapToTop, takeMorph,
+  cascade, rise, pop, shake, ring, burst, drawIcon, slideBar, shineOnce, snapToTop, takeMorph,
+  axisIn, axisOut,
 } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewState, STEPS } from '../srs.js';
@@ -346,10 +347,10 @@ export async function renderQuiz(view, { navigate }) {
     stage.append(group);
     paint();
     // A new question arrives in one motion: the question, its answers and
-    // the buttons slide in together from the side you are heading. (Moving
-    // each part on its own, staggered, looked choppy.) Opening the quiz,
-    // the whole screen moves in instead (main.js render).
-    if (how === 'next' || how === 'prev') slideIn(stage, how === 'prev' ? -1 : 1, { distance: 40, duration: 340 });
+    // the buttons slide in together from the side you are heading, as the
+    // one being left slides away (see goTo). Opening the quiz, the whole
+    // screen moves in instead (main.js render).
+    if (how === 'next' || how === 'prev') axisIn(stage, how === 'prev' ? -1 : 1);
 
     /* ---- submit / next ---- */
     if (multi && !revealed) {
@@ -546,11 +547,21 @@ export async function renderQuiz(view, { navigate }) {
     session.index = i;
     store.setActiveQuiz(session);
     play('swoosh');
-    // Straight to the new question: no snapshot of the old one first (on a
-    // computer without graphics acceleration that alone held the screen
-    // still for a fifth of a second), and back to the top in one jump.
+    // Keep the question being left: it stays where it was on screen and
+    // slides away while the new one slides in (motion.js axisOut/axisIn).
+    // Live elements, not a snapshot: on a computer without graphics
+    // acceleration a snapshot of the screen held it still for a fifth of a
+    // second before anything moved.
+    const dir = motion === 'prev' ? -1 : 1;   // (draw resets motion)
+    const old = body.querySelector(':scope > .qstage');
+    let oldRect = null;
+    if (old) {
+      for (const a of old.getAnimations({ subtree: true })) a.cancel();
+      oldRect = old.getBoundingClientRect();
+    }
     draw();
     snapToTop();
+    if (old) axisOut(old, oldRect, body, dir);
   }
 
   // After answering, move to the next question still unanswered, wrapping

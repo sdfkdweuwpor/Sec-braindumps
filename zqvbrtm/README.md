@@ -96,9 +96,11 @@ name is deliberately random so the URL does not name the vendor.
   haptic Safari offers. It has its own on/off button in the top bar, shown
   only on touch screens; nothing buzzes before the first tap on the page.
 - **Motion.** Each change moves as one piece: a tab slides in from the side
-  of the one you left, and the next question (question, answers and
-  buttons together) slides in from the side you are heading while the
-  progress bar glides along. A Study card grows into the quiz it starts.
+  of the one you left. Between questions, the one you are leaving stays
+  where it was on screen and drifts away as it fades, while the next one
+  (question, answers and buttons together) glides in from the side you are
+  heading and the progress bar slides along; no frame is ever empty
+  (`axisOut` / `axisIn`). A Study card grows into the quiz it starts.
   Everything animates transform and opacity only, so nothing waits on a
   screenshot of the old screen or forces a layout on every frame (the
   browser's view transitions were tried and dropped: without graphics
