@@ -4,7 +4,7 @@ import * as stats from '../stats.js';
 import { readinessTile, confirmDialog } from '../components.js';
 import { icon } from '../icons.js';
 import { smartReviewCard } from '../smartReview.js';
-import { SUGGESTIONS } from './search.js';
+import { SUGGESTIONS, rotatePlaceholder } from './search.js';
 import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
@@ -174,6 +174,7 @@ function searchCard(navigate) {
     el('button', { class: 'btn', type: 'submit', text: 'Search' }),
   ]);
   form.addEventListener('submit', (ev) => { ev.preventDefault(); go(input.value.trim()); });
+  rotatePlaceholder(input, SUGGESTIONS);
   return el('div', { class: 'card mode-card search-home' }, [
     el('div', { class: 'mode-head' }, [
       el('span', { class: 'mode-ic' }, [icon('search', { size: 24 })]),

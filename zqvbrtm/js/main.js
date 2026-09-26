@@ -4,7 +4,7 @@ import * as store from './store.js';
 import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon } from './icons.js';
-import { themeReveal, animateScreen, pop, slideIn } from './motion.js';
+import { themeReveal, animateScreen, pop, slideIn, installPointerGlow } from './motion.js';
 import { initMilestones } from './milestones.js';
 import * as sound from './sound.js';
 import { renderHome } from './views/home.js';
@@ -195,6 +195,7 @@ async function render() {
   const tab = tabIndex(path);
   if (lastTab !== null && tab !== -1 && tab !== lastTab) {
     slideIn(view, tab > lastTab ? 1 : -1, { distance: 56, duration: 460 });
+    sound.play('tab');
   }
   if (tab !== -1) lastTab = tab;
   animateScreen(view);
@@ -213,6 +214,7 @@ export function start() {
     window.addEventListener(type, () => sound.unlock(), { passive: true, capture: true });
   }
   initMilestones();
+  installPointerGlow();
   window.addEventListener('hashchange', render);
   // The top bar tightens once the page scrolls.
   let ticking = false;

@@ -82,7 +82,12 @@ export function interactiveCards(root) {
     if (card.dataset.tilt) return;
     card.dataset.tilt = '1';
     card.classList.add('tilt');
-    if (!card.querySelector(':scope > .card-glow')) card.prepend(Object.assign(document.createElement('span'), { className: 'card-glow' }));
+    // Plain cards get their glow from the app-wide pointer glow (CSS
+    // ::before/::after); the gradient hero cards use their own pseudo-
+    // elements for decoration, so their glow is a span.
+    if (card.classList.contains('hero') && !card.querySelector(':scope > .card-glow')) {
+      card.prepend(Object.assign(document.createElement('span'), { className: 'card-glow' }));
+    }
     // The entrance animation holds transform while it runs; release it once
     // the card's own animation (not a child's, which bubble) has finished.
     const settle = (ev) => {
@@ -96,12 +101,57 @@ export function interactiveCards(root) {
       const r = card.getBoundingClientRect();
       const x = (ev.clientX - r.left) / r.width;
       const y = (ev.clientY - r.top) / r.height;
-      card.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
-      card.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
       card.style.transform = `perspective(900px) rotateX(${((0.5 - y) * strength).toFixed(2)}deg) rotateY(${((x - 0.5) * strength).toFixed(2)}deg) translateY(-3px)`;
     });
     card.addEventListener('pointerleave', () => { card.style.transform = ''; });
   });
+}
+
+/** What the pointer glow lights up (see the matching rules in app.css). */
+const GLOW = '.card, .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner';
+
+/**
+ * The pointer glow, app-wide. Whatever card, question, answer or
+ * explanation the mouse is over gets a soft light that follows it, and its
+ * edge lights up nearest the pointer (CSS reads --mx/--my, in px). A faint
+ * spotlight also follows the pointer across the page background. Mouse and
+ * trackpad only: touch screens have no hover to follow.
+ */
+export function installPointerGlow() {
+  if (installPointerGlow.done) return;
+  let fine = false;
+  try { fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } catch { /* no */ }
+  if (!fine) return;
+  installPointerGlow.done = true;
+  document.documentElement.classList.add('has-glow');
+  const spot = document.createElement('div');
+  spot.className = 'page-spot';
+  spot.setAttribute('aria-hidden', 'true');
+  document.body.prepend(spot);
+
+  let pending = null;
+  const apply = () => {
+    const ev = pending;
+    pending = null;
+    if (!ev) return;
+    spot.style.setProperty('--px', `${ev.clientX}px`);
+    spot.style.setProperty('--py', `${ev.clientY}px`);
+    spot.classList.add('is-on');
+    let node = ev.target instanceof Element ? ev.target.closest(GLOW) : null;
+    while (node) {
+      const r = node.getBoundingClientRect();
+      node.style.setProperty('--mx', `${Math.round(ev.clientX - r.left)}px`);
+      node.style.setProperty('--my', `${Math.round(ev.clientY - r.top)}px`);
+      node = node.parentElement ? node.parentElement.closest(GLOW) : null;
+    }
+  };
+  document.addEventListener('pointermove', (ev) => {
+    if (ev.pointerType === 'touch') return;
+    if (!pending) requestAnimationFrame(apply);
+    pending = ev;
+  }, { passive: true });
+  // The pointer left the window: let the spotlight fade.
+  document.addEventListener('mouseout', (ev) => { if (!ev.relatedTarget) spot.classList.remove('is-on'); });
 }
 
 /** Rise and fade in, optionally after a delay. */

@@ -11,7 +11,7 @@ import {
 } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewState, STEPS } from '../srs.js';
-import { flameChip, celebrate } from '../flame.js';
+import { flameChip, celebrate, extinguish } from '../flame.js';
 import { findAcronyms, wrapAcronyms } from '../acronyms.js';
 import { odometer } from '../motion.js';
 import { checkMilestones } from '../milestones.js';
@@ -139,9 +139,13 @@ export async function renderQuiz(view, { navigate }) {
     if (lastN !== null && lastN !== n && how !== 'reveal') odometer(qnum, n, { from: lastN, duration: 650 });
     lastN = n;
 
-    // The streak flame rides in the header while a run of 3+ is going.
+    // The streak flame rides in the header while a run of 3+ is going. When
+    // a wrong answer ends a run, the old flame shows once more and goes out.
     const streakNow = session.feedbackMode === 'immediate' ? (session.streak || 0) : 0;
-    const headFlame = streakNow >= 3 ? flameChip(streakNow, { compact: true }) : null;
+    const broke = how === 'reveal' && session.feedbackMode === 'immediate' && !streakNow
+      && (session.brokenStreak || 0) >= 3;
+    const headFlame = streakNow >= 3 ? flameChip(streakNow, { compact: true })
+      : broke ? flameChip(session.brokenStreak, { compact: true }) : null;
 
     if (drill && session.from) {
       body.append(el('div', { class: 'drill-banner' }, [
@@ -189,7 +193,7 @@ export async function renderQuiz(view, { navigate }) {
     const acroBtn = el('button', {
       class: 'pill acro-toggle', type: 'button', 'aria-controls': acroPanel.id,
       title: 'Show what the acronyms stand for (A)',
-      onclick: () => setAcro(!acroOpen(), true),
+      onclick: () => { setAcro(!acroOpen(), true); play('tick'); },
     });
     const setAcro = (on, animate) => {
       store.setSettings({ showAcronyms: on });
@@ -268,7 +272,9 @@ export async function renderQuiz(view, { navigate }) {
         });
         session.revealed[question.id] = true;
         const right = isCorrect(question, picked);
-        session.streak = right ? (session.streak || 0) + 1 : 0;
+        const before = session.streak || 0;
+        session.streak = right ? before + 1 : 0;
+        session.brokenStreak = right ? 0 : before;
         store.setActiveQuiz(session);
         motion = 'reveal';
         draw();
@@ -375,7 +381,7 @@ export async function renderQuiz(view, { navigate }) {
       // Pocket Prep's pattern: the explanation opens by itself when you got it
       // wrong, and sits one tap away when you got it right.
       const details = el('details', { class: 'explain-more', open: got ? null : '' }, [
-        el('summary', {}, [
+        el('summary', { onclick: () => play(details.open ? 'close' : 'open') }, [
           icon('bulb', { size: 18 }),
           el('span', { class: 'when-closed', text: 'Show explanation' }),
           el('span', { class: 'when-open', text: 'Hide explanation' }),
@@ -418,15 +424,17 @@ export async function renderQuiz(view, { navigate }) {
         const streak = session.streak || 0;
         const chip = panel.querySelector('.flame-chip');
         const moment = chip ? celebrate(chip, streak) : null;
-        if (headFlame) pop(headFlame, { scale: 1.3, duration: 600 });
+        if (broke) extinguish(headFlame);
+        else if (headFlame) pop(headFlame, { scale: 1.3, duration: 600 });
         const srsEl = panel.querySelector('.srs-chip');
         if (srsEl) pop(srsEl, { scale: masteredNow ? 1.3 : 1.15, duration: 620 });
         if (got && shownRight[0]) burst(shownRight[0].querySelector('.key'), { count: masteredNow ? 40 : 22 });
 
-        if (masteredNow) play('mastered');
-        else if (moment) { /* the streak moment played its own sound */ }
-        else if (got) play(streak === 3 || (streak > 25 && streak % 5 === 0) || streak === 20 ? 'streak' : 'correct');
+        if (moment) { /* the streak moment played its own sound */ }
+        else if (masteredNow) play('mastered');
+        else if (got) play(streak >= 5 && streak % 5 === 0 ? 'streak' : 'correct');
         else play('wrong');
+        if (broke) setTimeout(() => play('fizzle'), 260);
         setTimeout(checkMilestones, 900);
       }
     }
@@ -505,6 +513,7 @@ export async function renderQuiz(view, { navigate }) {
     motion = i < session.index ? 'prev' : 'next';
     session.index = i;
     store.setActiveQuiz(session);
+    play('swoosh');
     draw();
     window.scrollTo(0, 0);
   }
@@ -598,5 +607,9 @@ export async function renderQuiz(view, { navigate }) {
     finish(session, navigate);
   }
 
+  // A brand-new quiz (nothing answered, just created) starts with a chime.
+  const fresh = session.index === 0 && !Object.keys(session.answers || {}).length
+    && Date.now() - (session.startedAt || 0) < 4000;
   draw();
+  if (fresh) play('start');
 }

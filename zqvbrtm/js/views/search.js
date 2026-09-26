@@ -1,4 +1,5 @@
 import { el, clear } from '../dom.js';
+import { reduced, EASE } from '../motion.js';
 import * as store from '../store.js';
 import { icon } from '../icons.js';
 import { questionList } from '../components.js';
@@ -10,6 +11,39 @@ const QUIZ_CAP = 50;
 
 /** Starter topics, each checked to match a useful number of questions. */
 export const SUGGESTIONS = ['SAML', 'Tabletop', 'Zero trust', 'Ransomware', 'SOAR', 'SIEM', '802.1X', 'Phishing'];
+
+/**
+ * Example searches take turns in an empty search box: each word slides up
+ * and out as the next slides in, every few seconds. The hint is decoration
+ * (the box keeps its aria-label) and hides as soon as anything is typed.
+ */
+export function rotatePlaceholder(input, words, { lead = 'Try ', every = 3200 } = {}) {
+  if (!input || !words.length) return;
+  const word = el('b', { text: words[0] });
+  const hint = el('span', { class: 'ph-rot', 'aria-hidden': 'true' }, [lead, word]);
+  const wrap = el('span', { class: 'ph-wrap' });
+  input.replaceWith(wrap);
+  wrap.append(input, hint);
+  input.placeholder = '';
+  const sync = () => wrap.classList.toggle('has-text', !!input.value);
+  input.addEventListener('input', sync);
+  sync();
+  if (reduced() || words.length < 2) return;
+  let i = 0;
+  const timer = setInterval(() => {
+    if (!wrap.isConnected) { clearInterval(timer); return; }
+    if (input.value || document.hidden) return;
+    i = (i + 1) % words.length;
+    const out = word.animate([{ transform: 'none', opacity: 1 }, { transform: 'translateY(-70%)', opacity: 0 }],
+      { duration: 240, easing: 'ease-in', fill: 'forwards' });
+    out.finished.then(() => {
+      word.textContent = words[i];
+      out.cancel();
+      word.animate([{ transform: 'translateY(70%)', opacity: 0 }, { transform: 'none', opacity: 1 }],
+        { duration: 380, easing: EASE });
+    }, () => {});
+  }, every);
+}
 
 function statusOf(id, attempts) {
   const list = (attempts[id] && attempts[id].attempts) || [];
@@ -32,6 +66,7 @@ export async function renderSearch(view, { params, navigate }) {
     el('span', { class: 'search-ic', 'aria-hidden': 'true' }, [icon('search', { size: 20 })]),
     input,
   ]);
+  rotatePlaceholder(input, SUGGESTIONS);
   const summary = el('p', { class: 'search-summary', 'aria-live': 'polite' });
   const quizBtn = el('button', { class: 'btn', type: 'button', hidden: true });
   const chips = el('div', { class: 'chips search-chips' });
@@ -57,7 +92,7 @@ export async function renderSearch(view, { params, navigate }) {
       chips.append(el('span', { class: 'faint', text: 'Popular topics:' }));
       for (const s of SUGGESTIONS) {
         chips.append(el('button', { class: 'chip', type: 'button', text: s,
-          onclick: () => { input.value = s; run(); } }));
+          onclick: () => { input.value = s; input.dispatchEvent(new Event('input')); clearTimeout(timer); run(); } }));
       }
     }
 

@@ -1195,3 +1195,181 @@ abbr.acro { text-decoration: none; }
   #sound-toggle:hover .icon path, #theme-toggle:hover .icon svg { animation: none !important; }
   .acro-panel, .topbar, .tilt { transition: none; }
 }
+
+/* =====================================================================
+   Streak flame, part two: 26-39 blue turning gold, 40+ gold that slowly
+   cycles through every colour, 50+ rainbow. --h is registered so the
+   colour can animate smoothly.
+   ===================================================================== */
+@property --h { syntax: '<number>'; inherits: true; initial-value: 40; }
+@property --spin { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes hue-cycle { from { --h: 45; } to { --h: 405; } }
+/* gold holds for a few seconds, then drifts slowly round the colour wheel */
+@keyframes hue-cycle-slow { 0%, 16% { --h: 45; } 100% { --h: 405; } }
+@keyframes spin-ring { to { --spin: 360deg; } }
+
+.flame-chip:is([data-tier="aurora"], [data-tier="gold"], [data-tier="rainbow"]) .flame-svg { animation-duration: .75s; }
+.flame-chip:is([data-tier="aurora"], [data-tier="gold"], [data-tier="rainbow"]) .flame-embers::before,
+.flame-chip:is([data-tier="aurora"], [data-tier="gold"], [data-tier="rainbow"]) .flame-embers::after {
+  content: ""; position: absolute; left: 45%; bottom: 40%; width: 3px; height: 3px; border-radius: 50%;
+  background: hsl(calc(var(--h) + 15) 100% 68%); box-shadow: 0 0 7px hsl(var(--h) 100% 62%);
+  animation: ember-rise 1.2s ease-out infinite;
+}
+.flame-chip[data-tier="aurora"] { animation-name: flame-glow-hot; }
+.flame-chip[data-tier="aurora"] .flame-inner { fill: hsl(calc(var(--h) - 10) 100% 86%); }
+/* 40+: gold, white-hot in the middle, drifting slowly through the colours */
+.flame-chip[data-tier="gold"] {
+  animation: flame-glow-gold 1s ease-in-out infinite alternate, hue-cycle-slow 36s linear infinite;
+}
+.flame-chip[data-tier="gold"] .flame-outer { fill: hsl(var(--h) 100% 55%); }
+.flame-chip[data-tier="gold"] .flame-inner { fill: hsl(calc(var(--h) + 10) 100% 90%); }
+.flame-chip[data-tier="gold"] .flame-svg { filter: drop-shadow(0 0 4px hsl(var(--h) 100% 60%)) drop-shadow(0 0 9px hsl(var(--h) 100% 55% / .7)); }
+@keyframes flame-glow-gold {
+  from { box-shadow: 0 0 12px hsl(var(--h) 100% 55% / .5); }
+  to   { box-shadow: 0 0 30px hsl(var(--h) 100% 60% / .95), 0 0 6px hsl(var(--h) 100% 80% / .8) inset; }
+}
+/* 50+: rainbow. The colour cycles fast and a rainbow ring spins round the chip. */
+.flame-chip[data-tier="rainbow"] {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(hsl(var(--h) 100% 95%), hsl(var(--h) 100% 95%)) padding-box,
+    conic-gradient(from var(--spin), #ff4d6d, #ffb020, #ffe34d, #3ddc84, #22d3ee, #6366f1, #d946ef, #ff4d6d) border-box;
+  animation: flame-glow-gold .8s ease-in-out infinite alternate, hue-cycle 5s linear infinite, spin-ring 2.4s linear infinite;
+}
+[data-theme="dark"] .flame-chip[data-tier="rainbow"] {
+  background:
+    linear-gradient(hsl(var(--h) 55% 15%), hsl(var(--h) 55% 15%)) padding-box,
+    conic-gradient(from var(--spin), #ff4d6d, #ffb020, #ffe34d, #3ddc84, #22d3ee, #6366f1, #d946ef, #ff4d6d) border-box;
+}
+.flame-chip[data-tier="rainbow"] .flame-inner { fill: hsl(calc(var(--h) + 30) 100% 90%); }
+.flame-chip[data-tier="rainbow"] .flame-svg { filter: drop-shadow(0 0 4px hsl(var(--h) 100% 60%)) drop-shadow(0 0 10px hsl(calc(var(--h) + 60) 100% 60% / .8)); }
+
+/* the run ends: grey, still, no embers (js/flame.js shrinks it away) */
+.flame-chip.is-out, .flame-chip.is-out .flame-svg { animation: none !important; }
+.flame-chip.is-out .flame-embers { display: none; }
+.fx-smoke {
+  position: absolute; display: block; border-radius: 50%; will-change: transform, opacity;
+  background: radial-gradient(circle, rgba(110, 112, 125, .55), rgba(110, 112, 125, 0) 70%);
+}
+[data-theme="dark"] .fx-smoke { background: radial-gradient(circle, rgba(205, 208, 220, .42), rgba(205, 208, 220, 0) 70%); }
+
+/* =====================================================================
+   Full-screen fire for the big streak moments (3, 10, 25, 50, 75...)
+   ===================================================================== */
+.fx-fire { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 175; pointer-events: none; }
+.fx-fire-label {
+  position: fixed; left: 50%; top: 46%; z-index: 176; pointer-events: none;
+  transform: translate(-50%, -50%);
+  display: grid; justify-items: center; gap: .15rem; text-align: center; width: max-content; max-width: calc(100vw - 32px);
+  color: #fff;
+  text-shadow: 0 0 18px hsl(var(--h) 100% 55% / .95), 0 0 44px hsl(var(--h) 100% 50% / .75), 0 2px 8px rgba(0, 0, 0, .35);
+}
+.fx-fire-flame { display: block; width: clamp(76px, 14vw, 124px); height: clamp(76px, 14vw, 124px);
+                 filter: drop-shadow(0 0 16px hsl(var(--h) 100% 55%)) drop-shadow(0 0 40px hsl(var(--h) 100% 50% / .8)); }
+.fx-fire-flame .flame-svg { animation: flicker .6s ease-in-out infinite; }
+.fx-fire-flame .flame-outer { fill: hsl(var(--h) 100% 55%); }
+.fx-fire-flame .flame-inner { fill: hsl(calc(var(--h) + 20) 100% 88%); }
+.fx-fire-n {
+  font-size: clamp(4.6rem, 17vw, 9.5rem); font-weight: 900; line-height: .88; letter-spacing: -.045em;
+  font-variant-numeric: tabular-nums;
+}
+.fx-fire-t { font-size: clamp(1rem, 2.8vw, 1.55rem); font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.fx-fire-label.is-rainbow { animation: hue-cycle 1.6s linear infinite; }
+.fx-fire-label.is-rainbow .fx-fire-n {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371, #fff275, #5ef38c, #4fd1ff, #7c83ff, #f472d0);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none; filter: drop-shadow(0 0 14px rgba(255, 255, 255, .6)) drop-shadow(0 0 34px rgba(255, 170, 60, .6));
+}
+
+/* =====================================================================
+   Pointer glow, app-wide: a soft light follows the mouse over cards, the
+   question, the answers and the explanation, and the edge nearest the
+   pointer lights up. js/motion.js sets --mx/--my (px) on whatever is under
+   the pointer; mouse and trackpad only.
+   ===================================================================== */
+.has-glow :is(.card:not(.hero), .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner) {
+  position: relative; isolation: isolate;
+  --glow-c: var(--accent);
+}
+.has-glow :is(.card:not(.hero), .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::before,
+.has-glow :is(.card:not(.hero), .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity .4s var(--ease);
+}
+.has-glow :is(.card:not(.hero), .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::before {
+  z-index: -1;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%),
+              color-mix(in srgb, var(--glow-c) var(--glow-a, 11%), transparent), transparent 62%);
+}
+.has-glow :is(.card:not(.hero), .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::after {
+  padding: 1.5px;
+  background: radial-gradient(200px circle at var(--mx, 50%) var(--my, 50%),
+              color-mix(in srgb, var(--glow-c) 85%, transparent), transparent 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+.has-glow :is(.card:not(.hero), .qtext, .choice:not(:disabled), .explain, .qnav, .acro-list, .drill-banner):hover::before,
+.has-glow :is(.card:not(.hero), .qtext, .choice:not(:disabled), .explain, .qnav, .acro-list, .drill-banner):hover::after { opacity: 1; }
+.has-glow .choice { --glow-a: 16%; }
+.has-glow .explain.is-right { --glow-c: var(--correct-solid); }
+.has-glow .explain.is-wrong { --glow-c: var(--incorrect-solid); }
+.has-glow .acro-list { --glow-c: var(--secondary); }
+[data-theme="dark"].has-glow { --glow-a: 15%; }
+
+/* a faint spotlight that follows the pointer across the page background */
+.page-spot {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(680px circle at var(--px, -999px) var(--py, -999px),
+              color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%);
+  opacity: 0; transition: opacity .6s var(--ease);
+}
+[data-theme="dark"] .page-spot {
+  background: radial-gradient(680px circle at var(--px, -999px) var(--py, -999px),
+              color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%);
+}
+.page-spot.is-on { opacity: 1; }
+
+/* =====================================================================
+   Search box: example searches take turns in the empty box; focus lifts it
+   ===================================================================== */
+.ph-wrap { position: relative; flex: 1; min-width: 0; display: flex; }
+.ph-rot {
+  position: absolute; top: 50%; left: 2.8rem; right: .9rem; transform: translateY(-50%);
+  pointer-events: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 1.02rem; font-weight: 500; line-height: 1.5; color: var(--text-faint);
+  transition: opacity .18s var(--ease);
+}
+.ph-rot b { display: inline-block; font-weight: 800; color: var(--text-dim); }
+.search-card-page .ph-rot { left: 3.1rem; font-size: 1.15rem; }
+.ph-wrap.has-text .ph-rot { opacity: 0; }
+.search-input { transition: border-color .2s var(--ease), box-shadow .25s var(--ease), background .2s var(--ease), transform .25s var(--spring); }
+.search-input:focus {
+  transform: translateY(-1px) scale(1.012);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent),
+              0 14px 30px -12px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.search-ic { transition: color .2s var(--ease), transform .25s var(--spring); }
+.search-form:focus-within .search-ic { color: var(--accent); transform: translateY(-50%) scale(1.12); }
+
+/* =====================================================================
+   Smart review ladder: the line between the steps flows
+   ===================================================================== */
+.srs-ladder::before {
+  opacity: .55;
+  background: linear-gradient(90deg, var(--accent), var(--correct-solid), var(--accent), var(--correct-solid));
+  background-size: 300% 100%;
+  animation: track-in .8s var(--ease) .15s both, track-flow 4s linear 1s infinite;
+}
+@keyframes track-flow { from { background-position: 0% 0; } to { background-position: -150% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .flame-chip:is([data-tier="aurora"], [data-tier="gold"], [data-tier="rainbow"]) .flame-embers::before,
+  .flame-chip:is([data-tier="aurora"], [data-tier="gold"], [data-tier="rainbow"]) .flame-embers::after,
+  .fx-fire-label, .fx-fire-flame .flame-svg, .srs-ladder::before { animation: none !important; }
+  .page-spot { display: none; }
+  .has-glow :is(.card, .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::before,
+  .has-glow :is(.card, .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::after { transition: none; }
+  .search-input:focus { transform: none; }
+}
