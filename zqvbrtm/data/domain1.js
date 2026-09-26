@@ -438,7 +438,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
-    "question": "Which of the following would be the best ways to ensure only authorized personnel can access a secure facility? (Select two).",
+    "question": "Which of the following would be the best ways to ensure only authorized personnel can access a secure facility? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -706,7 +706,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "multi",
-    "question": "A security engineer is implementing FDE for all laptops in an organization. Which of the following are the most important for the engineer to consider as part of the planning process? (Select two).",
+    "question": "A security engineer is implementing FDE for all laptops in an organization. Which of the following are the most important for the engineer to consider as part of the planning process? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1619,7 +1619,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
-    "question": "To improve the security at a data center, a security administrator implements a CCTV system and posts several signs about the possibility of being filmed. Which of the following best describe these types of controls? (Select two).",
+    "question": "To improve the security at a data center, a security administrator implements a CCTV system and posts several signs about the possibility of being filmed. Which of the following best describe these types of controls? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -1801,7 +1801,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "multi",
-    "question": "A security manager is implementing MFA and patch management. Which of the following would best describe the control type and category? (Select two).",
+    "question": "A security manager is implementing MFA and patch management. Which of the following would best describe the control type and category? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -2725,7 +2725,7 @@ export const domain1Questions = [
       "C": "If the secure LDAP port were closed the connection would fail outright with no certificate presented. A certificate error proves the handshake started, so the port is open.",
       "D": "A registration authority handles identity vetting for certificate requests. Its TLS version has no bearing on whether this client trusts an already-issued certificate."
     },
-    "tip": null,
+    "tip": "Certificate error then disconnect on an internal service = the client does not trust the issuing CA → install the certificate in the local truststore.",
     "references": [],
     "source": "bank.pdf#p162",
     "needsReview": false,
@@ -2768,7 +2768,7 @@ export const domain1Questions = [
       "C": "A self-signed certificate costs nothing but is trusted by nobody by default, so every visitor sees a warning. That is not viable for public-facing domains.",
       "D": "A code signing certificate proves who published a piece of software. It is unrelated to securing domains and subdomains."
     },
-    "tip": null,
+    "tip": "Many subdomains on one certificate = wildcard (*.example.com). Many different domain names = a SAN certificate.",
     "references": [],
     "source": "bank.pdf#p164",
     "needsReview": false,
@@ -2811,7 +2811,7 @@ export const domain1Questions = [
       "C": "Changing passwords does not invalidate certificates, which authenticate independently of passwords.",
       "D": "SOAR automates incident response workflows. It does not remove the rogue certificates."
     },
-    "tip": null,
+    "tip": "Rogue certificates issued during an attack → revoke them and publish the updated CRL as part of cleanup.",
     "references": [],
     "source": "bank.pdf#p166",
     "needsReview": false,
@@ -2864,7 +2864,7 @@ export const domain1Questions = [
       "E": "A bollard physically blocks vehicles. It is a preventive barrier with no detection capability.",
       "F": "A lock prevents entry to those without the key. It neither reports nor records an attempt."
     },
-    "tip": null,
+    "tip": "Physical controls that both detect and deter = lighting and sensors. Fences, bollards and locks prevent; signs only deter.",
     "references": [],
     "source": "bank.pdf#p168",
     "needsReview": false,
@@ -2907,7 +2907,7 @@ export const domain1Questions = [
       "B": "The product design process creates the design in the first place. That stage has already been completed and released.",
       "C": "The design review process is what just happened — the annual review that found the issues. The next step is acting on them."
     },
-    "tip": null,
+    "tip": "Fixing issues in a released design goes through change control.",
     "references": [],
     "source": "bank.pdf#p170",
     "needsReview": false,
@@ -2950,7 +2950,7 @@ export const domain1Questions = [
       "B": "ECC is an asymmetric algorithm used for key exchange and signatures. It is a primitive, not a disk protection scheme.",
       "D": "An HSM is a dedicated appliance for generating and protecting keys, used in servers and data centers rather than on a mobile device."
     },
-    "tip": null,
+    "tip": "Lost mobile device → FDE keeps the drive unreadable.",
     "references": [],
     "source": "bank.pdf#p183",
     "needsReview": false,
@@ -2993,7 +2993,7 @@ export const domain1Questions = [
       "C": "A key is part of what goes into the request — necessary but not sufficient. The CA needs the request containing it.",
       "D": "A CRL lists certificates that should no longer be trusted. It is part of revocation, not issuance."
     },
-    "tip": null,
+    "tip": "New or renewed certificate: generate a key pair and submit a CSR to the CA.",
     "references": [],
     "source": "bank.pdf#p185",
     "needsReview": false,
@@ -3036,7 +3036,7 @@ export const domain1Questions = [
       "C": "Non-repudiation prevents someone denying an action they performed. It concerns accountability after the fact.",
       "D": "Authentication is the log-in step itself, which the question says has already happened."
     },
-    "tip": null,
+    "tip": "Identification (claim) → authentication (prove) → authorization (what you may access) → accounting (what you did).",
     "references": [],
     "source": "bank.pdf#p187",
     "needsReview": false,
@@ -3079,7 +3079,7 @@ export const domain1Questions = [
       "B": "A behavioral analyzer watches user or system activity for anomalies. It is a detection tool with no role in tracking code.",
       "C": "A collaboration platform helps people communicate and share documents. It may hold discussion about a change but keeps no authoritative change history."
     },
-    "tip": null,
+    "tip": "Track changes to code, including infrastructure as code = version control (such as Git).",
     "references": [],
     "source": "bank.pdf#p188",
     "needsReview": false,
@@ -3093,7 +3093,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "multi",
-    "question": "Which of the following are the best security controls for controlling on-premises access? (Select two.)",
+    "question": "Which of the following are the best security controls for controlling on-premises access? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3124,7 +3124,7 @@ export const domain1Questions = [
       "A",
       "D"
     ],
-    "explanation": "Swipe cards and biometric scanners control who can open doors: the card proves possession and the biometric proves identity. They are the direct entry controls.",
+    "explanation": "Swipe cards and biometric scanners control who can open doors: the card proves possession and the biometric proves identity. They are the direct entry controls, and together they give two factors at the door, so a borrowed card alone is not enough.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A picture ID relies on someone checking it and is easily faked.",
@@ -3132,7 +3132,7 @@ export const domain1Questions = [
       "E": "A camera records who enters, but does not control access.",
       "F": "'Memorable' (a memorable phrase or password) is a knowledge factor for systems, not a physical access control."
     },
-    "tip": null,
+    "tip": "Physical access control = something that opens the door only for the right person: swipe cards and biometrics. Cameras only record.",
     "references": [],
     "source": "bank.pdf#p190",
     "needsReview": false,
@@ -3175,7 +3175,7 @@ export const domain1Questions = [
       "B": "Service-level expectations describe the performance a service must deliver. They are about outcomes, not procedure.",
       "D": "A test result report records what happened when the patch was tested. It is evidence produced by following the procedure, not the procedure itself."
     },
-    "tip": null,
+    "tip": "Step-by-step instructions to do a task the same way every time (patching to the baseline) = SOP.",
     "references": [],
     "source": "bank.pdf#p194",
     "needsReview": false,
@@ -3218,7 +3218,7 @@ export const domain1Questions = [
       "C": "Purchasing insurance is risk transference, not a corrective control.",
       "D": "Preventing unauthorized changes describes a preventive control. Corrective controls act after the event."
     },
-    "tip": null,
+    "tip": "Corrective = limit the damage after an error (stop it spreading, restore). Preventive = stop it happening at all.",
     "references": [],
     "source": "bank.pdf#p197",
     "needsReview": false,
@@ -3261,7 +3261,7 @@ export const domain1Questions = [
       "B": "Risk tolerance expresses how much risk the organization will accept. It may inform whether the upgrade is approved but is not a procedure to follow.",
       "C": "A certificate signing request asks a CA to issue a certificate. It has no role in a firmware upgrade."
     },
-    "tip": null,
+    "tip": "Disruptive changes such as firmware upgrades happen in a maintenance window.",
     "references": [],
     "source": "bank.pdf#p199",
     "needsReview": false,
@@ -3304,7 +3304,7 @@ export const domain1Questions = [
       "B": "Obfuscation makes data harder to read but is reversible by design and offers no real cryptographic protection against a determined attacker.",
       "D": "Masking hides part of the value for display, such as showing only the last four digits. It suits logs and screens, but the system still needs the full number to process the payment."
     },
-    "tip": null,
+    "tip": "Card numbers that must stay usable for pending purchases = tokenization. Hashing is one-way, so the number could never be used again.",
     "references": [],
     "source": "bank.pdf#p204",
     "needsReview": false,
@@ -3347,7 +3347,7 @@ export const domain1Questions = [
       "C": "Scheduling vulnerable cron jobs introduces an actual privilege escalation path. That endangers the host instead of detecting curiosity.",
       "D": "A fake account in /etc/passwd is closer to the idea, but an account entry is passive — it does not attract attention or record who looked at it the way an enticingly named file does."
     },
-    "tip": null,
+    "tip": "An enticing decoy file (like /docs/salaries) that nobody should ever open = honeyfile.",
     "references": [],
     "source": "bank.pdf#p206",
     "needsReview": false,
@@ -3390,7 +3390,7 @@ export const domain1Questions = [
       "C": "A private key is a component used by cryptographic systems, not a solution in itself. It is the secret that makes an algorithm work.",
       "D": "Steganography hides data inside another file so its existence is not obvious. It is concealment rather than encryption, and it fails once the carrier is identified."
     },
-    "tip": null,
+    "tip": "Data at rest → FDE. Data in transit → TLS or IPSec. Signatures prove integrity, not confidentiality.",
     "references": [],
     "source": "bank.pdf#p206",
     "needsReview": false,
@@ -3443,7 +3443,7 @@ export const domain1Questions = [
       "E": "Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
       "F": "Technical describes how a control is implemented, not what it does. The question is asking about control function."
     },
-    "tip": null,
+    "tip": "Signs = deterrent; cameras = detective. Neither prevents anything.",
     "references": [],
     "source": "bank.pdf#p207",
     "needsReview": false,
@@ -3486,7 +3486,7 @@ export const domain1Questions = [
       "B": "An open public ledger records transactions transparently for anyone to read. Publishing a key defeats the purpose entirely.",
       "C": "Public key encryption protects data in transit between parties. It secures the exchange but does not store a key for later authorized retrieval."
     },
-    "tip": null,
+    "tip": "Let several authorized parties retrieve a key when needed = key escrow (a trusted custodian holds a copy).",
     "references": [],
     "source": "bank.pdf#p207",
     "needsReview": false,
@@ -3529,7 +3529,7 @@ export const domain1Questions = [
       "C": "Activating a license is a commercial step handled by a key or an account. It has no relationship to hashing.",
       "D": "Calculating the checksum is the mechanism, not the reason. The administrator computes it in order to test integrity."
     },
-    "tip": null,
+    "tip": "A published hash lets you verify a download's integrity. Proving who published it needs a digital signature.",
     "references": [],
     "source": "bank.pdf#p208",
     "needsReview": false,
@@ -3572,7 +3572,7 @@ export const domain1Questions = [
       "C": "Digital signing is a protective mechanism, not an attack.",
       "D": "A side-channel attack infers secrets from timing, power draw or emissions. It targets the implementation and works even against strong algorithms."
     },
-    "tip": null,
+    "tip": "Stolen hashes made with weak, fast algorithms (MD5, SHA-1, NTLM) → offline password cracking.",
     "references": [],
     "source": "bank.pdf#p208",
     "needsReview": false,
@@ -3615,7 +3615,7 @@ export const domain1Questions = [
       "C": "An alarm system announces that something has occurred. Notification after the event is detective.",
       "D": "Motion sensors detect movement and trigger an alert. Like the alarm, they observe rather than obstruct."
     },
-    "tip": null,
+    "tip": "Preventive physical controls stop entry: bollards, fences, locks, vestibules. Cameras, alarms and sensors detect.",
     "references": [],
     "source": "bank.pdf#p209",
     "needsReview": false,
@@ -3658,7 +3658,7 @@ export const domain1Questions = [
       "B": "The certificate signing request matters only while requesting the certificate. Once the CA has issued it, the CSR plays no part in validation.",
       "D": "The public key is embedded in the certificate itself. It is not configured separately, and a mismatch there would have failed the private-key check already done."
     },
-    "tip": null,
+    "tip": "'Certificate not trusted' after a valid issue → install the root and intermediate certificates in the trust store.",
     "references": [],
     "source": "bank.pdf#p211",
     "needsReview": false,
@@ -3701,7 +3701,7 @@ export const domain1Questions = [
       "C": "Evaluating security procedures likewise assesses one slice of the estate. The regulation may demand things no current procedure touches at all.",
       "D": "Threat scope reduction is a zero trust concept about limiting what a compromised identity can reach. It is unrelated to compliance planning."
     },
-    "tip": null,
+    "tip": "A new regulation is coming → gap analysis: current state against required state.",
     "references": [],
     "source": "bank.pdf#p211",
     "needsReview": false,
@@ -3744,7 +3744,7 @@ export const domain1Questions = [
       "B": "Data masking hides portions of a value for display. The bank requires complete information to process it.",
       "D": "Obfuscation makes data harder to read without providing genuine cryptographic protection. A capable interceptor reverses it."
     },
-    "tip": null,
+    "tip": "FTP sends everything in cleartext → use encryption (SFTP or FTPS).",
     "references": [],
     "source": "bank.pdf#p212",
     "needsReview": false,
@@ -3787,7 +3787,7 @@ export const domain1Questions = [
       "B": "Public key infrastructure is the whole framework of certificates, authorities and revocation. It is heavyweight in both computation and management.",
       "D": "Elliptic curve cryptography is the efficient choice among asymmetric algorithms, and it is genuinely used on constrained devices — but it remains asymmetric and so is still far costlier per byte than symmetric encryption."
     },
-    "tip": null,
+    "tip": "Limited computing power → symmetric encryption (AES). For asymmetric work on small devices, ECC.",
     "references": [],
     "source": "bank.pdf#p215",
     "needsReview": false,
@@ -3830,7 +3830,7 @@ export const domain1Questions = [
       "B": "A root of trust is the anchor certificate a CA signs with. Sites are not issued root certificates.",
       "C": "A third-party certificate comes from a public CA already in the browser's trust store, which is exactly the case that does not warn."
     },
-    "tip": null,
+    "tip": "A browser warning on an internal site = self-signed certificate, not chained to a trusted CA.",
     "references": [],
     "source": "bank.pdf#p219",
     "needsReview": false,
@@ -3873,7 +3873,7 @@ export const domain1Questions = [
       "B": "An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
       "D": "A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."
     },
-    "tip": null,
+    "tip": "Study attacker techniques safely = honeypot.",
     "references": [],
     "source": "bank.pdf#p220",
     "needsReview": false,
@@ -3916,7 +3916,7 @@ export const domain1Questions = [
       "C": "OCSP is the protocol clients use to ask about a certificate's status in real time. It reports revocation that has already been recorded, so the CRL or its database has to be updated first.",
       "D": "A CSR requests a new certificate. That step has already happened — a replacement has been issued."
     },
-    "tip": null,
+    "tip": "Private key stolen → revoke the old certificate by updating the CRL.",
     "references": [],
     "source": "bank.pdf#p220",
     "needsReview": false,
@@ -3959,7 +3959,7 @@ export const domain1Questions = [
       "C": "Allowing traffic from any port to that destination widens the exposure. That is the opposite of a control.",
       "D": "Blocking the website on endpoint protection is the primary control being worked around. The requirement is to permit access."
     },
-    "tip": null,
+    "tip": "Access to a risky site is required, so instead of blocking it, turn on firewall threat prevention = compensating control.",
     "references": [],
     "source": "bank.pdf#p223",
     "needsReview": false,
@@ -4002,7 +4002,7 @@ export const domain1Questions = [
       "C": "Corrective controls restore normal operation after an incident. Nothing here is being repaired.",
       "D": "Directive controls instruct people how to behave. A counter issues no instructions."
     },
-    "tip": null,
+    "tip": "Counting who enters the building = detective control: it records what happened.",
     "references": [],
     "source": "bank.pdf#p226",
     "needsReview": false,
@@ -4045,7 +4045,7 @@ export const domain1Questions = [
       "C": "A honeypot is a decoy host or service. Again the scale is wrong — no system was stood up, just a record.",
       "D": "A honeyfile is a decoy file with an enticing name. Close in spirit, but the trap here is an account and its transactions, not a file."
     },
-    "tip": null,
+    "tip": "A fake account or record whose use proves malicious activity = honeytoken.",
     "references": [],
     "source": "bank.pdf#p234",
     "needsReview": false,
@@ -4088,7 +4088,7 @@ export const domain1Questions = [
       "C": "Operational describes how a control is implemented — through people and process. This is a technical change to the architecture.",
       "D": "Physical controls act on the physical environment. A bastion host is a network system."
     },
-    "tip": null,
+    "tip": "Zero-day with no patch yet → a compensating control (such as a bastion host) reduces the risk in the meantime.",
     "references": [],
     "source": "bank.pdf#p239",
     "needsReview": false,
@@ -4131,7 +4131,7 @@ export const domain1Questions = [
       "B": "Authentication proves who someone is. Encryption protects the data itself rather than verifying identity.",
       "C": "Zero Trust is an architectural model based on never assuming trust from network position. Disk encryption is a single control, not an architecture."
     },
-    "tip": null,
+    "tip": "Encryption = confidentiality. Hashing and signatures = integrity.",
     "references": [],
     "source": "bank.pdf#p239",
     "needsReview": false,
@@ -4174,7 +4174,7 @@ export const domain1Questions = [
       "C": "Tokenization substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
       "D": "A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."
     },
-    "tip": null,
+    "tip": "Hide the fact that communication is happening at all = steganography.",
     "references": [],
     "source": "bank.pdf#p241",
     "needsReview": false,
@@ -4217,7 +4217,7 @@ export const domain1Questions = [
       "B": "The incident response plan covers active security incidents. A known vulnerability that has not been exploited is not an incident.",
       "C": "A risk assessment helps decide how urgently to act, and it may well have already happened. Even an urgent fix still goes through change control."
     },
-    "tip": null,
+    "tip": "Any change to a production server, even a security fix, follows the change management policy first.",
     "references": [],
     "source": "bank.pdf#p241",
     "needsReview": false,
@@ -4260,7 +4260,7 @@ export const domain1Questions = [
       "B": "Operational controls are carried out by people day to day, such as following procedures or reviewing logs.",
       "C": "Managerial controls are the planning and oversight layer — risk assessments, security planning, policy."
     },
-    "tip": null,
+    "tip": "EDR is software making automated decisions = a technical control.",
     "references": [],
     "source": "bank.pdf#p245",
     "needsReview": false,
@@ -4303,7 +4303,7 @@ export const domain1Questions = [
       "C": "This reverses the two. Encryption provides confidentiality; hashing supports integrity.",
       "D": "Encryption may be symmetric or asymmetric, and hashing uses no key at all — a keyed variant is an HMAC, which is a different construct."
     },
-    "tip": null,
+    "tip": "Encryption is reversible (ciphertext back to cleartext); hashing is one-way (a fixed digest).",
     "references": [],
     "source": "bank.pdf#p245",
     "needsReview": false,
@@ -4346,7 +4346,7 @@ export const domain1Questions = [
       "C": "A honeytoken is fake data such as a bogus record or credential whose use signals compromise. The account is fake, but the mechanism generating the alert is the file being opened.",
       "D": "A honeynet is an entire decoy network of systems built to study attackers."
     },
-    "tip": null,
+    "tip": "A decoy file with an alert when it is opened = honeyfile.",
     "references": [],
     "source": "bank.pdf#p246",
     "needsReview": false,
@@ -4389,7 +4389,7 @@ export const domain1Questions = [
       "B": "A behavioral analyzer watches user or system activity for anomalies. It is a detection tool with no role in tracking code.",
       "C": "A collaboration platform helps people communicate and share documents. It may hold discussion about a change but keeps no authoritative change history."
     },
-    "tip": null,
+    "tip": "Track changes to infrastructure code = version control.",
     "references": [],
     "source": "bank.pdf#p247",
     "needsReview": false,
@@ -4432,7 +4432,7 @@ export const domain1Questions = [
       "C": "PKI is the whole framework of authorities, certificates and policies. The CRL is one component within it, and the question asks for the specific artifact.",
       "D": "A CSR is the request submitted to obtain a certificate. It belongs at the start of the lifecycle, not the end."
     },
-    "tip": null,
+    "tip": "CAs publish certificates that are no longer trusted on the CRL (checked live with OCSP).",
     "references": [],
     "source": "bank.pdf#p247",
     "needsReview": false,
@@ -4475,7 +4475,7 @@ export const domain1Questions = [
       "B": "A service restart is something that may happen while implementing the change. It is an effect, not a preparatory step.",
       "D": "Maintenance names the window in which the change happens. Scheduling is part of the process, but the question asks what the change must go through beforehand."
     },
-    "tip": null,
+    "tip": "Change management steps: request, impact analysis, approval, testing, backout plan, maintenance window.",
     "references": [],
     "source": "bank.pdf#p250",
     "needsReview": false,
@@ -4518,7 +4518,7 @@ export const domain1Questions = [
       "C": "Tokenization substitutes sensitive data values with surrogates. It protects data records, not program logic.",
       "D": "Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."
     },
-    "tip": null,
+    "tip": "Protect the intellectual property in software you ship = obfuscation.",
     "references": [],
     "source": "bank.pdf#p251",
     "needsReview": false,
@@ -4561,7 +4561,7 @@ export const domain1Questions = [
       "B": "Non-repudiation concerns proving who performed an action. A firewall failure mode does not affect it.",
       "D": "Integrity is likewise weakened by allowing uninspected traffic, not prioritized by it."
     },
-    "tip": null,
+    "tip": "Fail-open = availability ranked above security.",
     "references": [],
     "source": "bank.pdf#p252",
     "needsReview": false,
@@ -4604,7 +4604,7 @@ export const domain1Questions = [
       "B": "Obfuscation makes code hard to read. An obfuscated script can still be tampered with undetected.",
       "D": "Encryption protects confidentiality. Ciphertext can be altered, and the script must be readable to run anyway."
     },
-    "tip": null,
+    "tip": "Verify a script has not changed before running it = hash it and compare with the known-good value.",
     "references": [],
     "source": "bank.pdf#p252",
     "needsReview": false,
@@ -4647,7 +4647,7 @@ export const domain1Questions = [
       "B": "A hashing algorithm is one-way by design. Nothing can be recovered from the digest.",
       "D": "Steganography hides the existence of data inside other content. It conceals rather than protects, and offers no access control."
     },
-    "tip": null,
+    "tip": "Protect data but keep it recoverable = tokenization (reversible through the vault). Hashing is one-way.",
     "references": [],
     "source": "bank.pdf#p255",
     "needsReview": false,
@@ -4690,7 +4690,7 @@ export const domain1Questions = [
       "B": "Partition encryption protects one partition. Other partitions on the same disk stay readable.",
       "D": "File encryption protects individual files chosen by the user. Temporary copies, swap and anything not selected remain exposed."
     },
-    "tip": null,
+    "tip": "Encrypt ALL the data on a laptop = full disk encryption.",
     "references": [],
     "source": "bank.pdf#p256",
     "needsReview": false,
@@ -4733,7 +4733,7 @@ export const domain1Questions = [
       "B": "Physical controls act on the physical environment. This is a configuration on a network device.",
       "D": "Managerial controls are policies, assessments and oversight. This is a technical restriction."
     },
-    "tip": null,
+    "tip": "Restricting who can reach a management interface = a preventive control.",
     "references": [],
     "source": "bank.pdf#p265",
     "needsReview": false,
@@ -4747,7 +4747,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "When used with an access control vestibule which of the following would provide the best prevention against tailgating?",
+    "question": "When used with an access control vestibule, which of the following would provide the best prevention against tailgating?",
     "choices": [
       {
         "key": "A",
@@ -4776,7 +4776,7 @@ export const domain1Questions = [
       "B": "An access card likewise authenticates one holder and cannot detect a second body.",
       "D": "CCTV records the tailgating for review afterwards. It is detective, not preventive."
     },
-    "tip": null,
+    "tip": "Stop tailgating at a vestibule = a security guard. Cards and PINs cannot count how many people walk through.",
     "references": [],
     "source": "bank.pdf#p272",
     "needsReview": false,
@@ -4819,7 +4819,7 @@ export const domain1Questions = [
       "C": "Salting adds random data before hashing to defeat precomputed tables. It strengthens hashing rather than being a masking technique.",
       "D": "Steganography hides the existence of data inside other content. It has no place in transaction processing."
     },
-    "tip": null,
+    "tip": "Masking in finance that stays usable for transactions = tokenization.",
     "references": [],
     "source": "bank.pdf#p273",
     "needsReview": false,

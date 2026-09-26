@@ -1523,7 +1523,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "Which of the following are common VoIP-associated vulnerabilities? (Choose two).",
+    "question": "Which of the following are common VoIP-associated vulnerabilities? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -3330,7 +3330,7 @@ export const domain2Questions = [
       "C": "Loss of availability may result from a legacy system failing, but it is a consequence, not the underlying security concern.",
       "D": "Legacy systems often use insecure protocols, but those can sometimes be disabled, tunneled or segmented. Missing patches from an unsupported vendor cannot be worked around."
     },
-    "tip": null,
+    "tip": "A legacy system's top security concern = no vendor support, meaning no more patches.",
     "references": [],
     "source": "bank.pdf#p163",
     "needsReview": false,
@@ -3378,7 +3378,7 @@ export const domain2Questions = [
       "D": "Broken encryption would mean an attacker defeated a cipher to read protected data. Nothing here indicates cryptography was attacked.",
       "E": "Sniffing from an on-path position captures traffic in transit. This traffic originates from an internal server and is being sent out deliberately."
     },
-    "tip": null,
+    "tip": "One protocol wrapped inside another (IPv6 inside IPv4, protocol 41) to slip past controls = encapsulation (tunneling).",
     "references": [],
     "source": "bank.pdf#p164",
     "needsReview": false,
@@ -3421,7 +3421,7 @@ export const domain2Questions = [
       "C": "Impersonation is assuming another identity to gain compliance. It is a technique often used inside such an attack rather than the name of the campaign.",
       "D": "Identity fraud is using someone's identity for financial gain. It describes a possible outcome, not the attack method."
     },
-    "tip": null,
+    "tip": "Targeted phishing at a CEO or other senior executive = whaling. At any specific person = spear phishing.",
     "references": [],
     "source": "bank.pdf#p166",
     "needsReview": false,
@@ -3464,7 +3464,7 @@ export const domain2Questions = [
       "C": "Lack of support means no help when something breaks. It is a genuine operational problem, but a broken feature is far less dangerous than an unpatchable flaw.",
       "D": "Lack of source code access limits what the company could fix itself. Most commercial software never provides it, so nothing changes at end of life."
     },
-    "tip": null,
+    "tip": "An end-of-life application's biggest risk = no more security updates.",
     "references": [],
     "source": "bank.pdf#p169",
     "needsReview": false,
@@ -3507,7 +3507,7 @@ export const domain2Questions = [
       "C": "Living off the land means abusing built-in system binaries to avoid dropping tools. Mimikatz is an external tool written to disk, which is the opposite.",
       "D": "Social engineering the accountant would show a person being manipulated into acting. The command history shows a technical credential attack instead."
     },
-    "tip": null,
+    "tip": "mimikatz sekurlsa::pth with an NTLM hash = pass-the-hash. Unique local admin passwords (LAPS) stop one hash working across machines.",
     "references": [],
     "source": "bank.pdf#p170",
     "needsReview": false,
@@ -3550,7 +3550,7 @@ export const domain2Questions = [
       "C": "Patching brings them into compliance, which is effort spent on systems nobody uses. It fixes the wrong problem.",
       "D": "Isolating confines them to a restricted segment. That is the right approach when a non-compliant system is still needed, which these are not."
     },
-    "tip": null,
+    "tip": "Unused and non-compliant → decommission. Still needed but non-compliant → isolate.",
     "references": [],
     "source": "bank.pdf#p173",
     "needsReview": false,
@@ -3593,7 +3593,7 @@ export const domain2Questions = [
       "B": "A rogue employee acts maliciously from inside one organization. The damage here spread across many organizations through a shared vendor.",
       "C": "An insider threat likewise originates within the affected organization. Every victim here was harmed by an external supplier's product."
     },
-    "tip": null,
+    "tip": "A malicious update from a trusted vendor hitting many organizations at once = supply chain attack.",
     "references": [],
     "source": "bank.pdf#p174",
     "needsReview": false,
@@ -3607,7 +3607,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company web server is initiating outbound traffic to a low-reputation, public IP on non-standard pat. The web server is used to present an unauthenticated page to clients who upload images the company. An analyst notices a suspicious process running on the server hat was not created by the company development team. Which of the following is the most likely explanation for his security incident?",
+    "question": "A company web server is initiating outbound traffic to a low-reputation, public IP on non-standard port. The web server is used to present an unauthenticated page to clients who upload images to the company. An analyst notices a suspicious process running on the server that was not created by the company development team. Which of the following is the most likely explanation for this security incident?",
     "choices": [
       {
         "key": "A",
@@ -3636,7 +3636,7 @@ export const domain2Questions = [
       "C": "Cryptomining is driven by CPU consumption and connects to mining pools. Traffic to a single low-reputation host on a non-standard port looks like command and control, not mining.",
       "D": "A rootkit over exposed RDP requires RDP to be reachable. The described exposure is an unauthenticated upload page on a web server."
     },
-    "tip": null,
+    "tip": "Unauthenticated upload page + unknown process + beaconing to a low-reputation IP = web shell.",
     "references": [],
     "source": "bank.pdf#p174",
     "needsReview": false,
@@ -3679,7 +3679,7 @@ export const domain2Questions = [
       "C": "Scanning for malware looks for known malicious files. The problem is attacker-supplied code inside a legitimate database job, which a scanner will not flag.",
       "D": "Searching for ransomware notes assumes an extortion attack. The site is unusable because of destructive code, and no ransom demand has been reported."
     },
-    "tip": null,
+    "tip": "Destructive code set to fire on a date = a logic bomb. Investigate how it got there: injection in the web logs, or an insider with access.",
     "references": [],
     "source": "bank.pdf#p181",
     "needsReview": false,
@@ -3722,7 +3722,7 @@ export const domain2Questions = [
       "B": "SQL injection can be fixed in the company's own code with parameterized queries.",
       "C": "Cross-site scripting can be fixed with output encoding and input validation in the company's code."
     },
-    "tip": null,
+    "tip": "Zero-days in open-source dependencies are hardest to fix: you wait for the maintainers to ship a patch.",
     "references": [],
     "source": "bank.pdf#p182",
     "needsReview": false,
@@ -3765,7 +3765,7 @@ export const domain2Questions = [
       "B": "A buffer overflow writes past an allocated memory region to corrupt memory or execute code. It exploits a program, not an install path.",
       "C": "Jailbreaking removes the manufacturer's restrictions on the device itself. It is related and often enables side loading, but the act of installing from outside the store is side loading specifically."
     },
-    "tip": null,
+    "tip": "Installing apps from outside the official store = side loading.",
     "references": [],
     "source": "bank.pdf#p184",
     "needsReview": false,
@@ -3808,7 +3808,7 @@ export const domain2Questions = [
       "C": "A zero-day exploit is any attack against a vulnerability with no patch yet. It describes timing, not the technique.",
       "D": "An on-path attack intercepts traffic between two parties. It requires network position rather than injecting script into a page."
     },
-    "tip": null,
+    "tip": "Script injected into a page that runs in the victim's browser = XSS (stored, reflected or DOM-based).",
     "references": [],
     "source": "bank.pdf#p186",
     "needsReview": false,
@@ -3851,7 +3851,7 @@ export const domain2Questions = [
       "B": "Brute force would show many login attempts against one account. The log shows connections to many hosts, not password guesses.",
       "D": "Nothing in the log mentions an account being locked; the entries are connection results."
     },
-    "tip": null,
+    "tip": "One workstation opening sessions to many servers at once = concurrent session usage, a sign of possible lateral movement.",
     "references": [],
     "source": "bank.pdf#p186",
     "needsReview": false,
@@ -3887,14 +3887,14 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A VM escape breaks out of a guest into the hypervisor, and from there the attacker can reach the host and every other VM running on it.",
+    "explanation": "A VM escape breaks out of a guest into the hypervisor, and from there the attacker can reach the host and every other VM running on it. That is why hypervisors are patched urgently and why workloads of very different sensitivity are often kept on separate hosts.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Inserting code into memory for elevated rights describes memory injection or privilege escalation.",
       "C": "Reading unencrypted data across environments describes a data exposure issue, not escaping a VM.",
       "D": "Installing unapproved software describes side loading."
     },
-    "tip": null,
+    "tip": "VM escape = breaking out of a guest into the hypervisor, exposing the host and every other VM on it.",
     "references": [],
     "source": "bank.pdf#p191",
     "needsReview": false,
@@ -3937,7 +3937,7 @@ export const domain2Questions = [
       "C": "Certification is a compliance or attestation concept. It provides no technical enforcement at a switch port.",
       "D": "Isolation confines a system away from others. Like segmentation it reduces reach rather than denying the connection."
     },
-    "tip": null,
+    "tip": "Stop unknown devices on a wall or phone port = MAC filtering (or port security and 802.1X).",
     "references": [],
     "source": "bank.pdf#p191",
     "needsReview": false,
@@ -3980,7 +3980,7 @@ export const domain2Questions = [
       "C": "Nation-states pursue espionage and strategic disruption, quietly. A music group has nothing of state interest.",
       "D": "An insider threat acts from within the organization. Nothing suggests the attacker had legitimate access."
     },
-    "tip": null,
+    "tip": "Defacing a site for attention and bragging rights = unskilled attacker (script kiddie).",
     "references": [],
     "source": "bank.pdf#p193",
     "needsReview": false,
@@ -4023,7 +4023,7 @@ export const domain2Questions = [
       "C": "Pretexting is the invented story used to justify the request — the emergency. It is the technique inside the attack rather than the vector.",
       "D": "Impersonation is likewise the technique, pretending to be the CEO. The question asks specifically which threat vector delivered it."
     },
-    "tip": null,
+    "tip": "Text message = smishing (the vector). Pretending to be the CEO = impersonation; the invented emergency = pretexting.",
     "references": [],
     "source": "bank.pdf#p194",
     "needsReview": false,
@@ -4066,7 +4066,7 @@ export const domain2Questions = [
       "B": "Resource reuse is a virtualization flaw where memory or storage passes between tenants without being cleared.",
       "D": "Weak cipher suites are a protocol negotiation problem. They concern which algorithms are permitted, not how certificates and their keys are handled."
     },
-    "tip": null,
+    "tip": "Poorly managed certificates usually means exposed private keys = insecure key storage. Keep keys in an HSM or key vault.",
     "references": [],
     "source": "bank.pdf#p195",
     "needsReview": false,
@@ -4109,7 +4109,7 @@ export const domain2Questions = [
       "B": "A web application firewall inspects HTTP traffic to a web application. It filters rather than disconnects, and only for one protocol.",
       "D": "A network-based IDS watches traffic and alerts. It is passive and blocks nothing."
     },
-    "tip": null,
+    "tip": "Make a device unreachable = host isolation (quarantine VLAN or EDR network containment).",
     "references": [],
     "source": "bank.pdf#p196",
     "needsReview": false,
@@ -4152,7 +4152,7 @@ export const domain2Questions = [
       "C": "Nation-states pursue espionage, disruption or strategic advantage. They occasionally use ransomware as cover, but revenue is not their purpose.",
       "D": "Hacktivists act for ideological reasons — publicity, protest, embarrassment. Extorting money would undercut the cause they are advancing."
     },
-    "tip": null,
+    "tip": "Ransomware for money = organized crime.",
     "references": [],
     "source": "bank.pdf#p199",
     "needsReview": false,
@@ -4200,7 +4200,7 @@ export const domain2Questions = [
       "D": "Tokenization is a data-protection technique, not a vulnerability at all.",
       "E": "Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."
     },
-    "tip": null,
+    "tip": "The cloud-specific architecture concern = VM escape, which breaks the isolation between tenants.",
     "references": [],
     "source": "bank.pdf#p204",
     "needsReview": false,
@@ -4243,7 +4243,7 @@ export const domain2Questions = [
       "C": "Third-party software is a category of product rather than an attack method. It can introduce risk but does not itself harvest anything.",
       "D": "A rainbow table reverses password hashes you already possess. It is a cracking technique applied after a breach, not a way of collecting credentials in the first place."
     },
-    "tip": null,
+    "tip": "Credential harvesting = social engineering (phishing to fake login pages).",
     "references": [],
     "source": "bank.pdf#p212",
     "needsReview": false,
@@ -4286,7 +4286,7 @@ export const domain2Questions = [
       "B": "Network saturation would show as high interface utilization or packet loss. The evidence points at CPU and memory, which are host resources.",
       "C": "Account lockout indicates repeated failed authentication. The file server is responding, just slowly, so authentication is not the issue."
     },
-    "tip": null,
+    "tip": "CPU and memory maxed out = the resource consumption indicator.",
     "references": [],
     "source": "bank.pdf#p212",
     "needsReview": false,
@@ -4329,7 +4329,7 @@ export const domain2Questions = [
       "C": "A DDoS attack floods a service with traffic. It shows up as volume, not as a crafted payload in a log entry.",
       "D": "CSRF tricks an authenticated user's browser into submitting a request they did not intend. It abuses an existing session rather than injecting script."
     },
-    "tip": null,
+    "tip": "A <script> tag in the logs = an XSS attempt.",
     "references": [],
     "source": "bank.pdf#p213",
     "needsReview": false,
@@ -4372,7 +4372,7 @@ export const domain2Questions = [
       "C": "Memory injection hides malicious code inside a legitimate process to evade some tools, but the code still runs within the operating system, where memory scanning and EDR can find it.",
       "D": "Encrypted payloads hide content from network inspection in transit, but they must be decrypted and run on the OS to do anything."
     },
-    "tip": null,
+    "tip": "Firmware-level malware (UEFI or BIOS rootkits) runs below the OS, so the OS cannot see it.",
     "references": [],
     "source": "bank.pdf#p216",
     "needsReview": false,
@@ -4415,7 +4415,7 @@ export const domain2Questions = [
       "B": "Process injection runs malicious code inside a legitimate process on the same machine. It gains execution but does not by itself reroute a host's outbound traffic.",
       "C": "Valid accounts means logging in with legitimate credentials. That could be how the attacker arrived, but authentication failed here — the redirection is the technique being asked about."
     },
-    "tip": null,
+    "tip": "Breaking out of a VM or container to control the host = escape to host (MITRE ATT&CK).",
     "references": [],
     "source": "bank.pdf#p218",
     "needsReview": false,
@@ -4458,7 +4458,7 @@ export const domain2Questions = [
       "C": "RFID cloning copies the data from a legitimate badge onto another card. That requires capturing a badge first, and the tester has no badge at all.",
       "D": "Forgery is producing a counterfeit document or credential. Again it means presenting something fake, whereas the tester presented nothing."
     },
-    "tip": null,
+    "tip": "Walking in behind authorized people without a badge = tailgating.",
     "references": [],
     "source": "bank.pdf#p218",
     "needsReview": false,
@@ -4501,7 +4501,7 @@ export const domain2Questions = [
       "B": "Whaling targets a senior executive as the victim. The victim here is an ordinary customer.",
       "C": "Smishing is phishing over SMS. No text message is involved."
     },
-    "tip": null,
+    "tip": "Phone call + spoofed caller ID + a request for card details = vishing.",
     "references": [],
     "source": "bank.pdf#p219",
     "needsReview": false,
@@ -4554,7 +4554,7 @@ export const domain2Questions = [
       "E": "Regular vulnerability scans find weaknesses. Finding is not preventing — the fix has to follow.",
       "F": "Removing payment information reduces what an attacker gains, which limits impact. The servers remain just as vulnerable to the injection."
     },
-    "tip": null,
+    "tip": "Injection risk on a web app → a WAF in front and patched server software behind it.",
     "references": [],
     "source": "bank.pdf#p221",
     "needsReview": false,
@@ -4597,7 +4597,7 @@ export const domain2Questions = [
       "B": "Memory injection writes code into a running process's memory. This attack modified a database field during an update, not process memory.",
       "D": "Side loading installs an application from outside an official store. It applies to devices and apps, not database updates."
     },
-    "tip": null,
+    "tip": "An attacker tampering with an update to get in = malicious update.",
     "references": [],
     "source": "bank.pdf#p221",
     "needsReview": false,
@@ -4640,7 +4640,7 @@ export const domain2Questions = [
       "C": "A replay attack resends captured valid traffic. It may cause an RTOS device to repeat an action but does not compromise the system itself.",
       "D": "Ransomware encrypts files and demands payment. An RTOS often has no conventional file system or user to extort."
     },
-    "tip": null,
+    "tip": "An RTOS or embedded system with little memory protection → memory injection is the realistic attack.",
     "references": [],
     "source": "bank.pdf#p222",
     "needsReview": false,
@@ -4683,7 +4683,7 @@ export const domain2Questions = [
       "B": "Credential replay reuses captured authentication material. No credentials appear in the request.",
       "C": "Brute force tries many values until one works. This is a single crafted request, not repeated guessing."
     },
-    "tip": null,
+    "tip": "../../ sequences in a request = directory (path) traversal.",
     "references": [],
     "source": "bank.pdf#p224",
     "needsReview": false,
@@ -4726,7 +4726,7 @@ export const domain2Questions = [
       "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
       "C": "Resource reuse is a virtualization flaw where memory or storage released by one tenant is handed to another without being cleared."
     },
-    "tip": null,
+    "tip": "Unexpected characters (', ;, --) used to reach backend data = SQL injection.",
     "references": [],
     "source": "bank.pdf#p224",
     "needsReview": false,
@@ -4769,7 +4769,7 @@ export const domain2Questions = [
       "C": "An infected website would mean the browsing delivered the payload. The company's own site is the least likely candidate and nothing suggests it was compromised.",
       "D": "Typosquatting relies on the user mistyping a domain and landing on a look-alike. The user visited their own company's site, not a mistyped one."
     },
-    "tip": null,
+    "tip": "Opened an unexpected resume attachment → a spear-phishing attachment was the vector.",
     "references": [],
     "source": "bank.pdf#p227",
     "needsReview": false,
@@ -4812,7 +4812,7 @@ export const domain2Questions = [
       "C": "A ransomware compromise encrypts files and demands payment. There is no encryption or ransom here.",
       "D": "A spyware infection quietly collects information from a host. It does not rewrite DNS records for the whole organization."
     },
-    "tip": null,
+    "tip": "DNS records changed to point at an outside IP = DNS poisoning (hijacking).",
     "references": [],
     "source": "bank.pdf#p228",
     "needsReview": false,
@@ -4855,7 +4855,7 @@ export const domain2Questions = [
       "B": "Philosophical beliefs motivate hacktivists making a political point. Nothing ideological is being advanced here.",
       "C": "Espionage is covert collection of information for advantage. The attacker already has the material and is publicizing their possession of it."
     },
-    "tip": null,
+    "tip": "A threat to leak damaging photos unless paid = blackmail (the motivation).",
     "references": [],
     "source": "bank.pdf#p229",
     "needsReview": false,
@@ -4898,7 +4898,7 @@ export const domain2Questions = [
       "B": "Organized crime is motivated by profit above everything else.",
       "D": "An insider threat is usually driven by grievance or personal gain. Belief can play a part, but the defining trait of an insider is their access, not their motive."
     },
-    "tip": null,
+    "tip": "Motivated by beliefs or causes = hacktivist.",
     "references": [],
     "source": "bank.pdf#p230",
     "needsReview": false,
@@ -4941,7 +4941,7 @@ export const domain2Questions = [
       "C": "Brute force guesses credentials by trying many possibilities. The attacker here already has the real ones.",
       "D": "Password spraying tries a few common passwords across many accounts. Again it is guessing rather than intercepting."
     },
-    "tip": null,
+    "tip": "Intercepting credentials in transit and reusing them = on-path attack.",
     "references": [],
     "source": "bank.pdf#p231",
     "needsReview": false,
@@ -4963,7 +4963,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Root or trust"
+        "text": "Root of trust"
       },
       {
         "key": "C",
@@ -4984,11 +4984,11 @@ export const domain2Questions = [
       "B": "Root of trust is the trusted anchor a cryptographic system is built on. It is a PKI concept, not a threat.",
       "D": "Blackmail coerces a victim with a threat. No demand has been made — data is simply leaving."
     },
-    "tip": null,
+    "tip": "Company data flowing to a suspicious external IP outside working hours = data exfiltration.",
     "references": [],
     "source": "bank.pdf#p232",
     "needsReview": false,
-    "inferenceConfidence": 0.455,
+    "inferenceConfidence": 0.45,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5027,7 +5027,7 @@ export const domain2Questions = [
       "C": "Spear phishing is targeted phishing, usually to harvest credentials or deliver malware. BEC is the specific variant aimed at fraudulent financial transfers.",
       "D": "Impersonation is the technique being used within the attack. The question asks for the attack, and BEC is the precise name for it."
     },
-    "tip": null,
+    "tip": "An urgent wire transfer request from a trusted-looking sender = BEC.",
     "references": [],
     "source": "bank.pdf#p235",
     "needsReview": false,
@@ -5070,7 +5070,7 @@ export const domain2Questions = [
       "C": "A list of board members is typically published in corporate filings and investor material.",
       "D": "Government identification numbers would never appear in a job posting, and an analyst reviewing recruitment content is not looking for personal identifiers."
     },
-    "tip": null,
+    "tip": "Job postings leak product names and versions, and attackers look up their vulnerabilities (OSINT).",
     "references": [],
     "source": "bank.pdf#p235",
     "needsReview": false,
@@ -5113,7 +5113,7 @@ export const domain2Questions = [
       "B": "Insider threats come from people with legitimate access. Patching changes nothing about what an authorized user can do.",
       "C": "End-of-life support is a product lifecycle status. Applying updates does not extend a vendor's support commitment."
     },
-    "tip": null,
+    "tip": "Patching and current definitions stop known exploits, not zero-days.",
     "references": [],
     "source": "bank.pdf#p236",
     "needsReview": false,
@@ -5156,7 +5156,7 @@ export const domain2Questions = [
       "B": "Removing unnecessary software reduces the attack surface generally. It does not fix a vulnerability in software you still need.",
       "C": "Configuration enforcement keeps settings at a known-good baseline. Useful hardening, but a correctly configured system can still be vulnerable."
     },
-    "tip": null,
+    "tip": "Fix an identified OS vulnerability = patch it.",
     "references": [],
     "source": "bank.pdf#p238",
     "needsReview": false,
@@ -5199,7 +5199,7 @@ export const domain2Questions = [
       "B": "A process receiving more data than expected and executing code describes a buffer overflow.",
       "D": "Overwriting an executable on disk so malicious code runs next time describes file infection or a malicious update — the opposite of an in-memory technique."
     },
-    "tip": null,
+    "tip": "Memory injection = malicious code placed into a running process's memory.",
     "references": [],
     "source": "bank.pdf#p239",
     "needsReview": false,
@@ -5242,7 +5242,7 @@ export const domain2Questions = [
       "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than a registered domain.",
       "D": "A watering-hole attack compromises a legitimate site the targets already visit. Here a new fraudulent domain was created instead."
     },
-    "tip": null,
+    "tip": "A look-alike domain (c0mpany.com) = typosquatting.",
     "references": [],
     "source": "bank.pdf#p242",
     "needsReview": false,
@@ -5285,7 +5285,7 @@ export const domain2Questions = [
       "B": "Replication is copying data between systems for redundancy. It is not an attack.",
       "D": "Smishing is phishing delivered by SMS text message. Nothing here involves text messages."
     },
-    "tip": null,
+    "tip": "A fake copy of a login or email site used to harvest credentials = phishing.",
     "references": [],
     "source": "bank.pdf#p243",
     "needsReview": false,
@@ -5328,7 +5328,7 @@ export const domain2Questions = [
       "C": "Shoulder surfing is watching someone enter a PIN or password. It produces no badge reads at all.",
       "D": "Tailgating is following an authorized person through a door on their swipe. That would produce one read, not several."
     },
-    "tip": null,
+    "tip": "One badge read at the gate several times within minutes = a cloned RFID badge.",
     "references": [],
     "source": "bank.pdf#p248",
     "needsReview": false,
@@ -5371,7 +5371,7 @@ export const domain2Questions = [
       "B": "Decommissioning retires the system entirely. There is no ongoing functionality to improve.",
       "D": "Encryption protects confidentiality. It neither fixes defects nor improves functionality."
     },
-    "tip": null,
+    "tip": "Fix security flaws and improve functionality without losing data = patching.",
     "references": [],
     "source": "bank.pdf#p251",
     "needsReview": false,
@@ -5414,7 +5414,7 @@ export const domain2Questions = [
       "C": "Firmware failure is a reliability problem. Visual inspection of a motherboard would not reveal it.",
       "D": "An RFID keylogger is a specific device that might be planted, again an example rather than the category."
     },
-    "tip": null,
+    "tip": "Inspecting hardware for tampering on arrival mitigates supply chain risk.",
     "references": [],
     "source": "bank.pdf#p253",
     "needsReview": false,
@@ -5457,7 +5457,7 @@ export const domain2Questions = [
       "C": "An on-path attack intercepts traffic between two parties. It requires network position rather than installed software.",
       "D": "A buffer overflow is a coding defect in a program. Side loading delivers software; it does not create memory-handling bugs."
     },
-    "tip": null,
+    "tip": "Side-loaded apps skip store vetting and can carry rootkits or other malware.",
     "references": [],
     "source": "bank.pdf#p253",
     "needsReview": false,
@@ -5500,7 +5500,7 @@ export const domain2Questions = [
       "C": "An insider threat is an employee or contractor abusing authorized access, typically with a motive like revenge or profit. Nothing suggests authorized access was abused.",
       "D": "A nation-state actor would not spend advanced capabilities disrupting school testing."
     },
-    "tip": null,
+    "tip": "Disruptive ARP poisoning with off-the-shelf tools at a school = unskilled attacker (often a student).",
     "references": [],
     "source": "bank.pdf#p253",
     "needsReview": false,
@@ -5543,7 +5543,7 @@ export const domain2Questions = [
       "B": "Pretexting is inventing a story to manipulate someone. It is a social engineering technique, not an explanation for a wrong website.",
       "D": "Vishing is phishing over a phone call. No call is involved."
     },
-    "tip": null,
+    "tip": "A manually typed URL landing on a look-alike site = typosquatting.",
     "references": [],
     "source": "bank.pdf#p253",
     "needsReview": false,
@@ -5586,7 +5586,7 @@ export const domain2Questions = [
       "C": "Blackmail coerces a victim by threatening exposure. The caller is using assumed authority, not a threat.",
       "D": "Misinformation is false information spread to mislead a population. This is a targeted fraud against one employee."
     },
-    "tip": null,
+    "tip": "A phone call impersonating an executive to get a password reset = vishing.",
     "references": [],
     "source": "bank.pdf#p254",
     "needsReview": false,
@@ -5629,7 +5629,7 @@ export const domain2Questions = [
       "C": "Decommissioning removes the server entirely. That solves the vulnerability by eliminating a service the business presumably needs.",
       "D": "Monitoring tells you when someone attacks it. Detection is not remediation."
     },
-    "tip": null,
+    "tip": "A known vulnerability on a server → patch it.",
     "references": [],
     "source": "bank.pdf#p256",
     "needsReview": false,
@@ -5643,7 +5643,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A penetration test identifies that an SMBv1 is enabled on multiple servers across an organization.\nThe organization wants to remediate this vulnerability in the most efficient way possible. Which of the following should the organization use for this purpose?",
+    "question": "A penetration test identifies that SMBv1 is enabled on multiple servers across an organization.\nThe organization wants to remediate this vulnerability in the most efficient way possible. Which of the following should the organization use for this purpose?",
     "choices": [
       {
         "key": "A",
@@ -5672,7 +5672,7 @@ export const domain2Questions = [
       "C": "SFTP is a secure file transfer protocol. It is an alternative for moving files, not a way to disable SMBv1.",
       "D": "DLP watches for sensitive data leaving the organization. It has no configuration management role."
     },
-    "tip": null,
+    "tip": "Disable a protocol such as SMBv1 across many Windows servers at once = GPO.",
     "references": [],
     "source": "bank.pdf#p257",
     "needsReview": false,
@@ -5715,7 +5715,7 @@ export const domain2Questions = [
       "C": "User trust in the OS is a factor in social engineering, but it does not explain why an OS flaw is technically more serious.",
       "D": "OS vulnerabilities are not generally easier to exploit; modern operating systems carry substantial exploit mitigations."
     },
-    "tip": null,
+    "tip": "OS exploits reach below every application, exposing the whole system.",
     "references": [],
     "source": "bank.pdf#p261",
     "needsReview": false,
@@ -5758,7 +5758,7 @@ export const domain2Questions = [
       "C": "Monitoring reveals what is happening. It improves visibility without fixing the cause.",
       "D": "Isolation cuts affected machines off. That is an incident response measure, not the underlying mitigation."
     },
-    "tip": null,
+    "tip": "Outdated OS + infections → patch first; the malware exploits known vulnerabilities.",
     "references": [],
     "source": "bank.pdf#p263",
     "needsReview": false,
@@ -5801,7 +5801,7 @@ export const domain2Questions = [
       "B": "An NTP amplification attack uses UDP 123 to reflect traffic at a victim. Neither the protocol nor the port matches.",
       "D": "A DoS attack floods a target to make it unavailable. It usually concentrates on one destination, whereas this traffic is spreading across the campus."
     },
-    "tip": null,
+    "tip": "Heavy TCP 445 traffic across the whole campus = an SMB worm (like WannaCry).",
     "references": [],
     "source": "bank.pdf#p271",
     "needsReview": false,
@@ -5844,7 +5844,7 @@ export const domain2Questions = [
       "C": "A buffer overflow is a memory handling defect. It has nothing to do with algorithm choice.",
       "D": "Input validation failures allow injection attacks. Again unrelated to cryptography."
     },
-    "tip": null,
+    "tip": "Outdated algorithms or keys = cryptographic vulnerability.",
     "references": [],
     "source": "bank.pdf#p273",
     "needsReview": false,
@@ -5887,7 +5887,7 @@ export const domain2Questions = [
       "B": "Group Policy enforces configuration, which helps harden systems — but it cannot patch flaws in an operating system the vendor no longer supports.",
       "C": "High availability keeps services running through failure. It is an availability measure with no effect on attack surface."
     },
-    "tip": null,
+    "tip": "Reduce the attack surface: upgrade end-of-support OSs (unpatchable) and disable unused services.",
     "references": [],
     "source": "bank.pdf#p274",
     "needsReview": false,
@@ -5930,7 +5930,7 @@ export const domain2Questions = [
       "B": "Espionage is the motivation of nation-states and competitors seeking information.",
       "D": "Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."
     },
-    "tip": null,
+    "tip": "Hacktivist motive = philosophical or political beliefs.",
     "references": [],
     "source": "bank.pdf#p275",
     "needsReview": false,
@@ -5973,7 +5973,7 @@ export const domain2Questions = [
       "B": "Disinformation is false information spread to mislead a population. This is targeted fraud against one employee.",
       "C": "Phishing is the broader category of fraudulent messaging, and by SMS it would be smishing. The question asks what type of attack this is, and impersonation is the precise technique."
     },
-    "tip": null,
+    "tip": "A text claiming to be the CEO and asking for gift cards = impersonation (delivered by smishing).",
     "references": [],
     "source": "bank.pdf#p275",
     "needsReview": false,
@@ -6016,7 +6016,7 @@ export const domain2Questions = [
       "C": "Brand impersonation mimics a company's identity to outsiders. Here an internal account is being used directly.",
       "D": "Pretexting is the invented justification inside the message. It is a technique within the attack rather than the attack vector."
     },
-    "tip": null,
+    "tip": "An out-of-character financial request from the CEO's real corporate account = BEC.",
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,

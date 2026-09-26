@@ -109,7 +109,7 @@
  },
  "q0622": {
   "objective": "3.1",
-  "explanation": "The discriminator is 'low-cost': cheap IoT hardware for infrastructure often comes from manufacturers the company cannot vet, raising supply-chain concerns such as hidden backdoors, compromised firmware and no security updates. Country of origin captures that risk. Two vendors key 'Storage of data', but data storage is a generic IoT concern that is not tied to cost.",
+  "explanation": "The discriminator is 'low-cost': cheap IoT hardware for infrastructure often comes from manufacturers the company cannot vet, raising supply-chain concerns such as hidden backdoors, compromised firmware and no security updates. Country of origin captures that risk. Some published answers key 'Storage of data', but data storage is a concern for every IoT device, whatever its price.",
   "incorrect": {
    "B": "Device responsiveness is a performance issue, not a security concern.",
    "C": "Ease of deployment is an operational benefit. It is not the security risk cheap devices introduce.",

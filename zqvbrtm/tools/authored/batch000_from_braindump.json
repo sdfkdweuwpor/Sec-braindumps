@@ -1545,7 +1545,7 @@
   "objective": "3.3",
   "explanation": "The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunneling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
   "incorrect": {
-   "A": "Tokenization substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+   "A": "Tokenization substitutes values before transmission. The third party needs the real data, so substitution would break the business process.",
    "B": "A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
    "E": "Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
    "F": "Data masking hides parts of a value. Like tokenization it destroys the completeness the recipient requires."
@@ -2396,7 +2396,7 @@
  },
  "q0587": {
   "objective": "5.2",
-  "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualized rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
+  "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualized rate of occurrence of 2/3 (about 0.67). ALE = $15,000 × 2/3 = $10,000 per year.",
   "incorrect": {
    "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
    "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualizing it.",
@@ -3021,7 +3021,7 @@
  },
  "q0660": {
   "objective": "5.6",
-  "explanation": "Eighty per cent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behavior that produced the result.",
+  "explanation": "Eighty percent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behavior that produced the result.",
   "incorrect": {
    "A": "Blocking all outbound traffic from the intranet would stop the business functioning. It is disproportionate by an enormous margin.",
    "C": "Restricting internet access for those who fell for it is punitive and treats the symptom in a handful of people while leaving everyone else untrained.",

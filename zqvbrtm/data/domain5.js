@@ -615,7 +615,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "multi",
-    "question": "Several employees received a fraudulent text message from someone claiming to be the CEO. The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to the following email address.\"\nWhich of the following are the best responses to this situation? (Choose two).",
+    "question": "Several employees received a fraudulent text message from someone claiming to be the CEO. The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to the following email address.\"\nWhich of the following are the best responses to this situation? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -711,7 +711,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "multi",
-    "question": "Which of the following factors are the most important to address when formulating a training curriculum plan for a security awareness program? (Select two).",
+    "question": "Which of the following factors are the most important to address when formulating a training curriculum plan for a security awareness program? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -979,7 +979,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "multi",
-    "question": "Which of the following are the most likely vectors for the unauthorized or unintentional inclusion of vulnerable code in a software company's final software releases? (Choose two).",
+    "question": "Which of the following are the most likely vectors for the unauthorized or unintentional inclusion of vulnerable code in a software company's final software releases? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -2619,7 +2619,7 @@ export const domain5Questions = [
       "C": "NIST publishes voluntary security frameworks and standards. They guide how organizations build controls and confer no individual rights.",
       "D": "ISO produces international standards such as ISO 27001 for information security management. They are certifiable management systems, not privacy rights legislation."
     },
-    "tip": null,
+    "tip": "Right to be informed, right of access, right to erasure ('to be forgotten') = GDPR.",
     "references": [],
     "source": "bank.pdf#p162",
     "needsReview": false,
@@ -2633,7 +2633,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities. Which of me following should the security team implement to address this concern?",
+    "question": "A newly implemented wireless network is designed so that visitors can connect to the wireless network for business activities. The legal department is concerned that visitors might connect to the network and perform illicit activities. Which of the following should the security team implement to address this concern?",
     "choices": [
       {
         "key": "A",
@@ -2662,7 +2662,7 @@ export const domain5Questions = [
       "B": "802.1X enforces per-device authentication before network access. Like RADIUS it presumes managed devices with credentials, which guests do not have.",
       "D": "WPS simplifies joining a network with a button or PIN. It is a known-weak convenience feature and records nothing about who accepted what."
     },
-    "tip": null,
+    "tip": "Legal liability for guest Wi-Fi → a captive portal where visitors must accept terms and conditions.",
     "references": [],
     "source": "bank.pdf#p167",
     "needsReview": false,
@@ -2705,7 +2705,7 @@ export const domain5Questions = [
       "C": "The data steward is responsible for data quality, context and appropriate use day to day. They manage the data's fitness, not who may access it.",
       "D": "The data controller is a GDPR role determining the purposes and means of processing personal data. It is a regulatory designation for an organization rather than the internal role that sets access."
     },
-    "tip": null,
+    "tip": "The owner decides risks and access; the custodian carries out those decisions.",
     "references": [],
     "source": "bank.pdf#p168",
     "needsReview": false,
@@ -2741,14 +2741,14 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Posters and online training teach people what to watch for; a phishing campaign then tests whether they apply it, measuring and reinforcing the awareness program.",
+    "explanation": "Posters and online training teach people what to watch for; a phishing campaign then tests whether they apply it, measuring and reinforcing the awareness program. Click and report rates from the campaign show where more training is needed, and users who click get immediate, targeted coaching.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A password policy is a technical/administrative rule, not part of an awareness program's activities.",
       "B": "Access badges are a physical control.",
       "D": "A risk assessment evaluates risks; it is not an awareness activity."
     },
-    "tip": null,
+    "tip": "An awareness program: posters and training teach; phishing simulations test and reinforce.",
     "references": [],
     "source": "bank.pdf#p174",
     "needsReview": false,
@@ -2791,7 +2791,7 @@ export const domain5Questions = [
       "B": "A penetration test assesses whether your own systems can be breached. It is depth against one target, not breadth across a supply chain.",
       "C": "SCAP automates configuration and compliance checking against defined benchmarks. It measures system state, not supplier relationships."
     },
-    "tip": null,
+    "tip": "Mapping your suppliers and their suppliers = supply chain illumination.",
     "references": [],
     "source": "bank.pdf#p174",
     "needsReview": false,
@@ -2834,7 +2834,7 @@ export const domain5Questions = [
       "C": "A service-level agreement commits a provider to measurable performance levels. It governs service quality, not disclosure.",
       "D": "A master service agreement establishes the general terms under which future work will be done. Individual engagements are then scoped beneath it."
     },
-    "tip": null,
+    "tip": "Stop confidential matters being discussed outside = NDA.",
     "references": [],
     "source": "bank.pdf#p175",
     "needsReview": false,
@@ -2877,7 +2877,7 @@ export const domain5Questions = [
       "B": "Penetration testing actively attempts to breach a system. The analyst is reviewing documentation, not attacking anything.",
       "C": "Attestation is what the SOC 2 report itself is — an independent auditor's formal opinion. The vendor's auditor performed the attestation; the analyst is consuming it."
     },
-    "tip": null,
+    "tip": "Reviewing a vendor's SOC 2 report before buying = due diligence (third-party risk assessment).",
     "references": [],
     "source": "bank.pdf#p176",
     "needsReview": false,
@@ -2920,7 +2920,7 @@ export const domain5Questions = [
       "B": "An information security policy is the organization-wide statement of security intent. The SDLC sits under it rather than containing it.",
       "C": "Penetration testing methodology defines how assessments are conducted. It is part of the assessment program, and testing may be scheduled against software without living inside the SDLC."
     },
-    "tip": null,
+    "tip": "Code repository rules (branch protection, required reviews) belong in the SDLC.",
     "references": [],
     "source": "bank.pdf#p180",
     "needsReview": false,
@@ -2963,7 +2963,7 @@ export const domain5Questions = [
       "B": "An AUP governs how employees use company systems. It is internal and does not bind a partner organization.",
       "C": "An SOW defines the tasks and deliverables of a specific engagement. It scopes work rather than governing IP rights in a joint venture."
     },
-    "tip": null,
+    "tip": "A formal agreement on how two organizations collaborate and handle shared IP = MOA.",
     "references": [],
     "source": "bank.pdf#p189",
     "needsReview": false,
@@ -3006,7 +3006,7 @@ export const domain5Questions = [
       "C": "Password management would help the user store credentials more safely, but the credentials were stolen by malware after the machine was compromised.",
       "D": "Social engineering training covers manipulation by an attacker. The user was not persuaded into anything; they attached a device."
     },
-    "tip": null,
+    "tip": "Malware from an external drive → removable media training: never plug in unknown devices.",
     "references": [],
     "source": "bank.pdf#p190",
     "needsReview": false,
@@ -3049,7 +3049,7 @@ export const domain5Questions = [
       "B": "ARO is how often a loss is expected per year. It is a frequency input to loss calculation, not an impact assessment.",
       "D": "MTTR is the average time to repair a failed component. It measures repair speed rather than the business effect of the outage."
     },
-    "tip": null,
+    "tip": "Worrying about the business consequences of a failure = business impact analysis (BIA).",
     "references": [],
     "source": "bank.pdf#p190",
     "needsReview": false,
@@ -3092,7 +3092,7 @@ export const domain5Questions = [
       "C": "Rules of understanding is not a standard document either; it echoes memorandum of understanding, which is an agreement between organizations.",
       "D": "Rules of execution is likewise not a recognized penetration testing artifact."
     },
-    "tip": null,
+    "tip": "The procedures and boundaries a pen tester must follow = rules of engagement.",
     "references": [],
     "source": "bank.pdf#p192",
     "needsReview": false,
@@ -3135,7 +3135,7 @@ export const domain5Questions = [
       "B": "Supply chain analysis maps supplier dependencies and their risk. It looks outward at vendors rather than testing your own network.",
       "C": "A vulnerability assessment produces findings, and it may well be the test performed — but self-produced results are not proof to an external party without independent attestation."
     },
-    "tip": null,
+    "tip": "Proof for outsiders that testing was done = third-party attestation.",
     "references": [],
     "source": "bank.pdf#p193",
     "needsReview": false,
@@ -3178,7 +3178,7 @@ export const domain5Questions = [
       "B": "An exception is a documented, usually temporary, deviation from policy. Again the risk is still being carried.",
       "D": "Transfer shifts the financial consequence to someone else, typically through insurance. The company would still be serving that market."
     },
-    "tip": null,
+    "tip": "Stop the risky activity (leave the market) = avoid. Insurance = transfer. Live with it = accept.",
     "references": [],
     "source": "bank.pdf#p195",
     "needsReview": false,
@@ -3221,7 +3221,7 @@ export const domain5Questions = [
       "C": "External compliance reporting is the routine act of demonstrating compliance. It is a normal duty rather than a consequence.",
       "D": "Attestation is a formal statement that requirements are met. Again it is part of demonstrating compliance."
     },
-    "tip": null,
+    "tip": "The most serious consequence of regulatory non-compliance = sanctions (fines, restrictions, loss of license).",
     "references": [],
     "source": "bank.pdf#p197",
     "needsReview": false,
@@ -3264,7 +3264,7 @@ export const domain5Questions = [
       "B": "A change management procedure governs how modifications are approved and applied. It is narrow and aimed at those making changes.",
       "D": "An SDLC policy governs how software is built. It applies to development teams rather than to general operation of systems."
     },
-    "tip": null,
+    "tip": "General expectations for how staff use systems and software = AUP.",
     "references": [],
     "source": "bank.pdf#p198",
     "needsReview": false,
@@ -3307,7 +3307,7 @@ export const domain5Questions = [
       "C": "A vulnerability assessment finds technical weaknesses at a point in time. It is one activity within the program rather than the framework governing it.",
       "D": "A business impact analysis determines how badly the organization is hurt when something fails. It is a product of the program, produced under the policies the auditor should read first."
     },
-    "tip": null,
+    "tip": "Auditing a program starts with its policies and procedures: the standard everything else is measured against.",
     "references": [],
     "source": "bank.pdf#p203",
     "needsReview": false,
@@ -3350,7 +3350,7 @@ export const domain5Questions = [
       "C": "An inventory does not extend retention periods. If anything it exposes data being kept longer than policy allows, shortening retention.",
       "D": "Deduplication is a storage efficiency measure. Automating it is an IT optimization, unrelated to privacy obligations."
     },
-    "tip": null,
+    "tip": "A DPO's data inventory makes breach impact assessable: what personal data is held, where, and how sensitive it is.",
     "references": [],
     "source": "bank.pdf#p206",
     "needsReview": false,
@@ -3393,7 +3393,7 @@ export const domain5Questions = [
       "C": "Government sanctions are restrictions imposed for policy reasons such as trade or foreign relations. The fine here is the consequence, and non-compliance is its cause.",
       "D": "Rules of engagement define the scope and limits of a security test. They have no bearing on regulatory audits."
     },
-    "tip": null,
+    "tip": "Failing required audits → fines for non-compliance.",
     "references": [],
     "source": "bank.pdf#p208",
     "needsReview": false,
@@ -3436,7 +3436,7 @@ export const domain5Questions = [
       "B": "A risk profile summarizes the organization's risk exposure. It informs strategy rather than telling an analyst what to do next.",
       "D": "A SIEM profile is configuration within the tool. It shapes what the SIEM reports but is not reference material for a responder."
     },
-    "tip": null,
+    "tip": "Just-in-time guidance in the SOC = playbooks.",
     "references": [],
     "source": "bank.pdf#p209",
     "needsReview": false,
@@ -3454,7 +3454,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Hire a vendor to perform a penetration test"
+        "text": "Hire a vendor to perform a penetration test."
       },
       {
         "key": "B",
@@ -3462,11 +3462,11 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Allow each client the right to audit"
+        "text": "Allow each client the right to audit."
       },
       {
         "key": "D",
-        "text": "Provide a third-party attestation report"
+        "text": "Provide a third-party attestation report."
       }
     ],
     "correct": [
@@ -3479,7 +3479,7 @@ export const domain5Questions = [
       "B": "A self-assessment is performed by the organization on itself. Customers asked for independence, which a self-assessment cannot provide.",
       "C": "Allowing each client a right to audit gives independence but is the least efficient option possible, multiplying the burden by the number of customers."
     },
-    "tip": null,
+    "tip": "One independent report shared with every customer = third-party attestation (such as a SOC 2 report).",
     "references": [],
     "source": "bank.pdf#p210",
     "needsReview": false,
@@ -3522,7 +3522,7 @@ export const domain5Questions = [
       "B": "Sanctions such as losing the ability to process cards are imposed by the payment industry, again not by customers.",
       "C": "Fines are levied by the card brands through the acquirer. Customers have no mechanism to fine anyone."
     },
-    "tip": null,
+    "tip": "PCI DSS non-compliance: fines come from the card brands, but from customers → reputational damage.",
     "references": [],
     "source": "bank.pdf#p210",
     "needsReview": false,
@@ -3565,7 +3565,7 @@ export const domain5Questions = [
       "C": "Password management covers choosing and storing strong passwords. The password here was changed deliberately by the administrator, not guessed or cracked.",
       "D": "Reviewing email policies documents what is permitted. A policy nobody applies in the moment would not have stopped the administrator acting on the request."
     },
-    "tip": null,
+    "tip": "An admin tricked by a link into changing credentials = phishing → phishing recognition training.",
     "references": [],
     "source": "bank.pdf#p211",
     "needsReview": false,
@@ -3608,7 +3608,7 @@ export const domain5Questions = [
       "C": "A privacy officer oversees the organization's privacy program and compliance. They set direction rather than configuring applications.",
       "D": "The data owner decides what the retention standards should be. The administrator is carrying out that decision, not making it."
     },
-    "tip": null,
+    "tip": "Carries out the owner's rules on the systems (retention, backups, permissions) = custodian.",
     "references": [],
     "source": "bank.pdf#p214",
     "needsReview": false,
@@ -3651,7 +3651,7 @@ export const domain5Questions = [
       "C": "Incident response and disaster recovery plans prepare for failure. They are required, and they come after the data is actually protected.",
       "D": "Purchasing security software is a means rather than a step. Buying tools without deciding what access and encryption are needed is starting at the wrong end."
     },
-    "tip": null,
+    "tip": "First privacy compliance step for data you hold: protect it with access controls and encryption.",
     "references": [],
     "source": "bank.pdf#p215",
     "needsReview": false,
@@ -3694,7 +3694,7 @@ export const domain5Questions = [
       "B": "Penetration testing establishes whether systems can be breached at a point in time. It produces technical findings, not assurance about control design and operation.",
       "D": "A vulnerability assessment enumerates technical weaknesses. It covers a narrow slice of the controls and offers no independent opinion."
     },
-    "tip": null,
+    "tip": "Assurance that controls are designed well and operate effectively = an independent audit (such as SOC 2 Type 2).",
     "references": [],
     "source": "bank.pdf#p217",
     "needsReview": false,
@@ -3737,7 +3737,7 @@ export const domain5Questions = [
       "C": "A EULA sets out the terms under which software may be used. It is between a vendor and a user about the product.",
       "D": "An MOA is a formal statement of intent between organizations. It describes cooperation, not internal conduct."
     },
-    "tip": null,
+    "tip": "Expectations for ethical, acceptable use of company systems = AUP (often alongside a code of conduct).",
     "references": [],
     "source": "bank.pdf#p220",
     "needsReview": false,
@@ -3773,14 +3773,14 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualized rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
+    "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualized rate of occurrence of 2/3 (about 0.67). ALE = $15,000 × 2/3 = $10,000 per year.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
       "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualizing it.",
       "D": "$30,000 is two full losses, which would be the total across the three years rather than the annual figure."
     },
-    "tip": null,
+    "tip": "ALE = SLE × ARO. Twice in three years → ARO = 2/3, so $15,000 × 2/3 = $10,000.",
     "references": [],
     "source": "bank.pdf#p225",
     "needsReview": false,
@@ -3823,7 +3823,7 @@ export const domain5Questions = [
       "C": "Transfer shifts the financial consequence to an insurer or third party. It may be worth doing alongside, but it changes nothing about the system continuing to run unsupported.",
       "D": "Avoid means ceasing the activity that creates the risk. The system must stay online, so avoidance is explicitly ruled out."
     },
-    "tip": null,
+    "tip": "An unsupported system must keep running unchanged → accept the risk, documented, with compensating controls.",
     "references": [],
     "source": "bank.pdf#p225",
     "needsReview": false,
@@ -3866,7 +3866,7 @@ export const domain5Questions = [
       "C": "Segmentation limits how far the ransomware spreads once it runs. That reduces impact, which is valuable, but the infection still occurs.",
       "D": "Reporting suspicious emails is a useful behavior, and it is one outcome of awareness training rather than a separate program. Reporting also happens after recognition, which is the skill being taught."
     },
-    "tip": null,
+    "tip": "Clicked a malicious link in a CEO-impersonation email → security awareness training.",
     "references": [],
     "source": "bank.pdf#p227",
     "needsReview": false,
@@ -3914,7 +3914,7 @@ export const domain5Questions = [
       "C": "Risk tolerance is the acceptable variation around that appetite. Again a risk measure rather than a restoration target.",
       "E": "Mean time between failures predicts how often equipment fails. It measures reliability, not recovery speed."
     },
-    "tip": null,
+    "tip": "How fast systems must be back = RTO. How much data you can afford to lose = RPO.",
     "references": [],
     "source": "bank.pdf#p230",
     "needsReview": false,
@@ -3957,7 +3957,7 @@ export const domain5Questions = [
       "C": "A compliance report demonstrates adherence to a requirement. It shows status, not an ongoing treatment plan.",
       "D": "A penetration test is an activity that produces findings. Those findings then feed the register."
     },
-    "tip": null,
+    "tip": "Track persistent risks with owners and recommendations over time = risk register.",
     "references": [],
     "source": "bank.pdf#p231",
     "needsReview": false,
@@ -4000,7 +4000,7 @@ export const domain5Questions = [
       "C": "Ongoing monitoring strategies describe how the software will be watched after adoption. That is a treatment decided once risks are known.",
       "D": "Network infrastructure compatibility is a technical fit question. It affects whether the software will work, not what risk it carries."
     },
-    "tip": null,
+    "tip": "A risk assessment of new software evaluates its vulnerabilities (and the vendor's patch record).",
     "references": [],
     "source": "bank.pdf#p231",
     "needsReview": false,
@@ -4043,7 +4043,7 @@ export const domain5Questions = [
       "C": "An NDA binds someone not to disclose confidential information. Browsing an unauthorized site discloses nothing.",
       "D": "An MOA is a formal agreement of cooperation between organizations. Again it is external, not an internal conduct rule."
     },
-    "tip": null,
+    "tip": "Visiting unauthorized websites breaks the AUP.",
     "references": [],
     "source": "bank.pdf#p232",
     "needsReview": false,
@@ -4086,7 +4086,7 @@ export const domain5Questions = [
       "B": "An SOW defines the deliverables and scope of a piece of work. Its absence would be a scoping dispute, not a confidentiality breach.",
       "C": "A work order authorizes specific tasks under an existing agreement. Again it concerns what work is done, not how information is protected."
     },
-    "tip": null,
+    "tip": "Outsiders who will see confidential information need a signed NDA first.",
     "references": [],
     "source": "bank.pdf#p235",
     "needsReview": false,
@@ -4129,7 +4129,7 @@ export const domain5Questions = [
       "C": "A weekly statement that no exceptions were noted is more paperwork. It attests to the review rather than improving it.",
       "D": "Masking usernames protects privacy but removes the very detail needed to investigate excessive attempts against a specific account."
     },
-    "tip": null,
+    "tip": "Manual weekly log review → add automated alerting on anomalies.",
     "references": [],
     "source": "bank.pdf#p236",
     "needsReview": false,
@@ -4172,7 +4172,7 @@ export const domain5Questions = [
       "B": "Self-assessment findings are an internal review without a formal signed assertion. The signed letter is what makes this an attestation.",
       "D": "A third-party audit report is produced by an independent auditor who performed the examination. Here the vendor is asserting its own compliance."
     },
-    "tip": null,
+    "tip": "A vendor's signed statement of which objectives it meets = attestation of compliance.",
     "references": [],
     "source": "bank.pdf#p238",
     "needsReview": false,
@@ -4215,7 +4215,7 @@ export const domain5Questions = [
       "C": "The red team attacks, simulating an adversary against systems that already exist.",
       "D": "Green is the pairing of yellow with blue, focused on improving how defenders and builders work together. The question specifies both offensive and defensive with developers, which is yellow."
     },
-    "tip": null,
+    "tip": "Team colors: yellow = builders (developers); orange = yellow + red; green = yellow + blue; purple = red + blue.",
     "references": [],
     "source": "bank.pdf#p240",
     "needsReview": false,
@@ -4258,7 +4258,7 @@ export const domain5Questions = [
       "C": "A vulnerability assessment identifies technical weaknesses in systems. It says little about whether contractual security obligations are being met.",
       "D": "Penetration testing is the most costly and time-consuming option here, and it tests exploitability rather than compliance."
     },
-    "tip": null,
+    "tip": "The fastest, cheapest proof of a supplier's compliance = its existing attestation report (such as SOC 2).",
     "references": [],
     "source": "bank.pdf#p241",
     "needsReview": false,
@@ -4301,7 +4301,7 @@ export const domain5Questions = [
       "C": "Risk treatment decides what to do about each risk — accept, mitigate, transfer or avoid. That comes after assessment.",
       "D": "Risk monitoring and review tracks risks over time and checks that treatments remain effective. It is the ongoing final stage."
     },
-    "tip": null,
+    "tip": "Establish the scope and list what could go wrong = risk identification (then assessment, treatment, monitoring).",
     "references": [],
     "source": "bank.pdf#p242",
     "needsReview": false,
@@ -4344,7 +4344,7 @@ export const domain5Questions = [
       "B": "A BPA sets out how two businesses will operate a partnership. Again it is organization to organization.",
       "D": "An MOA records a formal agreement of cooperation between parties. It establishes intent rather than restricting disclosure."
     },
-    "tip": null,
+    "tip": "An agreement restricting what employees may disclose after they leave = NDA.",
     "references": [],
     "source": "bank.pdf#p243",
     "needsReview": false,
@@ -4387,7 +4387,7 @@ export const domain5Questions = [
       "C": "Collecting evidence of malicious activity is forensic work on your own systems and records.",
       "D": "Producing indicators of compromise means deriving hashes and addresses from observed malware. That is analysis output, not public information gathering."
     },
-    "tip": null,
+    "tip": "Social engineering tests start with OSINT reconnaissance.",
     "references": [],
     "source": "bank.pdf#p244",
     "needsReview": false,
@@ -4430,7 +4430,7 @@ export const domain5Questions = [
       "C": "Avoidance is a treatment — declining the activity altogether. The company has already decided it wants the expansion.",
       "D": "The register is the document where risks are recorded. It stores the decision rather than informing it."
     },
-    "tip": null,
+    "tip": "How much risk the organization will take on to reach a goal = risk appetite.",
     "references": [],
     "source": "bank.pdf#p244",
     "needsReview": false,
@@ -4473,7 +4473,7 @@ export const domain5Questions = [
       "B": "A contract creates obligations between parties. It might require the training, but it does not prove it happened.",
       "C": "Due diligence is the investigation a customer performs before engaging. It is the customer's activity, not the supplier's declaration."
     },
-    "tip": null,
+    "tip": "Formally proving a claim to a customer (such as developers being trained) = attestation.",
     "references": [],
     "source": "bank.pdf#p244",
     "needsReview": false,
@@ -4509,14 +4509,14 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Eighty per cent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behavior that produced the result.",
+    "explanation": "Eighty percent of staff handed over SSO credentials to a site that simply asked for them. That is a recognition failure, and a campaign teaching people to spot phishing — with simulations and feedback — addresses the behavior that produced the result.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Blocking all outbound traffic from the intranet would stop the business functioning. It is disproportionate by an enormous margin.",
       "C": "Restricting internet access for those who fell for it is punitive and treats the symptom in a handful of people while leaving everyone else untrained.",
       "D": "A deny list blocks sites you already know about. The next phishing site will be one nobody has listed yet."
     },
-    "tip": null,
+    "tip": "Most staff gave their credentials to a fake site → run a phishing recognition campaign.",
     "references": [],
     "source": "bank.pdf#p246",
     "needsReview": false,
@@ -4559,7 +4559,7 @@ export const domain5Questions = [
       "C": "Branch protection tests are a concrete repository configuration. They implement the policy rather than being the policy statement.",
       "D": "Secrets management configurations are likewise implementation detail — settings in a tool, not a documented methodology expectation."
     },
-    "tip": null,
+    "tip": "A development methodology policy states requirements like peer review; tools such as branch protection implement it.",
     "references": [],
     "source": "bank.pdf#p246",
     "needsReview": false,
@@ -4602,7 +4602,7 @@ export const domain5Questions = [
       "B": "A policy states the organization's intent and high-level rules. It is deliberately implementation-independent.",
       "C": "A guideline offers recommended practice. It advises rather than prescribing, and is not binding."
     },
-    "tip": null,
+    "tip": "Step-by-step how-to = procedure. Mandatory rule = standard. Intent = policy. Advice = guideline.",
     "references": [],
     "source": "bank.pdf#p247",
     "needsReview": false,
@@ -4632,7 +4632,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Acknowledgement and attestation"
+        "text": "Acknowledgment and attestation"
       }
     ],
     "correct": [
@@ -4645,11 +4645,11 @@ export const domain5Questions = [
       "B": "The right to be forgotten is an individual's privacy right to have their personal data erased. It is unrelated to reporting scope.",
       "C": "Due care and due diligence describe the organization's duty to act responsibly and to investigate risks. They are not a confirmation of scope."
     },
-    "tip": null,
+    "tip": "Formal confirmation that something is out of scope = acknowledgment and attestation.",
     "references": [],
     "source": "bank.pdf#p250",
     "needsReview": false,
-    "inferenceConfidence": 0.641,
+    "inferenceConfidence": 0.632,
     "needsExplanation": false,
     "keyCorrected": true
   },
@@ -4688,7 +4688,7 @@ export const domain5Questions = [
       "B": "Supply chain analysis maps supplier dependencies and their risks. It examines security exposure rather than personal interests.",
       "C": "A right-to-audit clause lets a customer inspect a vendor's controls. It governs oversight after the contract exists."
     },
-    "tip": null,
+    "tip": "Hiring a relative's company = conflict of interest (disclose and step aside).",
     "references": [],
     "source": "bank.pdf#p252",
     "needsReview": false,
@@ -4731,7 +4731,7 @@ export const domain5Questions = [
       "B": "Onboarding and offboarding procedures are operational processes. They are governed by the program rather than defining it.",
       "D": "Change management procedures are one control area among many. Important, but narrower than establishing accountability across the whole program."
     },
-    "tip": null,
+    "tip": "Effective governance starts with assigning roles and accountability: owners, controllers, custodians.",
     "references": [],
     "source": "bank.pdf#p252",
     "needsReview": false,
@@ -4774,7 +4774,7 @@ export const domain5Questions = [
       "C": "An MOU is a non-binding statement of intent. It cannot govern commercial engagements.",
       "D": "An SLA defines measurable service levels for a particular service. It is specific rather than general, and typically sits beneath an MSA."
     },
-    "tip": null,
+    "tip": "General terms for repeat engagements, revisited periodically = MSA; each job then gets its own SOW.",
     "references": [],
     "source": "bank.pdf#p254",
     "needsReview": false,
@@ -4792,7 +4792,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Refrain from clicking on images included in emails from new vendors"
+        "text": "Refrain from clicking on images included in emails from new vendors."
       },
       {
         "key": "B",
@@ -4800,11 +4800,11 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Require that invoices be sent as attachments"
+        "text": "Require that invoices be sent as attachments."
       },
       {
         "key": "D",
-        "text": "Be alert to unexpected requests from familiar email addresses"
+        "text": "Be alert to unexpected requests from familiar email addresses."
       }
     ],
     "correct": [
@@ -4817,7 +4817,7 @@ export const domain5Questions = [
       "B": "Deleting emails from unknown partners again filters on familiarity, which is the wrong signal.",
       "C": "Requiring invoices as attachments changes the format, not the legitimacy. A compromised account can attach a fraudulent invoice just as easily."
     },
-    "tip": null,
+    "tip": "Compromised vendor email → watch for unexpected requests (new bank details, urgent payments) from familiar addresses.",
     "references": [],
     "source": "bank.pdf#p254",
     "needsReview": false,
@@ -4860,7 +4860,7 @@ export const domain5Questions = [
       "C": "Hiring more help desk staff absorbs the workload without addressing why it exists.",
       "D": "An incident reporting web page changes how reports arrive. The reports would still be wrong, just better routed."
     },
-    "tip": null,
+    "tip": "Too many false-positive phishing reports → better awareness training that teaches the real indicators, not more simulations.",
     "references": [],
     "source": "bank.pdf#p255",
     "needsReview": false,
@@ -4903,7 +4903,7 @@ export const domain5Questions = [
       "C": "A simulated phishing campaign measures susceptibility. That test has effectively already been run — the result is fifty clicks, and now they need teaching.",
       "D": "Insider threat awareness covers recognizing malicious colleagues. These employees were careless, not malicious."
     },
-    "tip": null,
+    "tip": "Many employees clicked a link without thinking → social engineering training.",
     "references": [],
     "source": "bank.pdf#p256",
     "needsReview": false,
@@ -4946,7 +4946,7 @@ export const domain5Questions = [
       "C": "DLP is a technical control for data leaving systems; this leak happened by someone reading a screen.",
       "D": "No one was manipulated, so this was not social engineering."
     },
-    "tip": null,
+    "tip": "Leaving a screen readable at home = an OPSEC failure: lock screens and watch who can see.",
     "references": [],
     "source": "bank.pdf#p258",
     "needsReview": false,
@@ -4989,7 +4989,7 @@ export const domain5Questions = [
       "C": "Endpoint protection can block some malware, but it does not address the behavior that let it in, and new malware can evade it.",
       "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
     },
-    "tip": null,
+    "tip": "The breach started with a click → user awareness training addresses the root cause.",
     "references": [],
     "source": "bank.pdf#p259",
     "needsReview": false,
@@ -5032,7 +5032,7 @@ export const domain5Questions = [
       "B": "Quarterly newsletters are an awareness tactic. They reinforce a message once the message is defined.",
       "C": "Phishing campaigns test susceptibility. Testing people against undocumented expectations is unfair and yields little."
     },
-    "tip": null,
+    "tip": "Building a security program: first update policies and handbooks so the expectations are written down.",
     "references": [],
     "source": "bank.pdf#p259",
     "needsReview": false,
@@ -5068,14 +5068,14 @@ export const domain5Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The right to be forgotten requires the organization to erase all of the individual's personal data it holds on request.",
+    "explanation": "The right to be forgotten requires the organization to erase all of the individual's personal data it holds on request. That includes copies in other systems and, where feasible, backups, unless a legal obligation requires some records to be kept.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Purging only identifying attributes may leave personal data behind; the request covers all of the person's data.",
       "B": "Encrypted data still exists.",
       "D": "Obfuscated data still exists and may be reversible."
     },
-    "tip": null,
+    "tip": "Right to be forgotten = erase all of the person's data. Encrypted or obfuscated data still exists.",
     "references": [],
     "source": "bank.pdf#p260",
     "needsReview": false,
@@ -5123,7 +5123,7 @@ export const domain5Questions = [
       "D": "Contractual impact refers to consequences arising under an agreement. No contract term has been breached by the relationship itself.",
       "E": "Reputational damage is a possible consequence if this becomes public. It is an outcome, not the situation being described."
     },
-    "tip": null,
+    "tip": "A personal relationship influencing a purchase approval = conflict of interest.",
     "references": [],
     "source": "bank.pdf#p262",
     "needsReview": false,
@@ -5166,7 +5166,7 @@ export const domain5Questions = [
       "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
       "C": "An NDA restricts disclosure of confidential information."
     },
-    "tip": null,
+    "tip": "Response time, escalation and performance metrics = SLA.",
     "references": [],
     "source": "bank.pdf#p263",
     "needsReview": false,
@@ -5209,7 +5209,7 @@ export const domain5Questions = [
       "C": "Phishing training addresses fraudulent messages. These are physical access failures.",
       "D": "The acceptable use policy governs how systems are used. It is a document rather than the awareness topic that changes this behavior."
     },
-    "tip": null,
+    "tip": "Unbadged staff and tailgating → situational awareness training.",
     "references": [],
     "source": "bank.pdf#p265",
     "needsReview": false,
@@ -5252,7 +5252,7 @@ export const domain5Questions = [
       "C": "User-driven is not a recognized risk analysis method.",
       "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
     },
-    "tip": null,
+    "tip": "Exposure factor, SLE and ALE = quantitative risk analysis.",
     "references": [],
     "source": "bank.pdf#p270",
     "needsReview": false,
@@ -5295,7 +5295,7 @@ export const domain5Questions = [
       "B": "An SLA commits a provider to measurable service levels. It concerns performance.",
       "C": "An MSA sets the general commercial terms for ongoing work. Confidentiality is usually a clause within or alongside it rather than its purpose."
     },
-    "tip": null,
+    "tip": "Keep proprietary information from outsiders = NDA.",
     "references": [],
     "source": "bank.pdf#p274",
     "needsReview": false,
@@ -5338,7 +5338,7 @@ export const domain5Questions = [
       "B": "A memorandum of agreement records cooperation between parties. It is typically non-binding and confers no audit rights.",
       "D": "Supply chain analysis maps supplier dependencies and risk. It is an activity the customer performs, not a contractual entitlement."
     },
-    "tip": null,
+    "tip": "The contract term that lets you inspect a vendor's controls = right-to-audit clause.",
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,
@@ -5381,7 +5381,7 @@ export const domain5Questions = [
       "B": "A memorandum of agreement records cooperation between parties. It is typically non-binding and confers no audit rights.",
       "D": "Supply chain analysis maps supplier dependencies and risk. It is an activity the customer performs, not a contractual entitlement."
     },
-    "tip": null,
+    "tip": "Right-to-audit clause = the contractual right to review a provider's controls and performance.",
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,

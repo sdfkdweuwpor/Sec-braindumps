@@ -321,6 +321,10 @@ def apply_text_fixes(rec):
     rec["question"] = re.sub(r"(\w)- (\w)", r"\1-\2", rec["question"])
     for c in rec["choices"]:
         c["text"] = re.sub(r"(\w)- (\w)", r"\1-\2", c["text"])
+    # One wording for multiple-answer prompts, the way CompTIA writes it.
+    rec["question"] = re.sub(
+        r"\((?:Choose|Select) (two|three|four)\)\.?|\((?:Choose|Select) (two|three|four)\.\)",
+        lambda m: f"(Choose {m.group(1) or m.group(2)}.)", rec["question"])
     if re.search(r"^- ", rec["question"], re.M):
         rec["question"] = re.sub(r"(\n- [^\n]*?[a-z0-9)]) (Which of the following)", r"\1\n\2", rec["question"])
     seen, kept = set(), []
