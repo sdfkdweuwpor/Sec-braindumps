@@ -71,6 +71,29 @@ function note(c, { freq, at = 0, dur = 0.3, type = 'sine', gain = 0.14, glide = 
   }
 }
 
+/** A burst of filtered noise that sweeps upward: the rush of a flame catching. */
+function whoosh(c, { at = 0, dur = 0.6, from = 400, to = 3200, gain = 0.3 } = {}) {
+  const t0 = c.currentTime + 0.01 + at;
+  const len = Math.ceil(c.sampleRate * dur);
+  const buf = c.createBuffer(1, len, c.sampleRate);
+  const data = buf.getChannelData(0);
+  for (let i = 0; i < len; i += 1) data[i] = Math.random() * 2 - 1;
+  const src = c.createBufferSource();
+  src.buffer = buf;
+  const bp = c.createBiquadFilter();
+  bp.type = 'bandpass';
+  bp.Q.value = 0.9;
+  bp.frequency.setValueAtTime(from, t0);
+  bp.frequency.exponentialRampToValueAtTime(to, t0 + dur * 0.8);
+  const env = c.createGain();
+  env.gain.setValueAtTime(0.0001, t0);
+  env.gain.exponentialRampToValueAtTime(gain, t0 + dur * 0.35);
+  env.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  src.connect(bp).connect(env).connect(out);
+  src.start(t0);
+  src.stop(t0 + dur + 0.05);
+}
+
 // Note frequencies (Hz).
 const C5 = 523.25, E5 = 659.25, G5 = 783.99, A5 = 880,
   C6 = 1046.5, E6 = 1318.5, G6 = 1568, C7 = 2093;
@@ -106,6 +129,27 @@ const EFFECTS = {
   // Quiz done, below the line: a calm, neutral chord.
   done: (c) => {
     [C5, G5].forEach((f) => note(c, { freq: f, dur: 0.75, gain: 0.2 }));
+  },
+  // The streak catches fire (10 in a row) and flares red (15).
+  ignite: (c) => {
+    whoosh(c, { dur: 0.6, gain: 0.32 });
+    [C6, E6, G6, C7].forEach((f, i) => note(c, { freq: f, at: 0.12 + i * 0.06, dur: 0.42, gain: 0.2 }));
+  },
+  // 25 in a row: the flame turns blue. Brighter, with a higher sparkle.
+  blueFire: (c) => {
+    whoosh(c, { dur: 0.75, from: 700, to: 5200, gain: 0.34 });
+    [E6, G6 * 1.0595, 1975.5, E6 * 2].forEach((f, i) => note(c, { freq: f, at: 0.14 + i * 0.065, dur: 0.5, gain: 0.2 }));
+    [0, 0.08, 0.16, 0.24].forEach((d) => note(c, { freq: 3951, at: 0.45 + d, dur: 0.16, gain: 0.05, partial: 0 }));
+  },
+  // A glow starts (5 in a row): a soft rising shimmer.
+  glow: (c) => {
+    whoosh(c, { dur: 0.4, from: 900, to: 2600, gain: 0.14 });
+    [G5, C6, E6].forEach((f, i) => note(c, { freq: f, at: 0.05 + i * 0.07, dur: 0.36, gain: 0.2 }));
+  },
+  // A milestone banner.
+  milestone: (c) => {
+    [C5, E5, G5, C6].forEach((f, i) => note(c, { freq: f, at: i * 0.09, dur: 0.3, gain: 0.22 }));
+    [C6, E6, G6].forEach((f) => note(c, { freq: f, at: 0.38, dur: 1.1, gain: 0.13 }));
   },
   flag: (c) => note(c, { freq: A5, dur: 0.14, type: 'triangle', gain: 0.18, glide: 1.5, partial: 0 }),
   // Sounds switched back on.

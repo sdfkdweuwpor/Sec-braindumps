@@ -32,6 +32,16 @@ name is deliberately random so the URL does not name the vendor.
   back to 1 day, and answering before a check is due changes nothing. The
   schedule is rebuilt from the answer history (`js/srs.js`), so nothing
   extra is stored and it applies to history from before the feature.
+- **Exhibits restored.** 26 questions whose logs, tables, code or command
+  output the PDF printed as pictures now carry that content as text,
+  transcribed from the page images (`EXHIBITS` in `tools/corrections.py`).
+  They render as a code box or a table.
+- **Acronyms.** Spelled-out terms in questions and choices are written as the
+  exam writes them (Full disk encryption -> FDE), from the list in
+  `tools/acronyms.py`. *Show acronyms* under a question (or the A key) lists
+  what each one stands for.
+- **Streak flame.** Glows at 5 in a row, catches fire at 10, burns brighter
+  red at 15, shifts toward blue from 16 and turns blue at 25 (`js/flame.js`).
 - **Search.** A box on the Study screen and a Search page (`js/search.js`):
   every word must appear in the question, its answers, its explanations or
   its objective; short words such as WAF or IP match whole words only; a
@@ -105,6 +115,10 @@ js/quizEngine.js        pool filtering, selection, scoring
 js/stats.js             derived analytics and the readiness formula
 js/srs.js               Smart review schedule, worked out from the answer history
 js/search.js            question search and match highlighting patterns
+js/acronyms.js          acronym lookup and the Show acronyms tooltips
+js/flame.js             streak flame stages and effects
+js/milestones.js        milestone banners (questions answered, readiness bands)
+data/acronyms.js        acronym dictionary (generated from tools/acronyms.py)
 js/smartReview.js       Smart review card and session start
 js/sound.js             synthesised sound effects
 js/motion.js            animation helpers (Web Animations API)
@@ -129,7 +143,7 @@ tests/                  node --test suites
 npm test          # or: node --test
 ```
 
-90 tests covering pool filtering, the Smart review schedule, search, count clamping, no-duplicates-within-a-quiz,
+93 tests covering pool filtering, the Smart review schedule, search, count clamping, no-duplicates-within-a-quiz,
 all-or-nothing multi-answer scoring, the readiness maths, the localStorage
 migration path, storage-failure fallback, refusing another app's progress
 file, and the integrity of the shipped bank. The five bank tests are skipped

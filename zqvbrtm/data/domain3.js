@@ -480,7 +480,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A small business uses kiosks on the sales floor to display product information for customers. A security team discovers the kiosks use end-of-life operating systems. Which of the following is the security team most likely to document as a security implication of the current architecture?",
+    "question": "A small business uses kiosks on the sales floor to display product information for customers. A security team discovers the kiosks use end-of-life OSs. Which of the following is the security team most likely to document as a security implication of the current architecture?",
     "choices": [
       {
         "key": "A",
@@ -830,19 +830,19 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Software as a service"
+        "text": "SaaS"
       },
       {
         "key": "B",
-        "text": "Infrastructure as code"
+        "text": "IaC"
       },
       {
         "key": "C",
-        "text": "Internet of Things"
+        "text": "IoT"
       },
       {
         "key": "D",
-        "text": "Software-defined networking"
+        "text": "SDN"
       }
     ],
     "correct": [
@@ -858,7 +858,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p55",
     "needsReview": false,
-    "inferenceConfidence": 0.95,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1094,7 +1094,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Utilizing single sign-on"
+        "text": "Utilizing SSO"
       }
     ],
     "correct": [
@@ -1110,7 +1110,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p70",
     "needsReview": false,
-    "inferenceConfidence": 0.571,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1338,15 +1338,15 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
-        "text": "Transport layer security"
+        "text": "TLS"
       },
       {
         "key": "D",
-        "text": "Virtual private network"
+        "text": "VPN"
       }
     ],
     "correct": [
@@ -1362,7 +1362,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p89",
     "needsReview": false,
-    "inferenceConfidence": 0.871,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1502,19 +1502,19 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Recovery point objective"
+        "text": "RPO"
       },
       {
         "key": "B",
-        "text": "Mean time between failures"
+        "text": "MTBF"
       },
       {
         "key": "C",
-        "text": "Recovery time objective"
+        "text": "RTO"
       },
       {
         "key": "D",
-        "text": "Mean time to repair"
+        "text": "MTTR"
       }
     ],
     "correct": [
@@ -1530,7 +1530,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p94",
     "needsReview": false,
-    "inferenceConfidence": 0.943,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1792,7 +1792,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A company that is located in an area prone to hurricanes is developing a disaster recovery plan and looking at site considerations that allow the company to immediately continue operations.\nWhich of the following is the best type of site for this company?",
+    "question": "A company that is located in an area prone to hurricanes is developing a DRP and looking at site considerations that allow the company to immediately continue operations.\nWhich of the following is the best type of site for this company?",
     "choices": [
       {
         "key": "A",
@@ -1824,7 +1824,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p106",
     "needsReview": false,
-    "inferenceConfidence": 0.6,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1834,7 +1834,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company tested and validated the effectiveness of network security appliances within the corporate network. The IDS detected a high rate of SQL injection attacks against the company's servers, and the company's perimeter firewall is at capacity. Which of the following would be the best action to maintain security and reduce the traffic to the perimeter firewall?",
+    "question": "A company tested and validated the effectiveness of network security appliances within the corporate network. The IDS detected a high rate of SQLi attacks against the company's servers, and the company's perimeter firewall is at capacity. Which of the following would be the best action to maintain security and reduce the traffic to the perimeter firewall?",
     "choices": [
       {
         "key": "A",
@@ -1866,7 +1866,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p106",
     "needsReview": false,
-    "inferenceConfidence": 0.267,
+    "inferenceConfidence": 0.375,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1876,7 +1876,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A company is decommissioning its physical servers and replacing them with an architecture that will reduce the number of individual operating systems. Which of the following strategies should the company use to achieve this security requirement?",
+    "question": "A company is decommissioning its physical servers and replacing them with an architecture that will reduce the number of individual OSs. Which of the following strategies should the company use to achieve this security requirement?",
     "choices": [
       {
         "key": "A",
@@ -1892,7 +1892,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Infrastructure as code"
+        "text": "IaC"
       }
     ],
     "correct": [
@@ -1908,7 +1908,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p108",
     "needsReview": false,
-    "inferenceConfidence": 0.812,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1934,7 +1934,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Virtual machines"
+        "text": "VMs"
       }
     ],
     "correct": [
@@ -1968,7 +1968,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Incident response plan"
+        "text": "IRP"
       },
       {
         "key": "C",
@@ -1976,7 +1976,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Disaster recovery plan"
+        "text": "DRP"
       }
     ],
     "correct": [
@@ -1992,7 +1992,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p111",
     "needsReview": false,
-    "inferenceConfidence": 0.511,
+    "inferenceConfidence": 0.636,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2006,7 +2006,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Pass"
+        "text": "PaaS"
       },
       {
         "key": "B",
@@ -2133,7 +2133,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A systems administrator wants to implement a backup solution. The solution needs to allow recovery of the entire system, including the operating system, in case of a disaster. Which of the following backup types should the administrator consider?",
+    "question": "A systems administrator wants to implement a backup solution. The solution needs to allow recovery of the entire system, including the OS, in case of a disaster. Which of the following backup types should the administrator consider?",
     "choices": [
       {
         "key": "A",
@@ -2175,7 +2175,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "The Chief Information Security Officer wants to put security measures in place to protect PII. The organization needs to use its existing labeling and classification system to accomplish this goal.\nWhich of the following would most likely be configured to meet the requirements?",
+    "question": "The CISO wants to put security measures in place to protect PII. The organization needs to use its existing labeling and classification system to accomplish this goal.\nWhich of the following would most likely be configured to meet the requirements?",
     "choices": [
       {
         "key": "A",
@@ -2217,7 +2217,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) asks a security analyst to install an OS update to a production VM that has a 99% uptime SLA. The CISO tells the analyst the installation must be done as quickly as possible. Which of the following courses of action should the security analyst take first?",
+    "question": "The CISO asks a security analyst to install an OS update to a production VM that has a 99% uptime SLA. The CISO tells the analyst the installation must be done as quickly as possible. Which of the following courses of action should the security analyst take first?",
     "choices": [
       {
         "key": "A",
@@ -2259,7 +2259,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "While considering the organization's cloud-adoption strategy, the Chief Information Security Officer sets a goal to outsource patching of firmware, operating systems, and applications to the chosen cloud vendor. Which of the following best meets this goal?",
+    "question": "While considering the organization's cloud-adoption strategy, the CISO sets a goal to outsource patching of firmware, OSs, and applications to the chosen cloud vendor. Which of the following best meets this goal?",
     "choices": [
       {
         "key": "A",
@@ -2283,7 +2283,7 @@ export const domain3Questions = [
       },
       {
         "key": "F",
-        "text": "laaS"
+        "text": "IaaS"
       }
     ],
     "correct": [
@@ -2301,7 +2301,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p119",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.765,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2395,11 +2395,11 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security engineer is working to address the growing risks that shadow IT services are introducing to the organization. The organization has taken a cloud-first approach and does not have an on- premises IT infrastructure. Which of the following would best secure the organization?",
+    "question": "A security engineer is working to address the growing risks that shadow IT services are introducing to the organization. The organization has taken a cloud-first approach and does not have an on-premises IT infrastructure. Which of the following would best secure the organization?",
     "choices": [
       {
         "key": "A",
-        "text": "Upgrading to a next-generation firewall"
+        "text": "Upgrading to an NGFW"
       },
       {
         "key": "B",
@@ -2427,7 +2427,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p124",
     "needsReview": false,
-    "inferenceConfidence": 0.357,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2437,7 +2437,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "multi",
-    "question": "A vendor needs to remotely and securely transfer files from one server to another using the command line. Which of the following protocols should be Implemented to allow for this type of access? (Select two).",
+    "question": "A vendor needs to remotely and securely transfer files from one server to another using the command line. Which of the following protocols should be implemented to allow for this type of access? (Select two).",
     "choices": [
       {
         "key": "A",
@@ -2489,7 +2489,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "An external vendor recently visited a company's headquarters for a presentation. Following the visit a member of the hosting team found a file that the external vendor left behind on a server.\nThe file contained detailed architecture information and code snippets. Which of the following data types best describes this file?",
+    "question": "An external vendor recently visited a company's headquarters for a presentation. Following the visit, a member of the hosting team found a file that the external vendor left behind on a server.\nThe file contained detailed architecture information and code snippets. Which of the following data types best describes this file?",
     "choices": [
       {
         "key": "A",
@@ -2531,7 +2531,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The Chief Information Security Officer of an organization needs to ensure recovery from ransomware would likely occur within the organization's agreed-upon RPOs and RTOs. Which of the following backup scenarios would best ensure recovery?",
+    "question": "The CISO of an organization needs to ensure recovery from ransomware would likely occur within the organization's agreed-upon RPOs and RTOs. Which of the following backup scenarios would best ensure recovery?",
     "choices": [
       {
         "key": "A",
@@ -2581,7 +2581,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Virtual private cloud end point"
+        "text": "VPC end point"
       },
       {
         "key": "C",
@@ -2589,7 +2589,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Next-generation firewall"
+        "text": "NGFW"
       }
     ],
     "correct": [
@@ -2605,7 +2605,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p130",
     "needsReview": false,
-    "inferenceConfidence": 0.556,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2615,7 +2615,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A systems administrator is redesigning how devices will perform network authentication. The following requirements need to be met:\n- An existing internal certificate must be used.\n- Wired and wireless networks must be supported\n- Any unapproved device should be isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources Which of the following would best meet the requirements?",
+    "question": "A systems administrator is redesigning how devices will perform network authentication. The following requirements need to be met:\n- An existing internal certificate must be used.\n- Wired and wireless networks must be supported\n- Any unapproved device should be isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources\nWhich of the following would best meet the requirements?",
     "choices": [
       {
         "key": "A",
@@ -2791,15 +2791,15 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
-        "text": "Transport layer security"
+        "text": "TLS"
       },
       {
         "key": "D",
-        "text": "Virtual private network"
+        "text": "VPN"
       }
     ],
     "correct": [
@@ -2815,7 +2815,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p141",
     "needsReview": false,
-    "inferenceConfidence": 0.871,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3009,7 +3009,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Single sign-on"
+        "text": "SSO"
       }
     ],
     "correct": [
@@ -3025,7 +3025,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p150",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3077,7 +3077,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The executive management team is mandating the company develop a disaster recovery plan.\nThe cost must be kept to a minimum, and the money to fund additional internet connections is not available. Which of the following would be the best option?",
+    "question": "The executive management team is mandating the company develop a DRP.\nThe cost must be kept to a minimum, and the money to fund additional internet connections is not available. Which of the following would be the best option?",
     "choices": [
       {
         "key": "A",
@@ -3109,7 +3109,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p152",
     "needsReview": false,
-    "inferenceConfidence": 0.621,
+    "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3161,7 +3161,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A utility company is designing a new platform that will host all the virtual machines used by business applications. The requirements include:\n- A starting baseline of 50% memory utilization\n- Storage scalability\n- Single circuit failure resilience Which of the following best meets all of these requirements?",
+    "question": "A utility company is designing a new platform that will host all the VMs used by business applications. The requirements include:\n- A starting baseline of 50% memory utilization\n- Storage scalability\n- Single circuit failure resilience\nWhich of the following best meets all of these requirements?",
     "choices": [
       {
         "key": "A",
@@ -3392,7 +3392,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Virtual machines"
+        "text": "VMs"
       }
     ],
     "correct": [
@@ -3472,7 +3472,7 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Certificate revocation list"
+        "text": "CRL"
       },
       {
         "key": "D",
@@ -3502,7 +3502,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p172",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3512,7 +3512,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A systems administrator would like to create a point-in-time backup of a virtual machine. Which of the following should the administrator use?",
+    "question": "A systems administrator would like to create a point-in-time backup of a VM. Which of the following should the administrator use?",
     "choices": [
       {
         "key": "A",
@@ -3768,7 +3768,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Statement of work"
+        "text": "SOW"
       },
       {
         "key": "B",
@@ -3776,11 +3776,11 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "D",
-        "text": "Master service agreement"
+        "text": "MSA"
       }
     ],
     "correct": [
@@ -3796,7 +3796,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p186",
     "needsReview": false,
-    "inferenceConfidence": 0.957,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4152,7 +4152,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization is looking to optimize its environment and reduce the number of patches necessary for operating systems. Which of the following will best help to achieve this objective?",
+    "question": "An organization is looking to optimize its environment and reduce the number of patches necessary for OSs. Which of the following will best help to achieve this objective?",
     "choices": [
       {
         "key": "A",
@@ -4164,7 +4164,7 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Real-time operating system"
+        "text": "RTOS"
       },
       {
         "key": "D",
@@ -4184,7 +4184,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p205",
     "needsReview": false,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4244,7 +4244,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Uninterruptible power supply"
+        "text": "UPS"
       },
       {
         "key": "C",
@@ -4268,7 +4268,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p207",
     "needsReview": false,
-    "inferenceConfidence": 0.938,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4894,7 +4894,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Transport Layer Security"
+        "text": "TLS"
       },
       {
         "key": "C",
@@ -4918,7 +4918,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p228",
     "needsReview": false,
-    "inferenceConfidence": 0.68,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5066,11 +5066,11 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Intrusion prevention systems"
+        "text": "IPSs"
       },
       {
         "key": "D",
-        "text": "Network access control"
+        "text": "NAC"
       },
       {
         "key": "E",
@@ -5091,7 +5091,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p236",
     "needsReview": false,
-    "inferenceConfidence": 0.29,
+    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5159,7 +5159,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Full disk encryption"
+        "text": "FDE"
       }
     ],
     "correct": [
@@ -5175,7 +5175,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p237",
     "needsReview": false,
-    "inferenceConfidence": 0.346,
+    "inferenceConfidence": 0.409,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5353,11 +5353,11 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) wants to:\n- Prevent employees from downloading malicious content.\n- Establish controls based on departments and users.\n- Map internet access for business applications to specific service accounts.\n- Restrict content based on categorization.\nWhich of the following should the CSO implement?",
+    "question": "A CISO wants to:\n- Prevent employees from downloading malicious content.\n- Establish controls based on departments and users.\n- Map internet access for business applications to specific service accounts.\n- Restrict content based on categorization.\nWhich of the following should the CSO implement?",
     "choices": [
       {
         "key": "A",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "B",
@@ -5369,7 +5369,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Next-generation firewall"
+        "text": "NGFW"
       }
     ],
     "correct": [
@@ -5647,7 +5647,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "The Chief Information Security Officer wants to discuss options for a disaster recovery site that allows the business to resume operations as quickly as possible. Which of the following solutions meets this requirement?",
+    "question": "The CISO wants to discuss options for a disaster recovery site that allows the business to resume operations as quickly as possible. Which of the following solutions meets this requirement?",
     "choices": [
       {
         "key": "A",
@@ -5815,7 +5815,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "Which of the following makes Infrastructure as Code (IaC) a preferred security architecture over traditional infrastructure models?",
+    "question": "Which of the following makes IaC a preferred security architecture over traditional infrastructure models?",
     "choices": [
       {
         "key": "A",
@@ -5847,7 +5847,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p264",
     "needsReview": false,
-    "inferenceConfidence": 0.9,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5865,7 +5865,7 @@ export const domain3Questions = [
       },
       {
         "key": "B",
-        "text": "Virtual private networks"
+        "text": "VPNs"
       },
       {
         "key": "C",
@@ -5873,7 +5873,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Intrusion detection systems"
+        "text": "IDSs"
       }
     ],
     "correct": [
@@ -5889,7 +5889,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p266",
     "needsReview": false,
-    "inferenceConfidence": 0.857,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6214,7 +6214,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Virtual private network"
+        "text": "VPN"
       },
       {
         "key": "E",
@@ -6240,7 +6240,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p281",
     "needsReview": false,
-    "inferenceConfidence": 0.391,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": true
   },
@@ -6304,7 +6304,7 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Virtual private networks"
+        "text": "VPNs"
       },
       {
         "key": "D",
@@ -6324,7 +6324,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p283",
     "needsReview": false,
-    "inferenceConfidence": 0.955,
+    "inferenceConfidence": 0.929,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6728,7 +6728,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Uninterruptable power supply"
+        "text": "UPS"
       }
     ],
     "correct": [
@@ -6744,7 +6744,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p298",
     "needsReview": false,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7006,7 +7006,7 @@ export const domain3Questions = [
     "objective": "3.4",
     "objectiveTitle": "Explain the importance of resilience and recovery in security architecture",
     "type": "single",
-    "question": "A company wants to update its disaster recovery plan to include a dedicated location for immediate continued operations if a catastrophic event occurs. Which of the following options is best to include in the disaster recovery plan?",
+    "question": "A company wants to update its DRP to include a dedicated location for immediate continued operations if a catastrophic event occurs. Which of the following options is best to include in the DRP?",
     "choices": [
       {
         "key": "A",
@@ -7038,7 +7038,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p312",
     "needsReview": false,
-    "inferenceConfidence": 0.607,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7048,7 +7048,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A company executive connects to various networks, such as hotel guest Wi-Fi. while traveling. A security analyst needs to provide a solution that will allow the executive to securely access the corporate internal resources. Which of the following would best meet this requirement?",
+    "question": "A company executive connects to various networks, such as hotel guest Wi-Fi, while traveling. A security analyst needs to provide a solution that will allow the executive to securely access the corporate internal resources. Which of the following would best meet this requirement?",
     "choices": [
       {
         "key": "A",
@@ -7524,7 +7524,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "B",
@@ -7532,7 +7532,7 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Intrusion prevention system"
+        "text": "IPS"
       },
       {
         "key": "D",
@@ -7552,7 +7552,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p331",
     "needsReview": false,
-    "inferenceConfidence": 0.733,
+    "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8070,11 +8070,11 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Next-generation firewalls"
+        "text": "NGFWs"
       },
       {
         "key": "B",
-        "text": "Software-defined networking"
+        "text": "SDN"
       },
       {
         "key": "C",
@@ -8098,7 +8098,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p350",
     "needsReview": false,
-    "inferenceConfidence": 0.562,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8112,7 +8112,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "B",
@@ -8120,11 +8120,11 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Memorandum of understanding"
+        "text": "MOU"
       },
       {
         "key": "D",
-        "text": "Non-disclosure agreement"
+        "text": "NDA"
       }
     ],
     "correct": [
@@ -8580,7 +8580,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "A Chief Information Officer wants to ensure that network devices cannot connect to the public internet and the local network to directly perform firmware updates. The IT team must manually perform the update process by using a portable device. Which of the following architecture types best fits this description?",
+    "question": "A CIO wants to ensure that network devices cannot connect to the public internet and the local network to directly perform firmware updates. The IT team must manually perform the update process by using a portable device. Which of the following architecture types best fits this description?",
     "choices": [
       {
         "key": "A",
@@ -8592,7 +8592,7 @@ export const domain3Questions = [
       },
       {
         "key": "C",
-        "text": "Software-defined networking"
+        "text": "SDN"
       },
       {
         "key": "D",
@@ -8612,7 +8612,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p378",
     "needsReview": false,
-    "inferenceConfidence": 0.778,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8669,7 +8669,7 @@ export const domain3Questions = [
     "objective": "3.3",
     "objectiveTitle": "Compare and contrast concepts and strategies to protect data",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) requires that new servers include hardware-level memory encryption. Which of the following data states does the CISO want to protect?",
+    "question": "The CISO requires that new servers include hardware-level memory encryption. Which of the following data states does the CISO want to protect?",
     "choices": [
       {
         "key": "A",
@@ -8883,7 +8883,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Data loss prevention labeling"
+        "text": "DLP labeling"
       },
       {
         "key": "B",
@@ -8921,7 +8921,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p388",
     "needsReview": false,
-    "inferenceConfidence": 0.481,
+    "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8935,7 +8935,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Software-defined networking"
+        "text": "SDN"
       },
       {
         "key": "B",
@@ -8963,7 +8963,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p391",
     "needsReview": false,
-    "inferenceConfidence": 0.455,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9155,7 +9155,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Infrastructure as code"
+        "text": "IaC"
       },
       {
         "key": "B",
@@ -9183,7 +9183,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p402",
     "needsReview": false,
-    "inferenceConfidence": 0.889,
+    "inferenceConfidence": 0.778,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9617,7 +9617,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Uninterruptible power supply"
+        "text": "UPS"
       },
       {
         "key": "B",
@@ -9655,7 +9655,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A security analyst reviews firewall configurations and finds that firewalls are configured to fail- open mode in the event of a crash. Which of the following describes the security risk associated with this configuration?",
+    "question": "A security analyst reviews firewall configurations and finds that firewalls are configured to fail-open mode in the event of a crash. Which of the following describes the security risk associated with this configuration?",
     "choices": [
       {
         "key": "A",
@@ -9687,7 +9687,7 @@ export const domain3Questions = [
     "references": [],
     "source": "bank.pdf#p424",
     "needsReview": false,
-    "inferenceConfidence": 0.667,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10075,7 +10075,7 @@ export const domain3Questions = [
     "objective": "3.1",
     "objectiveTitle": "Compare and contrast security implications of different architecture models",
     "type": "single",
-    "question": "An organization plans to set up a new security operations center (SOC) environment and wants to mitigate vendor lock-in. Which of the following architecture models should the organization adopt?",
+    "question": "An organization plans to set up a new SOC environment and wants to mitigate vendor lock-in. Which of the following architecture models should the organization adopt?",
     "choices": [
       {
         "key": "A",

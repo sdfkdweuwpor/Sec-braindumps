@@ -92,7 +92,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A security team is reviewing the findings in a report that was delivered after a third party performed a penetration test. One of the findings indicated that a web application form field is vulnerable to cross-site scripting. Which of the following application security techniques should the security analyst recommend the developer implement to prevent this vulnerability?",
+    "question": "A security team is reviewing the findings in a report that was delivered after a third party performed a penetration test. One of the findings indicated that a web application form field is vulnerable to XSS. Which of the following application security techniques should the security analyst recommend the developer implement to prevent this vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -124,7 +124,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p7",
     "needsReview": false,
-    "inferenceConfidence": 0.615,
+    "inferenceConfidence": 0.727,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -428,7 +428,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An organization recently updated its security policy to include the following statement:\nRegular expressions are included in source code to remove special characters such as $, |, ;. &, `, and ? from variables set by forms in a web application.\nWhich of the following best explains the security technique the organization adopted by making this addition to the policy?",
+    "question": "An organization recently updated its security policy to include the following statement:\nRegular expressions are included in source code to remove special characters such as $, |, ;, &, `, and ? from variables set by forms in a web application.\nWhich of the following best explains the security technique the organization adopted by making this addition to the policy?",
     "choices": [
       {
         "key": "A",
@@ -554,7 +554,7 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A security operations center determines that the malicious activity detected on a server is normal.\nWhich of the following activities describes the act of ignoring detected activity in the future?",
+    "question": "A SOC determines that the malicious activity detected on a server is normal.\nWhich of the following activities describes the act of ignoring detected activity in the future?",
     "choices": [
       {
         "key": "A",
@@ -638,7 +638,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A network manager wants to protect the company's VPN by implementing multifactor authentication that uses:\n- Something you know\n- Something you have\n- Something you are Which of the following would accomplish the manager's goal?",
+    "question": "A network manager wants to protect the company's VPN by implementing MFA that uses:\n- Something you know\n- Something you have\n- Something you are\nWhich of the following would accomplish the manager's goal?",
     "choices": [
       {
         "key": "A",
@@ -670,7 +670,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p33",
     "needsReview": false,
-    "inferenceConfidence": 0.816,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1026,7 +1026,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A Chief Information Security Officer wants to monitor the company's servers for SQLi attacks and allow for comprehensive investigations if an attack occurs. The company uses SSL decryption to allow traffic monitoring. Which of the following strategies would best accomplish this goal?",
+    "question": "A CISO wants to monitor the company's servers for SQLi attacks and allow for comprehensive investigations if an attack occurs. The company uses SSL decryption to allow traffic monitoring. Which of the following strategies would best accomplish this goal?",
     "choices": [
       {
         "key": "A",
@@ -1122,11 +1122,11 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Data loss prevention"
+        "text": "DLP"
       },
       {
         "key": "D",
-        "text": "Access control lists"
+        "text": "ACLs"
       }
     ],
     "correct": [
@@ -1142,7 +1142,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p43",
     "needsReview": false,
-    "inferenceConfidence": 0.237,
+    "inferenceConfidence": 0.357,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1152,7 +1152,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "After reviewing the following vulnerability scanning report:\nA security analyst performs the following test:\nWhich of the following would the security analyst conclude for this reported vulnerability?",
+    "question": "After reviewing the following vulnerability scanning report:\n```text\nServer: 192.168.14.6\nService: Telnet\nPort: 23 Protocol: TCP\nStatus: Open Severity: High\nVulnerability: Use of an insecure network protocol\n```\nA security analyst performs the following test:\n```text\nnmap -p 23 192.168.14.6 --script telnet-encryption\n\nPORT     STATE SERVICE REASON\n23/tcp   open  telnet  syn-ack\n|  telnet encryption:\n|_ Telnet server supports encryption\n```\nWhich of the following would the security analyst conclude for this reported vulnerability?",
     "choices": [
       {
         "key": "A",
@@ -1174,7 +1174,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The exhibits (not reproduced in the source) show the scanner flagging Telnet as an insecure protocol, and the analyst's follow-up test showing the Telnet server supports encryption. The risk the scanner reported is mitigated by another measure, so compensating controls exist; some sources call it a false positive instead.",
+    "explanation": "The scanner flagged Telnet on port 23 as an insecure protocol, and the analyst's nmap test shows this Telnet server supports encryption. The risk the scanner reported is mitigated by another measure, so compensating controls exist; some sources call it a false positive instead.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Telnet really is running on the port, so the finding is accurate; what the test shows is a mitigation.",
@@ -1184,7 +1184,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p45",
     "needsReview": false,
-    "inferenceConfidence": 0.706,
+    "inferenceConfidence": 0.722,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1446,7 +1446,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "multi",
-    "question": "During the onboarding process, an employee needs to create a password for an intranet account.\nThe password must include ten characters, numbers, and letters, and two special characters.\nOnce the password is created, the company will grant the employee access to other company- owned websites based on the intranet profile. Which of the following access management concepts is the company most likely using to safeguard intranet accounts and grant access to multiple sites based on a user's intranet account? (Select two).",
+    "question": "During the onboarding process, an employee needs to create a password for an intranet account.\nThe password must include ten characters, numbers, and letters, and two special characters.\nOnce the password is created, the company will grant the employee access to other company-owned websites based on the intranet profile. Which of the following access management concepts is the company most likely using to safeguard intranet accounts and grant access to multiple sites based on a user's intranet account? (Select two).",
     "choices": [
       {
         "key": "A",
@@ -1628,7 +1628,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Multifactor authentication"
+        "text": "MFA"
       },
       {
         "key": "B",
@@ -1656,7 +1656,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p62",
     "needsReview": false,
-    "inferenceConfidence": 0.667,
+    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1754,7 +1754,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Open-source intelligence"
+        "text": "OSINT"
       },
       {
         "key": "B",
@@ -1782,7 +1782,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p71",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.692,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2071,7 +2071,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "802.1x"
+        "text": "802.1X"
       },
       {
         "key": "D",
@@ -2185,7 +2185,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A systems administrator is changing the password policy within an enterprise environment and wants this update implemented on all systems as quickly as possible. Which of the following operating system security measures will the administrator most likely use?",
+    "question": "A systems administrator is changing the password policy within an enterprise environment and wants this update implemented on all systems as quickly as possible. Which of the following OS security measures will the administrator most likely use?",
     "choices": [
       {
         "key": "A",
@@ -2217,7 +2217,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p82",
     "needsReview": false,
-    "inferenceConfidence": 0.643,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2471,19 +2471,19 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "B",
-        "text": "Network access control"
+        "text": "NAC"
       },
       {
         "key": "C",
-        "text": "File integrity monitoring"
+        "text": "FIM"
       },
       {
         "key": "D",
-        "text": "User behavior analytics"
+        "text": "UBA"
       }
     ],
     "correct": [
@@ -2499,7 +2499,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p90",
     "needsReview": false,
-    "inferenceConfidence": 0.73,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2899,7 +2899,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
@@ -2919,7 +2919,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p108",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3320,7 +3320,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Generally. SMS OTP codes are valid for up to 15 minutes while the TOTP time frame is 30 to 60 seconds"
+        "text": "Generally, SMS OTP codes are valid for up to 15 minutes while the TOTP time frame is 30 to 60 seconds"
       },
       {
         "key": "C",
@@ -3328,7 +3328,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "The algorithm used to generate on SMS OTP code is weaker than the one used to generate a TOTP code"
+        "text": "The algorithm used to generate an SMS OTP code is weaker than the one used to generate a TOTP code"
       }
     ],
     "correct": [
@@ -3480,7 +3480,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security administrator recently reset local passwords and the following values were recorded in the system:\nWhich of the following in the security administrator most likely protecting against?",
+    "question": "A security administrator recently reset local passwords and the following values were recorded in the system:\n```table\nHost | Account | MD5 password value\nACCT-PC-1 | admin | f1bdf5ed1d7ad7ede4e3809bd35644b0\nHR-PC-1 | admin | d706ab8258fe67c131ebc57a6e28184\nIT-PC-2 | admin | f8ddb9cbb321d7dfbf6cb059736f0b3d\nFILE-SRV-1 | admin | f054bbd2f5ebab9cb5571000b2c60c02\nDB-SRV-1 | admin | 8638f732ba7cf2d95b16979e2725da78\n```\nWhich of the following is the security administrator most likely protecting against?",
     "choices": [
       {
         "key": "A",
@@ -3502,7 +3502,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The values (not reproduced in the source) show each machine's local account now has a different password hash. Pass-the-hash relies on the same local admin hash working across many machines; unique local passwords stop one stolen hash opening them all.",
+    "explanation": "The same admin account now has a different password hash on every machine. Pass-the-hash relies on one local admin hash working across many machines; unique local passwords stop one stolen hash opening them all.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Account sharing is people using the same account; resetting local passwords per machine does not address it.",
@@ -3530,7 +3530,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Continuity of operations planning"
+        "text": "COOP"
       },
       {
         "key": "C",
@@ -3564,7 +3564,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A company is currently utilizing usernames and passwords, and it wants to integrate an MFA method that is seamless, can integrate easily into a user's workflow, and can utilize employee- owned devices. Which of the following will meet these requirements?",
+    "question": "A company is currently utilizing usernames and passwords, and it wants to integrate an MFA method that is seamless, can integrate easily into a user's workflow, and can utilize employee-owned devices. Which of the following will meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -3606,7 +3606,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An organization has too many variations of a single operating system and needs to standardize the arrangement prior to pushing the system image to users. Which of the following should the organization implement first?",
+    "question": "An organization has too many variations of a single OS and needs to standardize the arrangement prior to pushing the system image to users. Which of the following should the organization implement first?",
     "choices": [
       {
         "key": "A",
@@ -3648,7 +3648,7 @@ export const domain4Questions = [
     "objective": "4.7",
     "objectiveTitle": "Explain the importance of automation and orchestration related to secure operations",
     "type": "single",
-    "question": "A growing company would like to enhance the ability of its security operations center to detect threats but reduce the amount of manual work required for the security analysts. Which of the following would best enable the reduction in manual work?",
+    "question": "A growing company would like to enhance the ability of its SOC to detect threats but reduce the amount of manual work required for the security analysts. Which of the following would best enable the reduction in manual work?",
     "choices": [
       {
         "key": "A",
@@ -3750,7 +3750,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Integrating each SaaS solution with the identity provider"
+        "text": "Integrating each SaaS solution with the IdP"
       },
       {
         "key": "C",
@@ -3868,7 +3868,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "While investigating a recent security breach an analyst finds that an attacker gained access by SQL injection through a company website. Which of the following should the analyst recommend to the website developers to prevent this from reoccurring?",
+    "question": "While investigating a recent security breach, an analyst finds that an attacker gained access by SQLi through a company website. Which of the following should the analyst recommend to the website developers to prevent this from reoccurring?",
     "choices": [
       {
         "key": "A",
@@ -3900,7 +3900,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p134",
     "needsReview": false,
-    "inferenceConfidence": 0.615,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3910,7 +3910,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company is changing its mobile device policy. The company has the following requirements:\n- Company-owned devices\n- Ability to harden the devices\n- Reduced security risk\n- Compatibility with company resources Which of the following would best meet these requirements?",
+    "question": "A company is changing its mobile device policy. The company has the following requirements:\n- Company-owned devices\n- Ability to harden the devices\n- Reduced security risk\n- Compatibility with company resources\nWhich of the following would best meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -3952,7 +3952,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following describes an executive team that is meeting in a board room and testing the company's incident response plan?",
+    "question": "Which of the following describes an executive team that is meeting in a board room and testing the company's IRP?",
     "choices": [
       {
         "key": "A",
@@ -3984,7 +3984,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p136",
     "needsReview": false,
-    "inferenceConfidence": 0.467,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4036,7 +4036,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "Which of the following should a security operations center use to improve its incident response procedure?",
+    "question": "Which of the following should a SOC use to improve its incident response procedure?",
     "choices": [
       {
         "key": "A",
@@ -4250,19 +4250,19 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "B",
-        "text": "Network access control"
+        "text": "NAC"
       },
       {
         "key": "C",
-        "text": "File integrity monitoring"
+        "text": "FIM"
       },
       {
         "key": "D",
-        "text": "User behavior analytics"
+        "text": "UBA"
       }
     ],
     "correct": [
@@ -4278,7 +4278,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p145",
     "needsReview": false,
-    "inferenceConfidence": 0.73,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4330,7 +4330,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS applications in use. Each application has a separate log-in. so the security team wants to reduce the number of credentials each employee must maintain. Which of the following is the first step the security team should take?",
+    "question": "An organization is adopting cloud services at a rapid pace and now has multiple SaaS applications in use. Each application has a separate log-in, so the security team wants to reduce the number of credentials each employee must maintain. Which of the following is the first step the security team should take?",
     "choices": [
       {
         "key": "A",
@@ -4590,7 +4590,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "C",
@@ -4614,7 +4614,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p155",
     "needsReview": false,
-    "inferenceConfidence": 0.4,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": true
   },
@@ -4844,11 +4844,11 @@ export const domain4Questions = [
     "objective": "4.4",
     "objectiveTitle": "Explain security alerting and monitoring concepts and tools",
     "type": "single",
-    "question": "A systems administrator notices that a testing system is down. While investigating, the systems administrator finds that the servers are online and accessible from any device on the server network. The administrator reviews the following information from the monitoring system:\nWhich of the following is the most likely cause of the outage?",
+    "question": "A systems administrator notices that a testing system is down. While investigating, the systems administrator finds that the servers are online and accessible from any device on the server network. The administrator reviews the following information from the monitoring system:\n```table\nServer name | IP | Traffic sent | Traffic received | Status\nFile01 | 10.12.14.13 | 2654812 | 23185 | Up\nDC01 | 10.12.15.2 | 168741 | 65481 | Up\nTest01 | 10.25.1.3 | 14872 | 654123168 | Down\nTest02 | 10.25.1.4 | 16941 | 651321685 | Down\nDC02 | 10.12.15.3 | 32145 | 32158 | Up\nFinance01 | 10.18.1.14 | 12374 | 6548 | Up\n```\nWhich of the following is the most likely cause of the outage?",
     "choices": [
       {
         "key": "A",
-        "text": "Denial of service"
+        "text": "DoS"
       },
       {
         "key": "B",
@@ -4894,11 +4894,11 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Data loss prevention"
+        "text": "DLP"
       },
       {
         "key": "C",
-        "text": "Operating system hardening"
+        "text": "OS hardening"
       },
       {
         "key": "D",
@@ -4918,7 +4918,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p160",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5148,7 +5148,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A security administrator needs to create firewall rules for the following protocols: RTP, SIP, H.323. and SRTP. Which of the following does this rule set support?",
+    "question": "A security administrator needs to create firewall rules for the following protocols: RTP, SIP, H.323, and SRTP. Which of the following does this rule set support?",
     "choices": [
       {
         "key": "A",
@@ -5363,7 +5363,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A development team is launching a new public-facing web product. The Chief Information Security Officer has asked that the product be protected from attackers who use malformed or invalid inputs to destabilize the system. Which of the following practices should the development team implement?",
+    "question": "A development team is launching a new public-facing web product. The CISO has asked that the product be protected from attackers who use malformed or invalid inputs to destabilize the system. Which of the following practices should the development team implement?",
     "choices": [
       {
         "key": "A",
@@ -5467,7 +5467,7 @@ export const domain4Questions = [
       },
       {
         "key": "E",
-        "text": "Common Vulnerabilities and Exposures"
+        "text": "CVE"
       }
     ],
     "correct": [
@@ -5494,7 +5494,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst is reviewing the logs on an organization's DNS server and notices the following unusual snippet:\nWhich of the following attack techniques was most likely used?",
+    "question": "A security analyst is reviewing the logs on an organization's DNS server and notices the following unusual snippet:\n```text\nLog from named: post-processed 20230102 0045L\n...\nqry_source: 124.22.158.37 TCP/53\nqry_dest: 52.165.16.154 TCP/53\nqry_dest: 10.100.50.5 TCP/53\nqry_type: AXFR\n| zone int.comptia.org\n------------| www A 10.100.50.21\n------------| dns A 10.100.5.5\n------------| adds A 10.101.10.10\n------------| fshare A 10.101.10.20\n------------| sip A 10.100.5.11\n...\n```\nWhich of the following attack techniques was most likely used?",
     "choices": [
       {
         "key": "A",
@@ -5514,19 +5514,19 @@ export const domain4Questions = [
       },
       {
         "key": "E",
-        "text": "Exfiltrating data from fshare.int.complia.org"
+        "text": "Exfiltrating data from fshare.int.comptia.org"
       }
     ],
     "correct": [
       "C"
     ],
-    "explanation": "A run of DNS lookups against internal hostnames is reconnaissance: the attacker is using the organisation's own name service to map what exists inside the network without touching the hosts themselves. Building that picture of internal systems is footprinting.",
+    "explanation": "The log records an AXFR query: a full DNS zone transfer requested from an outside address (124.22.158.37), returning every record in int.comptia.org, including www, dns, the directory server (adds) and the file share. Pulling a complete list of internal hosts and addresses is footprinting the internal network.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Determining ISP-assigned address space is external reconnaissance, done through public registries such as WHOIS. Internal hostname queries reveal nothing about public allocations.",
-      "B": "Bypassing DNS sinkholing would mean evading a control that redirects malicious domains. The queries here are for internal names, which a sinkhole does not cover.",
-      "D": "Achieving initial access to the DNS server would involve exploiting the service itself. These are ordinary, well-formed queries the server is designed to answer.",
-      "E": "Exfiltrating data over DNS shows up as long, high-entropy labels encoding payload. Normal internal hostname lookups carry no data out."
+      "A": "Determining ISP-assigned address space is external reconnaissance done through public registries such as WHOIS. The zone transfer returned private 10.x addresses.",
+      "B": "Bypassing DNS sinkholing means evading a control that redirects malicious domains. A zone transfer asks the server for its own records.",
+      "D": "Initial access would mean exploiting the DNS service itself. AXFR is a legitimate query the server answered because transfers were not restricted.",
+      "E": "The zone transfer lists the file share's name and address; it does not carry any of the share's data out."
     },
     "references": [],
     "source": "bank.pdf#p171",
@@ -5635,7 +5635,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements:\n- Must work across SaaS and internal network applications\n- Must be device manufacturer agnostic\n- Must have offline capabilities Which of the following would be the most appropriate authentication method?",
+    "question": "An organization wants to improve the company's security authentication method for remote employees. Given the following requirements:\n- Must work across SaaS and internal network applications\n- Must be device manufacturer agnostic\n- Must have offline capabilities\nWhich of the following would be the most appropriate authentication method?",
     "choices": [
       {
         "key": "A",
@@ -5887,7 +5887,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "While investigating a possible incident, a security analyst discovers the following log entries:\nWhich of the following should the analyst do first?",
+    "question": "While investigating a possible incident, a security analyst discovers the following log entries:\n```text\n67.118.34.157 - - [28/Jul/2022:10:26:59 -0300] \"GET /query.php?q=wireless%20headphones / HTTP/1.0\" 200 12737\n132.18.222.103 - - [28/Jul/2022:10:27:10 -0300] \"GET /query.php?q=123';INSERT INTO users VALUES('temp','pass123')# / HTTP/1.0\" 200 935\n12.45.101.121 - - [28/Jul/2022:10:27:22 -0300] \"GET /query.php?q=mp3%20players / HTTP/1.0\" 200 14650\n```\nWhich of the following should the analyst do first?",
     "choices": [
       {
         "key": "A",
@@ -5909,7 +5909,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The log entries (not reproduced in the source) show SQL injection attempts through query.php that insert new user accounts. The first job is to check the users table for accounts the attacker created, confirming whether the attack succeeded and what access now exists.",
+    "explanation": "The middle request to query.php smuggles in a SQL statement that inserts a new user, 'temp' with password 'pass123', and the server answered 200. The first job is to check the users table for that account, confirming whether the injection worked and what access the attacker now has.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A WAF helps prevent future attempts, but first establish whether this one succeeded.",
@@ -6113,7 +6113,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Install a unified threat management appliance"
+        "text": "Install a UTM appliance"
       }
     ],
     "correct": [
@@ -6129,7 +6129,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p185",
     "needsReview": false,
-    "inferenceConfidence": 0.9,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6139,7 +6139,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A penetration test has demonstrated that domain administrator accounts were vulnerable to pass- the-hash attacks. Which of the following would have been the best strategy to prevent the threat actor from using domain administrator accounts?",
+    "question": "A penetration test has demonstrated that domain administrator accounts were vulnerable to pass-the-hash attacks. Which of the following would have been the best strategy to prevent the threat actor from using domain administrator accounts?",
     "choices": [
       {
         "key": "A",
@@ -6147,7 +6147,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Implement a privileged access management solution."
+        "text": "Implement a PAM solution."
       },
       {
         "key": "C",
@@ -6171,7 +6171,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p187",
     "needsReview": false,
-    "inferenceConfidence": 0.52,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6189,15 +6189,15 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Access control lists"
+        "text": "ACLs"
       },
       {
         "key": "C",
-        "text": "Identity and access management"
+        "text": "IAM"
       },
       {
         "key": "D",
-        "text": "Network intrusion detection system"
+        "text": "NIDS"
       }
     ],
     "correct": [
@@ -6213,7 +6213,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p188",
     "needsReview": false,
-    "inferenceConfidence": 0.367,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6391,7 +6391,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst learns that an attack vector, used as part of a recent incident, was a well- known IoT device exploit. The analyst needs to review logs to identify the time of the initial exploit. Which of the following logs should the analyst review first?",
+    "question": "A security analyst learns that an attack vector, used as part of a recent incident, was a well-known IoT device exploit. The analyst needs to review logs to identify the time of the initial exploit. Which of the following logs should the analyst review first?",
     "choices": [
       {
         "key": "A",
@@ -6483,7 +6483,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Access control list"
+        "text": "ACL"
       },
       {
         "key": "C",
@@ -6507,7 +6507,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p194",
     "needsReview": false,
-    "inferenceConfidence": 0.562,
+    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6791,7 +6791,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Open-source intelligence"
+        "text": "OSINT"
       },
       {
         "key": "D",
@@ -6811,7 +6811,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p203",
     "needsReview": false,
-    "inferenceConfidence": 0.533,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7001,7 +7001,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Intrusion prevention system"
+        "text": "IPS"
       },
       {
         "key": "D",
@@ -7021,7 +7021,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p210",
     "needsReview": false,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7031,7 +7031,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A security analyst is reviewing logs and discovers the following:\nWhich of the following should be used to best mitigate this type of attack?",
+    "question": "A security analyst is reviewing logs and discovers the following:\n```text\n149.32.228.10 - - [28/Jan/2023:16:32:45 -0300] \"GET / HTTP/1.0\"\nUser-Agent: ${/bin/sh/ id} 200 397\n```\nWhich of the following should be used to best mitigate this type of attack?",
     "choices": [
       {
         "key": "A",
@@ -7211,7 +7211,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Intrusion detection system"
+        "text": "IDS"
       },
       {
         "key": "D",
@@ -7231,7 +7231,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p214",
     "needsReview": false,
-    "inferenceConfidence": 0.474,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7283,7 +7283,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "multi",
-    "question": "A company plans to secure its systems by:\n- Preventing users from sending sensitive data over corporate email\n- Restricting access to potentially harmful websites Which of the following features should the company set up? (Choose two.)",
+    "question": "A company plans to secure its systems by:\n- Preventing users from sending sensitive data over corporate email\n- Restricting access to potentially harmful websites\nWhich of the following features should the company set up? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -7295,7 +7295,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "File integrity monitoring"
+        "text": "FIM"
       },
       {
         "key": "D",
@@ -7325,7 +7325,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p215",
     "needsReview": false,
-    "inferenceConfidence": 0.565,
+    "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7393,7 +7393,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Access control list"
+        "text": "ACL"
       }
     ],
     "correct": [
@@ -7409,7 +7409,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p217",
     "needsReview": false,
-    "inferenceConfidence": 0.391,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7469,15 +7469,15 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Access control lists"
+        "text": "ACLs"
       },
       {
         "key": "C",
-        "text": "Identity and access management"
+        "text": "IAM"
       },
       {
         "key": "D",
-        "text": "Network intrusion detection system"
+        "text": "NIDS"
       }
     ],
     "correct": [
@@ -7493,7 +7493,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p219",
     "needsReview": false,
-    "inferenceConfidence": 0.367,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7717,7 +7717,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Intrusion prevention system"
+        "text": "IPS"
       },
       {
         "key": "B",
@@ -7725,7 +7725,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Endpoint detection and response"
+        "text": "EDR"
       },
       {
         "key": "D",
@@ -7745,7 +7745,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p222",
     "needsReview": false,
-    "inferenceConfidence": 0.571,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7881,7 +7881,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "multi",
-    "question": "An organization is implementing a COPE mobile device management policy. Which of the following should the organization include in the COPE policy? (Choose two.)",
+    "question": "An organization is implementing a COPE MDM policy. Which of the following should the organization include in the COPE policy? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -8193,11 +8193,11 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewalls"
+        "text": "WAFs"
       },
       {
         "key": "C",
-        "text": "Multifactor authentication"
+        "text": "MFA"
       },
       {
         "key": "D",
@@ -8217,7 +8217,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p230",
     "needsReview": false,
-    "inferenceConfidence": 0.6,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8521,7 +8521,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A Chief Information Security Officer is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and business email compromise. Which of the following documents would be most relevant to revise as part of this process?",
+    "question": "A CISO is developing procedures to guide detective and corrective activities associated with common threats, including phishing, social engineering, and BEC. Which of the following documents would be most relevant to revise as part of this process?",
     "choices": [
       {
         "key": "A",
@@ -8553,7 +8553,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p240",
     "needsReview": false,
-    "inferenceConfidence": 0.667,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8663,7 +8663,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Network access control"
+        "text": "NAC"
       }
     ],
     "correct": [
@@ -8679,7 +8679,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p243",
     "needsReview": false,
-    "inferenceConfidence": 0.643,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9255,7 +9255,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "multi",
-    "question": "A new corporate policy requires all staff to use multifactor authentication to access company resources. Which of the following can be utilized to set up this form of identity and access management? (Choose two.)",
+    "question": "A new corporate policy requires all staff to use MFA to access company resources. Which of the following can be utilized to set up this form of IAM? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -9297,7 +9297,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p254",
     "needsReview": false,
-    "inferenceConfidence": 0.838,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9307,7 +9307,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "A company is changing its mobile device policy. The company has the following requirements:\n- Company-owned devices\n- Ability to harden the devices\n- Reduced security risk\n- Compatibility with company resources Which of the following would best meet these requirements?",
+    "question": "A company is changing its mobile device policy. The company has the following requirements:\n- Company-owned devices\n- Ability to harden the devices\n- Reduced security risk\n- Compatibility with company resources\nWhich of the following would best meet these requirements?",
     "choices": [
       {
         "key": "A",
@@ -9480,7 +9480,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A company's Chief Information Security Officer (CISO) wants to enhance the capabilities of the incident response team. The CISO directs the incident response team to deploy a tool that rapidly analyzes host and network data from potentially compromised systems and forwards the data for further review. Which of the following tools should the incident response team deploy?",
+    "question": "A company's CISO wants to enhance the capabilities of the incident response team. The CISO directs the incident response team to deploy a tool that rapidly analyzes host and network data from potentially compromised systems and forwards the data for further review. Which of the following tools should the incident response team deploy?",
     "choices": [
       {
         "key": "A",
@@ -9526,7 +9526,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "B",
@@ -9564,7 +9564,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p261",
     "needsReview": false,
-    "inferenceConfidence": 0.267,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9742,7 +9742,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A forensic engineer determines that the root cause of a compromise is a SQL injection attack.\nWhich of the following should the engineer review to identify the command used by the threat actor?",
+    "question": "A forensic engineer determines that the root cause of a compromise is an SQLi attack.\nWhich of the following should the engineer review to identify the command used by the threat actor?",
     "choices": [
       {
         "key": "A",
@@ -9774,7 +9774,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p265",
     "needsReview": false,
-    "inferenceConfidence": 0.217,
+    "inferenceConfidence": 0.312,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10040,7 +10040,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Intrusion prevention system"
+        "text": "IPS"
       },
       {
         "key": "B",
@@ -10063,7 +10063,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p277",
     "needsReview": false,
-    "inferenceConfidence": 0.692,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10581,7 +10581,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Multifactor Authentication"
+        "text": "MFA"
       },
       {
         "key": "B",
@@ -10589,11 +10589,11 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Cloud Access Security Broker"
+        "text": "CASB"
       },
       {
         "key": "D",
-        "text": "Data Loss Prevention"
+        "text": "DLP"
       }
     ],
     "correct": [
@@ -10609,7 +10609,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p291",
     "needsReview": false,
-    "inferenceConfidence": 0.692,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10623,7 +10623,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "B",
@@ -10661,7 +10661,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p292",
     "needsReview": false,
-    "inferenceConfidence": 0.267,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -10713,7 +10713,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer wants to enhance security capabilities to block PH from being emailed or downloaded to unapproved external media. Which of the following solutions will accomplish this goal?",
+    "question": "A CISO wants to enhance security capabilities to block PHI from being emailed or downloaded to unapproved external media. Which of the following solutions will accomplish this goal?",
     "choices": [
       {
         "key": "A",
@@ -11026,11 +11026,11 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Business impact analysis"
+        "text": "BIA"
       },
       {
         "key": "B",
-        "text": "Common Vulnerability Scoring System"
+        "text": "CVSS"
       },
       {
         "key": "C",
@@ -11054,7 +11054,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p301",
     "needsReview": false,
-    "inferenceConfidence": 0.511,
+    "inferenceConfidence": 0.474,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11320,7 +11320,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Mobile device management"
+        "text": "MDM"
       },
       {
         "key": "B",
@@ -11362,7 +11362,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Implement network access control."
+        "text": "Implement NAC."
       },
       {
         "key": "B",
@@ -11390,7 +11390,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p307",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.25,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11458,7 +11458,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       }
     ],
     "correct": [
@@ -11474,7 +11474,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p307",
     "needsReview": false,
-    "inferenceConfidence": 0.476,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11918,19 +11918,19 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Unified threat management"
+        "text": "UTM"
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
-        "text": "User behavior analytics"
+        "text": "UBA"
       },
       {
         "key": "D",
-        "text": "Intrusion detection system"
+        "text": "IDS"
       }
     ],
     "correct": [
@@ -11946,7 +11946,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p318",
     "needsReview": false,
-    "inferenceConfidence": 0.73,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -11956,11 +11956,11 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "An organization has experienced a breach because a hacker utilized a standard users two-year- old password that the hacker found on the dark web. Which of the following would have prevented this attack?",
+    "question": "An organization has experienced a breach because a hacker utilized a standard user's two-year-old password that the hacker found on the dark web. Which of the following would have prevented this attack?",
     "choices": [
       {
         "key": "A",
-        "text": "Privileged access management"
+        "text": "PAM"
       },
       {
         "key": "B",
@@ -11988,7 +11988,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p319",
     "needsReview": false,
-    "inferenceConfidence": 0.474,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12124,7 +12124,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) of an enterprise environment wants to ensure that users cannot navigate to known malicious domains. The CISO also wants web traffic on the network inspected for malicious activity. Which of the following actions should the CISO take?",
+    "question": "A CISO of an enterprise environment wants to ensure that users cannot navigate to known malicious domains. The CISO also wants web traffic on the network inspected for malicious activity. Which of the following actions should the CISO take?",
     "choices": [
       {
         "key": "A",
@@ -12132,7 +12132,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Deploy EDR software on all company systems, and perform user behavior analytics to detect users going to anomalous domains."
+        "text": "Deploy EDR software on all company systems, and perform UBA to detect users going to anomalous domains."
       },
       {
         "key": "C",
@@ -12156,7 +12156,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p321",
     "needsReview": false,
-    "inferenceConfidence": 0.88,
+    "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -12255,7 +12255,7 @@ export const domain4Questions = [
     "objective": "4.8",
     "objectiveTitle": "Explain appropriate incident response activities",
     "type": "single",
-    "question": "A company's Chief Information Security Officer (CISO) wants to enhance the capabilities of the incident response team. The CISO directs the incident response team to deploy a tool that rapidly analyzes host and network data from potentially compromised systems and forwards the data for further correlation and reporting. Which of the following tools should the incident response team deploy?",
+    "question": "A company's CISO wants to enhance the capabilities of the incident response team. The CISO directs the incident response team to deploy a tool that rapidly analyzes host and network data from potentially compromised systems and forwards the data for further correlation and reporting. Which of the following tools should the incident response team deploy?",
     "choices": [
       {
         "key": "A",
@@ -12343,7 +12343,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Wireless access point"
+        "text": "WAP"
       },
       {
         "key": "B",
@@ -13279,7 +13279,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Business impact analysis"
+        "text": "BIA"
       }
     ],
     "correct": [
@@ -13295,7 +13295,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p351",
     "needsReview": false,
-    "inferenceConfidence": 0.36,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -13772,7 +13772,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A school administrator wants to limit access to certain web pages to ensure that only age- appropriate material is available to students. Which of the following tools would best meet this requirement?",
+    "question": "A school administrator wants to limit access to certain web pages to ensure that only age-appropriate material is available to students. Which of the following tools would best meet this requirement?",
     "choices": [
       {
         "key": "A",
@@ -13780,11 +13780,11 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Network access control"
+        "text": "NAC"
       },
       {
         "key": "C",
-        "text": "User behavior analytics"
+        "text": "UBA"
       },
       {
         "key": "D",
@@ -13856,11 +13856,11 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an operating system and applications?",
+    "question": "Which of the following best describes why a company would erase a newly purchased device and install its own image with an OS and applications?",
     "choices": [
       {
         "key": "A",
-        "text": "Installing a new operating system thoroughly tests the equipment"
+        "text": "Installing a new OS thoroughly tests the equipment"
       },
       {
         "key": "B",
@@ -14234,7 +14234,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An organization experiences data loss after several employees traveled to an area that is well- known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended. Which of the following will best prevent data loss events in the future?",
+    "question": "An organization experiences data loss after several employees traveled to an area that is well-known for corporate espionage. The employees always used VPNs when connected to the hotel Wi-Fi, logged off their machines when not in use, and kept their doors locked when leaving their devices unattended. Which of the following will best prevent data loss events in the future?",
     "choices": [
       {
         "key": "A",
@@ -14585,7 +14585,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "An office wants to install a Wi-Fi network. The security team must ensure a secure design. The security team expects the Wi-Fi access points to be more powerful in order to provide a better connection for employees. The access points will use the latest WPA3 protocol with a 16- character randomized key. Which of the following should the security team do next?",
+    "question": "An office wants to install a Wi-Fi network. The security team must ensure a secure design. The security team expects the Wi-Fi access points to be more powerful in order to provide a better connection for employees. The access points will use the latest WPA3 protocol with a 16-character randomized key. Which of the following should the security team do next?",
     "choices": [
       {
         "key": "A",
@@ -14889,7 +14889,7 @@ export const domain4Questions = [
     "objective": "4.1",
     "objectiveTitle": "Given a scenario, apply common security techniques to computing resources",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets. Which of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
+    "question": "The CISO of a medium-sized business plans to modernize the existing security infrastructure and address issues with legacy software and assets. Which of the following should the CISO use to determine the scope of the legacy infrastructure and develop a risk-based approach to modernization?",
     "choices": [
       {
         "key": "A",
@@ -15103,7 +15103,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "The configurations defined as part of established baselines allow organizations to deploy well- tested security solutions quickly and easily"
+        "text": "The configurations defined as part of established baselines allow organizations to deploy well-tested security solutions quickly and easily"
       },
       {
         "key": "B",
@@ -15141,7 +15141,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "The Chief Information Security Officer gives the security community the opportunity to report vulnerabilities on the organization's public-facing assets. Which of the following does this scenario best describe?",
+    "question": "The CISO gives the security community the opportunity to report vulnerabilities on the organization's public-facing assets. Which of the following does this scenario best describe?",
     "choices": [
       {
         "key": "A",
@@ -15153,7 +15153,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Open-source intelligence"
+        "text": "OSINT"
       },
       {
         "key": "D",
@@ -15173,7 +15173,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p408",
     "needsReview": false,
-    "inferenceConfidence": 0.615,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -15233,7 +15233,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Intrusion prevention system"
+        "text": "IPS"
       },
       {
         "key": "C",
@@ -15257,7 +15257,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p410",
     "needsReview": false,
-    "inferenceConfidence": 0.385,
+    "inferenceConfidence": 0.588,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -15409,7 +15409,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Enabling full disk encryption to protect files stored during the test cycle"
+        "text": "Enabling FDE to protect files stored during the test cycle"
       }
     ],
     "correct": [
@@ -15425,7 +15425,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p413",
     "needsReview": false,
-    "inferenceConfidence": 0.684,
+    "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -15771,23 +15771,23 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10 DNS SERVER: 192.168.1.20 Which of the following should the security administrator do?",
+    "question": "A security administrator must adjust the company firewall ACL to test DNSSEC without disrupting current connectivity while transitioning to DNSSEC. Given the following company servers and gateway firewall ACL:\nWEB SERVER: 192.168.1.10\nDNS SERVER: 192.168.1.20\n```table\nRule | Action | Protocol | Source IP | Source port | Destination IP | Destination port\n1 | PERMIT | TCP | 0.0.0.0 | ANY | 192.168.1.10 | 80, 443\n2 | PERMIT | UDP | 0.0.0.0 | ANY | 192.168.1.20 | 53\n3 | PERMIT | ICMP | 10.0.0.0/8 | ANY | 192.168.1.0/24 | ANY\n4 | DENY | ANY | ANY | ANY | ANY | ANY\n```\nWhich of the following should the security administrator do?",
     "choices": [
       {
         "key": "A",
-        "text": "Insert the following rule above rule #1:"
+        "text": "Insert above rule #1: PERMIT · ICMP · 0.0.0.0 · ANY → 192.168.1.0/24 · ports 53, 80, 443"
       },
       {
         "key": "B",
-        "text": "Replace rule #1 with the following:"
+        "text": "Replace rule #1 with: PERMIT · TCP · 0.0.0.0 · ANY → 192.168.1.0/24 · ports 53, 443"
       },
       {
         "key": "C",
-        "text": "Replace rule #2 with the following:"
+        "text": "Replace rule #2 with: PERMIT · UDP, TCP · 0.0.0.0 · ANY → 192.168.1.20 · port 53"
       },
       {
         "key": "D",
-        "text": "Insert the following rule between rule #2 and rule #3:"
+        "text": "Insert between rules #2 and #3: PERMIT · TCP · 0.0.0.0 · ANY → 192.168.1.20 · port 443"
       }
     ],
     "correct": [
@@ -15997,7 +15997,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Orchestration provides users with single sign-on during the onboarding process."
+        "text": "Orchestration provides users with SSO during the onboarding process."
       }
     ],
     "correct": [
@@ -16013,7 +16013,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p426",
     "needsReview": false,
-    "inferenceConfidence": 0.444,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16205,7 +16205,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Network access control"
+        "text": "NAC"
       },
       {
         "key": "B",
@@ -16217,11 +16217,11 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "File integrity monitoring"
+        "text": "FIM"
       },
       {
         "key": "E",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "F",
@@ -16243,7 +16243,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p429",
     "needsReview": false,
-    "inferenceConfidence": 0.714,
+    "inferenceConfidence": 0.812,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16349,7 +16349,7 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
@@ -16369,7 +16369,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p431",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.615,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16557,7 +16557,7 @@ export const domain4Questions = [
     "objective": "4.9",
     "objectiveTitle": "Given a scenario, use data sources to support an investigation",
     "type": "single",
-    "question": "A security analyst sees the following entries in web server logs:\nWhich of the following IP addresses is most likely involved in a malicious attempt?",
+    "question": "A security analyst sees the following entries in web server logs:\n```text\n200.17.88.121 [05/May/2025:01:05:18 -0200] \"GET /aboutus.htm\" 200 3344\n200.17.88.121 [05/May/2025:01:08:22 -0200] \"GET /corporateOrg.htm\" 200 4200\n132.18.62.144 [05/May/2025:01:08:23 -0200] \"GET /../../vhosts\" 403 502\n200.17.88.121 [05/May/2025:01:10:33 -0200] \"POST /contactUs.asp\" 403 512\n118.19.200.55 [05/May/2025:01:10:45 -0200] \"POST/search\" 200 1212 \"SELECT * FROM company WHERE keyword = 'VP'\"\n105.86.13.11 [05/May/2025:01:15:45 -0200] \"GET /latestContracts.htm\" 404 512\n```\nWhich of the following IP addresses is most likely involved in a malicious attempt?",
     "choices": [
       {
         "key": "A",
@@ -16589,7 +16589,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p437",
     "needsReview": false,
-    "inferenceConfidence": 1.0,
+    "inferenceConfidence": 0.962,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16657,7 +16657,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Configuring the wireless controller to require multifactor authentication"
+        "text": "Configuring the wireless controller to require MFA"
       }
     ],
     "correct": [
@@ -16673,7 +16673,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p439",
     "needsReview": false,
-    "inferenceConfidence": 0.417,
+    "inferenceConfidence": 0.556,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16683,7 +16683,7 @@ export const domain4Questions = [
     "objective": "4.3",
     "objectiveTitle": "Explain various activities associated with vulnerability management",
     "type": "single",
-    "question": "A company performs a vulnerability assessment and gets the following results:\nWhich of the following vulnerabilities should the company patch first?",
+    "question": "A company performs a vulnerability assessment and gets the following results:\n```table\nVulnerability | Server location | CVSS score\n1 | Internet | 9.8\n2 | Internal | 4.0\n3 | Internet | 4.0\n4 | Internal | 9.8\n```\nWhich of the following vulnerabilities should the company patch first?",
     "choices": [
       {
         "key": "A",
@@ -16715,7 +16715,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p440",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16725,7 +16725,7 @@ export const domain4Questions = [
     "objective": "4.5",
     "objectiveTitle": "Given a scenario, modify enterprise capabilities to enhance security",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) implements a new policy that users can no longer access fantasy sports sites while at work. The CISO wants to implement a solution that can adapt to new sites coming online and not have to constantly determine which sites are related to fantasy sports. Which of the following is the best capability for the CISO to leverage?",
+    "question": "A CISO implements a new policy that users can no longer access fantasy sports sites while at work. The CISO wants to implement a solution that can adapt to new sites coming online and not have to constantly determine which sites are related to fantasy sports. Which of the following is the best capability for the CISO to leverage?",
     "choices": [
       {
         "key": "A",
@@ -16818,7 +16818,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Secure access service edge"
+        "text": "SASE"
       },
       {
         "key": "B",
@@ -16846,7 +16846,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p442",
     "needsReview": false,
-    "inferenceConfidence": 0.625,
+    "inferenceConfidence": 0.294,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -16952,11 +16952,11 @@ export const domain4Questions = [
       },
       {
         "key": "C",
-        "text": "Endpoint detection and response (EDR)"
+        "text": "EDR"
       },
       {
         "key": "D",
-        "text": "Data loss prevention (DLP)"
+        "text": "DLP"
       }
     ],
     "correct": [
@@ -16972,7 +16972,7 @@ export const domain4Questions = [
     "references": [],
     "source": "bank.pdf#p448",
     "needsReview": false,
-    "inferenceConfidence": 0.593,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },

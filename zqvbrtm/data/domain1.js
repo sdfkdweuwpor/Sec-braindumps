@@ -50,7 +50,7 @@ export const domain1Questions = [
     "objective": "1.1",
     "objectiveTitle": "Compare and contrast various types of security controls",
     "type": "single",
-    "question": "Which of the following security control types does an acceptable use policy best represent?",
+    "question": "Which of the following security control types does an AUP best represent?",
     "choices": [
       {
         "key": "A",
@@ -82,7 +82,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p5",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -914,7 +914,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Disaster recovery plan"
+        "text": "DRP"
       },
       {
         "key": "B",
@@ -942,7 +942,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p70",
     "needsReview": false,
-    "inferenceConfidence": 0.528,
+    "inferenceConfidence": 0.478,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -998,7 +998,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Trusted Platform Module"
+        "text": "TPM"
       },
       {
         "key": "B",
@@ -1026,7 +1026,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p78",
     "needsReview": false,
-    "inferenceConfidence": 0.714,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1896,7 +1896,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A company wants to get alerts when others are researching and doing reconnaissance on the company One approach would be to host a part of the Infrastructure online with known vulnerabilities that would appear to be company assets. Which of the following describes this approach?",
+    "question": "A company wants to get alerts when others are researching and doing reconnaissance on the company. One approach would be to host a part of the infrastructure online with known vulnerabilities that would appear to be company assets. Which of the following describes this approach?",
     "choices": [
       {
         "key": "A",
@@ -2064,7 +2064,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "Which of the following best describe why a process would require a two-person integrity security control?",
+    "question": "Which of the following best describes why a process would require a two-person integrity security control?",
     "choices": [
       {
         "key": "A",
@@ -3163,7 +3163,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Software development life cycle"
+        "text": "SDLC"
       },
       {
         "key": "B",
@@ -3171,7 +3171,7 @@ export const domain1Questions = [
       },
       {
         "key": "C",
-        "text": "Certificate signing request"
+        "text": "CSR"
       },
       {
         "key": "D",
@@ -3191,7 +3191,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p199",
     "needsReview": false,
-    "inferenceConfidence": 0.37,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3293,7 +3293,7 @@ export const domain1Questions = [
       },
       {
         "key": "B",
-        "text": "Full disk encryption"
+        "text": "FDE"
       },
       {
         "key": "C",
@@ -3317,7 +3317,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p206",
     "needsReview": false,
-    "inferenceConfidence": 0.609,
+    "inferenceConfidence": 0.526,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3383,7 +3383,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Public key infrastructure"
+        "text": "PKI"
       },
       {
         "key": "B",
@@ -3555,7 +3555,7 @@ export const domain1Questions = [
       },
       {
         "key": "B",
-        "text": "If the certificate signing request is valid"
+        "text": "If the CSR is valid"
       },
       {
         "key": "C",
@@ -3681,7 +3681,7 @@ export const domain1Questions = [
       },
       {
         "key": "B",
-        "text": "Public key infrastructure"
+        "text": "PKI"
       },
       {
         "key": "C",
@@ -4517,7 +4517,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Hardware security module"
+        "text": "HSM"
       },
       {
         "key": "B",
@@ -4545,7 +4545,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p255",
     "needsReview": false,
-    "inferenceConfidence": 0.923,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4769,7 +4769,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       },
       {
         "key": "B",
@@ -4777,7 +4777,7 @@ export const domain1Questions = [
       },
       {
         "key": "C",
-        "text": "Master service agreement"
+        "text": "MSA"
       },
       {
         "key": "D",
@@ -4797,7 +4797,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p280",
     "needsReview": false,
-    "inferenceConfidence": 0.4,
+    "inferenceConfidence": 0.625,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5431,7 +5431,7 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       }
     ],
     "correct": [
@@ -5447,7 +5447,7 @@ export const domain1Questions = [
     "references": [],
     "source": "bank.pdf#p324",
     "needsReview": false,
-    "inferenceConfidence": 0.478,
+    "inferenceConfidence": 0.286,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5599,7 +5599,7 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Trusted Platform Module"
+        "text": "TPM"
       }
     ],
     "correct": [
@@ -7129,7 +7129,7 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Data masking implements a random function, while data tokenization implements a pseudo- random function"
+        "text": "Data masking implements a random function, while data tokenization implements a pseudo-random function"
       }
     ],
     "correct": [
@@ -7171,7 +7171,7 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Auditing all system equipment before sending the list to the Chief Executive Officer"
+        "text": "Auditing all system equipment before sending the list to the CEO"
       }
     ],
     "correct": [
@@ -7753,7 +7753,7 @@ export const domain1Questions = [
     "objective": "1.4",
     "objectiveTitle": "Explain the importance of using appropriate cryptographic solutions",
     "type": "single",
-    "question": "An organization pilots a web service using a self-signed certificate to share confidential information. The next day, employees notice the service's appearance is different and the self- signed certificate is no longer associated with the web portal. Which of the following is the most likely type of malicious activity occurring?",
+    "question": "An organization pilots a web service using a self-signed certificate to share confidential information. The next day, employees notice the service's appearance is different and the self-signed certificate is no longer associated with the web portal. Which of the following is the most likely type of malicious activity occurring?",
     "choices": [
       {
         "key": "A",

@@ -11,6 +11,10 @@ import {
 } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewState, STEPS } from '../srs.js';
+import { flameChip, celebrate } from '../flame.js';
+import { findAcronyms, wrapAcronyms } from '../acronyms.js';
+import { odometer } from '../motion.js';
+import { checkMilestones } from '../milestones.js';
 
 const DRILL_SIZE = 10;
 
@@ -59,6 +63,7 @@ function finish(session, navigate) {
   if (session.finished) return;
   session.finished = true;
   const result = saveResult(session);
+  if (session.feedbackMode === 'end') setTimeout(checkMilestones, 1600);
   store.clearActiveQuiz();
   if (session.mode === 'similar') store.resumePausedQuiz();
   teardown();
@@ -87,6 +92,7 @@ export async function renderQuiz(view, { navigate }) {
   // 'next' / 'prev' (slide in from that side), or 'reveal' (answer checked).
   let motion = 'first';
   let lastPct = 0;
+  let lastN = null;
 
   const draw = () => {
     const how = motion;
@@ -128,6 +134,15 @@ export async function renderQuiz(view, { navigate }) {
 
     const timerEl = session.durationMs ? el('span', { class: 'pill' }) : null;
 
+    // Question number rolls like an odometer when moving between questions.
+    const qnum = el('span', { class: 'qnum-roll', text: String(n) });
+    if (lastN !== null && lastN !== n && how !== 'reveal') odometer(qnum, n, { from: lastN, duration: 650 });
+    lastN = n;
+
+    // The streak flame rides in the header while a run of 3+ is going.
+    const streakNow = session.feedbackMode === 'immediate' ? (session.streak || 0) : 0;
+    const headFlame = streakNow >= 3 ? flameChip(streakNow, { compact: true }) : null;
+
     if (drill && session.from) {
       body.append(el('div', { class: 'drill-banner' }, [
         icon('similar', { size: 22 }),
@@ -140,9 +155,10 @@ export async function renderQuiz(view, { navigate }) {
 
     body.append(el('div', { class: 'quizhead' }, [
       el('h1', { class: 'qcount' }, [
-        el('span', { text: `Question ${n}` }), el('span', { class: 'qof', text: ` of ${total}` }),
+        el('span', { text: 'Question ' }), qnum, el('span', { class: 'qof', text: ` of ${total}` }),
       ]),
       el('div', { class: 'row' }, [
+        headFlame,
         timerEl,
         flagBtn,
         el('button', {
@@ -160,6 +176,31 @@ export async function renderQuiz(view, { navigate }) {
     if (how !== 'reveal' && pct !== lastPct) growBar(fill, { from: `${lastPct}%`, duration: 520 });
     lastPct = pct;
 
+    /* ---- acronyms: what the letters in this question stand for ---- */
+    const acros = findAcronyms([question.question, ...question.choices.map((c) => c.text)]);
+    const acroOpen = () => !!store.getSettings().showAcronyms;
+    const acroPanel = el('div', { class: 'acro-panel', id: `acro-${question.id}` }, [
+      el('div', { class: 'acro-inner' }, [
+        el('dl', { class: 'acro-list' }, acros.map((a) => el('div', { class: 'acro-row' }, [
+          el('dt', { text: a.acr }), el('dd', { text: a.full }),
+        ]))),
+      ]),
+    ]);
+    const acroBtn = el('button', {
+      class: 'pill acro-toggle', type: 'button', 'aria-controls': acroPanel.id,
+      title: 'Show what the acronyms stand for (A)',
+      onclick: () => setAcro(!acroOpen(), true),
+    });
+    const setAcro = (on, animate) => {
+      store.setSettings({ showAcronyms: on });
+      acroBtn.setAttribute('aria-expanded', String(on));
+      acroBtn.replaceChildren(icon('letters', { size: 15 }), on ? 'Hide acronyms' : `Show acronyms (${acros.length})`);
+      body.classList.toggle('acros-on', on);
+      acroPanel.classList.toggle('is-open', on);
+      if (on && animate) cascade(acroPanel.querySelectorAll('.acro-row'), { start: 80, step: 35, distance: 8 });
+    };
+    if (acros.length) setAcro(acroOpen(), false);
+
     body.append(el('div', { class: 'qmeta' }, [
       el('span', { class: 'pill',
         text: `Domain ${question.domain} · ${DOMAINS[question.domain]?.title || ''}` }),
@@ -169,12 +210,15 @@ export async function renderQuiz(view, { navigate }) {
       srsStep !== null
         ? el('span', { class: 'pill pill-srs' }, [icon('smart', { size: 14 }), `Smart review · ${STEPS[srsStep]}-day check`])
         : null,
+      acros.length ? acroBtn : null,
     ]));
 
     /* ---- question ---- */
     const qtext = el('div', { class: 'qtext' });
     qtext.append(renderQuestionText(question.question));
+    wrapAcronyms(qtext);
     body.append(qtext);
+    if (acros.length) body.append(acroPanel);
 
     if (multi) {
       body.append(el('p', { class: 'faint',
@@ -262,7 +306,7 @@ export async function renderQuiz(view, { navigate }) {
         },
       }, [
         el('span', { class: 'key', 'aria-hidden': 'true', text: L[key] }),
-        el('span', { class: 'body' }, [renderQuestionText(choice.text)]),
+        el('span', { class: 'body' }, [wrapAcronyms(el('span', {}, [renderQuestionText(choice.text)]))]),
         el('span', { class: 'mark' }),
       ]);
       buttons.set(key, btn);
@@ -312,9 +356,7 @@ export async function renderQuiz(view, { navigate }) {
         el('div', { class: 'explain-head' }, [
           el('span', { class: 'verdict' }, [
             icon(got ? 'check' : 'x', { size: 20 }), got ? 'Correct' : 'Incorrect',
-            got && how === 'reveal' && (session.streak || 0) >= 3
-              ? el('span', { class: 'streak' }, [icon('flame', { size: 15 }), `${session.streak} in a row`])
-              : null,
+            got && how === 'reveal' && (session.streak || 0) >= 3 ? flameChip(session.streak) : null,
             srsChip,
           ]),
           el('div', { class: 'explain-tools' }, [
@@ -356,6 +398,7 @@ export async function renderQuiz(view, { navigate }) {
         inner.append(el('ul', { class: 'wrongs' },
           wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: L[k] }), el('span', { text: why })]))));
       }
+      wrapAcronyms(inner);
       details.append(inner);
       panel.append(details);
       body.append(panel);
@@ -372,16 +415,19 @@ export async function renderQuiz(view, { navigate }) {
         });
         rise(panel, { delay: 140, distance: 16, duration: 480 });
         drawIcon(panel.querySelector('.verdict .icon'), { delay: 260, duration: 480 });
-        const chip = panel.querySelector('.streak');
-        if (chip) pop(chip, { scale: 1.25, duration: 600 });
+        const streak = session.streak || 0;
+        const chip = panel.querySelector('.flame-chip');
+        const moment = chip ? celebrate(chip, streak) : null;
+        if (headFlame) pop(headFlame, { scale: 1.3, duration: 600 });
         const srsEl = panel.querySelector('.srs-chip');
         if (srsEl) pop(srsEl, { scale: masteredNow ? 1.3 : 1.15, duration: 620 });
         if (got && shownRight[0]) burst(shownRight[0].querySelector('.key'), { count: masteredNow ? 40 : 22 });
 
-        const streak = session.streak || 0;
         if (masteredNow) play('mastered');
-        else if (got) play(streak >= 3 && (streak === 3 || streak % 5 === 0) ? 'streak' : 'correct');
+        else if (moment) { /* the streak moment played its own sound */ }
+        else if (got) play(streak === 3 || (streak > 25 && streak % 5 === 0) || streak === 20 ? 'streak' : 'correct');
         else play('wrong');
+        setTimeout(checkMilestones, 900);
       }
     }
 
@@ -404,7 +450,7 @@ export async function renderQuiz(view, { navigate }) {
 
     body.append(el('p', { class: 'kbd-hint' }, [
       icon('keyboard', { size: 18 }),
-      'Keys: 1–6 pick an answer · Enter submit or next · ← → move · F flag · Esc end',
+      'Keys: 1–6 pick an answer · Enter submit or next · ← → move · F flag · A acronyms · Esc end',
     ]));
 
     /* ---- keyboard ---- */
@@ -428,6 +474,8 @@ export async function renderQuiz(view, { navigate }) {
         ev.preventDefault(); goTo(session.index - 1);
       } else if (ev.key === 'ArrowRight' && session.index < total - 1) {
         ev.preventDefault(); goTo(session.index + 1);
+      } else if (ev.key.toLowerCase() === 'a' && acros.length) {
+        ev.preventDefault(); acroBtn.click();
       } else if (ev.key.toLowerCase() === 'f') {
         ev.preventDefault(); flagBtn.click();
       } else if (ev.key === 'Escape') {

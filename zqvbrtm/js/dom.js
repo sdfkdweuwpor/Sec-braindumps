@@ -48,7 +48,34 @@ export function renderQuestionText(text) {
     codeBuf = [];
   };
 
+  // Exhibits transcribed from the PDF's pictures arrive fenced: ```text for
+  // logs and command output, ```table for rows of " | "-separated cells.
+  let fence = null;
+  let fenceBuf = [];
+  const flushFence = () => {
+    if (fence === 'table') {
+      const rows = fenceBuf.filter((r) => r.trim()).map((r) => r.split(' | ').map((c) => c.trim()));
+      const [head, ...body] = rows;
+      frag.append(el('div', { class: 'exhibit exhibit-table-wrap' }, [
+        el('table', { class: 'exhibit-table' }, [
+          el('thead', {}, [el('tr', {}, head.map((c) => el('th', { scope: 'col', text: c })))]),
+          el('tbody', {}, body.map((r) => el('tr', {}, r.map((c) => el('td', { text: c }))))),
+        ]),
+      ]));
+    } else {
+      frag.append(el('pre', { class: 'exhibit exhibit-text', text: fenceBuf.join('\n') }));
+    }
+    fence = null;
+    fenceBuf = [];
+  };
+
   for (const line of lines) {
+    const open = !fence && line.match(/^```(\w*)\s*$/);
+    if (open) { flushProse(); flushCode(); fence = open[1] || 'text'; continue; }
+    if (fence) {
+      if (/^```\s*$/.test(line)) flushFence(); else fenceBuf.push(line);
+      continue;
+    }
     if (CODEY.test(line) && line.trim()) {
       flushProse();
       codeBuf.push(line);
@@ -57,9 +84,15 @@ export function renderQuestionText(text) {
       buf.push(line);
     }
   }
+  if (fence) flushFence();
   flushProse();
   flushCode();
   return frag;
+}
+
+/** Question text for one-line previews: exhibits dropped, whitespace collapsed. */
+export function plainStem(text) {
+  return String(text).replace(/```\w*\n[\s\S]*?\n```/g, ' … ').replace(/\s+/g, ' ').trim();
 }
 
 export function fmtDate(ts) {

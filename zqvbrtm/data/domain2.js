@@ -62,11 +62,11 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       }
     ],
     "correct": [
@@ -82,7 +82,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p10",
     "needsReview": false,
-    "inferenceConfidence": 0.867,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -96,7 +96,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Access control list"
+        "text": "ACL"
       },
       {
         "key": "B",
@@ -124,7 +124,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p12",
     "needsReview": false,
-    "inferenceConfidence": 0.622,
+    "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -218,7 +218,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst reviews domain activity logs and notices the following:\nWhich of the following is the best explanation for what the security analyst has discovered?",
+    "question": "A security analyst reviews domain activity logs and notices the following:\n```text\nUserID jsmith, password authentication: succeeded, MFA: failed (invalid code)\nUserID jsmith, password authentication: succeeded, MFA: failed (invalid code)\nUserID jsmith, password authentication: succeeded, MFA: failed (invalid code)\nUserID jsmith, password authentication: succeeded, MFA: failed (invalid code)\n```\nWhich of the following is the best explanation for what the security analyst has discovered?",
     "choices": [
       {
         "key": "A",
@@ -240,17 +240,17 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The log excerpt (not reproduced in the source) shows many failed logins for jsmith in quick succession. Repeated rapid password guesses against one account are a brute-force attack.",
+    "explanation": "Every attempt gets past the password and then fails on the one-time code. Whoever is logging in already has jsmith's password and is now guessing MFA codes over and over, which is a brute-force attack on the account's second factor.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "A lockout may follow repeated failures, but it would be the result, not the explanation of the activity.",
-      "B": "A keylogger captures keystrokes quietly. It would produce successful logins, not a string of failures.",
-      "D": "Ransomware encrypts files. It does not cause repeated failed logins against one account."
+      "A": "The log shows repeated attempts continuing, not a lockout. A lockout would be the result of this activity, not the explanation for it.",
+      "B": "A keylogger may be how the password was stolen, but the activity in the log is someone repeatedly guessing the MFA code.",
+      "D": "Ransomware encrypts files. It does not produce a run of failed MFA prompts on one account."
     },
     "references": [],
     "source": "bank.pdf#p19",
     "needsReview": false,
-    "inferenceConfidence": 0.857,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -310,7 +310,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
@@ -334,7 +334,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p31",
     "needsReview": false,
-    "inferenceConfidence": 0.889,
+    "inferenceConfidence": 0.867,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -512,11 +512,11 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A company is adding a clause to its AUP that states employees are not allowed to modify the operating system on mobile devices. Which of the following vulnerabilities is the organization addressing?",
+    "question": "A company is adding a clause to its AUP that states employees are not allowed to modify the OS on mobile devices. Which of the following vulnerabilities is the organization addressing?",
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -544,7 +544,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p42",
     "needsReview": false,
-    "inferenceConfidence": 0.867,
+    "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -554,7 +554,7 @@ export const domain2Questions = [
     "objective": "2.1",
     "objectiveTitle": "Compare and contrast common threat actors and motivations",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) wants to explicitly raise awareness about the increase of ransomware-as-a-service in a report to the management team. Which of the following best describes the threat actor in the CISO's report?",
+    "question": "A CISO wants to explicitly raise awareness about the increase of ransomware-as-a-service in a report to the management team. Which of the following best describes the threat actor in the CISO's report?",
     "choices": [
       {
         "key": "A",
@@ -646,7 +646,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
@@ -670,7 +670,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p49",
     "needsReview": false,
-    "inferenceConfidence": 0.944,
+    "inferenceConfidence": 0.933,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -822,7 +822,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Reflected denial of service"
+        "text": "Reflected DoS"
       }
     ],
     "correct": [
@@ -906,7 +906,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Operating system"
+        "text": "OS"
       }
     ],
     "correct": [
@@ -932,7 +932,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "An administrator is reviewing a single server's security logs and discovers the following;\nWhich of the following best describes the action captured in this log file?",
+    "question": "An administrator is reviewing a single server's security logs and discovers the following:\n```table\nKeywords | Date and time | Source | Event ID | Task category\nAudit Failure | 09/16/2022 11:13:05 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:07 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:09 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:11 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:13 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:15 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:17 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:19 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:21 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:23 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:25 AM | Microsoft Windows security | 4625 | Logon\nAudit Failure | 09/16/2022 11:13:27 AM | Microsoft Windows security | 4625 | Logon\n```\nWhich of the following best describes the action captured in this log file?",
     "choices": [
       {
         "key": "A",
@@ -954,17 +954,17 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The log excerpt (not reproduced in the source) shows many failed logins against the Administrator account in quick succession. Rapid repeated password guessing against one account is a brute-force attack.",
+    "explanation": "Twelve Windows 4625 events (failed logon) arrive exactly two seconds apart. A steady, machine-timed run of failed logons is automated password guessing: a brute-force attack.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Privilege escalation raises the rights of an account that already has access; the log shows failed attempts to get in.",
-      "C": "A password audit tests stored password strength offline; it does not generate a burst of failed logins.",
-      "D": "A user who forgot their password tries a few times, not a rapid automated series."
+      "B": "Privilege escalation raises the rights of an account that already has access; every event here is a failed attempt to get in.",
+      "C": "A password audit tests stored password strength offline; it does not generate a burst of failed logons.",
+      "D": "A user who forgot their password tries a few times at human speed, not twelve times at exact two-second intervals."
     },
     "references": [],
     "source": "bank.pdf#p56",
     "needsReview": false,
-    "inferenceConfidence": 0.4,
+    "inferenceConfidence": 0.364,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1058,7 +1058,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following scenarios describes a possible business email compromise attack?",
+    "question": "Which of the following scenarios describes a possible BEC attack?",
     "choices": [
       {
         "key": "A",
@@ -1152,7 +1152,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An attacker posing as the Chief Executive Officer calls an employee and instructs the employee to buy gift cards. Which of the following techniques is the attacker using?",
+    "question": "An attacker posing as the CEO calls an employee and instructs the employee to buy gift cards. Which of the following techniques is the attacker using?",
     "choices": [
       {
         "key": "A",
@@ -1320,7 +1320,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is reviewing the following logs:\nWhich of the following attacks is most likely occurring?",
+    "question": "A security analyst is reviewing the following logs:\n```text\n[10:00:00 AM] Login rejected - username administrator - password Spring2023\n[10:00:01 AM] Login rejected - username jsmith - password Spring2023\n[10:00:01 AM] Login rejected - username guest - password Spring2023\n[10:00:02 AM] Login rejected - username cpolk - password Spring2023\n[10:00:03 AM] Login rejected - username fmartin - password Spring2023\n```\nWhich of the following attacks is most likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -1342,7 +1342,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs (not reproduced in the source) show one or two common passwords tried against many different accounts. Few passwords across many accounts, staying under lockout thresholds, is password spraying.",
+    "explanation": "The same password, Spring2023, is tried once against five different accounts within three seconds. One common password across many accounts, which stays under each account's lockout threshold, is password spraying.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Account forgery is not a standard attack pattern in these logs.",
@@ -1362,7 +1362,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator receives the following alert from a file integrity monitoring tool:\nThe hash of the cmd.exe file has changed.\nThe systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
+    "question": "A systems administrator receives the following alert from an FIM tool:\nThe hash of the cmd.exe file has changed.\nThe systems administrator checks the OS logs and notices that no patches were applied in the last two months. Which of the following most likely occurred?",
     "choices": [
       {
         "key": "A",
@@ -1394,7 +1394,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p68",
     "needsReview": false,
-    "inferenceConfidence": 0.6,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1450,7 +1450,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -1462,7 +1462,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -1478,7 +1478,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p71",
     "needsReview": false,
-    "inferenceConfidence": 0.941,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1636,7 +1636,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
@@ -1656,7 +1656,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p75",
     "needsReview": false,
-    "inferenceConfidence": 0.533,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1716,11 +1716,11 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
-        "text": "Access control list"
+        "text": "ACL"
       },
       {
         "key": "D",
@@ -1740,7 +1740,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p79",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.682,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1792,7 +1792,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An employee receives a text message from an unknown number claiming to be the company's Chief Executive Officer and asking the employee to purchase several gift cards. Which of the following types of attacks does this describe?",
+    "question": "An employee receives a text message from an unknown number claiming to be the company's CEO and asking the employee to purchase several gift cards. Which of the following types of attacks does this describe?",
     "choices": [
       {
         "key": "A",
@@ -1892,7 +1892,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -1908,7 +1908,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p86",
     "needsReview": false,
-    "inferenceConfidence": 0.941,
+    "inferenceConfidence": 0.929,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2044,7 +2044,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator is advised that an external web server is not functioning properly. The administrator reviews the following firewall logs containing traffic going to the web server:\nWhich of the following attacks is likely occurring?",
+    "question": "A systems administrator is advised that an external web server is not functioning properly. The administrator reviews the following firewall logs containing traffic going to the web server:\n```table\nDate | Time | Source IP | Src port | Flag | Dest IP | Dest port\n2023-01-25 | 01:45:09.102 | 98.123.45.100 | 4560 | SYN | 100.50.20.7 | 443\n2023-01-25 | 01:45:09.102 | 95.123.45.101 | 3361 | SYN | 100.50.20.7 | 443\n2023-01-25 | 01:45:09.102 | 99.123.45.102 | 3662 | SYN | 100.50.20.7 | 443\n2023-01-25 | 01:45:09.102 | 89.123.45.103 | 5663 | SYN | 100.50.20.7 | 443\n2023-01-25 | 01:45:09.102 | 98.123.45.104 | 4064 | SYN | 100.50.20.7 | 443\n2023-01-25 | 01:45:09.102 | 80.123.45.105 | 4365 | SYN | 100.50.20.7 | 443\n```\nWhich of the following attacks is likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -2066,11 +2066,11 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The firewall log (not reproduced in the source) shows a flood of connections to the web server from many different source addresses. Traffic from many sources overwhelming one server is a DDoS attack.",
+    "explanation": "In the same millisecond, six different source addresses each send a SYN to the web server's port 443. A flood of connection requests from many sources overwhelming one server is a DDoS attack.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "B": "Directory traversal requests files outside the web root through crafted paths; it does not produce a traffic flood.",
-      "C": "Brute force would show repeated login attempts, not general connection floods from many addresses.",
+      "B": "Directory traversal requests files outside the web root through crafted paths; these are bare SYN packets with no request at all.",
+      "C": "Brute force would show repeated login attempts, not half-open connections from many addresses.",
       "D": "An HTTPS downgrade forces weaker encryption; it does not stop the server functioning."
     },
     "references": [],
@@ -2266,7 +2266,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
@@ -2286,7 +2286,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p110",
     "needsReview": false,
-    "inferenceConfidence": 0.533,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2637,11 +2637,11 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "A website user is locked out of an account after clicking an email link and visiting a different website Web server logs show the user's password was changed, even though the user did not change the password. Which of the following is the most likely cause?",
+    "question": "A website user is locked out of an account after clicking an email link and visiting a different website. Web server logs show the user's password was changed, even though the user did not change the password. Which of the following is the most likely cause?",
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site request forgery"
+        "text": "CSRF"
       },
       {
         "key": "B",
@@ -2653,7 +2653,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -2669,7 +2669,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p124",
     "needsReview": false,
-    "inferenceConfidence": 0.52,
+    "inferenceConfidence": 0.722,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2679,7 +2679,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "The security operations center is researching an event concerning a suspicious IP address. A security analyst looks at the following event logs and discovers that a significant portion of the user accounts have experienced failed log-in attempts when authenticating from the same IP address:\nWhich of the following most likely describes the attack that took place?",
+    "question": "The SOC is researching an event concerning a suspicious IP address. A security analyst looks at the following event logs and discovers that a significant portion of the user accounts have experienced failed log-in attempts when authenticating from the same IP address:\n```text\n184.168.131.241 - userA - failed authentication\n184.168.131.241 - userA - failed authentication\n184.168.131.241 - userB - failed authentication\n184.168.131.241 - userB - failed authentication\n184.168.131.241 - userC - failed authentication\n184.168.131.241 - userC - failed authentication\n```\nWhich of the following most likely describes the attack that took place?",
     "choices": [
       {
         "key": "A",
@@ -2721,7 +2721,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst finds a rogue device during a monthly audit of current endpoint assets that are connected to the network. The corporate network utilizes 802.1X for access control. To be allowed on the network, a device must have a known hardware address, and a valid user name and password must be entered in a captive portal. The following is the audit report:\nWhich of the following is the most likely way a rogue device was allowed to connect?",
+    "question": "A security analyst finds a rogue device during a monthly audit of current endpoint assets that are connected to the network. The corporate network utilizes 802.1X for access control. To be allowed on the network, a device must have a known hardware address, and a valid user name and password must be entered in a captive portal. The following is the audit report:\n```table\nIP address | MAC | Host | Account\n10.18.04.42 | BE-AC-11-F1-E4-44 | PC-NY | user1\n10.18.04.38 | EB-AC-11-82-42-F3 | PC-CA | user3\n10.18.04.59 | 28-BB-5A-11-52-29 | PC-PA | user2\n10.18.04.58 | 28-BB-5A-F0-E9-D1 | PC-TX | user4\n10.18.04.22 | EB-AC-11-82-42-F3 | WIN10 | user3\n10.18.04.26 | BB-28-11-21-A2-73 | PC-NJ | admin\n```\nWhich of the following is the most likely way a rogue device was allowed to connect?",
     "choices": [
       {
         "key": "A",
@@ -2771,7 +2771,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "C",
@@ -2795,7 +2795,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p138",
     "needsReview": false,
-    "inferenceConfidence": 0.833,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2931,7 +2931,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "A systems administrator notices that one of the systems critical for processing customer transactions is running an end-of-life operating system. Which of the following techniques would increase enterprise security?",
+    "question": "A systems administrator notices that one of the systems critical for processing customer transactions is running an end-of-life OS. Which of the following techniques would increase enterprise security?",
     "choices": [
       {
         "key": "A",
@@ -3314,7 +3314,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "Which of the following best describes a social engineering attack that uses a targeted electronic messaging campaign aimed at a Chief Executive Officer?",
+    "question": "Which of the following best describes a social engineering attack that uses a targeted electronic messaging campaign aimed at a CEO?",
     "choices": [
       {
         "key": "A",
@@ -3398,7 +3398,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst finds the following:\nPS>.\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp- domain.com /ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327 Which of the following best describes how the attacker gained access to the hardened PC?",
+    "question": "An organization experienced a security breach that allowed an attacker to send fraudulent wire transfers from a hardened PC exclusively to the attacker's bank through remote connections. A security analyst is creating a timeline of events and has found a different PC on the network containing malware. Upon reviewing the command history, the analyst finds the following:\n```text\nPS> .\\mimikatz.exe \"sekurlsa::pth /user:localadmin /domain:corp-domain.com /ntlm:B4B9B02E1F29A3CF193EAB28C8D617D3F327\"\n```\nWhich of the following best describes how the attacker gained access to the hardened PC?",
     "choices": [
       {
         "key": "A",
@@ -3410,7 +3410,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "The attacker utilized living-off-the-land binaries to evade endpoint detection and response software."
+        "text": "The attacker utilized living-off-the-land binaries to evade EDR software."
       },
       {
         "key": "D",
@@ -3430,7 +3430,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p170",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3566,7 +3566,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company's online shopping website became unusable shortly after midnight on January 30, 2023. When a security analyst reviewed the database server, the analyst noticed the following code used for backing up data:\nWhich of the following should the analyst do next?",
+    "question": "A company's online shopping website became unusable shortly after midnight on January 30, 2023. When a security analyst reviewed the database server, the analyst noticed the following code used for backing up data:\n```text\nIF DATE() = \"01/30/2023\" THEN BEGIN\n  DROP DATABASE WebShopOnline;\nEND\n```\nWhich of the following should the analyst do next?",
     "choices": [
       {
         "key": "A",
@@ -3588,7 +3588,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Malicious code appearing in what should be a routine backup job, triggering on a date, points to an attacker having injected it through the application. Reviewing the WAF logs shows whether a command injection request reached the server and when, which establishes how the code got there.",
+    "explanation": "The backup code drops the whole WebShopOnline database on one date, which is why the site died just after midnight on January 30. Published answers say to review the WAF logs for command injection, to find out whether an attacker inserted the code through the web application. Many readers argue for a logic bomb planted by an insider instead, which would point to recently terminated DBAs.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Checking terminated DBAs investigates an insider with legitimate database access. That is worth ruling out but is speculation until the injection path is checked.",
@@ -3616,11 +3616,11 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "D",
@@ -3640,7 +3640,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p182",
     "needsReview": false,
-    "inferenceConfidence": 0.867,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3654,7 +3654,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -3682,7 +3682,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p184",
     "needsReview": false,
-    "inferenceConfidence": 0.933,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3696,11 +3696,11 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "B",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "C",
@@ -3724,7 +3724,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p186",
     "needsReview": false,
-    "inferenceConfidence": 0.833,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3734,7 +3734,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst receives an alert from a corporate endpoint used by employees to issue visitor badges. The alert contains the following details:\nWhich of the following best describes the indicator that triggered the alert?",
+    "question": "A security analyst receives an alert from a corporate endpoint used by employees to issue visitor badges. The alert contains the following details:\n```table\nSource host | Destination host | Port | Protocol | Action\nFrontDesk1 | DC01 | 445 | TCP | Fail\nFrontDesk1 | DC02 | 445 | TCP | Fail\nFrontDesk1 | File1 | 445 | TCP | Connect\nFrontDesk1 | File2 | 445 | TCP | Connect\nFrontDesk1 | FDesk2 | 445 | TCP | Connect\nFrontDesk1 | Office1 | 445 | TCP | Fail\nFrontDesk1 | Exchange1 | 445 | TCP | Fail\nFrontDesk1 | Exchange2 | 445 | TCP | Fail\nFrontDesk1 | Office3 | 445 | TCP | Connect\nFrontDesk1 | Office4 | 445 | TCP | Connect\nFrontDesk1 | ITSupport11 | 445 | TCP | Connect\n```\nWhich of the following best describes the indicator that triggered the alert?",
     "choices": [
       {
         "key": "A",
@@ -3754,21 +3754,21 @@ export const domain2Questions = [
       }
     ],
     "correct": [
-      "B"
+      "C"
     ],
-    "explanation": "The alert details (not reproduced in the source) show many failed login attempts against the badge workstation in a short time. A rapid run of failed guesses is a brute-force attack.",
+    "explanation": "The badge-issuing PC, FrontDesk1, is opening SMB sessions on port 445 to eleven different servers at once, including both domain controllers and both Exchange servers. A front-desk machine holding that many simultaneous sessions is the concurrent session usage indicator, and it looks like an attacker probing the network from a compromised endpoint.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Blocked content means a web or file filter stopped something, not repeated login failures.",
-      "C": "Concurrent session usage is the same account logged in from multiple places.",
-      "D": "Account lockout may follow repeated failures, but the indicator is the brute-force activity itself."
+      "A": "Blocked content means a web or file filter stopped something. The Fail entries are refused connections, not filtered content.",
+      "B": "Brute force would show many login attempts against one account. The log shows connections to many hosts, not password guesses.",
+      "D": "Nothing in the log mentions an account being locked; the entries are connection results."
     },
     "references": [],
     "source": "bank.pdf#p186",
     "needsReview": false,
     "inferenceConfidence": 0.9,
     "needsExplanation": false,
-    "keyCorrected": false
+    "keyCorrected": true
   },
   {
     "id": "q0472",
@@ -3902,7 +3902,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A systems administrator receives a text message from an unknown number claiming to be the Chief Executive Officer of the company. The message states an emergency situation requires a password reset. Which of the following threat vectors is being used?",
+    "question": "A systems administrator receives a text message from an unknown number claiming to be the CEO of the company. The message states an emergency situation requires a password reset. Which of the following threat vectors is being used?",
     "choices": [
       {
         "key": "A",
@@ -3994,7 +3994,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
@@ -4018,7 +4018,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p196",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4074,7 +4074,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "B",
@@ -4107,7 +4107,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p204",
     "needsReview": false,
-    "inferenceConfidence": 0.571,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4159,7 +4159,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A systems administrator receives an alert that a company's internal file server is very slow and is only working intermittently. The systems administrator reviews the server management software and finds the following information about the server:\nWhich of the following indicators most likely triggered this alert?",
+    "question": "A systems administrator receives an alert that a company's internal file server is very slow and is only working intermittently. The systems administrator reviews the server management software and finds the following information about the server:\n```table\nServer name | Connections | CPU | Memory | Reads/s | Writes/s\nFileSev01 | 12 | 99.6% | 97% | 50 KB/s | 100 KB/s\n```\nWhich of the following indicators most likely triggered this alert?",
     "choices": [
       {
         "key": "A",
@@ -4243,7 +4243,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "Which of the following allows an exploit to go undetected by the operating system?",
+    "question": "Which of the following allows an exploit to go undetected by the OS?",
     "choices": [
       {
         "key": "A",
@@ -4427,7 +4427,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Utilizing a web-application firewall"
+        "text": "Utilizing a WAF"
       },
       {
         "key": "E",
@@ -4453,7 +4453,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p221",
     "needsReview": false,
-    "inferenceConfidence": 0.684,
+    "inferenceConfidence": 0.65,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4509,7 +4509,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -4537,7 +4537,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p222",
     "needsReview": false,
-    "inferenceConfidence": 0.471,
+    "inferenceConfidence": 0.385,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4547,7 +4547,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security administrator observed the following in a web server log while investigating an incident:\n\"GET ../../../../etc/passwd\" Which of the following attacks did the security administrator most likely see?",
+    "question": "A security administrator observed the following in a web server log while investigating an incident:\n```text\nGET ../../../../etc/passwd\n```\nWhich of the following attacks did the security administrator most likely see?",
     "choices": [
       {
         "key": "A",
@@ -4605,7 +4605,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -4673,7 +4673,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security administrator documented the following records during an assessment of network services:\nTwo weeks later, the administrator performed a log review and noticed the records were changed as follows:\nWhen consulting the service owner, the administrator validated that the new address was not part of the company network. Which of the following was the company most likely experiencing?",
+    "question": "A security administrator documented the following records during an assessment of network services:\n```table\nRecord | Type | Address | TTL\n@ | A | 192.168.1.1 | 14400\nWWW | CNAME | 192.168.1.1 | 14400\n```\nTwo weeks later, the administrator performed a log review and noticed the records were changed as follows:\n```table\nRecord | Type | Address | TTL\n@ | A | 233.123.123.23 | 14400\nWWW | CNAME | 233.123.123.23 | 14400\n```\nWhen consulting the service owner, the administrator validated that the new address was not part of the company network. Which of the following was the company most likely experiencing?",
     "choices": [
       {
         "key": "A",
@@ -4803,7 +4803,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "B",
@@ -4831,7 +4831,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p231",
     "needsReview": false,
-    "inferenceConfidence": 0.385,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4887,7 +4887,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Business email compromise"
+        "text": "BEC"
       },
       {
         "key": "B",
@@ -5177,7 +5177,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A company's gate access logs show multiple entries from an employee's ID badge within a two- minute period. Which of the following is this an example of?",
+    "question": "A company's gate access logs show multiple entries from an employee's ID badge within a two-minute period. Which of the following is this an example of?",
     "choices": [
       {
         "key": "A",
@@ -5391,7 +5391,7 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -5419,7 +5419,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p253",
     "needsReview": false,
-    "inferenceConfidence": 0.444,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5429,7 +5429,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A help desk employee receives a call from someone impersonating the Chief Executive Officer.\nThe caller asks for assistance with resetting a password. Which of the following best describes this event?",
+    "question": "A help desk employee receives a call from someone impersonating the CEO.\nThe caller asks for assistance with resetting a password. Which of the following best describes this event?",
     "choices": [
       {
         "key": "A",
@@ -5567,11 +5567,11 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "Most users trust the core operating system features and may not notice if the system has been compromised."
+        "text": "Most users trust the core OS features and may not notice if the system has been compromised."
       },
       {
         "key": "D",
-        "text": "Exploitation of an operating system vulnerability is typically easier than any other vulnerability."
+        "text": "Exploitation of an OS vulnerability is typically easier than any other vulnerability."
       }
     ],
     "correct": [
@@ -5739,7 +5739,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Upgrade end-of-support operating systems."
+        "text": "Upgrade end-of-support OSs."
       }
     ],
     "correct": [
@@ -5807,7 +5807,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An employee receives a text message from an unrecognized number claiming to be the Chief Executive Officer and asking the employee to purchase gift cards. Which of the following types of attacks describes this example?",
+    "question": "An employee receives a text message from an unrecognized number claiming to be the CEO and asking the employee to purchase gift cards. Which of the following types of attacks describes this example?",
     "choices": [
       {
         "key": "A",
@@ -5849,11 +5849,11 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "An unexpected and out-of-character email message from a Chief Executive Officer's corporate account asked an employee to provide financial information and to change the recipient's contact number. Which of the following attack vectors is most likely being used?",
+    "question": "An unexpected and out-of-character email message from a CEO's corporate account asked an employee to provide financial information and to change the recipient's contact number. Which of the following attack vectors is most likely being used?",
     "choices": [
       {
         "key": "A",
-        "text": "Business email compromise"
+        "text": "BEC"
       },
       {
         "key": "B",
@@ -5881,7 +5881,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,
-    "inferenceConfidence": 0.762,
+    "inferenceConfidence": 0.583,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5891,7 +5891,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is reviewing the following logs about a suspicious activity alert for a user's VPN log-ins:\nWhich of the following malicious activity indicators triggered the alert?",
+    "question": "A security analyst is reviewing the following logs about a suspicious activity alert for a user's VPN log-ins:\n```table\nDate | Time | Action | Source IP | City-State-Country\n2023-01-23 | 08:21:41 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-24 | 08:23:41 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-25 | 08:29:39 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-26 | 08:27:44 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-27 | 08:22:24 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-27 | 09:45:35 | Success | 185.17.106.237 | Rome-Italy\n2023-01-27 | 09:47:55 | Success | 188.17.105.137 | Rome-Italy\n2023-01-27 | 09:55:36 | Success | 207.414.201.19 | Chicago-IL-USA\n2023-01-27 | 16:28:15 | Success | 207.414.201.19 | Chicago-IL-USA\n```\nWhich of the following malicious activity indicators triggered the alert?",
     "choices": [
       {
         "key": "A",
@@ -5979,11 +5979,11 @@ export const domain2Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
@@ -6007,7 +6007,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p281",
     "needsReview": false,
-    "inferenceConfidence": 0.889,
+    "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6211,7 +6211,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Business email compromise"
+        "text": "BEC"
       }
     ],
     "correct": [
@@ -6227,7 +6227,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p287",
     "needsReview": false,
-    "inferenceConfidence": 0.526,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6253,7 +6253,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Business email compromise"
+        "text": "BEC"
       }
     ],
     "correct": [
@@ -6269,7 +6269,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p288",
     "needsReview": false,
-    "inferenceConfidence": 0.526,
+    "inferenceConfidence": 0.4,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6279,7 +6279,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst receives an alert from a front-end web server connected to a database back end. The alert contains the following logs:\nWhich of the following attacks is occurring?",
+    "question": "A security analyst receives an alert from a front-end web server connected to a database back end. The alert contains the following logs:\n```text\nSELECT * FROM users WHERE UserID = 1=1\nSELECT * FROM users WHERE username = 'admin'--' AND password = 'password'\nIF 1=1 THEN dbms_lock.sleep(20) ELSE dbms_lock.sleep(0); END IF; END\n```\nWhich of the following attacks is occurring?",
     "choices": [
       {
         "key": "A",
@@ -6311,7 +6311,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p289",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6452,7 +6452,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "multi",
-    "question": "Employees receive a text message containing a link to a web page that prompts the user to enter their ID and a work phone number. The text message appears to come from the Chief Executive Officer, but it is later discovered that the message is not legitimate. Which of the following does this best represent? (Choose two.)",
+    "question": "Employees receive a text message containing a link to a web page that prompts the user to enter their ID and a work phone number. The text message appears to come from the CEO, but it is later discovered that the message is not legitimate. Which of the following does this best represent? (Choose two.)",
     "choices": [
       {
         "key": "A",
@@ -6546,7 +6546,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An employee receives a work phone. Instead of starting up with the normal operating system, the phone loads to a gaming platform using administrative credentials. Which of the following issues occurred?",
+    "question": "An employee receives a work phone. Instead of starting up with the normal OS, the phone loads to a gaming platform using administrative credentials. Which of the following issues occurred?",
     "choices": [
       {
         "key": "A",
@@ -6768,7 +6768,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "Denial of service"
+        "text": "DoS"
       },
       {
         "key": "D",
@@ -6848,7 +6848,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "C",
@@ -6856,7 +6856,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -6872,7 +6872,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p310",
     "needsReview": false,
-    "inferenceConfidence": 0.895,
+    "inferenceConfidence": 0.917,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6924,7 +6924,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst is monitoring logs from the organization's SIEM and identifies logs related to one of their salespeople:\nWhich of the following is being displayed in the logs?",
+    "question": "A security analyst is monitoring logs from the organization's SIEM and identifies logs related to one of their salespeople:\n```table\nTime | IP address | Location | Employee ID | App | Status\n14:02 | 72.45.38.27 | Atlanta | 25687 | VPN | Success\n14:04 | 72.45.38.27 | Atlanta | 25687 | Email | Failure\n14:07 | 58.67.47.48 | Beijing | 25687 | VPN | Success\n14:15 | 72.45.38.27 | Atlanta | 25687 | Teams | Success\n```\nWhich of the following is being displayed in the logs?",
     "choices": [
       {
         "key": "A",
@@ -6940,7 +6940,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Cross-site request forgery"
+        "text": "CSRF"
       }
     ],
     "correct": [
@@ -6956,7 +6956,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p312",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.471,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7186,7 +7186,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An analyst discovers a suspicious item in the SQL server logs. Which of the following could be evidence of an attempted SQL injection?",
+    "question": "An analyst discovers a suspicious item in the SQL server logs. Which of the following could be evidence of an attempted SQLi?",
     "choices": [
       {
         "key": "A",
@@ -7218,7 +7218,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p318",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7320,7 +7320,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "C",
@@ -7344,7 +7344,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p323",
     "needsReview": false,
-    "inferenceConfidence": 0.941,
+    "inferenceConfidence": 1.0,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7858,7 +7858,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "Which of the following should be used to ensure that a device is inaccessible to a network- connected resource?",
+    "question": "Which of the following should be used to ensure that a device is inaccessible to a network-connected resource?",
     "choices": [
       {
         "key": "A",
@@ -7866,7 +7866,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "Web application firewall"
+        "text": "WAF"
       },
       {
         "key": "C",
@@ -7890,7 +7890,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p340",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8110,7 +8110,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst reviews the following SIEM events:\nWhich of the following best describes the observed behavior?",
+    "question": "A security analyst reviews the following SIEM events:\n```text\n[04-28-2024] 08:00:06 username: bobby successful login location: Toronto, CA src IP: 36.15.36.100\n[04-28-2024] 08:03:17 username: bobby successful login location: New York, US src IP: 69.97.63.66\n[04-28-2024] 08:05:02 username: bobby successful login location: Melbourne, AU src IP: 88.55.11.02\n[04-28-2024] 08:09:17 username: bobby successful login location: Milan, IT src IP: 98.10.22.96\n[04-28-2024] 08:11:00 username: bobby successful login location: New York, US src IP: 69.97.63.66\n```\nWhich of the following best describes the observed behavior?",
     "choices": [
       {
         "key": "A",
@@ -8122,7 +8122,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "D",
@@ -8142,7 +8142,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p345",
     "needsReview": false,
-    "inferenceConfidence": 0.364,
+    "inferenceConfidence": 0.571,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8152,7 +8152,7 @@ export const domain2Questions = [
     "objective": "2.5",
     "objectiveTitle": "Explain the purpose of mitigation techniques used to secure the enterprise",
     "type": "single",
-    "question": "An administrator discovers a cross-site scripting vulnerability on a company website. Which of the following will most likely remediate the issue?",
+    "question": "An administrator discovers an XSS vulnerability on a company website. Which of the following will most likely remediate the issue?",
     "choices": [
       {
         "key": "A",
@@ -8184,7 +8184,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p348",
     "needsReview": false,
-    "inferenceConfidence": 0.312,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8404,7 +8404,7 @@ export const domain2Questions = [
     "objective": "2.3",
     "objectiveTitle": "Explain various types of vulnerabilities",
     "type": "single",
-    "question": "An attacker gained access to a virtual machine and was able to access the hypervisor. Which of the following describes this attack?",
+    "question": "An attacker gained access to a VM and was able to access the hypervisor. Which of the following describes this attack?",
     "choices": [
       {
         "key": "A",
@@ -8412,7 +8412,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
@@ -8436,7 +8436,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p353",
     "needsReview": false,
-    "inferenceConfidence": 0.444,
+    "inferenceConfidence": 0.533,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8458,7 +8458,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "Business email compromise"
+        "text": "BEC"
       },
       {
         "key": "D",
@@ -8572,7 +8572,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst receives an alert from a web server that contains the following logs:\nWhich of the following attacks is being attempted?",
+    "question": "A security analyst receives an alert from a web server that contains the following logs:\n```text\nGET /image?filename= ../../../etc/passwd\nHost: AcmeInc.web.net\nuseragent: python-request/ 2.27.1\n\nGET /image?filename= ../../../etc/shadow\nHost: AcmeInc.web.net\nuseragent: python-request/ 2.27.1\n```\nWhich of the following attacks is being attempted?",
     "choices": [
       {
         "key": "A",
@@ -8630,7 +8630,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -8646,7 +8646,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p367",
     "needsReview": false,
-    "inferenceConfidence": 0.818,
+    "inferenceConfidence": 0.75,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8832,7 +8832,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "C",
@@ -8840,7 +8840,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       }
     ],
     "correct": [
@@ -8856,7 +8856,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p376",
     "needsReview": false,
-    "inferenceConfidence": 0.867,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8908,7 +8908,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "While troubleshooting an internal resource's poor performance for an end user, a network engineer performs a traceroute on the end device and receives the following output:\nThe engineer performs a traceroute from a device that is not experiencing poor performance but is connected to the same port. The engineer receives the following output:\nWhich of the following is most likely occurring?",
+    "question": "While troubleshooting an internal resource's poor performance for an end user, a network engineer performs a traceroute on the end device and receives the following output:\nThe engineer\n```text\nC:\\User>tracert 10.100.15.20\nTracing route to [internal.resource.org] 10.100.15.20\nover a maximum of 30 hops:\n  1  200 ms  200 ms  200 ms  10.20.10.10\n  2    5 ms    3 ms    3 ms  10.20.10.1\n  3   20 ms   20 ms   10 ms  10.25.10.10\n  4   10 ms    8 ms   10 ms  10.30.110.1\n  5    5 ms    6 ms    3 ms  10.100.15.20\n``` performs a traceroute from a device that is not experiencing poor performance but is connected to the same port. The engineer receives the following output:\nWhich\n```text\nC:\\Engineer>tracert 10.100.15.20\nTracing route to [internal.resource.org] 10.100.15.20\nover a maximum of 30 hops:\n  1    5 ms    3 ms    3 ms  10.20.10.1\n  2   20 ms   20 ms   10 ms  10.25.10.10\n  3   10 ms    8 ms   10 ms  10.30.110.1\n  4    5 ms    6 ms    3 ms  10.100.15.20\n``` of the following is most likely occurring?",
     "choices": [
       {
         "key": "A",
@@ -8950,11 +8950,11 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A network security analyst monitors the network's IDS. which has flagged unusual activity. The IDS has detected multiple login attempts to a database server within a short period. These attempts come from various IP addresses that are not normally recognized by the network's usual traffic patterns. Each attempt uses the same username and password. Based on the following log output:\nWhich of the following types of network attacks is most likely occurring?",
+    "question": "A network security analyst monitors the network's IDS, which has flagged unusual activity. The IDS has detected multiple login attempts to a database server within a short period. These attempts come from various IP addresses that are not normally recognized by the network's usual traffic patterns. Each attempt uses the same username and password. Based on the following log output:\n```text\n2025-04-10T14:22:01.4532 | Source IP: 192.168.15.101 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:02.1122 | Source IP: 192.168.15.102 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:02.7835 | Source IP: 192.168.15.103 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:03.5637 | Source IP: 192.168.15.104 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:04.9474 | Source IP: 192.168.15.105 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:05.5673 | Source IP: 192.168.15.106 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:06.1573 | Source IP: 192.168.15.107 | Status: Failed | User: JDoe | Action: Login attempt\n2025-04-10T14:22:07.7462 | Source IP: 192.168.15.108 | Status: Failed | User: JDoe | Action: Login attempt\n```\nWhich of the following types of network attacks is most likely occurring?",
     "choices": [
       {
         "key": "A",
-        "text": "Cross-site scripting"
+        "text": "XSS"
       },
       {
         "key": "B",
@@ -8962,11 +8962,11 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "Distributed denial of service"
+        "text": "DDoS"
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -8982,7 +8982,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p381",
     "needsReview": false,
-    "inferenceConfidence": 0.444,
+    "inferenceConfidence": 0.417,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9160,7 +9160,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A user experiences the following issues while using their computer:\n- Slower than normal performance while browsing the web\n- Unexpected account lockouts\n- Receiving error messages when attempting to access web pages Which of the following attacks do these issues indicate?",
+    "question": "A user experiences the following issues while using their computer:\n- Slower than normal performance while browsing the web\n- Unexpected account lockouts\n- Receiving error messages when attempting to access web pages\nWhich of the following attacks do these issues indicate?",
     "choices": [
       {
         "key": "A",
@@ -9464,7 +9464,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "While analyzing SIEM alerts for a company WAR an incident response analyst observes the following:\nhttps://corporate-A.com/loadimage?filename=../../../etc/ https://corporate-A.com/loadimage?filename=../../../etc/passwd https://corporate-A.com/loadimage?filename=../../../etc/passwd Which of the following best describes the observed behavior?",
+    "question": "While analyzing SIEM alerts for a company WAF, an incident response analyst observes the following:\n```text\nhttps://corporate-A.com/loadimage?filename=../../../etc/\nhttps://corporate-A.com/loadimage?filename=../../../etc/passwd\nhttps://corporate-A.com/loadimage?filename=../../../etc/passwd\n```\nWhich of the following best describes the observed behavior?",
     "choices": [
       {
         "key": "A",
@@ -9602,7 +9602,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "SQL injection"
+        "text": "SQLi"
       },
       {
         "key": "D",
@@ -9622,7 +9622,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p414",
     "needsReview": false,
-    "inferenceConfidence": 0.556,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9816,7 +9816,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "SQL injection"
+        "text": "SQLi"
       }
     ],
     "correct": [
@@ -9832,7 +9832,7 @@ export const domain2Questions = [
     "references": [],
     "source": "bank.pdf#p426",
     "needsReview": false,
-    "inferenceConfidence": 0.929,
+    "inferenceConfidence": 0.909,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -9858,7 +9858,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "Operating system"
+        "text": "OS"
       }
     ],
     "correct": [
@@ -9884,7 +9884,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A penetration tester, who did not have an access badge, managed to follow a group of employees through multiple badged-access doors and into the data center without being stopped.\nThe tester mentions this finding during the after-action review with the Chief Information Security Officer (CISO). Which of the following issues should the CISO address as a result of this finding?",
+    "question": "A penetration tester, who did not have an access badge, managed to follow a group of employees through multiple badged-access doors and into the data center without being stopped.\nThe tester mentions this finding during the after-action review with the CISO. Which of the following issues should the CISO address as a result of this finding?",
     "choices": [
       {
         "key": "A",
@@ -9926,7 +9926,7 @@ export const domain2Questions = [
     "objective": "2.2",
     "objectiveTitle": "Explain common threat vectors and attack surfaces",
     "type": "single",
-    "question": "A Chief Executive Officer (CEO) receives an email that states a pending bonus payment for employees is awaiting CEO approval. When the CEO hovers over the sender display name, they find the email was sent from an external domain. Which of the following social engineering attacks best describes this scenario?",
+    "question": "A CEO receives an email that states a pending bonus payment for employees is awaiting CEO approval. When the CEO hovers over the sender display name, they find the email was sent from an external domain. Which of the following social engineering attacks best describes this scenario?",
     "choices": [
       {
         "key": "A",
@@ -10198,7 +10198,7 @@ export const domain2Questions = [
       },
       {
         "key": "E",
-        "text": "Denial-of-service attack"
+        "text": "DoS attack"
       },
       {
         "key": "F",
@@ -10330,7 +10330,7 @@ export const domain2Questions = [
       },
       {
         "key": "D",
-        "text": "They are limited to read-only access by modern operating systems by default."
+        "text": "They are limited to read-only access by modern OSs by default."
       }
     ],
     "correct": [

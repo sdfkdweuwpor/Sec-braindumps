@@ -23,12 +23,19 @@
   --secondary:   #0ea5a4;
   --secondary-dim:#0b8584;
 
-  --correct:      #0a7d4f;
-  --correct-bg:   #e8f8f0;
-  --correct-brd:  #6fcfa4;
-  --incorrect:    #c22a22;
-  --incorrect-bg: #fdeeed;
-  --incorrect-brd:#f0a6a1;
+  /* vivid, but text-safe: the ink passes 4.5:1 on white and on its tint */
+  --correct:      #0b7a36;
+  --correct-solid:#15803d;
+  --correct-bg:   #dcfce7;
+  --correct-brd:  #22c55e;
+  --correct-glow: rgba(34, 197, 94, .35);
+  --correct-ink:  #ffffff;
+  --incorrect:    #c41a1a;
+  --incorrect-solid:#dc2626;
+  --incorrect-bg: #ffe4e6;
+  --incorrect-brd:#f43f5e;
+  --incorrect-glow: rgba(244, 63, 94, .32);
+  --incorrect-ink:#ffffff;
   --flag:         #9a5b00;
   --flag-bg:      #fff5de;
   --flag-brd:     #e9bf62;
@@ -72,11 +79,17 @@
   --secondary-dim:#5eead4;
 
   --correct:      #4ade80;
-  --correct-bg:   #0e2a1f;
-  --correct-brd:  #1f7a52;
-  --incorrect:    #f87171;
-  --incorrect-bg: #321417;
-  --incorrect-brd:#8f3a3a;
+  --correct-solid:#22c55e;
+  --correct-bg:   #0c3321;
+  --correct-brd:  #22c55e;
+  --correct-glow: rgba(34, 197, 94, .35);
+  --correct-ink:  #03220f;
+  --incorrect:    #fb7185;
+  --incorrect-solid:#f43f5e;
+  --incorrect-bg: #3d1119;
+  --incorrect-brd:#f43f5e;
+  --incorrect-glow: rgba(244, 63, 94, .35);
+  --incorrect-ink:#2b040b;
   --flag:         #fbbf24;
   --flag-bg:      #2e2410;
   --flag-brd:     #8a6a17;

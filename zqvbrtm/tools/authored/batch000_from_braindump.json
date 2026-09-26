@@ -1018,12 +1018,12 @@
  },
  "q0421": {
   "objective": "4.9",
-  "explanation": "A run of DNS lookups against internal hostnames is reconnaissance: the attacker is using the organisation's own name service to map what exists inside the network without touching the hosts themselves. Building that picture of internal systems is footprinting.",
+  "explanation": "The log records an AXFR query: a full DNS zone transfer requested from an outside address (124.22.158.37), returning every record in int.comptia.org, including www, dns, the directory server (adds) and the file share. Pulling a complete list of internal hosts and addresses is footprinting the internal network.",
   "incorrect": {
-   "A": "Determining ISP-assigned address space is external reconnaissance, done through public registries such as WHOIS. Internal hostname queries reveal nothing about public allocations.",
-   "B": "Bypassing DNS sinkholing would mean evading a control that redirects malicious domains. The queries here are for internal names, which a sinkhole does not cover.",
-   "D": "Achieving initial access to the DNS server would involve exploiting the service itself. These are ordinary, well-formed queries the server is designed to answer.",
-   "E": "Exfiltrating data over DNS shows up as long, high-entropy labels encoding payload. Normal internal hostname lookups carry no data out."
+   "A": "Determining ISP-assigned address space is external reconnaissance done through public registries such as WHOIS. The zone transfer returned private 10.x addresses.",
+   "B": "Bypassing DNS sinkholing means evading a control that redirects malicious domains. A zone transfer asks the server for its own records.",
+   "D": "Initial access would mean exploiting the DNS service itself. AXFR is a legitimate query the server answered because transfers were not restricted.",
+   "E": "The zone transfer lists the file share's name and address; it does not carry any of the share's data out."
   }
  },
  "q0422": {
@@ -1192,7 +1192,7 @@
  },
  "q0442": {
   "objective": "2.4",
-  "explanation": "Malicious code appearing in what should be a routine backup job, triggering on a date, points to an attacker having injected it through the application. Reviewing the WAF logs shows whether a command injection request reached the server and when, which establishes how the code got there.",
+  "explanation": "The backup code drops the whole WebShopOnline database on one date, which is why the site died just after midnight on January 30. Published answers say to review the WAF logs for command injection, to find out whether an attacker inserted the code through the web application. Many readers argue for a logic bomb planted by an insider instead, which would point to recently terminated DBAs.",
   "incorrect": {
    "A": "Checking terminated DBAs investigates an insider with legitimate database access. That is worth ruling out but is speculation until the injection path is checked.",
    "C": "Scanning for malware looks for known malicious files. The problem is attacker-supplied code inside a legitimate database job, which a scanner will not flag.",

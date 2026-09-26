@@ -37,7 +37,7 @@ export const UNSUPPORTED_QUESTIONS = [
     "id": "q0502",
     "number": 502,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION 2 A security analyst is creating the first draft of a network diagram for the company's new customer- facing payment application that will be hosted by a third-party cloud service provider.\nINSTRUCTIONS Click the ? to select the appropriate icons to create a secure, redundant web application. Then use the dropdown menu to select the appropriate subnet type. Every space in the diagram mu",
+    "question": "SIMULATION 2 A security analyst is creating the first draft of a network diagram for the company's new customer-facing payment application that will be hosted by a third-party cloud service provider.\nINSTRUCTIONS Click the ? to select the appropriate icons to create a secure, redundant web application. Then use the dropdown menu to select the appropriate subnet type. Every space in the diagram mus",
     "source": "bank.pdf#p200"
   },
   {
@@ -58,7 +58,7 @@ export const UNSUPPORTED_QUESTIONS = [
     "id": "q1017",
     "number": 1017,
     "reason": "performance-based (hotspot/drag-drop/simulation)",
-    "question": "SIMULATION 5 A recent black-box penetration test of http://example.com discovered that external website vulnerabilities exist, such as directory traversals, cross-site scripting, cross-site forgery, and insecure protocols. You are tasked with reducing the attack space and enabling secure protocols.\nINSTRUCTIONS Part 1 Use the drop-down menus to select the appropriate technologies tor each location",
+    "question": "SIMULATION 5 A recent black-box penetration test of http://example.com discovered that external website vulnerabilities exist, such as directory traversals, XSS, cross-site forgery, and insecure protocols. You are tasked with reducing the attack space and enabling secure protocols.\nINSTRUCTIONS Part 1 Use the drop-down menus to select the appropriate technologies tor each location to implement a s",
     "source": "bank.pdf#p356"
   },
   {
@@ -79,7 +79,7 @@ export const UNSUPPORTED_QUESTIONS = [
     "id": "q1189",
     "number": 1189,
     "reason": "dropped by correction: Source corruption: the stem asks for a single integrated authentication solution, but the four choices belong to a different question about anomalous user behaviour. The braindump PDF carries the same corruption (its q0852). Unanswerable as printed.",
-    "question": "A software company currently secures access using a combination of traditional username/password configurations and one-time passwords for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its emplo",
+    "question": "A software company currently secures access using a combination of traditional username/password configurations and OTPs for MFA. However, employees still struggle to maintain both a password manager and the authenticator application. The company wants to migrate to a single, integrated authentication solution that is more secure and provides a smoother login experience for its employees. Which of",
     "source": "bank.pdf#p418"
   }
 ];

@@ -4,7 +4,8 @@ import * as store from './store.js';
 import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon } from './icons.js';
-import { themeReveal, animateScreen, pop } from './motion.js';
+import { themeReveal, animateScreen, pop, slideIn } from './motion.js';
+import { initMilestones } from './milestones.js';
 import * as sound from './sound.js';
 import { renderHome } from './views/home.js';
 import { renderQuiz } from './views/quiz.js';
@@ -156,6 +157,11 @@ function storageBanner() {
 }
 
 let bannerShown = false;
+let lastTab = null;
+
+function tabIndex(path) {
+  return NAV.findIndex((n) => n.match.includes(path));
+}
 
 async function render() {
   const { path, params } = parseHash();
@@ -184,6 +190,13 @@ async function render() {
   }
 
   await fn(view, { params, navigate });
+  // Switching tabs slides the new page in from the side of the tab it came
+  // from, like a phone app; moving within a tab keeps the gentle rise.
+  const tab = tabIndex(path);
+  if (lastTab !== null && tab !== -1 && tab !== lastTab) {
+    slideIn(view, tab > lastTab ? 1 : -1, { distance: 56, duration: 460 });
+  }
+  if (tab !== -1) lastTab = tab;
   animateScreen(view);
   view.focus({ preventScroll: true });
   window.scrollTo(0, 0);
@@ -199,7 +212,18 @@ export function start() {
   for (const type of ['pointerdown', 'keydown', 'touchend']) {
     window.addEventListener(type, () => sound.unlock(), { passive: true, capture: true });
   }
+  initMilestones();
   window.addEventListener('hashchange', render);
+  // The top bar tightens once the page scrolls.
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      document.querySelector('.topbar')?.classList.toggle('is-compact', window.scrollY > 24);
+    });
+  }, { passive: true });
   window.addEventListener('resize', () => placeNavPill({ instant: true }));
   // The font can change link sizes after first paint.
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => placeNavPill({ instant: true }));

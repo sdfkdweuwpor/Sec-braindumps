@@ -20,11 +20,88 @@ function run(elm, frames, opts) {
 }
 
 /** Slide a block in from one side: dir 1 = came from the right, -1 = left. */
-export function slideIn(elm, dir = 1) {
+export function slideIn(elm, dir = 1, { distance = 34, duration = 380 } = {}) {
   return run(elm, [
-    { opacity: 0, transform: `translateX(${dir * 34}px)` },
+    { opacity: 0, transform: `translateX(${dir * distance}px)` },
     { opacity: 1, transform: 'none' },
-  ], { duration: 380, easing: EASE });
+  ], { duration, easing: EASE });
+}
+
+/**
+ * Odometer: each digit rolls through a column of 0-9 to its value. The
+ * element's text (and aria-label) is the final number throughout; the
+ * rolling columns are swapped back to plain text when they settle.
+ */
+export function odometer(elm, to, { from = 0, delay = 0, duration = 1100 } = {}) {
+  if (!elm) return;
+  const final = String(to);
+  elm.textContent = final;
+  if (reduced() || typeof elm.animate !== 'function') return;
+  const start = String(from).padStart(final.length, ' ').slice(-final.length);
+  elm.setAttribute('aria-label', final);
+  const wrap = document.createElement('span');
+  wrap.className = 'odo';
+  wrap.setAttribute('aria-hidden', 'true');
+  const anims = [];
+  [...final].forEach((ch, i) => {
+    if (!/\d/.test(ch)) { wrap.append(document.createTextNode(ch)); return; }
+    const col = document.createElement('span');
+    col.className = 'odo-col';
+    const strip = document.createElement('span');
+    strip.className = 'odo-strip';
+    for (let d = 0; d <= 9; d += 1) {
+      const cell = document.createElement('span');
+      cell.textContent = String(d);
+      strip.append(cell);
+    }
+    col.append(strip);
+    wrap.append(col);
+    const fromDigit = /\d/.test(start[i]) ? Number(start[i]) : 0;
+    const toDigit = Number(ch);
+    strip.style.transform = `translateY(${-toDigit}em)`;
+    anims.push(strip.animate(
+      [{ transform: `translateY(${-fromDigit}em)` }, { transform: `translateY(${-toDigit}em)` }],
+      { duration: duration + i * 140, delay, easing: 'cubic-bezier(.16, 1, .3, 1)', fill: 'backwards' }));
+  });
+  elm.replaceChildren(wrap);
+  Promise.all(anims.map((a) => a.finished)).then(() => {
+    if (elm.contains(wrap)) elm.textContent = final;
+  }, () => { elm.textContent = final; });
+}
+
+/**
+ * Cards that tilt slightly toward the pointer, with a soft glow that follows
+ * it. Desktop pointers only; cards keep their own entrance animation.
+ */
+export function interactiveCards(root) {
+  if (reduced()) return;
+  let fine = false;
+  try { fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } catch { /* no */ }
+  if (!fine) return;
+  root.querySelectorAll('.mode-grid > .card, .srs-card').forEach((card) => {
+    if (card.dataset.tilt) return;
+    card.dataset.tilt = '1';
+    card.classList.add('tilt');
+    if (!card.querySelector(':scope > .card-glow')) card.prepend(Object.assign(document.createElement('span'), { className: 'card-glow' }));
+    // The entrance animation holds transform while it runs; release it once
+    // the card's own animation (not a child's, which bubble) has finished.
+    const settle = (ev) => {
+      if (ev.target !== card) return;
+      card.style.animation = 'none';
+      card.removeEventListener('animationend', settle);
+    };
+    card.addEventListener('animationend', settle);
+    const strength = card.classList.contains('srs-card') ? 1.2 : 4;
+    card.addEventListener('pointermove', (ev) => {
+      const r = card.getBoundingClientRect();
+      const x = (ev.clientX - r.left) / r.width;
+      const y = (ev.clientY - r.top) / r.height;
+      card.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
+      card.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
+      card.style.transform = `perspective(900px) rotateX(${((0.5 - y) * strength).toFixed(2)}deg) rotateY(${((x - 0.5) * strength).toFixed(2)}deg) translateY(-3px)`;
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  });
 }
 
 /** Rise and fade in, optionally after a delay. */
@@ -203,12 +280,9 @@ export function animateScreen(root) {
     run(d, [{ opacity: 0, transform: 'scale(0)' }, { opacity: 1, transform: 'scale(1)' }],
       { duration: 300, delay: 400 + i * 50, easing: SPRING, fill: 'backwards' });
   });
-  root.querySelectorAll('[data-countup]').forEach((s) => {
-    const n = Number(s.dataset.countup);
-    if (Number.isFinite(n)) countUp(s, n, { duration: 900, delay: 250 });
+  root.querySelectorAll('[data-countup], .readiness .score, .srs-n, .score-big > span:first-child').forEach((s, i) => {
+    const n = Number(s.dataset.countup ?? s.textContent);
+    if (Number.isFinite(n)) odometer(s, n, { delay: 180 + Math.min(i, 8) * 60 });
   });
-  root.querySelectorAll('.readiness .score').forEach((s) => {
-    const n = Number(s.textContent);
-    if (Number.isFinite(n)) countUp(s, n, { duration: 1100, delay: 150 });
-  });
+  interactiveCards(root);
 }

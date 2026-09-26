@@ -222,7 +222,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "IMTTR"
+        "text": "MTTR"
       },
       {
         "key": "B",
@@ -559,7 +559,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "After a security awareness training session, a user called the IT help desk and reported a suspicious call. The suspicious caller stated that the Chief Financial Officer wanted credit card information in order to close an invoice. Which of the following topics did the user recognize from the training?",
+    "question": "After a security awareness training session, a user called the IT help desk and reported a suspicious call. The suspicious caller stated that the CFO wanted credit card information in order to close an invoice. Which of the following topics did the user recognize from the training?",
     "choices": [
       {
         "key": "A",
@@ -601,7 +601,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "multi",
-    "question": "Several employees received a fraudulent text message from someone claiming to be the Chief Executive Officer (CEO). The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to following email address.\"\nWhich of the following are the best responses to this situation? (Choose two).",
+    "question": "Several employees received a fraudulent text message from someone claiming to be the CEO. The message stated:\n\"I'm in an airport right now with no access to email. I need you to buy gift cards for employee recognition awards. Please send the gift cards to the following email address.\"\nWhich of the following are the best responses to this situation? (Choose two).",
     "choices": [
       {
         "key": "A",
@@ -625,7 +625,7 @@ export const domain5Questions = [
       },
       {
         "key": "F",
-        "text": "Implement mobile device management."
+        "text": "Implement MDM."
       }
     ],
     "correct": [
@@ -643,7 +643,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p62",
     "needsReview": false,
-    "inferenceConfidence": 0.643,
+    "inferenceConfidence": 0.167,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -1286,7 +1286,7 @@ export const domain5Questions = [
       },
       {
         "key": "E",
-        "text": "Developing the incident response plan"
+        "text": "Developing the IRP"
       }
     ],
     "correct": [
@@ -1303,7 +1303,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p91",
     "needsReview": false,
-    "inferenceConfidence": 0.542,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2031,7 +2031,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Deploy multifactor authentication."
+        "text": "Deploy MFA."
       },
       {
         "key": "B",
@@ -2043,7 +2043,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Update the acceptable use policy"
+        "text": "Update the AUP"
       }
     ],
     "correct": [
@@ -2059,7 +2059,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p139",
     "needsReview": false,
-    "inferenceConfidence": 0.37,
+    "inferenceConfidence": 0.533,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2069,7 +2069,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge Which of the following types of tests does this represent?",
+    "question": "During a penetration test, a vendor attempts to enter an unauthorized area using an access badge. Which of the following types of tests does this represent?",
     "choices": [
       {
         "key": "A",
@@ -2115,7 +2115,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Open-source intelligence"
+        "text": "OSINT"
       },
       {
         "key": "B",
@@ -2143,7 +2143,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p141",
     "needsReview": false,
-    "inferenceConfidence": 0.615,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2195,7 +2195,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) at a large company would like to gain an understanding of how the company's security policies compare to the requirements imposed by external regulators.\nWhich of the following should the CISO use?",
+    "question": "The CISO at a large company would like to gain an understanding of how the company's security policies compare to the requirements imposed by external regulators.\nWhich of the following should the CISO use?",
     "choices": [
       {
         "key": "A",
@@ -2237,7 +2237,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "The Chief Information Security Officer (CISO) has determined the company is non-compliant with local data privacy regulations. The CISO needs to justify the budget request for more resources.\nWhich of the following should the CISO present to the board as the direct consequence of non- compliance?",
+    "question": "The CISO has determined the company is non-compliant with local data privacy regulations. The CISO needs to justify the budget request for more resources.\nWhich of the following should the CISO present to the board as the direct consequence of non-compliance?",
     "choices": [
       {
         "key": "A",
@@ -2269,7 +2269,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p150",
     "needsReview": false,
-    "inferenceConfidence": 0.867,
+    "inferenceConfidence": 0.875,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2279,7 +2279,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A Chief Information Security Officer would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives. Which of the following will be the best method to achieve this objective?",
+    "question": "A CISO would like to conduct frequent, detailed reviews of systems and procedures to track compliance objectives. Which of the following will be the best method to achieve this objective?",
     "choices": [
       {
         "key": "A",
@@ -2829,7 +2829,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreements"
+        "text": "SLAs"
       },
       {
         "key": "B",
@@ -2857,7 +2857,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p180",
     "needsReview": false,
-    "inferenceConfidence": 0.579,
+    "inferenceConfidence": 0.688,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3039,7 +3039,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Business impact analysis"
+        "text": "BIA"
       },
       {
         "key": "B",
@@ -3067,7 +3067,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p193",
     "needsReview": false,
-    "inferenceConfidence": 0.37,
+    "inferenceConfidence": 0.714,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3173,11 +3173,11 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       },
       {
         "key": "D",
-        "text": "Software development life cycle policy"
+        "text": "SDLC policy"
       }
     ],
     "correct": [
@@ -3193,7 +3193,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p198",
     "needsReview": false,
-    "inferenceConfidence": 0.769,
+    "inferenceConfidence": 0.684,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3219,7 +3219,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Business impact analysis"
+        "text": "BIA"
       }
     ],
     "correct": [
@@ -3235,7 +3235,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p203",
     "needsReview": false,
-    "inferenceConfidence": 0.36,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3329,7 +3329,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "Which of the following is most likely to be used as a just-in-time reference document within a security operations center?",
+    "question": "Which of the following is most likely to be used as a just-in-time reference document within a SOC?",
     "choices": [
       {
         "key": "A",
@@ -3551,7 +3551,7 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Create incident response and disaster recovery plans."
+        "text": "Create incident response and DRPs."
       },
       {
         "key": "D",
@@ -3571,7 +3571,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p215",
     "needsReview": false,
-    "inferenceConfidence": 0.346,
+    "inferenceConfidence": 0.308,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -3749,7 +3749,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "An employee clicks a malicious link in an email that appears to be from the company's Chief Executive Officer. The employee's computer is infected with ransomware that encrypts the company's files. Which of the following is the most effective way for the company to prevent similar incidents in the future?",
+    "question": "An employee clicks a malicious link in an email that appears to be from the company's CEO. The employee's computer is infected with ransomware that encrypts the company's files. Which of the following is the most effective way for the company to prevent similar incidents in the future?",
     "choices": [
       {
         "key": "A",
@@ -3795,7 +3795,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Recovery point objective"
+        "text": "RPO"
       },
       {
         "key": "B",
@@ -3807,11 +3807,11 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Recovery time objective"
+        "text": "RTO"
       },
       {
         "key": "E",
-        "text": "Mean time between failure"
+        "text": "MTBF"
       }
     ],
     "correct": [
@@ -3828,7 +3828,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p230",
     "needsReview": false,
-    "inferenceConfidence": 0.771,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4048,7 +4048,7 @@ export const domain5Questions = [
     "objective": "5.4",
     "objectiveTitle": "Summarize elements of effective security compliance",
     "type": "single",
-    "question": "The Chief Information Officer (CIO) asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives. Which of the following did the vendor provide to the CIO?",
+    "question": "The CIO asked a vendor to provide documentation detailing the specific objectives within the compliance framework that the vendor's services meet. The vendor provided a report and a signed letter stating that the services meet 17 of the 21 objectives. Which of the following did the vendor provide to the CIO?",
     "choices": [
       {
         "key": "A",
@@ -4426,7 +4426,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "A Chief Information Security Officer (CISO) has developed information security policies that relate to the software development methodology. Which of the following would the CISO most likely include in the organization's documentation?",
+    "question": "A CISO has developed information security policies that relate to the software development methodology. Which of the following would the CISO most likely include in the organization's documentation?",
     "choices": [
       {
         "key": "A",
@@ -4434,7 +4434,7 @@ export const domain5Questions = [
       },
       {
         "key": "B",
-        "text": "Multifactor authentication"
+        "text": "MFA"
       },
       {
         "key": "C",
@@ -4458,7 +4458,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p246",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4552,7 +4552,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "For an upcoming product launch, a company hires a marketing agency whose owner is a close relative of the Chief Executive Officer. Which of the following did the company violate?",
+    "question": "For an upcoming product launch, a company hires a marketing agency whose owner is a close relative of the CEO. Which of the following did the company violate?",
     "choices": [
       {
         "key": "A",
@@ -4804,7 +4804,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the Chief Financial Officer addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media. Which of the following policies will the HR employee most likely need to review after this incident?",
+    "question": "A human resources (HR) employee working from home leaves their company laptop open on the kitchen table. A family member walking through the kitchen reads an email from the CFO addressed to the HR department. The email contains information referencing company layoffs. The family member posts the content of the email to social media. Which of the following policies will the HR employee most likely need to review after this incident?",
     "choices": [
       {
         "key": "A",
@@ -4816,7 +4816,7 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Data loss prevention"
+        "text": "DLP"
       },
       {
         "key": "D",
@@ -4836,7 +4836,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p258",
     "needsReview": false,
-    "inferenceConfidence": 0.529,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4862,7 +4862,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Data loss prevention"
+        "text": "DLP"
       }
     ],
     "correct": [
@@ -4878,7 +4878,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p259",
     "needsReview": false,
-    "inferenceConfidence": 0.5,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -4972,7 +4972,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A vendor salesperson is a personal friend of a company's Chief Financial Officer (CFO). The company recently made a large purchase from the vendor, which was directly approved by the CFO. Which of the following best describes this situation?",
+    "question": "A vendor salesperson is a personal friend of a company's CFO. The company recently made a large purchase from the vendor, which was directly approved by the CFO. Which of the following best describes this situation?",
     "choices": [
       {
         "key": "A",
@@ -5077,7 +5077,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       }
     ],
     "correct": [
@@ -5093,7 +5093,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p265",
     "needsReview": false,
-    "inferenceConfidence": 0.4,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5191,11 +5191,11 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "B",
-        "text": "Memorandum of agreement"
+        "text": "MOA"
       },
       {
         "key": "C",
@@ -5219,7 +5219,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,
-    "inferenceConfidence": 0.96,
+    "inferenceConfidence": 0.929,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5233,11 +5233,11 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "B",
-        "text": "Memorandum of agreement"
+        "text": "MOA"
       },
       {
         "key": "C",
@@ -5261,7 +5261,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p276",
     "needsReview": false,
-    "inferenceConfidence": 0.96,
+    "inferenceConfidence": 0.929,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5455,7 +5455,7 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "Acceptable use policy"
+        "text": "AUP"
       }
     ],
     "correct": [
@@ -5471,7 +5471,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p285",
     "needsReview": false,
-    "inferenceConfidence": 0.848,
+    "inferenceConfidence": 0.8,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -5481,7 +5481,7 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A vendor salesperson is a personal friend of a company's Chief Financial Officer (CFO). The company recently made a large purchase from the vendor, which was directly approved by the CFO. Which of the following best describes this situation?",
+    "question": "A vendor salesperson is a personal friend of a company's CFO. The company recently made a large purchase from the vendor, which was directly approved by the CFO. Which of the following best describes this situation?",
     "choices": [
       {
         "key": "A",
@@ -5654,7 +5654,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "The Chief Executive Officer has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel. Which of the following penetration testing methods is most likely being used?",
+    "question": "The CEO has requested that a vendor conduct a penetration test without engaging the internal IT team to validate the company's investment in security tools, awareness training, and SOC personnel. Which of the following penetration testing methods is most likely being used?",
     "choices": [
       {
         "key": "A",
@@ -5733,7 +5733,7 @@ export const domain5Questions = [
     "objective": "5.6",
     "objectiveTitle": "Given a scenario, implement security awareness practices",
     "type": "single",
-    "question": "A company is in the process of cutting jobs to manage costs. The Chief Information Security Officer is concerned about the increased risk of an insider threat. Which of the following would most likely help the security awareness team address this potential threat?",
+    "question": "A company is in the process of cutting jobs to manage costs. The CISO is concerned about the increased risk of an insider threat. Which of the following would most likely help the security awareness team address this potential threat?",
     "choices": [
       {
         "key": "A",
@@ -5854,7 +5854,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following is a benefit of an RTO when conducting a business impact analysis?",
+    "question": "Which of the following is a benefit of an RTO when conducting a BIA?",
     "choices": [
       {
         "key": "A",
@@ -5886,7 +5886,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p306",
     "needsReview": false,
-    "inferenceConfidence": 0.324,
+    "inferenceConfidence": 0.429,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6022,11 +6022,11 @@ export const domain5Questions = [
     "objective": "5.3",
     "objectiveTitle": "Explain the processes associated with third-party risk assessment and management",
     "type": "single",
-    "question": "A security analyst is reviewing the security of a SaaS application that the company intends to purchase. Which of the following documentations should the security analyst request from the SaaS application vendor?",
+    "question": "A security analyst is reviewing the security of a SaaS application that the company intends to purchase. Which of the following documents should the security analyst request from the SaaS application vendor?",
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "B",
@@ -6034,7 +6034,7 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Statement of work"
+        "text": "SOW"
       },
       {
         "key": "D",
@@ -6054,7 +6054,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p316",
     "needsReview": false,
-    "inferenceConfidence": 0.682,
+    "inferenceConfidence": 0.455,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6068,7 +6068,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "B",
@@ -6096,7 +6096,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p316",
     "needsReview": false,
-    "inferenceConfidence": 0.462,
+    "inferenceConfidence": 0.5,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6330,19 +6330,19 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Recovery time objective"
+        "text": "RTO"
       },
       {
         "key": "B",
-        "text": "Recovery point objective"
+        "text": "RPO"
       },
       {
         "key": "C",
-        "text": "Mean time between failures"
+        "text": "MTBF"
       },
       {
         "key": "D",
-        "text": "Mean time to repair"
+        "text": "MTTR"
       }
     ],
     "correct": [
@@ -6358,7 +6358,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p326",
     "needsReview": false,
-    "inferenceConfidence": 0.806,
+    "inferenceConfidence": 0.643,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -6998,7 +6998,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "An organization knows its single loss expectancy. Which of the following does the organization need in order to determine its annualized loss expectancy?",
+    "question": "An organization knows its SLE. Which of the following does the organization need in order to determine its ALE?",
     "choices": [
       {
         "key": "A",
@@ -7030,7 +7030,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p366",
     "needsReview": false,
-    "inferenceConfidence": 0.962,
+    "inferenceConfidence": 0.833,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7218,7 +7218,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "A Chief Information Security Officer has decided that purchasing insurance when the ALE of expected incidents exceeds $1 million is the most cost-effective approach. Which of the following does the $1 million represent?",
+    "question": "A CISO has decided that purchasing insurance when the ALE of expected incidents exceeds $1 million is the most cost-effective approach. Which of the following does the $1 million represent?",
     "choices": [
       {
         "key": "A",
@@ -7478,7 +7478,7 @@ export const domain5Questions = [
       },
       {
         "key": "B",
-        "text": "Backups should occur based on the business's recovery point objective."
+        "text": "Backups should occur based on the business's RPO."
       },
       {
         "key": "C",
@@ -7502,7 +7502,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p393",
     "needsReview": false,
-    "inferenceConfidence": 0.75,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -7512,7 +7512,7 @@ export const domain5Questions = [
     "objective": "5.2",
     "objectiveTitle": "Explain elements of the risk management process",
     "type": "single",
-    "question": "Which of the following risk management strategies is being used when a Chief Information Security Officer ignores known vulnerabilities identified during a risk assessment?",
+    "question": "Which of the following risk management strategies is being used when a CISO ignores known vulnerabilities identified during a risk assessment?",
     "choices": [
       {
         "key": "A",
@@ -7898,7 +7898,7 @@ export const domain5Questions = [
       },
       {
         "key": "B",
-        "text": "Statistics about incident annualized rate of occurrence"
+        "text": "Statistics about incident ARO"
       },
       {
         "key": "C",
@@ -7906,11 +7906,11 @@ export const domain5Questions = [
       },
       {
         "key": "D",
-        "text": "A financial annualized loss expectancy report"
+        "text": "A financial ALE report"
       },
       {
         "key": "E",
-        "text": "The system's required recovery time objective"
+        "text": "The system's required RTO"
       },
       {
         "key": "F",
@@ -7932,7 +7932,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p409",
     "needsReview": false,
-    "inferenceConfidence": 0.927,
+    "inferenceConfidence": 0.6,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8278,7 +8278,7 @@ export const domain5Questions = [
     "objective": "5.5",
     "objectiveTitle": "Explain types and purposes of audits and assessments",
     "type": "single",
-    "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n- Checked the locks on perimeter doors\n- Located blind spots on security cameras\n- Attempted to open secured server rack doors Which of the following describes the type of test the penetration tester most likely conducted?",
+    "question": "A penetration tester examined the security posture of a company. The tester completed the following:\n- Checked the locks on perimeter doors\n- Located blind spots on security cameras\n- Attempted to open secured server rack doors\nWhich of the following describes the type of test the penetration tester most likely conducted?",
     "choices": [
       {
         "key": "A",
@@ -8828,11 +8828,11 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Statement of work"
+        "text": "SOW"
       },
       {
         "key": "B",
-        "text": "Service-level agreement"
+        "text": "SLA"
       },
       {
         "key": "C",
@@ -8856,7 +8856,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p445",
     "needsReview": false,
-    "inferenceConfidence": 0.652,
+    "inferenceConfidence": 0.333,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -8866,7 +8866,7 @@ export const domain5Questions = [
     "objective": "5.1",
     "objectiveTitle": "Summarize elements of effective security governance",
     "type": "single",
-    "question": "An organization wants to increase its awareness of the company's ongoing security efforts. The following data points should be captured and consolidated for executive review:\n- Change in yearly security budget\n- Changes in help desk ticket queue\n- Scalability\n- Time to resolve critical issues\n- Rate of administrators' onboarding/offboarding Which of the following is the best way to enable the organization to capture these data points and promote awareness?",
+    "question": "An organization wants to increase its awareness of the company's ongoing security efforts. The following data points should be captured and consolidated for executive review:\n- Change in yearly security budget\n- Changes in help desk ticket queue\n- Scalability\n- Time to resolve critical issues\n- Rate of administrators' onboarding/offboarding\nWhich of the following is the best way to enable the organization to capture these data points and promote awareness?",
     "choices": [
       {
         "key": "A",
@@ -8954,7 +8954,7 @@ export const domain5Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Service-level agreement (SLA)"
+        "text": "SLA"
       },
       {
         "key": "B",
@@ -8962,11 +8962,11 @@ export const domain5Questions = [
       },
       {
         "key": "C",
-        "text": "Annualized rate of occurrence (ARO)"
+        "text": "ARO"
       },
       {
         "key": "D",
-        "text": "Annualized loss expectancy (ALE)"
+        "text": "ALE"
       }
     ],
     "correct": [
@@ -8982,7 +8982,7 @@ export const domain5Questions = [
     "references": [],
     "source": "bank.pdf#p449",
     "needsReview": false,
-    "inferenceConfidence": 0.861,
+    "inferenceConfidence": 0.667,
     "needsExplanation": false,
     "keyCorrected": false
   },

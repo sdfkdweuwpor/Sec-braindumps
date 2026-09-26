@@ -1,6 +1,6 @@
 /** Shared UI pieces used by more than one view. */
 
-import { el, clear, renderQuestionText, fmtDate, highlightIn } from './dom.js';
+import { el, clear, renderQuestionText, fmtDate, highlightIn, plainStem } from './dom.js';
 import * as store from './store.js';
 import { icon } from './icons.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
@@ -180,7 +180,7 @@ export function questionList(rows, {
           el('span', { class: 'stem' }, [
             showNumber ? el('span', { class: 'qnum', text: `Q${Number(q.id.slice(1))}` }) : null,
             el('span', { class: 'stem-text', text: highlight
-              ? q.question.replace(/\s+/g, ' ').slice(0, 170) + (q.question.length > 170 ? '…' : '')
+              ? plainStem(q.question).slice(0, 170) + (plainStem(q.question).length > 170 ? '…' : '')
               : q.question.split('\n')[0].slice(0, 95) }),
             el('span', { class: 'tags' }, [
               el('span', { class: 'pill', text: `D${q.domain}` }),
