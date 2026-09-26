@@ -30,7 +30,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Full disk encryption encrypts everything on the laptop's drive -- operating system, applications and user files -- so a lost or stolen laptop reveals nothing without the key. It is the standard protection for data at rest on employee laptops.",
+    "explanation": "Full disk encryption encrypts everything on the laptop's drive — operating system, applications and user files — so a lost or stolen laptop reveals nothing without the key. It is the standard protection for data at rest on employee laptops.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Partition encryption protects only selected partitions, leaving data elsewhere on the disk exposed.",
@@ -162,7 +162,7 @@ export const domain1Questions = [
     "explanation": "The rule itself was reasonable; the outage happened because it went straight into production. Testing the policy in a non-production environment first would have shown that it blocked the servers before anyone was affected.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Change management documentation and approval matter, but paperwork alone would not have revealed the rule's effect -- testing would.",
+      "A": "Change management documentation and approval matter, but paperwork alone would not have revealed the rule's effect — testing would.",
       "C": "Disabling IPS signatures weakens protection and has nothing to do with the rule blocking legitimate traffic.",
       "D": "An 'allow any' rule above 'deny any' would permit everything, defeating the purpose of the firewall."
     },
@@ -377,7 +377,7 @@ export const domain1Questions = [
     "explanation": "Masking hides most of a value in displays while leaving part visible, such as showing only the last four digits of a card. That matches the requirement exactly.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Encryption hides the whole number from anyone without the key -- nothing is partly visible.",
+      "A": "Encryption hides the whole number from anyone without the key — nothing is partly visible.",
       "B": "Hashing turns the number into an irreversible digest; no digits remain visible.",
       "D": "Tokenization swaps the number for an unrelated token. It protects the data, but does not show the real last four digits."
     },
@@ -737,7 +737,7 @@ export const domain1Questions = [
       "A",
       "B"
     ],
-    "explanation": "Full disk encryption needs somewhere secure to hold the key -- a TPM chip on the laptop -- and a way to recover data if a user forgets their PIN or leaves: key escrow. Both have to be planned before rolling out FDE.",
+    "explanation": "Full disk encryption needs somewhere secure to hold the key — a TPM chip on the laptop — and a way to recover data if a user forgets their PIN or leaves: key escrow. Both have to be planned before rolling out FDE.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "C": "Digital signatures prove authenticity and integrity; they are not part of encrypting disks.",
@@ -996,7 +996,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The certificate revocation list is the CA's published list of revoked certificates. Checking every installed certificate against it shows which ones were invalidated and need replacing -- well suited to a bulk check across the company.",
+    "explanation": "The certificate revocation list is the CA's published list of revoked certificates. Checking every installed certificate against it shows which ones were invalidated and need replacing — well suited to a bulk check across the company.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SCEP enrolls devices for certificates; it does not report which were revoked.",
@@ -1302,7 +1302,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Putting the camera on the correct VLAN is good practice, but it comes after placement is decided.",
       "B": "A vulnerability scan checks for flaws after the device is installed on the network.",
-      "C": "Disabling unnecessary ports is hardening -- useful, but not the planning step for a new camera."
+      "C": "Disabling unnecessary ports is hardening — useful, but not the planning step for a new camera."
     },
     "tip": "Installing a new camera (or wireless access point)? Do a site survey first to decide placement and coverage.",
     "references": [],
@@ -1343,7 +1343,7 @@ export const domain1Questions = [
     "explanation": "One shared key both encrypts and decrypts the message. Using the same key on both ends is symmetric encryption. It is fast, which suits bulk data, but the key has to reach the other office securely, which is why asymmetric encryption is often used to exchange it first.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "B": "Asymmetric encryption uses a key pair -- the public key encrypts and the private key decrypts.",
+      "B": "Asymmetric encryption uses a key pair — the public key encrypts and the private key decrypts.",
       "C": "Hashing is one-way and cannot be decrypted.",
       "D": "Salting adds random data before hashing; it is not encryption."
     },
@@ -1697,7 +1697,7 @@ export const domain1Questions = [
     "explanation": "RADIUS is a centralized authentication service, and the concept it implements is AAA — authentication (proving who you are), authorization (deciding what you may do), and accounting (recording what you did). Installing a RADIUS server is how an organization delivers all three from one place.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "CIA is the confidentiality, integrity and availability triad — the goals security works towards. It is a model for what you are protecting, not a service you install.",
+      "A": "CIA is the confidentiality, integrity and availability triad — the goals security works toward. It is a model for what you are protecting, not a service you install.",
       "C": "An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorization decisions but provides no authentication or accounting.",
       "D": "PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."
     },
@@ -1876,7 +1876,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The tool records suspicious site visits and reports on them afterwards, without blocking anything. Identifying activity after it happens is a detective control. Blocking the sites instead, for example with DNS filtering, would make it preventive.",
+    "explanation": "The tool records suspicious site visits and reports on them afterward, without blocking anything. Identifying activity after it happens is a detective control. Blocking the sites instead, for example with DNS filtering, would make it preventive.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A preventive control would block the sites.",
@@ -1919,7 +1919,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A spoofed certificate identity points to a certificate the attacker generated and signed themselves with their own private key -- a self-signed certificate that no trusted CA verified. Clients that check the chain of trust reject it, which is why users should never click through certificate warnings.",
+    "explanation": "A spoofed certificate identity points to a certificate the attacker generated and signed themselves with their own private key — a self-signed certificate that no trusted CA verified. Clients that check the chain of trust reject it, which is why users should never click through certificate warnings.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A root certificate belongs to a trusted CA; an attacker would not have the CA's private key.",
@@ -2005,7 +2005,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenization replaces a stored card number with a meaningless token, while the real number is held in a secure vault. It lets returning customers keep a card on file safely -- the classic use case.",
+    "explanation": "Tokenization replaces a stored card number with a meaningless token, while the real number is held in a secure vault. It lets returning customers keep a card on file safely — the classic use case.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Pseudonymizing social media accounts is not what tokenization is designed for.",
@@ -2220,7 +2220,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes -- confidentiality. Role-based access and need-to-know are the everyday mechanisms that enforce it.",
+    "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes — confidentiality. Role-based access and need-to-know are the everyday mechanisms that enforce it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Availability means access when needed; this restricts access.",
@@ -2267,7 +2267,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
-      "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+      "C": "Technical controls are enforced by technology — firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
       "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
     },
     "tip": "Policies such as an AUP, standards and procedures = managerial controls.",
@@ -3438,7 +3438,7 @@ export const domain1Questions = [
     "explanation": "The signs deter — a visitor who knows they are being recorded is less likely to misbehave. The cameras detect — they capture and identify what actually happens. Neither physically stops anyone, which is what separates these from preventive controls.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges towards this, but its purpose here is to discourage.",
+      "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges toward this, but its purpose here is to discourage.",
       "C": "Preventive controls physically stop an act before it occurs. A camera records but blocks nothing.",
       "E": "Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
       "F": "Technical describes how a control is implemented, not what it does. The question is asking about control function."
@@ -4726,7 +4726,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+    "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterward makes this a preventive control.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Corrective controls restore normal operation after an incident. Nothing has happened yet.",
@@ -4774,7 +4774,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "A PIN authenticates the person who enters it. It says nothing about who walks in behind them.",
       "B": "An access card likewise authenticates one holder and cannot detect a second body.",
-      "D": "CCTV records the tailgating for review afterwards. It is detective, not preventive."
+      "D": "CCTV records the tailgating for review afterward. It is detective, not preventive."
     },
     "tip": "Stop tailgating at a vestibule = a security guard. Cards and PINs cannot count how many people walk through.",
     "references": [],
@@ -4862,7 +4862,7 @@ export const domain1Questions = [
       "B": "Authentication proves identity at a point in time. Zero Trust requires it repeatedly and adds authorization and context.",
       "D": "Confidentiality means keeping data from unauthorized parties. It is a goal rather than a validation principle."
     },
-    "tip": null,
+    "tip": "Validate every request between systems and never trust by network location = Zero Trust.",
     "references": [],
     "source": "bank.pdf#p278",
     "needsReview": false,
@@ -4905,7 +4905,7 @@ export const domain1Questions = [
       "C": "A master service agreement is a commercial contract between organizations, not an internal control directing staff behavior.",
       "D": "A no trespassing sign is directive but physical, since it acts on the physical environment rather than through management process."
     },
-    "tip": null,
+    "tip": "Directive + managerial = a written policy telling people what to do (AUP). Banners are technical; signs are physical.",
     "references": [],
     "source": "bank.pdf#p280",
     "needsReview": false,
@@ -4946,9 +4946,9 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "B": "Confidentiality means keeping content from unauthorized readers. A signed email is still readable by anyone unless it is also encrypted.",
       "C": "Integrity means the message was not altered, which the signature does also prove. But the question asks specifically about denying authorship.",
-      "D": "Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterwards."
+      "D": "Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterward."
     },
-    "tip": null,
+    "tip": "Digital signature = non-repudiation: the sender cannot deny sending it.",
     "references": [],
     "source": "bank.pdf#p285",
     "needsReview": false,
@@ -4991,7 +4991,7 @@ export const domain1Questions = [
       "B": "A policy is a documented management instrument, making it managerial.",
       "C": "A fence is a physical barrier."
     },
-    "tip": null,
+    "tip": "Technical controls: firewalls, encryption, IDS. Guards and fences are physical; policies are managerial.",
     "references": [],
     "source": "bank.pdf#p286",
     "needsReview": false,
@@ -5027,14 +5027,14 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+    "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterward makes this a preventive control.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Corrective controls restore normal operation after an incident. Nothing has happened yet.",
       "B": "Physical controls act on the physical environment. This is a configuration on a network device.",
       "D": "Managerial controls are policies, assessments and oversight. This is a technical restriction."
     },
-    "tip": null,
+    "tip": "Stops the attack before it can happen (restricting access to a management interface) = preventive.",
     "references": [],
     "source": "bank.pdf#p290",
     "needsReview": false,
@@ -5087,7 +5087,7 @@ export const domain1Questions = [
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."
     },
-    "tip": null,
+    "tip": "HIPS both blocks (preventive) and logs/alerts (detective). IPS/HIPS questions often want both.",
     "references": [],
     "source": "bank.pdf#p291",
     "needsReview": false,
@@ -5130,7 +5130,7 @@ export const domain1Questions = [
       "B": "Fencing blocks vehicles but also blocks pedestrians unless gated, which reintroduces a controlled opening.",
       "C": "Video surveillance records what happens. It is detective and stops nothing."
     },
-    "tip": null,
+    "tip": "Stop vehicles but let people walk through = bollards.",
     "references": [],
     "source": "bank.pdf#p292",
     "needsReview": false,
@@ -5173,7 +5173,7 @@ export const domain1Questions = [
       "B": "Quantified risk analysis puts numbers on risk exposure. It may justify caution but governs no release.",
       "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release happens."
     },
-    "tip": null,
+    "tip": "Controlled release with approval, testing and a backout plan = change management.",
     "references": [],
     "source": "bank.pdf#p295",
     "needsReview": false,
@@ -5216,7 +5216,7 @@ export const domain1Questions = [
       "C": "Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
       "D": "Tokenization replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenized."
     },
-    "tip": null,
+    "tip": "Same password, different hashes = salting.",
     "references": [],
     "source": "bank.pdf#p299",
     "needsReview": false,
@@ -5242,7 +5242,7 @@ export const domain1Questions = [
       },
       {
         "key": "C",
-        "text": "The security team is integrating with an SASE platform."
+        "text": "The security team is integrating with a SASE platform."
       },
       {
         "key": "D",
@@ -5259,7 +5259,7 @@ export const domain1Questions = [
       "B": "A jump host needs one management protocol, typically SSH or RDP, and would be fronted by a VPN rather than opened to the world.",
       "C": "A SASE integration moves security into the cloud and reduces direct inbound exposure. It would not require opening these ports."
     },
-    "tip": null,
+    "tip": "Deliberately exposing risky services (SMB, RDP) to the internet in an isolated segment = honeynet bait.",
     "references": [],
     "source": "bank.pdf#p304",
     "needsReview": false,
@@ -5302,7 +5302,7 @@ export const domain1Questions = [
       "B": "An asymmetric key is a key pair component. Certificates carry public keys, but a key is not itself a certificate.",
       "D": "A symmetric key is a single shared secret used for encryption. Certificates do not contain them."
     },
-    "tip": null,
+    "tip": "Certificate created and signed internally, not by a public CA = self-signed.",
     "references": [],
     "source": "bank.pdf#p305",
     "needsReview": false,
@@ -5345,7 +5345,7 @@ export const domain1Questions = [
       "B": "Encryption protects confidentiality. Ciphertext can still be tampered with, and encryption alone does not reveal it.",
       "D": "Obfuscation makes content harder to interpret. It offers no way to verify that the content is unchanged."
     },
-    "tip": null,
+    "tip": "Confirm a file hasn't changed = hashing (integrity).",
     "references": [],
     "source": "bank.pdf#p306",
     "needsReview": false,
@@ -5388,7 +5388,7 @@ export const domain1Questions = [
       "B": "Servers are not issued root certificates; roots sit in the trust store and sign other certificates.",
       "C": "With no certificate at all the HTTPS connection would fail outright rather than producing a warning the user can click through."
     },
-    "tip": null,
+    "tip": "Browser certificate warning on an internal HTTPS site = self-signed certificate (not trusted by the browser).",
     "references": [],
     "source": "bank.pdf#p309",
     "needsReview": false,
@@ -5424,14 +5424,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Management review is the approval step — someone accountable examines the proposed change and its security impact before it is allowed to proceed. Objective 1.3 lists the approval process among the components a change must pass through. Note this question shares its stem with q0342 but offers entirely different choices, so the two have different correct answers.",
+    "explanation": "Management review is the approval step: someone accountable examines the proposed change and its security impact before it is allowed to go ahead. Objective 1.3 lists the approval process among the stages a change must pass through. Q677 uses this same stem with different choices, and there the answer is backout planning.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Load testing measures performance under demand. It is a quality activity that says nothing about security impact.",
       "C": "Maintenance notifications tell users when a change is happening. That is communication during implementation, not a check beforehand.",
-      "D": "Procedure updates document the new state afterwards. They follow the change rather than gating it."
+      "D": "Procedure updates document the new state afterward. They follow the change rather than gating it."
     },
-    "tip": null,
+    "tip": "Before a change is implemented it needs approval → management review (a CAB). Load testing and notices aren't approval steps.",
     "references": [],
     "source": "bank.pdf#p309",
     "needsReview": false,
@@ -5484,7 +5484,7 @@ export const domain1Questions = [
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."
     },
-    "tip": null,
+    "tip": "HIPS = preventive (blocks) + detective (logs and alerts).",
     "references": [],
     "source": "bank.pdf#p310",
     "needsReview": false,
@@ -5527,7 +5527,7 @@ export const domain1Questions = [
       "B": "Generating a temporal token describes one-time passwords. Those expire; hashes do not.",
       "D": "A rainbow table is a precomputed lookup attackers use to reverse hashes. Creating one would be attacking passwords, not protecting them."
     },
-    "tip": null,
+    "tip": "Hashing = a one-way math function turning each password into a fixed digest.",
     "references": [],
     "source": "bank.pdf#p316",
     "needsReview": false,
@@ -5567,10 +5567,10 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Playbooks give step-by-step guidance for handling specific situations. They direct response rather than gating change.",
-      "C": "Incident response deals with security events after they occur.",
+      "C": "Incident response deals with security events after they occur. It does not authorize or block changes beforehand.",
       "D": "An acceptable use policy tells users what conduct is permitted. It governs behavior rather than authorizing system changes."
     },
-    "tip": null,
+    "tip": "Stops unauthorized changes to processes, assets and controls = change management.",
     "references": [],
     "source": "bank.pdf#p324",
     "needsReview": false,
@@ -5613,7 +5613,7 @@ export const domain1Questions = [
       "C": "Partition encryption protects a single partition, leaving others on the same disk exposed.",
       "D": "File encryption protects only the files chosen. Temporary copies, swap and anything not selected remain in the clear."
     },
-    "tip": null,
+    "tip": "Lost or stolen laptop → full disk encryption.",
     "references": [],
     "source": "bank.pdf#p333",
     "needsReview": false,
@@ -5656,7 +5656,7 @@ export const domain1Questions = [
       "B": "Fencing marks a boundary and deters people on foot. Standard fencing will not withstand a vehicle.",
       "C": "Lighting improves visibility and deters. It presents no physical barrier."
     },
-    "tip": null,
+    "tip": "Stop vehicles = bollards.",
     "references": [],
     "source": "bank.pdf#p336",
     "needsReview": false,
@@ -5699,7 +5699,7 @@ export const domain1Questions = [
       "C": "Availability means systems and data are accessible when needed. Encryption can even work against it if keys are lost.",
       "D": "Integrity means data has not been altered, and is assured by hashing and signatures."
     },
-    "tip": null,
+    "tip": "Encryption = confidentiality. Hashing = integrity. Signatures = non-repudiation.",
     "references": [],
     "source": "bank.pdf#p339",
     "needsReview": false,
@@ -5742,7 +5742,7 @@ export const domain1Questions = [
       "C": "Tokenization substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
       "D": "A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."
     },
-    "tip": null,
+    "tip": "Recover data after a key is lost or corrupted = key escrow.",
     "references": [],
     "source": "bank.pdf#p340",
     "needsReview": false,
@@ -5785,7 +5785,7 @@ export const domain1Questions = [
       "B": "Change approval authorizes the work. The change was already approved and correctly scheduled.",
       "C": "Risk analysis assesses what might go wrong beforehand. It informs the decision but supplies no way out once it has gone wrong."
     },
-    "tip": null,
+    "tip": "Failed change overran the window → a backout plan limits the damage next time.",
     "references": [],
     "source": "bank.pdf#p341",
     "needsReview": false,
@@ -5828,7 +5828,7 @@ export const domain1Questions = [
       "C": "Asymmetric key names the category the public and private keys belong to. The question asks which one is deployed.",
       "D": "A symmetric key is what the handshake produces for the session. It is negotiated per connection, not pre-deployed on the server."
     },
-    "tip": null,
+    "tip": "The server shares its public key (in its certificate). The private key never leaves the server.",
     "references": [],
     "source": "bank.pdf#p342",
     "needsReview": false,
@@ -5871,7 +5871,7 @@ export const domain1Questions = [
       "C": "Masking obscures part of a value for display. It neither detects nor prevents alteration.",
       "D": "Encryption keeps data confidential. Ciphertext can still be tampered with, and encryption alone does not reveal that it was."
     },
-    "tip": null,
+    "tip": "Detect modification in transit = hashing (integrity).",
     "references": [],
     "source": "bank.pdf#p344",
     "needsReview": false,
@@ -5914,7 +5914,7 @@ export const domain1Questions = [
       "C": "A standard operating procedure documents how the task is performed. It governs method, not timing.",
       "D": "Impact analysis assesses what the change might affect. It informs the decision but does not schedule the work."
     },
-    "tip": null,
+    "tip": "Update without disrupting operations → agree on a maintenance window.",
     "references": [],
     "source": "bank.pdf#p347",
     "needsReview": false,
@@ -5957,7 +5957,7 @@ export const domain1Questions = [
       "B": "Corrective controls restore normal operation after an incident. The alert precedes any correction.",
       "C": "Compensating controls substitute for a primary control that cannot be implemented. A SIEM alert is a control in its own right."
     },
-    "tip": null,
+    "tip": "Alerts, logs and alarms = detective controls.",
     "references": [],
     "source": "bank.pdf#p348",
     "needsReview": false,
@@ -5997,10 +5997,10 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A race condition exploits the timing gap between checking a condition and acting on it. That is a related flaw but concerns timing rather than the order of authentication and authorization.",
-      "C": "Tailgating is following an authorized person through a physical door.",
+      "C": "Tailgating is following an authorized person through a physical door. It is physical entry, not a flaw in how a system grants access.",
       "D": "Impersonation is assuming another identity to deceive someone. That involves a false authentication rather than none at all."
     },
-    "tip": null,
+    "tip": "Getting access you were never verified for (authorized before authenticated) = privilege escalation.",
     "references": [],
     "source": "bank.pdf#p352",
     "needsReview": false,
@@ -6043,7 +6043,7 @@ export const domain1Questions = [
       "B": "Salting adds randomness before hashing passwords. It is unrelated to encryption key management.",
       "C": "Root of trust is the trusted anchor a cryptographic system builds on. It establishes trust rather than recovering keys."
     },
-    "tip": null,
+    "tip": "Lost decryption key → recover from key escrow.",
     "references": [],
     "source": "bank.pdf#p354",
     "needsReview": false,
@@ -6086,7 +6086,7 @@ export const domain1Questions = [
       "B": "Obfuscation makes content harder to interpret. It provides no verification.",
       "D": "Encryption keeps the content confidential. Ciphertext can still be corrupted or altered in transit."
     },
-    "tip": null,
+    "tip": "Verify a transferred file wasn't altered = compare hashes.",
     "references": [],
     "source": "bank.pdf#p355",
     "needsReview": false,
@@ -6112,7 +6112,7 @@ export const domain1Questions = [
       },
       {
         "key": "C",
-        "text": "The security team is integrating with an SASE platform."
+        "text": "The security team is integrating with a SASE platform."
       },
       {
         "key": "D",
@@ -6129,7 +6129,7 @@ export const domain1Questions = [
       "B": "Preparing for a penetration test does not require weakening the perimeter; testers work against the real configuration.",
       "C": "A SASE integration moves security into the cloud and reduces direct inbound exposure rather than creating it."
     },
-    "tip": null,
+    "tip": "Risky services (SMB, RDP) deliberately exposed on an isolated VLAN = honeynet.",
     "references": [],
     "source": "bank.pdf#p366",
     "needsReview": false,
@@ -6172,7 +6172,7 @@ export const domain1Questions = [
       "C": "A TPM is a hardware chip storing keys and measuring boot integrity. It performs no certificate status checking.",
       "D": "A CSR is the request submitted to obtain a certificate. It belongs at issuance, not validation."
     },
-    "tip": null,
+    "tip": "Offline, downloaded revocation list = CRL (passive). Live query to a responder = OCSP.",
     "references": [],
     "source": "bank.pdf#p368",
     "needsReview": false,
@@ -6215,7 +6215,7 @@ export const domain1Questions = [
       "B": "DNS filtering blocks resolution of malicious domains. It protects users browsing out, not a server being published.",
       "C": "Wildcard creation is a choice about what the certificate covers. It is a detail of the request rather than the step that starts it."
     },
-    "tip": null,
+    "tip": "First step to getting a TLS certificate = generate a CSR (with a key pair).",
     "references": [],
     "source": "bank.pdf#p369",
     "needsReview": false,
@@ -6258,7 +6258,7 @@ export const domain1Questions = [
       "B": "Tokenization substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
       "D": "Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."
     },
-    "tip": null,
+    "tip": "Digital certificates support both encryption (confidentiality) and signing (integrity).",
     "references": [],
     "source": "bank.pdf#p372",
     "needsReview": false,
@@ -6301,7 +6301,7 @@ export const domain1Questions = [
       "C": "A TPM is a hardware chip storing keys and measuring boot integrity. It performs no certificate status checking.",
       "D": "A CSR is the request submitted to obtain a certificate. It belongs at issuance, not validation."
     },
-    "tip": null,
+    "tip": "Offline, downloaded revocation list = CRL (passive). Live query to a responder = OCSP.",
     "references": [],
     "source": "bank.pdf#p373",
     "needsReview": false,
@@ -6354,7 +6354,7 @@ export const domain1Questions = [
       "C": "Tokenization substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
       "D": "Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."
     },
-    "tip": null,
+    "tip": "Password database: store salted hashes and isolate the server (segmentation).",
     "references": [],
     "source": "bank.pdf#p373",
     "needsReview": false,
@@ -6402,12 +6402,12 @@ export const domain1Questions = [
     "explanation": "Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Key escrow is a technical control for recovering encryption keys.",
-      "B": "Tokenization is a technical data protection technique.",
-      "E": "Access badge readers are physical controls.",
+      "A": "Key escrow is a technical control for recovering encryption keys. It is not a process people follow.",
+      "B": "Tokenization is a technical data protection technique carried out by software, not by people.",
+      "E": "Access badge readers are physical controls. They restrict entry rather than governing how financial work is done.",
       "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
     },
-    "tip": null,
+    "tip": "Operational (people/process) controls for finance: dual control, mandatory vacations, separation of duties.",
     "references": [],
     "source": "bank.pdf#p374",
     "needsReview": false,
@@ -6458,9 +6458,9 @@ export const domain1Questions = [
       "C": "Bollards physically stop vehicles from entering an area. They are preventive and do not address vandalism to parked cars.",
       "D": "An access control vestibule controls people entering a building. The problem is outdoors in an ungated area.",
       "E": "Door locks prevent entry to a building. They are preventive and irrelevant to a car park.",
-      "F": "An access badge authenticates someone at a controlled door."
+      "F": "An access badge authenticates someone at a controlled door. The area is ungated, so there is no door to badge through."
     },
-    "tip": null,
+    "tip": "Deter vandalism in an open area = guards + lighting (being seen). Bollards stop vehicles.",
     "references": [],
     "source": "bank.pdf#p377",
     "needsReview": false,
@@ -6503,7 +6503,7 @@ export const domain1Questions = [
       "B": "Quantified risk analysis puts monetary values on risk. It informs decisions without governing releases.",
       "C": "Static code analysis finds defects in source code. It improves quality before release without controlling how the release is made."
     },
-    "tip": null,
+    "tip": "Controlled release with approval, testing and a backout plan = change management.",
     "references": [],
     "source": "bank.pdf#p382",
     "needsReview": false,
@@ -6546,7 +6546,7 @@ export const domain1Questions = [
       "B": "Blocking external traffic before it reaches critical systems describes a firewall. Deception invites interaction rather than refusing it.",
       "D": "Monitoring privileged accounts for insider threats is user behavior analytics. A honeytoken can contribute, but intelligence gathering is the broader purpose."
     },
-    "tip": null,
+    "tip": "Deception tech (honeypots, honeytokens) = lure attackers and collect threat intelligence.",
     "references": [],
     "source": "bank.pdf#p385",
     "needsReview": false,
@@ -6594,12 +6594,12 @@ export const domain1Questions = [
     "explanation": "Operational controls are executed by people through process. Dual control requires two authorized individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Key escrow is a technical control for recovering encryption keys.",
-      "B": "Tokenization is a technical data protection technique.",
-      "E": "Access badge readers are physical controls.",
+      "A": "Key escrow is a technical control for recovering encryption keys. It is not a process people follow.",
+      "B": "Tokenization is a technical data protection technique carried out by software, not by people.",
+      "E": "Access badge readers are physical controls. They restrict entry rather than governing how financial work is done.",
       "F": "Biometrics is a physical or technical authentication control rather than a process."
     },
-    "tip": null,
+    "tip": "Operational (people/process) controls for finance: dual control, mandatory vacations.",
     "references": [],
     "source": "bank.pdf#p386",
     "needsReview": false,
@@ -6629,7 +6629,7 @@ export const domain1Questions = [
       },
       {
         "key": "D",
-        "text": "Request exception from the system owner."
+        "text": "Request an exception from the system owner."
       }
     ],
     "correct": [
@@ -6642,7 +6642,7 @@ export const domain1Questions = [
       "C": "Removing the application from the allow list would break it. That is unrelated to patching.",
       "D": "Requesting an exception avoids the process rather than following it, and there is no reason to bypass change control for a planned patch."
     },
-    "tip": null,
+    "tip": "Any change, even an urgent patch, starts with a change management request.",
     "references": [],
     "source": "bank.pdf#p387",
     "needsReview": false,
@@ -6685,7 +6685,7 @@ export const domain1Questions = [
       "C": "Infrared sensors detect movement and raise an alert. Again detection rather than prevention.",
       "D": "Flood lights improve visibility and discourage intruders, which is deterrent."
     },
-    "tip": null,
+    "tip": "Prevent entry = access badges. Cameras and sensors detect; lighting deters.",
     "references": [],
     "source": "bank.pdf#p388",
     "needsReview": false,
@@ -6728,7 +6728,7 @@ export const domain1Questions = [
       "B": "A shared secret key is again symmetric. Asymmetric encryption actually requires more keys, not fewer.",
       "C": "Asymmetric encryption is substantially slower than symmetric, which is why it is used to establish a symmetric session key rather than to encrypt bulk data."
     },
-    "tip": null,
+    "tip": "Asymmetric benefit: exchange data securely without ever sharing a private or secret key.",
     "references": [],
     "source": "bank.pdf#p389",
     "needsReview": false,
@@ -6771,7 +6771,7 @@ export const domain1Questions = [
       "C": "Masking hides parts of a value for display. The full value still exists underneath.",
       "D": "Tokenization substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
     },
-    "tip": null,
+    "tip": "Store passwords as (salted) hashes, never as reversible encryption.",
     "references": [],
     "source": "bank.pdf#p390",
     "needsReview": false,
@@ -6814,7 +6814,7 @@ export const domain1Questions = [
       "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
       "D": "Tokenization substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
     },
-    "tip": null,
+    "tip": "One-way function for integrity = hashing.",
     "references": [],
     "source": "bank.pdf#p392",
     "needsReview": false,
@@ -6857,7 +6857,7 @@ export const domain1Questions = [
       "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
       "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
     },
-    "tip": null,
+    "tip": "Confirm a download matches the published release = compare its hash.",
     "references": [],
     "source": "bank.pdf#p396",
     "needsReview": false,
@@ -6900,7 +6900,7 @@ export const domain1Questions = [
       "B": "A server running at maximum load is a capacity problem, addressed by scaling rather than by revising change policy.",
       "D": "A legacy server lacking regulatory support drives a remediation or replacement decision, not a change to how changes are managed."
     },
-    "tip": null,
+    "tip": "Moving to a platform with faster, automated updates (cloud) → the change management policy must be revised.",
     "references": [],
     "source": "bank.pdf#p396",
     "needsReview": false,
@@ -6951,9 +6951,9 @@ export const domain1Questions = [
       "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
       "B": "Video surveillance records who entered. It is detective rather than preventive.",
       "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
-      "F": "A sensor detects presence or movement and raises an alert."
+      "F": "A sensor detects presence or movement and raises an alert. It detects rather than restricting who gets in."
     },
-    "tip": null,
+    "tip": "Only authorized people get in = badge access + access control vestibule (stops tailgating).",
     "references": [],
     "source": "bank.pdf#p397",
     "needsReview": false,
@@ -6993,10 +6993,10 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Confidentiality keeps content from unauthorized readers. It says nothing about who sent it.",
-      "C": "Authorization determines what an authenticated party may do.",
-      "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."
+      "C": "Authorization determines what an authenticated party may do. It does not prove who sent a message.",
+      "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterward."
     },
-    "tip": null,
+    "tip": "Sender can't deny sending it = non-repudiation (digital signatures).",
     "references": [],
     "source": "bank.pdf#p398",
     "needsReview": false,
@@ -7039,7 +7039,7 @@ export const domain1Questions = [
       "C": "System patching removes vulnerabilities before they can be exploited, which is preventive.",
       "D": "Log monitoring identifies activity after it has occurred, which is detective."
     },
-    "tip": null,
+    "tip": "Deterrent = discourages the attempt (fencing, signs, lighting). Badges prevent; logs detect.",
     "references": [],
     "source": "bank.pdf#p403",
     "needsReview": false,
@@ -7057,7 +7057,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Ensure the firewall data plane moves to fail-closed mode"
+        "text": "Ensure the firewall data plane moves to fail-closed mode."
       },
       {
         "key": "B",
@@ -7082,7 +7082,7 @@ export const domain1Questions = [
       "C": "Prioritizing business-critical traffic favors availability, which is the opposite of the stated preference.",
       "D": "Rate limiting between interfaces manages congestion. It is a performance control."
     },
-    "tip": null,
+    "tip": "Confidentiality over availability → fail-closed (a failure blocks traffic rather than letting it through).",
     "references": [],
     "source": "bank.pdf#p404",
     "needsReview": false,
@@ -7125,7 +7125,7 @@ export const domain1Questions = [
       "C": "Assigning permissions based on previous activity means inheriting from prior events, which contradicts the model.",
       "D": "Machine learning may inform risk scoring, but the policy engine's defining role is per-request evaluation, not handling unknown roles."
     },
-    "tip": null,
+    "tip": "Zero Trust policy engine = decides every request fresh; nothing inherited from earlier approvals.",
     "references": [],
     "source": "bank.pdf#p406",
     "needsReview": false,
@@ -7168,7 +7168,7 @@ export const domain1Questions = [
       "B": "A honeypot is a whole decoy system or service rather than a document on a real one.",
       "D": "A honeynet is an entire decoy network of systems."
     },
-    "tip": null,
+    "tip": "Decoy document full of fake sensitive data = honeyfile. Fake credential/record = honeytoken.",
     "references": [],
     "source": "bank.pdf#p408",
     "needsReview": false,
@@ -7221,7 +7221,7 @@ export const domain1Questions = [
       "E": "Tokenization substitutes values with surrogates held in a vault. Again a different protection model.",
       "F": "Salting is specific to password hashing, adding randomness to defeat precomputed tables."
     },
-    "tip": null,
+    "tip": "Encryption strength = the algorithm + the key length.",
     "references": [],
     "source": "bank.pdf#p408",
     "needsReview": false,
@@ -7264,7 +7264,7 @@ export const domain1Questions = [
       "B": "Verifying identity once at session start is exactly the implicit trust Zero Trust removes.",
       "D": "Prioritizing perimeter defense is again the traditional castle-and-moat approach."
     },
-    "tip": null,
+    "tip": "Zero Trust = continuous validation for every access, never 'verified once'.",
     "references": [],
     "source": "bank.pdf#p409",
     "needsReview": false,
@@ -7304,10 +7304,10 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Masking does not use encryption, and tokenization substitutes tokens, not null values.",
-      "C": "The mapping description is inaccurate; the key difference is reversibility.",
-      "D": "Neither is defined by random versus pseudo-random functions."
+      "C": "Mapping style is not what distinguishes them. The key difference is that masking cannot be reversed and tokenization can.",
+      "D": "Neither is defined by random versus pseudo-random functions. The distinction that matters is reversibility."
     },
-    "tip": null,
+    "tip": "Masking = not reversible. Tokenization = reversible through the token vault.",
     "references": [],
     "source": "bank.pdf#p411",
     "needsReview": false,
@@ -7350,7 +7350,7 @@ export const domain1Questions = [
       "C": "A penetration test before deploying a patch is a security assessment. Testing may be part of the process but it is not the process.",
       "D": "Auditing equipment and reporting the list is an inventory activity."
     },
-    "tip": null,
+    "tip": "Change management = approve first (a CAB/board), then implement.",
     "references": [],
     "source": "bank.pdf#p412",
     "needsReview": false,
@@ -7403,7 +7403,7 @@ export const domain1Questions = [
       "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
       "F": "Cameras record what happened. Detective rather than preventive."
     },
-    "tip": null,
+    "tip": "Stop vehicles = bollards + fencing. Sensors, cameras and lights don't physically stop anything.",
     "references": [],
     "source": "bank.pdf#p419",
     "needsReview": false,
@@ -7442,11 +7442,11 @@ export const domain1Questions = [
     "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Integrity means data has not been altered without authorization.",
-      "B": "Availability means systems and data are accessible when needed.",
+      "A": "Integrity means data has not been altered without authorization. It concerns modification, not disclosure.",
+      "B": "Availability means systems and data are accessible when needed. It concerns access, not secrecy.",
       "C": "Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."
     },
-    "tip": null,
+    "tip": "Prevent unauthorized disclosure = confidentiality.",
     "references": [],
     "source": "bank.pdf#p421",
     "needsReview": false,
@@ -7489,7 +7489,7 @@ export const domain1Questions = [
       "C": "Automated key exchange is handled by key agreement protocols, not by the signature itself.",
       "D": "Restricting who can decrypt a file is an encryption and key management function."
     },
-    "tip": null,
+    "tip": "Strong signature algorithm = proves who signed (authenticity) and that nothing changed (integrity).",
     "references": [],
     "source": "bank.pdf#p426",
     "needsReview": false,
@@ -7532,7 +7532,7 @@ export const domain1Questions = [
       "C": "Salting does not lengthen an encryption key. Hashing uses no key at all.",
       "D": "Adding rounds to slow cracking is key stretching, a related but distinct technique."
     },
-    "tip": null,
+    "tip": "Salting defeats rainbow tables (precomputed hashes). Key stretching adds rounds.",
     "references": [],
     "source": "bank.pdf#p429",
     "needsReview": false,
@@ -7550,7 +7550,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Replacing the OSs encryption services"
+        "text": "Replacing the OS's encryption services"
       },
       {
         "key": "B",
@@ -7575,7 +7575,7 @@ export const domain1Questions = [
       "B": "Verifying website certificates is done by the browser against its trust store.",
       "C": "Keeping keys in software is exactly what a TPM avoids, because software-held keys can be read from memory."
     },
-    "tip": null,
+    "tip": "TPM = hardware chip that stores keys securely and performs crypto functions.",
     "references": [],
     "source": "bank.pdf#p430",
     "needsReview": false,
@@ -7614,11 +7614,11 @@ export const domain1Questions = [
     "explanation": "Deciding when updates may be applied to company devices, and telling staff in advance, is change management in practice — the change is planned, scheduled and communicated rather than applied whenever someone feels like it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Onboarding covers bringing a new employee or device into the organization.",
+      "A": "Onboarding covers bringing a new employee or device into the organization. Scheduling updates for existing devices is not onboarding.",
       "B": "Sideloading installs software from outside an official store. These are sanctioned vendor updates.",
-      "D": "Playbook guidelines give step-by-step response instructions for specific incidents."
+      "D": "Playbook guidelines give step-by-step response instructions for specific incidents. No incident is involved here."
     },
-    "tip": null,
+    "tip": "Telling staff when they may apply updates = change management (scheduled, communicated changes).",
     "references": [],
     "source": "bank.pdf#p430",
     "needsReview": false,
@@ -7661,7 +7661,7 @@ export const domain1Questions = [
       "C": "Test results matter and are often required, but the request already includes technical requirements and the universal blocking omission is the lack of a way back.",
       "D": "Developer approval is internal to the team. The CAB is the approving authority."
     },
-    "tip": null,
+    "tip": "CAB rejects a technically complete change → the rollback (backout) plan is missing.",
     "references": [],
     "source": "bank.pdf#p431",
     "needsReview": false,
@@ -7704,7 +7704,7 @@ export const domain1Questions = [
       "B": "A honeypot attracts and observes attackers. It is a detective and deception control.",
       "D": "Video surveillance records events, which is detective, and deters where visible."
     },
-    "tip": null,
+    "tip": "ACL = preventive (blocks before it happens). SIEM, cameras, honeypots = detective.",
     "references": [],
     "source": "bank.pdf#p432",
     "needsReview": false,
@@ -7747,7 +7747,7 @@ export const domain1Questions = [
       "B": "Encryption protects data but the application must decrypt its own code to run, so it does not prevent analysis of running software.",
       "C": "Hashing is one-way and produces a digest. Nothing executable can be recovered from it."
     },
-    "tip": null,
+    "tip": "Make code hard to reverse engineer to protect IP = obfuscation.",
     "references": [],
     "source": "bank.pdf#p433",
     "needsReview": false,
@@ -7790,7 +7790,7 @@ export const domain1Questions = [
       "C": "Going straight to an executive skips the technical review the board performs and is not the defined path.",
       "D": "Scheduling for the next update cycle presumes approval that has not been granted."
     },
-    "tip": null,
+    "tip": "Major change at a company with standard processes → submit it to the change advisory board (CAB) first.",
     "references": [],
     "source": "bank.pdf#p434",
     "needsReview": false,
@@ -7833,7 +7833,7 @@ export const domain1Questions = [
       "B": "Project timelines typically lengthen because of review and approval gates.",
       "D": "Increased return on investment is too indirect to be the benefit; the process reduces failed changes rather than generating return."
     },
-    "tip": null,
+    "tip": "Change management records every change, so you can build KPIs on updates.",
     "references": [],
     "source": "bank.pdf#p436",
     "needsReview": false,
@@ -7876,7 +7876,7 @@ export const domain1Questions = [
       "C": "Vulnerability remediation fixes identified security weaknesses. This control applies to all changes, not just security fixes.",
       "D": "Collusion prevention addresses two or more people conspiring. That is a fraud control concern."
     },
-    "tip": null,
+    "tip": "Supervisor approval before merging code = change management.",
     "references": [],
     "source": "bank.pdf#p439",
     "needsReview": false,
@@ -7915,11 +7915,11 @@ export const domain1Questions = [
     "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Integrity means data has not been altered without authorization.",
-      "C": "Non-repudiation prevents someone denying an action they performed.",
-      "D": "Availability means data and systems are accessible when needed."
+      "A": "Integrity means data has not been altered without authorization. It concerns modification, not who can see the data.",
+      "C": "Non-repudiation prevents someone denying an action they performed. It concerns proof of actions, not access.",
+      "D": "Availability means data and systems are accessible when needed. It concerns uptime, not restricting who has access."
     },
-    "tip": null,
+    "tip": "Only authorized users can access data = confidentiality.",
     "references": [],
     "source": "bank.pdf#p440",
     "needsReview": false,
@@ -7962,7 +7962,7 @@ export const domain1Questions = [
       "C": "Credential replay reuses captured authentication material. The visible symptom is a substituted site and certificate.",
       "D": "Cache poisoning is one mechanism that could redirect users, but the question asks what activity is occurring, and interception with a substituted certificate is the on-path attack itself."
     },
-    "tip": null,
+    "tip": "The expected certificate replaced and the site looks different = on-path attack.",
     "references": [],
     "source": "bank.pdf#p443",
     "needsReview": false,
@@ -8001,11 +8001,11 @@ export const domain1Questions = [
     "explanation": "A digital signature is produced with the sender's private key, which only they hold. Anyone can verify it, so the sender cannot credibly deny having sent the message — which is non-repudiation, and it also proves the content is unaltered.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Zero Trust is an architectural model based on never assuming trust from network position.",
+      "A": "Zero Trust is an architectural model based on never assuming trust from network position. It is not what a signature achieves.",
       "C": "Defense in depth means layering controls. It describes strategy rather than what a signature achieves.",
       "D": "Confidentiality requires encryption. A signed email remains readable by anyone who receives it."
     },
-    "tip": null,
+    "tip": "Digital signatures on email = non-repudiation (plus integrity). Encryption gives confidentiality.",
     "references": [],
     "source": "bank.pdf#p444",
     "needsReview": false,
@@ -8048,7 +8048,7 @@ export const domain1Questions = [
       "B": "Encryption is the operation being protected, not a safeguard for the key.",
       "C": "Rotation replaces keys periodically to limit exposure. It is good hygiene but does not recover a lost key."
     },
-    "tip": null,
+    "tip": "Protect against losing decryption keys = key escrow.",
     "references": [],
     "source": "bank.pdf#p446",
     "needsReview": false,

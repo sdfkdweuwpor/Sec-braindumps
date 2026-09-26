@@ -1,0 +1,21 @@
+{
+"q1272": "Digital signatures on email = non-repudiation (plus integrity). Encryption gives confidentiality.",
+"q1273": "CVE = a public list of known vulnerabilities, each with a unique ID.",
+"q1274": "Avoid vendor lock-in = multicloud.",
+"q1275": "Hospital + disaster-prone area → availability is the top cloud design consideration.",
+"q1276": "VM escape matters because it breaks isolation: a guest reaches the host or other guests.",
+"q1277": "Third-party risk assessment results feed compliance attestation.",
+"q1278": "Protect against losing decryption keys = key escrow.",
+"q1279": "Consolidated, ongoing metrics for executives = dashboard.",
+"q1280": "Hurricane zone: most resilience = a hot site with high availability elsewhere.",
+"q1281": "Data sanitization during incident response happens in recovery, before systems return to service.",
+"q1282": "One user opens an attachment, then many machines crash = a worm (it spreads by itself).",
+"q1283": "Removable media can carry malware into air-gapped systems that have no network path.",
+"q1284": "See encrypted traffic at the network edge = a TLS-inspecting proxy.",
+"q1285": "Independent view of a vendor = third-party attestations (SOC 2, ISO 27001), not their own questionnaires.",
+"q1286": "Judging how serious a leak is depends on classification (how sensitive the data is).",
+"q1287": "LLM giving different or made-up answers to the same prompt = hallucinations.",
+"q1288": "Guaranteed destruction for SSDs and HDDs = wipe + degauss + shred.",
+"q1289": "Negotiated availability level with penalties if missed = SLA. SLO = internal target.",
+"q1290": "Someone trying to brute-force a password = a threat. The weak password = the vulnerability."
+}

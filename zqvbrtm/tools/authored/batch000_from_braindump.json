@@ -162,7 +162,7 @@
   "incorrect": {
    "B": "Identifying the communication strategy belongs to the continuity and incident plans. The BIA supplies the priorities those plans then act on.",
    "C": "Evaluating the risk management plan is a governance review activity. The BIA measures impact of loss rather than assessing the program.",
-   "D": "Establishing backup and recovery procedures is how the RTO is met. The BIA sets the target; the procedures are built afterwards to hit it.",
+   "D": "Establishing backup and recovery procedures is how the RTO is met. The BIA sets the target; the procedures are built afterward to hit it.",
    "E": "Developing the incident response plan addresses security incidents. It is informed by the BIA but is a separate deliverable."
   }
  },
@@ -231,7 +231,7 @@
  },
  "q0224": {
   "objective": "5.1",
-  "explanation": "A single clerk could act on unverified instructions to change where money goes. Updating the wire transfer process with verification steps -- calling the payee back on a number already on file, requiring a second approver, and holding changes to bank details until they are confirmed -- stops the fraud however convincing the instructions look.",
+  "explanation": "A single clerk could act on unverified instructions to change where money goes. Updating the wire transfer process with verification steps — calling the payee back on a number already on file, requiring a second approver, and holding changes to bank details until they are confirmed — stops the fraud however convincing the instructions look.",
   "incorrect": {
    "A": "Standardizing incident reporting improves how you respond after the money has gone.",
    "B": "Phishing campaigns train people to spot fraudulent messages, which helps, but a convincing request would still leave one person able to send money unchecked. The process fix removes that single point of failure.",
@@ -297,7 +297,7 @@
   "objective": "1.2",
   "explanation": "RADIUS is a centralized authentication service, and the concept it implements is AAA — authentication (proving who you are), authorization (deciding what you may do), and accounting (recording what you did). Installing a RADIUS server is how an organization delivers all three from one place.",
   "incorrect": {
-   "A": "CIA is the confidentiality, integrity and availability triad — the goals security works towards. It is a model for what you are protecting, not a service you install.",
+   "A": "CIA is the confidentiality, integrity and availability triad — the goals security works toward. It is a model for what you are protecting, not a service you install.",
    "C": "An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorization decisions but provides no authentication or accounting.",
    "D": "PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."
   }
@@ -440,7 +440,7 @@
  },
  "q0348": {
   "objective": "4.6",
-  "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterwards.",
+  "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterward.",
   "incorrect": {
    "A": "Enabling SAML is how each application is then connected to the IdP. You cannot configure the trust before deciding who the identity provider is.",
    "B": "Creating OAuth tokens is an implementation detail of authorizing access once federation exists. It is several steps downstream.",
@@ -681,7 +681,7 @@
   "explanation": "The order of volatility says collect what disappears soonest. RAM holds running processes, network connections, decryption keys and unsaved data, and all of it is lost the moment the machine loses power — so it must be captured before anything written to persistent storage.",
   "incorrect": {
    "A": "A hard drive retains its contents without power. It is important evidence but sits near the bottom of the volatility order.",
-   "C": "An SSD is likewise non-volatile. It has its own forensic complications from wear levelling and TRIM, but the data survives a power loss.",
+   "C": "An SSD is likewise non-volatile. It has its own forensic complications from wear leveling and TRIM, but the data survives a power loss.",
    "D": "Temporary files are stored on disk. They may be deleted by the operating system, but they persist across a reboot in a way memory does not."
   }
  },
@@ -949,7 +949,7 @@
   "incorrect": {
    "A": "Input validation checks data supplied to a running program. It protects the software's behavior, not the integrity of the distributed file.",
    "C": "Secure cookies protect session tokens in a browser. They are a web application control and are unrelated to distributing software.",
-   "D": "Fuzzing feeds malformed input to find defects during testing. It improves the code's robustness before release but says nothing about the file afterwards."
+   "D": "Fuzzing feeds malformed input to find defects during testing. It improves the code's robustness before release but says nothing about the file afterward."
   }
  },
  "q0414": {
@@ -1043,7 +1043,7 @@
    "B": "A honeypot is a decoy that detects attackers who interact with it. It adds no protection to the real application handling live customer traffic.",
    "C": "A certificate revocation list records certificates that are no longer valid. It is PKI hygiene and provides no attack surface reduction.",
    "D": "HIPS protects an individual host from malicious activity on that machine. It is useful but is host-level rather than the network security capability the team lacks.",
-   "F": "A SIEM aggregates and correlates logs to support detection and investigation. It analyses what other controls report and blocks nothing itself."
+   "F": "A SIEM aggregates and correlates logs to support detection and investigation. It analyzes what other controls report and blocks nothing itself."
   }
  },
  "q0424": {
@@ -1183,7 +1183,7 @@
  },
  "q0441": {
   "objective": "4.6",
-  "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterwards.",
+  "explanation": "Reducing multiple SaaS logins to one means federating identity, and federation requires a single authoritative identity provider for everyone to trust. Choosing that IdP has to come first, because it determines which protocols and integrations are even available afterward.",
   "incorrect": {
    "A": "Enabling SAML is how each application is then connected to the IdP. You cannot configure the trust before deciding who the identity provider is.",
    "B": "Creating OAuth tokens is an implementation detail of authorizing access once federation exists. It is several steps downstream.",
@@ -1376,7 +1376,7 @@
   "incorrect": {
    "A": "Deploying before establishing means rolling out a standard that does not exist yet.",
    "B": "Maintaining before deploying means curating a baseline that has never been applied to anything.",
-   "D": "Deploying before establishing leaves nothing to apply -- the same flaw as putting deployment first in any order."
+   "D": "Deploying before establishing leaves nothing to apply — the same flaw as putting deployment first in any order."
   }
  },
  "q0469": {
@@ -1401,7 +1401,7 @@
   "objective": "5.2",
   "explanation": "The team's worry is about consequence — what happens to the business if the generator fails during failover. A business impact analysis is the activity that quantifies the effect of losing a function, which is what turns that worry into a prioritized recovery requirement.",
   "incorrect": {
-   "A": "RPO is how much data loss is tolerable, measured backwards from the failure. It concerns data, not the impact of a hardware fault.",
+   "A": "RPO is how much data loss is tolerable, measured backward from the failure. It concerns data, not the impact of a hardware fault.",
    "B": "ARO is how often a loss is expected per year. It is a frequency input to loss calculation, not an impact assessment.",
    "D": "MTTR is the average time to repair a failed component. It measures repair speed rather than the business effect of the outage."
   }
@@ -1647,7 +1647,7 @@
   "incorrect": {
    "B": "SHA-1 is a hashing algorithm, and a deprecated one with practical collision attacks. It offers no confidentiality even where it is still used.",
    "C": "RSA is an asymmetric algorithm used for key exchange and signatures. It is a building block that protocols such as IPSec use, not a way to secure communications on its own.",
-   "D": "A TGT is a Kerberos ticket-granting ticket used during authentication. It proves identity but does not encrypt the data that flows afterwards."
+   "D": "A TGT is a Kerberos ticket-granting ticket used during authentication. It proves identity but does not encrypt the data that flows afterward."
   }
  },
  "q0504": {
@@ -1782,7 +1782,7 @@
   "objective": "1.1",
   "explanation": "The signs deter — a visitor who knows they are being recorded is less likely to misbehave. The cameras detect — they capture and identify what actually happens. Neither physically stops anyone, which is what separates these from preventive controls.",
   "incorrect": {
-   "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges towards this, but its purpose here is to discourage.",
+   "A": "Directive controls instruct people what to do, usually through policy. A warning sign edges toward this, but its purpose here is to discourage.",
    "C": "Preventive controls physically stop an act before it occurs. A camera records but blocks nothing.",
    "E": "Corrective controls restore normal operation after an incident. Nothing here repairs anything.",
    "F": "Technical describes how a control is implemented, not what it does. The question is asking about control function."
@@ -2091,7 +2091,7 @@
   "explanation": "SASE delivers networking and security together from the cloud — VPN access, a software firewall, secure web gateway and zero trust access as one service. For a fully remote workforce it provides that stack redundantly from provider points of presence, with no data center to backhaul through.",
   "incorrect": {
    "A": "An IPS inspects and blocks malicious traffic at a point in the network. It is one control, not an architecture, and it provides no VPN.",
-   "B": "A SIEM aggregates and analyses logs. It is a detection platform and grants no access to anything.",
+   "B": "A SIEM aggregates and analyzes logs. It is a detection platform and grants no access to anything.",
    "D": "A CASB governs how users interact with cloud applications, enforcing policy on SaaS use. It is narrower than SASE and includes no VPN or firewall."
   }
  },
@@ -2290,7 +2290,7 @@
   "explanation": "EDR continuously records process, file and network behavior on endpoints and compares it against expected patterns, so it surfaces activity that deviates from the baseline rather than matching a known signature. Detecting behavioral deviation is exactly what the analyst asked for.",
   "incorrect": {
    "A": "An intrusion prevention system blocks traffic matching known attack patterns. It is signature-driven and sits on the network, not on the endpoint.",
-   "B": "A sandbox detonates a suspicious file in isolation to observe it. It analyses individual samples rather than ongoing user and device behavior.",
+   "B": "A sandbox detonates a suspicious file in isolation to observe it. It analyzes individual samples rather than ongoing user and device behavior.",
    "D": "Antivirus matches files against known malware signatures. It detects known bad rather than unusual."
   }
  },
@@ -2571,7 +2571,7 @@
   "objective": "5.2",
   "explanation": "Recovery time objective is the maximum tolerable duration a system can be down before the business suffers unacceptable harm. Measuring how quickly systems must be restored is precisely what the RTO expresses.",
   "incorrect": {
-   "A": "Recovery point objective is about data, not time to restore — how much work you can afford to lose, measured backwards from the failure.",
+   "A": "Recovery point objective is about data, not time to restore — how much work you can afford to lose, measured backward from the failure.",
    "B": "Risk appetite is the amount of risk an organization is willing to pursue. It is a strategic posture, not a recovery metric.",
    "C": "Risk tolerance is the acceptable variation around that appetite. Again a risk measure rather than a restoration target.",
    "E": "Mean time between failures predicts how often equipment fails. It measures reliability, not recovery speed."
@@ -2601,7 +2601,7 @@
   "incorrect": {
    "A": "URL scanning judges whether a destination is safe to visit. It protects users browsing out, not an application being attacked.",
    "C": "A reverse proxy fronts an application and can hide its origin, but on its own it forwards traffic rather than inspecting it for attacks.",
-   "D": "NAC controls which devices may join the network. It has no view of what happens inside the application afterwards."
+   "D": "NAC controls which devices may join the network. It has no view of what happens inside the application afterward."
   }
  },
  "q0611": {
@@ -2886,7 +2886,7 @@
  },
  "q0644": {
   "objective": "5.2",
-  "explanation": "Risk identification is the first substantive step: establishing what is in scope and enumerating what could go wrong. Everything afterwards — scoring, treating, monitoring — operates on the list this stage produces.",
+  "explanation": "Risk identification is the first substantive step: establishing what is in scope and enumerating what could go wrong. Everything afterward — scoring, treating, monitoring — operates on the list this stage produces.",
   "incorrect": {
    "A": "Risk assessment evaluates the risks already identified, scoring likelihood and impact. It cannot assess what has not been named.",
    "C": "Risk treatment decides what to do about each risk — accept, mitigate, transfer or avoid. That comes after assessment.",
@@ -3170,7 +3170,7 @@
    "B": "Checking access point settings tells you how they are configured. Configuration does not reveal actual coverage, which depends on walls, materials and interference.",
    "D": "Cable lengths concern the wired infrastructure. They have no bearing on radio coverage.",
    "E": "Access logs show which devices are busiest. Usage is not the same as signal strength.",
-   "F": "Removing impediments to radio transmission is a remediation you might perform afterwards, once the heat map shows where coverage is poor."
+   "F": "Removing impediments to radio transmission is a remediation you might perform afterward, once the heat map shows where coverage is poor."
   }
  },
  "q0680": {
@@ -3548,7 +3548,7 @@
  },
  "q0730": {
   "objective": "1.1",
-  "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+  "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterward makes this a preventive control.",
   "incorrect": {
    "A": "Corrective controls restore normal operation after an incident. Nothing has happened yet.",
    "B": "Physical controls act on the physical environment. This is a configuration on a network device.",
@@ -3605,7 +3605,7 @@
   "explanation": "The failure was loss of utility power, so the control has to supply power independently. A generator runs for as long as it has fuel, keeping the data center operating through an outage rather than merely surviving the first few minutes.",
   "incorrect": {
    "A": "Platform diversity avoids depending on a single vendor's technology. It does nothing about electricity.",
-   "C": "Snapshots preserve data state for recovery. They help restore afterwards but prevent no downtime.",
+   "C": "Snapshots preserve data state for recovery. They help restore afterward but prevent no downtime.",
    "D": "Load balancing distributes traffic across servers. With the whole data center dark there is nothing to distribute to."
   }
  },
@@ -3651,7 +3651,7 @@
   "incorrect": {
    "A": "A PIN authenticates the person who enters it. It says nothing about who walks in behind them.",
    "B": "An access card likewise authenticates one holder and cannot detect a second body.",
-   "D": "CCTV records the tailgating for review afterwards. It is detective, not preventive."
+   "D": "CCTV records the tailgating for review afterward. It is detective, not preventive."
   }
  },
  "q0743": {
@@ -4013,7 +4013,7 @@
   "incorrect": {
    "B": "Confidentiality means keeping content from unauthorized readers. A signed email is still readable by anyone unless it is also encrypted.",
    "C": "Integrity means the message was not altered, which the signature does also prove. But the question asks specifically about denying authorship.",
-   "D": "Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterwards."
+   "D": "Authentication proves who the sender is at the time of the exchange. Non-repudiation goes further by making that proof durable and undeniable afterward."
   }
  },
  "q0785": {
@@ -4145,7 +4145,7 @@
  },
  "q0800": {
   "objective": "1.1",
-  "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterwards makes this a preventive control.",
+  "explanation": "Limiting which addresses may reach the management interface stops the exploit attempt from ever arriving. Acting before the event rather than detecting or repairing it afterward makes this a preventive control.",
   "incorrect": {
    "A": "Corrective controls restore normal operation after an incident. Nothing has happened yet.",
    "B": "Physical controls act on the physical environment. This is a configuration on a network device.",
@@ -4448,7 +4448,7 @@
  },
  "q0834": {
   "objective": "4.7",
-  "explanation": "A flood of misconfigurations means resources are being created outside any agreed standard. Guardrails encode the secure baseline as policy that is enforced at provisioning time, so non-compliant configurations are prevented rather than detected afterwards.",
+  "explanation": "A flood of misconfigurations means resources are being created outside any agreed standard. Guardrails encode the secure baseline as policy that is enforced at provisioning time, so non-compliant configurations are prevented rather than detected afterward.",
   "incorrect": {
    "A": "A CASB governs how users interact with cloud applications and what data moves. It does not define infrastructure baselines.",
    "B": "IAM controls who may do what in the cloud account. Correctly authorized engineers can still deploy misconfigured resources.",
@@ -4493,7 +4493,7 @@
  },
  "q0840": {
   "objective": "2.5",
-  "explanation": "Outdated operating systems carry known, published vulnerabilities that malware is written specifically to exploit — which explains both the infections and the degraded performance. Patching closes those holes, so it is the mitigation to examine before anything else.",
+  "explanation": "Outdated operating systems carry known, published vulnerabilities that malware is written specifically to exploit, which explains both the infections and the degraded performance. Patching closes those holes, so it is the mitigation to review first. Q1059 is a near twin that asks what the help desk should do first for machines already raising virus alerts, and its answer is isolation (containment).",
   "incorrect": {
    "B": "Segmentation limits how far an infection spreads. Useful containment, but the machines remain exploitable.",
    "C": "Monitoring reveals what is happening. It improves visibility without fixing the cause.",
@@ -4677,7 +4677,7 @@
   "incorrect": {
    "A": "An unskilled attacker is an external actor using commodity tools. This was an employee acting for convenience.",
    "B": "A hacktivist attacks to advance a cause. No ideological motive exists here.",
-   "C": "A nation-state conducts sophisticated, targeted operations."
+   "C": "A nation-state conducts sophisticated, well-funded operations for strategic goals. An employee plugging in a router for convenience is nothing of the kind."
   }
  },
  "q0862": {
@@ -4700,11 +4700,11 @@
  },
  "q0864": {
   "objective": "1.3",
-  "explanation": "Management review is the approval step — someone accountable examines the proposed change and its security impact before it is allowed to proceed. Objective 1.3 lists the approval process among the components a change must pass through. Note this question shares its stem with q0342 but offers entirely different choices, so the two have different correct answers.",
+  "explanation": "Management review is the approval step: someone accountable examines the proposed change and its security impact before it is allowed to go ahead. Objective 1.3 lists the approval process among the stages a change must pass through. Q677 uses this same stem with different choices, and there the answer is backout planning.",
   "incorrect": {
    "B": "Load testing measures performance under demand. It is a quality activity that says nothing about security impact.",
    "C": "Maintenance notifications tell users when a change is happening. That is communication during implementation, not a check beforehand.",
-   "D": "Procedure updates document the new state afterwards. They follow the change rather than gating it."
+   "D": "Procedure updates document the new state afterward. They follow the change rather than gating it."
   }
  },
  "q0865": {
@@ -4776,7 +4776,7 @@
   "objective": "2.4",
   "explanation": "One account authenticating from Atlanta and then Beijing within a window no aircraft could cover is physically impossible. That contradiction between location and elapsed time is the impossible travel indicator, and it strongly suggests the credentials are being used by someone else.",
   "incorrect": {
-   "B": "SMTP replay is the abuse of a mail server to relay messages. It concerns mail, not login geography.",
+   "B": "SMTP replay would mean resending captured mail traffic. These logs show successful logins from two distant places, not repeated mail transactions.",
    "C": "Directory traversal escapes an intended directory to read arbitrary files on a web server.",
    "D": "Cross-site request forgery tricks a browser into submitting an unintended request using an existing session."
   }
@@ -4973,7 +4973,7 @@
  },
  "q0895": {
   "objective": "4.6",
-  "explanation": "The password still worked two years after it was first used and later leaked. A reuse policy prevents old passwords being set again, so a credential that appears in a breach dump cannot still be the live one.",
+  "explanation": "The password was two years old and turned up on the dark web, most likely from a breach of another service where the user had used it too. A password reuse policy (password history plus a ban on reusing old or breached passwords) forces it to change and stops it being set again, so the leaked credential would no longer have worked.",
   "incorrect": {
    "A": "Privileged access management secures administrative accounts. This was a standard user.",
    "B": "Account lockout stops repeated guessing. The attacker knew the correct password and needed no guesses.",
@@ -5023,7 +5023,7 @@
   "incorrect": {
    "B": "Uninstalling the application removes it from your device. The provider's servers are untouched.",
    "C": "A factory reset wipes your device. Again it has no effect on data held by the service.",
-   "D": "Terminating the account closes it, but providers routinely retain data in backups and archives afterwards."
+   "D": "Terminating the account closes it, but providers routinely retain data in backups and archives afterward."
   }
  },
  "q0901": {
@@ -5084,7 +5084,7 @@
   "objective": "3.4",
   "explanation": "The concern is how long the generator will run before something fails. Mean time between failures expresses exactly that expected operating interval, which is what drives preventive maintenance schedules and component replacement intervals.",
   "incorrect": {
-   "A": "RPO is how much data loss is tolerable, measured backwards from a failure. It concerns data, not hardware reliability.",
+   "A": "RPO is how much data loss is tolerable, measured backward from a failure. It concerns data, not hardware reliability.",
    "B": "ARO is the annualized rate of occurrence of a loss event. It is a risk frequency input rather than an equipment reliability measure.",
    "D": "MTTR is the average time to repair once something has failed. That matters after the fault, whereas maintenance planning aims to prevent it."
   }
@@ -5094,14 +5094,14 @@
   "explanation": "Physical destruction leaves nothing to recover. Shredding or pulverizing the platters and chips removes any dependence on software behaving correctly, which is why it gives the strongest assurance of any disposal method.",
   "incorrect": {
    "A": "Degaussing destroys magnetic structure and works on tape and spinning disks, but it has no effect on solid-state media.",
-   "B": "A multipass wipe is thorough on conventional drives, but wear levelling on SSDs can leave blocks the overwrite never reaches.",
+   "B": "A multipass wipe is thorough on conventional drives, but wear leveling on SSDs can leave blocks the overwrite never reaches.",
    "C": "Hashing verifies integrity. It is not a disposal method at all.",
    "D": "Erasure is a logical delete. It is the weakest option and data is often trivially recoverable."
   }
  },
  "q0909": {
   "objective": "2.3",
-  "explanation": "When packets arrive faster than the application can process them, input buffers fill and the program spends its time handling overflow conditions instead of doing work. That buffer saturation is what produces the extreme slowdown described.",
+  "explanation": "Of the options, only a buffer overflow concerns how an application handles incoming data. A flood of packets larger or faster than the application's input buffers can hold overruns them, and the program slows to a crawl or crashes as it struggles with the excess. The other choices have nothing to do with packet volume.",
   "incorrect": {
    "A": "A race condition is a timing flaw between checking a value and using it. It produces incorrect behavior rather than gradual slowdown under load.",
    "B": "Cross-site scripting injects script that runs in another user's browser. It affects clients, not server throughput.",
@@ -5122,7 +5122,7 @@
   "explanation": "Change management requires every modification to be requested, reviewed, approved and documented before it happens. That gate is what stops processes, assets and controls being altered informally or by someone without authority.",
   "incorrect": {
    "B": "Playbooks give step-by-step guidance for handling specific situations. They direct response rather than gating change.",
-   "C": "Incident response deals with security events after they occur.",
+   "C": "Incident response deals with security events after they occur. It does not authorize or block changes beforehand.",
    "D": "An acceptable use policy tells users what conduct is permitted. It governs behavior rather than authorizing system changes."
   }
  },
@@ -5175,7 +5175,7 @@
   "objective": "5.2",
   "explanation": "Recovery time objective is the maximum tolerable period between a disruption and operations being restored. Asking how long until systems are back up is asking for the RTO.",
   "incorrect": {
-   "B": "Recovery point objective concerns how much data loss is acceptable, measured backwards from the failure.",
+   "B": "Recovery point objective concerns how much data loss is acceptable, measured backward from the failure.",
    "C": "Mean time between failures predicts how often equipment fails. It is a reliability measure.",
    "D": "Mean time to repair is the average time to fix one failed component. It is a maintenance metric that feeds into RTO rather than being it."
   }
@@ -5222,7 +5222,7 @@
   "incorrect": {
    "B": "A SIEM correlates internal log data. It has no view of what has been published externally.",
    "C": "CVE is a catalog of software vulnerabilities. It names product flaws, not company breaches.",
-   "D": "CVSS scores the severity of those vulnerabilities."
+   "D": "CVSS scores the severity of vulnerabilities on a 0 to 10 scale. It says nothing about whether a particular company has been breached."
   }
  },
  "q0923": {
@@ -5240,7 +5240,7 @@
   "incorrect": {
    "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
    "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
-   "C": "An NDA restricts disclosure of confidential information."
+   "C": "An NDA restricts disclosure of confidential information. It contains no service or performance commitments."
   }
  },
  "q0925": {
@@ -5256,9 +5256,9 @@
   "objective": "5.3",
   "explanation": "A non-disclosure agreement legally binds the parties not to reveal specified information. Preventing unauthorized disclosure is the confidentiality pillar of security, which makes the NDA the document most directly tied to it.",
   "incorrect": {
-   "B": "A statement of work defines deliverables and tasks for an engagement.",
-   "C": "An MOU is a non-binding statement of intent between parties.",
-   "D": "A BPA governs the commercial terms of a business partnership."
+   "B": "A statement of work defines the deliverables, timeline and tasks for an engagement. Confidentiality is not its purpose.",
+   "C": "An MOU is a non-binding statement of intent between parties. It records goodwill rather than secrecy obligations.",
+   "D": "A BPA governs the commercial terms of a business partnership, such as responsibilities and profit sharing."
   }
  },
  "q0927": {
@@ -5295,7 +5295,7 @@
    "A": "Data segmentation separates data into distinct stores or zones. Neither control does that.",
    "C": "Data sovereignty is the legal principle about which country's laws govern data. It is unrelated to these controls.",
    "D": "Data in use is data loaded in memory and being actively processed. Neither FDE nor TLS protects that state.",
-   "F": "Data redundancy is about keeping copies for availability."
+   "F": "Data redundancy is about keeping extra copies for availability. Neither encryption control creates copies."
   }
  },
  "q0931": {
@@ -5304,7 +5304,7 @@
   "incorrect": {
    "B": "MTBF predicts how long equipment runs before failing. It forecasts the failure rather than the repair.",
    "C": "RTO is the maximum downtime the business will tolerate. It is a target the repair must fit inside, not an estimate of the repair.",
-   "D": "RPO concerns how much data loss is acceptable."
+   "D": "RPO concerns how much data loss is acceptable. It says nothing about how long a repair takes."
   }
  },
  "q0932": {
@@ -5367,7 +5367,7 @@
   "incorrect": {
    "A": "Recovery restores affected systems to normal operation. That work is finished before this meeting takes place.",
    "B": "Analysis determines what happened and how far it reached, during the incident rather than after it.",
-   "D": "Containment limits damage while the incident is live."
+   "D": "Containment limits damage while the incident is still live. This incident is already resolved."
   }
  },
  "q0939": {
@@ -5394,7 +5394,7 @@
   "incorrect": {
    "A": "Sanitization removes data from media. It is a disposal technique, not an analysis one.",
    "C": "Static analysis inspects the file without running it. Useful and fast, but packed or novel samples reveal little until they execute.",
-   "D": "Enumeration lists resources such as users or shares during an assessment."
+   "D": "Enumeration lists resources such as users, shares or services during an assessment. It does not evaluate files."
   }
  },
  "q0942": {
@@ -5455,9 +5455,9 @@
   "objective": "2.1",
   "explanation": "A hacktivist attacks in service of a cause, so the reward is the message rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
   "incorrect": {
-   "A": "Financial gain motivates organized crime.",
+   "A": "Financial gain motivates organized crime. A hacktivist's reward is attention for the cause, not money.",
    "B": "Service disruption is often the method a hacktivist uses to draw attention. It is the tactic, not the underlying motive.",
-   "D": "Corporate espionage seeks commercial advantage through stolen information."
+   "D": "Corporate espionage seeks commercial advantage through stolen information. That is a competitor's or nation-state's motive, not an activist's."
   }
  },
  "q0949": {
@@ -5473,7 +5473,7 @@
   "objective": "3.1",
   "explanation": "Defining security configuration as code, so WAF policies are provisioned automatically whenever an application deploys, is infrastructure as code. The policy lives in version control alongside the application and is applied by the same pipeline.",
   "incorrect": {
-   "B": "IoT refers to networked embedded devices.",
+   "B": "IoT refers to networked embedded devices such as sensors and cameras. It has nothing to do with deploying WAF policies.",
    "C": "IoC means indicator of compromise — an artifact such as a hash or address showing a system was attacked.",
    "D": "IaaS is a cloud service model providing compute and storage. It supplies the platform rather than automating configuration on it."
   }
@@ -5489,11 +5489,11 @@
  },
  "q0952": {
   "objective": "3.4",
-  "explanation": "Note the question asks for low cost, and of these options a cold site is the cheapest recovery strategy — space, power and cooling with no standing equipment or data. Be aware the trade-off is a slow recovery, so 'quick' fits poorly; cold is nonetheless the only low-cost option offered.",
+  "explanation": "The question sets two requirements: quick recovery and low cost. A warm site is the only option that meets both. It already has hardware and connectivity in place, so it can be running within hours once the latest data is restored, yet it costs far less than a hot site because nothing is kept running in real time. The source PDF keys cold here, but a cold site takes days or weeks to bring online, so it fails the 'quick' requirement.",
   "incorrect": {
-   "A": "A hot site is fully equipped and continuously synchronized, giving the fastest recovery at the highest cost.",
-   "C": "Manual is not a recognized recovery site type.",
-   "D": "A warm site has hardware and connectivity with data restored at failover. It sits between the two on both speed and cost."
+   "A": "A hot site recovers fastest, but a fully equipped, continuously synchronized duplicate is the most expensive option. It fails the 'low cost' requirement.",
+   "B": "A cold site is the cheapest option, but it has only space, power and cooling. Equipment has to be brought in and data restored, which takes days or weeks, so it fails the 'quick' requirement.",
+   "C": "Manual is not a recognized recovery site type."
   }
  },
  "q0953": {
@@ -5510,7 +5510,7 @@
   "explanation": "Turning awareness into a contest with rewards for good behavior is gamification. It borrows competition and incentive from games to motivate staff, which is a recognized technique for executing a security awareness program.",
   "incorrect": {
    "A": "Computer-based training is the delivery format for online modules. No training is being delivered here.",
-   "B": "Insider threat awareness is a training topic about recognizing malicious colleagues.",
+   "B": "Insider threat awareness is a training topic about recognizing malicious colleagues. The incentive program is a delivery technique, not a topic.",
    "C": "A SOAR playbook automates security response workflows. It is a technical control with no role in awareness."
   }
  },
@@ -5627,7 +5627,7 @@
   "explanation": "Chain of custody is the unbroken documented record of who handled each piece of evidence, when, and what they did with it. Without it the defense can argue the evidence may have been altered, and a court can refuse it.",
   "incorrect": {
    "B": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling.",
-   "C": "E-discovery is the legal process of identifying and producing electronically stored information.",
+   "C": "E-discovery is the legal process of identifying and producing electronically stored information. It relies on a chain of custody but is not the record that makes evidence admissible.",
    "D": "A tabletop exercise rehearses incident response in discussion. It has no evidentiary role."
   }
  },
@@ -5813,7 +5813,7 @@
  },
  "q0989": {
   "objective": "4.8",
-  "explanation": "The incident has been identified, which is detection. The next step is to stop it getting worse — isolating affected hosts, cutting connectivity, disabling accounts — before spending time on removing the cause or restoring service.",
+  "explanation": "The incident has already been identified, so detection is done. The next step among these choices is containment: stop it getting worse by isolating affected hosts, cutting connections and disabling compromised accounts before spending time removing the cause or restoring service. In the full SY0-701 sequence, analysis sits between detection and containment, but it is not offered here.",
   "incorrect": {
    "B": "Detection is the step that has just happened.",
    "C": "Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
@@ -5869,16 +5869,16 @@
   "objective": "4.8",
   "explanation": "Bringing the response team and stakeholders together to work through a hypothetical event, discussing what each would do, is a tabletop exercise. Nothing is executed against real systems — the value is in rehearsing roles and finding gaps.",
   "incorrect": {
-   "A": "Lessons learned is the review conducted after a real incident.",
-   "B": "Digital forensics is the technical collection and analysis of evidence.",
-   "D": "Root cause analysis determines why a real incident occurred."
+   "A": "Lessons learned is the review conducted after a real incident. No event is simulated.",
+   "B": "Digital forensics is the technical collection and analysis of evidence from a real incident. Nothing is simulated.",
+   "D": "Root cause analysis determines why a real incident occurred. It looks back at what happened rather than rehearsing a response."
   }
  },
  "q0996": {
   "objective": "3.3",
   "explanation": "Confidential is the level for information that must not be disclosed publicly but is shared inside the organization and with trusted partners under agreement. That intended audience is exactly what the classification describes.",
   "incorrect": {
-   "A": "Public data can be disclosed to anyone without harm.",
+   "A": "Public data can be disclosed to anyone without harm. It needs no restriction to internal use or partners.",
    "B": "Restricted is a tighter level, limiting access to a specifically named group rather than the organization and its partners generally.",
    "D": "Sensitive is a broad descriptor covering anything needing protection. It is less precise than confidential as a classification level."
   }
@@ -5915,8 +5915,8 @@
   "explanation": "Every recommendation removes something an attacker could use: unused servers, unused ports, and publicly available contact details that feed social engineering. Eliminating exposure rather than defending it is attack surface reduction.",
   "incorrect": {
    "B": "A vulnerability assessment is the activity that produced these findings. The recommendations describe what to do with them.",
-   "C": "A tabletop exercise rehearses incident response in discussion.",
-   "D": "A business impact analysis determines how badly the organization suffers when a function is lost."
+   "C": "A tabletop exercise rehearses incident response in discussion. None of these recommendations involve rehearsing a response.",
+   "D": "A business impact analysis determines how badly the organization suffers when a function is lost. It does not produce technical hardening steps like these."
   }
  },
  "q1001": {
@@ -5925,7 +5925,7 @@
   "incorrect": {
    "B": "SCADA supervises industrial control equipment. It is an operational technology system.",
    "C": "SNMP is a protocol for monitoring and managing devices. It gathers metrics rather than correlating logs into alerts.",
-   "D": "SCAP is a set of standards for automating configuration and vulnerability checking."
+   "D": "SCAP is a set of standards for automating configuration and vulnerability checking. It does not collect logs from devices or raise alerts."
   }
  },
  "q1002": {
@@ -5942,7 +5942,7 @@
   "explanation": "Access should be granted only after identity is proven. If the system authorizes first, someone obtains rights they were never verified to hold — effectively escalating their privileges through a flaw in the authentication and authorization ordering. Note this question is loosely worded; the intended point is that authorization without prior authentication yields unearned access.",
   "incorrect": {
    "B": "A race condition exploits the timing gap between checking a condition and acting on it. That is a related flaw but concerns timing rather than the order of authentication and authorization.",
-   "C": "Tailgating is following an authorized person through a physical door.",
+   "C": "Tailgating is following an authorized person through a physical door. It is physical entry, not a flaw in how a system grants access.",
    "D": "Impersonation is assuming another identity to deceive someone. That involves a false authentication rather than none at all."
   }
  },
@@ -5950,7 +5950,7 @@
   "objective": "2.1",
   "explanation": "An employee turning against the organization over a personal grievance, while still holding legitimate access, is the classic insider threat. What makes them dangerous is that their access is genuine and their activity looks authorized.",
   "incorrect": {
-   "B": "Nation-state actors pursue espionage and strategic disruption from outside.",
+   "B": "Nation-state actors pursue espionage and strategic disruption from outside. This is an employee with a personal grievance.",
    "C": "Shadow IT is unsanctioned technology adopted for convenience. It is careless rather than malicious.",
    "D": "A hacktivist attacks to advance a cause. This is personal grievance, not ideology."
   }
@@ -5996,7 +5996,7 @@
   "explanation": "Hundreds of unsolicited messages sent to many users at once is a broad, untargeted campaign. Phishing is the general term for that mass fraudulent messaging aimed at whoever happens to respond.",
   "incorrect": {
    "A": "A watering hole attack compromises a website the targets visit. No messages are sent at all.",
-   "B": "Typosquatting registers lookalike domains and waits for mistyped addresses.",
+   "B": "Typosquatting registers lookalike domains and waits for mistyped addresses. It does not involve sending messages.",
    "C": "Business email compromise is narrowly targeted at individuals who can authorize payments, usually one carefully crafted message rather than hundreds."
   }
  },
@@ -6059,8 +6059,8 @@
   "explanation": "The cloud responsibility matrix, often called the shared responsibility model, states exactly which configuration, maintenance and security duties belong to the provider and which remain the customer's for each service model.",
   "incorrect": {
    "A": "A service-level agreement commits the provider to measurable performance such as uptime. It governs service quality, not who does what.",
-   "C": "A memorandum of understanding is a non-binding statement of intent between organizations.",
-   "D": "A non-disclosure agreement restricts disclosure of confidential information."
+   "C": "A memorandum of understanding is a non-binding statement of intent between organizations. It does not assign operational duties.",
+   "D": "A non-disclosure agreement restricts disclosure of confidential information. It says nothing about configuration or maintenance roles."
   }
  },
  "q1018": {
@@ -6123,9 +6123,9 @@
   "objective": "5.3",
   "explanation": "A service-level agreement states the measurable performance the provider commits to deliver, and uptime percentage is the classic SLA metric. A specific figure such as 97% is exactly what it exists to record.",
   "incorrect": {
-   "A": "A BPA sets out how two businesses will operate a partnership.",
+   "A": "A BPA sets out how two businesses will operate a partnership, including responsibilities and profit sharing. Uptime targets belong in an SLA.",
    "B": "An MOU is a non-binding statement of intent between parties, with no enforceable metrics.",
-   "C": "An NDA restricts disclosure of confidential information."
+   "C": "An NDA restricts disclosure of confidential information. It contains no performance metrics."
   }
  },
  "q1026": {
@@ -6169,7 +6169,7 @@
   "explanation": "Annualized loss expectancy is single loss expectancy multiplied by the annualized rate of occurrence. With SLE already known, ARO is the missing term — how many times a year the loss is expected.",
   "incorrect": {
    "A": "MTTR is the average time to repair a failed component. It is a maintenance metric, not a loss calculation input.",
-   "C": "An SLA is a contractual performance commitment.",
+   "C": "An SLA is a contractual performance commitment between a provider and a customer. It plays no part in the ALE formula.",
    "D": "RTO is the maximum tolerable downtime. It is a recovery target rather than a frequency."
   }
  },
@@ -6223,13 +6223,13 @@
   "explanation": "Infrastructure as code expresses servers, networks and configuration as version-controlled definitions that a pipeline applies. Deployment becomes a repeatable, automated operation rather than a manual build, which is what automating infrastructure requires.",
   "incorrect": {
    "B": "IaaS is a cloud service model supplying compute and storage. It provides the resources; something still has to automate how they are configured.",
-   "C": "IoC means indicator of compromise — an artifact showing a system was attacked.",
-   "D": "IoT refers to networked embedded devices."
+   "C": "IoC means indicator of compromise: an artifact, such as a hash or IP address, showing a system was attacked. It has nothing to do with deployment.",
+   "D": "IoT refers to networked embedded devices such as sensors and cameras. It is not a deployment method."
   }
  },
  "q1037": {
   "objective": "4.8",
-  "explanation": "Chain of custody is the documented record of who collected each item, when, and every hand it passed through afterwards. External investigators depend on it because without that unbroken trail the evidence can be challenged as altered.",
+  "explanation": "Chain of custody is the documented record of who collected each item, when, and every hand it passed through afterward. External investigators depend on it because without that unbroken trail the evidence can be challenged as altered.",
   "incorrect": {
    "A": "Recovery restores systems to normal operation. It happens after the investigation's evidence needs are met.",
    "C": "A legal hold suspends routine deletion so relevant data survives. It preserves data but does not document handling of collected evidence.",
@@ -6349,9 +6349,9 @@
   "objective": "4.8",
   "explanation": "No alerts have fired, so the detection tooling has nothing to show. Threat hunting is the proactive search through telemetry for evidence of an adversary that automated detection missed, driven by hypotheses rather than alerts.",
   "incorrect": {
-   "B": "Digital forensics analyses evidence from a known incident. There is no confirmed incident yet.",
+   "B": "Digital forensics analyzes evidence from a known incident. There is no confirmed incident yet.",
    "C": "Vulnerability scanning finds weaknesses that could be exploited. It says nothing about whether anyone is currently inside.",
-   "D": "E-discovery is the legal process of producing electronically stored information for litigation."
+   "D": "E-discovery is the legal process of producing electronically stored information for litigation. It does not look for active attackers."
   }
  },
  "q1051": {
@@ -6369,7 +6369,7 @@
   "incorrect": {
    "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
    "C": "Avoidance means ceasing the activity entirely. The device stays in service.",
-   "D": "Transference shifts the financial consequence to a third party, typically through insurance."
+   "D": "Transference shifts the financial consequence to a third party, typically through insurance. A compensating control keeps the risk in-house and reduces it."
   }
  },
  "q1053": {
@@ -6413,9 +6413,9 @@
   "objective": "1.1",
   "explanation": "Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
   "incorrect": {
-   "A": "Key escrow is a technical control for recovering encryption keys.",
-   "B": "Tokenization is a technical data protection technique.",
-   "E": "Access badge readers are physical controls.",
+   "A": "Key escrow is a technical control for recovering encryption keys. It is not a process people follow.",
+   "B": "Tokenization is a technical data protection technique carried out by software, not by people.",
+   "E": "Access badge readers are physical controls. They restrict entry rather than governing how financial work is done.",
    "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
   }
  },
@@ -6430,7 +6430,7 @@
  },
  "q1059": {
   "objective": "2.5",
-  "explanation": "Virus alerts on machines already out of compliance means infections are present and may be spreading. Isolation immediately stops those hosts reaching anything else, containing the problem while patching and clean-up are planned — containment comes before remediation.",
+  "explanation": "Several machines are raising virus alerts, so an infection may be active and spreading. The first consideration is containment: isolating the affected machines stops them reaching the rest of the network while they are patched, cleaned and brought back into line with the OS baseline. Q840 describes a similar scenario but asks which technique should be reviewed first, and there the answer is patching, the root cause.",
   "incorrect": {
    "A": "Patching is the right remediation and must follow, but applying updates to machines that are already infected does not remove the malware or stop it spreading meanwhile.",
    "B": "Segmentation is an architectural change that takes time to design and implement. It does not address the live infections now.",
@@ -6442,7 +6442,7 @@
   "explanation": "Obfuscation transforms information so it cannot be read or understood by someone who should not see it, while the system can still work with it. Blocking information from view is precisely what it achieves.",
   "incorrect": {
    "B": "A classification policy defines sensitivity levels and handling rules. It says what must be protected without hiding anything itself.",
-   "C": "Verification confirms something is accurate or genuine.",
+   "C": "Verification confirms something is accurate or genuine. It does not hide anything from view.",
    "D": "Block rules stop traffic reaching a destination. They control access to a resource rather than concealing information within it."
   }
  },
@@ -6489,7 +6489,7 @@
    "C": "Bollards physically stop vehicles from entering an area. They are preventive and do not address vandalism to parked cars.",
    "D": "An access control vestibule controls people entering a building. The problem is outdoors in an ungated area.",
    "E": "Door locks prevent entry to a building. They are preventive and irrelevant to a car park.",
-   "F": "An access badge authenticates someone at a controlled door."
+   "F": "An access badge authenticates someone at a controlled door. The area is ungated, so there is no door to badge through."
   }
  },
  "q1066": {
@@ -6524,7 +6524,7 @@
   "explanation": "Least privilege grants only the permissions a role genuinely needs. An analyst whose job is to review rather than change simply would not hold the rights to save a configuration, so the unauthorized change becomes impossible rather than merely prohibited.",
   "incorrect": {
    "A": "A network administrator shutting down a critical interface is acting within legitimate privileges. Least privilege does not prevent authorized people doing authorized things.",
-   "C": "A threat actor discovering shared service account credentials is a credential management failure. Least privilege limits the damage afterwards but does not prevent the discovery.",
+   "C": "A threat actor discovering shared service account credentials is a credential management failure. Least privilege limits the damage afterward but does not prevent the discovery.",
    "D": "A change outside the approved window is a change management violation, addressed by process rather than permissions."
   }
  },
@@ -6552,7 +6552,7 @@
   "incorrect": {
    "A": "Masking obscures parts of a value for display. It is applied within applications rather than to a whole disk.",
    "B": "Data in transit is data crossing a network, protected by TLS or IPSec.",
-   "C": "Obfuscation makes data harder to interpret without genuine cryptographic strength.",
+   "C": "Obfuscation makes data harder to interpret without genuine cryptographic strength. FDE is real encryption of the stored volume.",
    "E": "Data sovereignty is the legal principle about which country's laws govern data. It is not a protection strategy."
   }
  },
@@ -6704,9 +6704,9 @@
   "objective": "1.1",
   "explanation": "Operational controls are executed by people through process. Dual control requires two authorized individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
   "incorrect": {
-   "A": "Key escrow is a technical control for recovering encryption keys.",
-   "B": "Tokenization is a technical data protection technique.",
-   "E": "Access badge readers are physical controls.",
+   "A": "Key escrow is a technical control for recovering encryption keys. It is not a process people follow.",
+   "B": "Tokenization is a technical data protection technique carried out by software, not by people.",
+   "E": "Access badge readers are physical controls. They restrict entry rather than governing how financial work is done.",
    "F": "Biometrics is a physical or technical authentication control rather than a process."
   }
  },
@@ -6724,7 +6724,7 @@
   "explanation": "Preserving logs, images and communications because litigation or regulatory action is anticipated is a legal hold. It suspends routine deletion and retention policies so relevant material survives long enough to be collected.",
   "incorrect": {
    "A": "Chain of custody documents who handled evidence after it is collected. Preservation comes first.",
-   "B": "Root cause analysis determines why the incident happened.",
+   "B": "Root cause analysis determines why the incident happened. It is analysis, not preservation of evidence.",
    "D": "Containment limits the damage while the incident is live. Preservation is about evidence, not spread."
   }
  },
@@ -6788,7 +6788,7 @@
   "explanation": "Port 23 is Telnet, which carries credentials and session data in plaintext, and port 25 is unencrypted SMTP. Both transmit without protection, which is exactly what an insecure-protocol policy targets.",
   "incorrect": {
    "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
-   "D": "Port 443 is HTTPS, encrypted web traffic.",
+   "D": "Port 443 is HTTPS, encrypted web traffic. It is the secure protocol the policy wants to keep.",
    "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
    "F": "Port 993 is IMAP over TLS.",
    "G": "Port 995 is POP3 over TLS."
@@ -7000,7 +7000,7 @@
    "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
    "B": "Video surveillance records who entered. It is detective rather than preventive.",
    "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
-   "F": "A sensor detects presence or movement and raises an alert."
+   "F": "A sensor detects presence or movement and raises an alert. It detects rather than restricting who gets in."
   }
  },
  "q1123": {
@@ -7026,8 +7026,8 @@
   "explanation": "Non-repudiation means the sender cannot credibly deny having sent the message. A digital signature achieves it because only the sender holds the private key that produced it, and anyone can verify that fact independently.",
   "incorrect": {
    "A": "Confidentiality keeps content from unauthorized readers. It says nothing about who sent it.",
-   "C": "Authorization determines what an authenticated party may do.",
-   "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterwards."
+   "C": "Authorization determines what an authenticated party may do. It does not prove who sent a message.",
+   "D": "Authentication proves identity at the time of the exchange. Non-repudiation makes that proof durable and undeniable afterward."
   }
  },
  "q1126": {
@@ -7054,7 +7054,7 @@
   "incorrect": {
    "A": "SPF authorizes mail servers to send for a domain. It concerns email, not file changes.",
    "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
-   "C": "NAC decides which devices may join the network."
+   "C": "NAC decides which devices may join the network. It does not track changes to data."
   }
  },
  "q1129": {
@@ -7073,7 +7073,7 @@
   "incorrect": {
    "A": "IoT refers to networked embedded devices. It is a category of equipment.",
    "C": "PaaS provides a managed application platform. It removes server management rather than standardizing how servers are built.",
-   "D": "ICS is industrial control systems used in manufacturing and utilities."
+   "D": "ICS is industrial control systems used in manufacturing and utilities. It has nothing to do with building servers."
   }
  },
  "q1131": {
@@ -7173,7 +7173,7 @@
   "incorrect": {
    "A": "Supply chain compromise reaches you through a vendor or component you procure, not a website you browse.",
    "B": "Typosquatting registers a lookalike domain for users who mistype. Here the genuine site is compromised.",
-   "D": "Impersonation is assuming a trusted identity to manipulate a person."
+   "D": "Impersonation is assuming a trusted identity to manipulate a person. No website is compromised."
   }
  },
  "q1142": {
@@ -7345,8 +7345,8 @@
   "explanation": "OSINT is the systematic collection of publicly available information — websites, social media, registries, public records — to understand what an organization has exposed. Finding those exposures without touching the target is its common use.",
   "incorrect": {
    "A": "Monitoring internal systems and traffic uses your own telemetry. Internal data is by definition not open source.",
-   "B": "Installing security patches is remediation work.",
-   "D": "Encrypting and storing data securely is a data protection control."
+   "B": "Installing security patches is remediation work. It uses no public information.",
+   "D": "Encrypting and storing data securely is a data protection control, unrelated to intelligence gathering."
   }
  },
  "q1162": {
@@ -7382,7 +7382,7 @@
   "incorrect": {
    "A": "Automated compliance monitoring checks configuration against standards. It reports on compliance state, not alert handling.",
    "C": "Automated vulnerability scans discover weaknesses. They generate findings rather than routing alerts.",
-   "D": "Automated indicator sharing exchanges threat intelligence between organizations."
+   "D": "Automated indicator sharing exchanges threat intelligence between organizations. It does not create internal tickets."
   }
  },
  "q1167": {
@@ -7506,8 +7506,8 @@
   "objective": "4.8",
   "explanation": "Chain of custody is the documented record of every person who handled each piece of evidence, when and why. Maintaining that unbroken trail is what allows the evidence to be shown as unaltered and therefore admissible.",
   "incorrect": {
-   "A": "Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterwards.",
-   "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation.",
+   "A": "Acquisition is the act of collecting the evidence. Chain of custody governs everything that happens to it afterward.",
+   "B": "E-discovery is the legal process of identifying and producing electronically stored information for litigation. It relies on chain of custody but is not the handling record itself.",
    "D": "Forensic tabletop exercises rehearse process in discussion. They do not handle real evidence."
   }
  },
@@ -7526,7 +7526,7 @@
   "incorrect": {
    "A": "RTO is the maximum tolerable downtime after an incident. It is a recovery target.",
    "B": "ALE is the annual monetary loss, calculated by multiplying SLE by ARO.",
-   "C": "SLE is the monetary loss from one occurrence."
+   "C": "SLE is the monetary loss from one occurrence. It says nothing about how often the event happens."
   }
  },
  "q1183": {
@@ -7660,8 +7660,8 @@
   "objective": "1.2",
   "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad.",
   "incorrect": {
-   "A": "Integrity means data has not been altered without authorization.",
-   "B": "Availability means systems and data are accessible when needed.",
+   "A": "Integrity means data has not been altered without authorization. It concerns modification, not disclosure.",
+   "B": "Availability means systems and data are accessible when needed. It concerns access, not secrecy.",
    "C": "Authentication proves identity. It is a mechanism that supports confidentiality rather than the concept itself."
   }
  },
@@ -7879,7 +7879,7 @@
   "incorrect": {
    "B": "SLE is the monetary loss from a single incident. It is a financial risk measure.",
    "C": "RTO is the maximum tolerable downtime after a failure. It is a recovery target rather than an availability estimate.",
-   "D": "RPO concerns how much data loss is acceptable."
+   "D": "RPO concerns how much data loss is acceptable. It says nothing about how often an asset fails."
   }
  },
  "q1223": {
@@ -7932,9 +7932,9 @@
   "objective": "1.3",
   "explanation": "Deciding when updates may be applied to company devices, and telling staff in advance, is change management in practice — the change is planned, scheduled and communicated rather than applied whenever someone feels like it.",
   "incorrect": {
-   "A": "Onboarding covers bringing a new employee or device into the organization.",
+   "A": "Onboarding covers bringing a new employee or device into the organization. Scheduling updates for existing devices is not onboarding.",
    "B": "Sideloading installs software from outside an official store. These are sanctioned vendor updates.",
-   "D": "Playbook guidelines give step-by-step response instructions for specific incidents."
+   "D": "Playbook guidelines give step-by-step response instructions for specific incidents. No incident is involved here."
   }
  },
  "q1229": {
@@ -7988,7 +7988,7 @@
   "incorrect": {
    "B": "Vishing is phishing by voice call. This arrived as email.",
    "C": "Phishing is the general category; whaling is the precise term when the victim is a top executive.",
-   "D": "Smishing is phishing over SMS."
+   "D": "Smishing is phishing over SMS. This arrived as email."
   }
  },
  "q1235": {
@@ -8023,7 +8023,7 @@
   "explanation": "The supervisor is acting out of worry about what might happen rather than in response to a threat, demand or belief. Action driven by apprehension of a possible attack is the fear motivator.",
   "incorrect": {
    "A": "Extortion involves a demand backed by a threat. Nobody is demanding anything.",
-   "C": "Ideological motivation drives action in service of a political or social cause.",
+   "C": "Ideological motivation drives action in service of a political or social cause. Nothing here is about a cause.",
    "D": "Ethical motivation describes acting on principle, as an ethical hacker does."
   }
  },
@@ -8120,11 +8120,11 @@
  },
  "q1249": {
   "objective": "4.9",
-  "explanation": "One request contains database syntax embedded in the URL, which is a SQL injection attempt rather than ordinary traffic. The source address on that request is the one behaving maliciously; the others are making normal requests.",
+  "explanation": "Two requests stand out. 118.19.200.55 sent a POST to /search carrying a raw SQL statement (SELECT * FROM company WHERE keyword = 'VP'), and the server answered 200: database code submitted through a web request is a SQL injection attempt, and the success code suggests it was processed. 132.18.62.144 also tried something hostile, a directory traversal (/../../vhosts), but the server refused it with 403. The keyed answer is the SQL injection source; if a question shows only one of these patterns, that pattern is the malicious one.",
   "incorrect": {
-   "A": "This address appears in normal request traffic with no injected query content.",
-   "C": "This address likewise shows ordinary requests.",
-   "D": "This address also shows legitimate traffic and no attack payload."
+   "A": "105.86.13.11 requested /latestContracts.htm and got 404 Not Found. A single request for a page that does not exist is ordinary.",
+   "C": "132.18.62.144 did attempt directory traversal (/../../vhosts), which is malicious too, but the server blocked it with 403. The keyed answer is the injection the server accepted with a 200 response.",
+   "D": "200.17.88.121 browsed ordinary pages and was refused once on a contact form POST (403). None of its requests carries an attack payload."
   }
  },
  "q1250": {
@@ -8138,7 +8138,7 @@
  },
  "q1251": {
   "objective": "5.6",
-  "explanation": "A realistic simulated phishing email measures who actually clicks, and the refresher immediately afterwards lands while the mistake is fresh. That combination of measurement and targeted teaching is what changes the behavior the leadership team is worried about.",
+  "explanation": "A realistic simulated phishing email measures who actually clicks, and the refresher immediately afterward lands while the mistake is fresh. That combination of measurement and targeted teaching is what changes the behavior the leadership team is worried about.",
   "incorrect": {
    "B": "Plaintext email removes clickable formatting but users still copy URLs, and it degrades legitimate communication.",
    "C": "Blocking all unsigned attachments addresses attachments, not links, and would block a large share of normal business mail.",
@@ -8212,9 +8212,9 @@
   "objective": "4.3",
   "explanation": "Prioritization combines severity with exposure. The vulnerability carrying the highest severity score on a server reachable from the internet has both the greatest potential impact and the widest attacker access, so it is remediated first.",
   "incorrect": {
-   "B": "Lower severity or a less exposed host means less urgency, even if the finding is real.",
-   "C": "Internal-only systems are reachable by far fewer attackers, which lowers the practical risk.",
-   "D": "A low-severity finding on any host is the last of these to warrant attention."
+   "B": "Vulnerability 2 is low severity (4.0) on an internal server, the least urgent combination in the table.",
+   "C": "Vulnerability 3 is internet-facing but low severity (4.0). Exposure alone does not outrank a critical score on an equally exposed server.",
+   "D": "Vulnerability 4 is critical (9.8) but sits on an internal server that far fewer attackers can reach. It comes next, after vulnerability 1."
   }
  },
  "q1260": {
@@ -8230,9 +8230,9 @@
   "objective": "1.2",
   "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad.",
   "incorrect": {
-   "A": "Integrity means data has not been altered without authorization.",
-   "C": "Non-repudiation prevents someone denying an action they performed.",
-   "D": "Availability means data and systems are accessible when needed."
+   "A": "Integrity means data has not been altered without authorization. It concerns modification, not who can see the data.",
+   "C": "Non-repudiation prevents someone denying an action they performed. It concerns proof of actions, not access.",
+   "D": "Availability means data and systems are accessible when needed. It concerns uptime, not restricting who has access."
   }
  },
  "q1262": {
@@ -8251,7 +8251,7 @@
    "A": "An IPS blocks traffic matching attack signatures. A fantasy sports site is not an attack.",
    "B": "URL scanning judges whether a specific destination is malicious. It assesses safety, not topic.",
    "D": "A static denial list is precisely the manual maintenance burden the CISO wants to avoid.",
-   "E": "DLP inspects data leaving the organization for sensitive content."
+   "E": "DLP inspects data leaving the organization for sensitive content. It does not block websites by topic."
   }
  },
  "q1264": {
@@ -8269,7 +8269,7 @@
   "incorrect": {
    "A": "Secure access service edge is a cloud-delivered networking and security model. It is not the principle at issue.",
    "C": "Least privilege concerns the permissions granted to identities. Ports are network exposure rather than user rights.",
-   "D": "Separation of duties splits tasks between people to prevent fraud."
+   "D": "Separation of duties splits tasks between people to prevent fraud. It has nothing to do with open ports."
   }
  },
  "q1266": {
@@ -8330,7 +8330,7 @@
   "objective": "1.2",
   "explanation": "A digital signature is produced with the sender's private key, which only they hold. Anyone can verify it, so the sender cannot credibly deny having sent the message — which is non-repudiation, and it also proves the content is unaltered.",
   "incorrect": {
-   "A": "Zero Trust is an architectural model based on never assuming trust from network position.",
+   "A": "Zero Trust is an architectural model based on never assuming trust from network position. It is not what a signature achieves.",
    "C": "Defense in depth means layering controls. It describes strategy rather than what a signature achieves.",
    "D": "Confidentiality requires encryption. A signed email remains readable by anyone who receives it."
   }
@@ -8376,7 +8376,7 @@
   "explanation": "A third-party risk assessment produces findings about a vendor's controls. Compliance attestation consumes those findings and turns them into a formal statement of whether the vendor meets the required security, regulatory or contractual obligations.",
   "incorrect": {
    "A": "A statement of work defines deliverables and scope for an engagement. It precedes the work rather than consuming its results.",
-   "B": "A service-level agreement sets measurable performance commitments.",
+   "B": "A service-level agreement sets measurable performance commitments. It does not consume risk assessment findings.",
    "C": "A vendor registry lists suppliers. It records who they are rather than evaluating assessment outcomes."
   }
  },
@@ -8474,7 +8474,7 @@
   "objective": "4.2",
   "explanation": "SSDs and HDDs fail differently, so no single method covers both. Wiping addresses accessible data, degaussing works on magnetic platters, and shredding physically destroys what remains — applying them together is what guarantees nothing is recoverable from either drive type.",
   "incorrect": {
-   "B": "Three overwrite passes is reasonable for magnetic disks but unreliable on SSDs, where wear levelling leaves blocks the overwrite never reaches.",
+   "B": "Three overwrite passes is reasonable for magnetic disks but unreliable on SSDs, where wear leveling leaves blocks the overwrite never reaches.",
    "C": "Smashing with a hammer is uncontrolled and frequently leaves chips or platter fragments large enough to recover data from.",
    "D": "A consumer magnet is nowhere near strong enough to degauss a drive, and it has no effect at all on flash memory."
   }

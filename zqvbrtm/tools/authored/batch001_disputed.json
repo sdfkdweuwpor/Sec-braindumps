@@ -3,7 +3,7 @@
   "objective": "3.4",
   "explanation": "A hot site is a fully equipped, running facility the company can move operations to, so an outage that lasts hours or days does not stop the business. The word 'extended' is the discriminator: a UPS only bridges the gap for minutes until power returns or systems shut down cleanly. Published answers split between these two; the hot site is the one that actually covers a long outage.",
   "incorrect": {
-   "B": "A UPS is battery backup for short outages -- enough to ride out a flicker or shut down gracefully, not to keep an environment running through an extended outage.",
+   "B": "A UPS is battery backup for short outages — enough to ride out a flicker or shut down gracefully, not to keep an environment running through an extended outage.",
    "C": "Snapshots capture a point-in-time copy of a system or volume. They help recover data, but do nothing to keep systems powered or running.",
    "D": "SOAR automates security operations and incident response workflows. It has no bearing on power or site availability."
   }
@@ -14,7 +14,7 @@
   "incorrect": {
    "A": "BYOD means employees use their own devices, which fails the 'company-owned' requirement and limits how far the company can harden them.",
    "B": "CYOD lets employees pick from approved models, but personal use and ownership arrangements vary, and it adds nothing the requirements ask for over COBO.",
-   "C": "COPE is company-owned but personally enabled -- it permits personal use, which adds risk the requirements do not call for."
+   "C": "COPE is company-owned but personally enabled — it permits personal use, which adds risk the requirements do not call for."
   }
  },
  "q0702": {
@@ -23,7 +23,7 @@
   "incorrect": {
    "A": "BYOD means employees use their own devices, which fails the 'company-owned' requirement and limits how far the company can harden them.",
    "B": "CYOD lets employees pick from approved models, but personal use and ownership arrangements vary, and it adds nothing the requirements ask for over COBO.",
-   "C": "COPE is company-owned but personally enabled -- it permits personal use, which adds risk the requirements do not call for."
+   "C": "COPE is company-owned but personally enabled — it permits personal use, which adds risk the requirements do not call for."
   }
  },
  "q0327": {
@@ -31,13 +31,13 @@
   "explanation": "An acceptable use policy is a written policy set by management that governs how people may use company systems. Policies, procedures and governance documents are managerial controls in CompTIA's categories.",
   "incorrect": {
    "A": "Physical controls are tangible barriers such as locks, fences and guards. A policy document is not one.",
-   "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
+   "C": "Technical controls are enforced by technology — firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
    "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
   }
  },
  "q0369": {
   "objective": "4.1",
-  "explanation": "The attacker already has valid credentials, so anything that unlocks with a login -- including full disk encryption -- no longer protects the data. Remote wipe lets the company erase a lost or stolen device's data once it is reported, which is the control that still works after the credentials are compromised, and it applies to every company device through MDM.",
+  "explanation": "The attacker already has valid credentials, so anything that unlocks with a login — including full disk encryption — no longer protects the data. Remote wipe lets the company erase a lost or stolen device's data once it is reported, which is the control that still works after the credentials are compromised, and it applies to every company device through MDM.",
   "incorrect": {
    "A": "Application management controls which apps are installed and how they behave. It does not protect data on a device the attacker can already log in to.",
    "B": "Full disk encryption protects data when the device is locked or powered off, but the attacker logged in with a valid username and password, which decrypts it.",
@@ -91,7 +91,7 @@
  },
  "q0553": {
   "objective": "2.3",
-  "explanation": "Firmware runs beneath the operating system -- in the BIOS/UEFI, drive controllers or network cards -- and executes before the OS loads. Malicious code there is invisible to the OS and its security tools, which can only see what the firmware presents to them. Some published answers pick memory injection.",
+  "explanation": "Firmware runs beneath the operating system — in the BIOS/UEFI, drive controllers or network cards — and executes before the OS loads. Malicious code there is invisible to the OS and its security tools, which can only see what the firmware presents to them. Some published answers pick memory injection.",
   "incorrect": {
    "B": "Side loading installs apps from outside the official store. The app still runs inside the OS, which can see it.",
    "C": "Memory injection hides malicious code inside a legitimate process to evade some tools, but the code still runs within the operating system, where memory scanning and EDR can find it.",
@@ -118,7 +118,7 @@
  },
  "q0647": {
   "objective": "2.2",
-  "explanation": "A copy of the company's email site, run by someone else to collect logins, is a phishing site -- the fake page is the tool used to harvest the credentials users type in. Some published answers pick impersonation, but in CompTIA's terms impersonation means pretending to be a person, typically over the phone or in person.",
+  "explanation": "A copy of the company's email site, run by someone else to collect logins, is a phishing site — the fake page is the tool used to harvest the credentials users type in. Some published answers pick impersonation, but in CompTIA's terms impersonation means pretending to be a person, typically over the phone or in person.",
   "incorrect": {
    "A": "Impersonation is an attacker pretending to be someone else, such as help desk staff or an executive. A cloned website is the mechanism of phishing.",
    "B": "Replication is copying data between systems for redundancy. It is not an attack.",
@@ -140,13 +140,13 @@
   "incorrect": {
    "C": "Least privilege limits what an account can do. It does not make passwords stronger.",
    "D": "Something you have is an MFA factor. MFA is valuable, but it adds a separate factor rather than fixing the password weaknesses the audit found.",
-   "E": "Security keys are hardware authenticators -- another MFA factor, not a password policy element.",
+   "E": "Security keys are hardware authenticators — another MFA factor, not a password policy element.",
    "F": "Biometrics are an inherence factor, not a password policy element."
   }
  },
  "q0678": {
   "objective": "5.5",
-  "explanation": "Attestation is a formal statement, usually signed by management or an auditor, that something is true -- here, that the application is out of scope. Acknowledgment and attestation is the documented confirmation the question asks for.",
+  "explanation": "Attestation is a formal statement, usually signed by management or an auditor, that something is true — here, that the application is out of scope. Acknowledgment and attestation is the documented confirmation the question asks for.",
   "incorrect": {
    "A": "Data inventory and retention track what data exists and how long it is kept. They inform scope but do not formally confirm it.",
    "B": "The right to be forgotten is an individual's privacy right to have their personal data erased. It is unrelated to reporting scope.",
@@ -185,14 +185,14 @@
   "explanation": "TLS certificates let clients verify the server and set up an encrypted TLS channel, and a VPN encrypts the whole connection between the company and the cloud provider. Together they cover data in transit at both the application and network layers. HTTPS is itself TLS carrying web traffic, so pairing it with TLS certificates names the same protection twice; some published answers do exactly that.",
   "incorrect": {
    "B": "WPA2 encrypts only the local wireless link, not the path across the internet to the cloud server.",
-   "C": "HTTPS is HTTP over TLS -- the same mechanism as the TLS certificates already chosen, so it adds nothing distinct.",
+   "C": "HTTPS is HTTP over TLS — the same mechanism as the TLS certificates already chosen, so it adds nothing distinct.",
    "E": "Encryption key management governs how keys are stored and rotated. It supports encryption but does not itself secure the traffic.",
    "F": "Digital signatures prove integrity and origin, but do not encrypt the data in transit."
   }
  },
  "q0791": {
   "objective": "3.4",
-  "explanation": "Load balancing spreads work across multiple servers, so when one fails the others carry on and the service keeps running without a restore. That keeps the system state available through the failure. A full backup can rebuild the state afterwards, but only by restoring it, which is slower.",
+  "explanation": "Load balancing spreads work across multiple servers, so when one fails the others carry on and the service keeps running without a restore. That keeps the system state available through the failure. A full backup can rebuild the state afterward, but only by restoring it, which is slower.",
   "incorrect": {
    "A": "A hybrid cloud is a deployment model, not a mechanism for surviving a system failure.",
    "B": "A cold site is empty space with power and connectivity, and takes the longest of any site to bring online.",
@@ -201,7 +201,7 @@
  },
  "q0853": {
   "objective": "4.1",
-  "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighboring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
+  "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighboring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader exercise that produces heat maps, and some answer keys accept it, but the heat map is the tool that shows the leakage.",
   "incorrect": {
    "A": "MDM manages the devices the company owns. It cannot stop outside devices from seeing the network.",
    "B": "A pre-shared key controls who can join, but the network stays just as visible to outsiders.",
