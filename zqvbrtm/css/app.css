@@ -1373,3 +1373,68 @@ abbr.acro { text-decoration: none; }
   .has-glow :is(.card, .qtext, .choice, .explain, .qnav, .acro-list, .drill-banner)::after { transition: none; }
   .search-input:focus { transform: none; }
 }
+
+/* =====================================================================
+   Verify this answer: Google, Claude, Professor Messer
+   ===================================================================== */
+.verify {
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem 1rem; flex-wrap: wrap;
+  margin-top: .7rem; padding: .75rem 0 .2rem; border-top: 1px dashed var(--border-strong);
+}
+.explain > .verify {
+  margin: 0; padding: .8rem 1.3rem 1rem;
+  background: color-mix(in srgb, var(--bg-raised) 65%, transparent);
+}
+.verify-l { display: inline-flex; align-items: center; gap: .45rem; font-weight: 800; font-size: .95rem; color: var(--text-dim); }
+.verify-l .icon { color: var(--secondary-dim); }
+.verify-links { display: flex; gap: .5rem; flex-wrap: wrap; }
+.verify-btn {
+  --vb: var(--accent);
+  display: inline-flex; align-items: center; gap: .42rem;
+  min-height: 40px; padding: .35rem .95rem .35rem .8rem;
+  border-radius: 999px; border: 1.5px solid var(--border-strong);
+  background: var(--bg-card); color: var(--text);
+  font-size: .9rem; font-weight: 800; text-decoration: none; white-space: nowrap;
+  transition: transform .2s var(--spring), border-color .18s var(--ease), background .18s var(--ease), box-shadow .2s var(--ease);
+}
+.verify-btn .icon { color: var(--vb); transition: transform .3s var(--spring); }
+.verify-btn:hover {
+  transform: translateY(-2px); border-color: var(--vb);
+  background: color-mix(in srgb, var(--vb) 9%, var(--bg-card));
+  box-shadow: 0 8px 20px -8px color-mix(in srgb, var(--vb) 60%, transparent);
+}
+.verify-btn:hover .icon { transform: scale(1.15) rotate(-8deg); }
+.verify-btn:active { transform: scale(.97); }
+.verify-btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--vb) 45%, transparent); outline-offset: 2px; }
+.verify-globe { --vb: #1a73e8; }
+.verify-sparkle { --vb: #d9643a; }
+.verify-video { --vb: #e11d48; }
+[data-theme="dark"] .verify-globe { --vb: #6ea8ff; }
+[data-theme="dark"] .verify-sparkle { --vb: #f0936e; }
+[data-theme="dark"] .verify-video { --vb: #fb7185; }
+@media (max-width: 520px) {
+  .verify-links { width: 100%; }
+  .verify-btn { flex: 1 1 auto; justify-content: center; }
+}
+
+/* a short note that slides up from the bottom */
+.toast {
+  position: fixed; left: 50%; bottom: calc(var(--tap) + 1.4rem + env(safe-area-inset-bottom, 0px)); z-index: 180;
+  transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: .55rem;
+  width: max-content; max-width: calc(100% - 32px); padding: .75rem 1.15rem; border-radius: 14px;
+  background: #0f172a; color: #fff; font-weight: 700; font-size: .95rem; line-height: 1.35;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, .35);
+  animation: toast-in .45s var(--spring) both;
+}
+.toast .icon { color: #4ade80; flex: 0 0 auto; }
+.toast.is-out { animation: toast-out .35s var(--ease) both; }
+[data-theme="dark"] .toast { background: #f8fafc; color: #0f172a; }
+[data-theme="dark"] .toast .icon { color: #15803d; }
+@media (min-width: 880px) { .toast { bottom: 1.6rem; } }
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, 16px) scale(.96); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes toast-out { to { opacity: 0; transform: translate(-50%, 10px); } }
+@media (prefers-reduced-motion: reduce) {
+  .toast, .toast.is-out { animation: none; }
+  .verify-btn, .verify-btn .icon { transition: none; }
+}

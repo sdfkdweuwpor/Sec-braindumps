@@ -15,6 +15,7 @@ import { flameChip, celebrate, extinguish } from '../flame.js';
 import { findAcronyms, wrapAcronyms } from '../acronyms.js';
 import { odometer } from '../motion.js';
 import { checkMilestones } from '../milestones.js';
+import { verifyRow } from '../verify.js';
 
 const DRILL_SIZE = 10;
 
@@ -406,7 +407,7 @@ export async function renderQuiz(view, { navigate }) {
       }
       wrapAcronyms(inner);
       details.append(inner);
-      panel.append(details);
+      panel.append(details, verifyRow(question, { order }));
       body.append(panel);
 
       if (how === 'reveal') {

@@ -9,6 +9,7 @@ import { countUp, reduced, EASE, burst } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewChanges } from '../srs.js';
 import { currentSummary, startSmartReview, reviewButtonLabel } from '../smartReview.js';
+import { verifyRow } from '../verify.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
@@ -248,6 +249,7 @@ export async function renderResults(view, { params, navigate }) {
         inner.append(el('ul', { class: 'wrongs' },
           wrongs.map(([k, why]) => el('li', {}, [el('span', { class: 'wkey', text: L[k] }), el('span', { text: why })]))));
       }
+      inner.append(verifyRow(q, { order }));
       inner.append(el('button', {
         class: 'iconbtn', type: 'button',
         'aria-pressed': String(store.isFlagged(q.id)),

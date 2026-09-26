@@ -4,6 +4,7 @@ import { el, clear, renderQuestionText, fmtDate, highlightIn, plainStem } from '
 import * as store from './store.js';
 import { icon } from './icons.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
+import { verifyRow } from './verify.js';
 
 const BAND_CLASS = {
   'Exam ready': 'band--ready',
@@ -221,6 +222,7 @@ export function questionList(rows, {
           wrongs.map(([k, why]) => el('li', {}, [el('b', { text: `${k}. ` }), why]))));
       }
 
+      inner.append(verifyRow(q));
       inner.append(el('button', {
         class: 'iconbtn', type: 'button',
         style: 'margin-top:.6rem',
