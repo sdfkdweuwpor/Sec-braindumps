@@ -39,7 +39,8 @@ export function parseHash() {
   const raw = (window.location.hash || '#/home').slice(1);
   const [path, query] = raw.split('?');
   return {
-    path: path || '/home',
+    // "#/" and a trailing slash ("#/stats/") land on the page they mean.
+    path: path.replace(/\/+$/, '') || '/home',
     params: new URLSearchParams(query || ''),
   };
 }
