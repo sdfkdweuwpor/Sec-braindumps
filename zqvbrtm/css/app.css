@@ -970,11 +970,25 @@ pre.exhibit-text {
   padding: .85rem 1rem; border-radius: 12px;
   background: #0f172a; color: #e2e8f0; border: 1px solid #1e293b;
 }
-.exhibit-table-wrap { overflow-x: auto; border: 1px solid var(--border-strong); border-radius: 12px; }
+.exhibit-table-wrap { position: relative; overflow: hidden; border: 1px solid var(--border-strong); border-radius: 12px; }
+.exhibit-table-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.exhibit-table-wrap::before, .exhibit-table-wrap::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 2.25rem; z-index: 1;
+  pointer-events: none; opacity: 0; transition: opacity .2s ease;
+}
+.exhibit-table-wrap::before { left: 0;  background: linear-gradient(to left,  transparent, var(--bg-card)); }
+.exhibit-table-wrap::after  { right: 0; background: linear-gradient(to right, transparent, var(--bg-card)); }
+.exhibit-table-wrap.more-left::before, .exhibit-table-wrap.more-right::after { opacity: .95; }
 .exhibit-table { border-collapse: collapse; width: 100%; font-family: var(--mono); font-variant-numeric: tabular-nums; }
 .exhibit-table th, .exhibit-table td { padding: .45rem .75rem; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--border); }
 .exhibit-table th { font-family: var(--font); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
-                    color: var(--text-dim); background: var(--bg-raised); }
+                    color: var(--text-dim); background: var(--bg-raised);
+                    /* Headers may wrap ("Server / location") so narrow tables fit a phone;
+                       data cells stay on one line. */
+                    white-space: normal; overflow-wrap: normal; word-break: normal; hyphens: manual; vertical-align: bottom; }
+@media (max-width: 560px) {
+  .exhibit-table th, .exhibit-table td { padding: .42rem .55rem; }
+}
 .exhibit-table tbody tr:last-child td { border-bottom: 0; }
 .exhibit-table tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--bg-sunken) 45%, transparent); }
 

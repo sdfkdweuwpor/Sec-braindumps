@@ -4,20 +4,33 @@ The same app as the braindump one (repo root), built from a second
 question PDF (in `source/`), with a few upgrades of its own. The folder
 name is deliberately random so the URL does not name the vendor.
 
-- **1,279 questions**, every one with an explanation and a note on each
-  wrong choice. 936 explanations came from the braindump bank where the
-  two share a question; the other 343 were written for this bank.
+- **1,279 questions**, every one with an explanation, a note on each
+  wrong choice and an exam tip. 936 explanations came from the braindump
+  bank where the two share a question; the other 343 were written for this
+  bank. Every question, choice, key, explanation and note has since been
+  read end to end; no explanation runs under 28 words and every wrong-answer
+  note says why that choice does not fit this scenario.
 - **Answer keys checked.** Where the two banks share a question with
-  identical choices, both must key the same answer; 23 disagreed and were
-  settled one by one. Every other key was reviewed while its explanation
-  was written; 6 more were wrong in the PDF. All 21 corrections, and the 4
-  blank keys in the PDF, are recorded with reasons in
+  identical choices, both must key the same answer, and every other key was
+  checked while reading. 23 keys the PDF got wrong are corrected and its 4
+  blank keys filled, each recorded with the reasoning and corroboration in
   `tools/corrections.py`. Contested items say so in their explanation.
-- **Text cleaned.** 105 OCR and typing fixes across 64 questions
-  (`TEXT_FIXES` in `tools/corrections.py`), two pieces of missing content
-  restored, exact-duplicate choices removed, one corrupted question
-  (`q1189`, which pairs one question's stem with another's choices)
-  dropped.
+- **Text cleaned.** 243 OCR and typing fixes across 151 questions
+  (`TEXT_FIXES` in `tools/corrections.py`: "dicks links" for "clicks
+  links", "a risk to a file" for "a link to a file", "fall-closed", and so
+  on), missing content restored, exact-duplicate choices removed, every
+  multiple-answer prompt worded "(Choose two.)" the way CompTIA writes it,
+  and one corrupted question (`q1189`, which pairs one question's stem with
+  another's choices) dropped.
+- **Exam tips.** Under each explanation, a one-line callout on how to spot
+  what the question is testing: the clue in the wording, the concept it
+  maps to, or the look-alike answer to rule out (`tools/tips/`).
+- **Verify this answer.** After answering, three buttons check the question
+  elsewhere (`js/verify.js`): Google (searches the stem), Claude (opens a
+  chat with the question, the choices and the marked answer, and copies the
+  same text in case the prompt does not carry over) and Professor Messer
+  (searches the professormesser.com Security+ material for the topic). Links open in a new tab and
+  send no referrer.
 - **Quiz navigation.** Previous / Next under every question and arrow
   keys. Practice answers lock once revealed; mock exam
   answers stay editable until you submit and are recorded once, at submit.
@@ -32,16 +45,22 @@ name is deliberately random so the URL does not name the vendor.
   back to 1 day, and answering before a check is due changes nothing. The
   schedule is rebuilt from the answer history (`js/srs.js`), so nothing
   extra is stored and it applies to history from before the feature.
-- **Exhibits restored.** 26 questions whose logs, tables, code or command
+- **Exhibits restored.** 27 questions whose logs, tables, code or command
   output the PDF printed as pictures now carry that content as text,
   transcribed from the page images (`EXHIBITS` in `tools/corrections.py`).
-  They render as a code box or a table.
+  They render as a code box or a table; a table too wide for a phone
+  scrolls inside its box with a fade on the side that has more.
 - **Acronyms.** Spelled-out terms in questions and choices are written as the
   exam writes them (Full disk encryption -> FDE), from the list in
   `tools/acronyms.py`. *Show acronyms* under a question (or the A key) lists
   what each one stands for.
-- **Streak flame.** Glows at 5 in a row, catches fire at 10, burns brighter
-  red at 15, shifts toward blue from 16 and turns blue at 25 (`js/flame.js`).
+- **Streak fire.** A full-screen burst of fire at 3, 10, 25 and 50 in a row
+  and every 25 after that, with a flame roar; smaller flares at 5, 15 and 40.
+  The flame chip glows at 5, catches fire at 10, burns brighter red at 15,
+  shifts toward blue from 16 and is blue at 25, then turns cyan and green
+  on the way to bright gold at 40. Gold holds for a moment and then slowly
+  cycles through the colors; from 50 it is a rainbow. Breaking a streak of 3
+  or more puts the flame out with a puff of smoke (`js/flame.js`).
 - **Search.** A box on the Study screen and a Search page (`js/search.js`):
   every word must appear in the question, its answers, its explanations or
   its objective; short words such as WAF or IP match whole words only; a
@@ -49,13 +68,21 @@ name is deliberately random so the URL does not name the vendor.
   each result shows whether you last got it right, and *Quiz me on these*
   starts a quiz from the results (up to 50).
 - **Sound effects.** Synthesized in the browser (`js/sound.js`, no audio
-  files): a chime for right, a soft low tone for wrong, an arpeggio for
-  streaks and mastered questions, a finish chord on results. On by default;
-  the speaker button in the top bar turns them off. The mock exam only
-  ever plays the neutral tap, so it never gives an answer away.
+  files): a chime for right, a soft low tone for wrong, a rising run every 5
+  in a row, a roaring flame for the big fire moments, a fizzle when a streak
+  breaks, plus quiet taps for tabs, navigation, opening explanations and
+  flags. On by default; the speaker button in the top bar turns them off.
+  The mock exam only ever plays the neutral tap, so it never gives an answer
+  away.
 - **Motion.** Direction-aware question slides, answer reveal effects, count-ups
-  and a sliding nav highlight (`js/motion.js`), all off under
+  and a sliding nav highlight; a soft glow and border spotlight that follows
+  the pointer over cards, questions and choices; search boxes that cycle
+  through example searches (`js/motion.js`). All of it is off under
   `prefers-reduced-motion`.
+- **Icons.** Phosphor duotone icons for the interface and Microsoft Fluent
+  3D emoji for the feature tiles, both MIT-licensed, embedded as inline SVG
+  and small WebP images so nothing is fetched from a CDN
+  (`js/icons.js` and `js/art.js`, generated by `tools/build_icons.py`).
 - **Letters by position.** Choices are shuffled, but the top choice always
   reads A; explanations and results use the same letters.
 - **Look.** Light theme by default (dark is one tap away), and a
@@ -98,7 +125,7 @@ a linear map of your raw percentage and is clearly labeled as unofficial —
 CompTIA does not publish how it scales, and the real exam includes unscored
 items. The real pass mark is 750/900.
 
-Deliberately **not** built: study calendar, streaks, Question of the Day,
+Deliberately **not** built: study calendar, daily study streaks, Question of the Day,
 Quick 10, timed quizzes outside the mock exam, XP/levels/badges, anything
 social, anything with a paywall.
 
@@ -122,7 +149,9 @@ data/acronyms.js        acronym dictionary (generated from tools/acronyms.py)
 js/smartReview.js       Smart review card and session start
 js/sound.js             synthesized sound effects
 js/motion.js            animation helpers (Web Animations API)
-js/icons.js             inline SVG line icons
+js/icons.js             Phosphor duotone icons as inline SVG (generated)
+js/art.js               Fluent 3D emoji art as embedded WebP (generated)
+js/verify.js            the Verify row: Google, Claude and Professor Messer links
 js/components.js        readiness card, bars, sparkline, paginated question list
 js/dom.js               element helper, code-snippet rendering
 js/views/               one module per screen
@@ -133,6 +162,8 @@ data/questions.json     the same data as portable JSON (backup; the app does not
 data/unsupported.js     performance-based items the schema does not model
 tools/                  one-time Python extraction and validation (build-time only)
 tools/authored/         hand-written explanations, merged on every extraction
+tools/tips/             one exam tip per question, merged on every extraction
+tools/build_icons.py    regenerates js/icons.js and js/art.js from the icon packages
 source/                 the question-bank PDF -- exactly one
 tests/                  node --test suites
 ```
@@ -143,7 +174,7 @@ tests/                  node --test suites
 npm test          # or: node --test
 ```
 
-93 tests covering pool filtering, the Smart review schedule, search, count clamping, no-duplicates-within-a-quiz,
+102 tests covering pool filtering, the Smart review schedule, search, the streak fire tiers and moments, the Verify links, count clamping, no-duplicates-within-a-quiz,
 all-or-nothing multi-answer scoring, the readiness maths, the localStorage
 migration path, storage-failure fallback, refusing another app's progress
 file, and the integrity of the shipped bank. The five bank tests are skipped
@@ -174,7 +205,9 @@ npm test                     # data.test.js guards the shipped bank
 `validate.py` fails loudly on duplicate ids, answers that name a choice which
 does not exist, fewer than 2 or more than 8 choices, empty text, a domain
 outside 1–5, an objective that is not in the exam's list, a `single` question
-with more than one answer, and an answer-letter distribution skewed past 40%
+with more than one answer, a "(Choose two.)" prompt that disagrees with the
+number of keyed answers, a wrong choice with no note, a question with no exam
+tip, and an answer-letter distribution skewed past 40%
 (which almost always means the parser misaligned the key). It also clusters
 near-duplicate questions and flags any whose copies disagree on the answer —
 that disagreement is proof one of them is wrong.
@@ -241,6 +274,7 @@ re-running it never loses them:
   explanation: "..." ,          // or null
   explanationSource: "pdf",     // "pdf" | "authored" | "pdf+authored" | null
   incorrectExplanations: { A: "...", B: "..." },   // may be {}
+  tip: "...",                   // one-line exam tip (tools/tips/)
   references: [],
   source: "bank.pdf#p42",       // the PDF's filename and page
   needsReview: true,            // the domain was inferred, not labeled
@@ -295,3 +329,10 @@ Notes:
   **Stats → Export progress**, then **Import progress** on the other device.
 - Two apps on the same Pages account share an origin, so each needs its own
   `STORAGE_NAMESPACE` (see *Making a new app from this*).
+
+## Credits
+
+- Interface icons: [Phosphor Icons](https://phosphoricons.com) (MIT).
+- Feature art: [Microsoft Fluent Emoji](https://github.com/microsoft/fluentui-emoji)
+  3D set (MIT), via the `@lobehub/fluent-emoji-3d` package.
+- Sounds are synthesized in the browser; there are no audio files.

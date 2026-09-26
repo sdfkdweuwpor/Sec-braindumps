@@ -56,12 +56,24 @@ export function renderQuestionText(text) {
     if (fence === 'table') {
       const rows = fenceBuf.filter((r) => r.trim()).map((r) => r.split(' | ').map((c) => c.trim()));
       const [head, ...body] = rows;
-      frag.append(el('div', { class: 'exhibit exhibit-table-wrap' }, [
+      const scroller = el('div', { class: 'exhibit-table-scroll' }, [
         el('table', { class: 'exhibit-table' }, [
           el('thead', {}, [el('tr', {}, head.map((c) => el('th', { scope: 'col', text: c })))]),
           el('tbody', {}, body.map((r) => el('tr', {}, r.map((c) => el('td', { text: c }))))),
         ]),
-      ]));
+      ]);
+      const box = el('div', { class: 'exhibit exhibit-table-wrap' }, [scroller]);
+      // A wide log table scrolls sideways on a phone; fade the edge that has
+      // more to show so it is obvious there is more to swipe to.
+      const edges = () => {
+        const max = scroller.scrollWidth - scroller.clientWidth;
+        box.classList.toggle('more-left', scroller.scrollLeft > 2);
+        box.classList.toggle('more-right', scroller.scrollLeft < max - 2);
+      };
+      scroller.addEventListener('scroll', edges, { passive: true });
+      if (typeof requestAnimationFrame === 'function') requestAnimationFrame(edges);
+      if (typeof ResizeObserver === 'function') new ResizeObserver(edges).observe(scroller);
+      frag.append(box);
     } else {
       frag.append(el('pre', { class: 'exhibit exhibit-text', text: fenceBuf.join('\n') }));
     }
