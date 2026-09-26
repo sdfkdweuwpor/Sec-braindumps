@@ -613,7 +613,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "EAP is an authentication framework used in wireless and 802.1X, not a remote access tunnel.",
-      "B": "DHCP assigns IP addresses; it provides no security.",
+      "B": "DHCP automatically assigns IP addresses to devices. It provides no encryption or authentication, so it cannot secure remote access.",
       "D": "NAT translates addresses between networks; it does not encrypt or authenticate anything."
     },
     "tip": "Secure remote access into a network = VPN, and IPSec is the classic VPN protocol suite. EAP authenticates, DHCP hands out addresses, NAT translates them.",
@@ -785,7 +785,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Isolation cuts a system off completely, which would stop legitimate systems using the data too.",
-      "C": "Patching fixes vulnerabilities; it does not separate networks.",
+      "C": "Patching fixes software vulnerabilities. It does not separate one part of the network from another.",
       "D": "Encryption protects data from being read, but does not stop users on the corporate network from reaching it."
     },
     "tip": "Keep something reachable only by approved systems = segmentation. Cut it off from everything = isolation (or an air gap).",
@@ -958,7 +958,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "A": "A next-generation firewall inspects general traffic but is not specialized in web application attacks.",
       "C": "TLS encrypts traffic; it would carry the malicious payload securely rather than stop it.",
-      "D": "SD-WAN manages connections between sites."
+      "D": "SD-WAN manages and optimizes connections between sites. It does not inspect web requests for exploit payloads."
     },
     "tip": "An internet-facing web app attacked through its requests (buffer overflow, SQLi, XSS) → put a WAF in front of it.",
     "references": [],
@@ -1082,7 +1082,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A jump server is the single hardened gateway users must pass through to reach internal resources. It adds a controlled, logged layer between users and sensitive systems.",
+    "explanation": "A jump server is the single hardened gateway users must pass through to reach internal resources. Every administrative session is funneled, authenticated and logged at that one point, which adds a controlled layer between users and sensitive systems.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An RDP server provides remote desktop access; on its own it adds exposure rather than a security layer.",
@@ -1129,7 +1129,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A perimeter network (screened subnet) hosts public services, but does not by itself minimize administrative traffic crossing the boundary.",
-      "C": "A WAF protects web applications, not administrative access.",
+      "C": "A WAF protects web applications from malicious HTTP requests. It does not provide or restrict administrative access to internal resources.",
       "D": "Single sign-on reduces the number of logins but does not limit traffic through the boundary."
     },
     "tip": "Admin access across a security boundary with minimal exposure = bastion host (jump box).",
@@ -1774,8 +1774,8 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A cloud access broker governs cloud usage and data policy, not availability.",
-      "B": "A cloud HSM protects cryptographic keys.",
-      "C": "A WAF protects web applications from attacks."
+      "B": "A cloud HSM protects cryptographic keys. It secures secrets rather than keeping services available.",
+      "C": "A WAF protects web applications from malicious requests. Blocking attacks is security, not high availability."
     },
     "tip": "In cloud questions, load balancer = high availability. CASB = cloud governance; cloud HSM = keys; WAF = web attacks.",
     "references": [],
@@ -2165,8 +2165,8 @@ export const domain3Questions = [
     "explanation": "Secure Real-time Transport Protocol encrypts and authenticates live audio and video streams, which is exactly what the camera footage needs. It is the secured version of RTP, the protocol commonly used to carry live media.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "SSH secures remote administration sessions, not video streams.",
-      "C": "S/MIME secures email messages.",
+      "A": "SSH secures remote command-line sessions, not real-time video streams. SRTP is built for encrypted, authenticated media.",
+      "C": "S/MIME secures email messages. It has no role in streaming camera footage.",
       "D": "PPTP is an outdated VPN protocol with broken security."
     },
     "tip": "Encrypt and authenticate live voice or video streams = SRTP.",
@@ -2528,9 +2528,9 @@ export const domain3Questions = [
     "explanation": "SFTP transfers files over an encrypted SSH connection, and SSH provides the secure command-line session. Together they cover secure, remote, command-line file transfer, with both the login and the file contents encrypted.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "SNMP manages and monitors network devices.",
+      "B": "SNMP manages and monitors network devices. It does not transfer files securely.",
       "C": "RDP is a graphical remote desktop, not command-line file transfer.",
-      "D": "S/MIME secures email.",
+      "D": "S/MIME secures email messages. It is not a file transfer protocol.",
       "E": "SMTP sends email and is not a file transfer protocol."
     },
     "tip": "Secure command-line file transfer = SFTP (runs over SSH). FTPS is FTP with TLS; plain FTP and Telnet are cleartext.",
@@ -2703,7 +2703,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "B": "EAP is the authentication framework 802.1X uses, but on its own it does not provide port-based access control and quarantine.",
       "C": "RADIUS is the authentication server behind 802.1X, not the complete solution.",
-      "D": "WPA2 covers wireless only."
+      "D": "WPA2 covers wireless networks only. The requirement includes wired connections, which 802.1X handles."
     },
     "tip": "Wired and wireless, existing certificates, quarantine for unapproved devices = 802.1X (with EAP-TLS and NAC).",
     "references": [],
@@ -2787,8 +2787,8 @@ export const domain3Questions = [
     "explanation": "A plan for how the organization keeps operating during a major incident is a business continuity plan. Disaster recovery covers restoring IT systems, which is part of the wider continuity plan.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Physical security protects facilities, not continued operations.",
-      "C": "Change management governs planned changes.",
+      "B": "Physical security protects facilities and equipment. It is not a plan for keeping the business running.",
+      "C": "Change management governs planned changes to systems. It does not cover operating through a global incident.",
       "D": "Disaster recovery focuses on restoring IT systems after a disaster; the question is about keeping the whole organization operating."
     },
     "tip": "Keep the whole organization operating through a crisis = BCP. Restore IT systems = DRP, which is part of business continuity.",
@@ -2831,8 +2831,8 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Monitor mode only watches and alerts, like an IDS.",
-      "B": "Sensor mode passively collects traffic without blocking.",
-      "C": "Audit mode logs activity without blocking."
+      "B": "Sensor mode passively collects traffic without blocking. The engineer needs the IPS to stop attacks.",
+      "C": "Audit mode logs activity without blocking. Only active (inline) mode can drop malicious traffic."
     },
     "tip": "To block, an IPS must be inline in active (prevention) mode. Monitor or passive mode only alerts.",
     "references": [],
@@ -3921,7 +3921,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Legal data refers to legal records and matters, not employees' personal information.",
-      "B": "Financial data covers financial records.",
+      "B": "Financial data covers financial records such as accounts and transactions. An employee's personal information is privacy data.",
       "D": "Intellectual property is the organization's creative and business assets."
     },
     "tip": "Personal information about employees or customers = privacy data, governed by privacy policies and laws.",
@@ -5848,7 +5848,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Server multiprocessing uses multiple CPUs within one server, not traffic distribution.",
-      "B": "A warm site is a disaster recovery location.",
+      "B": "A warm site is a disaster recovery location. It does not spread live traffic across a cluster.",
       "D": "A proxy server forwards requests but is not designed to balance load across a cluster."
     },
     "tip": "One server overloaded while others sit idle → add a load balancer.",
@@ -6895,7 +6895,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Resource management allocates compute capacity. It has nothing to do with electrical supply.",
-      "B": "A load balancer distributes network traffic across servers.",
+      "B": "A load balancer distributes network traffic across servers. It has no effect on electrical supply.",
       "C": "A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."
     },
     "tip": "Undervoltage/brownout or outage → UPS. A surge protector only handles overvoltage spikes.",
@@ -7895,7 +7895,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "A": "A hot site recovers fastest, but a fully equipped, continuously synchronized duplicate is the most expensive option. It fails the 'low cost' requirement.",
       "B": "A cold site is the cheapest option, but it has only space, power and cooling. Equipment has to be brought in and data restored, which takes days or weeks, so it fails the 'quick' requirement.",
-      "C": "Manual is not a recognized recovery site type."
+      "C": "Manual is not a recognized recovery site type. The site options are hot, warm and cold."
     },
     "tip": "Hot = fastest/most expensive. Cold = cheapest/slowest. 'Quick AND low cost' = warm, the middle ground.",
     "references": [],
@@ -8368,7 +8368,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "B": "A warm site has hardware and connectivity but data must be restored at failover, so it is not a live mirror.",
       "C": "A cold site has space and power only, with no systems in place.",
-      "D": "Frozen is not a recognized recovery site type."
+      "D": "Frozen is not a recognized recovery site type. The site options are hot, warm and cold."
     },
     "tip": "Operational mirror, ready immediately = hot site.",
     "references": [],
@@ -8591,7 +8591,7 @@ export const domain3Questions = [
     "explanation": "Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "An IDS detects and alerts. It blocks nothing.",
+      "A": "An IDS detects and alerts. It blocks nothing, so it cannot stop uploads.",
       "B": "An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
       "C": "A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."
     },

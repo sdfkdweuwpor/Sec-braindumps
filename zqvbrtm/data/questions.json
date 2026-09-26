@@ -328,7 +328,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "A statement of work spells out a specific project: the work to be done, the deliverables, the cost and the timeline. That matches the client's request exactly.",
+    "explanation": "A statement of work spells out one specific project: the work to be done, the deliverables, the cost and the completion timeline. The client asked for exactly those things for a single engagement, which is what an SOW is for; the other agreements govern ongoing relationships rather than one project.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A master service agreement sets general terms for an ongoing relationship. Individual projects are then defined in SOWs under it.",
@@ -515,7 +515,7 @@
     "incorrectExplanations": {
       "A": "Gathering indicators of compromise is part of investigation and detection, not the purpose of root cause analysis.",
       "B": "Identifying affected systems is scoping during analysis and containment.",
-      "C": "Removing malware is eradication, a separate phase."
+      "C": "Removing malware is eradication, a separate phase. Root cause analysis asks why the incident happened so it can be prevented, not how to clean it up."
     },
     "tip": "Root cause analysis answers 'why did this happen?' so it does not happen again. Finding affected systems is scoping; removing malware is eradication.",
     "references": [],
@@ -1155,7 +1155,7 @@
     "correct": [
       "C"
     ],
-    "explanation": "After remediation, you rescan to confirm the fixes actually worked and no new issues appeared. Validating remediation comes before reporting that the work is done.",
+    "explanation": "After remediation, you rescan to confirm the fixes actually worked and that nothing new was introduced. Only a clean rescan proves the vulnerabilities are closed, so validating the remediation comes before reporting the work as done or moving on to an audit or a penetration test.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "An audit checks compliance against a standard, not whether specific fixes took effect.",
@@ -1198,7 +1198,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "A legitimate user logging in after hours and copying large amounts of data to a personal device is misusing authorized access — the textbook insider threat indicator.",
+    "explanation": "A legitimate user logging in after hours and copying large amounts of data to a personal device is misusing authorized access. Unusual timing, bulk data movement and personal storage together are the textbook indicators of an insider threat, whether the motive is theft, sale or taking data to a new employer.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Penetration testing is authorized, scheduled testing, not a user taking data home.",
@@ -1499,7 +1499,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "A user provisioning script creates accounts from a defined template, applying the correct groups and permissions every time. It removes the manual errors management noticed.",
+    "explanation": "A user provisioning script creates every account from a defined template, applying the correct groups, roles and permissions each time. That removes the inconsistent, error-prone manual setup management noticed, and it works the same way for one new hire or a hundred.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Guard rail scripts enforce limits and block unsafe actions, not account creation.",
@@ -1547,7 +1547,7 @@
     "incorrectExplanations": {
       "A": "Corrective controls fix problems after an incident, such as restoring systems.",
       "B": "Preventive controls stop an event before it happens, such as firewalls or locks.",
-      "D": "Deterrent controls discourage attempts, such as warning signs."
+      "D": "Deterrent controls discourage attempts before they happen, such as warning signs or visible cameras. A weekly log review finds activity after the fact, which is detective."
     },
     "tip": "Reviewing logs finds things after they happen = detective. Stopping them = preventive; fixing afterward = corrective; discouraging = deterrent.",
     "references": [],
@@ -2190,7 +2190,7 @@
     "explanation": "The logs show that a legitimate domain account last accessed the files before they were encrypted. Harm caused through valid internal access points to an insider threat, whether the user acted deliberately or carelessly: the damage came through an authorized account on the inside, not an outside intrusion.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Social engineering manipulates people. Nothing here shows deception.",
+      "B": "Social engineering manipulates people into giving up access or information. Nothing in the logs shows deception; the access came from a legitimate domain account.",
       "C": "A watering-hole attack compromises a website the victims visit. The logs show a domain user acting on the server.",
       "D": "The account was an authorized domain user, not an outside attacker without access."
     },
@@ -2764,7 +2764,7 @@
     "explanation": "Defining and reviewing who does what during an incident happens before any incident, in the preparation phase, along with tools, contacts and procedures. Preparation also covers building the team, contact lists, playbooks and training, so everyone knows their job before an incident starts.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Recovery restores systems after the threat is removed.",
+      "B": "Recovery restores systems after the threat is removed. Roles and responsibilities have to be settled long before that, during preparation.",
       "C": "Lessons learned reviews an incident after it closes. It may lead to role changes, but roles are set up in preparation.",
       "D": "Analysis investigates an incident underway, when roles need to be settled already."
     },
@@ -2948,7 +2948,7 @@
     "incorrectExplanations": {
       "A": "Impersonation is pretending to be someone else, typically over the phone or in person.",
       "B": "Disinformation spreads false information; it does not deliver malware.",
-      "D": "Smishing is phishing through SMS text messages."
+      "D": "Smishing is phishing through SMS text messages. The infection came from visiting a compromised website, not from a text."
     },
     "tip": "The attacker infects a site the victims already trust and visit (an industry blog or forum) = watering-hole attack.",
     "references": [],
@@ -3115,7 +3115,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "An uptime guarantee such as 99.99% is a measurable service level, and service levels — with penalties for missing them — are written into a service-level agreement.",
+    "explanation": "An uptime guarantee such as 99.99% is a measurable service level. Service levels, how they are measured and the penalties for missing them are written into a service-level agreement, so that is the document the provider returns to the client.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A memorandum of agreement documents cooperation between parties, usually without measurable service targets.",
@@ -3244,7 +3244,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "Scripting a repetitive, multi-step task such as creating accounts for many users, to save time and remove human error, is orchestration — automation coordinated across systems.",
+    "explanation": "Scripting a repetitive, multi-step task such as creating accounts for many users, so it runs quickly and identically every time, is orchestration: automation coordinated across the systems involved. It saves time and removes the human error that manual account creation introduces.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Off-the-shelf software is a purchased product, not a use case for a script the administrator writes.",
@@ -3330,7 +3330,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Ransomware-as-a-service is a criminal business model: developers rent their ransomware to affiliates in exchange for a share of the ransom. Profit-driven, organized groups are organized crime.",
+    "explanation": "Ransomware-as-a-service is a criminal business model: developers rent their ransomware to affiliates in exchange for a share of each ransom paid. Profit-driven groups running operations like a business, with developers, affiliates and negotiators, are the definition of organized crime.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An insider threat abuses access from within; RaaS is an external criminal market.",
@@ -3516,7 +3516,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "EAP is an authentication framework used in wireless and 802.1X, not a remote access tunnel.",
-      "B": "DHCP assigns IP addresses; it provides no security.",
+      "B": "DHCP automatically assigns IP addresses to devices. It provides no encryption or authentication, so it cannot secure remote access.",
       "D": "NAT translates addresses between networks; it does not encrypt or authenticate anything."
     },
     "tip": "Secure remote access into a network = VPN, and IPSec is the classic VPN protocol suite. EAP authenticates, DHCP hands out addresses, NAT translates them.",
@@ -3989,7 +3989,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Isolation cuts a system off completely, which would stop legitimate systems using the data too.",
-      "C": "Patching fixes vulnerabilities; it does not separate networks.",
+      "C": "Patching fixes software vulnerabilities. It does not separate one part of the network from another.",
       "D": "Encryption protects data from being read, but does not stop users on the corporate network from reaching it."
     },
     "tip": "Keep something reachable only by approved systems = segmentation. Cut it off from everything = isolation (or an air gap).",
@@ -4372,7 +4372,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "Role-based access control grants permissions according to job responsibilities, using a small set of roles instead of per-user rules — the simplified structure the administrator wants.",
+    "explanation": "Role-based access control grants permissions according to job responsibilities, using a small set of roles instead of individual per-user rules. Each user gets exactly what their role needs and nothing more, in the simplified structure the administrator wants to apply to the resource group.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "ACLs list permissions resource by resource, which becomes complex and hard to manage.",
@@ -4419,7 +4419,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Virtualization flaws are in hypervisors and virtual machines, not the BIOS.",
-      "C": "Application flaws are fixed by updating the application.",
+      "C": "Application flaws are fixed by updating the application itself. A BIOS update patches firmware, the code built into the hardware.",
       "D": "Operating system flaws are fixed by OS patches, not a BIOS update."
     },
     "tip": "BIOS or UEFI update = firmware vulnerability. Firmware flaws sit below the OS and survive reinstalls.",
@@ -4587,7 +4587,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Known exploits have known signatures. An intrusion prevention system sits inline, matches traffic against those signatures and blocks it — monitoring and blocking in one control.",
+    "explanation": "Known exploits have known signatures. An intrusion prevention system sits inline, matches traffic against those signatures and blocks the matches before they reach the vulnerable browsers, giving monitoring and blocking in one control.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An ACL filters by addresses and ports; it cannot recognize exploit signatures.",
@@ -4683,7 +4683,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "Twelve Windows 4625 events (failed logon) arrive exactly two seconds apart. A steady, machine-timed run of failed logons is automated password guessing: a brute-force attack.",
+    "explanation": "Twelve Windows 4625 events (failed logon) arrive exactly two seconds apart against the same server. A steady, machine-timed run of failed logons is automated password guessing, which is a brute-force attack; a person who forgot a password tries a few times at irregular intervals.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Privilege escalation raises the rights of an account that already has access; every event here is a failed attempt to get in.",
@@ -4870,7 +4870,7 @@
     "incorrectExplanations": {
       "A": "Key stretching repeats the hashing many times to slow cracking. It adds work, not extra data before hashing.",
       "B": "Data masking hides parts of data in displays; it is unrelated to hashing.",
-      "C": "Steganography hides data inside other files."
+      "C": "Steganography hides data inside other files such as images. It conceals information rather than strengthening a hash."
     },
     "tip": "Random data added to a password before hashing = salt (defeats rainbow tables). Hashing thousands of times over = key stretching (bcrypt, PBKDF2).",
     "references": [],
@@ -4997,7 +4997,7 @@
     "explanation": "Single sign-on lets employees use their existing domain credentials to log in to the SaaS application, typically through federation with SAML or OpenID Connect. It reduces the number of credentials they need.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "LEAP is an old, insecure wireless authentication protocol.",
+      "B": "LEAP is an old, insecure wireless authentication protocol. It does nothing to let domain credentials sign in to SaaS applications.",
       "C": "MFA adds more authentication factors; it does not reduce the number of credentials.",
       "D": "PEAP protects EAP authentication for wireless and 802.1X networks, not SaaS logins."
     },
@@ -5041,7 +5041,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A gift card request with a spoofed display name is common executive impersonation phishing, but it only fakes the display field rather than compromising or impersonating a business account.",
-      "B": "Messages demanding payment to unlock files are ransomware.",
+      "B": "Messages demanding payment to unlock files are ransomware. BEC abuses a trusted business identity over email to steal money or credentials.",
       "D": "A link to a fake email portal is ordinary credential phishing."
     },
     "tip": "BEC = an email that impersonates or comes from a trusted business account (executive, HR, vendor) asking for money, data or credentials.",
@@ -5128,7 +5128,7 @@
     "incorrectExplanations": {
       "A": "A next-generation firewall inspects general traffic but is not specialized in web application attacks.",
       "C": "TLS encrypts traffic; it would carry the malicious payload securely rather than stop it.",
-      "D": "SD-WAN manages connections between sites."
+      "D": "SD-WAN manages and optimizes connections between sites. It does not inspect web requests for exploit payloads."
     },
     "tip": "An internet-facing web app attacked through its requests (buffer overflow, SQLi, XSS) → put a WAF in front of it.",
     "references": [],
@@ -5221,9 +5221,9 @@
     "explanation": "The message arrived as a text (smishing), and the attacker pretended to be the payroll department (impersonation). Both techniques are in play. Smishing is phishing by SMS, and impersonating a trusted department makes the request for credentials seem routine.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Typosquatting relies on mistyped web addresses.",
+      "A": "Typosquatting relies on users mistyping web addresses. This attack arrived as a text message, with no look-alike domain involved.",
       "B": "Phishing is the general category, but email phishing specifically is not the channel here; smishing is the more precise answer.",
-      "D": "Vishing uses voice calls, not text messages.",
+      "D": "Vishing uses voice calls, not text messages. The channel here is SMS, which makes it smishing.",
       "F": "Misinformation is false information spread without intent to harvest credentials."
     },
     "tip": "Text message = smishing, voice call = vishing, email = phishing. Pretending to be payroll, IT or an executive = impersonation.",
@@ -5405,7 +5405,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "The subject (the user or system asking for access) does appear in the data plane, but its role is an attribute the policy engine weighs in the control plane. The data-plane structure being implemented is the secured zones.",
-      "C": "Adaptive identity is a control-plane decision about authentication.",
+      "C": "Adaptive identity is a control-plane decision about how to authenticate a subject. The data plane is where access is enforced, through secured zones.",
       "D": "Threat scope reduction is a control-plane goal achieved through policy."
     },
     "tip": "Zero Trust planes. Control plane: adaptive identity, threat scope reduction, policy engine and administrator. Data plane: implicit trust zones, subject/system, policy enforcement point.",
@@ -5802,7 +5802,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Passive reconnaissance gathers information without touching the target, such as searching public records.",
-      "C": "'Defensive' is not a reconnaissance type.",
+      "C": "'Defensive' is not a reconnaissance type. Reconnaissance is either active, touching the target, or passive, using public sources.",
       "D": "'Offensive' describes the overall red team activity, not the type of reconnaissance."
     },
     "tip": "Touching the target (port scans, pings, banner grabs) = active reconnaissance. OSINT, public records and DNS lookups = passive.",
@@ -5888,7 +5888,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Jailbreaking removes OS restrictions. It often enables side loading, but it is not the same as installing from outside the store.",
-      "B": "Memory injection places code into a running process.",
+      "B": "Memory injection places malicious code into a running process's memory. It has nothing to do with where software was installed from.",
       "C": "Resource reuse refers to memory or storage not being cleared before reuse."
     },
     "tip": "Installing apps from outside the official store = side loading. Removing the OS's restrictions = jailbreaking or rooting.",
@@ -6013,7 +6013,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "A jump server is the single hardened gateway users must pass through to reach internal resources. It adds a controlled, logged layer between users and sensitive systems.",
+    "explanation": "A jump server is the single hardened gateway users must pass through to reach internal resources. Every administrative session is funneled, authenticated and logged at that one point, which adds a controlled layer between users and sensitive systems.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An RDP server provides remote desktop access; on its own it adds exposure rather than a security layer.",
@@ -6056,11 +6056,11 @@
     "correct": [
       "B"
     ],
-    "explanation": "Unencrypted websites are the ones reached over plain HTTP, so their URLs begin with http://. Blocking that string blocks non-encrypted sites while still allowing https://.",
+    "explanation": "Unencrypted websites are reached over plain HTTP, so their URLs begin with http://. Blocking that string stops non-encrypted sites while still allowing https:// addresses, because the extra 's' means they never contain the string http://.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "'encryption=off' is not a standard part of URLs, so it would match almost nothing.",
-      "C": "www.*.com matches most commercial sites regardless of encryption.",
+      "C": "www.*.com matches most commercial sites regardless of whether they use encryption. It would block large parts of the web without targeting the unencrypted ones.",
       "D": ":443 is the HTTPS port — blocking it would block encrypted sites instead."
     },
     "tip": "Plain HTTP URLs begin with http://. Port 443 = HTTPS (encrypted); port 80 = HTTP.",
@@ -6099,7 +6099,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "To stop the malicious host reaching the network, the inbound rule must deny traffic whose source is 10.1.4.9/32 (that single address) to any destination (0.0.0.0/0).",
+    "explanation": "To stop the malicious host reaching the network, the inbound rule must deny traffic whose source is 10.1.4.9/32, that single address, going to any destination (0.0.0.0/0). The other options either swap source and destination or permit the traffic instead of denying it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "This denies traffic going to 10.1.4.9, not traffic coming from it.",
@@ -6146,7 +6146,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A perimeter network (screened subnet) hosts public services, but does not by itself minimize administrative traffic crossing the boundary.",
-      "C": "A WAF protects web applications, not administrative access.",
+      "C": "A WAF protects web applications from malicious HTTP requests. It does not provide or restrict administrative access to internal resources.",
       "D": "Single sign-on reduces the number of logins but does not limit traffic through the boundary."
     },
     "tip": "Admin access across a security boundary with minimal exposure = bastion host (jump box).",
@@ -6228,7 +6228,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Adding firewall rules changes production security infrastructure, so it follows the change management procedure: request, impact review, approval, testing and a backout plan.",
+    "explanation": "Adding firewall rules changes production security infrastructure, so it follows the change management procedure: a request, an impact review, approval, testing, a scheduled window and a backout plan. That process is what stops a new rule from breaking connectivity or quietly opening a hole.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "A disaster recovery plan governs restoring systems after a disaster.",
@@ -6361,7 +6361,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Cross-site scripting injects scripts that run in other users' browsers, not database commands.",
-      "B": "Side loading installs apps from unofficial sources.",
+      "B": "Side loading installs apps from unofficial sources. It does not involve typing commands into an input field.",
       "C": "A buffer overflow overwrites memory. It is not typically carried out through form fields to query data."
     },
     "tip": "Input field → database commands = SQL injection. Input field → scripts in other users' browsers = XSS.",
@@ -6543,7 +6543,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Packet captures are raw network data, far too detailed for a board.",
-      "B": "Vulnerability scans list weaknesses, not incidents.",
+      "B": "Vulnerability scans list weaknesses that exist, not incidents that happened. They would not show the board what actually impacted the organization.",
       "C": "Metadata describes data; it is not a way to present incident trends."
     },
     "tip": "Boards and executives get dashboards: high-level metrics and trends, not raw data.",
@@ -6648,9 +6648,9 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "C": "VLAN hopping is a switching attack, not specific to VoIP.",
-      "D": "Phishing is email-based, not a VoIP vulnerability.",
+      "D": "Phishing is email-based fraud, not a VoIP vulnerability. Its voice equivalent, vishing, is the VoIP one.",
       "E": "DHCP snooping is a switch security feature, not a vulnerability.",
-      "F": "Tailgating is a physical intrusion technique."
+      "F": "Tailgating is a physical intrusion technique: following someone through a secured door. It has nothing to do with voice systems."
     },
     "tip": "VoIP-specific threats: vishing (voice phishing) and SPIM (spam over instant messaging and internet telephony).",
     "references": [],
@@ -6692,7 +6692,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hacktivists are external attackers with causes, not employees installing tools.",
-      "B": "Script kiddies are unskilled external attackers.",
+      "B": "Script kiddies are unskilled external attackers using ready-made tools. Unapproved software deployed by staff is shadow IT.",
       "C": "Competitors may seek advantage, but they do not deploy unapproved software inside the company."
     },
     "tip": "Unapproved software or services brought in by employees = shadow IT.",
@@ -6822,7 +6822,7 @@
     "incorrectExplanations": {
       "A": "Privilege escalation raises permissions on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
-      "C": "SQL injection attacks databases through input fields."
+      "C": "SQL injection attacks databases through input fields. Reusing credential hashes scraped from memory is pass-the-hash."
     },
     "tip": "Using captured hashes to log in elsewhere without cracking them = pass-the-hash (lateral movement). Tools like Mimikatz scrape them from memory.",
     "references": [],
@@ -6956,7 +6956,7 @@
     "incorrectExplanations": {
       "A": "CHAP is a challenge-response password protocol with no certificate support.",
       "B": "PEAP protects password-based inner authentication inside a TLS tunnel; the user still logs in with a password.",
-      "C": "MS-CHAPv2 is password-based and has known weaknesses."
+      "C": "MS-CHAPv2 is password-based and has known weaknesses. It cannot use the certificate on a smart card."
     },
     "tip": "Smart cards or certificates for network login = EAP-TLS (mutual certificate authentication). PEAP and MS-CHAPv2 are password-based.",
     "references": [],
@@ -7170,8 +7170,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A TPM is a chip in a single device; it cannot centrally manage keys across clouds.",
-      "B": "IaaS provides computing infrastructure, not key management.",
-      "D": "PaaS provides a development platform, not key management."
+      "B": "IaaS provides computing infrastructure such as virtual machines and storage. It does not manage encryption keys for you.",
+      "D": "PaaS provides a managed development platform. It is not a key management service."
     },
     "tip": "Central key management across clouds, using your own existing keys = HSM as a service (cloud HSM).",
     "references": [],
@@ -7213,8 +7213,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key stretching makes cracking slower by hashing many times, rather than by adding a random string.",
-      "B": "Tokenization replaces sensitive values with tokens.",
-      "C": "Data masking hides parts of data in displays."
+      "B": "Tokenization replaces sensitive values with surrogate tokens held in a vault. It is not applied to passwords before hashing.",
+      "C": "Data masking hides parts of data in displays, such as showing only the last four digits. It does not strengthen a password."
     },
     "tip": "Random characters added before hashing = a salt. Salts defeat rainbow tables and make identical passwords hash differently.",
     "references": [],
@@ -7513,7 +7513,7 @@
     "explanation": "A text message pretending to be the CEO and asking for gift cards is smishing — phishing by SMS. Gift card requests are a classic scam because the cards are hard to trace and easy to resell. The unknown number is a red flag: verify through a known channel before acting.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Vishing uses voice calls, not text messages.",
+      "A": "Vishing uses voice calls, not text messages. A text from someone posing as the CEO is smishing.",
       "C": "Pretexting (the invented story) is part of the attack, but the defining attack type is smishing because it came by text.",
       "D": "Phishing is the general term; smishing is the precise answer for text messages."
     },
@@ -7601,7 +7601,7 @@
     "incorrectExplanations": {
       "A": "PowerShell scripts could do it, but would need distributing and running everywhere — slower and less reliable than Group Policy.",
       "C": "PAP is an old, insecure authentication protocol that sends passwords in cleartext.",
-      "D": "EDR profiles govern threat detection, not password policies."
+      "D": "EDR profiles govern threat detection and response on endpoints. Password policy is pushed to domain systems through Group Policy."
     },
     "tip": "Push a setting to every Windows domain machine quickly = Group Policy (a GPO).",
     "references": [],
@@ -7695,7 +7695,7 @@
     "explanation": "An access control vestibule (mantrap) and a photo ID check at the entrance are tangible barriers controlling who enters a building. They are physical controls. The vestibule lets only one person through at a time after they are verified, which also stops tailgating.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Managerial controls are policies and procedures.",
+      "B": "Managerial controls are policies, procedures and risk assessments. Checking IDs at a vestibule is a physical measure.",
       "C": "Technical controls are enforced by technology on systems, such as firewalls.",
       "D": "The ID check is carried out by people, but the vestibule itself is a physical control, and the combination is best described as physical."
     },
@@ -8130,7 +8130,7 @@
     "explanation": "Insiders already get into the building, so the data center needs its own gate. Access badges allow only authorized staff through the data center door and record who entered.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Bollards stop vehicles, not people inside the building.",
+      "A": "Bollards stop vehicles, not people already inside the building. An insider walks right past them.",
       "C": "Motion sensors detect movement, but cannot tell authorized from unauthorized staff.",
       "D": "Video surveillance records intrusions, but does not prevent them."
     },
@@ -8217,8 +8217,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Privacy concerns personal data handling; load balancing does not address it.",
-      "B": "Integrity ensures data is not altered.",
-      "C": "Confidentiality keeps data from unauthorized eyes."
+      "B": "Integrity ensures data is not altered without authorization. A load balancer keeps services reachable; it does not protect data from change.",
+      "C": "Confidentiality keeps data from unauthorized eyes. Spreading traffic across servers does nothing for secrecy."
     },
     "tip": "Load balancers, redundancy, clustering and UPS units all serve availability.",
     "references": [],
@@ -8345,7 +8345,7 @@
     "explanation": "Organized crime exists to make money, through ransomware, fraud and selling stolen data. Profit is its defining motive. These groups run like businesses, with specialists, affiliates and even help desks for ransomware victims.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Hacktivists are driven by political or social causes.",
+      "A": "Hacktivists are driven by political or social causes. Their reward is attention for the cause, not money.",
       "B": "Insiders act for many reasons — revenge, ideology or money — so profit is not their defining motive.",
       "D": "Shadow IT is unauthorized technology use, not a threat actor seeking profit."
     },
@@ -8441,7 +8441,7 @@
     "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test. Testers may clone badges, tailgate staff or pose as contractors to see whether guards, locks and vestibules actually stop them.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Defensive testing is not a penetration test type.",
+      "A": "Defensive testing is not a penetration test type; defense is the blue team's job. Trying a badge on a restricted door is a physical test.",
       "B": "Passive testing gathers information without interacting with the target.",
       "C": "Offensive describes penetration testing in general, not the physical nature of this test."
     },
@@ -8485,7 +8485,7 @@
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "Asymmetric encryption uses a key pair — the public key encrypts and the private key decrypts.",
-      "C": "Hashing is one-way and cannot be decrypted.",
+      "C": "Hashing is one-way and cannot be decrypted. The peer here decrypts the message with the same key, which is symmetric encryption.",
       "D": "Salting adds random data before hashing; it is not encryption."
     },
     "tip": "The same key on both ends = symmetric (AES). A public/private key pair = asymmetric (RSA, ECC).",
@@ -8582,7 +8582,7 @@
       "A": "Retention keeps data for a required period. The laptop's data needs removing, not keeping.",
       "C": "Destruction would ruin the laptop that is being reissued.",
       "D": "Classification labels data by sensitivity; it does not prepare a device for reuse.",
-      "F": "Enumeration lists resources; it does not handle data."
+      "F": "Enumeration lists resources such as users or shares. It does not remove or document the removal of data."
     },
     "tip": "Reissuing a device: sanitize the old data, then document it (certification). Destruction is for devices leaving service for good.",
     "references": [],
@@ -9575,8 +9575,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Destruction deals with disposing of data at the end of its life, not keeping it for set periods.",
-      "C": "An inventory tracks what data exists and where.",
-      "D": "Certification documents that data was destroyed or sanitized."
+      "C": "An inventory tracks what data exists and where. It does not say how long each type must be kept.",
+      "D": "Certification documents that data was destroyed or sanitized. It comes at the end of the retention period rather than defining it."
     },
     "tip": "Keep X for N years = data retention policy.",
     "references": [],
@@ -9661,8 +9661,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A cloud access broker governs cloud usage and data policy, not availability.",
-      "B": "A cloud HSM protects cryptographic keys.",
-      "C": "A WAF protects web applications from attacks."
+      "B": "A cloud HSM protects cryptographic keys. It secures secrets rather than keeping services available.",
+      "C": "A WAF protects web applications from malicious requests. Blocking attacks is security, not high availability."
     },
     "tip": "In cloud questions, load balancer = high availability. CASB = cloud governance; cloud HSM = keys; WAF = web attacks.",
     "references": [],
@@ -9791,7 +9791,7 @@
     "incorrectExplanations": {
       "B": "DLP detects sensitive data leaving the organization; it does not collect logs.",
       "C": "Archiving stores data long-term, but configuring devices to send logs to a central location is aggregation.",
-      "D": "SCAP automates configuration and vulnerability assessment."
+      "D": "SCAP automates configuration and vulnerability assessment. It does not ship logs to another location."
     },
     "tip": "Devices sending their logs to a central, off-site collector = log aggregation (syslog to a SIEM).",
     "references": [],
@@ -9961,9 +9961,9 @@
     "explanation": "The red team plays the attacker and focuses solely on compromising the organization with real adversary tactics. It tests whether the defenders (the blue team) can detect and stop a realistic attack, without sharing its plans in advance.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "The white team manages and referees the exercise.",
+      "A": "The white team manages and referees the exercise. It sets the rules rather than attacking.",
       "C": "The purple team combines attack and defense to share lessons.",
-      "D": "The blue team defends the organization."
+      "D": "The blue team defends the organization. Attacking with an adversary's tactics is the red team's role."
     },
     "tip": "Red team = attack only. Blue = defend. Purple = both together. White = referee.",
     "references": [],
@@ -10274,7 +10274,7 @@
     "incorrectExplanations": {
       "B": "A malicious update is a compromised patch or release, not a weak algorithm choice.",
       "C": "A zero-day is an unknown, unpatched flaw. MD5's weaknesses have been known for decades.",
-      "D": "Side loading is installing software from unofficial sources."
+      "D": "Side loading is installing software from unofficial sources. A weak hashing algorithm like MD5 is a cryptographic flaw."
     },
     "tip": "MD5, SHA-1, DES, RC4 and SSL = weak or deprecated crypto → a cryptographic vulnerability.",
     "references": [],
@@ -10444,8 +10444,8 @@
     "explanation": "A critical legacy server usually cannot be patched or hardened properly, so it is placed in a private segment to reduce its exposure instead. A control that substitutes for one that cannot be applied is compensating.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Deterrent controls discourage attempts, such as warning signs.",
-      "B": "Corrective controls fix problems after an incident.",
+      "A": "Deterrent controls discourage attempts, such as warning signs. Segmenting a server is a technical substitute for a control it cannot support.",
+      "B": "Corrective controls fix problems after an incident. The segmentation is in place before anything happens.",
       "D": "Segmentation does prevent some access, but its purpose here is to compensate for the server's missing protections."
     },
     "tip": "Segmenting a legacy system that cannot be patched = compensating control.",
@@ -10488,7 +10488,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Establishing a baseline comes after understanding the policies and requirements it must meet.",
-      "C": "Adopting benchmarks is a later implementation decision.",
+      "C": "Adopting benchmarks is a later implementation decision. A new manager first needs to know what the existing policies require.",
       "D": "Revalidating user IDs is a specific operational task, not the first thing to do."
     },
     "tip": "A new security manager's first step: review the existing policies and understand the current state before changing anything.",
@@ -10747,7 +10747,7 @@
     "incorrectExplanations": {
       "A": "Privilege escalation raises rights on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
-      "C": "SQL injection attacks databases through input fields."
+      "C": "SQL injection attacks databases through input fields. Reusing credential hashes scraped from memory is pass-the-hash."
     },
     "tip": "Stolen hashes reused to authenticate without cracking them = pass-the-hash.",
     "references": [],
@@ -11051,7 +11051,7 @@
     "explanation": "A hash algorithm produces a fixed-length digest from data. Recalculating the digest later and comparing shows whether even one bit changed, verifying that the data has not been modified.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "'Code check' is not a defined integrity algorithm.",
+      "B": "'Code check' is not a defined integrity algorithm. Verifying that data is unchanged is done with a hash.",
       "C": "Encryption protects confidentiality; it does not by itself prove data was not changed.",
       "D": "A checksum detects accidental errors, but is not designed to detect deliberate tampering the way a cryptographic hash is."
     },
@@ -11147,9 +11147,9 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Physical controls are tangible barriers such as locks and fences.",
-      "B": "Managerial controls are policies and procedures.",
-      "C": "Detective controls identify events after they happen.",
-      "D": "'Administrator' is not a control category."
+      "B": "Managerial controls are policies and procedures. MFA and patching are enforced by technology.",
+      "C": "Detective controls identify events after they happen. MFA and patching stop attacks before they succeed, which is preventive.",
+      "D": "'Administrator' is not a control category. The categories are technical, managerial, operational and physical."
     },
     "tip": "MFA and patching: category = technical, type = preventive.",
     "references": [],
@@ -11190,8 +11190,8 @@
     "explanation": "Secure Real-time Transport Protocol encrypts and authenticates live audio and video streams, which is exactly what the camera footage needs. It is the secured version of RTP, the protocol commonly used to carry live media.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "SSH secures remote administration sessions, not video streams.",
-      "C": "S/MIME secures email messages.",
+      "A": "SSH secures remote command-line sessions, not real-time video streams. SRTP is built for encrypted, authenticated media.",
+      "C": "S/MIME secures email messages. It has no role in streaming camera footage.",
       "D": "PPTP is an outdated VPN protocol with broken security."
     },
     "tip": "Encrypt and authenticate live voice or video streams = SRTP.",
@@ -11319,8 +11319,8 @@
     "explanation": "Staff deploying software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist. The fix combines discovery tools, a quick approval process and clear policy.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Hacktivists are external attackers with causes.",
-      "B": "Script kiddies are unskilled external attackers.",
+      "A": "Hacktivists are external attackers with political causes. Staff deploying unapproved software is shadow IT.",
+      "B": "Script kiddies are unskilled external attackers. The risk here comes from employees installing unsanctioned software.",
       "C": "Competitors may seek advantage, but do not deploy unapproved software inside the company."
     },
     "tip": "Unapproved software deployed by staff = shadow IT.",
@@ -11405,9 +11405,9 @@
     "explanation": "The tool records suspicious site visits and reports on them afterward, without blocking anything. Identifying activity after it happens is a detective control. Blocking the sites instead, for example with DNS filtering, would make it preventive.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "A preventive control would block the sites.",
+      "A": "A preventive control would block the suspicious sites. This tool only logs them and reports afterward.",
       "B": "A deterrent discourages behavior, such as a warning banner.",
-      "C": "A corrective control fixes something after an incident."
+      "C": "A corrective control fixes something after an incident. A daily report of visited sites fixes nothing."
     },
     "tip": "Logs and reports suspicious activity without blocking it = detective control.",
     "references": [],
@@ -11847,7 +11847,7 @@
     "incorrectExplanations": {
       "B": "Wireshark captures and analyzes packets; it does not generate them.",
       "C": "PowerShell is a scripting shell, not a packet crafting tool.",
-      "D": "netstat lists a host's connections and listening ports."
+      "D": "netstat lists a host's own connections and listening ports. It cannot craft custom packets to test firewalls."
     },
     "tip": "Craft custom packets to test firewalls = hping. Capture and analyze = Wireshark or tcpdump. Scan ports = nmap.",
     "references": [],
@@ -11889,7 +11889,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encryption protects data but does not detect it leaving — attackers can exfiltrate encrypted data too.",
-      "C": "Default settings are usually weak and detect nothing.",
+      "C": "Default settings are usually weak and detect nothing. Watching outbound traffic is what reveals data leaving.",
       "D": "Closing all ports is impractical and prevents rather than detects; malware can use allowed ports."
     },
     "tip": "Detect data leaving a system (exfiltration) = monitor outbound traffic (egress monitoring, NetFlow anomalies, DLP).",
@@ -11931,7 +11931,7 @@
     "explanation": "CVSS gives each vulnerability a severity score from 0 to 10, a consistent basis for deciding what to patch first. The score reflects exploitability and impact, and teams often adjust it for how critical and exposed the affected systems are.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "SOAR automates security responses, not prioritization of patching.",
+      "A": "SOAR automates security response workflows. Prioritizing patches needs a severity score such as CVSS.",
       "C": "A SIEM correlates logs and alerts; it does not score vulnerabilities.",
       "D": "CVE identifies vulnerabilities by ID but does not rank their severity."
     },
@@ -12146,9 +12146,9 @@
     "explanation": "chmod changes file permissions, which is what fixes a file whose permissions are wider than the baseline allows. /etc/shadow holds the password hashes and should be readable only by root, for example chmod 600 or 640 depending on the distribution's baseline.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "grep searches text; it cannot change permissions.",
-      "C": "dd copies raw data at the block level.",
-      "D": "passwd changes a user's password, not file permissions."
+      "B": "grep searches text for patterns. It can find content in /etc/shadow but cannot change who may read it.",
+      "C": "dd copies raw data at the block level. It does not change file permissions.",
+      "D": "passwd changes a user's password. File permissions are changed with chmod."
     },
     "tip": "Fix file permissions on Linux = chmod (chown changes the owner). /etc/shadow should be readable by root only.",
     "references": [],
@@ -12238,8 +12238,8 @@
     "incorrectExplanations": {
       "A": "Version control tracks changes to code; it does not protect it from analysis.",
       "C": "Code reuse is using existing code in new projects.",
-      "D": "Continuous integration automates building and testing.",
-      "E": "Stored procedures are precompiled database queries."
+      "D": "Continuous integration automates building and testing code. It does nothing to hide the code from reverse engineering.",
+      "E": "Stored procedures are precompiled database queries. They do not protect application source code from analysis."
     },
     "tip": "Make code hard to reverse engineer or debug = obfuscation.",
     "references": [],
@@ -12631,7 +12631,7 @@
     "incorrectExplanations": {
       "A": "A change management procedure governs how changes are approved and made.",
       "B": "An information security policy states high-level rules and goals, not device-level hardening steps.",
-      "C": "A cybersecurity framework structures an entire security program."
+      "C": "A cybersecurity framework structures an entire security program. A baseline for hardening servers is a secure configuration guide."
     },
     "tip": "Step-by-step hardening settings for new devices = secure configuration guide (baseline).",
     "references": [],
@@ -12674,7 +12674,7 @@
     "incorrectExplanations": {
       "A": "Pseudonymizing social media accounts is not what tokenization is designed for.",
       "B": "A hardware or software token as a second factor is an authentication method, unrelated to data tokenization.",
-      "D": "Masking and segmentation are separate techniques from tokenization."
+      "D": "Masking and segmentation are separate techniques from tokenization. Tokenization shines when stored card numbers must be usable but not exposed."
     },
     "tip": "Keep a card on file safely = tokenization: the real number sits in a vault and systems store a meaningless token.",
     "references": [],
@@ -12767,9 +12767,9 @@
     "explanation": "SFTP transfers files over an encrypted SSH connection, and SSH provides the secure command-line session. Together they cover secure, remote, command-line file transfer, with both the login and the file contents encrypted.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "SNMP manages and monitors network devices.",
+      "B": "SNMP manages and monitors network devices. It does not transfer files securely.",
       "C": "RDP is a graphical remote desktop, not command-line file transfer.",
-      "D": "S/MIME secures email.",
+      "D": "S/MIME secures email messages. It is not a file transfer protocol.",
       "E": "SMTP sends email and is not a file transfer protocol."
     },
     "tip": "Secure command-line file transfer = SFTP (runs over SSH). FTPS is FTP with TLS; plain FTP and Telnet are cleartext.",
@@ -12854,7 +12854,7 @@
     "explanation": "Stakeholders talking through their roles in a hypothetical incident, without touching real systems, is a tabletop exercise. It is cheap and low-risk, and it exposes gaps in plans, contacts and decision-making before a real incident does.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "A penetration test actively attacks systems.",
+      "A": "A penetration test actively attacks systems. Stakeholders talking through roles in a scenario is a tabletop exercise.",
       "B": "Continuity of operations planning is the plan-writing process, not a discussion-based exercise.",
       "D": "A simulation acts out a scenario with realistic activity, beyond a discussion of roles."
     },
@@ -12940,7 +12940,7 @@
     "explanation": "Failed logins across a large portion of accounts from one IP address — a few attempts each rather than many against one — is password spraying. Keeping to a couple of guesses per account avoids lockout thresholds while testing common passwords across the whole directory.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Brute force hammers one account with many passwords.",
+      "B": "Brute force hammers one account with many passwords. Here many accounts each see a failed attempt from one IP, which is spraying.",
       "C": "A dictionary attack tries a word list, usually against one account; the spread across many accounts marks spraying.",
       "D": "Rainbow tables crack stolen hashes offline and generate no failed logins."
     },
@@ -13070,7 +13070,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Asymmetric encryption protects data, but it must be decrypted before it can be processed.",
-      "B": "Symmetric encryption also requires decryption before processing.",
+      "B": "Symmetric encryption also requires decryption before the data can be processed. Only homomorphic encryption allows computation on encrypted data.",
       "D": "Ephemeral keys are temporary session keys; they do not allow processing of encrypted data."
     },
     "tip": "Compute on encrypted data without decrypting it = homomorphic encryption: slow, but the provider never sees plaintext.",
@@ -13285,8 +13285,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Naming conventions help organize assets, but do not standardize configurations.",
-      "B": "Hashing verifies integrity; it does not standardize configurations.",
-      "C": "Network diagrams document topology, not operating system settings."
+      "B": "Hashing verifies integrity. It does not standardize configurations across systems.",
+      "C": "Network diagrams document topology. They do not define operating system settings."
     },
     "tip": "Standardize systems before imaging them = define a baseline configuration first.",
     "references": [],
@@ -13328,7 +13328,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A SIEM collects and correlates alerts, but analysts still work each one by hand.",
-      "C": "MDM manages mobile devices.",
+      "C": "MDM manages mobile devices. It does not automate SOC analysts' work.",
       "D": "DLP prevents data leaving; it does not automate SOC work."
     },
     "tip": "Reduce SOC manual work = SOAR (playbooks and automated response). A SIEM detects; SOAR acts.",
@@ -13372,7 +13372,7 @@
     "incorrectExplanations": {
       "B": "EAP is the authentication framework 802.1X uses, but on its own it does not provide port-based access control and quarantine.",
       "C": "RADIUS is the authentication server behind 802.1X, not the complete solution.",
-      "D": "WPA2 covers wireless only."
+      "D": "WPA2 covers wireless networks only. The requirement includes wired connections, which 802.1X handles."
     },
     "tip": "Wired and wireless, existing certificates, quarantine for unapproved devices = 802.1X (with EAP-TLS and NAC).",
     "references": [],
@@ -13468,7 +13468,7 @@
     "incorrectExplanations": {
       "A": "A unified password standard still leaves separate logins per application.",
       "C": "A wildcard certificate secures TLS for subdomains; it has nothing to do with user logins.",
-      "D": "Geofencing restricts access by location, not login management."
+      "D": "Geofencing restricts access by location. It does not consolidate separate logins into one identity."
     },
     "tip": "Separate logins and inconsistent password rules across SaaS apps → integrate them all with the IdP (SSO through federation).",
     "references": [],
@@ -13595,9 +13595,9 @@
     "explanation": "Incident response ends with lessons learned: reviewing what happened and improving the process for next time. The review covers what worked, what did not, and which controls, plans or training should change.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Eradication removes the threat, before recovery.",
-      "C": "Containment limits the damage early in the response.",
-      "D": "Recovery restores systems, before the lessons-learned review."
+      "B": "Eradication removes the threat. It comes before recovery and the final lessons-learned review.",
+      "C": "Containment limits the damage early in the response, well before the end.",
+      "D": "Recovery restores systems to service. The lessons-learned review follows it and closes the process."
     },
     "tip": "The last incident response phase = lessons learned (the post-incident review).",
     "references": [],
@@ -13638,7 +13638,7 @@
     "explanation": "SQL injection succeeds when user input goes straight into database queries. Input sanitization (with parameterized queries) removes or neutralizes malicious input so it cannot alter the query. Parameterized queries are the strongest fix, because the database treats input strictly as data, never as code.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Secure cookies protect session tokens, not database queries.",
+      "A": "Secure cookies protect session tokens in the browser. They do not stop malicious input reaching database queries.",
       "C": "Code signing proves code's origin; it does not stop injection.",
       "D": "A blocklist of bad input is easy to bypass and is weaker than proper sanitization."
     },
@@ -13767,8 +13767,8 @@
     "explanation": "A plan for how the organization keeps operating during a major incident is a business continuity plan. Disaster recovery covers restoring IT systems, which is part of the wider continuity plan.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Physical security protects facilities, not continued operations.",
-      "C": "Change management governs planned changes.",
+      "B": "Physical security protects facilities and equipment. It is not a plan for keeping the business running.",
+      "C": "Change management governs planned changes to systems. It does not cover operating through a global incident.",
       "D": "Disaster recovery focuses on restoring IT systems after a disaster; the question is about keeping the whole organization operating."
     },
     "tip": "Keep the whole organization operating through a crisis = BCP. Restore IT systems = DRP, which is part of business continuity.",
@@ -13855,7 +13855,7 @@
     "incorrectExplanations": {
       "B": "An MOU is a non-binding statement of intent, without measurable commitments.",
       "C": "An MOA sets out agreed responsibilities, but not service levels and time frames.",
-      "D": "A BPA governs a business partnership."
+      "D": "A BPA governs a business partnership, such as profit sharing and responsibilities. Service commitments and timelines belong in an SLA."
     },
     "tip": "What will be delivered and in what time frame = SLA.",
     "references": [],
@@ -13897,7 +13897,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Continuity of operations is a planning discipline, not a meeting format.",
-      "B": "Capacity planning estimates required resources.",
+      "B": "Capacity planning estimates the resources an operation will need. It does not test an incident response plan.",
       "D": "Parallel processing runs recovery systems alongside production to test them, not a discussion."
     },
     "tip": "Executives in a room discussing the IRP = tabletop exercise.",
@@ -14025,9 +14025,9 @@
     "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes — confidentiality. Role-based access and need-to-know are the everyday mechanisms that enforce it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Availability means access when needed; this restricts access.",
-      "C": "Integrity protects data from unauthorized change.",
-      "D": "Non-repudiation proves who performed an action."
+      "A": "Availability means access when needed. This scenario restricts access, which is confidentiality.",
+      "C": "Integrity protects data from unauthorized change. The requirement is about who can see the files.",
+      "D": "Non-repudiation proves who performed an action. It does not limit who can read client files."
     },
     "tip": "Need-to-know and role-based access to client files = confidentiality.",
     "references": [],
@@ -14069,7 +14069,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SQL injection is a web application attack against databases, not a way to unlock a phone's operating system.",
-      "B": "Cross-site scripting is a web application attack.",
+      "B": "Cross-site scripting is a web application attack. It does not unlock a phone to install unauthorized software.",
       "D": "Side loading installs apps from outside the official store, but does not unlock new OS features; jailbreaking does both."
     },
     "tip": "Remove the OS's restrictions to install unauthorized software = jailbreaking (iOS) or rooting (Android).",
@@ -14284,8 +14284,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Monitor mode only watches and alerts, like an IDS.",
-      "B": "Sensor mode passively collects traffic without blocking.",
-      "C": "Audit mode logs activity without blocking."
+      "B": "Sensor mode passively collects traffic without blocking. The engineer needs the IPS to stop attacks.",
+      "C": "Audit mode logs activity without blocking. Only active (inline) mode can drop malicious traffic."
     },
     "tip": "To block, an IPS must be inline in active (prevention) mode. Monitor or passive mode only alerts.",
     "references": [],
@@ -14412,7 +14412,7 @@
     "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test, checking whether badges, doors, guards and staff actually stop an intruder.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Defensive testing is not a penetration test type.",
+      "A": "Defensive testing is not a penetration test type; defense is the blue team's job. Trying a badge on a restricted door is a physical test.",
       "B": "Passive testing gathers information without interacting with the target.",
       "C": "Offensive describes penetration testing in general, not the physical nature of this test."
     },
@@ -14500,7 +14500,7 @@
     "incorrectExplanations": {
       "B": "Frameworks give high-level structure to a security program, not step-by-step response actions.",
       "C": "Baselines define normal configuration or behavior, not how to respond.",
-      "D": "Benchmarks are secure configuration standards, not response procedures."
+      "D": "Benchmarks are secure configuration standards, not response procedures. Playbooks give step-by-step incident responses."
     },
     "tip": "Step-by-step response procedures for specific incident types = playbooks (runbooks).",
     "references": [],
@@ -14542,7 +14542,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "SNMP traps are status alerts from network devices, not content inspection.",
-      "C": "SCAP automates configuration and vulnerability checks.",
+      "C": "SCAP automates configuration and vulnerability checks. It does not watch outbound email for sensitive files.",
       "D": "An IPS blocks attacks coming in, not sensitive files going out."
     },
     "tip": "Fingerprinted files + an alert when they are emailed out = DLP.",
@@ -14972,7 +14972,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "True positives are real threats and get acted on.",
-      "B": "True negatives generate no alert at all.",
+      "B": "True negatives generate no alert at all, so there is nothing to ignore. False positives are the noise people learn to tune out.",
       "D": "False negatives also generate no alert — the threat is simply missed."
     },
     "tip": "Alerts that keep firing on harmless activity (false positives) cause alert fatigue: analysts start ignoring them.",
@@ -15058,7 +15058,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A HIDS can detect attacks, but does not reduce exposure of the unpatched OS.",
-      "C": "Decommissioning would stop customer transaction processing.",
+      "C": "Decommissioning would stop customer transaction processing, which the business depends on. Isolation protects it while it keeps running.",
       "D": "Encrypting the drive protects data at rest, not the running system from network attacks."
     },
     "tip": "Critical system on an end-of-life OS → isolate it (its own VLAN or segment) until it can be replaced.",
@@ -18641,7 +18641,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A password policy is a technical/administrative rule, not part of an awareness program's activities.",
-      "B": "Access badges are a physical control.",
+      "B": "Access badges are a physical control. Posters and online training call for a phishing campaign to measure results.",
       "D": "A risk assessment evaluates risks; it is not an awareness activity."
     },
     "tip": "An awareness program: posters and training teach; phishing simulations test and reinforce.",
@@ -18895,7 +18895,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
+    "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA; the other agreements cover partnerships, service levels and general contract terms.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A business partners agreement sets out how two organizations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
@@ -19373,7 +19373,7 @@
     "incorrectExplanations": {
       "A": "A WAF helps prevent future attempts, but first establish whether this one succeeded.",
       "B": "Disabling the script stops further attempts, but does not reveal whether accounts were already created.",
-      "C": "The logs show injection, not brute-force attempts."
+      "C": "The logs show SQL injection that inserted a user, not brute-force attempts. Checking the users table confirms whether the attack succeeded."
     },
     "tip": "SQL injection with an INSERT in the logs → first confirm the impact: check the users table for the new account.",
     "references": [],
@@ -20060,7 +20060,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Legal data refers to legal records and matters, not employees' personal information.",
-      "B": "Financial data covers financial records.",
+      "B": "Financial data covers financial records such as accounts and transactions. An employee's personal information is privacy data.",
       "D": "Intellectual property is the organization's creative and business assets."
     },
     "tip": "Personal information about employees or customers = privacy data, governed by privacy policies and laws.",
@@ -20501,7 +20501,7 @@
     "incorrectExplanations": {
       "A": "Inserting code into memory for elevated rights describes memory injection or privilege escalation.",
       "C": "Reading unencrypted data across environments describes a data exposure issue, not escaping a VM.",
-      "D": "Installing unapproved software describes side loading."
+      "D": "Installing unapproved software describes side loading. VM escape is about breaking out of a virtual machine."
     },
     "tip": "VM escape = breaking out of a guest into the hypervisor, exposing the host and every other VM on it.",
     "references": [],
@@ -21627,7 +21627,7 @@
     "explanation": "Checking OS version, patch level and installed applications against the required standard at every login enforces the organization's security baseline. A machine that has drifted from the baseline, for example by missing patches or running unapproved software, is caught the next time its user signs in.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Resource scaling adjusts capacity to demand.",
+      "A": "Resource scaling adjusts capacity to demand. Checking OS version, patches and apps at login enforces a baseline.",
       "B": "'Policy enumeration' is listing policies, not checking systems against them.",
       "D": "Guardrails prevent unsafe actions, such as blocking insecure deployments, rather than validating each login."
     },
@@ -26128,7 +26128,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "The attacker is threatening to release damaging material unless money is paid. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation.",
+    "explanation": "The attacker is threatening to release damaging material unless money is paid by a deadline. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation; the money is the demand, but the threat is what defines it.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Organized crime is a type of threat actor, not an intent. The question asks what the actor wants, not who they are.",
@@ -30907,7 +30907,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Server multiprocessing uses multiple CPUs within one server, not traffic distribution.",
-      "B": "A warm site is a disaster recovery location.",
+      "B": "A warm site is a disaster recovery location. It does not spread live traffic across a cluster.",
       "D": "A proxy server forwards requests but is not designed to balance load across a cluster."
     },
     "tip": "One server overloaded while others sit idle → add a load balancer.",
@@ -30950,8 +30950,8 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Purging only identifying attributes may leave personal data behind; the request covers all of the person's data.",
-      "B": "Encrypted data still exists.",
-      "D": "Obfuscated data still exists and may be reversible."
+      "B": "Encrypted data still exists. The right to be forgotten requires the data to be removed, not protected.",
+      "D": "Obfuscated data still exists and may be reversible. The person's data has to be removed entirely."
     },
     "tip": "Right to be forgotten = erase all of the person's data. Encrypted or obfuscated data still exists.",
     "references": [],
@@ -31396,7 +31396,7 @@
     "incorrectExplanations": {
       "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
       "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
-      "C": "An NDA restricts disclosure of confidential information."
+      "C": "An NDA restricts disclosure of confidential information. It contains no response times or performance metrics."
     },
     "tip": "Response time, escalation and performance metrics = SLA.",
     "references": [],
@@ -31911,7 +31911,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Heuristic analysis uses rules of thumb and behavioral patterns. It is common in malware detection, not risk measurement.",
-      "C": "User-driven is not a recognized risk analysis method.",
+      "C": "User-driven is not a recognized risk analysis method. Exposure factor is a quantitative measure.",
       "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
     },
     "tip": "Exposure factor, SLE and ALE = quantitative risk analysis.",
@@ -32294,7 +32294,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys is precisely what that class describes.",
+    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys are exactly what that class describes; an algorithm such as MD5 or DES, or a key too short for modern computing power, can be broken.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A hash collision is one specific consequence of a weak hashing algorithm. It is an example within the category rather than the category itself.",
@@ -32512,7 +32512,7 @@
     "explanation": "A hacktivist attacks to advance a cause, so the payoff is the statement rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Financial gain is the motivation of organized crime.",
+      "A": "Financial gain is the motivation of organized crime. Hacktivists act for a cause, not for money.",
       "B": "Espionage is the motivation of nation-states and competitors seeking information.",
       "D": "Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."
     },
@@ -32767,7 +32767,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is precisely what SLE expresses.",
+    "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is exactly what SLE expresses; multiply it by the ARO to get the yearly figure, the ALE.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "ALE is the annualized figure — SLE multiplied by how often the event is expected each year. It aggregates rather than describing one incident.",
@@ -33063,7 +33063,7 @@
     "correct": [
       "C"
     ],
-    "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT.",
+    "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT, and the risk is that nobody is assessing, patching or monitoring it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An unskilled attacker is an external actor using commodity tools. The employee is neither external nor attacking.",
@@ -34039,7 +34039,7 @@
     "incorrectExplanations": {
       "A": "A security guard is a person acting on the physical environment, making it a physical control.",
       "B": "A policy is a documented management instrument, making it managerial.",
-      "C": "A fence is a physical barrier."
+      "C": "A fence is a physical barrier. Technical controls are enforced by technology, like a firewall."
     },
     "tip": "Technical controls: firewalls, encryption, IDS. Guards and fences are physical; policies are managerial.",
     "references": [],
@@ -34826,7 +34826,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Directive controls instruct people how to behave. Software issues no instructions to staff.",
-      "C": "Physical controls act on the physical environment.",
+      "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."
     },
@@ -35439,7 +35439,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
-      "B": "Typosquatting registers look-alike domains. No domain is involved.",
+      "B": "Typosquatting registers look-alike domains to catch mistyped addresses. No domain is involved in a threatening text.",
       "D": "Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."
     },
     "tip": "Threat or scam delivered by text message = smishing.",
@@ -35578,7 +35578,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
-      "C": "Vishing is phishing by voice call.",
+      "C": "Vishing is phishing by voice call. Scanning a malicious QR code is quishing.",
       "D": "Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."
     },
     "tip": "Phishing through a QR code (a 2D matrix barcode) = quishing.",
@@ -35760,7 +35760,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Resource management allocates compute capacity. It has nothing to do with electrical supply.",
-      "B": "A load balancer distributes network traffic across servers.",
+      "B": "A load balancer distributes network traffic across servers. It has no effect on electrical supply.",
       "C": "A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."
     },
     "tip": "Undervoltage/brownout or outage → UPS. A surge protector only handles overvoltage spikes.",
@@ -35885,7 +35885,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
+    "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking (rooting on Android), and a jailbroken device has lost the protections the OS was built with.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
@@ -36750,7 +36750,7 @@
     "incorrectExplanations": {
       "A": "Credential replay reuses captured authentication material. The account here is the guest's own, just with more power.",
       "C": "Directory traversal escapes an intended directory to read arbitrary files. Access was granted through permissions, not a path trick.",
-      "D": "Brute force guesses credentials repeatedly. No guessing occurred."
+      "D": "Brute force guesses credentials repeatedly. No guessing occurred; the guest account was given administrator rights."
     },
     "tip": "Guest account ends up in the admin group = privilege escalation.",
     "references": [],
@@ -37542,7 +37542,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Directive controls instruct people how to behave. Software gives no instructions to staff.",
-      "C": "Physical controls act on the physical environment.",
+      "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."
     },
@@ -39068,7 +39068,7 @@
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Impersonation is posing as a trusted party, which the fake bank site does. But the question asks for the attack type, and the SMS delivery makes it smishing.",
-      "B": "Phishing is the general category, conventionally by email.",
+      "B": "Phishing is the general category, conventionally by email. A malicious text message is specifically smishing.",
       "C": "Vishing is phishing by voice call. No call was made."
     },
     "tip": "Text message leading to a fake login page = smishing.",
@@ -40230,7 +40230,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing its review, signing and scanning. The unofficial store is the defining detail.",
+    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing the store's review, signing checks and malware scanning. The unofficial store is the defining detail, and it is why side-loaded apps are a common way malware reaches phones.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables side loading but is a separate, deeper change.",
@@ -41100,7 +41100,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
+    "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for; guards, fencing and lighting deter or observe but cannot physically stop a car.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
@@ -41234,7 +41234,7 @@
     "incorrectExplanations": {
       "A": "A hot site recovers fastest, but a fully equipped, continuously synchronized duplicate is the most expensive option. It fails the 'low cost' requirement.",
       "B": "A cold site is the cheapest option, but it has only space, power and cooling. Equipment has to be brought in and data restored, which takes days or weeks, so it fails the 'quick' requirement.",
-      "C": "Manual is not a recognized recovery site type."
+      "C": "Manual is not a recognized recovery site type. The site options are hot, warm and cold."
     },
     "tip": "Hot = fastest/most expensive. Cold = cheapest/slowest. 'Quick AND low cost' = warm, the middle ground.",
     "references": [],
@@ -41358,7 +41358,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
+    "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities, and the fix is to correct and redeploy the policy.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
@@ -41616,7 +41616,7 @@
     "correct": [
       "A"
     ],
-    "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad.",
+    "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad; integrity and non-repudiation come from hashing and signatures instead.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
@@ -42823,7 +42823,7 @@
     "explanation": "The incident has already been identified, so detection is done. The next step among these choices is containment: stop it getting worse by isolating affected hosts, cutting connections and disabling compromised accounts before spending time removing the cause or restoring service. In the full SY0-701 sequence, analysis sits between detection and containment, but it is not offered here.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Detection is the step that has just happened.",
+      "B": "Detection is the step that has just happened: the analyst has already identified the incident.",
       "C": "Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
       "D": "Recovery restores systems to normal service and comes last."
     },
@@ -42949,7 +42949,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control.",
+    "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control; a SIEM watches and correlates but does not block anything by itself.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Preventive controls stop an event occurring. An alert blocks nothing.",
@@ -43809,7 +43809,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector.",
+    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector, and it is often combined with phishing links that point to it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A watering hole attack compromises a genuine site the targets already visit rather than creating a new one.",
@@ -43938,7 +43938,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information.",
+    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information; the competitor's motive may be espionage, but the employee's is money.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Revenge would mean acting out of grievance against the employer. Payment is what prompted this.",
@@ -44029,7 +44029,7 @@
     "incorrectExplanations": {
       "B": "A warm site has hardware and connectivity but data must be restored at failover, so it is not a live mirror.",
       "C": "A cold site has space and power only, with no systems in place.",
-      "D": "Frozen is not a recognized recovery site type."
+      "D": "Frozen is not a recognized recovery site type. The site options are hot, warm and cold."
     },
     "tip": "Operational mirror, ready immediately = hot site.",
     "references": [],
@@ -45214,7 +45214,7 @@
     "incorrectExplanations": {
       "B": "Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
       "C": "SLE is the monetary loss from one incident, used in quantitative analysis.",
-      "E": "ALE is the annualized monetary loss, again quantitative.",
+      "E": "ALE is the annualized monetary loss, a quantitative figure. A risk matrix uses likelihood and impact.",
       "F": "ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."
     },
     "tip": "Risk matrix (heat map) = likelihood × impact. SLE, ALE and ARO are quantitative.",
@@ -45299,7 +45299,7 @@
     "explanation": "Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "An IDS detects and alerts. It blocks nothing.",
+      "A": "An IDS detects and alerts. It blocks nothing, so it cannot stop uploads.",
       "B": "An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
       "C": "A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."
     },
@@ -45468,7 +45468,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk, rather than accepting it as is, avoiding the activity or transferring the loss to someone else, is mitigation.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
@@ -47520,8 +47520,8 @@
       "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
       "D": "Port 443 is HTTPS, encrypted web traffic. It is the secure protocol the policy wants to keep.",
       "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
-      "F": "Port 993 is IMAP over TLS.",
-      "G": "Port 995 is POP3 over TLS."
+      "F": "Port 993 is IMAP over TLS, the encrypted version of IMAP. It is a secure protocol to keep.",
+      "G": "Port 995 is POP3 over TLS, the encrypted version of POP3. It is a secure protocol to keep."
     },
     "tip": "Insecure plaintext ports: 21 FTP, 23 Telnet, 25 SMTP, 80 HTTP, 110 POP3, 143 IMAP.",
     "references": [],
@@ -50012,7 +50012,7 @@
     "incorrectExplanations": {
       "B": "Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
       "C": "Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure program.",
-      "D": "Third-party information sharing exchanges threat intelligence between organizations."
+      "D": "Third-party information sharing exchanges threat intelligence between organizations. It does not invite outsiders to report flaws."
     },
     "tip": "Inviting the public to report vulnerabilities (usually for rewards) = bug bounty.",
     "references": [],
@@ -51590,7 +51590,7 @@
       "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
       "D": "Lighting improves visibility and deters. It presents no barrier.",
       "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
-      "F": "Cameras record what happened. Detective rather than preventive."
+      "F": "Cameras record what happened. They are detective and do not physically stop a vehicle."
     },
     "tip": "Stop vehicles = bollards + fencing. Sensors, cameras and lights don't physically stop anything.",
     "references": [],
@@ -51800,7 +51800,7 @@
     "correct": [
       "D"
     ],
-    "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad.",
+    "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad, and encryption and access controls are the main ways to achieve it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Integrity means data has not been altered without authorization. It concerns modification, not disclosure.",
@@ -54539,7 +54539,7 @@
     "correct": [
       "B"
     ],
-    "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad.",
+    "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad, achieved through access controls and encryption.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Integrity means data has not been altered without authorization. It concerns modification, not who can see the data.",

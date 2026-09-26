@@ -293,7 +293,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Corrective controls fix problems after an incident, such as restoring systems.",
       "B": "Preventive controls stop an event before it happens, such as firewalls or locks.",
-      "D": "Deterrent controls discourage attempts, such as warning signs."
+      "D": "Deterrent controls discourage attempts before they happen, such as warning signs or visible cameras. A weekly log review finds activity after the fact, which is detective."
     },
     "tip": "Reviewing logs finds things after they happen = detective. Stopping them = preventive; fixing afterward = corrective; discouraging = deterrent.",
     "references": [],
@@ -786,7 +786,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Key stretching repeats the hashing many times to slow cracking. It adds work, not extra data before hashing.",
       "B": "Data masking hides parts of data in displays; it is unrelated to hashing.",
-      "C": "Steganography hides data inside other files."
+      "C": "Steganography hides data inside other files such as images. It conceals information rather than strengthening a hash."
     },
     "tip": "Random data added to a password before hashing = salt (defeats rainbow tables). Hashing thousands of times over = key stretching (bcrypt, PBKDF2).",
     "references": [],
@@ -828,7 +828,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "The subject (the user or system asking for access) does appear in the data plane, but its role is an attribute the policy engine weighs in the control plane. The data-plane structure being implemented is the secured zones.",
-      "C": "Adaptive identity is a control-plane decision about authentication.",
+      "C": "Adaptive identity is a control-plane decision about how to authenticate a subject. The data plane is where access is enforced, through secured zones.",
       "D": "Threat scope reduction is a control-plane goal achieved through policy."
     },
     "tip": "Zero Trust planes. Control plane: adaptive identity, threat scope reduction, policy engine and administrator. Data plane: implicit trust zones, subject/system, policy enforcement point.",
@@ -953,7 +953,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Adding firewall rules changes production security infrastructure, so it follows the change management procedure: request, impact review, approval, testing and a backout plan.",
+    "explanation": "Adding firewall rules changes production security infrastructure, so it follows the change management procedure: a request, an impact review, approval, testing, a scheduled window and a backout plan. That process is what stops a new rule from breaking connectivity or quietly opening a hole.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "A disaster recovery plan governs restoring systems after a disaster.",
@@ -1043,8 +1043,8 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A TPM is a chip in a single device; it cannot centrally manage keys across clouds.",
-      "B": "IaaS provides computing infrastructure, not key management.",
-      "D": "PaaS provides a development platform, not key management."
+      "B": "IaaS provides computing infrastructure such as virtual machines and storage. It does not manage encryption keys for you.",
+      "D": "PaaS provides a managed development platform. It is not a key management service."
     },
     "tip": "Central key management across clouds, using your own existing keys = HSM as a service (cloud HSM).",
     "references": [],
@@ -1086,8 +1086,8 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key stretching makes cracking slower by hashing many times, rather than by adding a random string.",
-      "B": "Tokenization replaces sensitive values with tokens.",
-      "C": "Data masking hides parts of data in displays."
+      "B": "Tokenization replaces sensitive values with surrogate tokens held in a vault. It is not applied to passwords before hashing.",
+      "C": "Data masking hides parts of data in displays, such as showing only the last four digits. It does not strengthen a password."
     },
     "tip": "Random characters added before hashing = a salt. Salts defeat rainbow tables and make identical passwords hash differently.",
     "references": [],
@@ -1128,7 +1128,7 @@ export const domain1Questions = [
     "explanation": "An access control vestibule (mantrap) and a photo ID check at the entrance are tangible barriers controlling who enters a building. They are physical controls. The vestibule lets only one person through at a time after they are verified, which also stops tailgating.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Managerial controls are policies and procedures.",
+      "B": "Managerial controls are policies, procedures and risk assessments. Checking IDs at a vestibule is a physical measure.",
       "C": "Technical controls are enforced by technology on systems, such as firewalls.",
       "D": "The ID check is carried out by people, but the vestibule itself is a physical control, and the combination is best described as physical."
     },
@@ -1214,7 +1214,7 @@ export const domain1Questions = [
     "explanation": "Insiders already get into the building, so the data center needs its own gate. Access badges allow only authorized staff through the data center door and record who entered.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Bollards stop vehicles, not people inside the building.",
+      "A": "Bollards stop vehicles, not people already inside the building. An insider walks right past them.",
       "C": "Motion sensors detect movement, but cannot tell authorized from unauthorized staff.",
       "D": "Video surveillance records intrusions, but does not prevent them."
     },
@@ -1258,8 +1258,8 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Privacy concerns personal data handling; load balancing does not address it.",
-      "B": "Integrity ensures data is not altered.",
-      "C": "Confidentiality keeps data from unauthorized eyes."
+      "B": "Integrity ensures data is not altered without authorization. A load balancer keeps services reachable; it does not protect data from change.",
+      "C": "Confidentiality keeps data from unauthorized eyes. Spreading traffic across servers does nothing for secrecy."
     },
     "tip": "Load balancers, redundancy, clustering and UPS units all serve availability.",
     "references": [],
@@ -1344,7 +1344,7 @@ export const domain1Questions = [
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "Asymmetric encryption uses a key pair — the public key encrypts and the private key decrypts.",
-      "C": "Hashing is one-way and cannot be decrypted.",
+      "C": "Hashing is one-way and cannot be decrypted. The peer here decrypts the message with the same key, which is symmetric encryption.",
       "D": "Salting adds random data before hashing; it is not encryption."
     },
     "tip": "The same key on both ends = symmetric (AES). A public/private key pair = asymmetric (RSA, ECC).",
@@ -1740,8 +1740,8 @@ export const domain1Questions = [
     "explanation": "A critical legacy server usually cannot be patched or hardened properly, so it is placed in a private segment to reduce its exposure instead. A control that substitutes for one that cannot be applied is compensating.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Deterrent controls discourage attempts, such as warning signs.",
-      "B": "Corrective controls fix problems after an incident.",
+      "A": "Deterrent controls discourage attempts, such as warning signs. Segmenting a server is a technical substitute for a control it cannot support.",
+      "B": "Corrective controls fix problems after an incident. The segmentation is in place before anything happens.",
       "D": "Segmentation does prevent some access, but its purpose here is to compensate for the server's missing protections."
     },
     "tip": "Segmenting a legacy system that cannot be patched = compensating control.",
@@ -1783,7 +1783,7 @@ export const domain1Questions = [
     "explanation": "A hash algorithm produces a fixed-length digest from data. Recalculating the digest later and comparing shows whether even one bit changed, verifying that the data has not been modified.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "'Code check' is not a defined integrity algorithm.",
+      "B": "'Code check' is not a defined integrity algorithm. Verifying that data is unchanged is done with a hash.",
       "C": "Encryption protects confidentiality; it does not by itself prove data was not changed.",
       "D": "A checksum detects accidental errors, but is not designed to detect deliberate tampering the way a cryptographic hash is."
     },
@@ -1836,9 +1836,9 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Physical controls are tangible barriers such as locks and fences.",
-      "B": "Managerial controls are policies and procedures.",
-      "C": "Detective controls identify events after they happen.",
-      "D": "'Administrator' is not a control category."
+      "B": "Managerial controls are policies and procedures. MFA and patching are enforced by technology.",
+      "C": "Detective controls identify events after they happen. MFA and patching stop attacks before they succeed, which is preventive.",
+      "D": "'Administrator' is not a control category. The categories are technical, managerial, operational and physical."
     },
     "tip": "MFA and patching: category = technical, type = preventive.",
     "references": [],
@@ -1879,9 +1879,9 @@ export const domain1Questions = [
     "explanation": "The tool records suspicious site visits and reports on them afterward, without blocking anything. Identifying activity after it happens is a detective control. Blocking the sites instead, for example with DNS filtering, would make it preventive.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "A preventive control would block the sites.",
+      "A": "A preventive control would block the suspicious sites. This tool only logs them and reports afterward.",
       "B": "A deterrent discourages behavior, such as a warning banner.",
-      "C": "A corrective control fixes something after an incident."
+      "C": "A corrective control fixes something after an incident. A daily report of visited sites fixes nothing."
     },
     "tip": "Logs and reports suspicious activity without blocking it = detective control.",
     "references": [],
@@ -2010,7 +2010,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Pseudonymizing social media accounts is not what tokenization is designed for.",
       "B": "A hardware or software token as a second factor is an authentication method, unrelated to data tokenization.",
-      "D": "Masking and segmentation are separate techniques from tokenization."
+      "D": "Masking and segmentation are separate techniques from tokenization. Tokenization shines when stored card numbers must be usable but not exposed."
     },
     "tip": "Keep a card on file safely = tokenization: the real number sits in a vault and systems store a meaningless token.",
     "references": [],
@@ -2095,7 +2095,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Asymmetric encryption protects data, but it must be decrypted before it can be processed.",
-      "B": "Symmetric encryption also requires decryption before processing.",
+      "B": "Symmetric encryption also requires decryption before the data can be processed. Only homomorphic encryption allows computation on encrypted data.",
       "D": "Ephemeral keys are temporary session keys; they do not allow processing of encrypted data."
     },
     "tip": "Compute on encrypted data without decrypting it = homomorphic encryption: slow, but the provider never sees plaintext.",
@@ -2223,9 +2223,9 @@ export const domain1Questions = [
     "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes — confidentiality. Role-based access and need-to-know are the everyday mechanisms that enforce it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Availability means access when needed; this restricts access.",
-      "C": "Integrity protects data from unauthorized change.",
-      "D": "Non-repudiation proves who performed an action."
+      "A": "Availability means access when needed. This scenario restricts access, which is confidentiality.",
+      "C": "Integrity protects data from unauthorized change. The requirement is about who can see the files.",
+      "D": "Non-repudiation proves who performed an action. It does not limit who can read client files."
     },
     "tip": "Need-to-know and role-based access to client files = confidentiality.",
     "references": [],
@@ -4989,7 +4989,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "A security guard is a person acting on the physical environment, making it a physical control.",
       "B": "A policy is a documented management instrument, making it managerial.",
-      "C": "A fence is a physical barrier."
+      "C": "A fence is a physical barrier. Technical controls are enforced by technology, like a firewall."
     },
     "tip": "Technical controls: firewalls, encryption, IDS. Guards and fences are physical; policies are managerial.",
     "references": [],
@@ -5083,7 +5083,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Directive controls instruct people how to behave. Software issues no instructions to staff.",
-      "C": "Physical controls act on the physical environment.",
+      "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."
     },
@@ -5480,7 +5480,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Directive controls instruct people how to behave. Software gives no instructions to staff.",
-      "C": "Physical controls act on the physical environment.",
+      "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
       "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
       "E": "Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."
     },
@@ -5649,7 +5649,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
+    "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for; guards, fencing and lighting deter or observe but cannot physically stop a car.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
@@ -5692,7 +5692,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad.",
+    "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad; integrity and non-repudiation come from hashing and signatures instead.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
@@ -5950,7 +5950,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control.",
+    "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control; a SIEM watches and correlates but does not block anything by itself.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Preventive controls stop an event occurring. An alert blocks nothing.",
@@ -7401,7 +7401,7 @@ export const domain1Questions = [
       "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
       "D": "Lighting improves visibility and deters. It presents no barrier.",
       "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
-      "F": "Cameras record what happened. Detective rather than preventive."
+      "F": "Cameras record what happened. They are detective and do not physically stop a vehicle."
     },
     "tip": "Stop vehicles = bollards + fencing. Sensors, cameras and lights don't physically stop anything.",
     "references": [],
@@ -7439,7 +7439,7 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad.",
+    "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad, and encryption and access controls are the main ways to achieve it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Integrity means data has not been altered without authorization. It concerns modification, not disclosure.",
@@ -7912,7 +7912,7 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad.",
+    "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad, achieved through access controls and encryption.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Integrity means data has not been altered without authorization. It concerns modification, not who can see the data.",

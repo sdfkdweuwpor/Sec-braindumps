@@ -159,7 +159,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A legitimate user logging in after hours and copying large amounts of data to a personal device is misusing authorized access — the textbook insider threat indicator.",
+    "explanation": "A legitimate user logging in after hours and copying large amounts of data to a personal device is misusing authorized access. Unusual timing, bulk data movement and personal storage together are the textbook indicators of an insider threat, whether the motive is theft, sale or taking data to a new employer.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Penetration testing is authorized, scheduled testing, not a user taking data home.",
@@ -420,7 +420,7 @@ export const domain2Questions = [
     "explanation": "The logs show that a legitimate domain account last accessed the files before they were encrypted. Harm caused through valid internal access points to an insider threat, whether the user acted deliberately or carelessly: the damage came through an authorized account on the inside, not an outside intrusion.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Social engineering manipulates people. Nothing here shows deception.",
+      "B": "Social engineering manipulates people into giving up access or information. Nothing in the logs shows deception; the access came from a legitimate domain account.",
       "C": "A watering-hole attack compromises a website the victims visit. The logs show a domain user acting on the server.",
       "D": "The account was an authorized domain user, not an outside attacker without access."
     },
@@ -508,7 +508,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Impersonation is pretending to be someone else, typically over the phone or in person.",
       "B": "Disinformation spreads false information; it does not deliver malware.",
-      "D": "Smishing is phishing through SMS text messages."
+      "D": "Smishing is phishing through SMS text messages. The infection came from visiting a compromised website, not from a text."
     },
     "tip": "The attacker infects a site the victims already trust and visit (an industry blog or forum) = watering-hole attack.",
     "references": [],
@@ -589,7 +589,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Ransomware-as-a-service is a criminal business model: developers rent their ransomware to affiliates in exchange for a share of the ransom. Profit-driven, organized groups are organized crime.",
+    "explanation": "Ransomware-as-a-service is a criminal business model: developers rent their ransomware to affiliates in exchange for a share of each ransom paid. Profit-driven groups running operations like a business, with developers, affiliates and negotiators, are the definition of organized crime.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An insider threat abuses access from within; RaaS is an external criminal market.",
@@ -890,7 +890,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Role-based access control grants permissions according to job responsibilities, using a small set of roles instead of per-user rules — the simplified structure the administrator wants.",
+    "explanation": "Role-based access control grants permissions according to job responsibilities, using a small set of roles instead of individual per-user rules. Each user gets exactly what their role needs and nothing more, in the simplified structure the administrator wants to apply to the resource group.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "ACLs list permissions resource by resource, which becomes complex and hard to manage.",
@@ -937,7 +937,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Virtualization flaws are in hypervisors and virtual machines, not the BIOS.",
-      "C": "Application flaws are fixed by updating the application.",
+      "C": "Application flaws are fixed by updating the application itself. A BIOS update patches firmware, the code built into the hardware.",
       "D": "Operating system flaws are fixed by OS patches, not a BIOS update."
     },
     "tip": "BIOS or UEFI update = firmware vulnerability. Firmware flaws sit below the OS and survive reinstalls.",
@@ -976,7 +976,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Twelve Windows 4625 events (failed logon) arrive exactly two seconds apart. A steady, machine-timed run of failed logons is automated password guessing: a brute-force attack.",
+    "explanation": "Twelve Windows 4625 events (failed logon) arrive exactly two seconds apart against the same server. A steady, machine-timed run of failed logons is automated password guessing, which is a brute-force attack; a person who forgot a password tries a few times at irregular intervals.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Privilege escalation raises the rights of an account that already has access; every event here is a failed attempt to get in.",
@@ -1109,7 +1109,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A gift card request with a spoofed display name is common executive impersonation phishing, but it only fakes the display field rather than compromising or impersonating a business account.",
-      "B": "Messages demanding payment to unlock files are ransomware.",
+      "B": "Messages demanding payment to unlock files are ransomware. BEC abuses a trusted business identity over email to steal money or credentials.",
       "D": "A link to a fake email portal is ordinary credential phishing."
     },
     "tip": "BEC = an email that impersonates or comes from a trusted business account (executive, HR, vendor) asking for money, data or credentials.",
@@ -1160,9 +1160,9 @@ export const domain2Questions = [
     "explanation": "The message arrived as a text (smishing), and the attacker pretended to be the payroll department (impersonation). Both techniques are in play. Smishing is phishing by SMS, and impersonating a trusted department makes the request for credentials seem routine.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Typosquatting relies on mistyped web addresses.",
+      "A": "Typosquatting relies on users mistyping web addresses. This attack arrived as a text message, with no look-alike domain involved.",
       "B": "Phishing is the general category, but email phishing specifically is not the channel here; smishing is the more precise answer.",
-      "D": "Vishing uses voice calls, not text messages.",
+      "D": "Vishing uses voice calls, not text messages. The channel here is SMS, which makes it smishing.",
       "F": "Misinformation is false information spread without intent to harvest credentials."
     },
     "tip": "Text message = smishing, voice call = vishing, email = phishing. Pretending to be payroll, IT or an executive = impersonation.",
@@ -1334,7 +1334,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Jailbreaking removes OS restrictions. It often enables side loading, but it is not the same as installing from outside the store.",
-      "B": "Memory injection places code into a running process.",
+      "B": "Memory injection places malicious code into a running process's memory. It has nothing to do with where software was installed from.",
       "C": "Resource reuse refers to memory or storage not being cleared before reuse."
     },
     "tip": "Installing apps from outside the official store = side loading. Removing the OS's restrictions = jailbreaking or rooting.",
@@ -1506,7 +1506,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Cross-site scripting injects scripts that run in other users' browsers, not database commands.",
-      "B": "Side loading installs apps from unofficial sources.",
+      "B": "Side loading installs apps from unofficial sources. It does not involve typing commands into an input field.",
       "C": "A buffer overflow overwrites memory. It is not typically carried out through form fields to query data."
     },
     "tip": "Input field → database commands = SQL injection. Input field → scripts in other users' browsers = XSS.",
@@ -1558,9 +1558,9 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "C": "VLAN hopping is a switching attack, not specific to VoIP.",
-      "D": "Phishing is email-based, not a VoIP vulnerability.",
+      "D": "Phishing is email-based fraud, not a VoIP vulnerability. Its voice equivalent, vishing, is the VoIP one.",
       "E": "DHCP snooping is a switch security feature, not a vulnerability.",
-      "F": "Tailgating is a physical intrusion technique."
+      "F": "Tailgating is a physical intrusion technique: following someone through a secured door. It has nothing to do with voice systems."
     },
     "tip": "VoIP-specific threats: vishing (voice phishing) and SPIM (spam over instant messaging and internet telephony).",
     "references": [],
@@ -1602,7 +1602,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hacktivists are external attackers with causes, not employees installing tools.",
-      "B": "Script kiddies are unskilled external attackers.",
+      "B": "Script kiddies are unskilled external attackers using ready-made tools. Unapproved software deployed by staff is shadow IT.",
       "C": "Competitors may seek advantage, but they do not deploy unapproved software inside the company."
     },
     "tip": "Unapproved software or services brought in by employees = shadow IT.",
@@ -1689,7 +1689,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Privilege escalation raises permissions on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
-      "C": "SQL injection attacks databases through input fields."
+      "C": "SQL injection attacks databases through input fields. Reusing credential hashes scraped from memory is pass-the-hash."
     },
     "tip": "Using captured hashes to log in elsewhere without cracking them = pass-the-hash (lateral movement). Tools like Mimikatz scrape them from memory.",
     "references": [],
@@ -1859,7 +1859,7 @@ export const domain2Questions = [
     "explanation": "A text message pretending to be the CEO and asking for gift cards is smishing — phishing by SMS. Gift card requests are a classic scam because the cards are hard to trace and easy to resell. The unknown number is a red flag: verify through a known channel before acting.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Vishing uses voice calls, not text messages.",
+      "A": "Vishing uses voice calls, not text messages. A text from someone posing as the CEO is smishing.",
       "C": "Pretexting (the invented story) is part of the attack, but the defining attack type is smishing because it came by text.",
       "D": "Phishing is the general term; smishing is the precise answer for text messages."
     },
@@ -2031,7 +2031,7 @@ export const domain2Questions = [
     "explanation": "Organized crime exists to make money, through ransomware, fraud and selling stolen data. Profit is its defining motive. These groups run like businesses, with specialists, affiliates and even help desks for ransomware victims.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Hacktivists are driven by political or social causes.",
+      "A": "Hacktivists are driven by political or social causes. Their reward is attention for the cause, not money.",
       "B": "Insiders act for many reasons — revenge, ideology or money — so profit is not their defining motive.",
       "D": "Shadow IT is unauthorized technology use, not a threat actor seeking profit."
     },
@@ -2248,7 +2248,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "B": "A malicious update is a compromised patch or release, not a weak algorithm choice.",
       "C": "A zero-day is an unknown, unpatched flaw. MD5's weaknesses have been known for decades.",
-      "D": "Side loading is installing software from unofficial sources."
+      "D": "Side loading is installing software from unofficial sources. A weak hashing algorithm like MD5 is a cryptographic flaw."
     },
     "tip": "MD5, SHA-1, DES, RC4 and SSL = weak or deprecated crypto → a cryptographic vulnerability.",
     "references": [],
@@ -2334,7 +2334,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Privilege escalation raises rights on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
-      "C": "SQL injection attacks databases through input fields."
+      "C": "SQL injection attacks databases through input fields. Reusing credential hashes scraped from memory is pass-the-hash."
     },
     "tip": "Stolen hashes reused to authenticate without cracking them = pass-the-hash.",
     "references": [],
@@ -2504,8 +2504,8 @@ export const domain2Questions = [
     "explanation": "Staff deploying software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist. The fix combines discovery tools, a quick approval process and clear policy.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Hacktivists are external attackers with causes.",
-      "B": "Script kiddies are unskilled external attackers.",
+      "A": "Hacktivists are external attackers with political causes. Staff deploying unapproved software is shadow IT.",
+      "B": "Script kiddies are unskilled external attackers. The risk here comes from employees installing unsanctioned software.",
       "C": "Competitors may seek advantage, but do not deploy unapproved software inside the company."
     },
     "tip": "Unapproved software deployed by staff = shadow IT.",
@@ -2682,8 +2682,8 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Version control tracks changes to code; it does not protect it from analysis.",
       "C": "Code reuse is using existing code in new projects.",
-      "D": "Continuous integration automates building and testing.",
-      "E": "Stored procedures are precompiled database queries."
+      "D": "Continuous integration automates building and testing code. It does nothing to hide the code from reverse engineering.",
+      "E": "Stored procedures are precompiled database queries. They do not protect application source code from analysis."
     },
     "tip": "Make code hard to reverse engineer or debug = obfuscation.",
     "references": [],
@@ -2767,7 +2767,7 @@ export const domain2Questions = [
     "explanation": "Failed logins across a large portion of accounts from one IP address — a few attempts each rather than many against one — is password spraying. Keeping to a couple of guesses per account avoids lockout thresholds while testing common passwords across the whole directory.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Brute force hammers one account with many passwords.",
+      "B": "Brute force hammers one account with many passwords. Here many accounts each see a failed attempt from one IP, which is spraying.",
       "C": "A dictionary attack tries a word list, usually against one account; the spread across many accounts marks spraying.",
       "D": "Rainbow tables crack stolen hashes offline and generate no failed logins."
     },
@@ -2854,7 +2854,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SQL injection is a web application attack against databases, not a way to unlock a phone's operating system.",
-      "B": "Cross-site scripting is a web application attack.",
+      "B": "Cross-site scripting is a web application attack. It does not unlock a phone to install unauthorized software.",
       "D": "Side loading installs apps from outside the official store, but does not unlock new OS features; jailbreaking does both."
     },
     "tip": "Remove the OS's restrictions to install unauthorized software = jailbreaking (iOS) or rooting (Android).",
@@ -3026,7 +3026,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A HIDS can detect attacks, but does not reduce exposure of the unpatched OS.",
-      "C": "Decommissioning would stop customer transaction processing.",
+      "C": "Decommissioning would stop customer transaction processing, which the business depends on. Isolation protects it while it keeps running.",
       "D": "Encrypting the drive protects data at rest, not the running system from network attacks."
     },
     "tip": "Critical system on an end-of-life OS → isolate it (its own VLAN or segment) until it can be replaced.",
@@ -3892,7 +3892,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Inserting code into memory for elevated rights describes memory injection or privilege escalation.",
       "C": "Reading unencrypted data across environments describes a data exposure issue, not escaping a VM.",
-      "D": "Installing unapproved software describes side loading."
+      "D": "Installing unapproved software describes side loading. VM escape is about breaking out of a virtual machine."
     },
     "tip": "VM escape = breaking out of a guest into the hypervisor, exposing the host and every other VM on it.",
     "references": [],
@@ -4848,7 +4848,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attacker is threatening to release damaging material unless money is paid. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation.",
+    "explanation": "The attacker is threatening to release damaging material unless money is paid by a deadline. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation; the money is the demand, but the threat is what defines it.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Organized crime is a type of threat actor, not an intent. The question asks what the actor wants, not who they are.",
@@ -5837,7 +5837,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys is precisely what that class describes.",
+    "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys are exactly what that class describes; an algorithm such as MD5 or DES, or a key too short for modern computing power, can be broken.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A hash collision is one specific consequence of a weak hashing algorithm. It is an example within the category rather than the category itself.",
@@ -5926,7 +5926,7 @@ export const domain2Questions = [
     "explanation": "A hacktivist attacks to advance a cause, so the payoff is the statement rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Financial gain is the motivation of organized crime.",
+      "A": "Financial gain is the motivation of organized crime. Hacktivists act for a cause, not for money.",
       "B": "Espionage is the motivation of nation-states and competitors seeking information.",
       "D": "Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."
     },
@@ -6095,7 +6095,7 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT.",
+    "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT, and the risk is that nobody is assessing, patching or monitoring it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An unskilled attacker is an external actor using commodity tools. The employee is neither external nor attacking.",
@@ -6587,7 +6587,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
-      "B": "Typosquatting registers look-alike domains. No domain is involved.",
+      "B": "Typosquatting registers look-alike domains to catch mistyped addresses. No domain is involved in a threatening text.",
       "D": "Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."
     },
     "tip": "Threat or scam delivered by text message = smishing.",
@@ -6683,7 +6683,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
-      "C": "Vishing is phishing by voice call.",
+      "C": "Vishing is phishing by voice call. Scanning a malicious QR code is quishing.",
       "D": "Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."
     },
     "tip": "Phishing through a QR code (a 2D matrix barcode) = quishing.",
@@ -6722,7 +6722,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
+    "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking (rooting on Android), and a jailbroken device has lost the protections the OS was built with.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
@@ -6899,7 +6899,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Credential replay reuses captured authentication material. The account here is the guest's own, just with more power.",
       "C": "Directory traversal escapes an intended directory to read arbitrary files. Access was granted through permissions, not a path trick.",
-      "D": "Brute force guesses credentials repeatedly. No guessing occurred."
+      "D": "Brute force guesses credentials repeatedly. No guessing occurred; the guest account was given administrator rights."
     },
     "tip": "Guest account ends up in the admin group = privilege escalation.",
     "references": [],
@@ -7424,7 +7424,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Impersonation is posing as a trusted party, which the fake bank site does. But the question asks for the attack type, and the SMS delivery makes it smishing.",
-      "B": "Phishing is the general category, conventionally by email.",
+      "B": "Phishing is the general category, conventionally by email. A malicious text message is specifically smishing.",
       "C": "Vishing is phishing by voice call. No call was made."
     },
     "tip": "Text message leading to a fake login page = smishing.",
@@ -7764,7 +7764,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing its review, signing and scanning. The unofficial store is the defining detail.",
+    "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing the store's review, signing checks and malware scanning. The unofficial store is the defining detail, and it is why side-loaded apps are a common way malware reaches phones.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables side loading but is a separate, deeper change.",
@@ -7979,7 +7979,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
+    "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities, and the fix is to correct and redeploy the policy.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
@@ -8710,7 +8710,7 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector.",
+    "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector, and it is often combined with phishing links that point to it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A watering hole attack compromises a genuine site the targets already visit rather than creating a new one.",
@@ -8753,7 +8753,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information.",
+    "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information; the competitor's motive may be espionage, but the employee's is money.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Revenge would mean acting out of grievance against the employer. Payment is what prompted this.",

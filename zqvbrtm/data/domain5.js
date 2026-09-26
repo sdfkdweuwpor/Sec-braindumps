@@ -73,7 +73,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A statement of work spells out a specific project: the work to be done, the deliverables, the cost and the timeline. That matches the client's request exactly.",
+    "explanation": "A statement of work spells out one specific project: the work to be done, the deliverables, the cost and the completion timeline. The client asked for exactly those things for a single engagement, which is what an SOW is for; the other agreements govern ongoing relationships rather than one project.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A master service agreement sets general terms for an ongoing relationship. Individual projects are then defined in SOWs under it.",
@@ -508,7 +508,7 @@ export const domain5Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An uptime guarantee such as 99.99% is a measurable service level, and service levels — with penalties for missing them — are written into a service-level agreement.",
+    "explanation": "An uptime guarantee such as 99.99% is a measurable service level. Service levels, how they are measured and the penalties for missing them are written into a service-level agreement, so that is the document the provider returns to the client.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A memorandum of agreement documents cooperation between parties, usually without measurable service targets.",
@@ -876,7 +876,7 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Passive reconnaissance gathers information without touching the target, such as searching public records.",
-      "C": "'Defensive' is not a reconnaissance type.",
+      "C": "'Defensive' is not a reconnaissance type. Reconnaissance is either active, touching the target, or passive, using public sources.",
       "D": "'Offensive' describes the overall red team activity, not the type of reconnaissance."
     },
     "tip": "Touching the target (port scans, pings, banner grabs) = active reconnaissance. OSINT, public records and DNS lookups = passive.",
@@ -1277,7 +1277,7 @@ export const domain5Questions = [
     "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test. Testers may clone badges, tailgate staff or pose as contractors to see whether guards, locks and vestibules actually stop them.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Defensive testing is not a penetration test type.",
+      "A": "Defensive testing is not a penetration test type; defense is the blue team's job. Trying a badge on a restricted door is a physical test.",
       "B": "Passive testing gathers information without interacting with the target.",
       "C": "Offensive describes penetration testing in general, not the physical nature of this test."
     },
@@ -1412,8 +1412,8 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Destruction deals with disposing of data at the end of its life, not keeping it for set periods.",
-      "C": "An inventory tracks what data exists and where.",
-      "D": "Certification documents that data was destroyed or sanitized."
+      "C": "An inventory tracks what data exists and where. It does not say how long each type must be kept.",
+      "D": "Certification documents that data was destroyed or sanitized. It comes at the end of the retention period rather than defining it."
     },
     "tip": "Keep X for N years = data retention policy.",
     "references": [],
@@ -1497,9 +1497,9 @@ export const domain5Questions = [
     "explanation": "The red team plays the attacker and focuses solely on compromising the organization with real adversary tactics. It tests whether the defenders (the blue team) can detect and stop a realistic attack, without sharing its plans in advance.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "The white team manages and referees the exercise.",
+      "A": "The white team manages and referees the exercise. It sets the rules rather than attacking.",
       "C": "The purple team combines attack and defense to share lessons.",
-      "D": "The blue team defends the organization."
+      "D": "The blue team defends the organization. Attacking with an adversary's tactics is the red team's role."
     },
     "tip": "Red team = attack only. Blue = defend. Purple = both together. White = referee.",
     "references": [],
@@ -1627,7 +1627,7 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Establishing a baseline comes after understanding the policies and requirements it must meet.",
-      "C": "Adopting benchmarks is a later implementation decision.",
+      "C": "Adopting benchmarks is a later implementation decision. A new manager first needs to know what the existing policies require.",
       "D": "Revalidating user IDs is a specific operational task, not the first thing to do."
     },
     "tip": "A new security manager's first step: review the existing policies and understand the current state before changing anything.",
@@ -2015,7 +2015,7 @@ export const domain5Questions = [
     "incorrectExplanations": {
       "B": "An MOU is a non-binding statement of intent, without measurable commitments.",
       "C": "An MOA sets out agreed responsibilities, but not service levels and time frames.",
-      "D": "A BPA governs a business partnership."
+      "D": "A BPA governs a business partnership, such as profit sharing and responsibilities. Service commitments and timelines belong in an SLA."
     },
     "tip": "What will be delivered and in what time frame = SLA.",
     "references": [],
@@ -2142,7 +2142,7 @@ export const domain5Questions = [
     "explanation": "Trying to walk into a restricted area with an access badge tests physical security controls. It is a physical penetration test, checking whether badges, doors, guards and staff actually stop an intruder.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Defensive testing is not a penetration test type.",
+      "A": "Defensive testing is not a penetration test type; defense is the blue team's job. Trying a badge on a restricted door is a physical test.",
       "B": "Passive testing gathers information without interacting with the target.",
       "C": "Offensive describes penetration testing in general, not the physical nature of this test."
     },
@@ -2745,7 +2745,7 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A password policy is a technical/administrative rule, not part of an awareness program's activities.",
-      "B": "Access badges are a physical control.",
+      "B": "Access badges are a physical control. Posters and online training call for a phishing campaign to measure results.",
       "D": "A risk assessment evaluates risks; it is not an awareness activity."
     },
     "tip": "An awareness program: posters and training teach; phishing simulations test and reinforce.",
@@ -2827,7 +2827,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
+    "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA; the other agreements cover partnerships, service levels and general contract terms.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A business partners agreement sets out how two organizations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
@@ -5072,8 +5072,8 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Purging only identifying attributes may leave personal data behind; the request covers all of the person's data.",
-      "B": "Encrypted data still exists.",
-      "D": "Obfuscated data still exists and may be reversible."
+      "B": "Encrypted data still exists. The right to be forgotten requires the data to be removed, not protected.",
+      "D": "Obfuscated data still exists and may be reversible. The person's data has to be removed entirely."
     },
     "tip": "Right to be forgotten = erase all of the person's data. Encrypted or obfuscated data still exists.",
     "references": [],
@@ -5164,7 +5164,7 @@ export const domain5Questions = [
     "incorrectExplanations": {
       "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
       "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
-      "C": "An NDA restricts disclosure of confidential information."
+      "C": "An NDA restricts disclosure of confidential information. It contains no response times or performance metrics."
     },
     "tip": "Response time, escalation and performance metrics = SLA.",
     "references": [],
@@ -5249,7 +5249,7 @@ export const domain5Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Heuristic analysis uses rules of thumb and behavioral patterns. It is common in malware detection, not risk measurement.",
-      "C": "User-driven is not a recognized risk analysis method.",
+      "C": "User-driven is not a recognized risk analysis method. Exposure factor is a quantitative measure.",
       "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
     },
     "tip": "Exposure factor, SLE and ALE = quantitative risk analysis.",
@@ -5417,7 +5417,7 @@ export const domain5Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is precisely what SLE expresses.",
+    "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is exactly what SLE expresses; multiply it by the ARO to get the yearly figure, the ALE.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "ALE is the annualized figure — SLE multiplied by how often the event is expected each year. It aggregates rather than describing one incident.",
@@ -7285,7 +7285,7 @@ export const domain5Questions = [
     "incorrectExplanations": {
       "B": "Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
       "C": "SLE is the monetary loss from one incident, used in quantitative analysis.",
-      "E": "ALE is the annualized monetary loss, again quantitative.",
+      "E": "ALE is the annualized monetary loss, a quantitative figure. A risk matrix uses likelihood and impact.",
       "F": "ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."
     },
     "tip": "Risk matrix (heat map) = likelihood × impact. SLE, ALE and ARO are quantitative.",
@@ -7324,7 +7324,7 @@ export const domain5Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+    "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk, rather than accepting it as is, avoiding the activity or transferring the loss to someone else, is mitigation.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",

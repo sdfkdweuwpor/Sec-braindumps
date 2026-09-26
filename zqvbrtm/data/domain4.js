@@ -164,7 +164,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "Gathering indicators of compromise is part of investigation and detection, not the purpose of root cause analysis.",
       "B": "Identifying affected systems is scoping during analysis and containment.",
-      "C": "Removing malware is eradication, a separate phase."
+      "C": "Removing malware is eradication, a separate phase. Root cause analysis asks why the incident happened so it can be prevented, not how to clean it up."
     },
     "tip": "Root cause analysis answers 'why did this happen?' so it does not happen again. Finding affected systems is scoping; removing malware is eradication.",
     "references": [],
@@ -331,7 +331,7 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "After remediation, you rescan to confirm the fixes actually worked and no new issues appeared. Validating remediation comes before reporting that the work is done.",
+    "explanation": "After remediation, you rescan to confirm the fixes actually worked and that nothing new was introduced. Only a clean rescan proves the vulnerabilities are closed, so validating the remediation comes before reporting the work as done or moving on to an audit or a penetration test.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "An audit checks compliance against a standard, not whether specific fixes took effect.",
@@ -546,7 +546,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A user provisioning script creates accounts from a defined template, applying the correct groups and permissions every time. It removes the manual errors management noticed.",
+    "explanation": "A user provisioning script creates every account from a defined template, applying the correct groups, roles and permissions each time. That removes the inconsistent, error-prone manual setup management noticed, and it works the same way for one new hire or a hundred.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Guard rail scripts enforce limits and block unsafe actions, not account creation.",
@@ -989,7 +989,7 @@ export const domain4Questions = [
     "explanation": "Defining and reviewing who does what during an incident happens before any incident, in the preparation phase, along with tools, contacts and procedures. Preparation also covers building the team, contact lists, playbooks and training, so everyone knows their job before an incident starts.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Recovery restores systems after the threat is removed.",
+      "B": "Recovery restores systems after the threat is removed. Roles and responsibilities have to be settled long before that, during preparation.",
       "C": "Lessons learned reviews an incident after it closes. It may lead to role changes, but roles are set up in preparation.",
       "D": "Analysis investigates an incident underway, when roles need to be settled already."
     },
@@ -1115,7 +1115,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Scripting a repetitive, multi-step task such as creating accounts for many users, to save time and remove human error, is orchestration — automation coordinated across systems.",
+    "explanation": "Scripting a repetitive, multi-step task such as creating accounts for many users, so it runs quickly and identically every time, is orchestration: automation coordinated across the systems involved. It saves time and removes the human error that manual account creation introduces.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Off-the-shelf software is a purchased product, not a use case for a script the administrator writes.",
@@ -1459,7 +1459,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Known exploits have known signatures. An intrusion prevention system sits inline, matches traffic against those signatures and blocks it — monitoring and blocking in one control.",
+    "explanation": "Known exploits have known signatures. An intrusion prevention system sits inline, matches traffic against those signatures and blocks the matches before they reach the vulnerable browsers, giving monitoring and blocking in one control.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An ACL filters by addresses and ports; it cannot recognize exploit signatures.",
@@ -1644,7 +1644,7 @@ export const domain4Questions = [
     "explanation": "Single sign-on lets employees use their existing domain credentials to log in to the SaaS application, typically through federation with SAML or OpenID Connect. It reduces the number of credentials they need.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "LEAP is an old, insecure wireless authentication protocol.",
+      "B": "LEAP is an old, insecure wireless authentication protocol. It does nothing to let domain credentials sign in to SaaS applications.",
       "C": "MFA adds more authentication factors; it does not reduce the number of credentials.",
       "D": "PEAP protects EAP authentication for wireless and 802.1X networks, not SaaS logins."
     },
@@ -1727,11 +1727,11 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Unencrypted websites are the ones reached over plain HTTP, so their URLs begin with http://. Blocking that string blocks non-encrypted sites while still allowing https://.",
+    "explanation": "Unencrypted websites are reached over plain HTTP, so their URLs begin with http://. Blocking that string stops non-encrypted sites while still allowing https:// addresses, because the extra 's' means they never contain the string http://.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "'encryption=off' is not a standard part of URLs, so it would match almost nothing.",
-      "C": "www.*.com matches most commercial sites regardless of encryption.",
+      "C": "www.*.com matches most commercial sites regardless of whether they use encryption. It would block large parts of the web without targeting the unencrypted ones.",
       "D": ":443 is the HTTPS port — blocking it would block encrypted sites instead."
     },
     "tip": "Plain HTTP URLs begin with http://. Port 443 = HTTPS (encrypted); port 80 = HTTP.",
@@ -1770,7 +1770,7 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "To stop the malicious host reaching the network, the inbound rule must deny traffic whose source is 10.1.4.9/32 (that single address) to any destination (0.0.0.0/0).",
+    "explanation": "To stop the malicious host reaching the network, the inbound rule must deny traffic whose source is 10.1.4.9/32, that single address, going to any destination (0.0.0.0/0). The other options either swap source and destination or permit the traffic instead of denying it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "This denies traffic going to 10.1.4.9, not traffic coming from it.",
@@ -1913,7 +1913,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Packet captures are raw network data, far too detailed for a board.",
-      "B": "Vulnerability scans list weaknesses, not incidents.",
+      "B": "Vulnerability scans list weaknesses that exist, not incidents that happened. They would not show the board what actually impacted the organization.",
       "C": "Metadata describes data; it is not a way to present incident trends."
     },
     "tip": "Boards and executives get dashboards: high-level metrics and trends, not raw data.",
@@ -2048,7 +2048,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "CHAP is a challenge-response password protocol with no certificate support.",
       "B": "PEAP protects password-based inner authentication inside a TLS tunnel; the user still logs in with a password.",
-      "C": "MS-CHAPv2 is password-based and has known weaknesses."
+      "C": "MS-CHAPv2 is password-based and has known weaknesses. It cannot use the certificate on a smart card."
     },
     "tip": "Smart cards or certificates for network login = EAP-TLS (mutual certificate authentication). PEAP and MS-CHAPv2 are password-based.",
     "references": [],
@@ -2263,7 +2263,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "PowerShell scripts could do it, but would need distributing and running everywhere — slower and less reliable than Group Policy.",
       "C": "PAP is an old, insecure authentication protocol that sends passwords in cleartext.",
-      "D": "EDR profiles govern threat detection, not password policies."
+      "D": "EDR profiles govern threat detection and response on endpoints. Password policy is pushed to domain systems through Group Policy."
     },
     "tip": "Push a setting to every Windows domain machine quickly = Group Policy (a GPO).",
     "references": [],
@@ -2508,7 +2508,7 @@ export const domain4Questions = [
       "A": "Retention keeps data for a required period. The laptop's data needs removing, not keeping.",
       "C": "Destruction would ruin the laptop that is being reissued.",
       "D": "Classification labels data by sensitivity; it does not prepare a device for reuse.",
-      "F": "Enumeration lists resources; it does not handle data."
+      "F": "Enumeration lists resources such as users or shares. It does not remove or document the removal of data."
     },
     "tip": "Reissuing a device: sanitize the old data, then document it (certification). Destruction is for devices leaving service for good.",
     "references": [],
@@ -2766,7 +2766,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "B": "DLP detects sensitive data leaving the organization; it does not collect logs.",
       "C": "Archiving stores data long-term, but configuring devices to send logs to a central location is aggregation.",
-      "D": "SCAP automates configuration and vulnerability assessment."
+      "D": "SCAP automates configuration and vulnerability assessment. It does not ship logs to another location."
     },
     "tip": "Devices sending their logs to a central, off-site collector = log aggregation (syslog to a SIEM).",
     "references": [],
@@ -3153,7 +3153,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "B": "Wireshark captures and analyzes packets; it does not generate them.",
       "C": "PowerShell is a scripting shell, not a packet crafting tool.",
-      "D": "netstat lists a host's connections and listening ports."
+      "D": "netstat lists a host's own connections and listening ports. It cannot craft custom packets to test firewalls."
     },
     "tip": "Craft custom packets to test firewalls = hping. Capture and analyze = Wireshark or tcpdump. Scan ports = nmap.",
     "references": [],
@@ -3195,7 +3195,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encryption protects data but does not detect it leaving — attackers can exfiltrate encrypted data too.",
-      "C": "Default settings are usually weak and detect nothing.",
+      "C": "Default settings are usually weak and detect nothing. Watching outbound traffic is what reveals data leaving.",
       "D": "Closing all ports is impractical and prevents rather than detects; malware can use allowed ports."
     },
     "tip": "Detect data leaving a system (exfiltration) = monitor outbound traffic (egress monitoring, NetFlow anomalies, DLP).",
@@ -3237,7 +3237,7 @@ export const domain4Questions = [
     "explanation": "CVSS gives each vulnerability a severity score from 0 to 10, a consistent basis for deciding what to patch first. The score reflects exploitability and impact, and teams often adjust it for how critical and exposed the affected systems are.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "SOAR automates security responses, not prioritization of patching.",
+      "A": "SOAR automates security response workflows. Prioritizing patches needs a severity score such as CVSS.",
       "C": "A SIEM correlates logs and alerts; it does not score vulnerabilities.",
       "D": "CVE identifies vulnerabilities by ID but does not rank their severity."
     },
@@ -3280,9 +3280,9 @@ export const domain4Questions = [
     "explanation": "chmod changes file permissions, which is what fixes a file whose permissions are wider than the baseline allows. /etc/shadow holds the password hashes and should be readable only by root, for example chmod 600 or 640 depending on the distribution's baseline.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "grep searches text; it cannot change permissions.",
-      "C": "dd copies raw data at the block level.",
-      "D": "passwd changes a user's password, not file permissions."
+      "B": "grep searches text for patterns. It can find content in /etc/shadow but cannot change who may read it.",
+      "C": "dd copies raw data at the block level. It does not change file permissions.",
+      "D": "passwd changes a user's password. File permissions are changed with chmod."
     },
     "tip": "Fix file permissions on Linux = chmod (chown changes the owner). /etc/shadow should be readable by root only.",
     "references": [],
@@ -3545,7 +3545,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "A change management procedure governs how changes are approved and made.",
       "B": "An information security policy states high-level rules and goals, not device-level hardening steps.",
-      "C": "A cybersecurity framework structures an entire security program."
+      "C": "A cybersecurity framework structures an entire security program. A baseline for hardening servers is a secure configuration guide."
     },
     "tip": "Step-by-step hardening settings for new devices = secure configuration guide (baseline).",
     "references": [],
@@ -3629,7 +3629,7 @@ export const domain4Questions = [
     "explanation": "Stakeholders talking through their roles in a hypothetical incident, without touching real systems, is a tabletop exercise. It is cheap and low-risk, and it exposes gaps in plans, contacts and decision-making before a real incident does.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "A penetration test actively attacks systems.",
+      "A": "A penetration test actively attacks systems. Stakeholders talking through roles in a scenario is a tabletop exercise.",
       "B": "Continuity of operations planning is the plan-writing process, not a discussion-based exercise.",
       "D": "A simulation acts out a scenario with realistic activity, beyond a discussion of roles."
     },
@@ -3716,8 +3716,8 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Naming conventions help organize assets, but do not standardize configurations.",
-      "B": "Hashing verifies integrity; it does not standardize configurations.",
-      "C": "Network diagrams document topology, not operating system settings."
+      "B": "Hashing verifies integrity. It does not standardize configurations across systems.",
+      "C": "Network diagrams document topology. They do not define operating system settings."
     },
     "tip": "Standardize systems before imaging them = define a baseline configuration first.",
     "references": [],
@@ -3759,7 +3759,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A SIEM collects and correlates alerts, but analysts still work each one by hand.",
-      "C": "MDM manages mobile devices.",
+      "C": "MDM manages mobile devices. It does not automate SOC analysts' work.",
       "D": "DLP prevents data leaving; it does not automate SOC work."
     },
     "tip": "Reduce SOC manual work = SOAR (playbooks and automated response). A SIEM detects; SOAR acts.",
@@ -3856,7 +3856,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "A unified password standard still leaves separate logins per application.",
       "C": "A wildcard certificate secures TLS for subdomains; it has nothing to do with user logins.",
-      "D": "Geofencing restricts access by location, not login management."
+      "D": "Geofencing restricts access by location. It does not consolidate separate logins into one identity."
     },
     "tip": "Separate logins and inconsistent password rules across SaaS apps → integrate them all with the IdP (SSO through federation).",
     "references": [],
@@ -3940,9 +3940,9 @@ export const domain4Questions = [
     "explanation": "Incident response ends with lessons learned: reviewing what happened and improving the process for next time. The review covers what worked, what did not, and which controls, plans or training should change.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Eradication removes the threat, before recovery.",
-      "C": "Containment limits the damage early in the response.",
-      "D": "Recovery restores systems, before the lessons-learned review."
+      "B": "Eradication removes the threat. It comes before recovery and the final lessons-learned review.",
+      "C": "Containment limits the damage early in the response, well before the end.",
+      "D": "Recovery restores systems to service. The lessons-learned review follows it and closes the process."
     },
     "tip": "The last incident response phase = lessons learned (the post-incident review).",
     "references": [],
@@ -3983,7 +3983,7 @@ export const domain4Questions = [
     "explanation": "SQL injection succeeds when user input goes straight into database queries. Input sanitization (with parameterized queries) removes or neutralizes malicious input so it cannot alter the query. Parameterized queries are the strongest fix, because the database treats input strictly as data, never as code.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Secure cookies protect session tokens, not database queries.",
+      "A": "Secure cookies protect session tokens in the browser. They do not stop malicious input reaching database queries.",
       "C": "Code signing proves code's origin; it does not stop injection.",
       "D": "A blocklist of bad input is easy to bypass and is weaker than proper sanitization."
     },
@@ -4070,7 +4070,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Continuity of operations is a planning discipline, not a meeting format.",
-      "B": "Capacity planning estimates required resources.",
+      "B": "Capacity planning estimates the resources an operation will need. It does not test an incident response plan.",
       "D": "Parallel processing runs recovery systems alongside production to test them, not a discussion."
     },
     "tip": "Executives in a room discussing the IRP = tabletop exercise.",
@@ -4157,7 +4157,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "B": "Frameworks give high-level structure to a security program, not step-by-step response actions.",
       "C": "Baselines define normal configuration or behavior, not how to respond.",
-      "D": "Benchmarks are secure configuration standards, not response procedures."
+      "D": "Benchmarks are secure configuration standards, not response procedures. Playbooks give step-by-step incident responses."
     },
     "tip": "Step-by-step response procedures for specific incident types = playbooks (runbooks).",
     "references": [],
@@ -4199,7 +4199,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "SNMP traps are status alerts from network devices, not content inspection.",
-      "C": "SCAP automates configuration and vulnerability checks.",
+      "C": "SCAP automates configuration and vulnerability checks. It does not watch outbound email for sensitive files.",
       "D": "An IPS blocks attacks coming in, not sensitive files going out."
     },
     "tip": "Fingerprinted files + an alert when they are emailed out = DLP.",
@@ -4414,7 +4414,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "True positives are real threats and get acted on.",
-      "B": "True negatives generate no alert at all.",
+      "B": "True negatives generate no alert at all, so there is nothing to ignore. False positives are the noise people learn to tune out.",
       "D": "False negatives also generate no alert — the threat is simply missed."
     },
     "tip": "Alerts that keep firing on harmless activity (false positives) cause alert fatigue: analysts start ignoring them.",
@@ -6051,7 +6051,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "A WAF helps prevent future attempts, but first establish whether this one succeeded.",
       "B": "Disabling the script stops further attempts, but does not reveal whether accounts were already created.",
-      "C": "The logs show injection, not brute-force attempts."
+      "C": "The logs show SQL injection that inserted a user, not brute-force attempts. Checking the users table confirms whether the attack succeeded."
     },
     "tip": "SQL injection with an INSERT in the logs → first confirm the impact: check the users table for the new account.",
     "references": [],
@@ -6866,7 +6866,7 @@ export const domain4Questions = [
     "explanation": "Checking OS version, patch level and installed applications against the required standard at every login enforces the organization's security baseline. A machine that has drifted from the baseline, for example by missing patches or running unapproved software, is caught the next time its user signs in.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Resource scaling adjusts capacity to demand.",
+      "A": "Resource scaling adjusts capacity to demand. Checking OS version, patches and apps at login enforces a baseline.",
       "B": "'Policy enumeration' is listing policies, not checking systems against them.",
       "D": "Guardrails prevent unsafe actions, such as blocking insecure deployments, rather than validating each login."
     },
@@ -13426,7 +13426,7 @@ export const domain4Questions = [
     "explanation": "The incident has already been identified, so detection is done. The next step among these choices is containment: stop it getting worse by isolating affected hosts, cutting connections and disabling compromised accounts before spending time removing the cause or restoring service. In the full SY0-701 sequence, analysis sits between detection and containment, but it is not offered here.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Detection is the step that has just happened.",
+      "B": "Detection is the step that has just happened: the analyst has already identified the incident.",
       "C": "Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
       "D": "Recovery restores systems to normal service and comes last."
     },
@@ -14737,8 +14737,8 @@ export const domain4Questions = [
       "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
       "D": "Port 443 is HTTPS, encrypted web traffic. It is the secure protocol the policy wants to keep.",
       "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
-      "F": "Port 993 is IMAP over TLS.",
-      "G": "Port 995 is POP3 over TLS."
+      "F": "Port 993 is IMAP over TLS, the encrypted version of IMAP. It is a secure protocol to keep.",
+      "G": "Port 995 is POP3 over TLS, the encrypted version of POP3. It is a secure protocol to keep."
     },
     "tip": "Insecure plaintext ports: 21 FTP, 23 Telnet, 25 SMTP, 80 HTTP, 110 POP3, 143 IMAP.",
     "references": [],
@@ -15522,7 +15522,7 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "B": "Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
       "C": "Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure program.",
-      "D": "Third-party information sharing exchanges threat intelligence between organizations."
+      "D": "Third-party information sharing exchanges threat intelligence between organizations. It does not invite outsiders to report flaws."
     },
     "tip": "Inviting the public to report vulnerabilities (usually for rewards) = bug bounty.",
     "references": [],

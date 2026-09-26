@@ -1129,7 +1129,7 @@
  },
  "q0434": {
   "objective": "5.3",
-  "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA.",
+  "explanation": "A non-disclosure agreement legally binds the parties not to reveal confidential information to anyone outside the agreement. Limiting external discussion is the entire purpose of an NDA; the other agreements cover partnerships, service levels and general contract terms.",
   "incorrect": {
    "A": "A business partners agreement sets out how two organizations will work together commercially — responsibilities, profit sharing, governance. Confidentiality may be a clause, but it is not what the agreement is for.",
    "C": "A service-level agreement commits a provider to measurable performance levels. It governs service quality, not disclosure.",
@@ -2542,7 +2542,7 @@
  },
  "q0603": {
   "objective": "2.1",
-  "explanation": "The attacker is threatening to release damaging material unless money is paid. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation.",
+  "explanation": "The attacker is threatening to release damaging material unless money is paid by a deadline. Coercion through threatened exposure is blackmail, which CompTIA lists as a distinct attacker motivation; the money is the demand, but the threat is what defines it.",
   "incorrect": {
    "A": "Organized crime is a type of threat actor, not an intent. The question asks what the actor wants, not who they are.",
    "B": "Philosophical beliefs motivate hacktivists making a political point. Nothing ideological is being advanced here.",
@@ -3507,7 +3507,7 @@
   "incorrect": {
    "A": "A BPA sets out how two businesses will operate a partnership, covering responsibilities and profit sharing.",
    "B": "An MOA records a formal agreement of cooperation, usually without enforceable performance metrics.",
-   "C": "An NDA restricts disclosure of confidential information."
+   "C": "An NDA restricts disclosure of confidential information. It contains no response times or performance metrics."
   }
  },
  "q0726": {
@@ -3614,7 +3614,7 @@
   "explanation": "Exposure factor is a percentage of asset value lost when a threat is realized, and it feeds directly into SLE and ALE. Working in numeric values like that is quantitative risk analysis.",
   "incorrect": {
    "A": "Heuristic analysis uses rules of thumb and behavioral patterns. It is common in malware detection, not risk measurement.",
-   "C": "User-driven is not a recognized risk analysis method.",
+   "C": "User-driven is not a recognized risk analysis method. Exposure factor is a quantitative measure.",
    "D": "Trend-based analysis looks at how something changes over time. It observes direction rather than measuring loss magnitude."
   }
  },
@@ -3692,7 +3692,7 @@
  },
  "q0747": {
   "objective": "2.3",
-  "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys is precisely what that class describes.",
+  "explanation": "Cryptographic vulnerabilities are the category covering weak or obsolete algorithms, insufficient key lengths and poor key management. Outdated algorithms and keys are exactly what that class describes; an algorithm such as MD5 or DES, or a key too short for modern computing power, can be broken.",
   "incorrect": {
    "A": "A hash collision is one specific consequence of a weak hashing algorithm. It is an example within the category rather than the category itself.",
    "C": "A buffer overflow is a memory handling defect. It has nothing to do with algorithm choice.",
@@ -3739,7 +3739,7 @@
   "objective": "2.1",
   "explanation": "A hacktivist attacks to advance a cause, so the payoff is the statement rather than money or intelligence. CompTIA lists philosophical or political beliefs as the defining motivation for this actor.",
   "incorrect": {
-   "A": "Financial gain is the motivation of organized crime.",
+   "A": "Financial gain is the motivation of organized crime. Hacktivists act for a cause, not for money.",
    "B": "Espionage is the motivation of nation-states and competitors seeking information.",
    "D": "Revenge drives disgruntled insiders acting against a specific employer, not a broader cause."
   }
@@ -3791,7 +3791,7 @@
  },
  "q0758": {
   "objective": "5.2",
-  "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is precisely what SLE expresses.",
+  "explanation": "Single loss expectancy is the monetary loss from one occurrence, calculated as asset value multiplied by exposure factor. Impact per incident is exactly what SLE expresses; multiply it by the ARO to get the yearly figure, the ALE.",
   "incorrect": {
    "B": "ALE is the annualized figure — SLE multiplied by how often the event is expected each year. It aggregates rather than describing one incident.",
    "C": "ARO is the annualized rate of occurrence, a frequency. It says how often, not how much.",
@@ -3845,7 +3845,7 @@
  },
  "q0765": {
   "objective": "2.1",
-  "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT.",
+  "explanation": "Software brought in without approval has bypassed security review, licensing and patch management entirely. Unsanctioned technology adopted by employees for their own convenience is shadow IT, and the risk is that nobody is assessing, patching or monitoring it.",
   "incorrect": {
    "A": "An unskilled attacker is an external actor using commodity tools. The employee is neither external nor attacking.",
    "B": "A hacktivist attacks to advance a cause. Nothing ideological is happening.",
@@ -4040,7 +4040,7 @@
   "incorrect": {
    "A": "A security guard is a person acting on the physical environment, making it a physical control.",
    "B": "A policy is a documented management instrument, making it managerial.",
-   "C": "A fence is a physical barrier."
+   "C": "A fence is a physical barrier. Technical controls are enforced by technology, like a firewall."
   }
  },
  "q0788": {
@@ -4193,7 +4193,7 @@
   "explanation": "A host-based intrusion prevention system does two things at once. It blocks malicious behavior on the endpoint, which is preventive, and it records and alerts on what it saw, which is detective. Both functions are inherent to the product.",
   "incorrect": {
    "A": "Directive controls instruct people how to behave. Software issues no instructions to staff.",
-   "C": "Physical controls act on the physical environment.",
+   "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
    "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
    "E": "Compensating controls substitute for a primary control that cannot be implemented. HIPS is deployed here as a control in its own right."
   }
@@ -4313,7 +4313,7 @@
   "explanation": "Smishing is phishing carried out over SMS. An unsolicited, threatening text from an unknown number demanding money is a text-message-based social engineering attempt, which is what the term names.",
   "incorrect": {
    "A": "Impersonation means assuming a specific trusted identity. The sender is unknown, not posing as anyone in particular.",
-   "B": "Typosquatting registers look-alike domains. No domain is involved.",
+   "B": "Typosquatting registers look-alike domains to catch mistyped addresses. No domain is involved in a threatening text.",
    "D": "Scareware is fake software warnings that frighten a user into buying a bogus product. This is a direct message, not a malicious application."
   }
  },
@@ -4341,7 +4341,7 @@
   "explanation": "A QR code is a two-dimensional matrix barcode, and scanning one hands the phone a URL the user cannot read beforehand. Phishing delivered through malicious QR codes is called quishing.",
   "incorrect": {
    "B": "Smishing is phishing over SMS. No text message is involved in scanning a printed code.",
-   "C": "Vishing is phishing by voice call.",
+   "C": "Vishing is phishing by voice call. Scanning a malicious QR code is quishing.",
    "D": "Phishing is the general category, typically by email. The question asks about the specific vector, which the QR code makes quishing."
   }
  },
@@ -4378,7 +4378,7 @@
   "explanation": "An undervoltage event is a brownout — supply voltage sagging below the required level. A UPS rides through it on battery and regulates the output, keeping equipment on stable power until the mains recovers or a generator takes over.",
   "incorrect": {
    "A": "Resource management allocates compute capacity. It has nothing to do with electrical supply.",
-   "B": "A load balancer distributes network traffic across servers.",
+   "B": "A load balancer distributes network traffic across servers. It has no effect on electrical supply.",
    "C": "A surge protector clamps overvoltage spikes. That is the opposite problem — it offers no help when voltage drops."
   }
  },
@@ -4402,7 +4402,7 @@
  },
  "q0829": {
   "objective": "2.3",
-  "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking.",
+  "explanation": "Booting into unauthorized software with administrative credentials means the manufacturer's restrictions have been stripped away. Removing those controls to gain privileged access over the device is jailbreaking (rooting on Android), and a jailbroken device has lost the protections the OS was built with.",
   "incorrect": {
    "A": "A misconfiguration is a setting applied wrongly. No ordinary setting replaces the operating system with a gaming platform.",
    "B": "Side loading installs an app from outside the official store. The device would still boot normally into its own OS.",
@@ -4578,7 +4578,7 @@
   "incorrect": {
    "A": "Credential replay reuses captured authentication material. The account here is the guest's own, just with more power.",
    "C": "Directory traversal escapes an intended directory to read arbitrary files. Access was granted through permissions, not a path trick.",
-   "D": "Brute force guesses credentials repeatedly. No guessing occurred."
+   "D": "Brute force guesses credentials repeatedly. No guessing occurred; the guest account was given administrator rights."
   }
  },
  "q0850": {
@@ -4731,7 +4731,7 @@
   "explanation": "HIPS performs two functions simultaneously. It blocks malicious behavior on the host, which is preventive, and it logs and alerts on what it observed, which is detective. Both are inherent to how the product works.",
   "incorrect": {
    "A": "Directive controls instruct people how to behave. Software gives no instructions to staff.",
-   "C": "Physical controls act on the physical environment.",
+   "C": "Physical controls act on the physical environment, such as locks and fences. HIPS is software on a host.",
    "D": "Corrective controls restore normal operation after an incident. HIPS blocks rather than repairs.",
    "E": "Compensating controls substitute for a primary control that cannot be applied. HIPS here is a primary control in its own right."
   }
@@ -5040,7 +5040,7 @@
   "explanation": "Smishing is phishing delivered over SMS. A text message carrying a link to a counterfeit bank login is that attack precisely — the channel is what distinguishes it from other phishing variants.",
   "incorrect": {
    "A": "Impersonation is posing as a trusted party, which the fake bank site does. But the question asks for the attack type, and the SMS delivery makes it smishing.",
-   "B": "Phishing is the general category, conventionally by email.",
+   "B": "Phishing is the general category, conventionally by email. A malicious text message is specifically smishing.",
    "C": "Vishing is phishing by voice call. No call was made."
   }
  },
@@ -5281,7 +5281,7 @@
  },
  "q0929": {
   "objective": "2.3",
-  "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing its review, signing and scanning. The unofficial store is the defining detail.",
+  "explanation": "Side loading is installing an application from somewhere other than the platform's official store, bypassing the store's review, signing checks and malware scanning. The unofficial store is the defining detail, and it is why side-loaded apps are a common way malware reaches phones.",
   "incorrect": {
    "B": "Jailbreaking removes the manufacturer's restrictions on the device itself. It often enables side loading but is a separate, deeper change.",
    "C": "Privilege escalation gains rights beyond those assigned. Installing an app does not by itself elevate anything.",
@@ -5462,7 +5462,7 @@
  },
  "q0949": {
   "objective": "1.2",
-  "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for.",
+  "explanation": "A bollard is a reinforced post engineered to absorb a vehicle's kinetic energy and stop it dead. Preventing vehicle impact is the specific job it exists for; guards, fencing and lighting deter or observe but cannot physically stop a car.",
   "incorrect": {
    "A": "A security guard can observe and challenge, but a person cannot physically stop a vehicle.",
    "B": "Fencing marks a boundary and deters people on foot. Standard fencing will not withstand a vehicle.",
@@ -5493,7 +5493,7 @@
   "incorrect": {
    "A": "A hot site recovers fastest, but a fully equipped, continuously synchronized duplicate is the most expensive option. It fails the 'low cost' requirement.",
    "B": "A cold site is the cheapest option, but it has only space, power and cooling. Equipment has to be brought in and data restored, which takes days or weeks, so it fails the 'quick' requirement.",
-   "C": "Manual is not a recognized recovery site type."
+   "C": "Manual is not a recognized recovery site type. The site options are hot, warm and cold."
   }
  },
  "q0953": {
@@ -5516,7 +5516,7 @@
  },
  "q0955": {
   "objective": "2.3",
-  "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities.",
+  "explanation": "The vulnerabilities appeared immediately after a group policy deployment, so the policy itself applied insecure settings. Weaknesses introduced by settings applied incorrectly are misconfiguration vulnerabilities, and the fix is to correct and redeploy the policy.",
   "incorrect": {
    "B": "A zero-day is an unknown flaw with no patch. Group policy changes settings; it does not introduce unknown software defects.",
    "C": "A malicious update delivers hostile code through an update channel. A legitimate internal policy rollout is not that.",
@@ -5561,7 +5561,7 @@
  },
  "q0961": {
   "objective": "1.2",
-  "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad.",
+  "explanation": "Encryption makes data unreadable without the key, so only authorized parties can interpret it. Preventing unauthorized disclosure is the definition of confidentiality in the CIA triad; integrity and non-repudiation come from hashing and signatures instead.",
   "incorrect": {
    "B": "Non-repudiation prevents someone denying an action they performed, achieved through digital signatures and logging.",
    "C": "Availability means systems and data are accessible when needed. Encryption can even work against it if keys are lost.",
@@ -5815,7 +5815,7 @@
   "objective": "4.8",
   "explanation": "The incident has already been identified, so detection is done. The next step among these choices is containment: stop it getting worse by isolating affected hosts, cutting connections and disabling compromised accounts before spending time removing the cause or restoring service. In the full SY0-701 sequence, analysis sits between detection and containment, but it is not offered here.",
   "incorrect": {
-   "B": "Detection is the step that has just happened.",
+   "B": "Detection is the step that has just happened: the analyst has already identified the incident.",
    "C": "Eradication removes the threat entirely. Doing that before containment lets it keep spreading while you work.",
    "D": "Recovery restores systems to normal service and comes last."
   }
@@ -5840,7 +5840,7 @@
  },
  "q0992": {
   "objective": "1.1",
-  "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control.",
+  "explanation": "An alert tells you something has happened. Recognizing and reporting activity after the fact, so it can be investigated, is the definition of a detective control; a SIEM watches and correlates but does not block anything by itself.",
   "incorrect": {
    "A": "Preventive controls stop an event occurring. An alert blocks nothing.",
    "B": "Corrective controls restore normal operation after an incident. The alert precedes any correction.",
@@ -6020,7 +6020,7 @@
  },
  "q1012": {
   "objective": "2.2",
-  "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector.",
+  "explanation": "Registering a domain that closely resembles a legitimate one, relying on users mistyping or not reading carefully, is typosquatting. The lookalike domain itself is the vector, and it is often combined with phishing links that point to it.",
   "incorrect": {
    "A": "A watering hole attack compromises a genuine site the targets already visit rather than creating a new one.",
    "B": "Brand impersonation mimics a company's name and styling. It often accompanies typosquatting, but the question is about the domain registration.",
@@ -6047,7 +6047,7 @@
  },
  "q1015": {
   "objective": "2.1",
-  "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information.",
+  "explanation": "The employee was paid to steal the files. When money is the inducement, financial gain is the motivation, regardless of who ultimately benefits from the information; the competitor's motive may be espionage, but the employee's is money.",
   "incorrect": {
    "A": "Revenge would mean acting out of grievance against the employer. Payment is what prompted this.",
    "C": "Blackmail would mean the employee was coerced by a threat. They were compensated instead.",
@@ -6069,7 +6069,7 @@
   "incorrect": {
    "B": "A warm site has hardware and connectivity but data must be restored at failover, so it is not a live mirror.",
    "C": "A cold site has space and power only, with no systems in place.",
-   "D": "Frozen is not a recognized recovery site type."
+   "D": "Frozen is not a recognized recovery site type. The site options are hot, warm and cold."
   }
  },
  "q1019": {
@@ -6314,7 +6314,7 @@
   "incorrect": {
    "B": "Quantitative names the alternative analysis approach that works in currency. It is a method, not a metric.",
    "C": "SLE is the monetary loss from one incident, used in quantitative analysis.",
-   "E": "ALE is the annualized monetary loss, again quantitative.",
+   "E": "ALE is the annualized monetary loss, a quantitative figure. A risk matrix uses likelihood and impact.",
    "F": "ARO is how often a loss is expected per year — a frequency feeding ALE rather than a matrix axis."
   }
  },
@@ -6331,7 +6331,7 @@
   "objective": "3.2",
   "explanation": "Allowing downloads while blocking uploads to the same site means distinguishing actions within one application over one connection. Only a next-generation firewall has the application awareness to tell those apart and apply different rules.",
   "incorrect": {
-   "A": "An IDS detects and alerts. It blocks nothing.",
+   "A": "An IDS detects and alerts. It blocks nothing, so it cannot stop uploads.",
    "B": "An IPS blocks traffic matching attack signatures. Legitimate file uploads match no attack pattern.",
    "C": "A WAF protects a web application you host from inbound attacks. Here the site belongs to someone else and the traffic is outbound."
   }
@@ -6365,7 +6365,7 @@
  },
  "q1052": {
   "objective": "5.2",
-  "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk rather than accepting, avoiding or transferring it is mitigation.",
+  "explanation": "Applying a compensating control reduces the likelihood or impact of the vulnerability without removing it. Reducing risk, rather than accepting it as is, avoiding the activity or transferring the loss to someone else, is mitigation.",
   "incorrect": {
    "A": "Acceptance means acknowledging the risk and doing nothing. A compensating control is an active step.",
    "C": "Avoidance means ceasing the activity entirely. The device stays in service.",
@@ -6790,8 +6790,8 @@
    "A": "Port 22 is SSH, the encrypted replacement for Telnet. Blocking it would remove the secure option.",
    "D": "Port 443 is HTTPS, encrypted web traffic. It is the secure protocol the policy wants to keep.",
    "E": "Port 465 is SMTP over TLS, the secure mail submission alternative to 25.",
-   "F": "Port 993 is IMAP over TLS.",
-   "G": "Port 995 is POP3 over TLS."
+   "F": "Port 993 is IMAP over TLS, the encrypted version of IMAP. It is a secure protocol to keep.",
+   "G": "Port 995 is POP3 over TLS, the encrypted version of POP3. It is a secure protocol to keep."
   }
  },
  "q1100": {
@@ -7299,7 +7299,7 @@
   "incorrect": {
    "B": "Red teaming is a contracted engagement with a specific team, scope and rules of engagement.",
    "C": "Open-source intelligence is gathering information from public sources. It is a research technique, not a disclosure program.",
-   "D": "Third-party information sharing exchanges threat intelligence between organizations."
+   "D": "Third-party information sharing exchanges threat intelligence between organizations. It does not invite outsiders to report flaws."
   }
  },
  "q1157": {
@@ -7617,7 +7617,7 @@
    "B": "Infrared sensors detect movement and alert. Detection does not stop a vehicle.",
    "D": "Lighting improves visibility and deters. It presents no barrier.",
    "E": "Access badges authenticate people at doors. A vehicle does not present a badge.",
-   "F": "Cameras record what happened. Detective rather than preventive."
+   "F": "Cameras record what happened. They are detective and do not physically stop a vehicle."
   }
  },
  "q1194": {
@@ -7658,7 +7658,7 @@
  },
  "q1198": {
   "objective": "1.2",
-  "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad.",
+  "explanation": "Confidentiality is the principle that information is accessible only to those authorized to see it. Preventing unauthorized disclosure is its definition within the CIA triad, and encryption and access controls are the main ways to achieve it.",
   "incorrect": {
    "A": "Integrity means data has not been altered without authorization. It concerns modification, not disclosure.",
    "B": "Availability means systems and data are accessible when needed. It concerns access, not secrecy.",
@@ -8228,7 +8228,7 @@
  },
  "q1261": {
   "objective": "1.2",
-  "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad.",
+  "explanation": "Confidentiality is the principle that information is available only to those authorized to see it. Restricting access to authorized users is its definition within the CIA triad, achieved through access controls and encryption.",
   "incorrect": {
    "A": "Integrity means data has not been altered without authorization. It concerns modification, not who can see the data.",
    "C": "Non-repudiation prevents someone denying an action they performed. It concerns proof of actions, not access.",
