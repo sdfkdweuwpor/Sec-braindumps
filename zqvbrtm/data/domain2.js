@@ -30,14 +30,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Only the two people who need the administrator console keep access to it; everyone else loses it. Restricting access to the minimum required for each role is least privilege.",
+    "explanation": "Only the two people who need the administrator console keep access to it; everyone else loses it. Restricting access to the minimum required for each role is least privilege. The rest of the help desk can still do their normal work in the software, but a mistake or a compromised help desk account can no longer reach the admin functions.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hardening reduces a system's attack surface by removing services and tightening settings, not by limiting which users have access.",
       "B": "Employee monitoring watches what users do. Nothing here observes activity.",
       "C": "Configuration enforcement keeps systems at an approved baseline. It is not about assigning access by role."
     },
-    "tip": null,
+    "tip": "Taking away access people do not need for their job = least privilege. Hardening changes a system's configuration, not who can use it.",
     "references": [],
     "source": "bank.pdf#p5",
     "needsReview": false,
@@ -80,7 +80,7 @@ export const domain2Questions = [
       "C": "SQL injection is a web application and database flaw.",
       "D": "Cross-site scripting is a web application flaw that runs in the browser."
     },
-    "tip": null,
+    "tip": "Hardware-specific vulnerabilities live in firmware (BIOS/UEFI, device firmware) and end-of-life hardware. Buffer overflows, SQLi and XSS are software flaws.",
     "references": [],
     "source": "bank.pdf#p10",
     "needsReview": false,
@@ -116,14 +116,14 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An application allow list permits only approved programs to run and blocks everything else by default, so anything unknown is stopped automatically.",
+    "explanation": "An application allow list permits only approved programs to run and blocks everything else by default, so anything unknown is stopped automatically. That default-deny approach is stronger than a deny list or antivirus signatures, which can only block programs already known to be bad.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An access control list controls access to resources such as files or network traffic, not which programs execute.",
       "C": "A host-based firewall filters network connections. A program can still run locally.",
       "D": "DLP stops sensitive data leaving. It does not prevent programs from executing."
     },
-    "tip": null,
+    "tip": "Block anything unknown from running = application allow list. A deny list only blocks what is already known to be bad.",
     "references": [],
     "source": "bank.pdf#p12",
     "needsReview": false,
@@ -166,7 +166,7 @@ export const domain2Questions = [
       "B": "A phishing campaign tricks users through messages. Nothing here involves deception.",
       "C": "An external audit is a formal review by an outside party, not data theft."
     },
-    "tip": null,
+    "tip": "A legitimate user + after hours + copying lots of data to a personal device = insider threat indicators.",
     "references": [],
     "source": "bank.pdf#p14",
     "needsReview": false,
@@ -209,7 +209,7 @@ export const domain2Questions = [
       "C": "Transferring risk moves the financial impact to someone else, such as an insurer.",
       "D": "SNMP traps are alerts sent by network devices. They do not restrict connections."
     },
-    "tip": null,
+    "tip": "When the normal fix (patching or upgrading) is not possible, the extra safeguard you add instead is a compensating control.",
     "references": [],
     "source": "bank.pdf#p16",
     "needsReview": false,
@@ -231,7 +231,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "A keylogger is installed on jsmith's workstation"
+        "text": "A keylogger is installed on jsmith's workstation."
       },
       {
         "key": "C",
@@ -252,7 +252,7 @@ export const domain2Questions = [
       "B": "A keylogger may be how the password was stolen, but the activity in the log is someone repeatedly guessing the MFA code.",
       "D": "Ransomware encrypts files. It does not produce a run of failed MFA prompts on one account."
     },
-    "tip": null,
+    "tip": "Password accepted but MFA failing again and again = the password is already compromised and someone is guessing or spamming the second factor.",
     "references": [],
     "source": "bank.pdf#p19",
     "needsReview": false,
@@ -295,7 +295,7 @@ export const domain2Questions = [
       "B": "A buffer overflow is an application coding flaw, not a BYOD policy concern.",
       "C": "VM escape is a virtualization vulnerability, unrelated to employee devices."
     },
-    "tip": null,
+    "tip": "BYOD risks: jailbroken or rooted devices, side loading, and personal and corporate data mixed on one device. VM escape and buffer overflows belong elsewhere.",
     "references": [],
     "source": "bank.pdf#p20",
     "needsReview": false,
@@ -338,7 +338,7 @@ export const domain2Questions = [
       "B": "SQL injection manipulates database queries through input, not CPU registers.",
       "D": "A race condition exploits the timing between operations, not memory overwrites."
     },
-    "tip": null,
+    "tip": "Overwriting memory, a return address or a register = buffer overflow. Exploiting the gap between a check and a use = race condition.",
     "references": [],
     "source": "bank.pdf#p31",
     "needsReview": false,
@@ -381,7 +381,7 @@ export const domain2Questions = [
       "C": "Hardening helps, but legacy systems often cannot be secured enough because they lack current patches and settings.",
       "D": "Decommissioning removes a critical application the business still needs."
     },
-    "tip": null,
+    "tip": "A legacy system that must keep running → segmentation (restrict who can reach it). Isolation cuts it off completely; decommissioning removes it.",
     "references": [],
     "source": "bank.pdf#p32",
     "needsReview": false,
@@ -417,14 +417,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The logs show that a legitimate domain account last accessed the files before they were encrypted. Harm caused through valid internal access points to an insider threat.",
+    "explanation": "The logs show that a legitimate domain account last accessed the files before they were encrypted. Harm caused through valid internal access points to an insider threat, whether the user acted deliberately or carelessly: the damage came through an authorized account on the inside, not an outside intrusion.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Social engineering manipulates people. Nothing here shows deception.",
       "C": "A watering-hole attack compromises a website the victims visit. The logs show a domain user acting on the server.",
       "D": "The account was an authorized domain user, not an outside attacker without access."
     },
-    "tip": null,
+    "tip": "Damage done through a valid internal account points to an insider threat, whether the user acted on purpose or carelessly.",
     "references": [],
     "source": "bank.pdf#p34",
     "needsReview": false,
@@ -460,14 +460,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Files renamed with a new extension and a message on every machine are the signature of ransomware. .ryk is the extension used by the Ryuk ransomware family.",
+    "explanation": "Files renamed with a new extension and a message on every machine are the signature of ransomware. .ryk is the extension used by the Ryuk ransomware family. Ryuk usually hits a whole network at once after attackers gain domain-level access, which is why every workstation and server shows the ransom message.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A virus spreads by infecting other files, but does not typically encrypt them and display ransom notes.",
       "B": "A Trojan disguises itself as legitimate software; it does not by itself encrypt files across the network.",
       "C": "Spyware hides and collects information. It does not display messages or rename files."
     },
-    "tip": null,
+    "tip": "Files renamed with a new extension plus a message on every screen = ransomware (.ryk is Ryuk).",
     "references": [],
     "source": "bank.pdf#p35",
     "needsReview": false,
@@ -510,7 +510,7 @@ export const domain2Questions = [
       "B": "Disinformation spreads false information; it does not deliver malware.",
       "D": "Smishing is phishing through SMS text messages."
     },
-    "tip": null,
+    "tip": "The attacker infects a site the victims already trust and visit (an industry blog or forum) = watering-hole attack.",
     "references": [],
     "source": "bank.pdf#p40",
     "needsReview": false,
@@ -546,14 +546,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Modifying a mobile device's operating system to remove its restrictions is jailbreaking (rooting on Android). Banning it in the AUP addresses that vulnerability.",
+    "explanation": "Modifying a mobile device's operating system to remove its restrictions is jailbreaking (rooting on Android). Banning it in the AUP addresses that vulnerability. A jailbroken device can run unsigned apps and bypass the platform's security model, including the controls MDM relies on.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Cross-site scripting is a web application flaw, not something done to a phone's OS.",
       "B": "A buffer overflow is a coding flaw in applications.",
       "D": "Side loading installs apps from outside the official store; it does not require modifying the OS."
     },
-    "tip": null,
+    "tip": "Modifying a phone's OS to remove its restrictions = jailbreaking (iOS) or rooting (Android). Installing apps from outside the store = side loading.",
     "references": [],
     "source": "bank.pdf#p42",
     "needsReview": false,
@@ -596,7 +596,7 @@ export const domain2Questions = [
       "B": "Hacktivists attack for political or social causes, not ransom revenue.",
       "C": "Nation-states pursue espionage and geopolitical aims. Some use ransomware, but RaaS as a business is organized crime."
     },
-    "tip": null,
+    "tip": "Ransomware-as-a-service, extortion and profit = organized crime. Politics = hacktivist; espionage = nation-state.",
     "references": [],
     "source": "bank.pdf#p43",
     "needsReview": false,
@@ -639,7 +639,7 @@ export const domain2Questions = [
       "B": "Patching is ideal, but legacy IoT devices frequently have no patch available, and it is not the quick option here.",
       "D": "Replacing devices is effective but slow and costly -- not quick mitigation."
     },
-    "tip": null,
+    "tip": "A legacy or IoT device with no quick patch → segment it. Segmentation is the fast mitigation; replacement is the slow one.",
     "references": [],
     "source": "bank.pdf#p47",
     "needsReview": false,
@@ -682,7 +682,7 @@ export const domain2Questions = [
       "C": "VM escape breaks out of a virtual machine into the host.",
       "D": "Memory injection puts code into a running process's memory, unrelated to databases."
     },
-    "tip": null,
+    "tip": "Injection into database queries through user input = SQLi. Defend with parameterized queries (prepared statements) and input validation.",
     "references": [],
     "source": "bank.pdf#p49",
     "needsReview": false,
@@ -725,7 +725,7 @@ export const domain2Questions = [
       "B": "A non-segmented network may increase exposure, but the question gives no information about segmentation.",
       "C": "Relying on the provider is a supply-chain consideration, but it is the software reachable through the opened ports that creates the new risk."
     },
-    "tip": null,
+    "tip": "Opening firewall ports exposes whatever listens behind them: the new risk is that software's vulnerabilities becoming reachable.",
     "references": [],
     "source": "bank.pdf#p50",
     "needsReview": false,
@@ -768,7 +768,7 @@ export const domain2Questions = [
       "B": "Unsecured Bluetooth is a short-range wireless path and a genuine concern, but it is far less common than USB media in these environments.",
       "C": "An unpatched OS is a vulnerability that could be exploited once an attacker has a path. It is not itself a route out."
     },
-    "tip": null,
+    "tip": "Air-gapped networks leak through removable media such as USB drives. Stuxnet crossed an air gap exactly this way.",
     "references": [],
     "source": "bank.pdf#p52",
     "needsReview": false,
@@ -804,14 +804,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An allow list lets only approved applications run, so malware an employee accidentally downloads or installs simply will not execute.",
+    "explanation": "An allow list lets only approved applications run, so malware an employee accidentally downloads or installs simply will not execute. Because the control decides what may run instead of trying to recognize what is malicious, it also stops new and unknown malware that antivirus signatures would miss.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A host-based firewall filters network connections, but locally installed malware can still run.",
       "B": "Isolating systems limits spread, but does not stop a user installing malware on the system in the first place.",
       "C": "Least privilege limits what malware can do, but many programs install and run with ordinary user rights."
     },
-    "tip": null,
+    "tip": "Stop users running or installing anything unapproved = application allow list. Least privilege limits the damage but does not stop execution.",
     "references": [],
     "source": "bank.pdf#p52",
     "needsReview": false,
@@ -854,7 +854,7 @@ export const domain2Questions = [
       "B": "A cryptographic downgrade weakens encryption; it does not produce inbound floods.",
       "C": "On-path attacks intercept traffic between two parties. This is a volume attack against the server."
     },
-    "tip": null,
+    "tip": "A flood of responses to queries the server never sent = reflected (amplified) DoS using spoofed source addresses.",
     "references": [],
     "source": "bank.pdf#p53",
     "needsReview": false,
@@ -897,7 +897,7 @@ export const domain2Questions = [
       "C": "SAML is a federation and single sign-on standard; it does not define an access structure.",
       "D": "Group Policy Objects configure Windows settings, not resource access by responsibility."
     },
-    "tip": null,
+    "tip": "Access based on job function, managed through a few roles = RBAC. Per-object permission lists = ACLs; rules on attributes = ABAC.",
     "references": [],
     "source": "bank.pdf#p53",
     "needsReview": false,
@@ -933,14 +933,14 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "The BIOS is firmware -- low-level software stored on the hardware that starts the system. A BIOS update fixes a firmware vulnerability.",
+    "explanation": "The BIOS is firmware -- low-level software stored on the hardware that starts the system. A BIOS update fixes a firmware vulnerability. Firmware flaws sit below the operating system, so they can survive an OS reinstall; only a firmware (BIOS/UEFI) update from the vendor fixes them.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Virtualization flaws are in hypervisors and virtual machines, not the BIOS.",
       "C": "Application flaws are fixed by updating the application.",
       "D": "Operating system flaws are fixed by OS patches, not a BIOS update."
     },
-    "tip": null,
+    "tip": "BIOS or UEFI update = firmware vulnerability. Firmware flaws sit below the OS and survive reinstalls.",
     "references": [],
     "source": "bank.pdf#p54",
     "needsReview": false,
@@ -983,7 +983,7 @@ export const domain2Questions = [
       "C": "A password audit tests stored password strength offline; it does not generate a burst of failed logons.",
       "D": "A user who forgot their password tries a few times at human speed, not twelve times at exact two-second intervals."
     },
-    "tip": null,
+    "tip": "Many failed logons (event 4625) evenly spaced seconds apart against one server = brute force. One password tried across many accounts = password spraying.",
     "references": [],
     "source": "bank.pdf#p56",
     "needsReview": false,
@@ -1026,7 +1026,7 @@ export const domain2Questions = [
       "B": "A whistleblower exposes wrongdoing from inside an organization; it is not an attacker for hire.",
       "D": "Unskilled attackers lack the capability to attack critical infrastructure and are not hired by governments."
     },
-    "tip": null,
+    "tip": "Hired by a government for deniable attacks, with no nation-state option → organized crime: skilled, and for hire.",
     "references": [],
     "source": "bank.pdf#p58",
     "needsReview": false,
@@ -1062,14 +1062,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An email posing as a payment site led the employee to a fake page that captured their login, then showed an error. That credential-harvesting email is phishing.",
+    "explanation": "An email posing as a payment site led the employee to a fake page that captured their login, then showed an error. That credential-harvesting email is phishing. The 'page not found' message is a common trick: the fake page has already captured the password and hopes the victim writes the error off as a glitch.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Brand impersonation is part of the lure, but the attack as a whole -- a fake message to steal credentials -- is phishing.",
       "B": "Pretexting builds an invented scenario, usually in conversation, to persuade the victim.",
       "C": "Typosquatting registers misspelled domains for people who mistype URLs. Here the employee clicked a link in an email."
     },
-    "tip": null,
+    "tip": "Email → fake login page → an error right after entering credentials = phishing (credential harvesting).",
     "references": [],
     "source": "bank.pdf#p59",
     "needsReview": false,
@@ -1112,7 +1112,7 @@ export const domain2Questions = [
       "B": "Messages demanding payment to unlock files are ransomware.",
       "D": "A link to a fake email portal is ordinary credential phishing."
     },
-    "tip": null,
+    "tip": "BEC = an email that impersonates or comes from a trusted business account (executive, HR, vendor) asking for money, data or credentials.",
     "references": [],
     "source": "bank.pdf#p60",
     "needsReview": false,
@@ -1157,7 +1157,7 @@ export const domain2Questions = [
       "C",
       "E"
     ],
-    "explanation": "The message arrived as a text (smishing), and the attacker pretended to be the payroll department (impersonation). Both techniques are in play.",
+    "explanation": "The message arrived as a text (smishing), and the attacker pretended to be the payroll department (impersonation). Both techniques are in play. Smishing is phishing by SMS, and impersonating a trusted department makes the request for credentials seem routine.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Typosquatting relies on mistyped web addresses.",
@@ -1165,7 +1165,7 @@ export const domain2Questions = [
       "D": "Vishing uses voice calls, not text messages.",
       "F": "Misinformation is false information spread without intent to harvest credentials."
     },
-    "tip": null,
+    "tip": "Text message = smishing, voice call = vishing, email = phishing. Pretending to be payroll, IT or an executive = impersonation.",
     "references": [],
     "source": "bank.pdf#p62",
     "needsReview": false,
@@ -1208,7 +1208,7 @@ export const domain2Questions = [
       "B": "Disinformation is deliberately false information spread to mislead a population or shape opinion. This is a targeted fraud against one employee, not an influence campaign.",
       "D": "Whaling is phishing that targets a senior executive as the victim. Here the executive is the identity being faked, and the target is an ordinary employee."
     },
-    "tip": null,
+    "tip": "Pretending to be the CEO or another trusted person = impersonation. The channel adds the label: call = vishing, text = smishing, email = phishing.",
     "references": [],
     "source": "bank.pdf#p63",
     "needsReview": false,
@@ -1244,14 +1244,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A department deploying its own software without IT or security knowing about it is shadow IT, which creates unmanaged, unmonitored risk.",
+    "explanation": "A department deploying its own software without IT or security knowing about it is shadow IT, which creates unmanaged, unmonitored risk. Nobody is patching it, backing it up or checking what data goes into it, and it may break data handling rules the security team would have caught.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "An insider threat is malicious or negligent harm by someone with access. The marketing team is only acting without approval.",
       "C": "Data exfiltration is data being stolen or moved out. Nothing here says data left.",
       "D": "Service disruption is an outage; no service was interrupted."
     },
-    "tip": null,
+    "tip": "A department running its own apps or cloud services without IT's approval = shadow IT.",
     "references": [],
     "source": "bank.pdf#p64",
     "needsReview": false,
@@ -1294,7 +1294,7 @@ export const domain2Questions = [
       "C": "NFC works at a few centimeters for payments and tap-to-pair. It is not a network admission path NAC controls.",
       "D": "SCADA is industrial control equipment. NAC may protect the network it sits on, but SCADA is a system category rather than an attack surface NAC addresses."
     },
-    "tip": null,
+    "tip": "NAC controls what can plug into or join the network (802.1X, posture checks): the wired port attack surface.",
     "references": [],
     "source": "bank.pdf#p65",
     "needsReview": false,
@@ -1330,14 +1330,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Side loading is installing apps from outside the official store, which skips the vetting that repository provides and makes it easy to install malware.",
+    "explanation": "Side loading is installing apps from outside the official store, which skips the vetting that repository provides and makes it easy to install malware. Official stores review and sign apps; a side-loaded app has had no such check, which is why MDM policies often block it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Jailbreaking removes OS restrictions. It often enables side loading, but it is not the same as installing from outside the store.",
       "B": "Memory injection places code into a running process.",
       "C": "Resource reuse refers to memory or storage not being cleared before reuse."
     },
-    "tip": null,
+    "tip": "Installing apps from outside the official store = side loading. Removing the OS's restrictions = jailbreaking or rooting.",
     "references": [],
     "source": "bank.pdf#p67",
     "needsReview": false,
@@ -1380,7 +1380,7 @@ export const domain2Questions = [
       "C": "Pass-the-hash reuses stolen password hashes to authenticate, producing successful logins rather than a spread of attempts.",
       "D": "Brute force tries many passwords against one account; spraying tries few passwords against many."
     },
-    "tip": null,
+    "tip": "One password tried against many usernames = password spraying. Many passwords against one username = brute force.",
     "references": [],
     "source": "bank.pdf#p68",
     "needsReview": false,
@@ -1423,7 +1423,7 @@ export const domain2Questions = [
       "B": "A collision is two different inputs producing the same hash. Here the hash changed, which is the opposite.",
       "C": "Taking a snapshot copies the file system without changing any file."
     },
-    "tip": null,
+    "tip": "A system binary (cmd.exe, ls, ps) changing with no patch or update = likely rootkit or trojanized file. FIM is what catches it.",
     "references": [],
     "source": "bank.pdf#p68",
     "needsReview": false,
@@ -1459,14 +1459,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Nation-states have the largest budgets and the motive to attack foreign critical infrastructure for espionage, disruption or strategic advantage.",
+    "explanation": "Nation-states have the largest budgets and the motive to attack foreign critical infrastructure for espionage, disruption or strategic advantage. Their well-funded groups are often called advanced persistent threats (APTs) because they can afford custom tools, zero-day exploits and long campaigns.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An insider works within one organization and does not have state-level resources.",
       "B": "Unskilled attackers use basic tools and have few resources.",
       "D": "Hacktivists pursue causes and seldom have large financial backing."
     },
-    "tip": null,
+    "tip": "Big budgets + attacks on other countries' critical infrastructure = nation-state (APT).",
     "references": [],
     "source": "bank.pdf#p71",
     "needsReview": false,
@@ -1509,7 +1509,7 @@ export const domain2Questions = [
       "B": "Side loading installs apps from unofficial sources.",
       "C": "A buffer overflow overwrites memory. It is not typically carried out through form fields to query data."
     },
-    "tip": null,
+    "tip": "Input field → database commands = SQL injection. Input field → scripts in other users' browsers = XSS.",
     "references": [],
     "source": "bank.pdf#p71",
     "needsReview": false,
@@ -1554,7 +1554,7 @@ export const domain2Questions = [
       "A",
       "B"
     ],
-    "explanation": "VoIP brings its own attacks: vishing uses voice calls to deceive people, and SPIM -- spam over internet messaging -- floods VoIP and messaging systems with unwanted messages.",
+    "explanation": "VoIP brings its own attacks: vishing uses voice calls to deceive people, and SPIM -- spam over internet messaging -- floods VoIP and messaging systems with unwanted messages. Both exploit the voice and messaging channel itself, while the other options are general network or physical threats.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "C": "VLAN hopping is a switching attack, not specific to VoIP.",
@@ -1562,7 +1562,7 @@ export const domain2Questions = [
       "E": "DHCP snooping is a switch security feature, not a vulnerability.",
       "F": "Tailgating is a physical intrusion technique."
     },
-    "tip": null,
+    "tip": "VoIP-specific threats: vishing (voice phishing) and SPIM (spam over instant messaging and internet telephony).",
     "references": [],
     "source": "bank.pdf#p74",
     "needsReview": false,
@@ -1598,14 +1598,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Staff installing software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist.",
+    "explanation": "Staff installing software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist. It is usually well-intentioned (people want to get work done), which is why the fix is a fast approval process plus discovery tools, not just punishment.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hacktivists are external attackers with causes, not employees installing tools.",
       "B": "Script kiddies are unskilled external attackers.",
       "C": "Competitors may seek advantage, but they do not deploy unapproved software inside the company."
     },
-    "tip": null,
+    "tip": "Unapproved software or services brought in by employees = shadow IT.",
     "references": [],
     "source": "bank.pdf#p74",
     "needsReview": false,
@@ -1641,14 +1641,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "The site's name now resolves to an IP address the company does not own, so visitors are sent to a server showing false content. Tampered name resolution is DNS spoofing (poisoning).",
+    "explanation": "The site's name now resolves to an IP address the company does not own, so visitors are sent to a server showing false content. Tampered name resolution is DNS spoofing (poisoning). The attacker may have poisoned resolver caches or changed the domain's records at the registrar; either way, the name no longer points to the real server.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A DoS attack makes the site unavailable, but here it responds -- from the wrong address.",
       "B": "ARP poisoning redirects traffic on a local network by falsifying MAC mappings, not public DNS lookups.",
       "D": "An NXDOMAIN attack floods resolvers with queries for nonexistent domains to exhaust them."
     },
-    "tip": null,
+    "tip": "A domain suddenly resolving to an IP you do not own = DNS spoofing or poisoning. ARP poisoning is local: it fakes MAC-to-IP mappings.",
     "references": [],
     "source": "bank.pdf#p75",
     "needsReview": false,
@@ -1684,14 +1684,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate elsewhere, without cracking them. Reusing the hash itself is pass-the-hash.",
+    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate elsewhere, without cracking them. Reusing the hash itself is pass-the-hash. Windows NTLM authentication accepts the hash in place of the password, which is why tools such as Mimikatz scrape memory for hashes and why credential guard features and limiting admin logons matter.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Privilege escalation raises permissions on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
       "C": "SQL injection attacks databases through input fields."
     },
-    "tip": null,
+    "tip": "Using captured hashes to log in elsewhere without cracking them = pass-the-hash (lateral movement). Tools like Mimikatz scrape them from memory.",
     "references": [],
     "source": "bank.pdf#p75",
     "needsReview": false,
@@ -1734,7 +1734,7 @@ export const domain2Questions = [
       "B": "A time-of-day restriction would block logins outside hours, but nothing here mentions timing.",
       "C": "Role-based control grants access by role. It could be the mechanism, but least privilege is the principle most likely limiting the transfer."
     },
-    "tip": null,
+    "tip": "A task fails because the account lacks permissions → least privilege is working; request the proper access rather than bypassing it.",
     "references": [],
     "source": "bank.pdf#p78",
     "needsReview": false,
@@ -1770,14 +1770,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A perimeter firewall only sees traffic entering and leaving the network. Host-based firewalls on each endpoint filter the internal, endpoint-to-endpoint connections the perimeter never sees.",
+    "explanation": "A perimeter firewall only sees traffic entering and leaving the network. Host-based firewalls on each endpoint filter the internal, endpoint-to-endpoint connections the perimeter never sees. Blocking unnecessary host-to-host traffic also slows lateral movement if one endpoint is compromised.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A web application firewall protects web applications, not traffic between endpoints.",
       "C": "Router ACLs filter between subnets, but endpoints on the same segment talk directly past them.",
       "D": "An application allow list controls what runs, not which connections are allowed."
     },
-    "tip": null,
+    "tip": "Suspicious traffic between internal endpoints that the perimeter firewall never sees → host-based firewalls (or microsegmentation).",
     "references": [],
     "source": "bank.pdf#p79",
     "needsReview": false,
@@ -1820,7 +1820,7 @@ export const domain2Questions = [
       "C": "A logic bomb deleting data would not generate outbound DNS traffic.",
       "D": "Ransomware encrypting files is local activity, not a stream of DNS queries."
     },
-    "tip": null,
+    "tip": "Lots of odd DNS queries to the internet, especially off-hours = DNS tunneling, a data exfiltration technique.",
     "references": [],
     "source": "bank.pdf#p80",
     "needsReview": false,
@@ -1856,14 +1856,14 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A text message pretending to be the CEO and asking for gift cards is smishing -- phishing by SMS.",
+    "explanation": "A text message pretending to be the CEO and asking for gift cards is smishing -- phishing by SMS. Gift card requests are a classic scam because the cards are hard to trace and easy to resell. The unknown number is a red flag: verify through a known channel before acting.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Vishing uses voice calls, not text messages.",
       "C": "Pretexting (the invented story) is part of the attack, but the defining attack type is smishing because it came by text.",
       "D": "Phishing is the general term; smishing is the precise answer for text messages."
     },
-    "tip": null,
+    "tip": "A text message pretending to be the CEO and asking for gift cards = smishing (with impersonation).",
     "references": [],
     "source": "bank.pdf#p81",
     "needsReview": false,
@@ -1906,7 +1906,7 @@ export const domain2Questions = [
       "C": "Individual user IDs improve accountability, but the default admin account would still exist with a known password.",
       "D": "Reviewing logs more often might detect the login sooner, but would not prevent it."
     },
-    "tip": null,
+    "tip": "An unexpected login with a built-in admin account = default credentials. Change default passwords at installation.",
     "references": [],
     "source": "bank.pdf#p85",
     "needsReview": false,
@@ -1949,7 +1949,7 @@ export const domain2Questions = [
       "C": "Side loading installs apps from unofficial sources; this is an existing legitimate process misbehaving.",
       "D": "SQL injection targets database queries, not a local batch process."
     },
-    "tip": null,
+    "tip": "A legitimate process suddenly doing things it never does (network traffic, spawning shells) = code injected into its memory.",
     "references": [],
     "source": "bank.pdf#p86",
     "needsReview": false,
@@ -1985,14 +1985,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The servers are running but unreachable because a sudden surge of traffic is saturating the network. Overwhelming a service with traffic from many sources is a distributed denial-of-service attack.",
+    "explanation": "The servers are running but unreachable because a sudden surge of traffic is saturating the network. Overwhelming a service with traffic from many sources is a distributed denial-of-service attack. Mitigations include upstream scrubbing services, rate limiting and a CDN that can absorb the flood.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "ARP poisoning redirects local traffic; it does not flood public services.",
       "B": "Brute force guesses passwords; it would not make the services unreachable.",
       "C": "A buffer overflow crashes or hijacks a process; here the services are up and the network is flooded."
     },
-    "tip": null,
+    "tip": "Services up but unreachable + a sudden surge of traffic = DDoS (the network is saturated).",
     "references": [],
     "source": "bank.pdf#p88",
     "needsReview": false,
@@ -2028,14 +2028,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Organized crime exists to make money, through ransomware, fraud and selling stolen data. Profit is its defining motive.",
+    "explanation": "Organized crime exists to make money, through ransomware, fraud and selling stolen data. Profit is its defining motive. These groups run like businesses, with specialists, affiliates and even help desks for ransomware victims.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Hacktivists are driven by political or social causes.",
       "B": "Insiders act for many reasons -- revenge, ideology or money -- so profit is not their defining motive.",
       "D": "Shadow IT is unauthorized technology use, not a threat actor seeking profit."
     },
-    "tip": null,
+    "tip": "Profit = organized crime. Causes = hacktivists. Espionage and geopolitics = nation-states. Revenge or grievance = insiders.",
     "references": [],
     "source": "bank.pdf#p88",
     "needsReview": false,
@@ -2071,14 +2071,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Every system showing the same message about files renamed with a new extension is the signature of ransomware. .ryk is the extension used by the Ryuk family.",
+    "explanation": "Every system showing the same message about files renamed with a new extension is the signature of ransomware. .ryk is the extension used by the Ryuk family. The ransom message on every workstation and server shows the attackers had wide access, typically domain admin, before they launched the encryption.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A virus attaches to files to spread; it does not encrypt them and leave ransom notes.",
       "B": "A Trojan disguises itself as legitimate software, but does not by itself explain encrypted files everywhere.",
       "C": "Spyware stays hidden while collecting information; it does not display messages."
     },
-    "tip": null,
+    "tip": "The same message on every machine + files renamed with a new extension (.ryk) = ransomware (Ryuk).",
     "references": [],
     "source": "bank.pdf#p94",
     "needsReview": false,
@@ -2121,7 +2121,7 @@ export const domain2Questions = [
       "C": "Brute force would show repeated login attempts, not half-open connections from many addresses.",
       "D": "An HTTPS downgrade forces weaker encryption; it does not stop the server functioning."
     },
-    "tip": null,
+    "tip": "Many different source IPs, the same instant, SYN packets to one server = DDoS (SYN flood).",
     "references": [],
     "source": "bank.pdf#p94",
     "needsReview": false,
@@ -2164,7 +2164,7 @@ export const domain2Questions = [
       "C": "Denial of service exhausts capacity. Headers do not change how much traffic a server can absorb.",
       "D": "SSL is a protocol, and a deprecated one. It is not a risk that headers mitigate, though HSTS enforces the use of TLS."
     },
-    "tip": null,
+    "tip": "Browser protections sent as HTTP headers: Content-Security-Policy (XSS), HSTS (force HTTPS), X-Frame-Options (clickjacking).",
     "references": [],
     "source": "bank.pdf#p95",
     "needsReview": false,
@@ -2207,7 +2207,7 @@ export const domain2Questions = [
       "B": "Data exfiltration is the unauthorized removal of data from the environment. The staff are accessing company services, not extracting data out of them.",
       "C": "A nation-state attack is a well-resourced intrusion by a government-backed group. The activity comes from a known internal department, not an external adversary."
     },
-    "tip": null,
+    "tip": "Staff routinely bypassing approved IT, such as the VPN, = shadow IT behavior.",
     "references": [],
     "source": "bank.pdf#p98",
     "needsReview": false,
@@ -2243,14 +2243,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "MD5 is a broken hash algorithm: collisions can be generated and MD5 hashes crack quickly. Relying on it is a cryptographic vulnerability.",
+    "explanation": "MD5 is a broken hash algorithm: collisions can be generated and MD5 hashes crack quickly. Relying on it is a cryptographic vulnerability. The fix is a current algorithm, such as SHA-256 for integrity or a salted, slow algorithm such as bcrypt for passwords.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A malicious update is a compromised patch or release, not a weak algorithm choice.",
       "C": "A zero-day is an unknown, unpatched flaw. MD5's weaknesses have been known for decades.",
       "D": "Side loading is installing software from unofficial sources."
     },
-    "tip": null,
+    "tip": "MD5, SHA-1, DES, RC4 and SSL = weak or deprecated crypto → a cryptographic vulnerability.",
     "references": [],
     "source": "bank.pdf#p105",
     "needsReview": false,
@@ -2286,14 +2286,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Removing default access and granting it only to people whose jobs require it is least privilege.",
+    "explanation": "Removing default access and granting it only to people whose jobs require it is least privilege. Default share permissions often let everyone in the domain read the files, so starting from nothing and adding only the people who need access shrinks the risk of accidental exposure or misuse.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encryption standards govern how data is encrypted, not who has permission to shares.",
       "B": "Replication copies data between systems; it is unrelated to permissions.",
       "D": "Access control monitoring reviews access after it is granted; the administrator changed the permissions themselves."
     },
-    "tip": null,
+    "tip": "Remove default permissions and grant only what each job needs = least privilege.",
     "references": [],
     "source": "bank.pdf#p109",
     "needsReview": false,
@@ -2329,14 +2329,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate to other systems, without cracking them. Reusing the hash itself is pass-the-hash.",
+    "explanation": "The attacker took credential hashes from memory and used them directly to authenticate to other systems, without cracking them. Reusing the hash itself is pass-the-hash. It works against NTLM authentication, which accepts the hash in place of the password.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Privilege escalation raises rights on a system; the defining action here is reusing stolen hashes to move between systems.",
       "B": "A buffer overflow exploits memory handling to run code, not reuse credentials.",
       "C": "SQL injection attacks databases through input fields."
     },
-    "tip": null,
+    "tip": "Stolen hashes reused to authenticate without cracking them = pass-the-hash.",
     "references": [],
     "source": "bank.pdf#p110",
     "needsReview": false,
@@ -2379,7 +2379,7 @@ export const domain2Questions = [
       "C": "A brute-forced password would show up as excessive failed logins, which the logs do not show.",
       "D": "Cryptojacking consumes CPU heavily and degrades performance, which did not happen."
     },
-    "tip": null,
+    "tip": "Malware from shared files + no slowdown + no failed logins → a quiet remote access Trojan. Cryptojacking always slows machines down.",
     "references": [],
     "source": "bank.pdf#p112",
     "needsReview": false,
@@ -2393,7 +2393,7 @@ export const domain2Questions = [
     "objective": "2.4",
     "objectiveTitle": "Given a scenario, analyze indicators of malicious activity",
     "type": "single",
-    "question": "A security analyst discovers that a large number of employee credentials had been stolen and were being sold on the dark web. The analyst investigates and discovers that some hourly employee credentials were compromised, but salaried employee credentials were not affected.\nMost employees clocked in and out while they were inside the building using one of the kiosks connected to the network. However, some clocked out and recorded their time after leaving to go home. Only those who clocked in and out while inside the building had credentials stolen. Each of the kiosks are on different floors, and there are multiple routers, since the business segments environments for certain business functions.\nHourly employees are required to use a website called acmetimekeeping.com to clock in and out.\nThis website is accessible from the internet. Which of the following is the most likely reason for this compromise?",
+    "question": "A security analyst discovers that a large number of employee credentials had been stolen and were being sold on the dark web. The analyst investigates and discovers that some hourly employee credentials were compromised, but salaried employee credentials were not affected.\nMost employees clocked in and out while they were inside the building using one of the kiosks connected to the network. However, some clocked out and recorded their time after leaving to go home. Only those who clocked in and out while inside the building had credentials stolen. Each of the kiosks is on different floors, and there are multiple routers, since the business segments environments for certain business functions.\nHourly employees are required to use a website called acmetimekeeping.com to clock in and out.\nThis website is accessible from the internet. Which of the following is the most likely reason for this compromise?",
     "choices": [
       {
         "key": "A",
@@ -2405,7 +2405,7 @@ export const domain2Questions = [
       },
       {
         "key": "C",
-        "text": "The internal DNS servers were poisoned and were redirecting acmetimekeeping.com to malicious domain that intercepted the credentials and then passed them through to the real site."
+        "text": "The internal DNS servers were poisoned and were redirecting acmetimekeeping.com to a malicious domain that intercepted the credentials and then passed them through to the real site."
       },
       {
         "key": "D",
@@ -2422,7 +2422,7 @@ export const domain2Questions = [
       "B": "A compromised website would steal credentials from everyone using it, including people clocking in from home.",
       "D": "ARP poisoning only works within one broadcast domain, but the kiosks are on multiple routed segments."
     },
-    "tip": null,
+    "tip": "Only users on the internal network were hit, not home users → the attack sits inside the network path (internal DNS poisoning), not on the website.",
     "references": [],
     "source": "bank.pdf#p114",
     "needsReview": false,
@@ -2458,14 +2458,14 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Another device providing internet access, outside the filtered corporate Wi-Fi, is a rogue access point. It gives users a path that bypasses the content filter entirely.",
+    "explanation": "Another device providing internet access, outside the filtered corporate Wi-Fi, is a rogue access point. It gives users a path that bypasses the content filter entirely. Wireless scanning or a WIDS can find such devices, and they should be removed and reported.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A missing host agent would not explain a separate device supplying internet access.",
       "C": "A hidden SSID is still part of the managed network and would still be filtered.",
       "D": "Jamming stops a network working; it does not provide a way around the filter."
     },
-    "tip": null,
+    "tip": "Another device handing out internet access that bypasses corporate controls = rogue access point.",
     "references": [],
     "source": "bank.pdf#p115",
     "needsReview": false,
@@ -2501,14 +2501,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Staff deploying software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist.",
+    "explanation": "Staff deploying software without approval is shadow IT. Unvetted, unpatched and unmonitored, it introduces vulnerabilities the security team does not know exist. The fix combines discovery tools, a quick approval process and clear policy.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hacktivists are external attackers with causes.",
       "B": "Script kiddies are unskilled external attackers.",
       "C": "Competitors may seek advantage, but do not deploy unapproved software inside the company."
     },
-    "tip": null,
+    "tip": "Unapproved software deployed by staff = shadow IT.",
     "references": [],
     "source": "bank.pdf#p115",
     "needsReview": false,
@@ -2544,14 +2544,14 @@ export const domain2Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A payment demand for services from a vendor the company has never used is an invoice scam: a fake bill sent in the hope that someone pays it without checking.",
+    "explanation": "A payment demand for services from a vendor the company has never used is an invoice scam: a fake bill sent in the hope that someone pays it without checking. Checking every invoice against the vendor management database, as this employee did, is the defense.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Pretexting builds a detailed invented scenario to extract information; the defining feature here is a fake bill.",
       "B": "Impersonation pretends to be a specific person or known entity, but this 'vendor' is unknown to the company.",
       "C": "Ransomware encrypts data and demands payment to unlock it."
     },
-    "tip": null,
+    "tip": "A payment demand from a vendor you do not use = invoice scam. Always check the vendor database before paying.",
     "references": [],
     "source": "bank.pdf#p118",
     "needsReview": false,
@@ -2594,7 +2594,7 @@ export const domain2Questions = [
       "C": "Changing default passwords hardens printers, but their services remain exposed.",
       "D": "A guest network separates visitors, but does not reduce the services exposed on the enterprise network."
     },
-    "tip": null,
+    "tip": "Reduce the attack surface = remove what is not needed: disable unused services, ports and accounts.",
     "references": [],
     "source": "bank.pdf#p121",
     "needsReview": false,
@@ -2637,7 +2637,7 @@ export const domain2Questions = [
       "B": "Credential harvesting collects usernames and passwords, usually through a fake login page. It describes the goal of an online attack rather than a printing-center risk.",
       "C": "Prepending adds text to a message to manipulate how it is treated, such as a fake external warning. It is an email technique."
     },
-    "tip": null,
+    "tip": "Printing areas → dumpster diving risk: shred waste and collect printouts promptly.",
     "references": [],
     "source": "bank.pdf#p122",
     "needsReview": false,
@@ -2677,7 +2677,7 @@ export const domain2Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Obfuscation transforms code so it still runs but is extremely hard for people or tools to understand, deterring reverse engineering and debugging.",
+    "explanation": "Obfuscation transforms code so it still runs but is extremely hard for people or tools to understand, deterring reverse engineering and debugging. It renames symbols, scrambles control flow and hides strings; it raises the effort needed rather than making analysis impossible.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Version control tracks changes to code; it does not protect it from analysis.",
@@ -2685,7 +2685,7 @@ export const domain2Questions = [
       "D": "Continuous integration automates building and testing.",
       "E": "Stored procedures are precompiled database queries."
     },
-    "tip": null,
+    "tip": "Make code hard to reverse engineer or debug = obfuscation.",
     "references": [],
     "source": "bank.pdf#p122",
     "needsReview": false,
@@ -2721,14 +2721,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Clicking the link sent a hidden request, from the user's own authenticated browser session, to change the password on the site. Tricking a browser into performing an authenticated action is cross-site request forgery.",
+    "explanation": "Clicking the link sent a hidden request, from the user's own authenticated browser session, to change the password on the site. Tricking a browser into performing an authenticated action is cross-site request forgery. Anti-CSRF tokens and SameSite cookies stop the site accepting such forged requests.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Directory traversal requests files outside the web root; it does not change passwords.",
       "C": "ARP poisoning redirects local network traffic; it does not explain an email link triggering a password change.",
       "D": "SQL injection manipulates database queries through input, not through a victim's session."
     },
-    "tip": null,
+    "tip": "The victim's own logged-in browser tricked into sending a request (such as a password change) = CSRF. Defend with anti-CSRF tokens and SameSite cookies.",
     "references": [],
     "source": "bank.pdf#p124",
     "needsReview": false,
@@ -2764,14 +2764,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Failed logins across a large portion of accounts from one IP address -- a few attempts each rather than many against one -- is password spraying.",
+    "explanation": "Failed logins across a large portion of accounts from one IP address -- a few attempts each rather than many against one -- is password spraying. Keeping to a couple of guesses per account avoids lockout thresholds while testing common passwords across the whole directory.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Brute force hammers one account with many passwords.",
       "C": "A dictionary attack tries a word list, usually against one account; the spread across many accounts marks spraying.",
       "D": "Rainbow tables crack stolen hashes offline and generate no failed logins."
     },
-    "tip": null,
+    "tip": "A few attempts each against many accounts from one source = password spraying.",
     "references": [],
     "source": "bank.pdf#p128",
     "needsReview": false,
@@ -2793,7 +2793,7 @@ export const domain2Questions = [
       },
       {
         "key": "B",
-        "text": "A DHCP failure caused an incorrect IP address to be distributed"
+        "text": "A DHCP failure caused an incorrect IP address to be distributed."
       },
       {
         "key": "C",
@@ -2814,7 +2814,7 @@ export const domain2Questions = [
       "C": "An administrator bypass is possible but less likely than a user cloning a MAC.",
       "D": "DNS hijacking of the portal would not supply a known hardware address."
     },
-    "tip": null,
+    "tip": "Two hosts showing the same MAC address = MAC cloning. MAC-based checks are easy to bypass.",
     "references": [],
     "source": "bank.pdf#p133",
     "needsReview": false,
@@ -2850,14 +2850,14 @@ export const domain2Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Removing the manufacturer's restrictions to install unauthorized software and unlock features is jailbreaking (rooting on Android).",
+    "explanation": "Removing the manufacturer's restrictions to install unauthorized software and unlock features is jailbreaking (rooting on Android). It gives the user full control of the OS but also bypasses the platform's security model, which is why companies prohibit it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "'SOU' is not a mobile vulnerability or technique.",
+      "A": "SQL injection is a web application attack against databases, not a way to unlock a phone's operating system.",
       "B": "Cross-site scripting is a web application attack.",
       "D": "Side loading installs apps from outside the official store, but does not unlock new OS features; jailbreaking does both."
     },
-    "tip": null,
+    "tip": "Remove the OS's restrictions to install unauthorized software = jailbreaking (iOS) or rooting (Android).",
     "references": [],
     "source": "bank.pdf#p138",
     "needsReview": false,
@@ -2900,7 +2900,7 @@ export const domain2Questions = [
       "C": "An IPS inspects traffic for known attack patterns and can block it, but it sits inline on a traffic path rather than governing how an individual switch port learns addresses.",
       "D": "An NGFW adds application awareness and identity to firewalling at network boundaries. MAC flooding happens inside a single broadcast domain, which never crosses the firewall."
     },
-    "tip": null,
+    "tip": "MAC flooding (overflowing the switch's CAM table) → port security that limits MAC addresses per port.",
     "references": [],
     "source": "bank.pdf#p138",
     "needsReview": false,
@@ -2936,14 +2936,14 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A <script> tag in input is a cross-site scripting payload. Input sanitization strips or encodes such tags so they cannot run in a browser.",
+    "explanation": "A <script> tag in input is a cross-site scripting payload. Input sanitization strips or encodes such tags so they cannot run in a browser. Encoding output as well means that even if a tag gets stored, it is displayed as text rather than executed.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "An nmap command is a network scan, not input to an application.",
       "C": "A phishing email is social engineering; filtering and training address it, not input sanitization.",
       "D": "A certificate warning in the browser is a TLS issue."
     },
-    "tip": null,
+    "tip": "A <script> tag in input = XSS: sanitize input and encode output.",
     "references": [],
     "source": "bank.pdf#p139",
     "needsReview": false,
@@ -2986,7 +2986,7 @@ export const domain2Questions = [
       "B": "'End of testing' is not a lifecycle stage for devices.",
       "C": "End of support usually ends specific support services; end of life is the stage where the product is retired and all updates stop."
     },
-    "tip": null,
+    "tip": "No more updates or patches, product being retired = end of life (EOL).",
     "references": [],
     "source": "bank.pdf#p145",
     "needsReview": false,
@@ -3029,7 +3029,7 @@ export const domain2Questions = [
       "C": "Decommissioning would stop customer transaction processing.",
       "D": "Encrypting the drive protects data at rest, not the running system from network attacks."
     },
-    "tip": null,
+    "tip": "Critical system on an end-of-life OS → isolate it (its own VLAN or segment) until it can be replaced.",
     "references": [],
     "source": "bank.pdf#p147",
     "needsReview": false,
@@ -3072,7 +3072,7 @@ export const domain2Questions = [
       "C": "Spear phishing emails are a vector used against employees to obtain access. The insider threat actor is the employee, so there is nobody to phish.",
       "D": "Typosquatting registers look-alike domains to trick outsiders into visiting a fake site. It targets people who do not already have access, which is the opposite of an insider."
     },
-    "tip": null,
+    "tip": "Insider data theft most often uses removable media (USB drives). Control USB with endpoint DLP or device policies.",
     "references": [],
     "source": "bank.pdf#p148",
     "needsReview": false,
@@ -3115,7 +3115,7 @@ export const domain2Questions = [
       "C": "An unsecured network is a network weakness, not the vector used here.",
       "D": "Default credentials are unchanged factory passwords, unrelated to a phishing email."
     },
-    "tip": null,
+    "tip": "Links that do not match the claimed sender (hover to check) = phishing, a social engineering attack.",
     "references": [],
     "source": "bank.pdf#p149",
     "needsReview": false,
@@ -3158,7 +3158,7 @@ export const domain2Questions = [
       "B": "A memory leak is a programming defect where memory is never released. It degrades performance and is not an attack that steals card data.",
       "C": "A buffer overflow writes beyond an allocated region to corrupt memory or run code. It targets a vulnerable program, and nothing here suggests the airline's software was exploited."
     },
-    "tip": null,
+    "tip": "Public Wi-Fi + an ignored certificate warning = on-path (man-in-the-middle) attack.",
     "references": [],
     "source": "bank.pdf#p153",
     "needsReview": false,
@@ -3201,7 +3201,7 @@ export const domain2Questions = [
       "B": "Ransomware encrypts files and demands payment. Its presence is unmistakable and it does not quietly accept inbound connections.",
       "C": "A fileless virus runs in memory without writing to disk, often through scripting. The user installed a file, so the infection is not fileless."
     },
-    "tip": null,
+    "tip": "Inbound connections on an odd port right after installing untrusted software = a backdoor listening for the attacker.",
     "references": [],
     "source": "bank.pdf#p156",
     "needsReview": false,
@@ -3244,7 +3244,7 @@ export const domain2Questions = [
       "B": "Sinkholing the dead domain addresses the destination that is already dead and therefore harmless. The shortener, which is live, would keep working.",
       "C": "Quarantining all received mail and notifying everyone is disruptive and reactive. It handles this batch while leaving the next one to arrive unimpeded."
     },
-    "tip": null,
+    "tip": "One common element across a phishing wave (the URL shortener) → block it at the proxy. Subject lines change every time.",
     "references": [],
     "source": "bank.pdf#p160",
     "needsReview": false,
@@ -3283,11 +3283,11 @@ export const domain2Questions = [
     "explanation": "MITRE ATT&CK is a curated knowledge base of adversary tactics and techniques observed in real intrusions, mapped to the mitigations and detections that counter each one. An administrator hardening systems against how attackers actually behave is describing ATT&CK precisely.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "A CSIRT is a team that responds to security incidents. It is an organisational function, not a reference of adversary behavior.",
+      "B": "A CSIRT is a team that responds to security incidents. It is an organizational function, not a reference of adversary behavior.",
       "C": "CVSS is a scoring system that rates the severity of individual vulnerabilities. It prioritizes flaws but describes no attacker technique.",
       "D": "SOAR is a platform for automating and orchestrating response workflows. It executes playbooks rather than documenting adversary behavior."
     },
-    "tip": null,
+    "tip": "Real-world adversary tactics and techniques, mapped to mitigations = MITRE ATT&CK.",
     "references": [],
     "source": "bank.pdf#p162",
     "needsReview": false,
@@ -4063,7 +4063,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Misconfiguration is the broad category of settings applied wrongly. It is too general — the question asks specifically about certificate management.",
-      "B": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants without being cleared.",
+      "B": "Resource reuse is a virtualization flaw where memory or storage passes between tenants without being cleared.",
       "D": "Weak cipher suites are a protocol negotiation problem. They concern which algorithms are permitted, not how certificates and their keys are handled."
     },
     "tip": null,
@@ -4196,8 +4196,8 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SQL injection attacks an application's database layer. It is a serious flaw but it exists identically whether the application runs in cloud or on a physical server.",
-      "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualised infrastructure.",
-      "D": "Tokenisation is a data-protection technique, not a vulnerability at all.",
+      "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualized infrastructure.",
+      "D": "Tokenization is a data-protection technique, not a vulnerability at all.",
       "E": "Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."
     },
     "tip": null,
@@ -4724,7 +4724,7 @@ export const domain2Questions = [
     "incorrectExplanations": {
       "A": "Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
       "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
-      "C": "Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."
+      "C": "Resource reuse is a virtualization flaw where memory or storage released by one tenant is handed to another without being cleared."
     },
     "tip": null,
     "references": [],
@@ -6142,7 +6142,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Cross-site scripting injects script into a web page to run in a user's browser. It is a web application flaw.",
-      "B": "SQL injection manipulates database queries. It reaches data, not the virtualisation layer.",
+      "B": "SQL injection manipulates database queries. It reaches data, not the virtualization layer.",
       "C": "A race condition exploits timing between a check and its use. It can be a step in an escape chain but is not the vulnerability being described."
     },
     "tip": null,
@@ -7023,7 +7023,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualised environment because it exposes every other guest on the host.",
+    "explanation": "Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualized environment because it exposes every other guest on the host.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Cross-site scripting injects script into a web page rendered by a browser. There is no browser here.",
@@ -7241,7 +7241,7 @@ export const domain2Questions = [
     "explanation": "Altering the device's underlying file structure to obtain administrator permissions is removing the manufacturer's restrictions, which is jailbreaking. Once that is done, unauthorized software such as a keylogger can be installed with full privilege.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants uncleared.",
+      "A": "Resource reuse is a virtualization flaw where memory or storage passes between tenants uncleared.",
       "B": "Bloatware is unwanted preinstalled software. It ships with the device rather than being installed by modifying the OS.",
       "C": "Side loading installs an app from outside the official store. That does not require root access or changing the file structure."
     },
@@ -8624,7 +8624,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualisation vulnerability because the hypervisor controls every other guest.",
+    "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualization vulnerability because the hypervisor controls every other guest.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "SQL injection manipulates database queries through application input. No database is involved.",
@@ -9315,7 +9315,7 @@ export const domain2Questions = [
     "explanation": "VM escape means code inside a guest breaking the isolation boundary and executing on the host. A plug-in triggering a memory overflow that yields code execution on the host is precisely that crossing from guest to hypervisor.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Command injection on the virtualisation web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
+      "A": "Command injection on the virtualization web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
       "C": "Unauthenticated API requests are an access control failure on the management plane, again not an escape from a guest.",
       "D": "A crafted packet crashing hypervisor services is a denial of service. It disrupts rather than executing code on the host."
     },
@@ -10057,7 +10057,7 @@ export const domain2Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Sideloading installs software from outside an official store. It is unrelated to request handling.",
-      "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualisation boundaries.",
+      "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualization boundaries.",
       "D": "SQL injection manipulates database queries through input. It exploits parsing, not timing."
     },
     "tip": null,
@@ -10493,7 +10493,7 @@ export const domain2Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Virtualisation's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
+    "explanation": "Virtualization's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Bypassing the guest's own firewall is a local configuration issue within one VM.",

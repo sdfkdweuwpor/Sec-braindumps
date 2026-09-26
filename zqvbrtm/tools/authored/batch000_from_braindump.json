@@ -21,7 +21,7 @@
   "objective": "5.5",
   "explanation": "Banking is a heavily regulated industry where audits are mandated by law and by supervisory bodies, with penalties for failing them. The obligation is external and non-negotiable, which makes regulatory requirement the driving reason.",
   "incorrect": {
-   "B": "Organisational change may trigger a review, but it is an internal circumstance rather than the standing reason banks audit.",
+   "B": "Organizational change may trigger a review, but it is an internal circumstance rather than the standing reason banks audit.",
    "C": "A self-assessment requirement is internally imposed and carries no legal force.",
    "D": "A service-level requirement is a contractual performance commitment. It concerns service quality rather than compliance verification."
   }
@@ -32,7 +32,7 @@
   "incorrect": {
    "A": "SPF authorizes mail servers to send for a domain. It concerns email, not file changes.",
    "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
-   "C": "NAC decides which devices may join the network."
+   "C": "NAC decides which devices may join the network. It does not watch files or settings for changes."
   }
  },
  "q0068": {
@@ -42,7 +42,7 @@
    "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
    "B": "Video surveillance records who entered. It is detective rather than preventive.",
    "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
-   "F": "A sensor detects presence or movement and raises an alert."
+   "F": "A sensor detects presence or movement and raises an alert. It does not decide who is allowed in."
   }
  },
  "q0072": {
@@ -231,10 +231,10 @@
  },
  "q0224": {
   "objective": "5.1",
-  "explanation": "One person acting alone on a phone instruction was enough to move money. Rebuilding the wire transfer process with verification steps — a callback to a known number, dual approval, pre-approved account lists — makes the same attack structurally impossible rather than relying on the clerk's judgment.",
+  "explanation": "A single clerk could act on unverified instructions to change where money goes. Updating the wire transfer process with verification steps -- calling the payee back on a number already on file, requiring a second approver, and holding changes to bank details until they are confirmed -- stops the fraud however convincing the instructions look.",
   "incorrect": {
    "A": "Standardizing incident reporting improves how you respond after the money has gone.",
-   "B": "Phishing campaigns train people against fraudulent messages. The instruction arrived by phone, and awareness alone still leaves one person able to act unilaterally.",
+   "B": "Phishing campaigns train people to spot fraudulent messages, which helps, but a convincing request would still leave one person able to send money unchecked. The process fix removes that single point of failure.",
    "C": "Insider threat detection looks for malicious employees. The clerk was deceived, not disloyal."
   }
  },
@@ -307,7 +307,7 @@
   "explanation": "Containers share the host's kernel and package only the application and its dependencies, so many workloads run under a single operating system instead of one OS per server. That directly satisfies the requirement to reduce the number of operating systems.",
   "incorrect": {
    "A": "Microservices is an application architecture that splits a system into small independently deployable services. It describes how software is decomposed, and it often increases the number of runtime instances rather than reducing operating systems.",
-   "C": "Virtualisation runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
+   "C": "Virtualization runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
    "D": "Infrastructure as code defines and provisions infrastructure from version-controlled definitions. It changes how systems are built, not how many operating systems end up running."
   }
  },
@@ -523,10 +523,10 @@
   "objective": "1.2",
   "explanation": "Both are deception and disruption technologies that reveal an intruder already inside. A honeypot is a decoy system with no legitimate purpose, so any interaction with it is suspicious by definition. A DNS sinkhole redirects lookups for known-malicious domains, exposing which internal hosts are trying to reach an attacker's infrastructure.",
   "incorrect": {
-   "A": "Tokenisation replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
+   "A": "Tokenization replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
    "B": "CI/CD is an automated build-and-release pipeline. It is a development practice and has no detection role.",
    "D": "Threat modeling is a design-time exercise to anticipate how a system might be attacked. It is predictive, performed before deployment, not a live detection method.",
-   "F": "Data obfuscation makes data harder to interpret. Like tokenisation it reduces the value of stolen data without revealing an intruder."
+   "F": "Data obfuscation makes data harder to interpret. Like tokenization it reduces the value of stolen data without revealing an intruder."
   }
  },
  "q0364": {
@@ -535,7 +535,7 @@
   "incorrect": {
    "B": "Encryption protects confidentiality by making content unreadable without the key. An attacker can still alter ciphertext, and legitimate users must be able to run the software anyway.",
    "C": "Baselines record a known-good configuration to compare systems against. They govern how a system is set up, not whether a released binary has been altered.",
-   "D": "Tokenisation swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
+   "D": "Tokenization swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
   }
  },
  "q0365": {
@@ -772,7 +772,7 @@
   "objective": "2.5",
   "explanation": "MITRE ATT&CK is a curated knowledge base of adversary tactics and techniques observed in real intrusions, mapped to the mitigations and detections that counter each one. An administrator hardening systems against how attackers actually behave is describing ATT&CK precisely.",
   "incorrect": {
-   "B": "A CSIRT is a team that responds to security incidents. It is an organisational function, not a reference of adversary behavior.",
+   "B": "A CSIRT is a team that responds to security incidents. It is an organizational function, not a reference of adversary behavior.",
    "C": "CVSS is a scoring system that rates the severity of individual vulnerabilities. It prioritizes flaws but describes no attacker technique.",
    "D": "SOAR is a platform for automating and orchestrating response workflows. It executes playbooks rather than documenting adversary behavior."
   }
@@ -1149,7 +1149,7 @@
   "objective": "3.3",
   "explanation": "Masking replaces part of a value with a placeholder so the record stays useful without exposing the sensitive data — showing only the last four digits of a card number in a log, for example. That is the standard treatment for card data written to logs.",
   "incorrect": {
-   "A": "Tokenisation swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
+   "A": "Tokenization swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
    "C": "Hashing produces an irreversible digest. Card numbers have a small enough keyspace to be recovered from a hash by brute force, so it is not the recommended treatment.",
    "D": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique, and the question asks for the precise one."
   }
@@ -1537,7 +1537,7 @@
   "explanation": "Certificates are only as trustworthy as the private keys behind them. When keys are left in source code, on shared drives or in unprotected configuration files, anyone who finds one can impersonate the service, so insecure key storage is the vulnerability that improper certificate management produces.",
   "incorrect": {
    "A": "Misconfiguration is the broad category of settings applied wrongly. It is too general — the question asks specifically about certificate management.",
-   "B": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants without being cleared.",
+   "B": "Resource reuse is a virtualization flaw where memory or storage passes between tenants without being cleared.",
    "D": "Weak cipher suites are a protocol negotiation problem. They concern which algorithms are permitted, not how certificates and their keys are handled."
   }
  },
@@ -1545,10 +1545,10 @@
   "objective": "3.3",
   "explanation": "The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunneling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
   "incorrect": {
-   "A": "Tokenisation substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+   "A": "Tokenization substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
    "B": "A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
    "E": "Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
-   "F": "Data masking hides parts of a value. Like tokenisation it destroys the completeness the recipient requires."
+   "F": "Data masking hides parts of a value. Like tokenization it destroys the completeness the recipient requires."
   }
  },
  "q0489": {
@@ -1598,7 +1598,7 @@
  },
  "q0495": {
   "objective": "3.3",
-  "explanation": "Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
+  "explanation": "Tokenization swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenization system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
   "incorrect": {
    "A": "Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
    "C": "Removing sensitive data from production is data minimization. It reduces exposure by elimination rather than by substitution.",
@@ -1616,7 +1616,7 @@
  },
  "q0497": {
   "objective": "5.1",
-  "explanation": "An acceptable use policy sets out what users may and may not do with organisational systems and software. Communicating general responsibilities for operating those systems is exactly its purpose, and it is the document every user signs.",
+  "explanation": "An acceptable use policy sets out what users may and may not do with organizational systems and software. Communicating general responsibilities for operating those systems is exactly its purpose, and it is the document every user signs.",
   "incorrect": {
    "A": "A business continuity plan describes how the organization keeps operating through major disruption. It addresses recovery, not routine responsibilities.",
    "B": "A change management procedure governs how modifications are approved and applied. It is narrow and aimed at those making changes.",
@@ -1663,7 +1663,7 @@
   "objective": "4.3",
   "explanation": "Vulnerability management is a cycle of identify, analyze, prioritize, remediate, validate and report. Prioritization ranks findings by severity and exposure so limited effort goes where it matters, and reporting communicates status and tracks remediation — both are core stages of the process.",
   "incorrect": {
-   "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponising them.",
+   "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponizing them.",
    "D": "Correlation combines events from different sources to spot patterns. It belongs to monitoring and SIEM work, not to managing vulnerabilities.",
    "E": "Containment limits damage during a live incident. It is an incident response activity that happens after something has already gone wrong.",
    "F": "A tabletop exercise rehearses a response plan in discussion. It tests preparedness rather than managing the vulnerability backlog."
@@ -1683,14 +1683,14 @@
   "explanation": "Cloud instances share physical hardware with other tenants. VM escape is the vulnerability where an attacker breaks out of their guest and reaches the hypervisor or neighboring virtual machines, which is uniquely serious in cloud because it crosses the boundary between customers.",
   "incorrect": {
    "A": "SQL injection attacks an application's database layer. It is a serious flaw but it exists identically whether the application runs in cloud or on a physical server.",
-   "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualised infrastructure.",
-   "D": "Tokenisation is a data-protection technique, not a vulnerability at all.",
+   "B": "TOC/TOU is a race condition between checking a condition and acting on it. It is an application-level defect, not a property of shared virtualized infrastructure.",
+   "D": "Tokenization is a data-protection technique, not a vulnerability at all.",
    "E": "Password spraying tries common passwords across many accounts. It targets authentication and is not specific to the cloud architecture."
   }
  },
  "q0508": {
   "objective": "1.4",
-  "explanation": "Tokenisation replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenisation system, and the format is preserved so pending purchases still work.",
+  "explanation": "Tokenization replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenization system, and the format is preserved so pending purchases still work.",
   "incorrect": {
    "A": "Hashing is one-way, so the original card number could never be retrieved to complete the purchase. Card numbers are also short enough to be brute-forced from a hash.",
    "B": "Obfuscation makes data harder to read but is reversible by design and offers no real cryptographic protection against a determined attacker.",
@@ -1720,7 +1720,7 @@
   "explanation": "Containers share the host's kernel and bundle only the libraries an application actually needs, so there is no full guest operating system per workload. Fewer operating systems in the estate means fewer OS patches to test and apply.",
   "incorrect": {
    "A": "Microservices is an application design pattern that splits a system into small services. It affects how software is structured, and typically increases the number of deployed instances.",
-   "B": "Virtualisation gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
+   "B": "Virtualization gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
    "C": "A real-time operating system is used where timing guarantees matter, in embedded and industrial systems. It is not a consolidation strategy for general workloads."
   }
  },
@@ -1936,7 +1936,7 @@
   "objective": "1.4",
   "explanation": "Plain FTP sends both credentials and file contents in cleartext, so anyone on the path can read them. Encryption — using FTPS or SFTP instead — makes the transferred data unreadable to an interceptor, which is what protecting confidentiality in transit requires.",
   "incorrect": {
-   "A": "Tokenisation substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
+   "A": "Tokenization substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
    "B": "Data masking hides portions of a value for display. The bank requires complete information to process it.",
    "D": "Obfuscation makes data harder to read without providing genuine cryptographic protection. A capable interceptor reverses it."
   }
@@ -1946,7 +1946,7 @@
   "explanation": "OAuth is an authorization framework, not an authentication one. It issues access tokens that let an application act on a resource within a defined scope, which is precisely the stated requirement of focusing on application authorization rather than verifying the user.",
   "incorrect": {
    "A": "LDAP is a directory protocol for looking up and authenticating against directory objects. It is about identity storage, not token-based authorization.",
-   "B": "Federation is the general concept of trusting identities across organisational boundaries. OAuth is a specific mechanism; federation names the pattern.",
+   "B": "Federation is the general concept of trusting identities across organizational boundaries. OAuth is a specific mechanism; federation names the pattern.",
    "C": "SAML exchanges authentication assertions between an identity provider and a service provider. It is authentication-centric, which is the opposite of the requirement."
   }
  },
@@ -2391,7 +2391,7 @@
   "incorrect": {
    "A": "Side loading installs an application from outside the official store. It concerns software distribution on a device, not crafted request input.",
    "B": "Target of evaluation is an assessment term for the thing being evaluated. It is not an attack.",
-   "C": "Resource reuse is a virtualisation flaw where memory or storage released by one tenant is handed to another without being cleared."
+   "C": "Resource reuse is a virtualization flaw where memory or storage released by one tenant is handed to another without being cleared."
   }
  },
  "q0587": {
@@ -2399,7 +2399,7 @@
   "explanation": "ALE is SLE multiplied by ARO. The single loss expectancy is $15,000, and twice in three years gives an annualized rate of occurrence of 0.67, so ALE is 15,000 x 0.67, which is approximately $10,000.",
   "incorrect": {
    "A": "$7,500 is the single loss halved, which would be an ARO of 0.5 — once every two years rather than twice every three.",
-   "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualising it.",
+   "C": "$15,000 is the single loss expectancy itself. That is the cost of one occurrence, before annualizing it.",
    "D": "$30,000 is two full losses, which would be the total across the three years rather than the annual figure."
   }
  },
@@ -2715,7 +2715,7 @@
  },
  "q0625": {
   "objective": "3.1",
-  "explanation": "Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
+  "explanation": "Virtualization consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
   "incorrect": {
    "A": "Replication copies data to additional systems. That adds hardware rather than reducing it.",
    "B": "Isolation separates systems from one another. It limits lateral movement but does not reduce the number of physical devices.",
@@ -2862,7 +2862,7 @@
   "explanation": "Steganography hides a message inside ordinary-looking content such as an image or audio file, so an observer sees nothing unusual at all. Encryption conceals what was said; steganography conceals that anything was said.",
   "incorrect": {
    "B": "Data masking obscures part of a value for display, such as showing only the last four digits. The record is plainly visible, just partly hidden.",
-   "C": "Tokenisation substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
+   "C": "Tokenization substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
    "D": "A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."
   }
  },
@@ -3187,7 +3187,7 @@
   "explanation": "Once software is in a customer's hands they can disassemble it. Obfuscation rewrites the code so it behaves identically but is extremely difficult to read — renaming symbols, flattening control flow, stripping debug information — which is what protects the algorithms that constitute the intellectual property.",
   "incorrect": {
    "A": "Code signing proves who published the software and that it is unaltered. It establishes authenticity, not secrecy of the logic.",
-   "C": "Tokenisation substitutes sensitive data values with surrogates. It protects data records, not program logic.",
+   "C": "Tokenization substitutes sensitive data values with surrogates. It protects data records, not program logic.",
    "D": "Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."
   }
  },
@@ -3320,7 +3320,7 @@
  },
  "q0699": {
   "objective": "1.4",
-  "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenisation substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
+  "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenization substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
   "incorrect": {
    "A": "A hardware security module protects and manages keys. It is a device rather than a technique for protecting the information itself.",
    "B": "A hashing algorithm is one-way by design. Nothing can be recovered from the digest.",
@@ -3368,7 +3368,7 @@
   "explanation": "Data crossing between geographically separated sites travels over links you do not control. Encryption makes it unreadable to anyone who intercepts it along the way, which is the only one of these that protects data while it is actually moving.",
   "incorrect": {
    "B": "Masking hides parts of a value for display. It reduces what is shown rather than protecting a transmission.",
-   "C": "Tokenisation substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
+   "C": "Tokenization substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
    "D": "Obfuscation makes data harder to interpret without real cryptographic strength. An interceptor can reverse it."
   }
  },
@@ -3469,7 +3469,7 @@
   "explanation": "Air-gapped means there is no network connection at all between the critical systems and anything else. Because no path exists, remote access privileges are irrelevant — there is nothing to connect to.",
   "incorrect": {
    "A": "Segmentation divides a network logically. Paths still exist between zones, controlled rather than absent.",
-   "B": "Virtualised describes workloads running as guests on shared hardware. Those guests remain networked.",
+   "B": "Virtualized describes workloads running as guests on shared hardware. Those guests remain networked.",
    "D": "Serverless runs code on provider-managed infrastructure, which is inherently reachable over the network."
   }
  },
@@ -3678,12 +3678,12 @@
   "incorrect": {
    "B": "Journaling records every transaction and gives an even smaller loss window, but it is a database and filesystem transaction technique rather than the standard file server restore mechanism.",
    "C": "Obfuscation makes data harder to interpret. It protects nothing against loss.",
-   "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+   "D": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
   }
  },
  "q0746": {
   "objective": "1.4",
-  "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenisation swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
+  "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenization swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
   "incorrect": {
    "B": "Hashing is irreversible, so the original number could never be recovered to settle a transaction.",
    "C": "Salting adds random data before hashing to defeat precomputed tables. It strengthens hashing rather than being a masking technique.",
@@ -3885,7 +3885,7 @@
   "explanation": "If the network has no need to talk to anything outside, removing the connection entirely removes the leak path. An air gap means no physical or logical link exists, so there is no channel for data to travel over.",
   "incorrect": {
    "B": "Containerization isolates applications on a shared kernel. The host still has network connectivity.",
-   "C": "Virtualisation runs multiple guests on one host. The virtual machines remain networked.",
+   "C": "Virtualization runs multiple guests on one host. The virtual machines remain networked.",
    "D": "Decentralization spreads systems and authority across locations. It adds connections rather than removing them."
   }
  },
@@ -3903,7 +3903,7 @@
   "explanation": "Reaching the hypervisor means breaking out of the guest that was supposed to contain you. VM escape is the vulnerability class describing exactly that boundary failure between a virtual machine and its host.",
   "incorrect": {
    "A": "Cross-site scripting injects script into a web page to run in a user's browser. It is a web application flaw.",
-   "B": "SQL injection manipulates database queries. It reaches data, not the virtualisation layer.",
+   "B": "SQL injection manipulates database queries. It reaches data, not the virtualization layer.",
    "C": "A race condition exploits timing between a check and its use. It can be a step in an escape chain but is not the vulnerability being described."
   }
  },
@@ -3986,7 +3986,7 @@
   "incorrect": {
    "A": "Containerized describes how an application is packaged to run on a shared kernel. It concerns deployment, not distributing requests across servers.",
    "B": "Multitenant means several customers share one instance. It is an efficiency model and concentrates rather than distributes risk.",
-   "D": "Virtualised means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."
+   "D": "Virtualized means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."
   }
  },
  "q0782": {
@@ -4003,7 +4003,7 @@
   "explanation": "Test data should look realistic without being real. Masking replaces the actual personal information with plausible substitute values, so the engineer can exercise the application fully while no genuine PII exists in the non-production environment to view or leak.",
   "incorrect": {
    "B": "RBAC limits who can reach the data. The engineer legitimately needs access, and the real PII would still be sitting there.",
-   "C": "Tokenisation substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
+   "C": "Tokenization substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
    "D": "Filtering restricts which records are returned. Fewer real records is still real PII."
   }
  },
@@ -4397,7 +4397,7 @@
   "incorrect": {
    "A": "Data masking obscures parts of a value for display. It is not applied to stored password hashes.",
    "C": "Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
-   "D": "Tokenisation replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenised."
+   "D": "Tokenization replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenized."
   }
  },
  "q0829": {
@@ -4719,7 +4719,7 @@
  },
  "q0866": {
   "objective": "2.3",
-  "explanation": "Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualised environment because it exposes every other guest on the host.",
+  "explanation": "Reaching the host filesystem from inside a guest means the boundary the hypervisor is supposed to enforce has been broken. VM escape is exactly that class of vulnerability, and it is the most serious failure in a virtualized environment because it exposes every other guest on the host.",
   "incorrect": {
    "B": "Cross-site scripting injects script into a web page rendered by a browser. There is no browser here.",
    "C": "A malicious update delivers hostile code through the update channel. The attack described is a runtime injection against the hypervisor.",
@@ -4795,7 +4795,7 @@
   "explanation": "Jailbreaking removes the manufacturer's restrictions so the user gains privileged control over the mobile operating system. MDM enforces device policy that detects and blocks those modifications, which is why it is deployed against this specific risk.",
   "incorrect": {
    "A": "End-of-life devices and firmware compatibility are lifecycle and patching concerns. They have nothing to do with a user deliberately unlocking the OS.",
-   "B": "VM escape is a hypervisor boundary failure in virtualised server environments. Mobile devices are not hypervisors.",
+   "B": "VM escape is a hypervisor boundary failure in virtualized server environments. Mobile devices are not hypervisors.",
    "C": "Buffer overflows are memory-handling defects in application code. MDM does not alter how applications manage memory."
   }
  },
@@ -4902,7 +4902,7 @@
   "objective": "2.3",
   "explanation": "Altering the device's underlying file structure to obtain administrator permissions is removing the manufacturer's restrictions, which is jailbreaking. Once that is done, unauthorized software such as a keylogger can be installed with full privilege.",
   "incorrect": {
-   "A": "Resource reuse is a virtualisation flaw where memory or storage passes between tenants uncleared.",
+   "A": "Resource reuse is a virtualization flaw where memory or storage passes between tenants uncleared.",
    "B": "Bloatware is unwanted preinstalled software. It ships with the device rather than being installed by modifying the OS.",
    "C": "Side loading installs an app from outside the official store. That does not require root access or changing the file structure."
   }
@@ -4982,7 +4982,7 @@
  },
  "q0896": {
   "objective": "4.5",
-  "explanation": "The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorised domains are treated — blocks access at the network level for everyone, not just this user.",
+  "explanation": "The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorized domains are treated — blocks access at the network level for everyone, not just this user.",
   "incorrect": {
    "A": "Awareness training helps users recognize suspicious sites. It relies on judgment rather than enforcing the restriction.",
    "B": "Modifying the unauthorized content policy changes the written rule. A policy does not block anything technically.",
@@ -5012,7 +5012,7 @@
   "explanation": "The employee knew what they were doing and took steps to hide it, so the training gap is about consequences and rules rather than technique. Privacy legislation makes clear that moving PII for personal use is unlawful, and compliance training makes clear it breaches company policy with disciplinary consequences.",
   "incorrect": {
    "B": "Social engineering training covers manipulation by an attacker. Nobody manipulated this employee.",
-   "C": "Risk management training is aimed at those assessing and treating organisational risk, not at deterring misuse.",
+   "C": "Risk management training is aimed at those assessing and treating organizational risk, not at deterring misuse.",
    "E": "Phishing training addresses fraudulent messages. No message was involved.",
    "F": "Remote work training covers working securely away from the office. The misuse would happen anywhere."
   }
@@ -5076,7 +5076,7 @@
   "explanation": "An air gap means no network path exists between the system and the internet, so there is nothing to filter, block or misconfigure. That absence of connectivity is the most definitive way to prevent internet access.",
   "incorrect": {
    "A": "Containerization isolates applications on a shared kernel. The host still has connectivity.",
-   "B": "Virtualisation runs guests on shared hardware. Those guests remain networked.",
+   "B": "Virtualization runs guests on shared hardware. Those guests remain networked.",
    "C": "SD-WAN manages and optimizes connectivity across WAN links — it provides access rather than removing it."
   }
  },
@@ -5375,7 +5375,7 @@
   "explanation": "Obfuscation scrambles or replaces sensitive fields so the records keep their shape and remain usable for testing while no longer containing real customer information. That is the balance the engineer needs — realistic data without exposure.",
   "incorrect": {
    "B": "RBAC limits who may reach the data. The engineer legitimately needs access, and the real data would still be there.",
-   "C": "Tokenisation substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
+   "C": "Tokenization substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
    "D": "Filtering returns fewer records. A smaller set of real customer data is still real customer data."
   }
  },
@@ -5573,7 +5573,7 @@
   "explanation": "Key escrow deposits a copy of the encryption key with a trusted custodian under controlled conditions. If the working key is corrupted or deleted, the escrowed copy is what allows the data to be decrypted rather than lost permanently.",
   "incorrect": {
    "A": "Self-signed certificates are certificates an organization issues to itself. They do not provide key recovery.",
-   "C": "Tokenisation substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
+   "C": "Tokenization substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
    "D": "A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."
   }
  },
@@ -5698,14 +5698,14 @@
   "objective": "1.4",
   "explanation": "Hashing produces a digest that changes completely if any bit changes. Sending the hash alongside the data lets the recipient recompute it and confirm the content arrived exactly as it left, which detects modification in transit.",
   "incorrect": {
-   "B": "Tokenisation substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
+   "B": "Tokenization substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
    "C": "Masking obscures part of a value for display. It neither detects nor prevents alteration.",
    "D": "Encryption keeps data confidential. Ciphertext can still be tampered with, and encryption alone does not reveal that it was."
   }
  },
  "q0977": {
   "objective": "3.3",
-  "explanation": "Tokenisation replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
+  "explanation": "Tokenization replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
   "incorrect": {
    "A": "Hashing is irreversible, so the application could never retrieve the original value when it legitimately needs it.",
    "B": "Masking hides parts of a value for display. The full value still sits in the database underneath.",
@@ -5718,7 +5718,7 @@
   "incorrect": {
    "A": "Monitoring observes the system and alerts on problems. It preserves no data.",
    "C": "Obfuscation makes data harder to interpret. It offers no protection against loss.",
-   "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+   "D": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
   }
  },
  "q0979": {
@@ -5984,7 +5984,7 @@
  },
  "q1008": {
   "objective": "2.3",
-  "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualisation vulnerability because the hypervisor controls every other guest.",
+  "explanation": "Breaking out of a guest to reach the hypervisor means the isolation boundary that separates virtual machines has failed. VM escape is the name for exactly that, and it is the most serious virtualization vulnerability because the hypervisor controls every other guest.",
   "incorrect": {
    "B": "SQL injection manipulates database queries through application input. No database is involved.",
    "C": "Privilege escalation gains higher rights within one system. VM escape crosses to a different system entirely, which is a stronger claim.",
@@ -6322,7 +6322,7 @@
   "objective": "3.3",
   "explanation": "A UAT environment needs data that behaves like production without being production. Masking replaces the sensitive fields with realistic but fictitious values, so testing is meaningful while no real customer data exists outside production.",
   "incorrect": {
-   "B": "Tokenisation substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
+   "B": "Tokenization substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
    "C": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique for this use case.",
    "D": "Encryption protects data but the testers would need the key to use it, at which point the real data is exposed anyway."
   }
@@ -6341,7 +6341,7 @@
   "explanation": "A digital certificate binds a public key to an identity, which supports both goals at once: the key enables encryption for confidentiality, and signing with the corresponding private key provides integrity and proof of origin.",
   "incorrect": {
    "A": "Obfuscation makes data harder to read without genuine cryptographic strength, and it verifies nothing.",
-   "B": "Tokenisation substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
+   "B": "Tokenization substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
    "D": "Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."
   }
  },
@@ -6387,7 +6387,7 @@
   "incorrect": {
    "A": "Signing proves origin and integrity of data. It does not protect stored passwords from disclosure.",
    "B": "Sanitization removes data from media at end of life. It is a disposal control.",
-   "C": "Tokenisation substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
+   "C": "Tokenization substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
    "D": "Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."
   }
  },
@@ -6414,7 +6414,7 @@
   "explanation": "Operational controls are carried out by people through process. Dual control means no single person can complete a sensitive financial transaction alone, and mandatory vacations force someone else into the role so ongoing fraud surfaces while the incumbent is away.",
   "incorrect": {
    "A": "Key escrow is a technical control for recovering encryption keys.",
-   "B": "Tokenisation is a technical data protection technique.",
+   "B": "Tokenization is a technical data protection technique.",
    "E": "Access badge readers are physical controls.",
    "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
   }
@@ -6677,7 +6677,7 @@
   "objective": "2.3",
   "explanation": "VM escape means code inside a guest breaking the isolation boundary and executing on the host. A plug-in triggering a memory overflow that yields code execution on the host is precisely that crossing from guest to hypervisor.",
   "incorrect": {
-   "A": "Command injection on the virtualisation web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
+   "A": "Command injection on the virtualization web console attacks the management interface. That is a serious flaw, but the attacker is coming through the console rather than escaping from inside a VM.",
    "C": "Unauthenticated API requests are an access control failure on the management plane, again not an escape from a guest.",
    "D": "A crafted packet crashing hypervisor services is a denial of service. It disrupts rather than executing code on the host."
   }
@@ -6705,7 +6705,7 @@
   "explanation": "Operational controls are executed by people through process. Dual control requires two authorized individuals to complete a sensitive financial transaction, and mandatory vacations force a handover so ongoing fraud surfaces while the usual person is absent.",
   "incorrect": {
    "A": "Key escrow is a technical control for recovering encryption keys.",
-   "B": "Tokenisation is a technical data protection technique.",
+   "B": "Tokenization is a technical data protection technique.",
    "E": "Access badge readers are physical controls.",
    "F": "Biometrics is a physical or technical authentication control rather than a process."
   }
@@ -6771,7 +6771,7 @@
    "A": "DLP labeling classifies data for policy enforcement. It affects handling, not location.",
    "B": "File metadata manipulation changes descriptive attributes. It does not move data across borders.",
    "C": "Unencrypted data at rest is a confidentiality weakness. It may compound a sovereignty breach but does not cause one.",
-   "D": "Tokenising database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
+   "D": "Tokenizing database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
   }
  },
  "q1098": {
@@ -6809,7 +6809,7 @@
   "incorrect": {
    "A": "Encryption is reversible by anyone with the key, which means a key compromise exposes every password in plaintext.",
    "C": "Masking hides parts of a value for display. The full value still exists underneath.",
-   "D": "Tokenisation substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
+   "D": "Tokenization substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
   }
  },
  "q1102": {
@@ -6863,7 +6863,7 @@
   "incorrect": {
    "B": "Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
    "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
-   "D": "Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
+   "D": "Tokenization substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
   }
  },
  "q1108": {
@@ -6979,7 +6979,7 @@
   "objective": "1.4",
   "explanation": "The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
   "incorrect": {
-   "A": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
+   "A": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
    "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
    "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
   }
@@ -7133,11 +7133,11 @@
  },
  "q1137": {
   "objective": "3.1",
-  "explanation": "Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
+  "explanation": "Virtualization runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
   "incorrect": {
    "A": "Infrastructure as code standardizes how systems are built. It improves consistency without reducing the hardware needed.",
    "B": "Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
-   "D": "Containerization is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."
+   "D": "Containerization is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualization provides."
   }
  },
  "q1138": {
@@ -7308,7 +7308,7 @@
   "incorrect": {
    "A": "Obfuscation makes data harder to read without cryptographic strength. It is a separate, weaker technique.",
    "C": "Data masking hides parts of a value for display. It is not encryption.",
-   "E": "Tokenisation substitutes values with surrogates held in a vault. Again a different protection model.",
+   "E": "Tokenization substitutes values with surrogates held in a vault. Again a different protection model.",
    "F": "Salting is specific to password hashing, adding randomness to defeat precomputed tables."
   }
  },
@@ -7805,7 +7805,7 @@
   "explanation": "A race condition arises when concurrent operations are not properly synchronized, so an attacker can slip an action into the window between a check and its use. Duplicate and simultaneous requests are exactly how that window is forced open.",
   "incorrect": {
    "A": "Sideloading installs software from outside an official store. It is unrelated to request handling.",
-   "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualisation boundaries.",
+   "B": "VM escape breaks out of a guest into the hypervisor. It concerns virtualization boundaries.",
    "D": "SQL injection manipulates database queries through input. It exploits parsing, not timing."
   }
  },
@@ -8129,7 +8129,7 @@
  },
  "q1250": {
   "objective": "5.1",
-  "explanation": "An acceptable use policy tells users what they may and may not do with organisational systems, networks and data. Setting out permitted operations is its whole purpose, and it is the document users sign at onboarding.",
+  "explanation": "An acceptable use policy tells users what they may and may not do with organizational systems, networks and data. Setting out permitted operations is its whole purpose, and it is the document users sign at onboarding.",
   "incorrect": {
    "A": "A framework for performing a security assessment is an assessment methodology, not an AUP.",
    "C": "Procedures for restoring a resource after an incident belong in the disaster recovery or incident response plan.",
@@ -8277,7 +8277,7 @@
   "explanation": "ALE is single loss expectancy multiplied by annualized rate of occurrence. The single loss is $15,000 and twice in three years gives an ARO of 0.67, so 15,000 multiplied by 0.67 is approximately $10,000.",
   "incorrect": {
    "A": "$7,500 corresponds to an ARO of 0.5 — once every two years rather than twice every three.",
-   "C": "$15,000 is the single loss expectancy itself, before annualising.",
+   "C": "$15,000 is the single loss expectancy itself, before annualizing.",
    "D": "$30,000 is two full losses, the total across three years rather than the annual figure."
   }
  },
@@ -8364,7 +8364,7 @@
  },
  "q1276": {
   "objective": "2.3",
-  "explanation": "Virtualisation's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
+  "explanation": "Virtualization's entire security model rests on guests being unable to reach the host or each other. VM escape breaks that isolation, so code in one guest can affect the hypervisor and every other virtual machine sharing the hardware.",
   "incorrect": {
    "B": "Bypassing the guest's own firewall is a local configuration issue within one VM.",
    "C": "Resource starvation from simultaneous memory requests is a capacity and scheduling problem.",

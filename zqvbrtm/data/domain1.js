@@ -37,7 +37,7 @@ export const domain1Questions = [
       "B": "Asymmetric encryption is a type of algorithm (public/private keys), not a way of protecting a laptop's storage.",
       "D": "Database encryption protects data inside a database, not the files and system on a laptop."
     },
-    "tip": null,
+    "tip": "Laptops are the classic lost-or-stolen device. Full disk encryption (FDE) protects everything on the drive at rest, including the OS, temp and swap files.",
     "references": [],
     "source": "bank.pdf#p5",
     "needsReview": false,
@@ -80,7 +80,7 @@ export const domain1Questions = [
       "B": "Compensating controls stand in for a primary control that cannot be used. An AUP is a primary policy, not a substitute.",
       "C": "Corrective controls fix things after an incident, such as restoring from backup. An AUP acts beforehand."
     },
-    "tip": null,
+    "tip": "Policies such as an AUP are managerial controls by category. By type, a rule that stops misuse before it happens is preventive.",
     "references": [],
     "source": "bank.pdf#p5",
     "needsReview": false,
@@ -123,7 +123,7 @@ export const domain1Questions = [
       "B": "Moving the system to another segment changes its exposure but is itself an unapproved change.",
       "D": "Applying the patch straight away bypasses approval and testing, which is how unplanned outages happen."
     },
-    "tip": null,
+    "tip": "Any change to production, even an urgent patch, starts with a change request. 'Urgent' means an expedited approval, not skipping the process.",
     "references": [],
     "source": "bank.pdf#p8",
     "needsReview": false,
@@ -166,7 +166,7 @@ export const domain1Questions = [
       "C": "Disabling IPS signatures weakens protection and has nothing to do with the rule blocking legitimate traffic.",
       "D": "An 'allow any' rule above 'deny any' would permit everything, defeating the purpose of the firewall."
     },
-    "tip": null,
+    "tip": "An outage caused by a change that 'should have worked' → the change should have been tested in a non-production environment first.",
     "references": [],
     "source": "bank.pdf#p10",
     "needsReview": false,
@@ -184,7 +184,7 @@ export const domain1Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Honey pot"
+        "text": "Honeypot"
       },
       {
         "key": "B",
@@ -209,7 +209,7 @@ export const domain1Questions = [
       "C": "Zero Trust is an architecture that verifies every access request. It does not lure or observe attackers.",
       "D": "Geofencing triggers actions based on a device's location. It does not reveal attacker behavior."
     },
-    "tip": null,
+    "tip": "Watch attackers without risking production = honeypot (a decoy system). Honeynet = a network of decoys; honeyfile and honeytoken = decoy data.",
     "references": [],
     "source": "bank.pdf#p13",
     "needsReview": false,
@@ -252,7 +252,7 @@ export const domain1Questions = [
       "C": "Authentication proves identity at login, but does not by itself prove who created a particular message.",
       "D": "Access logs record access events, but logs can be disputed or altered and do not provide cryptographic proof of authorship."
     },
-    "tip": null,
+    "tip": "Proof of who sent something that they cannot deny = non-repudiation (digital signatures). Authentication only proves who logged in.",
     "references": [],
     "source": "bank.pdf#p15",
     "needsReview": false,
@@ -288,14 +288,14 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Collecting logs in a SIEM and having an analyst review them finds events after they have happened. Controls that identify activity rather than stop it are detective.",
+    "explanation": "Collecting logs in a SIEM and having an analyst review them finds events after they have happened. Controls that identify activity rather than stop it are detective. A weekly review in particular can only reveal what has already occurred, so nothing here prevents or corrects an attack.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Corrective controls fix problems after an incident, such as restoring systems.",
       "B": "Preventive controls stop an event before it happens, such as firewalls or locks.",
       "D": "Deterrent controls discourage attempts, such as warning signs."
     },
-    "tip": null,
+    "tip": "Reviewing logs finds things after they happen = detective. Stopping them = preventive; fixing afterward = corrective; discouraging = deterrent.",
     "references": [],
     "source": "bank.pdf#p17",
     "needsReview": false,
@@ -331,14 +331,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Steganography hides data inside another file, such as text or code tucked into an image, so its presence is not obvious.",
+    "explanation": "Steganography hides data inside another file, such as text or code tucked into an image, so its presence is not obvious. Unlike encryption, which makes data unreadable but plainly there, steganography hides the fact that any hidden data exists. Attackers use it to smuggle malware or exfiltrate data past filters.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Symmetric encryption scrambles data so it is unreadable, but does not hide that the data exists.",
       "B": "Hashing produces a fixed-length digest for integrity checks. It does not hide content inside images.",
       "C": "Data masking replaces sensitive values with placeholders in displays, not hiding data inside images."
     },
-    "tip": null,
+    "tip": "Data hidden inside an image, audio or video file = steganography. Encryption makes data unreadable; steganography hides that it exists at all.",
     "references": [],
     "source": "bank.pdf#p32",
     "needsReview": false,
@@ -381,7 +381,7 @@ export const domain1Questions = [
       "B": "Hashing turns the number into an irreversible digest; no digits remain visible.",
       "D": "Tokenization swaps the number for an unrelated token. It protects the data, but does not show the real last four digits."
     },
-    "tip": null,
+    "tip": "Show only the last four digits = masking. Tokenization swaps the number for a token; hashing and encryption hide all of it.",
     "references": [],
     "source": "bank.pdf#p35",
     "needsReview": false,
@@ -424,7 +424,7 @@ export const domain1Questions = [
       "C": "Non-repudiation proves who performed an action. It does not create zones or enforce access policy.",
       "D": "The CIA triad is the set of security goals, not a solution that is set up."
     },
-    "tip": null,
+    "tip": "Secure zones + one policy enforced everywhere + 'never trust, always verify' = Zero Trust (policy engine, policy administrator, policy enforcement points).",
     "references": [],
     "source": "bank.pdf#p38",
     "needsReview": false,
@@ -475,9 +475,9 @@ export const domain1Questions = [
       "A": "Fencing marks and deters at a perimeter. It does not authenticate anyone.",
       "B": "Video surveillance records who entered. It is detective rather than preventive.",
       "E": "A sign-in sheet is a paper record anyone can write anything on. It authenticates nothing.",
-      "F": "A sensor detects presence or movement and raises an alert."
+      "F": "A sensor detects presence or movement and raises an alert. It does not decide who is allowed in."
     },
-    "tip": null,
+    "tip": "Only authorized people get in = something that authenticates (badge) + something that stops tailgating (access control vestibule). Cameras and sign-in sheets only record.",
     "references": [],
     "source": "bank.pdf#p39",
     "needsReview": false,
@@ -513,14 +513,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Reviewing log files reveals what happened after the fact. Controls used to identify and investigate events are detective.",
+    "explanation": "Reviewing log files reveals what happened after the fact. Controls used to identify and investigate events are detective. The logs let the administrator reconstruct how the ransomware got in and what it touched, but they did nothing to stop the attack, which is why this is detective rather than preventive.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Compensating controls substitute for a primary control that cannot be used.",
       "C": "Preventive controls stop an event from happening; reading logs after the attack does not.",
       "D": "Corrective controls fix things after an incident, such as restoring from backup, not reviewing what happened."
     },
-    "tip": null,
+    "tip": "Reading logs after an attack = detective control. Restoring from backup = corrective.",
     "references": [],
     "source": "bank.pdf#p40",
     "needsReview": false,
@@ -556,14 +556,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A scheduled downtime window is an agreed time set aside for changes, chosen to minimize business impact and let everyone know in advance.",
+    "explanation": "A scheduled downtime window is an agreed time set aside for changes, chosen to minimize business impact and let everyone know in advance. It is usually outside business hours, so if a change causes an outage or has to be rolled back, as few people as possible are affected.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Impact analysis assesses what a change could affect; it does not set a time to make it.",
       "C": "A backout plan explains how to undo a failed change.",
       "D": "The change advisory board approves changes, but does not itself provide the time window."
     },
-    "tip": null,
+    "tip": "A planned window for changes with minimal business impact = scheduled downtime (a maintenance window).",
     "references": [],
     "source": "bank.pdf#p46",
     "needsReview": false,
@@ -599,14 +599,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "When a certificate is presented, the client asks the CA's OCSP responder in real time whether that certificate is still valid or has been revoked.",
+    "explanation": "When a certificate is presented, the client asks the CA's OCSP responder in real time whether that certificate is still valid or has been revoked. OCSP checks one certificate at a time, unlike a CRL, which is a whole list the client must download. OCSP stapling lets the server attach a recent response itself, which is faster and more private.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A certificate signing request is sent to a CA to obtain a certificate, not to validate one.",
       "C": "The CA issues and revokes certificates; OCSP is the mechanism used to check validity when one is presented.",
       "D": "A CRC is an error-detection checksum, unrelated to certificates."
     },
-    "tip": null,
+    "tip": "Real-time revocation check = OCSP (stapling makes it faster). CRL = the downloadable list of revoked certificates. CSR = a request for a new certificate.",
     "references": [],
     "source": "bank.pdf#p47",
     "needsReview": false,
@@ -642,14 +642,14 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "HR files hold personal information that only certain people should see. Least privilege limits who can read them, which protects confidentiality.",
+    "explanation": "HR files hold personal information that only certain people should see. Least privilege limits who can read them, which protects confidentiality. Salary, medical and disciplinary records must not be visible across the company, so permissions go only to the HR staff who need each folder.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Integrity is about preventing unauthorized changes. Least privilege helps here too, but HR data's main concern is who can see it.",
       "B": "Availability is about access when needed; restricting permissions does the opposite.",
       "D": "Non-repudiation proves who performed an action. It is not the reason to limit access."
     },
-    "tip": null,
+    "tip": "Least privilege on sensitive records (HR, medical, finance) protects confidentiality: fewer people can see the data.",
     "references": [],
     "source": "bank.pdf#p50",
     "needsReview": false,
@@ -692,7 +692,7 @@ export const domain1Questions = [
       "B": "Logging controls failing open would mean losing the audit trail during a failure, which is the wrong default.",
       "D": "Logical security controls failing closed is correct practice generally, but again it is not the life-safety principle being asked about."
     },
-    "tip": null,
+    "tip": "Life safety wins: safety systems (fire doors, emergency exits) fail open. Security systems that protect data fail closed.",
     "references": [],
     "source": "bank.pdf#p51",
     "needsReview": false,
@@ -745,7 +745,7 @@ export const domain1Questions = [
       "E": "Public key management matters for PKI, but FDE on laptops normally uses symmetric keys protected by the TPM.",
       "F": "Certificate authorities issue certificates; FDE does not depend on them."
     },
-    "tip": null,
+    "tip": "Planning FDE: keys need a safe home (TPM) and a recovery path (key escrow) for when users forget PINs or leave.",
     "references": [],
     "source": "bank.pdf#p57",
     "needsReview": false,
@@ -781,14 +781,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A salt is random data added to each password before it is hashed, so identical passwords produce different hashes and precomputed rainbow tables are useless.",
+    "explanation": "A salt is random data added to each password before it is hashed, so identical passwords produce different hashes and precomputed rainbow tables are useless. The salt is stored alongside the hash and is not secret; its job is simply to make every hash unique.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key stretching repeats the hashing many times to slow cracking. It adds work, not extra data before hashing.",
       "B": "Data masking hides parts of data in displays; it is unrelated to hashing.",
       "C": "Steganography hides data inside other files."
     },
-    "tip": null,
+    "tip": "Random data added to a password before hashing = salt (defeats rainbow tables). Hashing thousands of times over = key stretching (bcrypt, PBKDF2).",
     "references": [],
     "source": "bank.pdf#p59",
     "needsReview": false,
@@ -824,14 +824,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "In the Zero Trust model, the data plane is where traffic actually flows through implicit trust zones and policy enforcement points. Secured zones belong to the data plane; adaptive identity, threat scope reduction and subjects are control-plane concepts.",
+    "explanation": "CompTIA's Zero Trust model splits into a control plane (adaptive identity, threat scope reduction, policy-driven access control, policy engine and administrator) and a data plane (implicit trust zones, subject/system, policy enforcement points). Secured zones, the implicit trust zones traffic passes through, are what an analyst evaluates when looking at the data plane.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Subject role is evaluated by the policy engine in the control plane.",
+      "B": "The subject (the user or system asking for access) does appear in the data plane, but its role is an attribute the policy engine weighs in the control plane. The data-plane structure being implemented is the secured zones.",
       "C": "Adaptive identity is a control-plane decision about authentication.",
       "D": "Threat scope reduction is a control-plane goal achieved through policy."
     },
-    "tip": null,
+    "tip": "Zero Trust planes. Control plane: adaptive identity, threat scope reduction, policy engine and administrator. Data plane: implicit trust zones, subject/system, policy enforcement point.",
     "references": [],
     "source": "bank.pdf#p64",
     "needsReview": false,
@@ -874,7 +874,7 @@ export const domain1Questions = [
       "C": "Searching for readable strings may reveal clues, but proves nothing about origin.",
       "D": "A hash checks integrity against a known value, but by itself does not prove who produced the file."
     },
-    "tip": null,
+    "tip": "Did it really come from the vendor, unaltered? Validate the code signature. A hash alone checks integrity, not who published it.",
     "references": [],
     "source": "bank.pdf#p65",
     "needsReview": false,
@@ -917,7 +917,7 @@ export const domain1Questions = [
       "B": "Segmentation separates networks. A firewall in front of one system is part of it, but disabling services is not; the combination is compensating controls.",
       "C": "Risk transfer moves the risk to a third party, such as an insurer."
     },
-    "tip": null,
+    "tip": "Extra safeguards (disable services, add a firewall) around something you cannot fix = compensating controls.",
     "references": [],
     "source": "bank.pdf#p66",
     "needsReview": false,
@@ -960,7 +960,7 @@ export const domain1Questions = [
       "B": "Incident response procedures apply during security incidents, not routine configuration.",
       "C": "A business continuity plan keeps the organization operating during disruptions."
     },
-    "tip": null,
+    "tip": "Any firewall rule change goes through change management: request, approval, testing, backout plan.",
     "references": [],
     "source": "bank.pdf#p70",
     "needsReview": false,
@@ -1003,7 +1003,7 @@ export const domain1Questions = [
       "B": "OCSP checks one certificate at a time in real time, suited to validating a certificate as it is used rather than auditing everything installed.",
       "C": "A certificate signing request asks a CA for a new certificate."
     },
-    "tip": null,
+    "tip": "Checking many installed certificates against revocations = CRL (the list). Checking one certificate live as it is used = OCSP.",
     "references": [],
     "source": "bank.pdf#p76",
     "needsReview": false,
@@ -1046,7 +1046,7 @@ export const domain1Questions = [
       "B": "IaaS provides computing infrastructure, not key management.",
       "D": "PaaS provides a development platform, not key management."
     },
-    "tip": null,
+    "tip": "Central key management across clouds, using your own existing keys = HSM as a service (cloud HSM).",
     "references": [],
     "source": "bank.pdf#p78",
     "needsReview": false,
@@ -1082,14 +1082,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Adding random data to a password before hashing is salting. The salt makes each hash unique, so identical passwords do not match and precomputed tables stop working.",
+    "explanation": "Adding random data to a password before hashing is salting. The salt makes each hash unique, so identical passwords do not match and precomputed tables stop working. A long random salt such as 36 characters also makes it impractical to build rainbow tables for every possible salt.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key stretching makes cracking slower by hashing many times, rather than by adding a random string.",
       "B": "Tokenization replaces sensitive values with tokens.",
       "C": "Data masking hides parts of data in displays."
     },
-    "tip": null,
+    "tip": "Random characters added before hashing = a salt. Salts defeat rainbow tables and make identical passwords hash differently.",
     "references": [],
     "source": "bank.pdf#p78",
     "needsReview": false,
@@ -1125,14 +1125,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An access control vestibule (mantrap) and a photo ID check at the entrance are tangible barriers controlling who enters a building. They are physical controls.",
+    "explanation": "An access control vestibule (mantrap) and a photo ID check at the entrance are tangible barriers controlling who enters a building. They are physical controls. The vestibule lets only one person through at a time after they are verified, which also stops tailgating.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Managerial controls are policies and procedures.",
       "C": "Technical controls are enforced by technology on systems, such as firewalls.",
       "D": "The ID check is carried out by people, but the vestibule itself is a physical control, and the combination is best described as physical."
     },
-    "tip": null,
+    "tip": "Vestibules (mantraps), fences, locks, guards and bollards = physical controls.",
     "references": [],
     "source": "bank.pdf#p82",
     "needsReview": false,
@@ -1175,7 +1175,7 @@ export const domain1Questions = [
       "B": "Tokenization replaces specific values with tokens, typically for fields such as card numbers, not all sensitive data at rest.",
       "D": "Segmentation separates networks; the stored data itself stays readable."
     },
-    "tip": null,
+    "tip": "Make stored data unreadable but recoverable = encryption. Hashing is one-way: for verifying, not for getting data back.",
     "references": [],
     "source": "bank.pdf#p83",
     "needsReview": false,
@@ -1218,7 +1218,7 @@ export const domain1Questions = [
       "C": "Motion sensors detect movement, but cannot tell authorized from unauthorized staff.",
       "D": "Video surveillance records intrusions, but does not prevent them."
     },
-    "tip": null,
+    "tip": "Insiders are already in the building: protect the data center with its own access control (badges), not perimeter controls like bollards.",
     "references": [],
     "source": "bank.pdf#p86",
     "needsReview": false,
@@ -1232,7 +1232,7 @@ export const domain1Questions = [
     "objective": "1.2",
     "objectiveTitle": "Summarize fundamental security concepts",
     "type": "single",
-    "question": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project fulfil?",
+    "question": "A network administrator is working on a project to deploy a load balancer in the company's cloud environment. Which of the following fundamental security requirements does this project fulfill?",
     "choices": [
       {
         "key": "A",
@@ -1254,14 +1254,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer spreads traffic across servers and routes around failed ones, keeping services reachable. It supports availability.",
+    "explanation": "A load balancer spreads traffic across servers and routes around failed ones, keeping services reachable. It supports availability. If one server fails or is overloaded, users are sent to the healthy ones, so the service stays up.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Privacy concerns personal data handling; load balancing does not address it.",
       "B": "Integrity ensures data is not altered.",
       "C": "Confidentiality keeps data from unauthorized eyes."
     },
-    "tip": null,
+    "tip": "Load balancers, redundancy, clustering and UPS units all serve availability.",
     "references": [],
     "source": "bank.pdf#p87",
     "needsReview": false,
@@ -1304,7 +1304,7 @@ export const domain1Questions = [
       "B": "A vulnerability scan checks for flaws after the device is installed on the network.",
       "C": "Disabling unnecessary ports is hardening -- useful, but not the planning step for a new camera."
     },
-    "tip": null,
+    "tip": "Installing a new camera (or wireless access point)? Do a site survey first to decide placement and coverage.",
     "references": [],
     "source": "bank.pdf#p88",
     "needsReview": false,
@@ -1340,14 +1340,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "One shared key both encrypts and decrypts the message. Using the same key on both ends is symmetric encryption.",
+    "explanation": "One shared key both encrypts and decrypts the message. Using the same key on both ends is symmetric encryption. It is fast, which suits bulk data, but the key has to reach the other office securely, which is why asymmetric encryption is often used to exchange it first.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "Asymmetric encryption uses a key pair -- the public key encrypts and the private key decrypts.",
       "C": "Hashing is one-way and cannot be decrypted.",
       "D": "Salting adds random data before hashing; it is not encryption."
     },
-    "tip": null,
+    "tip": "The same key on both ends = symmetric (AES). A public/private key pair = asymmetric (RSA, ECC).",
     "references": [],
     "source": "bank.pdf#p89",
     "needsReview": false,
@@ -1383,14 +1383,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A backout plan documents how to undo the change and return the system to its previous working state if something goes wrong.",
+    "explanation": "A backout plan documents how to undo the change and return the system to its previous working state if something goes wrong. It is submitted with the change request so that, if performance suffers, the team can roll back quickly instead of improvising during an outage.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "An impact analysis predicts what the change might affect, not how to reverse it.",
       "C": "A test procedure checks that the change works before or after deployment.",
       "D": "The approval procedure authorizes the change; it does not show that it can be reversed."
     },
-    "tip": null,
+    "tip": "How to undo a change if it goes wrong = the backout (rollback) plan.",
     "references": [],
     "source": "bank.pdf#p90",
     "needsReview": false,
@@ -1433,7 +1433,7 @@ export const domain1Questions = [
       "C": "A spreadsheet is a tool choice. It can work at small scale but says nothing about whether the procedures are effective.",
       "D": "An automatic bypass for security updates removes the control entirely. Urgency is handled by an expedited path with approval, not by skipping it."
     },
-    "tip": null,
+    "tip": "Effective change management: approval before the change, testing, a backout plan and documentation. No bypasses.",
     "references": [],
     "source": "bank.pdf#p92",
     "needsReview": false,
@@ -1469,14 +1469,14 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Publishing the hash of each file lets users hash their download and compare. If the values match, the file was not corrupted or tampered with.",
+    "explanation": "Publishing the hash of each file lets users hash their download and compare. If the values match, the file was not corrupted or tampered with. A strong algorithm such as SHA-256 is used, and the hashes should be published over HTTPS so an attacker cannot swap them along with the files.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Certificates identify the publisher; used with a code signature they prove origin, but integrity checking of a download is done with hashes.",
       "C": "Posting algorithm names alone gives users nothing to check against.",
       "D": "Salting is for protecting stored passwords, not verifying downloads."
     },
-    "tip": null,
+    "tip": "Publish hashes so users can check downloads were not corrupted or tampered with. Code signing adds proof of who published them.",
     "references": [],
     "source": "bank.pdf#p93",
     "needsReview": false,
@@ -1512,14 +1512,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Storing password hashes rather than passwords means that a stolen login database does not reveal passwords directly, limiting the damage of a breach.",
+    "explanation": "Storing password hashes rather than passwords means that a stolen login database does not reveal passwords directly, limiting the damage of a breach. Salting each hash and using a slow algorithm such as bcrypt or PBKDF2 makes cracking the stolen hashes far harder still.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Tokenization replaces sensitive values in systems such as payment processing, not login credentials.",
       "C": "Obfuscation only makes data harder to read; it gives no real cryptographic protection.",
       "D": "Segmentation limits access to the database, but once it is stolen, nothing protects its contents."
     },
-    "tip": null,
+    "tip": "Protect stored passwords by hashing them (with salts). A stolen hash database does not reveal the passwords directly.",
     "references": [],
     "source": "bank.pdf#p93",
     "needsReview": false,
@@ -1562,7 +1562,7 @@ export const domain1Questions = [
       "B": "An IDS alerts on traffic matching known patterns. It tells you an attack happened, not how the attacker operates step by step.",
       "D": "A layer 3 switch routes traffic between networks. It is infrastructure with no analytical role."
     },
-    "tip": null,
+    "tip": "Observe attackers' tools and techniques safely = honeypot.",
     "references": [],
     "source": "bank.pdf#p97",
     "needsReview": false,
@@ -1605,7 +1605,7 @@ export const domain1Questions = [
       "C": "Integrity means data has not been altered. A DDoS floods a service without changing any data.",
       "D": "Confidentiality keeps data from unauthorized eyes. Nothing is disclosed by a denial of service attack."
     },
-    "tip": null,
+    "tip": "Anything that protects against DDoS protects availability.",
     "references": [],
     "source": "bank.pdf#p101",
     "needsReview": false,
@@ -1658,7 +1658,7 @@ export const domain1Questions = [
       "D": "Directive controls instruct people how to behave, typically through policy and procedure. A warning sign is close in spirit, but its purpose here is to discourage rather than to direct.",
       "E": "Compensating controls stand in for a primary control that cannot be implemented. These are being deployed as controls in their own right, not as substitutes."
     },
-    "tip": null,
+    "tip": "Signs = deterrent (discourage). Cameras = detective (record). Locks and barriers = preventive.",
     "references": [],
     "source": "bank.pdf#p103",
     "needsReview": false,
@@ -1701,7 +1701,7 @@ export const domain1Questions = [
       "C": "An ACL is a list of permit and deny rules applied to a resource or interface. It enforces authorization decisions but provides no authentication or accounting.",
       "D": "PEM is a file format for encoding certificates and keys in base64 text. It is a storage encoding, not a security concept a server delivers."
     },
-    "tip": null,
+    "tip": "RADIUS (and TACACS+) = AAA: authentication, authorization and accounting.",
     "references": [],
     "source": "bank.pdf#p106",
     "needsReview": false,
@@ -1744,7 +1744,7 @@ export const domain1Questions = [
       "B": "Corrective controls fix problems after an incident.",
       "D": "Segmentation does prevent some access, but its purpose here is to compensate for the server's missing protections."
     },
-    "tip": null,
+    "tip": "Segmenting a legacy system that cannot be patched = compensating control.",
     "references": [],
     "source": "bank.pdf#p107",
     "needsReview": false,
@@ -1787,7 +1787,7 @@ export const domain1Questions = [
       "C": "Encryption protects confidentiality; it does not by itself prove data was not changed.",
       "D": "A checksum detects accidental errors, but is not designed to detect deliberate tampering the way a cryptographic hash is."
     },
-    "tip": null,
+    "tip": "Verify data has not changed = hashing (SHA-256). Checksums catch accidental errors; cryptographic hashes catch tampering.",
     "references": [],
     "source": "bank.pdf#p113",
     "needsReview": false,
@@ -1832,7 +1832,7 @@ export const domain1Questions = [
       "E",
       "F"
     ],
-    "explanation": "MFA and patch management are enforced through technology, so their category is technical; both stop attacks before they succeed, so their type is preventive.",
+    "explanation": "MFA and patch management are enforced through technology, so their category is technical; both stop attacks before they succeed, so their type is preventive. MFA prevents logins with stolen passwords, and patching removes vulnerabilities before they are exploited.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Physical controls are tangible barriers such as locks and fences.",
@@ -1840,7 +1840,7 @@ export const domain1Questions = [
       "C": "Detective controls identify events after they happen.",
       "D": "'Administrator' is not a control category."
     },
-    "tip": null,
+    "tip": "MFA and patching: category = technical, type = preventive.",
     "references": [],
     "source": "bank.pdf#p113",
     "needsReview": false,
@@ -1876,14 +1876,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The tool records suspicious site visits and reports on them afterwards, without blocking anything. Identifying activity after it happens is a detective control.",
+    "explanation": "The tool records suspicious site visits and reports on them afterwards, without blocking anything. Identifying activity after it happens is a detective control. Blocking the sites instead, for example with DNS filtering, would make it preventive.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A preventive control would block the sites.",
       "B": "A deterrent discourages behavior, such as a warning banner.",
       "C": "A corrective control fixes something after an incident."
     },
-    "tip": null,
+    "tip": "Logs and reports suspicious activity without blocking it = detective control.",
     "references": [],
     "source": "bank.pdf#p116",
     "needsReview": false,
@@ -1919,14 +1919,14 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "A spoofed certificate identity points to a certificate the attacker generated and signed themselves with their own private key -- a self-signed certificate that no trusted CA verified.",
+    "explanation": "A spoofed certificate identity points to a certificate the attacker generated and signed themselves with their own private key -- a self-signed certificate that no trusted CA verified. Clients that check the chain of trust reject it, which is why users should never click through certificate warnings.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A root certificate belongs to a trusted CA; an attacker would not have the CA's private key.",
       "B": "Public keys are meant to be public, and an expired certificate is simply invalid, not spoofed.",
       "D": "A wildcard certificate covers many subdomains; the public key is not the missing piece."
     },
-    "tip": null,
+    "tip": "Spoofed certificate identity → the attacker's own private key and a self-signed certificate that no trusted CA vouches for.",
     "references": [],
     "source": "bank.pdf#p117",
     "needsReview": false,
@@ -1969,7 +1969,7 @@ export const domain1Questions = [
       "B": "A bug bounty pays researchers to report vulnerabilities, not to lure attackers.",
       "C": "A DNS sinkhole redirects requests for malicious domains to a controlled server."
     },
-    "tip": null,
+    "tip": "Decoy assets that alert you when someone probes them = honeypot.",
     "references": [],
     "source": "bank.pdf#p123",
     "needsReview": false,
@@ -2012,7 +2012,7 @@ export const domain1Questions = [
       "B": "A hardware or software token as a second factor is an authentication method, unrelated to data tokenization.",
       "D": "Masking and segmentation are separate techniques from tokenization."
     },
-    "tip": null,
+    "tip": "Keep a card on file safely = tokenization: the real number sits in a vault and systems store a meaningless token.",
     "references": [],
     "source": "bank.pdf#p126",
     "needsReview": false,
@@ -2048,14 +2048,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Rainbow tables are precomputed hashes of common passwords. Salting adds unique random data to each password before hashing, so precomputed tables no longer match.",
+    "explanation": "Rainbow tables are precomputed hashes of common passwords. Salting adds unique random data to each password before hashing, so precomputed tables no longer match. An attacker would need a separate table for every salt, which is impractical.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Digital signatures prove authenticity and integrity, not resistance to cracking.",
       "C": "Hashing alone is exactly what rainbow tables are built to reverse.",
       "D": "Perfect forward secrecy protects past session keys in encrypted communications."
     },
-    "tip": null,
+    "tip": "Salting defeats rainbow tables: precomputed hashes no longer match.",
     "references": [],
     "source": "bank.pdf#p128",
     "needsReview": false,
@@ -2098,7 +2098,7 @@ export const domain1Questions = [
       "B": "Symmetric encryption also requires decryption before processing.",
       "D": "Ephemeral keys are temporary session keys; they do not allow processing of encrypted data."
     },
-    "tip": null,
+    "tip": "Compute on encrypted data without decrypting it = homomorphic encryption: slow, but the provider never sees plaintext.",
     "references": [],
     "source": "bank.pdf#p129",
     "needsReview": false,
@@ -2134,14 +2134,14 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Two-person integrity requires two authorized people to carry out a sensitive task together, so no single person can make a mistake or act without authorization unnoticed.",
+    "explanation": "Two-person integrity requires two authorized people to carry out a sensitive task together, so no single person can make a mistake or act without authorization unnoticed. Each person checks the other, which protects against both honest errors and a lone insider.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Two people are not there to halve the time; the goal is oversight.",
       "B": "Two-person integrity uses two authorized participants, not observers from another department.",
       "D": "Recording someone on CCTV is monitoring one person, not two-person control."
     },
-    "tip": null,
+    "tip": "Two-person integrity = two authorized people must act together on a sensitive task (like two keys to open a vault). It stops both mistakes and lone bad actors.",
     "references": [],
     "source": "bank.pdf#p130",
     "needsReview": false,
@@ -2177,14 +2177,14 @@ export const domain1Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Staging mirrors production as closely as possible, often with a subset of real data, so major upgrades can be assessed and features demonstrated before going live.",
+    "explanation": "Staging mirrors production as closely as possible, often with a subset of real data, so major upgrades can be assessed and features demonstrated before going live. Because it matches production, problems found there are likely to be real problems, without risking the live system.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Development is where code is written, usually without customer data.",
       "B": "Test is for functional testing, typically with test data, not production-like demonstrations.",
       "C": "Production is live; assessing upgrades there risks the business."
     },
-    "tip": null,
+    "tip": "A mirror of production with a subset of real data, for final testing and demos = staging.",
     "references": [],
     "source": "bank.pdf#p134",
     "needsReview": false,
@@ -2220,14 +2220,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes -- confidentiality.",
+    "explanation": "Restricting client files to people with a need to know is about keeping information from unauthorized eyes -- confidentiality. Role-based access and need-to-know are the everyday mechanisms that enforce it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Availability means access when needed; this restricts access.",
       "C": "Integrity protects data from unauthorized change.",
       "D": "Non-repudiation proves who performed an action."
     },
-    "tip": null,
+    "tip": "Need-to-know and role-based access to client files = confidentiality.",
     "references": [],
     "source": "bank.pdf#p137",
     "needsReview": false,
@@ -2270,7 +2270,7 @@ export const domain1Questions = [
       "C": "Technical controls are enforced by technology -- firewalls, encryption, access control lists. An AUP states rules; it does not enforce them technically.",
       "D": "Operational controls are carried out by people day to day, such as security guards or awareness training. The AUP itself is a management-level policy, not an operational activity."
     },
-    "tip": null,
+    "tip": "Policies such as an AUP, standards and procedures = managerial controls.",
     "references": [],
     "source": "bank.pdf#p139",
     "needsReview": false,
@@ -2306,14 +2306,14 @@ export const domain1Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Storing password hashes rather than passwords means a stolen login database does not reveal passwords directly, limiting the damage of a breach.",
+    "explanation": "Storing password hashes rather than passwords means a stolen login database does not reveal passwords directly, limiting the damage of a breach. Salts and a slow hashing algorithm make cracking the stolen hashes much harder.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Tokenization replaces sensitive values in systems such as payment processing, not login credentials.",
       "C": "Obfuscation only makes data harder to read; it provides no real cryptographic protection.",
       "D": "Segmentation limits access to the database, but once it is stolen, nothing protects its contents."
     },
-    "tip": null,
+    "tip": "Protect a login database = hash and salt the passwords.",
     "references": [],
     "source": "bank.pdf#p140",
     "needsReview": false,
@@ -2356,7 +2356,7 @@ export const domain1Questions = [
       "B": "Version changes describes the edits themselves rather than the process for tracking them. The department needs the discipline, not a label for the diffs.",
       "C": "Version updates likewise names the act of updating. Updating without a controlled history is precisely the problem being solved."
     },
-    "tip": null,
+    "tip": "Tracking revisions of documents or code = version control.",
     "references": [],
     "source": "bank.pdf#p151",
     "needsReview": false,
@@ -2404,12 +2404,12 @@ export const domain1Questions = [
     "explanation": "Both are deception and disruption technologies that reveal an intruder already inside. A honeypot is a decoy system with no legitimate purpose, so any interaction with it is suspicious by definition. A DNS sinkhole redirects lookups for known-malicious domains, exposing which internal hosts are trying to reach an attacker's infrastructure.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Tokenisation replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
+      "A": "Tokenization replaces sensitive values with non-sensitive substitutes. It protects data if it is stolen but detects nothing.",
       "B": "CI/CD is an automated build-and-release pipeline. It is a development practice and has no detection role.",
       "D": "Threat modeling is a design-time exercise to anticipate how a system might be attacked. It is predictive, performed before deployment, not a live detection method.",
-      "F": "Data obfuscation makes data harder to interpret. Like tokenisation it reduces the value of stolen data without revealing an intruder."
+      "F": "Data obfuscation makes data harder to interpret. Like tokenization it reduces the value of stolen data without revealing an intruder."
     },
-    "tip": null,
+    "tip": "Detect intruders already inside = honeypots (any contact is suspicious) and DNS sinkholes (reveal hosts calling known-bad domains).",
     "references": [],
     "source": "bank.pdf#p153",
     "needsReview": false,
@@ -2450,9 +2450,9 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "B": "Encryption protects confidentiality by making content unreadable without the key. An attacker can still alter ciphertext, and legitimate users must be able to run the software anyway.",
       "C": "Baselines record a known-good configuration to compare systems against. They govern how a system is set up, not whether a released binary has been altered.",
-      "D": "Tokenisation swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
+      "D": "Tokenization swaps a sensitive value for a meaningless substitute, used mainly for card and identifier data. It does not verify that a file is unchanged."
     },
-    "tip": null,
+    "tip": "Detect tampering with released software = hashing: publish the hash so anyone can check the file. Code signing adds proof of who published it.",
     "references": [],
     "source": "bank.pdf#p153",
     "needsReview": false,
@@ -2510,7 +2510,7 @@ export const domain1Questions = [
       "D": "Detective controls identify that something has occurred. A VLAN restriction blocks access rather than reporting it.",
       "G": "Deterrent controls discourage an attacker who is aware of them. An internal VLAN boundary is invisible to an attacker and stops them regardless of intent."
     },
-    "tip": null,
+    "tip": "Segmenting an unpatchable system: category = technical, type = compensating.",
     "references": [],
     "source": "bank.pdf#p154",
     "needsReview": false,
@@ -2553,7 +2553,7 @@ export const domain1Questions = [
       "C": "Limiting third-party libraries reduces supply-chain and dependency risk. It shrinks the attack surface but leaves your own code just as readable.",
       "D": "Compile flags can strip symbols and enable protections, which helps a little, but they are a build setting rather than the recognized technique for resisting reverse engineering."
     },
-    "tip": null,
+    "tip": "Make reverse engineering harder = code obfuscation.",
     "references": [],
     "source": "bank.pdf#p155",
     "needsReview": false,
@@ -2596,7 +2596,7 @@ export const domain1Questions = [
       "B": "Delivery rates are affected by reputation, SPF, DKIM and DMARC. S/MIME signing is applied to message content and does not improve deliverability.",
       "C": "Signing outbound mail does not filter inbound phishing. It helps recipients verify your genuine mail, but it blocks nothing arriving at your organization."
     },
-    "tip": null,
+    "tip": "Digitally signing email (S/MIME) = non-repudiation and integrity. Encrypting it = confidentiality.",
     "references": [],
     "source": "bank.pdf#p157",
     "needsReview": false,
@@ -2639,7 +2639,7 @@ export const domain1Questions = [
       "C": "Block ciphers versus stream ciphers is a design decision made after establishing what the hardware can support. It is a consequence of the constraint, not the primary consideration.",
       "D": "TLS version compatibility matters for interoperability, but it is a protocol question that only arises once the device can perform the cryptography at all."
     },
-    "tip": null,
+    "tip": "IoT cryptography: the first consideration is resource constraints (CPU, memory, battery), which is why lightweight algorithms exist.",
     "references": [],
     "source": "bank.pdf#p158",
     "needsReview": false,
@@ -2682,7 +2682,7 @@ export const domain1Questions = [
       "B": "Log correlation combines events from multiple sources to identify patterns. Like auditing, it recognizes activity after the fact.",
       "C": "Incident alerts notify staff that something has happened. Notification is the definition of a detective control."
     },
-    "tip": null,
+    "tip": "Separation of duties = preventive. Audits, log correlation and alerts are detective.",
     "references": [],
     "source": "bank.pdf#p159",
     "needsReview": false,
@@ -3297,7 +3297,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenisation replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenisation system, and the format is preserved so pending purchases still work.",
+    "explanation": "Tokenization replaces the card number with a meaningless token, keeping the real value in a separate hardened vault. If the database is breached the attacker gets tokens that are worthless outside the tokenization system, and the format is preserved so pending purchases still work.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hashing is one-way, so the original card number could never be retrieved to complete the purchase. Card numbers are also short enough to be brute-forced from a hash.",
@@ -3740,7 +3740,7 @@ export const domain1Questions = [
     "explanation": "Plain FTP sends both credentials and file contents in cleartext, so anyone on the path can read them. Encryption — using FTPS or SFTP instead — makes the transferred data unreadable to an interceptor, which is what protecting confidentiality in transit requires.",
     "explanationSource": "authored",
     "incorrectExplanations": {
-      "A": "Tokenisation substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
+      "A": "Tokenization substitutes sensitive values with tokens inside a system that understands them. The bank needs the real financial data, so substitution does not work here.",
       "B": "Data masking hides portions of a value for display. The bank requires complete information to process it.",
       "D": "Obfuscation makes data harder to read without providing genuine cryptographic protection. A capable interceptor reverses it."
     },
@@ -4171,7 +4171,7 @@ export const domain1Questions = [
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "Data masking obscures part of a value for display, such as showing only the last four digits. The record is plainly visible, just partly hidden.",
-      "C": "Tokenisation substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
+      "C": "Tokenization substitutes a surrogate value for sensitive data. The substitution is obvious to anyone looking at the record.",
       "D": "A private key is a cryptographic secret used by an algorithm. It is a component, not a concealment technique."
     },
     "tip": null,
@@ -4515,7 +4515,7 @@ export const domain1Questions = [
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Code signing proves who published the software and that it is unaltered. It establishes authenticity, not secrecy of the logic.",
-      "C": "Tokenisation substitutes sensitive data values with surrogates. It protects data records, not program logic.",
+      "C": "Tokenization substitutes sensitive data values with surrogates. It protects data records, not program logic.",
       "D": "Blockchain provides a tamper-evident distributed ledger. It can prove provenance but conceals nothing about how software works."
     },
     "tip": null,
@@ -4640,7 +4640,7 @@ export const domain1Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenisation substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
+    "explanation": "Reversible means the original value must be recoverable when the business needs it. Tokenization substitutes a surrogate and keeps the real data in a secure vault, so the exchange can be reversed under control — unlike a one-way transformation.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A hardware security module protects and manages keys. It is a device rather than a technique for protecting the information itself.",
@@ -4812,7 +4812,7 @@ export const domain1Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenisation swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
+    "explanation": "Financial systems must keep processing payments, so the protection has to be reversible and format-preserving. Tokenization swaps the card number for a surrogate the systems can handle while the real value stays in a vault, which is why it dominates in that industry.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Hashing is irreversible, so the original number could never be recovered to settle a transaction.",
@@ -5214,7 +5214,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Data masking obscures parts of a value for display. It is not applied to stored password hashes.",
       "C": "Key escrow stores encryption keys with a trusted custodian. Password hashing uses no such key.",
-      "D": "Tokenisation replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenised."
+      "D": "Tokenization replaces a value with a surrogate held in a vault. Passwords are hashed, not tokenized."
     },
     "tip": null,
     "references": [],
@@ -5739,7 +5739,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Self-signed certificates are certificates an organization issues to itself. They do not provide key recovery.",
-      "C": "Tokenisation substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
+      "C": "Tokenization substitutes sensitive values with surrogates held in a vault. It is a different protection model and does not recover lost encryption keys.",
       "D": "A TPM stores keys in hardware on one device. If that chip fails or the device is lost, the keys go with it — which is the problem escrow solves."
     },
     "tip": null,
@@ -5867,7 +5867,7 @@ export const domain1Questions = [
     "explanation": "Hashing produces a digest that changes completely if any bit changes. Sending the hash alongside the data lets the recipient recompute it and confirm the content arrived exactly as it left, which detects modification in transit.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Tokenisation substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
+      "B": "Tokenization substitutes a value with a surrogate. It protects the data rather than proving it is unchanged.",
       "C": "Masking obscures part of a value for display. It neither detects nor prevents alteration.",
       "D": "Encryption keeps data confidential. Ciphertext can still be tampered with, and encryption alone does not reveal that it was."
     },
@@ -6255,7 +6255,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Obfuscation makes data harder to read without genuine cryptographic strength, and it verifies nothing.",
-      "B": "Tokenisation substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
+      "B": "Tokenization substitutes values with surrogates. It protects confidentiality of stored data but offers no integrity guarantee.",
       "D": "Masking hides parts of a value for display. It provides neither strong confidentiality nor integrity."
     },
     "tip": null,
@@ -6351,7 +6351,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Signing proves origin and integrity of data. It does not protect stored passwords from disclosure.",
       "B": "Sanitization removes data from media at end of life. It is a disposal control.",
-      "C": "Tokenisation substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
+      "C": "Tokenization substitutes values reversibly through a vault. Passwords must never be recoverable, so a one-way transformation is required.",
       "D": "Obfuscation makes data harder to interpret but is reversible, which is inadequate for credentials."
     },
     "tip": null,
@@ -6403,7 +6403,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key escrow is a technical control for recovering encryption keys.",
-      "B": "Tokenisation is a technical data protection technique.",
+      "B": "Tokenization is a technical data protection technique.",
       "E": "Access badge readers are physical controls.",
       "F": "Biometrics is likewise a physical or technical access control rather than a process people follow."
     },
@@ -6595,7 +6595,7 @@ export const domain1Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Key escrow is a technical control for recovering encryption keys.",
-      "B": "Tokenisation is a technical data protection technique.",
+      "B": "Tokenization is a technical data protection technique.",
       "E": "Access badge readers are physical controls.",
       "F": "Biometrics is a physical or technical authentication control rather than a process."
     },
@@ -6769,7 +6769,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Encryption is reversible by anyone with the key, which means a key compromise exposes every password in plaintext.",
       "C": "Masking hides parts of a value for display. The full value still exists underneath.",
-      "D": "Tokenisation substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
+      "D": "Tokenization substitutes a value reversibly through a vault. Reversibility is precisely what password storage must avoid."
     },
     "tip": null,
     "references": [],
@@ -6812,7 +6812,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "B": "Salting adds random data before hashing to defeat precomputed tables. It strengthens password hashing rather than being the integrity function itself.",
       "C": "Segmentation divides a network into zones. It is a network control with no cryptographic function.",
-      "D": "Tokenisation substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
+      "D": "Tokenization substitutes a value with a surrogate and is reversible through a vault, so it is not one-way."
     },
     "tip": null,
     "references": [],
@@ -6853,7 +6853,7 @@ export const domain1Questions = [
     "explanation": "The developer publishes a hash of the release. Users recompute it after downloading and compare, and because any change produces a completely different digest, a match proves the file arrived exactly as published.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
+      "A": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not an integrity check.",
       "B": "Encryption keeps content confidential. Ciphertext can still be altered, and encryption alone does not reveal that it was.",
       "D": "Obfuscation makes code harder to read. It protects intellectual property rather than proving the file is unmodified."
     },
@@ -7218,7 +7218,7 @@ export const domain1Questions = [
     "incorrectExplanations": {
       "A": "Obfuscation makes data harder to read without cryptographic strength. It is a separate, weaker technique.",
       "C": "Data masking hides parts of a value for display. It is not encryption.",
-      "E": "Tokenisation substitutes values with surrogates held in a vault. Again a different protection model.",
+      "E": "Tokenization substitutes values with surrogates held in a vault. Again a different protection model.",
       "F": "Salting is specific to password hashing, adding randomness to defeat precomputed tables."
     },
     "tip": null,

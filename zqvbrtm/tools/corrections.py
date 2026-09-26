@@ -274,7 +274,7 @@ EXHIBITS = {
         "2023-01-25 | 01:45:09.102 | 98.123.45.104 | 4064 | SYN | 100.50.20.7 | 443\n"
         "2023-01-25 | 01:45:09.102 | 80.123.45.105 | 4365 | SYN | 100.50.20.7 | 443")],
     "q0293": [("recorded in the system:", "table",
-        "Host | Account | MD5 password value\n"
+        "Host | Account | MD5 password values\n"
         "ACCT-PC-1 | admin | f1bdf5ed1d7ad7ede4e3809bd35644b0\n"
         "HR-PC-1 | admin | d706ab8258fe67c131ebc57a6e28184\n"
         "IT-PC-2 | admin | f8ddb9cbb321d7dfbf6cb059736f0b3d\n"
@@ -397,6 +397,22 @@ EXHIBITS = {
 # they are easy to review. Applied after the fixes above for the same
 # question (they were written against the already-fixed text).
 TEXT_FIXES_READ = {
+    'q0025': [('Honey pot', 'Honeypot')],
+    'q0033': [('from being delivered', 'from being delivered.')],
+    'q0039': [("installed on jsmith's workstation", "installed on jsmith's workstation.")],
+    'q0116': [('permit 0.0.0.0 0 0.0.0.0/0', 'permit 0.0.0.0/0 0.0.0.0/0'), ('deny 0.0.0.0 0 0.0.0.0/0', 'deny 0.0.0.0/0 0.0.0.0/0'), ('10.50.10.25 32', '10.50.10.25/32'), (' port 53 Access list', ' port 53\nAccess list')],
+    'q0151': [('Implement a phishing campaign', 'Implement a phishing campaign.')],
+    'q0190': [('does this project fulfil?', 'does this project fulfill?')],
+    'q0259': [('Each of the kiosks are on', 'Each of the kiosks is on'), ('acmetimekeeping.com to malicious domain', 'acmetimekeeping.com to a malicious domain')],
+    'q0276': [('Screen subnet', 'Screened subnet')],
+    'q0278': [('avoid roaming charges', 'avoid roaming charges.'), ('assigned multiple companies the same numbers', 'assigned multiple companies the same numbers.')],
+    'q0286': [('time frame is 30 to 60 seconds', 'time frame is 30 to 60 seconds.'), ('to generate a TOTP code', 'to generate a TOTP code.')],
+    'q0289': [('Contain the impacted hosts', 'Contain the impacted hosts.'), ('block outbound beaconing', 'block outbound beaconing.')],
+    'q0308': [('networks must be supported', 'networks must be supported.')],
+    'q0311': [('IP address to be distributed', 'IP address to be distributed.')],
+    'q0326': [('Decrease the level of the web filter settings', 'Decrease the level of the web filter settings.'), ('Update the acceptable use policy', 'Update the acceptable use policy.')],
+    'q0344': [('complete their assigned tasks These employees', 'complete their assigned tasks. These employees')],
+    'q0348': [('Enable SAML', 'Enable SAML.'), ('Select an IdP', 'Select an IdP.')],
     'q0706': [('to Internal resources', 'to internal resources')],
     'q0887': [('security or a SaaS', 'security of a SaaS'), ('following documentations', 'following documentation')],
     'q1188': [('analyst Investigates', 'analyst investigates')],

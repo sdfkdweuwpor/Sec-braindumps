@@ -37,7 +37,7 @@ export const domain3Questions = [
       "C": "The cloud provider secures the hardware and hypervisor in IaaS, not the customer's database.",
       "D": "A DBA is a job role within the client organization. The model assigns responsibility to the client, not to a particular job title."
     },
-    "tip": null,
+    "tip": "IaaS: the provider secures the hardware, network and hypervisor; you secure everything you build on top of it: OS, applications, data and databases.",
     "references": [],
     "source": "bank.pdf#p6",
     "needsReview": false,
@@ -90,7 +90,7 @@ export const domain3Questions = [
       "E": "Attack surface is a security consideration, not an availability design factor.",
       "F": "Extensible authentication (EAP) is an authentication framework, unrelated to availability."
     },
-    "tip": null,
+    "tip": "High-availability design is about recovery and performance: ease of recovery, responsiveness, scalability. Patching and attack surface are security concerns.",
     "references": [],
     "source": "bank.pdf#p7",
     "needsReview": false,
@@ -133,7 +133,7 @@ export const domain3Questions = [
       "C": "Geographic dispersion spreads sites across locations to survive regional events.",
       "D": "A tabletop exercise walks through a scenario in discussion to test a plan. It does not size staffing needs."
     },
-    "tip": null,
+    "tip": "Working out how many people, systems or how much bandwidth you need during a disruption = capacity planning.",
     "references": [],
     "source": "bank.pdf#p9",
     "needsReview": false,
@@ -176,7 +176,7 @@ export const domain3Questions = [
       "B": "Encryption protects data from anyone without the key, but authorized users anywhere could still open the documents.",
       "D": "Data sovereignty regulations are laws about where data is stored and processed. They are not a control the company applies to users."
     },
-    "tip": null,
+    "tip": "Allow or block users by where they connect from = geolocation policy. Data sovereignty is about where data is stored, not who can reach it.",
     "references": [],
     "source": "bank.pdf#p9",
     "needsReview": false,
@@ -219,7 +219,7 @@ export const domain3Questions = [
       "B": "A hot site recovers almost immediately but is the most expensive option, poor value for a two-day target.",
       "C": "A cold site is cheapest but can take weeks to bring online, missing a two-day target."
     },
-    "tip": null,
+    "tip": "Recovery sites: hot = minutes to hours (most expensive), warm = hours to a couple of days, cold = days to weeks (cheapest).",
     "references": [],
     "source": "bank.pdf#p10",
     "needsReview": false,
@@ -262,7 +262,7 @@ export const domain3Questions = [
       "B": "Critical describes data essential to operations, such as systems the business cannot run without, not personal data.",
       "D": "Public data can be freely disclosed -- the opposite of what patient data requires."
     },
-    "tip": null,
+    "tip": "PHI, PII and financial records are 'sensitive' data. Public = freely shareable; critical = essential to keeping the business running.",
     "references": [],
     "source": "bank.pdf#p11",
     "needsReview": false,
@@ -298,14 +298,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Serverless computing runs code in the cloud without managing servers, and you pay only for execution time. That makes it a low-cost, cloud-based way to host an application.",
+    "explanation": "Serverless computing runs code in the cloud without managing servers, and you pay only for execution time. That makes it a low-cost, cloud-based way to host an application. Functions start on demand and scale automatically, so there are no idle servers to pay for, patch or monitor.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "A Type 1 hypervisor runs virtual machines on hardware you own and manage -- neither low-cost nor inherently cloud-based.",
       "C": "SD-WAN manages wide-area network connectivity. It does not host applications.",
       "D": "Software-defined networking manages network behavior through software. It does not host applications."
     },
-    "tip": null,
+    "tip": "Cheap, cloud-based and no servers to manage = serverless (functions as a service): you pay only while the code runs.",
     "references": [],
     "source": "bank.pdf#p18",
     "needsReview": false,
@@ -341,14 +341,14 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Weather that damages a building takes out everything in it. Placing servers in separate geographic locations means one storm cannot take down the whole service.",
+    "explanation": "Weather that damages a building takes out everything in it. Placing servers in separate geographic locations means one storm cannot take down the whole service. The sites need to be far enough apart that the same hurricane, flood or storm cannot reach both, usually with data replicated so the second site can take over.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Clustered servers in the same server room fail together if the room is damaged.",
       "C": "Load balancers spread traffic, but if all the servers are in the damaged room, there is nothing left to balance.",
       "D": "Off-site backups protect the data but not uptime -- systems are down until everything is restored."
     },
-    "tip": null,
+    "tip": "Natural disasters (weather, earthquakes, floods) → geographic dispersion: put redundant sites far enough apart that one event cannot hit both.",
     "references": [],
     "source": "bank.pdf#p19",
     "needsReview": false,
@@ -384,14 +384,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An air gap physically separates the computers from any outside network, so nothing on them can reach the internet or be posted to a forum.",
+    "explanation": "An air gap physically separates the computers from any outside network, so nothing on them can reach the internet or be posted to a forum. Air-gapped systems are used for the most sensitive work, such as classified networks and some industrial control systems, and data moves on or off them only by approved removable media.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A jump server is a hardened host used to administer other systems. It does not remove internet access.",
       "C": "Logical segmentation separates traffic with rules, but a misconfiguration could still allow internet access; it is weaker than a physical gap.",
       "D": "Virtualization runs multiple systems on shared hardware. It has nothing to do with internet access."
     },
-    "tip": null,
+    "tip": "No internet access at all, physically separated = air gap. Logical segmentation still shares the network and can be misconfigured.",
     "references": [],
     "source": "bank.pdf#p34",
     "needsReview": false,
@@ -434,7 +434,7 @@ export const domain3Questions = [
       "C": "Cost is a factor in any project, but it cannot outrank people's ability to report an emergency.",
       "D": "Ease of deployment helps the developers, not the people who depend on the service."
     },
-    "tip": null,
+    "tip": "Health emergencies, 911 or other life-safety services → availability is the top priority.",
     "references": [],
     "source": "bank.pdf#p36",
     "needsReview": false,
@@ -477,7 +477,7 @@ export const domain3Questions = [
       "B": "Blocking all attachments stops normal business and still misses sensitive data leaving in other ways.",
       "D": "Removing all permissions breaks access for legitimate users; access should follow classification."
     },
-    "tip": null,
+    "tip": "DLP rollout step one: classify the data. DLP can only protect what it can recognize as sensitive.",
     "references": [],
     "source": "bank.pdf#p36",
     "needsReview": false,
@@ -513,14 +513,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "An end-of-life operating system no longer receives security patches, so every new vulnerability stays open. The lack of patches is the security implication to document.",
+    "explanation": "An end-of-life operating system no longer receives security patches, so every new vulnerability stays open. The lack of patches is the security implication to document. Kiosks are public-facing and often run for years, so the team will need an upgrade or compensating controls such as isolating the kiosks.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Software compatibility is an operational question, not the security implication.",
       "C": "Ease of recovery concerns restoring after failure, not the risk the old OS creates.",
       "D": "Replacement cost is a budget consideration, not a security implication."
     },
-    "tip": null,
+    "tip": "End-of-life = no more patches. The security implication is patch availability: known vulnerabilities stay open.",
     "references": [],
     "source": "bank.pdf#p44",
     "needsReview": false,
@@ -573,7 +573,7 @@ export const domain3Questions = [
       "D": "Operational is not a standard classification level. It describes a type of data or control rather than its sensitivity.",
       "E": "Urgent describes priority or timeliness, not how sensitive something is."
     },
-    "tip": null,
+    "tip": "Government or other sensitive project data → confidential and restricted. Public = no harm if disclosed; private = personal information.",
     "references": [],
     "source": "bank.pdf#p44",
     "needsReview": false,
@@ -616,7 +616,7 @@ export const domain3Questions = [
       "B": "DHCP assigns IP addresses; it provides no security.",
       "D": "NAT translates addresses between networks; it does not encrypt or authenticate anything."
     },
-    "tip": null,
+    "tip": "Secure remote access into a network = VPN, and IPSec is the classic VPN protocol suite. EAP authenticates, DHCP hands out addresses, NAT translates them.",
     "references": [],
     "source": "bank.pdf#p45",
     "needsReview": false,
@@ -659,7 +659,7 @@ export const domain3Questions = [
       "C": "Classification labels data by sensitivity. It guides protection but does not protect anything by itself.",
       "D": "Permission restrictions apply inside the operating system; a thief can read the drive from another system and bypass them."
     },
-    "tip": null,
+    "tip": "Stolen laptop, lost drive, 'data at rest' → encryption at rest (full disk encryption).",
     "references": [],
     "source": "bank.pdf#p48",
     "needsReview": false,
@@ -702,7 +702,7 @@ export const domain3Questions = [
       "C": "Embedded systems are purpose-built and rarely updated -- the opposite of constantly changing.",
       "D": "SCADA systems control industrial processes and are deliberately stable and slow to change."
     },
-    "tip": null,
+    "tip": "Constantly changing, scaling, frequent releases → containers (or serverless). Embedded systems, RTOS and SCADA are built to stay the same.",
     "references": [],
     "source": "bank.pdf#p48",
     "needsReview": false,
@@ -745,7 +745,7 @@ export const domain3Questions = [
       "C": "A web proxy controls outbound browsing and does nothing about inbound access to the remote desktop.",
       "D": "Longer passwords help a little, but the service is still exposed to the whole internet."
     },
-    "tip": null,
+    "tip": "Remote desktop exposed to the internet → put it behind a VPN, with the jump server inside the firewall. Changing the port is only obscurity.",
     "references": [],
     "source": "bank.pdf#p49",
     "needsReview": false,
@@ -788,7 +788,7 @@ export const domain3Questions = [
       "C": "Patching fixes vulnerabilities; it does not separate networks.",
       "D": "Encryption protects data from being read, but does not stop users on the corporate network from reaching it."
     },
-    "tip": null,
+    "tip": "Keep something reachable only by approved systems = segmentation. Cut it off from everything = isolation (or an air gap).",
     "references": [],
     "source": "bank.pdf#p49",
     "needsReview": false,
@@ -831,7 +831,7 @@ export const domain3Questions = [
       "C": "SD-WAN optimizes links between sites; it does not cover remote users' internet monitoring.",
       "D": "More VPN concentrators in the cloud keep the same design and do not reduce the traffic."
     },
-    "tip": null,
+    "tip": "Remote workers + VPN bottleneck + inspecting internet traffic from the cloud = SASE (cloud-delivered SWG, CASB, ZTNA and firewall).",
     "references": [],
     "source": "bank.pdf#p52",
     "needsReview": false,
@@ -874,7 +874,7 @@ export const domain3Questions = [
       "C": "The Internet of Things describes connected devices, not cloud deployment.",
       "D": "Software-defined networking manages networks through software but does not deploy compute or storage resources."
     },
-    "tip": null,
+    "tip": "Deploy cloud resources quickly and repeatably from templates = IaC (infrastructure as code).",
     "references": [],
     "source": "bank.pdf#p55",
     "needsReview": false,
@@ -917,7 +917,7 @@ export const domain3Questions = [
       "C": "A hardware security module protects cryptographic keys, not administrative access.",
       "D": "A load balancer distributes client traffic to servers, not administrator access."
     },
-    "tip": null,
+    "tip": "Admins cannot reach a secure segment directly → they go through a jump server (a hardened, monitored bastion host).",
     "references": [],
     "source": "bank.pdf#p61",
     "needsReview": false,
@@ -960,7 +960,7 @@ export const domain3Questions = [
       "C": "TLS encrypts traffic; it would carry the malicious payload securely rather than stop it.",
       "D": "SD-WAN manages connections between sites."
     },
-    "tip": null,
+    "tip": "An internet-facing web app attacked through its requests (buffer overflow, SQLi, XSS) → put a WAF in front of it.",
     "references": [],
     "source": "bank.pdf#p61",
     "needsReview": false,
@@ -996,14 +996,14 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "A site-to-site VPN encrypts the traffic traveling between headquarters and the branch. It protects data in transit.",
+    "explanation": "A site-to-site VPN encrypts the traffic traveling between headquarters and the branch, typically with IPSec. It protects data in transit: anyone who intercepts the packets on the internet between the two sites sees only ciphertext. Data stored at either site (at rest) or being processed (in use) needs other protections.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Data in use is data being processed in memory, which a VPN does not protect.",
       "C": "Geographic restrictions limit access by location. A VPN does not enforce them.",
       "D": "Data sovereignty is the legal rule that data is subject to the laws of where it is stored."
     },
-    "tip": null,
+    "tip": "VPN = data in transit. Full disk encryption = data at rest. Secure enclaves = data in use.",
     "references": [],
     "source": "bank.pdf#p64",
     "needsReview": false,
@@ -1046,7 +1046,7 @@ export const domain3Questions = [
       "C": "The recovery point objective is a target for acceptable data loss. It is one input to the plan, not the plan itself.",
       "D": "The software development life cycle governs building software, not recovering systems."
     },
-    "tip": null,
+    "tip": "Restoring systems after a failure or disaster = DRP. Handling a security incident = IRP. RPO and RTO are targets inside the plan.",
     "references": [],
     "source": "bank.pdf#p67",
     "needsReview": false,
@@ -1089,7 +1089,7 @@ export const domain3Questions = [
       "C": "A proxy server mediates web requests, not access to internal resources.",
       "D": "A hypervisor runs virtual machines. It does not control access to internal resources."
     },
-    "tip": null,
+    "tip": "A single hardened, monitored entry point for reaching internal systems = jump server (bastion host).",
     "references": [],
     "source": "bank.pdf#p69",
     "needsReview": false,
@@ -1132,7 +1132,7 @@ export const domain3Questions = [
       "C": "A WAF protects web applications, not administrative access.",
       "D": "Single sign-on reduces the number of logins but does not limit traffic through the boundary."
     },
-    "tip": null,
+    "tip": "Admin access across a security boundary with minimal exposure = bastion host (jump box).",
     "references": [],
     "source": "bank.pdf#p70",
     "needsReview": false,
@@ -1168,14 +1168,14 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Research and development produces designs, inventions and trade secrets -- intellectual property. Protecting it is the reason these employees receive extensive training.",
+    "explanation": "Research and development produces designs, inventions and trade secrets -- intellectual property. Protecting it is the reason these employees receive extensive training. Leaked IP can hand competitors years of work, so R&D staff are trained on handling, sharing and storing it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encrypted describes the state of data, not the type of data people work with.",
       "C": "Critical describes importance to operations. R&D's work product is better described as intellectual property.",
       "D": "Data in transit is a state (moving over a network), not the kind of information R&D handles."
     },
-    "tip": null,
+    "tip": "Designs, inventions, source code and trade secrets = intellectual property (IP).",
     "references": [],
     "source": "bank.pdf#p72",
     "needsReview": false,
@@ -1218,7 +1218,7 @@ export const domain3Questions = [
       "B": "Cloud backups protect data, but do not keep a single environment running.",
       "C": "A load balancer spreads traffic across multiple systems, and this is a single environment."
     },
-    "tip": null,
+    "tip": "Generators and ISP already covered, and it must never go down → a UPS bridges the seconds until the generators start.",
     "references": [],
     "source": "bank.pdf#p77",
     "needsReview": false,
@@ -1261,7 +1261,7 @@ export const domain3Questions = [
       "C": "Application whitelisting controls what runs on endpoints, not cloud usage or uploads.",
       "D": "A next-generation secure web gateway filters web traffic but is not the complete cloud governance solution."
     },
-    "tip": null,
+    "tip": "Visibility and control over which cloud apps are used and what is uploaded or downloaded = CASB.",
     "references": [],
     "source": "bank.pdf#p77",
     "needsReview": false,
@@ -1304,7 +1304,7 @@ export const domain3Questions = [
       "B": "Cost matters with a small grant, but a cheap design that is insecure costs far more later.",
       "C": "Engineering skills matter for delivery, but are considered after the architecture is defined."
     },
-    "tip": null,
+    "tip": "Moving to the cloud: design the security architecture first, then choose providers and fit costs within it.",
     "references": [],
     "source": "bank.pdf#p80",
     "needsReview": false,
@@ -1340,14 +1340,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Storing backups at sites far enough apart that one natural disaster cannot hit both is geographic dispersion.",
+    "explanation": "Storing backups at sites far enough apart that one natural disaster cannot hit both is geographic dispersion. For regulated backup data, losing every copy could mean both data loss and a compliance failure, so copies must be separated by enough distance that one hurricane, flood or earthquake cannot reach them all.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Platform diversity uses different technologies to avoid shared flaws, not shared disasters.",
       "C": "A hot site speeds recovery, but if it is near the primary site the same disaster could affect both.",
       "D": "Load balancing spreads traffic; it does not protect backup data."
     },
-    "tip": null,
+    "tip": "Protecting backups from one natural disaster = geographic dispersion (sites far apart).",
     "references": [],
     "source": "bank.pdf#p80",
     "needsReview": false,
@@ -1390,7 +1390,7 @@ export const domain3Questions = [
       "C": "TLS encrypts sessions; it does not control who can plug into the network.",
       "D": "A VPN secures remote connections; it does not stop someone plugging into an open jack."
     },
-    "tip": null,
+    "tip": "Stop strangers plugging into wall jacks = port security (MAC limits or 802.1X), or disable unused ports.",
     "references": [],
     "source": "bank.pdf#p89",
     "needsReview": false,
@@ -1426,14 +1426,14 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualization runs many virtual machines on one physical host, consolidating workloads onto fewer servers.",
+    "explanation": "Virtualization runs many virtual machines on one physical host, consolidating workloads onto fewer servers. Each VM keeps its own operating system and applications, so the company cuts hardware, power and space without redesigning its applications.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Serverless moves applications to a provider, but it is not how an organization consolidates its own physical servers.",
       "B": "Segmentation divides networks; it does not reduce server count.",
       "D": "Microservices break applications into small services, which often increases the number of deployed components."
     },
-    "tip": null,
+    "tip": "Fewer physical servers = virtualization (consolidating many VMs onto each host).",
     "references": [],
     "source": "bank.pdf#p90",
     "needsReview": false,
@@ -1476,7 +1476,7 @@ export const domain3Questions = [
       "C": "A threat feed recognizes known bad destinations; an ordinary web server would not be listed.",
       "D": "SD-WAN with IPSec encrypts traffic between sites; it does not inspect protocols."
     },
-    "tip": null,
+    "tip": "A protocol hiding on the wrong port (HTTP over port 53) → NGFW application inspection identifies the real application.",
     "references": [],
     "source": "bank.pdf#p92",
     "needsReview": false,
@@ -1512,14 +1512,14 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "An IPSec site-to-site VPN connects the two internal networks and encrypts every packet that passes between them, whatever the application.",
+    "explanation": "An IPSec site-to-site VPN connects the two internal networks and encrypts every packet that passes between them, whatever the application. Because it works at the network layer, the file migration is protected even if the transfer tool itself does not encrypt.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "EAP is an authentication framework, not a network-to-network encryption method.",
       "C": "SD-WAN manages routing between sites but does not by itself guarantee encryption of all traffic.",
       "D": "TLS encrypts individual application sessions; not every protocol used in the migration would necessarily use it."
     },
-    "tip": null,
+    "tip": "Encrypt everything that crosses between two networks = an IPSec site-to-site VPN.",
     "references": [],
     "source": "bank.pdf#p92",
     "needsReview": false,
@@ -1555,14 +1555,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Mean time to repair is the average time needed to fix a failed component and bring it back into service -- the time to resolve a hardware issue.",
+    "explanation": "Mean time to repair is the average time needed to fix a failed component and bring it back into service -- the time to resolve a hardware issue. A low MTTR, helped by spare parts and support contracts, shortens outages when hardware does fail.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "The recovery point objective is the maximum acceptable data loss.",
       "B": "Mean time between failures measures how long hardware runs between failures, not how long repairs take.",
       "C": "The recovery time objective is a target for maximum downtime, not a measure of repair time."
     },
-    "tip": null,
+    "tip": "Time to fix = MTTR. Time between failures = MTBF. Target downtime = RTO. Target data loss = RPO.",
     "references": [],
     "source": "bank.pdf#p94",
     "needsReview": false,
@@ -1605,7 +1605,7 @@ export const domain3Questions = [
       "B": "SSL 3.0 is a deprecated predecessor to TLS with known breaks such as POODLE. It must not be used.",
       "D": "AES-256 is a symmetric cipher. It is the encryption TLS uses internally, but on its own it is not a protocol for securing a connection."
     },
-    "tip": null,
+    "tip": "Data in transit → TLS 1.2 or 1.3 (or IPSec, SSH). SSL and TLS 1.0/1.1 are deprecated. AES encrypts data; SHA only hashes it.",
     "references": [],
     "source": "bank.pdf#p95",
     "needsReview": false,
@@ -1641,14 +1641,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Critical data is what the organization needs in order to operate. By definition, losing it has the greatest impact.",
+    "explanation": "Critical data is what the organization needs in order to operate. By definition, losing it has the greatest impact. Examples are order systems, production databases and financial ledgers; if they are lost, the business stops until they are restored.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Confidential data is harmful if disclosed, which is a different concern from the impact of losing it.",
       "B": "Public data is already freely available and has little impact if lost.",
       "C": "Private data concerns individuals' personal information and disclosure, not operational impact."
     },
-    "tip": null,
+    "tip": "Classified by the impact of LOSING it = critical. By the impact of DISCLOSING it = confidential or sensitive.",
     "references": [],
     "source": "bank.pdf#p95",
     "needsReview": false,
@@ -1691,7 +1691,7 @@ export const domain3Questions = [
       "C": "Failover switches to a standby when the primary fails. The standby is idle until then rather than sharing traffic.",
       "D": "Parallel processing runs work concurrently for performance, typically within a computation rather than across sites."
     },
-    "tip": null,
+    "tip": "Traffic split across active sites = load balancing (active-active). A standby that takes over on failure = failover (active-passive).",
     "references": [],
     "source": "bank.pdf#p96",
     "needsReview": false,
@@ -1734,7 +1734,7 @@ export const domain3Questions = [
       "C": "Snapshots capture a point-in-time copy of a system or volume. They help recover data, but do nothing to keep systems powered or running.",
       "D": "SOAR automates security operations and incident response workflows. It has no bearing on power or site availability."
     },
-    "tip": null,
+    "tip": "'Extended' outage → an alternate site (hot site). A few minutes or a graceful shutdown → UPS. Hours → generator.",
     "references": [],
     "source": "bank.pdf#p97",
     "needsReview": false,
@@ -1770,14 +1770,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A load balancer spreads requests across multiple instances and routes around failed ones, so the service stays up. It is the high-availability component.",
+    "explanation": "A load balancer spreads requests across multiple instances and routes around failed ones, so the service stays up. It is the high-availability component. Cloud load balancers can also spread instances across availability zones, so even the loss of a whole data center does not take the application down.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A cloud access broker governs cloud usage and data policy, not availability.",
       "B": "A cloud HSM protects cryptographic keys.",
       "C": "A WAF protects web applications from attacks."
     },
-    "tip": null,
+    "tip": "In cloud questions, load balancer = high availability. CASB = cloud governance; cloud HSM = keys; WAF = web attacks.",
     "references": [],
     "source": "bank.pdf#p99",
     "needsReview": false,
@@ -1820,7 +1820,7 @@ export const domain3Questions = [
       "C": "URL-based rules filter web destinations, not attack traffic types in general.",
       "D": "Agent-based describes software installed on hosts, not an NGFW rule type."
     },
-    "tip": null,
+    "tip": "Many new or varied attack traffic types → behavior-based (anomaly) rules. Signature-based rules only catch what is already known.",
     "references": [],
     "source": "bank.pdf#p105",
     "needsReview": false,
@@ -1863,7 +1863,7 @@ export const domain3Questions = [
       "B": "'Tertiary' describes a third site in a sequence, not its readiness.",
       "C": "A warm site has some equipment but needs hours or days to be operational."
     },
-    "tip": null,
+    "tip": "Must continue operating immediately → hot site. In a hurricane area, it must also be far away.",
     "references": [],
     "source": "bank.pdf#p106",
     "needsReview": false,
@@ -1906,7 +1906,7 @@ export const domain3Questions = [
       "C": "Failing open when overloaded removes protection exactly when the attack is heaviest.",
       "D": "Deep packet inspection and TLS monitoring add work to a firewall that is already at capacity."
     },
-    "tip": null,
+    "tip": "Attacks detected and the firewall at capacity → put the appliance inline in IPS mode in front, dropping malicious traffic before it reaches the firewall.",
     "references": [],
     "source": "bank.pdf#p106",
     "needsReview": false,
@@ -1946,10 +1946,10 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Microservices is an application architecture that splits a system into small independently deployable services. It describes how software is decomposed, and it often increases the number of runtime instances rather than reducing operating systems.",
-      "C": "Virtualisation runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
+      "C": "Virtualization runs multiple virtual machines on one host, but each VM carries its own full guest operating system. It consolidates hardware while keeping — or increasing — the OS count.",
       "D": "Infrastructure as code defines and provisions infrastructure from version-controlled definitions. It changes how systems are built, not how many operating systems end up running."
     },
-    "tip": null,
+    "tip": "Fewer operating systems to run and patch = containers (they share the host kernel). VMs each carry a full guest OS.",
     "references": [],
     "source": "bank.pdf#p108",
     "needsReview": false,
@@ -1992,7 +1992,7 @@ export const domain3Questions = [
       "C": "A private cloud still requires the organization to own, patch and scale the underlying infrastructure. It is the most operationally expensive of the cloud models.",
       "D": "Virtual machines each carry a full guest operating system that must be built, patched and maintained. That is precisely the overhead the company wants to shed."
     },
-    "tip": null,
+    "tip": "Cut deployment time and cost, with no servers or OS to manage = serverless.",
     "references": [],
     "source": "bank.pdf#p110",
     "needsReview": false,
@@ -2028,14 +2028,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The order in which critical systems are restored after a major outage is set out in the disaster recovery plan, based on business priorities.",
+    "explanation": "The order in which critical systems are restored after a major outage is set out in the disaster recovery plan, based on business priorities from the business impact analysis. Dependencies matter too: directory services and networking usually come back before the applications that rely on them.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A communication plan covers who is told what, not restoration order.",
       "B": "An incident response plan handles security incidents rather than restoring systems after an outage.",
       "C": "A data retention policy covers how long data is kept."
     },
-    "tip": null,
+    "tip": "The order in which systems come back after an outage = DRP (restoration priorities).",
     "references": [],
     "source": "bank.pdf#p111",
     "needsReview": false,
@@ -2075,7 +2075,7 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "Software as a service is a complete application run by the provider and used through a browser from anywhere, with nothing to install or host on premises.",
+    "explanation": "Software as a service is a complete application run by the provider and used through a browser from anywhere, with nothing to install or host on premises. The provider handles the infrastructure, platform and application; the customer just manages its users and data.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "PaaS provides a platform for building applications, not a finished application.",
@@ -2083,7 +2083,7 @@ export const domain3Questions = [
       "C": "A private cloud is dedicated infrastructure, often on premises.",
       "D": "IaaS provides infrastructure the customer still has to build and manage applications on."
     },
-    "tip": null,
+    "tip": "A finished app, nothing on premises, reachable from anywhere = SaaS.",
     "references": [],
     "source": "bank.pdf#p111",
     "needsReview": false,
@@ -2126,7 +2126,7 @@ export const domain3Questions = [
       "C": "A VPN would give their own machines network access, so data could land on those devices.",
       "D": "A virtual private cloud is an isolated section of a cloud provider's network, not a way to give users desktops."
     },
-    "tip": null,
+    "tip": "Outside workers get access while data stays on company systems, and they use their own devices = VDI.",
     "references": [],
     "source": "bank.pdf#p111",
     "needsReview": false,
@@ -2162,14 +2162,14 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Secure Real-time Transport Protocol encrypts and authenticates live audio and video streams, which is exactly what the camera footage needs.",
+    "explanation": "Secure Real-time Transport Protocol encrypts and authenticates live audio and video streams, which is exactly what the camera footage needs. It is the secured version of RTP, the protocol commonly used to carry live media.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SSH secures remote administration sessions, not video streams.",
       "C": "S/MIME secures email messages.",
       "D": "PPTP is an outdated VPN protocol with broken security."
     },
-    "tip": null,
+    "tip": "Encrypt and authenticate live voice or video streams = SRTP.",
     "references": [],
     "source": "bank.pdf#p114",
     "needsReview": false,
@@ -2205,14 +2205,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "An image backup captures the entire disk -- operating system, applications, settings and data -- so a whole system can be restored in one step after a disaster.",
+    "explanation": "An image backup captures the entire disk -- operating system, applications, settings and data -- so a whole system can be restored in one step after a disaster. This is often called a bare-metal restore, because the image can be written to new, empty hardware.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Incremental backups capture changed files since the last backup, not a restorable whole system image.",
       "B": "A storage area network is storage infrastructure, not a backup type.",
       "C": "Differential backups capture changes since the last full backup, typically of files rather than the whole system."
     },
-    "tip": null,
+    "tip": "Restore an entire system including the OS = image backup (bare-metal restore).",
     "references": [],
     "source": "bank.pdf#p116",
     "needsReview": false,
@@ -2248,14 +2248,14 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "DLP policies can use the organization's existing labels and classifications to find PII and control where it goes. It works directly with the classification system the CISO wants to use.",
+    "explanation": "DLP policies can use the organization's existing labels and classifications to find PII and control where it goes. It works directly with the classification system the CISO wants to use, for example blocking a file labeled confidential from being emailed outside the company.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Tokenization replaces specific values with tokens, but does not use classification labels to protect data.",
       "B": "S/MIME encrypts and signs email, independently of data labels.",
       "D": "MFA strengthens authentication and does not interact with data classification."
     },
-    "tip": null,
+    "tip": "Protect PII using the existing labels and classifications = DLP policies keyed to those labels.",
     "references": [],
     "source": "bank.pdf#p117",
     "needsReview": false,
@@ -2298,7 +2298,7 @@ export const domain3Questions = [
       "B": "Installing immediately with no rollback point risks a long outage if something goes wrong.",
       "C": "Confirming backups run is good, but restoring from backup is far slower than reverting a snapshot."
     },
-    "tip": null,
+    "tip": "Before patching a VM with a strict uptime SLA, take a snapshot: the fastest way to roll back.",
     "references": [],
     "source": "bank.pdf#p118",
     "needsReview": false,
@@ -2342,7 +2342,7 @@ export const domain3Questions = [
     "correct": [
       "E"
     ],
-    "explanation": "In SaaS the provider runs everything -- hardware, firmware, operating systems and the application -- so patching all of it is the vendor's job.",
+    "explanation": "In SaaS the provider runs everything -- hardware, firmware, operating systems and the application -- so patching all of it is the vendor's job. The customer is left managing its users, data and configuration settings.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A community cloud is a deployment model shared by organizations; it does not by itself make the vendor patch applications.",
@@ -2351,7 +2351,7 @@ export const domain3Questions = [
       "D": "A private cloud is dedicated infrastructure the organization often manages itself.",
       "F": "In IaaS the customer patches operating systems and applications."
     },
-    "tip": null,
+    "tip": "Vendor patches everything (firmware, OS, application) = SaaS. In IaaS you patch the OS and apps; in PaaS you patch your apps.",
     "references": [],
     "source": "bank.pdf#p119",
     "needsReview": false,
@@ -2381,7 +2381,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "Screen subnet"
+        "text": "Screened subnet"
       }
     ],
     "correct": [
@@ -2394,11 +2394,11 @@ export const domain3Questions = [
       "B": "A barricade is a physical barrier, irrelevant to network threats.",
       "C": "Port security limits which devices can connect to switch ports; it does not protect a server from network attacks."
     },
-    "tip": null,
+    "tip": "An unsupported server that must stay online → place it in a screened subnet (DMZ) between firewalls.",
     "references": [],
     "source": "bank.pdf#p120",
     "needsReview": false,
-    "inferenceConfidence": 0.8,
+    "inferenceConfidence": 0.444,
     "needsExplanation": false,
     "keyCorrected": false
   },
@@ -2412,7 +2412,7 @@ export const domain3Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "The executive team is traveling internationally and trying to avoid roaming charges"
+        "text": "The executive team is traveling internationally and trying to avoid roaming charges."
       },
       {
         "key": "B",
@@ -2424,7 +2424,7 @@ export const domain3Questions = [
       },
       {
         "key": "D",
-        "text": "The service provider has assigned multiple companies the same numbers"
+        "text": "The service provider has assigned multiple companies the same numbers."
       }
     ],
     "correct": [
@@ -2437,7 +2437,7 @@ export const domain3Questions = [
       "C": "Disgruntled employees are possible but far less likely than external abuse of a weak SIP server.",
       "D": "Carriers do not assign the same numbers to multiple companies."
     },
-    "tip": null,
+    "tip": "Real, unspoofed calls from your own numbers that nobody made = your VoIP (SIP) system has been hijacked for toll fraud.",
     "references": [],
     "source": "bank.pdf#p121",
     "needsReview": false,
@@ -2480,7 +2480,7 @@ export const domain3Questions = [
       "C": "Training helps, but does not give visibility into or control over shadow IT services.",
       "D": "Double key encryption protects data in sanctioned SaaS platforms, not unsanctioned services."
     },
-    "tip": null,
+    "tip": "Shadow IT in a cloud-first company with no perimeter → CASB: discover and control cloud app use.",
     "references": [],
     "source": "bank.pdf#p124",
     "needsReview": false,
@@ -2525,7 +2525,7 @@ export const domain3Questions = [
       "A",
       "F"
     ],
-    "explanation": "SFTP transfers files over an encrypted SSH connection, and SSH provides the secure command-line session. Together they cover secure, remote, command-line file transfer.",
+    "explanation": "SFTP transfers files over an encrypted SSH connection, and SSH provides the secure command-line session. Together they cover secure, remote, command-line file transfer, with both the login and the file contents encrypted.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "SNMP manages and monitors network devices.",
@@ -2533,7 +2533,7 @@ export const domain3Questions = [
       "D": "S/MIME secures email.",
       "E": "SMTP sends email and is not a file transfer protocol."
     },
-    "tip": null,
+    "tip": "Secure command-line file transfer = SFTP (runs over SSH). FTPS is FTP with TLS; plain FTP and Telnet are cleartext.",
     "references": [],
     "source": "bank.pdf#p127",
     "needsReview": false,
@@ -2569,14 +2569,14 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Detailed architecture information and code snippets belong to the vendor, have business value and are not meant to be shared -- proprietary data.",
+    "explanation": "Detailed architecture information and code snippets belong to the vendor, have business value and are not meant to be shared -- proprietary data. The hosting team should return or report the file rather than read or keep it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Government data belongs to or is classified by government agencies.",
       "B": "Public data can be freely shared; this clearly cannot.",
       "D": "Critical describes data essential to operations; proprietary best describes the vendor's internal architecture and code."
     },
-    "tip": null,
+    "tip": "A company's internal designs, architecture and code = proprietary data (intellectual property).",
     "references": [],
     "source": "bank.pdf#p128",
     "needsReview": false,
@@ -2619,7 +2619,7 @@ export const domain3Questions = [
       "C": "Cloud backups are off-site, but differentials must be combined with a full backup, and online copies can still be targeted.",
       "D": "A NAS drive on the network is a common ransomware target, and restoring a week of incrementals is slow."
     },
-    "tip": null,
+    "tip": "Ransomware-resistant backups = offline or immutable copies. Backups on network storage get encrypted along with everything else.",
     "references": [],
     "source": "bank.pdf#p130",
     "needsReview": false,
@@ -2655,14 +2655,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A secure web gateway inspects and filters remote users' web traffic in the cloud, enforcing security policy wherever they work without routing traffic through a VPN.",
+    "explanation": "A secure web gateway inspects and filters remote users' web traffic in the cloud, enforcing security policy wherever they work without routing traffic through a VPN. It blocks malicious sites and downloads and applies acceptable use policy, whether the user is at home or on public Wi-Fi.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A VPC endpoint provides private connectivity to cloud services, not protection for users' web traffic.",
       "C": "Deep packet inspection is a technique used by other devices, not a remote-work solution by itself.",
       "D": "A next-generation firewall protects a network perimeter that remote users are not behind."
     },
-    "tip": null,
+    "tip": "Protect remote users' web traffic without a VPN = secure web gateway (a cloud SWG, part of SASE).",
     "references": [],
     "source": "bank.pdf#p130",
     "needsReview": false,
@@ -2676,7 +2676,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "A systems administrator is redesigning how devices will perform network authentication. The following requirements need to be met:\n- An existing internal certificate must be used.\n- Wired and wireless networks must be supported\n- Any unapproved device should be isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources\nWhich of the following would best meet the requirements?",
+    "question": "A systems administrator is redesigning how devices will perform network authentication. The following requirements need to be met:\n- An existing internal certificate must be used.\n- Wired and wireless networks must be supported.\n- Any unapproved device should be isolated in a quarantine subnet\n- Approved devices should be updated before accessing resources\nWhich of the following would best meet the requirements?",
     "choices": [
       {
         "key": "A",
@@ -2705,7 +2705,7 @@ export const domain3Questions = [
       "C": "RADIUS is the authentication server behind 802.1X, not the complete solution.",
       "D": "WPA2 covers wireless only."
     },
-    "tip": null,
+    "tip": "Wired and wireless, existing certificates, quarantine for unapproved devices = 802.1X (with EAP-TLS and NAC).",
     "references": [],
     "source": "bank.pdf#p132",
     "needsReview": false,
@@ -2748,7 +2748,7 @@ export const domain3Questions = [
       "B": "An NGFW adds application and identity awareness to boundary filtering. It is broader but not specialized in protecting a single web application.",
       "D": "A UTM bundles several security functions into one appliance. It is a general-purpose device rather than the targeted control for a web portal."
     },
-    "tip": null,
+    "tip": "Protect a new web portal = WAF (it understands HTTP at layer 7).",
     "references": [],
     "source": "bank.pdf#p135",
     "needsReview": false,
@@ -2791,7 +2791,7 @@ export const domain3Questions = [
       "C": "Change management governs planned changes.",
       "D": "Disaster recovery focuses on restoring IT systems after a disaster; the question is about keeping the whole organization operating."
     },
-    "tip": null,
+    "tip": "Keep the whole organization operating through a crisis = BCP. Restore IT systems = DRP, which is part of business continuity.",
     "references": [],
     "source": "bank.pdf#p135",
     "needsReview": false,
@@ -2827,14 +2827,14 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "To block attacks, an IPS must sit inline in active mode, dropping malicious traffic as it passes.",
+    "explanation": "To block attacks, an IPS must sit inline in active mode, dropping malicious traffic as it passes. In passive or monitor modes it only sees a copy of the traffic, so it can alert but cannot stop anything.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Monitor mode only watches and alerts, like an IDS.",
       "B": "Sensor mode passively collects traffic without blocking.",
       "C": "Audit mode logs activity without blocking."
     },
-    "tip": null,
+    "tip": "To block, an IPS must be inline in active (prevention) mode. Monitor or passive mode only alerts.",
     "references": [],
     "source": "bank.pdf#p140",
     "needsReview": false,
@@ -2870,14 +2870,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Port security on the switch controls which devices can use a physical port, for example by allowing only known MAC addresses or requiring 802.1X, so a visitor's laptop gets no access.",
+    "explanation": "Port security on the switch controls which devices can use a physical port, for example by allowing only known MAC addresses or requiring 802.1X, so a visitor's laptop gets no access. Disabling unused ports, such as those in public areas, closes the gap entirely.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A web application firewall protects web applications, not physical network ports.",
       "C": "TLS encrypts sessions; it does not control who can plug into the network.",
       "D": "A VPN secures remote connections; it does not stop someone using an open jack."
     },
-    "tip": null,
+    "tip": "Stop visitors plugging into open jacks = port security or 802.1X on the switch.",
     "references": [],
     "source": "bank.pdf#p141",
     "needsReview": false,
@@ -2920,7 +2920,7 @@ export const domain3Questions = [
       "C": "Encryption protects data, but does not keep tenants' resources separate.",
       "D": "Strong authentication protects access, but not isolation between customers sharing infrastructure."
     },
-    "tip": null,
+    "tip": "Hosting an app for many customers (multitenant) → virtualization with strong isolation between tenants.",
     "references": [],
     "source": "bank.pdf#p143",
     "needsReview": false,
@@ -2963,7 +2963,7 @@ export const domain3Questions = [
       "B": "A cold site is only space and power, requiring the most recovery work.",
       "D": "Geographic dispersion describes where sites are, not how ready they are."
     },
-    "tip": null,
+    "tip": "No immediate failover needed, but less recovery work than a cold site = warm site.",
     "references": [],
     "source": "bank.pdf#p144",
     "needsReview": false,
@@ -2977,7 +2977,7 @@ export const domain3Questions = [
     "objective": "3.2",
     "objectiveTitle": "Given a scenario, apply security principles to secure enterprise infrastructure",
     "type": "single",
-    "question": "Employees located off-site must have access to company resources in order to complete their assigned tasks These employees utilize a solution that allows remote access without interception concerns. Which of the following best describes this solution?",
+    "question": "Employees located off-site must have access to company resources in order to complete their assigned tasks. These employees utilize a solution that allows remote access without interception concerns. Which of the following best describes this solution?",
     "choices": [
       {
         "key": "A",
@@ -3006,7 +3006,7 @@ export const domain3Questions = [
       "B": "An NGFW enforces policy on traffic crossing a boundary with application and identity awareness. It controls what may pass but is not the mechanism giving remote staff protected access.",
       "D": "A security zone is a logical grouping of systems at a similar trust level. It is a design concept for segmentation, not a remote-access technology."
     },
-    "tip": null,
+    "tip": "Remote access with encryption so traffic cannot be intercepted = VPN.",
     "references": [],
     "source": "bank.pdf#p146",
     "needsReview": false,
@@ -3042,14 +3042,14 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Now that sensitive data is classified, data loss prevention can recognize it and block it from leaving by email, web upload or removable media.",
+    "explanation": "Now that sensitive data is classified, data loss prevention can recognize it and block it from leaving by email, web upload or removable media. Classification and DLP work together: the labels tell DLP what matters, and DLP enforces where it may go.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "XDR detects and responds to threats across endpoints and networks, but is not built around stopping classified data leaving.",
       "B": "SPF lets receiving mail servers verify which servers may send a domain's email.",
       "D": "DMARC tells receiving servers how to handle mail that fails authentication -- email spoofing protection, not exfiltration control."
     },
-    "tip": null,
+    "tip": "Classified data at risk of leaving → DLP. SPF and DMARC protect email senders; XDR detects threats.",
     "references": [],
     "source": "bank.pdf#p149",
     "needsReview": false,
@@ -3085,14 +3085,14 @@ export const domain3Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "IoT devices talk to a cloud management platform across the internet. Encrypting those connections protects commands and data in transit and is a baseline requirement.",
+    "explanation": "IoT devices talk to a cloud management platform across the internet. Encrypting those connections protects commands and data in transit and is a baseline requirement. Without it, an attacker on the path could read device data or even send false commands.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Federated identity is useful for user logins, but not required for device communication.",
       "C": "A firewall is good practice, but does not protect data traveling over the internet to the cloud.",
       "D": "Single sign-on simplifies user logins; devices do not use it."
     },
-    "tip": null,
+    "tip": "IoT devices talking to a cloud platform must use encrypted connections (TLS).",
     "references": [],
     "source": "bank.pdf#p150",
     "needsReview": false,
@@ -3135,7 +3135,7 @@ export const domain3Questions = [
       "C": "A load balancer spreads requests across servers to handle volume. It improves availability and would do nothing about a file that happens to be malicious.",
       "D": "A WAF blocking command injection defends against attacks embedded in request parameters. The threat here is the content of an uploaded file, not an injected command in the request."
     },
-    "tip": null,
+    "tip": "Public file uploads → scan them for malware before storing or serving them (UTM or anti-malware sandbox).",
     "references": [],
     "source": "bank.pdf#p151",
     "needsReview": false,
@@ -3178,7 +3178,7 @@ export const domain3Questions = [
       "C": "A failover site is a general term for any site traffic can be switched to. Where it is meaningful it implies hot-site capability and cost.",
       "D": "A warm site sits between the two, with hardware and connectivity in place but data restored at failover time. It still needs standing links, so it exceeds the stated budget."
     },
-    "tip": null,
+    "tip": "The lowest-cost DR site, with no budget for equipment or connectivity = cold site.",
     "references": [],
     "source": "bank.pdf#p152",
     "needsReview": false,
@@ -3221,7 +3221,7 @@ export const domain3Questions = [
       "B": "A missing SLA means no contractual guarantee of uptime or repair time. That is a commercial concern; even a strong SLA would not stop the outage.",
       "C": "An RPO defines how much data loss is tolerable after an incident. It relates to backup and recovery planning, not to a single network path."
     },
-    "tip": null,
+    "tip": "Redundant equipment behind a single ISP link = a single point of failure.",
     "references": [],
     "source": "bank.pdf#p154",
     "needsReview": false,
@@ -3264,7 +3264,7 @@ export const domain3Questions = [
       "C": "Network load balancing across multiple paths improves network availability. It does not provide compute headroom or scalable storage.",
       "D": "Large NAS devices per host add storage capacity, but bought in fixed increments rather than scaling on demand, and they address neither memory nor circuit resilience."
     },
-    "tip": null,
+    "tip": "Elastic memory, scalable storage and circuit resilience without buying hardware = IaaS.",
     "references": [],
     "source": "bank.pdf#p156",
     "needsReview": false,
@@ -3307,7 +3307,7 @@ export const domain3Questions = [
       "C": "A pre-shared key gates access behind one password. Once a customer shares it, or it is seen on a receipt, anybody in range can join indefinitely.",
       "D": "802.1X authenticates each user against a directory or RADIUS server. A coffee shop has no accounts for walk-in customers, so there is nothing to authenticate against."
     },
-    "tip": null,
+    "tip": "Guest Wi-Fi that asks for a code, a receipt number or acceptance of terms = captive portal.",
     "references": [],
     "source": "bank.pdf#p158",
     "needsReview": false,
@@ -3350,7 +3350,7 @@ export const domain3Questions = [
       "B": "Access levels are one control that follows from classification, but they are a subset. The policy drives the full set of security requirements, not access alone.",
       "D": "Visibility of a label before opening a document is a convenience of labeling. It helps people, but it is not why the policy protects sensitive information."
     },
-    "tip": null,
+    "tip": "Classification lets security requirements attach to each level: encrypt, restrict and retain by label.",
     "references": [],
     "source": "bank.pdf#p161",
     "needsReview": false,
@@ -3662,7 +3662,7 @@ export const domain3Questions = [
     "explanation": "Masking replaces part of a value with a placeholder so the record stays useful without exposing the sensitive data — showing only the last four digits of a card number in a log, for example. That is the standard treatment for card data written to logs.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Tokenisation swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
+      "A": "Tokenization swaps the value for an unrelated token stored in a secure vault. It is used where the value must be reversible for processing, which is heavier than a log needs.",
       "C": "Hashing produces an irreversible digest. Card numbers have a small enough keyspace to be recovered from a hash by brute force, so it is not the recommended treatment.",
       "D": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique, and the question asks for the precise one."
     },
@@ -4101,10 +4101,10 @@ export const domain3Questions = [
     "explanation": "The protocol cannot be changed, so the answer is to wrap it and to limit it. SSH tunneling encrypts the unprotected traffic inside a secure channel, and segmentation confines the legacy system to a restricted zone so its weakness cannot be reached from the rest of the network.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "A": "Tokenisation substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
+      "A": "Tokenization substitutes values before transmission. The third party needs the real financial data, so substitution breaks the business process.",
       "B": "A cryptographic downgrade is an attack that forces weaker algorithms. It is a threat, not a control.",
       "E": "Patch installation cannot help — the question states no update supporting an encrypted protocol exists.",
-      "F": "Data masking hides parts of a value. Like tokenisation it destroys the completeness the recipient requires."
+      "F": "Data masking hides parts of a value. Like tokenization it destroys the completeness the recipient requires."
     },
     "tip": null,
     "references": [],
@@ -4142,7 +4142,7 @@ export const domain3Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Tokenisation swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenisation system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
+    "explanation": "Tokenization swaps a sensitive value for a surrogate that has no meaning or exploitable value outside the tokenization system. The real data sits in a separate hardened vault, so a breach of the working system yields only meaningless tokens.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encrypting a database protects data with a key that can reverse it. Encryption is a different strategy, and the ciphertext is still derived from the original.",
@@ -4275,7 +4275,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Microservices is an application design pattern that splits a system into small services. It affects how software is structured, and typically increases the number of deployed instances.",
-      "B": "Virtualisation gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
+      "B": "Virtualization gives each virtual machine its own complete guest operating system, so the patching burden stays the same or grows even as hardware is consolidated.",
       "C": "A real-time operating system is used where timing guarantees matter, in embedded and industrial systems. It is not a consolidation strategy for general workloads."
     },
     "tip": null,
@@ -5242,7 +5242,7 @@ export const domain3Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Virtualisation consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
+    "explanation": "Virtualization consolidates many workloads onto fewer physical machines. Fewer boxes means fewer physical ports, management interfaces, firmware images and pieces of hardware to secure, which shrinks the hardware attack surface directly.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Replication copies data to additional systems. That adds hardware rather than reducing it.",
@@ -5676,7 +5676,7 @@ export const domain3Questions = [
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "Masking hides parts of a value for display. It reduces what is shown rather than protecting a transmission.",
-      "C": "Tokenisation substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
+      "C": "Tokenization substitutes values before storage or processing. It protects data at rest in a system, not the channel.",
       "D": "Obfuscation makes data harder to interpret without real cryptographic strength. An interceptor can reverse it."
     },
     "tip": null,
@@ -5934,7 +5934,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Segmentation divides a network logically. Paths still exist between zones, controlled rather than absent.",
-      "B": "Virtualised describes workloads running as guests on shared hardware. Those guests remain networked.",
+      "B": "Virtualized describes workloads running as guests on shared hardware. Those guests remain networked.",
       "D": "Serverless runs code on provider-managed infrastructure, which is inherently reachable over the network."
     },
     "tip": null,
@@ -6193,7 +6193,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "B": "Journaling records every transaction and gives an even smaller loss window, but it is a database and filesystem transaction technique rather than the standard file server restore mechanism.",
       "C": "Obfuscation makes data harder to interpret. It protects nothing against loss.",
-      "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+      "D": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
     },
     "tip": null,
     "references": [],
@@ -6326,7 +6326,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Containerization isolates applications on a shared kernel. The host still has network connectivity.",
-      "C": "Virtualisation runs multiple guests on one host. The virtual machines remain networked.",
+      "C": "Virtualization runs multiple guests on one host. The virtual machines remain networked.",
       "D": "Decentralization spreads systems and authority across locations. It adds connections rather than removing them."
     },
     "tip": null,
@@ -6509,7 +6509,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "A": "Containerized describes how an application is packaged to run on a shared kernel. It concerns deployment, not distributing requests across servers.",
       "B": "Multitenant means several customers share one instance. It is an efficiency model and concentrates rather than distributes risk.",
-      "D": "Virtualised means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."
+      "D": "Virtualized means workloads run as virtual machines. Several VMs on one host offer no resilience if that host fails."
     },
     "tip": null,
     "references": [],
@@ -6551,7 +6551,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "RBAC limits who can reach the data. The engineer legitimately needs access, and the real PII would still be sitting there.",
-      "C": "Tokenisation substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
+      "C": "Tokenization substitutes values but keeps them reversible through a vault. That preserves a path back to the real data, which test environments should not have.",
       "D": "Filtering restricts which records are returned. Fewer real records is still real PII."
     },
     "tip": null,
@@ -7368,7 +7368,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Containerization isolates applications on a shared kernel. The host still has connectivity.",
-      "B": "Virtualisation runs guests on shared hardware. Those guests remain networked.",
+      "B": "Virtualization runs guests on shared hardware. Those guests remain networked.",
       "C": "SD-WAN manages and optimizes connectivity across WAN links — it provides access rather than removing it."
     },
     "tip": null,
@@ -7765,7 +7765,7 @@ export const domain3Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "RBAC limits who may reach the data. The engineer legitimately needs access, and the real data would still be there.",
-      "C": "Tokenisation substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
+      "C": "Tokenization substitutes values but keeps them reversible through a vault, which means a path back to the real data still exists in the test environment.",
       "D": "Filtering returns fewer records. A smaller set of real customer data is still real customer data."
     },
     "tip": null,
@@ -8019,7 +8019,7 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Tokenisation replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
+    "explanation": "Tokenization replaces the sensitive values in the database with surrogates that mean nothing on their own, keeping the real data in a separate hardened vault. A breach of the database then yields tokens rather than anything exploitable.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Hashing is irreversible, so the application could never retrieve the original value when it legitimately needs it.",
@@ -8067,7 +8067,7 @@ export const domain3Questions = [
     "incorrectExplanations": {
       "A": "Monitoring observes the system and alerts on problems. It preserves no data.",
       "C": "Obfuscation makes data harder to interpret. It offers no protection against loss.",
-      "D": "Tokenisation substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
+      "D": "Tokenization substitutes sensitive values with surrogates. It is a data protection technique, not a recovery one."
     },
     "tip": null,
     "references": [],
@@ -8548,7 +8548,7 @@ export const domain3Questions = [
     "explanation": "A UAT environment needs data that behaves like production without being production. Masking replaces the sensitive fields with realistic but fictitious values, so testing is meaningful while no real customer data exists outside production.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "B": "Tokenisation substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
+      "B": "Tokenization substitutes values but keeps them reversible through a vault, which leaves a path back to the real data in a lower-trust environment.",
       "C": "Obfuscation is the general idea of making data harder to interpret. Masking is the specific technique for this use case.",
       "D": "Encryption protects data but the testers would need the key to use it, at which point the real data is exposed anyway."
     },
@@ -9124,7 +9124,7 @@ export const domain3Questions = [
       "A": "DLP labeling classifies data for policy enforcement. It affects handling, not location.",
       "B": "File metadata manipulation changes descriptive attributes. It does not move data across borders.",
       "C": "Unencrypted data at rest is a confidentiality weakness. It may compound a sovereignty breach but does not cause one.",
-      "D": "Tokenising database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
+      "D": "Tokenizing database fields protects values. It is sometimes used to help satisfy sovereignty rules rather than violate them."
     },
     "tip": null,
     "references": [],
@@ -9387,12 +9387,12 @@ export const domain3Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Virtualisation runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
+    "explanation": "Virtualization runs many isolated workloads on one physical host through a hypervisor, so hardware cost falls while each workload keeps its own operating system boundary. That combination of consolidation and isolation is what satisfies both the security and cost goals.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Infrastructure as code standardizes how systems are built. It improves consistency without reducing the hardware needed.",
       "B": "Hybrid cloud describes where workloads run. It can reduce hardware but introduces a shared responsibility model rather than being the most secure option.",
-      "D": "Containerization is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualisation provides."
+      "D": "Containerization is more efficient still, but containers share the host kernel, which gives weaker isolation than the hypervisor boundary virtualization provides."
     },
     "tip": null,
     "references": [],

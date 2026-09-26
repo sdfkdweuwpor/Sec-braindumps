@@ -37,7 +37,7 @@ export const domain4Questions = [
       "B": "IPS/IDS logs show suspicious network traffic, not what an executable did on the laptop.",
       "C": "Network logs show connections and flows, which the SIEM already alerted on. They cannot describe the executable itself."
     },
-    "tip": null,
+    "tip": "Need details about a process or file on one computer? The endpoint (EDR or host) logs have them. Network, IDS/IPS and firewall logs only see the traffic it made.",
     "references": [],
     "source": "bank.pdf#p4",
     "needsReview": false,
@@ -80,7 +80,7 @@ export const domain4Questions = [
       "B": "E-discovery collects electronic information for legal proceedings, not for finding attackers.",
       "C": "Incident response begins once an incident has been identified. Here nothing has been detected yet."
     },
-    "tip": null,
+    "tip": "No alert has fired yet, but you have intel on a new attacker tactic: that is threat hunting, proactively searching for attackers before any detection catches them.",
     "references": [],
     "source": "bank.pdf#p4",
     "needsReview": false,
@@ -123,7 +123,7 @@ export const domain4Questions = [
       "B": "Version control tracks code changes. It does not fix a vulnerability in how input is handled.",
       "D": "Code signing proves who published the code and that it is unaltered. It does nothing about malicious input at runtime."
     },
-    "tip": null,
+    "tip": "Form fields plus XSS or SQL injection → input validation (with output encoding). Secure cookies, code signing and version control solve different problems.",
     "references": [],
     "source": "bank.pdf#p7",
     "needsReview": false,
@@ -166,7 +166,7 @@ export const domain4Questions = [
       "B": "Identifying affected systems is scoping during analysis and containment.",
       "C": "Removing malware is eradication, a separate phase."
     },
-    "tip": null,
+    "tip": "Root cause analysis answers 'why did this happen?' so it does not happen again. Finding affected systems is scoping; removing malware is eradication.",
     "references": [],
     "source": "bank.pdf#p8",
     "needsReview": false,
@@ -202,14 +202,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Wiping drives so that data cannot be recovered, while leaving the hardware usable for recycling, is sanitization.",
+    "explanation": "Sanitization removes data from storage so it cannot be recovered, for example by overwriting every sector or running the drive's secure-erase command, while leaving the hardware usable. Here the drives are wiped and then sent for recycling rather than shredded, which is a sanitization policy. Organizations often keep a certificate of sanitization as proof.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Enumeration lists resources such as users, hosts or services. It does not remove data.",
       "C": "Destruction physically destroys the media. Here the drives are wiped and sent for recycling.",
       "D": "Inventory tracks what assets exist. It does not remove data from them."
     },
-    "tip": null,
+    "tip": "Wiped so the data cannot be recovered but the hardware can be reused or recycled = sanitization. Shredding or burning the media = destruction.",
     "references": [],
     "source": "bank.pdf#p11",
     "needsReview": false,
@@ -252,7 +252,7 @@ export const domain4Questions = [
       "C": "Static code analysis finds bugs and vulnerabilities in source code, not proof of origin.",
       "D": "Secure cookies protect session data in transit. They do not prove authorship."
     },
-    "tip": null,
+    "tip": "Proving who wrote the code and that it was not altered = code signing (a digital signature made with the publisher's private key).",
     "references": [],
     "source": "bank.pdf#p13",
     "needsReview": false,
@@ -288,14 +288,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Working out where an incident came from and how it unfolded is the analysis phase, which follows detection and informs containment.",
+    "explanation": "Working out where an incident came from and how it unfolded is the analysis phase, which follows detection and informs containment. Analysts correlate logs, alerts and evidence to find the attack vector, the systems involved and the scope, so the team knows exactly what to contain and eradicate.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Lessons learned comes at the end, reviewing what went well and what to improve.",
       "C": "Detection is noticing that something happened, before its source is understood.",
       "D": "Containment limits the damage once the incident is understood."
     },
-    "tip": null,
+    "tip": "IR phases: preparation → detection → analysis → containment → eradication → recovery → lessons learned. Working out the source and scope is analysis.",
     "references": [],
     "source": "bank.pdf#p14",
     "needsReview": false,
@@ -338,7 +338,7 @@ export const domain4Questions = [
       "B": "A penetration test is a larger exercise. The immediate step is confirming the patched vulnerabilities are gone.",
       "D": "Reporting comes once remediation has been verified by the rescan."
     },
-    "tip": null,
+    "tip": "After fixing vulnerabilities, rescan to confirm the remediation worked. Reporting comes after the fixes are verified.",
     "references": [],
     "source": "bank.pdf#p14",
     "needsReview": false,
@@ -381,7 +381,7 @@ export const domain4Questions = [
       "C": "Attestation is a formal statement that something is true. It is not a daily technical check.",
       "D": "A manual audit is too slow and error-prone to repeat daily across servers."
     },
-    "tip": null,
+    "tip": "'Consistently' and 'daily' point to automation: scripts or tools that compare settings against a baseline and flag drift every day.",
     "references": [],
     "source": "bank.pdf#p15",
     "needsReview": false,
@@ -417,14 +417,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Data loss prevention inspects outgoing content such as email attachments for sensitive data like PII, and can alert on or block it -- exactly the accidental send described.",
+    "explanation": "Data loss prevention inspects outgoing content such as email attachments for sensitive data like PII, and can alert on or block it -- exactly the accidental send described. DLP rules match patterns such as Social Security and card numbers, so the email is caught even though the employee meant no harm.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SCAP is a set of standards for automated vulnerability and configuration checks. It does not inspect email content.",
       "B": "NetFlow records traffic metadata such as source, destination and volume, not what is in a file.",
       "C": "Antivirus detects malware, not sensitive information in legitimate files."
     },
-    "tip": null,
+    "tip": "Sensitive data (PII, card numbers) leaving by email, USB or upload → DLP. NetFlow sees traffic volumes, not what is inside the files.",
     "references": [],
     "source": "bank.pdf#p15",
     "needsReview": false,
@@ -467,7 +467,7 @@ export const domain4Questions = [
       "B": "Debugging finds and fixes errors during development. It is not a runtime defense.",
       "D": "Static code analysis reviews source code for flaws. It does not filter input as the application runs."
     },
-    "tip": null,
+    "tip": "Stripping or rejecting special characters from form input = input validation (sanitization), the defense against injection attacks.",
     "references": [],
     "source": "bank.pdf#p15",
     "needsReview": false,
@@ -489,7 +489,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Implement email security filters to prevent phishing emails from being delivered"
+        "text": "Implement email security filters to prevent phishing emails from being delivered."
       },
       {
         "key": "C",
@@ -510,7 +510,7 @@ export const domain4Questions = [
       "B": "Email filtering stops phishing reaching inboxes. It reduces exposure, not the impact of a click that still happens.",
       "D": "More training aims to reduce click-through, not the impact of a click."
     },
-    "tip": null,
+    "tip": "Reduce the IMPACT of a click → limit what happens after it (block execution with EDR). Reduce the CHANCE of a click → training and email filtering.",
     "references": [],
     "source": "bank.pdf#p16",
     "needsReview": false,
@@ -553,7 +553,7 @@ export const domain4Questions = [
       "B": "A ticketing workflow routes requests but still leaves the account setup to be done manually.",
       "C": "Escalation scripts route issues to the right people. They do not create accounts."
     },
-    "tip": null,
+    "tip": "Accounts built by hand keep coming out wrong → automate with a user provisioning script that applies a role template every time.",
     "references": [],
     "source": "bank.pdf#p17",
     "needsReview": false,
@@ -589,14 +589,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Once activity is confirmed as normal, the detection rules are adjusted so it is no longer flagged. Adjusting tools to reduce false positives is tuning.",
+    "explanation": "Once activity is confirmed as normal, the detection rules are adjusted so it is no longer flagged. Adjusting tools to reduce false positives is tuning. It is an ongoing SOC task: without it, analysts drown in noise and miss the alerts that matter.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Aggregation collects data from many sources into one place, not suppressing specific detections.",
       "C": "Quarantining isolates a suspicious file or system -- the opposite of ignoring it.",
       "D": "Archiving stores old data for retention. It does not change what gets detected."
     },
-    "tip": null,
+    "tip": "Stop alerting on activity confirmed as benign = tuning, which cuts false positives.",
     "references": [],
     "source": "bank.pdf#p18",
     "needsReview": false,
@@ -639,7 +639,7 @@ export const domain4Questions = [
       "C": "Only covering security team members' messages is too narrow; relevant communications from anyone must be kept.",
       "D": "Keeping every email to customers forever is both too broad and not tied to the case."
     },
-    "tip": null,
+    "tip": "Legal hold = preserve everything relevant, in every form, until the lawyers release it. No fixed end date and no deleting.",
     "references": [],
     "source": "bank.pdf#p32",
     "needsReview": false,
@@ -682,7 +682,7 @@ export const domain4Questions = [
       "B": "A VPN IP address and company ID are identifiers anyone could learn. Only the facial structure is a true factor.",
       "D": "A company URL and home address are not secrets, and a TLS certificate authenticates a server, not the user."
     },
-    "tip": null,
+    "tip": "One factor of each kind: know (password, PIN), have (token, smart card, phone), are (fingerprint, face). IP addresses and locations are not 'have' factors.",
     "references": [],
     "source": "bank.pdf#p33",
     "needsReview": false,
@@ -725,7 +725,7 @@ export const domain4Questions = [
       "B": "Storing the documents on an air-gapped network would make them unreachable during exactly the incident they are written for. Offline copies are sensible; air-gapping is not.",
       "C": "Reviewing the classification policy determines how the documents should be labeled and handled. That is administrative housekeeping, not validation."
     },
-    "tip": null,
+    "tip": "A new IR plan or playbook gets tested with a tabletop exercise: a discussion-based walkthrough of a scenario, with nothing touched for real.",
     "references": [],
     "source": "bank.pdf#p33",
     "needsReview": false,
@@ -768,7 +768,7 @@ export const domain4Questions = [
       "B": "IPS rules look for attack signatures, not website categories such as shopping.",
       "C": "DLP detects sensitive data leaving the network. It is not what blocks the site."
     },
-    "tip": null,
+    "tip": "A legitimate site blocked under the wrong category (gambling, adult) → fix its categorization in the web content filter.",
     "references": [],
     "source": "bank.pdf#p33",
     "needsReview": false,
@@ -811,7 +811,7 @@ export const domain4Questions = [
       "C": "Reviewing change approvals is change management, unrelated to leavers.",
       "D": "Escalating permission requests routes requests for more access, not removal of it."
     },
-    "tip": null,
+    "tip": "Leavers should lose access immediately. Automating deprovisioning (disabling accounts) closes the gap that manual offboarding leaves.",
     "references": [],
     "source": "bank.pdf#p34",
     "needsReview": false,
@@ -847,14 +847,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "A SIEM collects and centralizes logs from systems, applications and network devices, correlates them and raises alerts. That is exactly the description.",
+    "explanation": "A SIEM collects and centralizes logs from systems, applications and network devices, correlates them and raises alerts. That is exactly the description. Because all the logs are in one place, the SIEM can link events across sources, such as a VPN login followed by unusual file access, that no single tool would notice.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "DLP monitors for sensitive data leaving the organization. It does not centralize logs from everything.",
       "C": "An IDS monitors traffic or hosts for attacks, producing one source of alerts rather than collecting all logs.",
       "D": "SNMP is a protocol for managing and monitoring network devices, not a central log analysis tool."
     },
-    "tip": null,
+    "tip": "Central collection + correlation + alerting across many log sources = SIEM.",
     "references": [],
     "source": "bank.pdf#p37",
     "needsReview": false,
@@ -907,7 +907,7 @@ export const domain4Questions = [
       "C": "Moving a device to an isolated segment reduces risk; it does not call for removing the device.",
       "D": "Moving a device to another location changes nothing about its security."
     },
-    "tip": null,
+    "tip": "Decommission when a risk cannot be fixed: no more authorized updates, or it cannot meet the required encryption. Configuration problems get fixed, not retired.",
     "references": [],
     "source": "bank.pdf#p37",
     "needsReview": false,
@@ -948,9 +948,9 @@ export const domain4Questions = [
     "incorrectExplanations": {
       "A": "SPF authorizes mail servers to send for a domain. It concerns email, not file changes.",
       "B": "A GPO enforces configuration settings across systems. It applies policy rather than tracking changes to data.",
-      "C": "NAC decides which devices may join the network."
+      "C": "NAC decides which devices may join the network. It does not watch files or settings for changes."
     },
-    "tip": null,
+    "tip": "Detect or track changes to files and system settings = FIM (file integrity monitoring), which compares hashes against a known-good baseline.",
     "references": [],
     "source": "bank.pdf#p38",
     "needsReview": false,
@@ -986,14 +986,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Defining and reviewing who does what during an incident happens before any incident, in the preparation phase, along with tools, contacts and procedures.",
+    "explanation": "Defining and reviewing who does what during an incident happens before any incident, in the preparation phase, along with tools, contacts and procedures. Preparation also covers building the team, contact lists, playbooks and training, so everyone knows their job before an incident starts.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Recovery restores systems after the threat is removed.",
       "C": "Lessons learned reviews an incident after it closes. It may lead to role changes, but roles are set up in preparation.",
       "D": "Analysis investigates an incident underway, when roles need to be settled already."
     },
-    "tip": null,
+    "tip": "Anything set up before an incident (roles, contact lists, tools, playbooks, training) belongs to the preparation phase.",
     "references": [],
     "source": "bank.pdf#p39",
     "needsReview": false,
@@ -1036,7 +1036,7 @@ export const domain4Questions = [
       "C": "Classification is set by the data owner. The vendor does not provide it.",
       "D": "Proof of ownership establishes who owns the asset, not that it was disposed of correctly."
     },
-    "tip": null,
+    "tip": "Outsourced disposal → ask for a certificate of destruction or sanitization, as proof and for the audit trail.",
     "references": [],
     "source": "bank.pdf#p39",
     "needsReview": false,
@@ -1079,7 +1079,7 @@ export const domain4Questions = [
       "B": "Sensors on the same subnet say where to watch, but not what is recorded; without full capture the payloads are still lost.",
       "C": "Endpoint and OS logs rarely record the web requests that carry an injection."
     },
-    "tip": null,
+    "tip": "To investigate what an attacker actually sent (the payloads), you need full packet capture. NetFlow only has metadata: who, when and how much.",
     "references": [],
     "source": "bank.pdf#p41",
     "needsReview": false,
@@ -1122,7 +1122,7 @@ export const domain4Questions = [
       "C": "A baseline is the standard configuration systems are measured against.",
       "D": "Policy enforcement ensures rules are followed; it does not describe bulk account creation."
     },
-    "tip": null,
+    "tip": "Scripts that chain steps across systems to save time and remove human error = automation and orchestration.",
     "references": [],
     "source": "bank.pdf#p43",
     "needsReview": false,
@@ -1165,7 +1165,7 @@ export const domain4Questions = [
       "B": "Content filtering controls web access, not file server permissions.",
       "C": "DLP watches data leaving; it does not stop users opening files they have permission to."
     },
-    "tip": null,
+    "tip": "The fastest fix for too-broad access to files and folders = change the ACLs (permissions).",
     "references": [],
     "source": "bank.pdf#p43",
     "needsReview": false,
@@ -1208,7 +1208,7 @@ export const domain4Questions = [
       "B": "A rescan would report the same finding. The analyst's manual test already answered the question.",
       "C": "Noise means irrelevant alerts. An exposed Telnet service is a relevant finding."
     },
-    "tip": null,
+    "tip": "The scanner flags a risk but your own check shows it is mitigated another way → compensating controls exist, not a false positive.",
     "references": [],
     "source": "bank.pdf#p45",
     "needsReview": false,
@@ -1244,14 +1244,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Endpoint management software sits on every workstation and server and reports configuration changes and installed software centrally, so unauthorized changes are spotted.",
+    "explanation": "Endpoint management software sits on every workstation and server and reports configuration changes and installed software centrally, so unauthorized changes are spotted. The agents compare each host against its approved baseline, which network-based tools cannot see from outside the host.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Logging scheduled tasks catches one persistence method, not changes and software generally.",
       "B": "Monitoring traffic leaving the network does not show what changed on a host.",
       "C": "Blocking known malicious signatures stops known threats but does not monitor for unauthorized changes."
     },
-    "tip": null,
+    "tip": "Watching every host for unauthorized changes and software → an agent on every endpoint (endpoint management or EDR). Network tools cannot see inside hosts.",
     "references": [],
     "source": "bank.pdf#p46",
     "needsReview": false,
@@ -1294,7 +1294,7 @@ export const domain4Questions = [
       "C": "Failover testing checks that redundant systems take over. It tests infrastructure, not the incident response process.",
       "D": "Recovery is a phase of incident response, not an exercise format."
     },
-    "tip": null,
+    "tip": "Improve the IR process without touching production = tabletop exercise. Failover and replication test infrastructure, not the process.",
     "references": [],
     "source": "bank.pdf#p47",
     "needsReview": false,
@@ -1337,7 +1337,7 @@ export const domain4Questions = [
       "C": "The CIA triad (confidentiality, integrity, availability) is a set of security goals, not a scoring system.",
       "D": "CERT teams coordinate responses and publish advisories; they are not a scoring system."
     },
-    "tip": null,
+    "tip": "A score from 0 to 10 = CVSS. An ID such as CVE-2024-1234 = CVE. CVSS measures severity; CVE just names the vulnerability.",
     "references": [],
     "source": "bank.pdf#p50",
     "needsReview": false,
@@ -1373,14 +1373,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Metadata is data about the file itself, including when it was created and by whom (or which account and device). Querying it gives the analyst both answers directly.",
+    "explanation": "Metadata is data about the file itself, including when it was created and by whom (or which account and device). Querying it gives the analyst both answers directly. For media files, container tags and EXIF-style fields can also record the recording device and the software that made the file.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A hash identifies the file's contents for integrity or reputation lookups, but says nothing about creation date or creator.",
       "B": "A hex dump shows raw bytes and would require manually decoding the metadata anyway.",
       "C": "Endpoint logs may show activity, but not who originally created a file that may have come from elsewhere."
     },
-    "tip": null,
+    "tip": "Who created a file and when = metadata. Hashes identify content; they hold no authorship or dates.",
     "references": [],
     "source": "bank.pdf#p54",
     "needsReview": false,
@@ -1423,7 +1423,7 @@ export const domain4Questions = [
       "B": "Routing protocols are what a router is for; disabling them breaks the network.",
       "C": "VLANs segment traffic and improve security. Disabling them makes things worse."
     },
-    "tip": null,
+    "tip": "Hardening network gear: disable web-based (HTTP) management and unused services, and manage over SSH instead.",
     "references": [],
     "source": "bank.pdf#p55",
     "needsReview": false,
@@ -1466,7 +1466,7 @@ export const domain4Questions = [
       "B": "DLP looks for sensitive data leaving, not exploits arriving.",
       "C": "An IDS detects signatures but only alerts; it cannot block."
     },
-    "tip": null,
+    "tip": "Known signatures + block = IPS (inline). Known signatures + alert only = IDS (out of band).",
     "references": [],
     "source": "bank.pdf#p55",
     "needsReview": false,
@@ -1519,7 +1519,7 @@ export const domain4Questions = [
       "E": "A password manager stores many passwords; here one identity is reused across sites.",
       "F": "OAuth ('open authorization') delegates access between services; the scenario describes federated identity."
     },
-    "tip": null,
+    "tip": "One identity trusted across multiple sites = federation. Length and character rules = password complexity.",
     "references": [],
     "source": "bank.pdf#p56",
     "needsReview": false,
@@ -1562,7 +1562,7 @@ export const domain4Questions = [
       "C": "A web application firewall protects web applications from HTTP attacks, not lateral malware movement.",
       "D": "User acceptance testing validates software features before release; it is not a security control."
     },
-    "tip": null,
+    "tip": "Stop malware moving laterally inside the network = IPS (it blocks). An IDS only alerts; a WAF protects web applications.",
     "references": [],
     "source": "bank.pdf#p58",
     "needsReview": false,
@@ -1580,19 +1580,19 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Access list outbound permit 0.0.0.0 0 0.0.0.0/0 port 53 Access list outbound deny 10.50.10.25 32 0.0.0.0/0 port 53"
+        "text": "Access list outbound permit 0.0.0.0/0 0.0.0.0/0 port 53\nAccess list outbound deny 10.50.10.25/32 0.0.0.0/0 port 53"
       },
       {
         "key": "B",
-        "text": "Access list outbound permit 0.0.0.0/0 10.50.10.25 32 port 53 Access list outbound deny 0.0.0.0 0 0.0.0.0/0 port 53"
+        "text": "Access list outbound permit 0.0.0.0/0 10.50.10.25/32 port 53\nAccess list outbound deny 0.0.0.0/0 0.0.0.0/0 port 53"
       },
       {
         "key": "C",
-        "text": "Access list outbound permit 0.0.0.0 0 0.0.0.0/0 port 53 Access list outbound deny 0.0.0.0/0 10.50.10.25 32 port 53"
+        "text": "Access list outbound permit 0.0.0.0/0 0.0.0.0/0 port 53\nAccess list outbound deny 0.0.0.0/0 10.50.10.25/32 port 53"
       },
       {
         "key": "D",
-        "text": "Access list outbound permit 10.50.10.25 32 0.0.0.0/0 port 53 Access list outbound deny 0.0.0.0 0 0.0.0.0/0 port 53"
+        "text": "Access list outbound permit 10.50.10.25/32 0.0.0.0/0 port 53\nAccess list outbound deny 0.0.0.0/0 0.0.0.0/0 port 53"
       }
     ],
     "correct": [
@@ -1605,7 +1605,7 @@ export const domain4Questions = [
       "B": "The permit rule has source and destination reversed, allowing traffic to 10.50.10.25 rather than from it.",
       "C": "Permitting all sources first again allows everyone, and the deny rule targets the wrong direction."
     },
-    "tip": null,
+    "tip": "Firewall rules are read top-down and the first match wins: put the specific permit (10.50.10.25/32) above the broad deny (0.0.0.0/0).",
     "references": [],
     "source": "bank.pdf#p59",
     "needsReview": false,
@@ -1648,7 +1648,7 @@ export const domain4Questions = [
       "C": "MFA adds more authentication factors; it does not reduce the number of credentials.",
       "D": "PEAP protects EAP authentication for wireless and 802.1X networks, not SaaS logins."
     },
-    "tip": null,
+    "tip": "Use domain credentials for new SaaS apps, with fewer passwords = SSO (through federation with SAML or OpenID Connect).",
     "references": [],
     "source": "bank.pdf#p60",
     "needsReview": false,
@@ -1684,14 +1684,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "The attackers had the users' passwords. Multifactor authentication requires something besides the password, so stolen passwords alone would no longer be enough to log in.",
+    "explanation": "The attackers had the users' passwords. Multifactor authentication requires something besides the password, so stolen passwords alone would no longer be enough to log in. Correct passwords arriving from unexpected IP addresses mean the credentials were stolen, for example through phishing or reuse from another breach, and resetting them only fixes this one incident.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Changing permissions limits what an account can do, not whether an attacker can log in with it.",
       "C": "Access management is the broad discipline; MFA is the specific control that stops stolen passwords working.",
       "D": "Stronger passwords help against guessing, but not against passwords that have already been stolen."
     },
-    "tip": null,
+    "tip": "Correct passwords from strange IP addresses = stolen credentials. MFA makes a stolen password useless on its own.",
     "references": [],
     "source": "bank.pdf#p62",
     "needsReview": false,
@@ -1734,7 +1734,7 @@ export const domain4Questions = [
       "C": "www.*.com matches most commercial sites regardless of encryption.",
       "D": ":443 is the HTTPS port -- blocking it would block encrypted sites instead."
     },
-    "tip": null,
+    "tip": "Plain HTTP URLs begin with http://. Port 443 = HTTPS (encrypted); port 80 = HTTP.",
     "references": [],
     "source": "bank.pdf#p69",
     "needsReview": false,
@@ -1777,7 +1777,7 @@ export const domain4Questions = [
       "C": "This permits the malicious address -- the opposite of the goal.",
       "D": "This permits traffic to the malicious address and blocks nothing."
     },
-    "tip": null,
+    "tip": "Blocking an attacker inbound: deny with the attacker as the SOURCE (x.x.x.x/32) and any destination (0.0.0.0/0).",
     "references": [],
     "source": "bank.pdf#p69",
     "needsReview": false,
@@ -1813,14 +1813,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Inviting outside researchers to test the application and paying them per valid vulnerability found is a bug bounty program.",
+    "explanation": "Inviting outside researchers to test the application and paying them per valid vulnerability found is a bug bounty program. It brings many testers with different skills to the internet-facing application, and the company pays only for real results, under published rules about scope and safe-harbor reporting.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Open-source intelligence is gathering publicly available information, not paid vulnerability testing.",
       "C": "A red team is a hired or internal group simulating attackers, not open participation paid per finding.",
       "D": "A penetration test is a contracted engagement paid for the work, not per vulnerability by anyone who participates."
     },
-    "tip": null,
+    "tip": "Outside researchers paid for each valid vulnerability they report = bug bounty.",
     "references": [],
     "source": "bank.pdf#p71",
     "needsReview": false,
@@ -1873,7 +1873,7 @@ export const domain4Questions = [
       "D": "User-based firewall policies follow the user's identity, not a physical label.",
       "E": "Penetration testers target systems by network identity; asset stickers do not help them."
     },
-    "tip": null,
+    "tip": "Asset tags tied to employees give accountability: you know whose device it is during an incident, and what to recover when someone leaves.",
     "references": [],
     "source": "bank.pdf#p72",
     "needsReview": false,
@@ -1909,14 +1909,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A board needs a clear, high-level view of incident counts over time. A dashboard summarizes metrics visually and suits a quarterly executive report.",
+    "explanation": "A board needs a clear, high-level view of incident counts over time. A dashboard summarizes metrics visually and suits a quarterly executive report. It can show trends, severity and impact at a glance, leaving the technical detail to the teams who need it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Packet captures are raw network data, far too detailed for a board.",
       "B": "Vulnerability scans list weaknesses, not incidents.",
       "C": "Metadata describes data; it is not a way to present incident trends."
     },
-    "tip": null,
+    "tip": "Boards and executives get dashboards: high-level metrics and trends, not raw data.",
     "references": [],
     "source": "bank.pdf#p73",
     "needsReview": false,
@@ -1952,14 +1952,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Benchmarks such as the CIS Benchmarks are detailed, published secure-configuration standards. Scanning systems against them shows exactly where settings fall short of the required baseline.",
+    "explanation": "Benchmarks such as the CIS Benchmarks are detailed, published secure-configuration standards. Scanning systems against them shows exactly where settings fall short of the required baseline. SCAP-compatible tools can run these checks automatically and report every setting that is out of line.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A SOAR playbook automates incident response steps; it does not assess configurations.",
       "B": "A security control matrix maps controls to requirements, but does not check actual system settings.",
       "C": "A risk management framework is a process for managing risk overall, not a configuration check."
     },
-    "tip": null,
+    "tip": "Checking configurations against a minimum baseline = benchmarks (such as CIS Benchmarks or DISA STIGs), often scanned automatically with SCAP tools.",
     "references": [],
     "source": "bank.pdf#p74",
     "needsReview": false,
@@ -2007,7 +2007,7 @@ export const domain4Questions = [
       "D": "State actors deliberately steal credentials. The question asks about unintentional leakage, which is the organization's own mistake.",
       "E": "Vulnerability databases catalog known software flaws. They publish weaknesses in products, never an organization's credentials."
     },
-    "tip": null,
+    "tip": "Secrets in code (API keys and passwords committed to Git) are the top accidental cloud credential leak. Use a secrets manager and repository scanning.",
     "references": [],
     "source": "bank.pdf#p75",
     "needsReview": false,
@@ -2043,14 +2043,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "EAP-TLS authenticates users with certificates, which is exactly what a smart card holds. It is the 802.1X method designed for certificate- and smart-card-based network authentication.",
+    "explanation": "EAP-TLS authenticates users with certificates, which is exactly what a smart card holds. It is the 802.1X method designed for certificate- and smart-card-based network authentication. Both the client and the authentication server present certificates, so it is also resistant to password theft and rogue access points.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "CHAP is a challenge-response password protocol with no certificate support.",
       "B": "PEAP protects password-based inner authentication inside a TLS tunnel; the user still logs in with a password.",
       "C": "MS-CHAPv2 is password-based and has known weaknesses."
     },
-    "tip": null,
+    "tip": "Smart cards or certificates for network login = EAP-TLS (mutual certificate authentication). PEAP and MS-CHAPv2 are password-based.",
     "references": [],
     "source": "bank.pdf#p76",
     "needsReview": false,
@@ -2086,14 +2086,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Rootkits hide from normal tools, so detecting them takes deep visibility on the host itself. EDR monitors endpoint behavior continuously and can spot the tampering and persistence techniques rootkits use.",
+    "explanation": "Rootkits hide from normal tools, so detecting them takes deep visibility on the host itself. EDR monitors endpoint behavior continuously and can spot the tampering and persistence techniques rootkits use, such as changed system files, hooked kernel functions and hidden processes, and it can isolate an infected host.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Full disk encryption protects data at rest; it does not detect malware.",
       "B": "A network IDS sees traffic, not what is hidden inside each host's operating system.",
       "D": "DLP watches for sensitive data leaving, not malware on endpoints."
     },
-    "tip": null,
+    "tip": "Rootkits hide from the OS itself; finding them takes deep, behavior-based host visibility: EDR.",
     "references": [],
     "source": "bank.pdf#p76",
     "needsReview": false,
@@ -2136,7 +2136,7 @@ export const domain4Questions = [
       "B": "CHAP is a password challenge-response protocol for network connections.",
       "C": "802.1X controls access to network ports, not logins to web applications."
     },
-    "tip": null,
+    "tip": "'Log in with Google or Facebook' = OpenID Connect (authentication built on OAuth 2.0).",
     "references": [],
     "source": "bank.pdf#p77",
     "needsReview": false,
@@ -2172,14 +2172,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "EDR protects endpoints by detecting and blocking malware as it tries to install, and by stopping it spreading from host to host.",
+    "explanation": "EDR protects endpoints by detecting and blocking malware as it tries to install, and by stopping it spreading from host to host. It watches process behavior on each computer, can kill malicious processes and isolate a machine from the network, and records what happened for investigation.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "An IDS detects suspicious traffic but cannot block anything or protect the host.",
       "B": "An ACL filters traffic by address or port; it cannot recognize malware.",
       "D": "NAC decides which devices may join the network, not what runs on them."
     },
-    "tip": null,
+    "tip": "Malware installing on hosts and moving between them → EDR (detect, block and isolate endpoints).",
     "references": [],
     "source": "bank.pdf#p79",
     "needsReview": false,
@@ -2222,7 +2222,7 @@ export const domain4Questions = [
       "C": "System owners tell you whom to contact, not which systems are affected.",
       "D": "Third-party risk assessments cover vendors, not the organization's own exposure."
     },
-    "tip": null,
+    "tip": "You cannot measure exposure to a new vulnerability without knowing what you run: a full asset inventory comes first.",
     "references": [],
     "source": "bank.pdf#p81",
     "needsReview": false,
@@ -2258,14 +2258,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "In an Active Directory environment, a password policy is set in a Group Policy Object and pushed to every domain-joined system at once -- the fastest, most consistent method.",
+    "explanation": "In an Active Directory environment, a password policy is set in a Group Policy Object and pushed to every domain-joined system at once -- the fastest, most consistent method. Machines pick it up at their next policy refresh, or immediately if the administrator forces an update.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "PowerShell scripts could do it, but would need distributing and running everywhere -- slower and less reliable than Group Policy.",
       "C": "PAP is an old, insecure authentication protocol that sends passwords in cleartext.",
       "D": "EDR profiles govern threat detection, not password policies."
     },
-    "tip": null,
+    "tip": "Push a setting to every Windows domain machine quickly = Group Policy (a GPO).",
     "references": [],
     "source": "bank.pdf#p82",
     "needsReview": false,
@@ -2318,7 +2318,7 @@ export const domain4Questions = [
       "E": "Sending logs to the SIEM improves detection once the server is live. It is valuable monitoring, but it observes attacks rather than reducing the attack surface.",
       "F": "Joining the domain integrates the server with central authentication and policy. It is a deployment step that can even widen exposure if done before the host is hardened."
     },
-    "tip": null,
+    "tip": "Hardening shrinks the attack surface: disable default accounts, change defaults, remove unneeded services and ports, patch.",
     "references": [],
     "source": "bank.pdf#p82",
     "needsReview": false,
@@ -2354,14 +2354,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Chain of custody documents everyone who handled a piece of evidence, when and why, from collection onward. It proves the evidence was handled properly and not tampered with.",
+    "explanation": "Chain of custody documents everyone who handled a piece of evidence, when and why, from collection onward. It proves the evidence was handled properly and not tampered with. A gap in the chain can make evidence inadmissible in court, however strong it is.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "E-discovery is collecting electronic information for legal cases, not documenting evidence handling.",
       "C": "A legal hold stops relevant data being deleted, but does not track who handled the evidence.",
       "D": "Preservation keeps evidence intact, but chain of custody is what documents proper handling."
     },
-    "tip": null,
+    "tip": "Documenting who handled evidence, when and why = chain of custody.",
     "references": [],
     "source": "bank.pdf#p84",
     "needsReview": false,
@@ -2404,7 +2404,7 @@ export const domain4Questions = [
       "C": "Time-of-day restrictions depend on when access is attempted, not group membership.",
       "D": "Least privilege is a principle; the mechanism giving the wrong access is role-based group membership."
     },
-    "tip": null,
+    "tip": "Access that follows group membership for a job = role-based. The user was never moved to the new team's group, so access still matches the old role.",
     "references": [],
     "source": "bank.pdf#p87",
     "needsReview": false,
@@ -2449,7 +2449,7 @@ export const domain4Questions = [
       "D",
       "E"
     ],
-    "explanation": "Command-and-control traffic travels over the network to an external server. Network and firewall logs record the internal source address of connections to that server, identifying which host is infected.",
+    "explanation": "Command-and-control traffic travels over the network to an external server. Network and firewall logs record the internal source address of connections to that server, identifying which host is infected. Searching those logs for the C2 server's IP address or domain lists every host that contacted it.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Application logs record events inside software, not which host contacted an outside server.",
@@ -2457,7 +2457,7 @@ export const domain4Questions = [
       "C": "DHCP logs map IP addresses to devices once you have an address, but do not reveal which host talked to the C2 server.",
       "F": "Database logs record queries and access to the database."
     },
-    "tip": null,
+    "tip": "Finding the host that talks to a C2 server → network and firewall logs show the internal source address of the outbound connections.",
     "references": [],
     "source": "bank.pdf#p88",
     "needsReview": false,
@@ -2502,7 +2502,7 @@ export const domain4Questions = [
       "B",
       "E"
     ],
-    "explanation": "Before the laptop goes to someone else, the old data must be sanitized so it cannot be recovered, and the sanitization should be certified -- documented as properly done.",
+    "explanation": "Before the laptop goes to someone else, the old data must be sanitized so it cannot be recovered, and the sanitization should be certified -- documented as properly done. The certificate records what was wiped, how and by whom, which matters if the former employee's data is ever questioned.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Retention keeps data for a required period. The laptop's data needs removing, not keeping.",
@@ -2510,7 +2510,7 @@ export const domain4Questions = [
       "D": "Classification labels data by sensitivity; it does not prepare a device for reuse.",
       "F": "Enumeration lists resources; it does not handle data."
     },
-    "tip": null,
+    "tip": "Reissuing a device: sanitize the old data, then document it (certification). Destruction is for devices leaving service for good.",
     "references": [],
     "source": "bank.pdf#p89",
     "needsReview": false,
@@ -2546,14 +2546,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII.",
+    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII. It protects integrity: any edit, whether by an attacker or an insider, shows up as a hash mismatch against the approved baseline.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "Full disk encryption protects data if the disk is stolen, but not from modification by users with access.",
       "B": "Network access control decides which devices may connect, not whether files change.",
       "D": "User behavior analytics spots unusual user activity, but does not track changes to specific files."
     },
-    "tip": null,
+    "tip": "Detect changes to sensitive files = FIM (hashes compared against a baseline).",
     "references": [],
     "source": "bank.pdf#p90",
     "needsReview": false,
@@ -2596,7 +2596,7 @@ export const domain4Questions = [
       "C": "Organizational impact affects timing and prioritization, but a fix can be scheduled if one exists.",
       "D": "Risk tolerance decides which vulnerabilities to prioritize, not whether they can be fixed."
     },
-    "tip": null,
+    "tip": "Whether you can fix a CVE depends first on whether a patch exists. No patch → compensating controls.",
     "references": [],
     "source": "bank.pdf#p91",
     "needsReview": false,
@@ -2632,14 +2632,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works.",
+    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works. DLP can match exact files (fingerprints) or patterns such as card numbers, and alert on or block the email before it leaves.",
     "explanationSource": "authored",
     "incorrectExplanations": {
       "B": "SNMP traps are status alerts from network devices, not content inspection.",
       "C": "SCAP automates configuration and vulnerability checks, not monitoring what is emailed.",
       "D": "An IPS blocks attacks coming in, not sensitive files going out."
     },
-    "tip": null,
+    "tip": "Fingerprinting sensitive files and alerting when they are emailed out = DLP.",
     "references": [],
     "source": "bank.pdf#p93",
     "needsReview": false,
@@ -2682,7 +2682,7 @@ export const domain4Questions = [
       "C": "A supply chain attack on the vendor would be a serious compromise of the security product itself, far beyond one spurious alert.",
       "D": "Incorrect file permissions would prevent access with a permissions error, not trigger an endpoint protection alert."
     },
-    "tip": null,
+    "tip": "A false positive usually means a rule or heuristic set too broadly (a misconfiguration to tune), not a real threat.",
     "references": [],
     "source": "bank.pdf#p98",
     "needsReview": false,
@@ -2725,7 +2725,7 @@ export const domain4Questions = [
       "C": "A true positive is a reported vulnerability that genuinely exists. That would mean the finding was confirmed, which is the opposite of what happened.",
       "D": "A true negative is the scanner correctly reporting nothing where nothing is wrong. Here the scanner did report something, so it is not a negative at all."
     },
-    "tip": null,
+    "tip": "Reported but not really there = false positive. Really there but not reported = false negative (the dangerous one).",
     "references": [],
     "source": "bank.pdf#p100",
     "needsReview": false,
@@ -2768,7 +2768,7 @@ export const domain4Questions = [
       "C": "Archiving stores data long-term, but configuring devices to send logs to a central location is aggregation.",
       "D": "SCAP automates configuration and vulnerability assessment."
     },
-    "tip": null,
+    "tip": "Devices sending their logs to a central, off-site collector = log aggregation (syslog to a SIEM).",
     "references": [],
     "source": "bank.pdf#p100",
     "needsReview": false,
@@ -2811,7 +2811,7 @@ export const domain4Questions = [
       "C": "Gap analysis compares a current state against a desired state or standard. It is a program-level assessment rather than a code review.",
       "D": "Impact analysis estimates the consequences of a change or an incident. It evaluates effect, not code quality."
     },
-    "tip": null,
+    "tip": "Reading code without running it = static analysis (SAST). Testing the running application = dynamic analysis (DAST).",
     "references": [],
     "source": "bank.pdf#p101",
     "needsReview": false,
@@ -2854,7 +2854,7 @@ export const domain4Questions = [
       "C": "An IDS looks for attack patterns in network traffic. A staff member sending an email generates entirely normal traffic.",
       "D": "EDR watches for malicious activity on endpoints. Attaching a file to a message is not malicious behavior by any technical measure."
     },
-    "tip": null,
+    "tip": "An employee emailing sensitive files to a personal account = data in motion, which DLP catches.",
     "references": [],
     "source": "bank.pdf#p102",
     "needsReview": false,
@@ -2897,7 +2897,7 @@ export const domain4Questions = [
       "B": "Biometrics would likewise be bypassed by the same social engineering.",
       "D": "Least privilege limits what compromised accounts can do; it does not stop the help desk being fooled."
     },
-    "tip": null,
+    "tip": "Help desk tricked into a reset or an MFA bypass code → identity proofing: verify the caller before acting.",
     "references": [],
     "source": "bank.pdf#p103",
     "needsReview": false,
@@ -2933,14 +2933,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Time-of-day restrictions allow logins and access only during approved hours, directly blocking employee activity after hours.",
+    "explanation": "Time-of-day restrictions allow logins and access only during approved hours, directly blocking employee activity after hours. In a defense-in-depth design this adds another layer: even valid credentials stop working outside the permitted window.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Role-based restrictions grant access by job role, regardless of time.",
       "B": "Attribute-based restrictions can include time as an attribute, but time-of-day restrictions are the specific control named for this.",
       "C": "Mandatory access control uses security labels and clearances, not schedules."
     },
-    "tip": null,
+    "tip": "Block logins outside working hours = time-of-day restrictions.",
     "references": [],
     "source": "bank.pdf#p104",
     "needsReview": false,
@@ -2983,7 +2983,7 @@ export const domain4Questions = [
       "C": "SQL injection is an attack, not a security measure.",
       "D": "Static analysis reads source code for defects during development. It improves quality without proving the deployed binary is unmodified."
     },
-    "tip": null,
+    "tip": "Integrity and origin of compiled binaries in production = code signing, verified before the code runs.",
     "references": [],
     "source": "bank.pdf#p108",
     "needsReview": false,
@@ -3026,7 +3026,7 @@ export const domain4Questions = [
       "C": "RADIUS centralizes authentication for network access, such as VPN and Wi-Fi, not web-based cloud tools.",
       "D": "CHAP is a password challenge-response protocol for network links."
     },
-    "tip": null,
+    "tip": "Use the company directory for a cloud tool's logins, with no separate passwords = SAML federation (SSO).",
     "references": [],
     "source": "bank.pdf#p110",
     "needsReview": false,
@@ -3062,14 +3062,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Whether the user's machine actually reached the phishing site shows up in network logs, such as proxy, DNS or firewall records of the outbound connection.",
+    "explanation": "Whether the user's machine actually reached the phishing site shows up in network logs, such as proxy, DNS or firewall records of the outbound connection. A DNS lookup alone is not proof; a completed connection in the proxy or firewall log is.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "System logs record operating system events, not outbound web connections.",
       "C": "Application logs cover events within applications, not network connections.",
       "D": "Authentication logs show logins, not whether a connection to a website succeeded."
     },
-    "tip": null,
+    "tip": "Did the user's machine actually connect to the phishing site? Check network logs: proxy, DNS and firewall.",
     "references": [],
     "source": "bank.pdf#p117",
     "needsReview": false,
@@ -3112,7 +3112,7 @@ export const domain4Questions = [
       "C": "A new WLAN deployment is unnecessary; the existing one needs its channels planned.",
       "D": "Placement matters, but the survey already points to interference from overlapping frequencies."
     },
-    "tip": null,
+    "tip": "Wireless trouble after an upgrade + many APs on similar frequencies at high power = channel overlap (interference).",
     "references": [],
     "source": "bank.pdf#p118",
     "needsReview": false,
@@ -3148,14 +3148,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "hping crafts custom TCP, UDP and ICMP packets with chosen flags and fields, which makes it ideal for testing how firewalls handle specific traffic.",
+    "explanation": "hping crafts custom TCP, UDP and ICMP packets with chosen flags and fields, which makes it ideal for testing how firewalls handle specific traffic. For example, the analyst can send packets with unusual flag combinations or fragments and see which ones the firewall lets through.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Wireshark captures and analyzes packets; it does not generate them.",
       "C": "PowerShell is a scripting shell, not a packet crafting tool.",
       "D": "netstat lists a host's connections and listening ports."
     },
-    "tip": null,
+    "tip": "Craft custom packets to test firewalls = hping. Capture and analyze = Wireshark or tcpdump. Scan ports = nmap.",
     "references": [],
     "source": "bank.pdf#p119",
     "needsReview": false,
@@ -3191,14 +3191,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Unauthorized movement of data off a system appears as unusual outbound traffic. Monitoring outbound traffic is how exfiltration is detected.",
+    "explanation": "Unauthorized movement of data off a system appears as unusual outbound traffic. Monitoring outbound traffic is how exfiltration is detected: unexpected destinations, large transfers, odd hours or unusual protocols stand out against the normal baseline.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Encryption protects data but does not detect it leaving -- attackers can exfiltrate encrypted data too.",
       "C": "Default settings are usually weak and detect nothing.",
       "D": "Closing all ports is impractical and prevents rather than detects; malware can use allowed ports."
     },
-    "tip": null,
+    "tip": "Detect data leaving a system (exfiltration) = monitor outbound traffic (egress monitoring, NetFlow anomalies, DLP).",
     "references": [],
     "source": "bank.pdf#p120",
     "needsReview": false,
@@ -3234,14 +3234,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "CVSS gives each vulnerability a severity score from 0 to 10, a consistent basis for deciding what to patch first.",
+    "explanation": "CVSS gives each vulnerability a severity score from 0 to 10, a consistent basis for deciding what to patch first. The score reflects exploitability and impact, and teams often adjust it for how critical and exposed the affected systems are.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "SOAR automates security responses, not prioritization of patching.",
       "C": "A SIEM correlates logs and alerts; it does not score vulnerabilities.",
       "D": "CVE identifies vulnerabilities by ID but does not rank their severity."
     },
-    "tip": null,
+    "tip": "Prioritize patching by severity score = CVSS, weighed with how critical and exposed each affected asset is.",
     "references": [],
     "source": "bank.pdf#p120",
     "needsReview": false,
@@ -3277,14 +3277,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "chmod changes file permissions, which is what fixes a file whose permissions are wider than the baseline allows. /etc/shadow should be readable only by root.",
+    "explanation": "chmod changes file permissions, which is what fixes a file whose permissions are wider than the baseline allows. /etc/shadow holds the password hashes and should be readable only by root, for example chmod 600 or 640 depending on the distribution's baseline.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "grep searches text; it cannot change permissions.",
       "C": "dd copies raw data at the block level.",
       "D": "passwd changes a user's password, not file permissions."
     },
-    "tip": null,
+    "tip": "Fix file permissions on Linux = chmod (chown changes the owner). /etc/shadow should be readable by root only.",
     "references": [],
     "source": "bank.pdf#p121",
     "needsReview": false,
@@ -3332,7 +3332,7 @@ export const domain4Questions = [
       "D": "State actors deliberately steal credentials. The question asks about unintentional leakage, which is the organization's own mistake.",
       "E": "Vulnerability databases catalog known software flaws. They publish weaknesses in products, never an organization's credentials."
     },
-    "tip": null,
+    "tip": "Secrets committed to code repositories are the classic accidental credential leak.",
     "references": [],
     "source": "bank.pdf#p122",
     "needsReview": false,
@@ -3375,7 +3375,7 @@ export const domain4Questions = [
       "B": "Pruning the group and rotating passwords once helps, but passwords go stale again with no ongoing control.",
       "C": "SSO with MFA strengthens authentication, but does not reduce who holds domain admin rights or manage the credentials."
     },
-    "tip": null,
+    "tip": "Too many admins with static passwords → a PAM vault: check-out, automatic rotation, just-in-time access and full logging.",
     "references": [],
     "source": "bank.pdf#p123",
     "needsReview": false,
@@ -3397,7 +3397,7 @@ export const domain4Questions = [
       },
       {
         "key": "B",
-        "text": "Generally, SMS OTP codes are valid for up to 15 minutes while the TOTP time frame is 30 to 60 seconds"
+        "text": "Generally, SMS OTP codes are valid for up to 15 minutes while the TOTP time frame is 30 to 60 seconds."
       },
       {
         "key": "C",
@@ -3405,7 +3405,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "The algorithm used to generate an SMS OTP code is weaker than the one used to generate a TOTP code"
+        "text": "The algorithm used to generate an SMS OTP code is weaker than the one used to generate a TOTP code."
       }
     ],
     "correct": [
@@ -3418,7 +3418,7 @@ export const domain4Questions = [
       "B": "Validity windows vary by implementation; the core weakness of SMS is interception, not a fixed 15-minute lifetime.",
       "D": "SMS OTP codes are not generated with a weaker algorithm; the risk is in how they are delivered."
     },
-    "tip": null,
+    "tip": "SMS codes can be intercepted (SIM swapping, SS7). TOTP codes are generated on the device and never sent over the network.",
     "references": [],
     "source": "bank.pdf#p124",
     "needsReview": false,
@@ -3436,7 +3436,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Contain the impacted hosts"
+        "text": "Contain the impacted hosts."
       },
       {
         "key": "B",
@@ -3448,20 +3448,20 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Implement firewall rules to block outbound beaconing"
+        "text": "Implement firewall rules to block outbound beaconing."
       }
     ],
     "correct": [
       "A"
     ],
-    "explanation": "Malware is confirmed on several desktops, so the priority is to stop it spreading: containing the affected hosts, by isolating them from the network, comes first.",
+    "explanation": "Malware is confirmed on several desktops, so the priority is to stop it spreading: containing the affected hosts, by isolating them from the network, comes first. Eradication and recovery follow once the spread is stopped.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Adding the malware to a blocklist helps later, but the infected hosts are already compromised.",
       "C": "Segmenting one database server does not stop malware spreading between desktops.",
       "D": "No indicators of beaconing have been found, so blocking it is speculative; isolating known infected hosts is concrete."
     },
-    "tip": null,
+    "tip": "Malware confirmed on hosts → contain first (isolate them), then eradicate and recover.",
     "references": [],
     "source": "bank.pdf#p125",
     "needsReview": false,
@@ -3504,7 +3504,7 @@ export const domain4Questions = [
       "C": "Chain of custody documents who handled evidence, not the order in which to collect it.",
       "D": "A legal hold stops relevant data being deleted, but does not prioritize forensic collection."
     },
-    "tip": null,
+    "tip": "Collect the most volatile evidence first: CPU cache and registers → RAM → swap → disk → logs and archives (order of volatility).",
     "references": [],
     "source": "bank.pdf#p125",
     "needsReview": false,
@@ -3540,14 +3540,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "A document telling the server team exactly how to harden new devices before deployment is a secure configuration guide (baseline).",
+    "explanation": "A document telling the server team exactly how to harden new devices before deployment is a secure configuration guide (baseline). It lists the settings, services and accounts to configure, often based on vendor guides or CIS Benchmarks.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A change management procedure governs how changes are approved and made.",
       "B": "An information security policy states high-level rules and goals, not device-level hardening steps.",
       "C": "A cybersecurity framework structures an entire security program."
     },
-    "tip": null,
+    "tip": "Step-by-step hardening settings for new devices = secure configuration guide (baseline).",
     "references": [],
     "source": "bank.pdf#p125",
     "needsReview": false,
@@ -3561,7 +3561,7 @@ export const domain4Questions = [
     "objective": "4.6",
     "objectiveTitle": "Given a scenario, implement and maintain identity and access management",
     "type": "single",
-    "question": "A security administrator recently reset local passwords and the following values were recorded in the system:\n```table\nHost | Account | MD5 password value\nACCT-PC-1 | admin | f1bdf5ed1d7ad7ede4e3809bd35644b0\nHR-PC-1 | admin | d706ab8258fe67c131ebc57a6e28184\nIT-PC-2 | admin | f8ddb9cbb321d7dfbf6cb059736f0b3d\nFILE-SRV-1 | admin | f054bbd2f5ebab9cb5571000b2c60c02\nDB-SRV-1 | admin | 8638f732ba7cf2d95b16979e2725da78\n```\nWhich of the following is the security administrator most likely protecting against?",
+    "question": "A security administrator recently reset local passwords and the following values were recorded in the system:\n```table\nHost | Account | MD5 password values\nACCT-PC-1 | admin | f1bdf5ed1d7ad7ede4e3809bd35644b0\nHR-PC-1 | admin | d706ab8258fe67c131ebc57a6e28184\nIT-PC-2 | admin | f8ddb9cbb321d7dfbf6cb059736f0b3d\nFILE-SRV-1 | admin | f054bbd2f5ebab9cb5571000b2c60c02\nDB-SRV-1 | admin | 8638f732ba7cf2d95b16979e2725da78\n```\nWhich of the following is the security administrator most likely protecting against?",
     "choices": [
       {
         "key": "A",
@@ -3590,7 +3590,7 @@ export const domain4Questions = [
       "B": "Password complexity concerns how hard passwords are to guess, not whether hashes are reused across systems.",
       "D": "Password compromise is broad; the specific threat mitigated by unique local passwords is pass-the-hash."
     },
-    "tip": null,
+    "tip": "Unique local admin passwords on every machine (as LAPS provides) stop one stolen hash from unlocking them all (pass-the-hash).",
     "references": [],
     "source": "bank.pdf#p126",
     "needsReview": false,
@@ -3626,14 +3626,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Stakeholders talking through their roles in a hypothetical incident, without touching real systems, is a tabletop exercise.",
+    "explanation": "Stakeholders talking through their roles in a hypothetical incident, without touching real systems, is a tabletop exercise. It is cheap and low-risk, and it exposes gaps in plans, contacts and decision-making before a real incident does.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "A penetration test actively attacks systems.",
       "B": "Continuity of operations planning is the plan-writing process, not a discussion-based exercise.",
       "D": "A simulation acts out a scenario with realistic activity, beyond a discussion of roles."
     },
-    "tip": null,
+    "tip": "Talking through roles in a hypothetical incident = tabletop exercise.",
     "references": [],
     "source": "bank.pdf#p127",
     "needsReview": false,
@@ -3669,14 +3669,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Push notifications to an authenticator app on the employee's own phone need only a tap to approve -- seamless, easily part of the workflow, and using devices employees already carry.",
+    "explanation": "Push notifications to an authenticator app on the employee's own phone need only a tap to approve -- seamless, easily part of the workflow, and using devices employees already carry. Number matching is often added so users cannot approve a push they did not start.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A phone call interrupts the user and is slower.",
       "C": "Smart cards need readers and company-issued cards, not employee-owned devices.",
       "D": "Offline backup codes are an emergency fallback, not a seamless everyday method."
     },
-    "tip": null,
+    "tip": "Seamless MFA on personal phones = push notifications. Watch for MFA fatigue; number matching helps.",
     "references": [],
     "source": "bank.pdf#p129",
     "needsReview": false,
@@ -3712,14 +3712,14 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "Before pushing one standard image, the organization must define the approved configuration all systems should match. That baseline configuration comes first.",
+    "explanation": "Before pushing one standard image, the organization must define the approved configuration all systems should match. That baseline configuration comes first. Once it exists, the image is built from it and every system can later be checked against it for drift.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Naming conventions help organize assets, but do not standardize configurations.",
       "B": "Hashing verifies integrity; it does not standardize configurations.",
       "C": "Network diagrams document topology, not operating system settings."
     },
-    "tip": null,
+    "tip": "Standardize systems before imaging them = define a baseline configuration first.",
     "references": [],
     "source": "bank.pdf#p131",
     "needsReview": false,
@@ -3755,14 +3755,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "SOAR automates repetitive SOC tasks -- enriching alerts, running playbooks and taking response actions -- reducing analysts' manual work while improving response.",
+    "explanation": "SOAR automates repetitive SOC tasks -- enriching alerts, running playbooks and taking response actions -- reducing analysts' manual work while improving response. A SIEM finds the problems; SOAR takes the routine steps on them automatically, so analysts spend their time on real decisions.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "A SIEM collects and correlates alerts, but analysts still work each one by hand.",
       "C": "MDM manages mobile devices.",
       "D": "DLP prevents data leaving; it does not automate SOC work."
     },
-    "tip": null,
+    "tip": "Reduce SOC manual work = SOAR (playbooks and automated response). A SIEM detects; SOAR acts.",
     "references": [],
     "source": "bank.pdf#p131",
     "needsReview": false,
@@ -3807,7 +3807,7 @@ export const domain4Questions = [
       "A",
       "B"
     ],
-    "explanation": "Lost phones were unlocked and used to attack colleagues. Screen locks stop a finder using the phone, and remote wipe erases it once reported lost.",
+    "explanation": "Lost phones were unlocked and used to attack colleagues. Screen locks stop a finder using the phone, and remote wipe erases it once reported lost. Together they stop a lost device from being used to impersonate its owner.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "C": "Full device encryption protects data if storage is removed, but an unlocked phone is already decrypted.",
@@ -3815,7 +3815,7 @@ export const domain4Questions = [
       "E": "Application management controls which apps are installed, not access to a lost phone.",
       "F": "Geolocation can help find a phone, but does not stop it being misused."
     },
-    "tip": null,
+    "tip": "A lost phone being misused → screen lock (stops use) + remote wipe (erases it).",
     "references": [],
     "source": "bank.pdf#p132",
     "needsReview": false,
@@ -3858,7 +3858,7 @@ export const domain4Questions = [
       "C": "A wildcard certificate secures TLS for subdomains; it has nothing to do with user logins.",
       "D": "Geofencing restricts access by location, not login management."
     },
-    "tip": null,
+    "tip": "Separate logins and inconsistent password rules across SaaS apps → integrate them all with the IdP (SSO through federation).",
     "references": [],
     "source": "bank.pdf#p133",
     "needsReview": false,
@@ -3894,14 +3894,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "Anomalies are deviations from normal, so normal must be defined first. Building a baseline of typical activity is the first step of anomaly detection.",
+    "explanation": "Anomalies are deviations from normal, so normal must be defined first. Building a baseline of typical activity is the first step of anomaly detection. Without a baseline, there is nothing to compare new activity against.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Selecting events comes after knowing what normal looks like.",
       "C": "Logging options support data collection, which follows deciding what normal looks like.",
       "D": "Creating an event log is data collection, not the defining first step."
     },
-    "tip": null,
+    "tip": "Anomaly detection starts with a baseline of normal activity.",
     "references": [],
     "source": "bank.pdf#p133",
     "needsReview": false,
@@ -3937,14 +3937,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Incident response ends with lessons learned: reviewing what happened and improving the process for next time.",
+    "explanation": "Incident response ends with lessons learned: reviewing what happened and improving the process for next time. The review covers what worked, what did not, and which controls, plans or training should change.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Eradication removes the threat, before recovery.",
       "C": "Containment limits the damage early in the response.",
       "D": "Recovery restores systems, before the lessons-learned review."
     },
-    "tip": null,
+    "tip": "The last incident response phase = lessons learned (the post-incident review).",
     "references": [],
     "source": "bank.pdf#p134",
     "needsReview": false,
@@ -3980,14 +3980,14 @@ export const domain4Questions = [
     "correct": [
       "B"
     ],
-    "explanation": "SQL injection succeeds when user input goes straight into database queries. Input sanitization (with parameterized queries) removes or neutralizes malicious input so it cannot alter the query.",
+    "explanation": "SQL injection succeeds when user input goes straight into database queries. Input sanitization (with parameterized queries) removes or neutralizes malicious input so it cannot alter the query. Parameterized queries are the strongest fix, because the database treats input strictly as data, never as code.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Secure cookies protect session tokens, not database queries.",
       "C": "Code signing proves code's origin; it does not stop injection.",
       "D": "A blocklist of bad input is easy to bypass and is weaker than proper sanitization."
     },
-    "tip": null,
+    "tip": "Fix SQL injection = input sanitization and validation plus parameterized queries (prepared statements).",
     "references": [],
     "source": "bank.pdf#p134",
     "needsReview": false,
@@ -4030,7 +4030,7 @@ export const domain4Questions = [
       "B": "CYOD lets employees pick from approved models, but personal use and ownership arrangements vary, and it adds nothing the requirements ask for over COBO.",
       "C": "COPE is company-owned but personally enabled -- it permits personal use, which adds risk the requirements do not call for."
     },
-    "tip": null,
+    "tip": "Company-owned, fully locked down, business use only = COBO. Company-owned with personal use = COPE. The employee's own device = BYOD.",
     "references": [],
     "source": "bank.pdf#p136",
     "needsReview": false,
@@ -4066,14 +4066,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "Executives around a table walking through the incident response plan in discussion is a tabletop exercise.",
+    "explanation": "Executives around a table walking through the incident response plan in discussion is a tabletop exercise. Nothing is touched for real; the value is in finding gaps in roles, decisions and communication before an actual incident.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Continuity of operations is a planning discipline, not a meeting format.",
       "B": "Capacity planning estimates required resources.",
       "D": "Parallel processing runs recovery systems alongside production to test them, not a discussion."
     },
-    "tip": null,
+    "tip": "Executives in a room discussing the IRP = tabletop exercise.",
     "references": [],
     "source": "bank.pdf#p136",
     "needsReview": false,
@@ -4116,7 +4116,7 @@ export const domain4Questions = [
       "C": "Package monitoring tracks the third-party libraries inside your own applications for known flaws. It looks at software dependencies, not at whole systems reaching end of life.",
       "D": "Dynamic analysis tests a running application for flaws by exercising it. It assesses application behavior rather than identifying which hosts run obsolete platforms."
     },
-    "tip": null,
+    "tip": "Find legacy or end-of-life systems across the network = vulnerability scanning (OS and version fingerprinting).",
     "references": [],
     "source": "bank.pdf#p137",
     "needsReview": false,
@@ -4159,7 +4159,7 @@ export const domain4Questions = [
       "C": "Baselines define normal configuration or behavior, not how to respond.",
       "D": "Benchmarks are secure configuration standards, not response procedures."
     },
-    "tip": null,
+    "tip": "Step-by-step response procedures for specific incident types = playbooks (runbooks).",
     "references": [],
     "source": "bank.pdf#p142",
     "needsReview": false,
@@ -4195,14 +4195,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works.",
+    "explanation": "Fingerprinting specific sensitive files and alerting when they are emailed outside the organization is exactly how data loss prevention works. The DLP system recognizes the fingerprinted files even if they are renamed, and can alert on or block the message before it leaves.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "SNMP traps are status alerts from network devices, not content inspection.",
       "C": "SCAP automates configuration and vulnerability checks.",
       "D": "An IPS blocks attacks coming in, not sensitive files going out."
     },
-    "tip": null,
+    "tip": "Fingerprinted files + an alert when they are emailed out = DLP.",
     "references": [],
     "source": "bank.pdf#p142",
     "needsReview": false,
@@ -4245,7 +4245,7 @@ export const domain4Questions = [
       "C": "An ACL is a set of rules, not a log source.",
       "D": "Windows security logs live on the endpoint, where the logs were deleted."
     },
-    "tip": null,
+    "tip": "Endpoint logs wiped? Use logs the attacker could not reach: firewall, proxy, DNS and copies already in the SIEM.",
     "references": [],
     "source": "bank.pdf#p143",
     "needsReview": false,
@@ -4288,7 +4288,7 @@ export const domain4Questions = [
       "B": "Preparation happens before any incident — building the plan, the tooling and the training. Reports produced here are plans, not incident findings.",
       "D": "Containment limits the damage while the incident is live, by isolating hosts or cutting connectivity. It is an urgent operational step taken long before reporting."
     },
-    "tip": null,
+    "tip": "Reports and recommendations are written in the lessons-learned phase, after the incident.",
     "references": [],
     "source": "bank.pdf#p143",
     "needsReview": false,
@@ -4331,7 +4331,7 @@ export const domain4Questions = [
       "B": "Identifying complexity may be a side effect of a walkthrough, but it is a diagnostic observation rather than the reason to make sure others understand the script.",
       "C": "Technical debt is accumulated shortcuts that will need reworking later. Documenting or explaining a script does not itself pay that debt down."
     },
-    "tip": null,
+    "tip": "Only one person understands a critical script or system = a single point of failure. Share the knowledge and document it.",
     "references": [],
     "source": "bank.pdf#p145",
     "needsReview": false,
@@ -4367,14 +4367,14 @@ export const domain4Questions = [
     "correct": [
       "C"
     ],
-    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII.",
+    "explanation": "File integrity monitoring records hashes of important files and alerts when any of them change, detecting unauthorized modification of the PII. Any edit, by an attacker or an insider, shows up as a mismatch against the approved baseline.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Full disk encryption protects data if the disk is stolen, but not from modification by users with access.",
       "B": "Network access control decides which devices may connect, not whether files change.",
       "D": "User behavior analytics spots unusual activity, but does not track changes to specific files."
     },
-    "tip": null,
+    "tip": "Detect unauthorized changes to sensitive files = FIM.",
     "references": [],
     "source": "bank.pdf#p145",
     "needsReview": false,
@@ -4417,7 +4417,7 @@ export const domain4Questions = [
       "B": "True negatives generate no alert at all.",
       "D": "False negatives also generate no alert -- the threat is simply missed."
     },
-    "tip": null,
+    "tip": "Alerts that keep firing on harmless activity (false positives) cause alert fatigue: analysts start ignoring them.",
     "references": [],
     "source": "bank.pdf#p146",
     "needsReview": false,
@@ -4435,7 +4435,7 @@ export const domain4Questions = [
     "choices": [
       {
         "key": "A",
-        "text": "Enable SAML"
+        "text": "Enable SAML."
       },
       {
         "key": "B",
@@ -4447,7 +4447,7 @@ export const domain4Questions = [
       },
       {
         "key": "D",
-        "text": "Select an IdP"
+        "text": "Select an IdP."
       }
     ],
     "correct": [
@@ -4460,7 +4460,7 @@ export const domain4Questions = [
       "B": "Creating OAuth tokens is an implementation detail of authorizing access once federation exists. It is several steps downstream.",
       "C": "Password vaulting stores the separate credentials more safely. It manages the problem rather than reducing the number of credentials."
     },
-    "tip": null,
+    "tip": "Consolidating SaaS logins: choose the IdP first, then connect each app to it with SAML or OpenID Connect.",
     "references": [],
     "source": "bank.pdf#p147",
     "needsReview": false,
@@ -4496,14 +4496,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "Daily scans of every endpoint show which vulnerabilities remain and so whether patches were installed. They track patching progress.",
+    "explanation": "Daily scans of every endpoint show which vulnerabilities remain and so whether patches were installed. They track patching progress: a vulnerability that disappears from the scan was patched, and one that stays shows a machine that missed the update.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Endpoint scans do not discover cloud services bought outside IT.",
       "C": "Hardware inventory is tracked by asset management tools, not vulnerability scans.",
       "D": "Hunting for active attackers is threat hunting, which looks for behavior rather than missing patches."
     },
-    "tip": null,
+    "tip": "Daily vulnerability scans across endpoints = tracking patch status: what is still vulnerable.",
     "references": [],
     "source": "bank.pdf#p148",
     "needsReview": false,
@@ -4539,14 +4539,14 @@ export const domain4Questions = [
     "correct": [
       "A"
     ],
-    "explanation": "You can only patch the systems you know about. An accurate asset inventory, including which software runs where, identifies every system that needs the patch.",
+    "explanation": "You can only patch the systems you know about. An accurate asset inventory, including which software runs where, identifies every system that needs the patch. Without it, forgotten servers stay vulnerable long after everyone thinks the patch is done.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "B": "Network enumeration discovers hosts on the network, but not reliably which run a given application.",
       "C": "Data certification documents data destruction or quality, not systems needing patches.",
       "D": "Procurement governs buying assets, not tracking what is deployed."
     },
-    "tip": null,
+    "tip": "Find every system that needs a patch = an accurate asset inventory of hardware and software.",
     "references": [],
     "source": "bank.pdf#p149",
     "needsReview": false,
@@ -4589,7 +4589,7 @@ export const domain4Questions = [
       "C": "Security agent deployment is an endpoint-management function. Agents may feed logs into the SIEM, but pushing them out is not a SIEM capability.",
       "D": "Vulnerability scanning actively probes systems for weaknesses. A SIEM ingests scanner output as one of its data sources rather than performing the scans."
     },
-    "tip": null,
+    "tip": "A next-generation SIEM adds automated response actions to log correlation and alerting.",
     "references": [],
     "source": "bank.pdf#p150",
     "needsReview": false,
@@ -4632,7 +4632,7 @@ export const domain4Questions = [
       "C": "Smart cards are strong, but they are additional equipment that must be issued, replaced and paired with readers. That breaks the requirement to limit equipment.",
       "D": "Time-based logins restrict when someone may sign in. With employees spread across the world there is no common window, so this would obstruct rather than secure."
     },
-    "tip": null,
+    "tip": "Seamless MFA from anywhere with no extra hardware = trusted (registered) devices as a factor.",
     "references": [],
     "source": "bank.pdf#p152",
     "needsReview": false,
@@ -4675,7 +4675,7 @@ export const domain4Questions = [
       "C": "EAP is an authentication framework used inside network access protocols such as 802.1X. It operates at the network layer, not between web applications.",
       "D": "OpenID Connect is a genuine federation option, but it is the newer OAuth-based protocol. Where an enterprise SSO deployment already exists across business applications, SAML is the established choice."
     },
-    "tip": null,
+    "tip": "Adding a new cloud app to existing enterprise SSO = configure a SAML federation trust.",
     "references": [],
     "source": "bank.pdf#p153",
     "needsReview": false,
@@ -4718,7 +4718,7 @@ export const domain4Questions = [
       "B": "Full disk encryption protects data when the device is locked or powered off, but the attacker logged in with a valid username and password, which decrypts it.",
       "D": "Containerization separates work data from personal data, but an attacker with the user's credentials can open the work container too."
     },
-    "tip": null,
+    "tip": "The attacker can already log in to the stolen device → remote wipe. FDE no longer helps once someone is logged in.",
     "references": [],
     "source": "bank.pdf#p155",
     "needsReview": false,
@@ -4761,7 +4761,7 @@ export const domain4Questions = [
       "C": "Somewhere you are is location. It is also classed as an attribute, used to add context rather than to stand as a factor in its own right.",
       "D": "Someone you know is a trust-relationship attribute, sometimes used for vouching. It is not a factor either."
     },
-    "tip": null,
+    "tip": "MFA factors: something you know, have or are. Somewhere you are and something you do are attributes.",
     "references": [],
     "source": "bank.pdf#p155",
     "needsReview": false,
@@ -4814,7 +4814,7 @@ export const domain4Questions = [
       "D": "Reducing the minimum length to ten characters shrinks the search space, making guessing easier.",
       "E": "Reducing the minimum age to zero lets users cycle through changes quickly to return to a favorite password, defeating password history."
     },
-    "tip": null,
+    "tip": "Guessable passwords → longer minimum length and a bigger character set (length matters most). Better hashing protects stored hashes, not guessability.",
     "references": [],
     "source": "bank.pdf#p156",
     "needsReview": false,
@@ -4857,7 +4857,7 @@ export const domain4Questions = [
       "B": "Drawing users away from good sites to malicious ones describes DNS poisoning — an attack. A sinkhole does the opposite, steering traffic away from malicious destinations.",
       "D": "Attracting attackers away from real resources describes a honeypot. A sinkhole intercepts outbound lookups rather than luring inbound attackers."
     },
-    "tip": null,
+    "tip": "DNS sinkhole = answer lookups for known-bad domains with a safe address, blocking the connection and logging the infected host.",
     "references": [],
     "source": "bank.pdf#p157",
     "needsReview": false,
@@ -4900,7 +4900,7 @@ export const domain4Questions = [
       "C": "Encrypted data is content deliberately made unreadable without a key. The coordinates are stored in the clear in the file header.",
       "D": "Sensitive data describes how information is classified. Geolocation may well be sensitive, but the question asks what kind of information it is structurally."
     },
-    "tip": null,
+    "tip": "GPS coordinates, camera model and timestamps inside a photo = metadata (EXIF).",
     "references": [],
     "source": "bank.pdf#p157",
     "needsReview": false,
@@ -4943,7 +4943,7 @@ export const domain4Questions = [
       "C": "An SSD is likewise non-volatile. It has its own forensic complications from wear levelling and TRIM, but the data survives a power loss.",
       "D": "Temporary files are stored on disk. They may be deleted by the operating system, but they persist across a reboot in a way memory does not."
     },
-    "tip": null,
+    "tip": "The most volatile evidence is CPU registers, cache and RAM. Capture memory before powering off.",
     "references": [],
     "source": "bank.pdf#p158",
     "needsReview": false,
@@ -4986,7 +4986,7 @@ export const domain4Questions = [
       "C": "Jamming is radio interference against a wireless network. These are servers on a wired network, where there is no signal to jam.",
       "D": "Kerberoasting requests service tickets to crack service-account passwords offline. It is a credential attack that is deliberately quiet and causes no outage."
     },
-    "tip": null,
+    "tip": "Servers up internally but unreachable from elsewhere, with huge inbound traffic = DoS.",
     "references": [],
     "source": "bank.pdf#p159",
     "needsReview": false,
@@ -5029,7 +5029,7 @@ export const domain4Questions = [
       "C": "Operating system hardening reduces the attack surface of a running system. A thief can bypass the installed OS entirely by attaching the disk elsewhere.",
       "D": "Boot security such as Secure Boot ensures only trusted code loads at startup. It protects the boot chain but leaves the data readable if the drive is moved."
     },
-    "tip": null,
+    "tip": "Stolen laptops → full disk encryption.",
     "references": [],
     "source": "bank.pdf#p160",
     "needsReview": false,
@@ -5077,7 +5077,7 @@ export const domain4Questions = [
       "D": "State actors deliberately steal credentials. The question asks about unintentional leakage, which is the organization's own mistake.",
       "E": "Vulnerability databases catalog known software flaws. They publish weaknesses in products, never an organization's credentials."
     },
-    "tip": null,
+    "tip": "Credentials committed to code repositories = the common accidental cloud leak.",
     "references": [],
     "source": "bank.pdf#p161",
     "needsReview": false,
@@ -5125,7 +5125,7 @@ export const domain4Questions = [
       "D": "System enumeration lists resources such as users, shares or services, usually after gaining some access. It is a step within an assessment, not the scan being described.",
       "E": "A passive scan only observes existing traffic without sending anything. A vulnerability scan actively probes the target, so it is not passive."
     },
-    "tip": null,
+    "tip": "Scanning with no account = non-credentialed scan (the outsider's view). Credentialed scans see far more, such as missing patches.",
     "references": [],
     "source": "bank.pdf#p161",
     "needsReview": false,
@@ -6918,7 +6918,7 @@ export const domain4Questions = [
     "explanation": "Vulnerability management is a cycle of identify, analyze, prioritize, remediate, validate and report. Prioritization ranks findings by severity and exposure so limited effort goes where it matters, and reporting communicates status and tracks remediation — both are core stages of the process.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
-      "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponising them.",
+      "C": "Exploiting a vulnerability is what a penetration test or an attacker does. Vulnerability management identifies and fixes flaws rather than weaponizing them.",
       "D": "Correlation combines events from different sources to spot patterns. It belongs to monitoring and SIEM work, not to managing vulnerabilities.",
       "E": "Containment limits damage during a live incident. It is an incident response activity that happens after something has already gone wrong.",
       "F": "A tabletop exercise rehearses a response plan in discussion. It tests preparedness rather than managing the vulnerability backlog."
@@ -7264,7 +7264,7 @@ export const domain4Questions = [
     "explanationSource": "authored",
     "incorrectExplanations": {
       "A": "LDAP is a directory protocol for looking up and authenticating against directory objects. It is about identity storage, not token-based authorization.",
-      "B": "Federation is the general concept of trusting identities across organisational boundaries. OAuth is a specific mechanism; federation names the pattern.",
+      "B": "Federation is the general concept of trusting identities across organizational boundaries. OAuth is a specific mechanism; federation names the pattern.",
       "C": "SAML exchanges authentication assertions between an identity provider and a service provider. It is authentication-centric, which is the opposite of the requirement."
     },
     "tip": null,
@@ -11874,7 +11874,7 @@ export const domain4Questions = [
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "End-of-life devices and firmware compatibility are lifecycle and patching concerns. They have nothing to do with a user deliberately unlocking the OS.",
-      "B": "VM escape is a hypervisor boundary failure in virtualised server environments. Mobile devices are not hypervisors.",
+      "B": "VM escape is a hypervisor boundary failure in virtualized server environments. Mobile devices are not hypervisors.",
       "C": "Buffer overflows are memory-handling defects in application code. MDM does not alter how applications manage memory."
     },
     "tip": null,
@@ -12300,7 +12300,7 @@ export const domain4Questions = [
     "correct": [
       "D"
     ],
-    "explanation": "The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorised domains are treated — blocks access at the network level for everyone, not just this user.",
+    "explanation": "The domain is new, so it is not yet on the blocklist the proxy enforces. Updating the proxy filters to cover it — and tightening how new and uncategorized domains are treated — blocks access at the network level for everyone, not just this user.",
     "explanationSource": "pdf+authored",
     "incorrectExplanations": {
       "A": "Awareness training helps users recognize suspicious sites. It relies on judgment rather than enforcing the restriction.",

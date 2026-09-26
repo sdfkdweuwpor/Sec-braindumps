@@ -295,6 +295,9 @@ def parse_block(num, page, body):
     }
 
 
+FIX_MISSES = []
+
+
 def apply_text_fixes(rec):
     """Repair the PDF's OCR and typing errors in the text students read.
 
@@ -306,7 +309,9 @@ def apply_text_fixes(rec):
     for old, new in FIX.TEXT_FIXES.get(rec["id"], []):
         hits = rec["question"].count(old) + sum(c["text"].count(old) for c in rec["choices"])
         if not hits:
-            raise SystemExit(f"{rec['id']}: text fix {old!r} no longer matches")
+            # Collected and reported together at the end of the run.
+            FIX_MISSES.append(f"{rec['id']}: text fix {old!r} no longer matches")
+            continue
         rec["question"] = rec["question"].replace(old, new)
         for c in rec["choices"]:
             c["text"] = c["text"].replace(old, new)
@@ -593,6 +598,8 @@ if __name__ == "__main__":
     AUTHORED = load_authored()
     print(f"authored records: {len(AUTHORED)}")
     qs, unsup = build()
+    if FIX_MISSES:
+        raise SystemExit("\n".join(FIX_MISSES))
     print(f"supported: {len(qs)} | unsupported: {len(unsup)}")
     write_outputs(qs, unsup)
     write_reports(qs, unsup)
