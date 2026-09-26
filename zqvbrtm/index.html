@@ -6,13 +6,41 @@
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Offline practice exam app.">
 <title>Security+ SY0-701</title>
+<script src="js/boot.js"></script>
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/app.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#128737;</text></svg>">
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+  <!-- Loading skeleton: shown while the question bank downloads, replaced
+       as soon as the app draws itself (js/main.js buildShell). -->
+  <div class="skel" role="status">
+    <span class="skel-sr">Loading the question bank&hellip;</span>
+    <div class="skel-side" aria-hidden="true">
+      <div class="skel-brand"><i class="sk sk-logo"></i><i class="sk sk-t w70"></i></div>
+      <i class="sk sk-nav"></i><i class="sk sk-nav"></i><i class="sk sk-nav"></i><i class="sk sk-nav"></i>
+    </div>
+    <div class="skel-col" aria-hidden="true">
+      <div class="skel-top"><i class="sk sk-logo sk-mob"></i><i class="sk sk-t w25"></i><span class="skel-grow"></span><i class="sk sk-badge"></i><i class="sk sk-btn"></i><i class="sk sk-btn"></i></div>
+      <div class="skel-main">
+        <i class="sk sk-h1"></i>
+        <div class="skel-card">
+          <div class="skel-row"><i class="sk sk-art"></i><div class="skel-lines"><i class="sk sk-t w30"></i><i class="sk sk-t w55"></i></div></div>
+          <div class="skel-ladder"><i class="sk sk-dot"></i><i class="sk sk-dot"></i><i class="sk sk-dot"></i><i class="sk sk-dot"></i></div>
+        </div>
+        <div class="skel-grid">
+          <div class="skel-card"><div class="skel-row"><i class="sk sk-art"></i><div class="skel-lines"><i class="sk sk-t w45"></i><i class="sk sk-t w85"></i><i class="sk sk-t w60"></i></div></div><i class="sk sk-cta"></i></div>
+          <div class="skel-card"><div class="skel-row"><i class="sk sk-art"></i><div class="skel-lines"><i class="sk sk-t w40"></i><i class="sk sk-t w80"></i><i class="sk sk-t w50"></i></div></div><i class="sk sk-cta"></i></div>
+          <div class="skel-card"><div class="skel-row"><i class="sk sk-art"></i><div class="skel-lines"><i class="sk sk-t w50"></i><i class="sk sk-t w75"></i><i class="sk sk-t w65"></i></div></div><i class="sk sk-cta"></i></div>
+          <div class="skel-card"><div class="skel-row"><i class="sk sk-art"></i><div class="skel-lines"><i class="sk sk-t w35"></i><i class="sk sk-t w90"></i><i class="sk sk-t w55"></i></div></div><i class="sk sk-cta"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="skel-tabs" aria-hidden="true"><i class="sk sk-tab"></i><i class="sk sk-tab"></i><i class="sk sk-tab"></i><i class="sk sk-tab"></i></div>
+  </div>
+</div>
 <noscript>
   <p style="padding:1rem">This app needs JavaScript. It runs entirely in your browser — nothing is sent anywhere.</p>
 </noscript>

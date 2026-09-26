@@ -4,6 +4,7 @@ import {
   ALL_QUESTIONS, DOMAINS, OBJECTIVES, buildPool, selectQuestions,
   createSession, emptyPoolReason,
 } from '../quizEngine.js';
+import { takeMorph } from '../motion.js';
 
 const COUNT_CHIPS = [10, 20, 25, 50, 100, 'all'];
 
@@ -67,6 +68,8 @@ export async function renderBuildQuiz(view, { params, navigate }) {
   const optsCard = el('div', { class: 'card' });
   const startBar = el('div', { class: 'startbar' });
   view.append(poolCard, countCard, optsCard, startBar);
+  // Opened from a Study card: that card grows into the first one here.
+  takeMorph(poolCard);
 
   /* ------------------------------------------------ pool selector ---- */
 

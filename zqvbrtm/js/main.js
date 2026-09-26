@@ -5,9 +5,14 @@ import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon, iconPair } from './icons.js';
 import { art } from './art.js';
-import { themeReveal, animateScreen, pop, slideIn, installPointerGlow } from './motion.js';
+import {
+  themeReveal, animateScreen, pop, slideIn, installPointerGlow, installRipples, installReveals,
+  canTransition, transition,
+} from './motion.js';
 import { initMilestones } from './milestones.js';
 import * as sound from './sound.js';
+import * as haptics from './haptics.js';
+import { levelBadge, paintBadge } from './levels.js';
 import { renderHome } from './views/home.js';
 import { renderQuiz } from './views/quiz.js';
 import { renderResults } from './views/results.js';
@@ -70,6 +75,15 @@ function paintSound() {
   btn.setAttribute('title', on ? 'Sound effects: on' : 'Sound effects: off');
 }
 
+function paintHaptics() {
+  const btn = document.getElementById('haptics-toggle');
+  if (!btn) return;
+  const on = haptics.enabled();
+  btn.replaceChildren(icon(on ? 'vibrate' : 'vibrateOff'));
+  btn.setAttribute('aria-label', on ? 'Vibration on. Turn it off' : 'Vibration off. Turn it on');
+  btn.setAttribute('title', on ? 'Vibration: on' : 'Vibration: off');
+}
+
 function buildShell() {
   const root = document.getElementById('app');
   clear(root);
@@ -103,11 +117,29 @@ function buildShell() {
     },
   });
 
+  // Vibration has its own switch, shown only where a phone can buzz.
+  const hapticsBtn = haptics.supported() ? el('button', {
+    class: 'iconbtn', id: 'haptics-toggle', type: 'button',
+    onclick: () => {
+      const next = !haptics.enabled();
+      store.setSettings({ haptics: next });
+      paintHaptics();
+      pop(hapticsBtn.firstChild, { scale: 1.25 });
+      if (next) haptics.buzz('correct');
+    },
+  }) : null;
+
   const topbar = el('header', { class: 'topbar' }, [
     el('span', { class: 'brand' }, [
       el('span', { class: 'brandmark' }, [icon('shield', { size: 20 })]),
-      el('span', { class: 'brandtext' }, [APP_TITLE, el('small', { text: APP_SUBTITLE })]),
+      el('span', { class: 'brandtext' }, [
+        el('span', { class: 'brand-long', text: APP_TITLE }),
+        el('span', { class: 'brand-short', text: NAV_TITLE }),
+        el('small', { text: APP_SUBTITLE }),
+      ]),
     ]),
+    levelBadge(),
+    hapticsBtn,
     soundBtn,
     themeBtn,
   ]);
@@ -165,15 +197,19 @@ function tabIndex(path) {
   return NAV.findIndex((n) => n.match.includes(path));
 }
 
-async function render() {
+// `smooth`: this draw runs inside a view transition, which moves the whole
+// screen, so the per-element entrance animations stay out of its way.
+async function render({ smooth = false } = {}) {
   const { path, params } = parseHash();
   const view = document.getElementById('view') || buildShell();
   markActiveNav(path);
   clear(view);
   // Restart the entrance animation for the new screen.
   view.classList.remove('enter');
-  void view.offsetWidth;
-  view.classList.add('enter');
+  if (!smooth) {
+    void view.offsetWidth;
+    view.classList.add('enter');
+  }
 
   if (!bannerShown) {
     const b = storageBanner();
@@ -196,7 +232,7 @@ async function render() {
   // from, like a phone app; moving within a tab keeps the gentle rise.
   const tab = tabIndex(path);
   if (lastTab !== null && tab !== -1 && tab !== lastTab) {
-    slideIn(view, tab > lastTab ? 1 : -1, { distance: 56, duration: 460 });
+    if (!smooth) slideIn(view, tab > lastTab ? 1 : -1, { distance: 56, duration: 460 });
     sound.play('tab');
   }
   if (tab !== -1) lastTab = tab;
@@ -205,19 +241,31 @@ async function render() {
   window.scrollTo(0, 0);
 }
 
+// A new address: slide to it where the browser has view transitions.
+function onRoute() {
+  if (!canTransition() || !document.getElementById('view')) { render(); return; }
+  const tab = tabIndex(parseHash().path);
+  const dir = lastTab !== null && tab !== -1 && tab !== lastTab ? (tab > lastTab ? 'forward' : 'back') : 'up';
+  transition('page', dir, () => render({ smooth: true }));
+}
+
 export function start() {
   document.title = APP_TITLE;
   store.init();
   buildShell();
   applyTheme(store.getSettings().theme);
   paintSound();
+  paintHaptics();
+  paintBadge();
   // Browsers start audio only from a user gesture; wake it on the first one.
   for (const type of ['pointerdown', 'keydown', 'touchend']) {
     window.addEventListener(type, () => sound.unlock(), { passive: true, capture: true });
   }
   initMilestones();
   installPointerGlow();
-  window.addEventListener('hashchange', render);
+  installRipples();
+  installReveals();
+  window.addEventListener('hashchange', onRoute);
   // The top bar tightens once the page scrolls.
   let ticking = false;
   window.addEventListener('scroll', () => {
@@ -236,6 +284,8 @@ export function start() {
   window.addEventListener('app:refresh', () => {
     applyTheme(store.getSettings().theme);
     paintSound();
+    paintHaptics();
+    paintBadge();
     render();
   });
   render();

@@ -9,6 +9,7 @@ import { icon, iconPair } from '../icons.js';
 import { art } from '../art.js';
 import {
   slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, growBar,
+  canTransition, transition, takeMorph,
 } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewState, STEPS } from '../srs.js';
@@ -17,6 +18,8 @@ import { findAcronyms, wrapAcronyms } from '../acronyms.js';
 import { odometer } from '../motion.js';
 import { checkMilestones } from '../milestones.js';
 import { verifyRow } from '../verify.js';
+import { xpGain } from '../xp.js';
+import { xpNow, flyXP, settleXP } from '../levels.js';
 
 const DRILL_SIZE = 10;
 
@@ -64,7 +67,12 @@ function finish(session, navigate) {
   // The mock timer and a confirmation can both reach here; score once.
   if (session.finished) return;
   session.finished = true;
+  const xpBefore = xpNow();
   const result = saveResult(session);
+  // The quiz bonus (and, for a mock exam, every answer's XP) lands on the
+  // badge once the results screen is up.
+  const gain = xpGain(xpBefore, xpNow());
+  if (gain.xp > 0) setTimeout(() => settleXP(gain), 1500);
   if (session.feedbackMode === 'end') setTimeout(checkMilestones, 1600);
   store.clearActiveQuiz();
   if (session.mode === 'similar') store.resumePausedQuiz();
@@ -95,6 +103,10 @@ export async function renderQuiz(view, { navigate }) {
   let motion = 'first';
   let lastPct = 0;
   let lastN = null;
+  // XP the last answer earned, shown flying to the level badge on reveal.
+  let pendingXP = null;
+  // True while a draw runs inside a view transition (see goTo).
+  let smooth = false;
 
   const draw = () => {
     const how = motion;
@@ -224,6 +236,8 @@ export async function renderQuiz(view, { navigate }) {
     qtext.append(renderQuestionText(question.question));
     wrapAcronyms(qtext);
     body.append(qtext);
+    // Started from a Study card: that card grows into this one.
+    const morphed = how === 'first' && takeMorph(qtext);
     if (acros.length) body.append(acroPanel);
 
     if (multi) {
@@ -269,9 +283,11 @@ export async function renderQuiz(view, { navigate }) {
       if (session.revealed[question.id]) return;
       session.answers[question.id] = [...picked];
       if (session.feedbackMode === 'immediate') {
+        const xpBefore = xpNow();
         store.recordAttempt(question.id, {
           correct: isCorrect(question, picked), selected: picked, quizId: session.id,
         });
+        pendingXP = xpGain(xpBefore, xpNow());
         session.revealed[question.id] = true;
         const right = isCorrect(question, picked);
         const before = session.streak || 0;
@@ -322,9 +338,9 @@ export async function renderQuiz(view, { navigate }) {
     }
     body.append(group);
     paint();
-    if (how === 'next' || how === 'prev' || how === 'first') {
+    if ((how === 'next' || how === 'prev' || how === 'first') && !smooth) {
       if (how !== 'first') slideIn(body, how === 'prev' ? -1 : 1);
-      rise(qtext, { delay: how === 'first' ? 80 : 40, distance: 10 });
+      if (!morphed) rise(qtext, { delay: how === 'first' ? 80 : 40, distance: 10 });
       cascade(group.children, { start: how === 'first' ? 160 : 110, step: 50 });
     }
 
@@ -439,6 +455,12 @@ export async function renderQuiz(view, { navigate }) {
         else play('wrong');
         if (broke) setTimeout(() => play('fizzle'), 260);
         setTimeout(checkMilestones, 900);
+        if (pendingXP) {
+          const gain = pendingXP;
+          const from = shownWrong[0] || shownRight[0];
+          pendingXP = null;
+          setTimeout(() => flyXP(from, gain), 380);
+        }
       }
     }
 
@@ -517,8 +539,12 @@ export async function renderQuiz(view, { navigate }) {
     session.index = i;
     store.setActiveQuiz(session);
     play('swoosh');
-    draw();
-    window.scrollTo(0, 0);
+    const redraw = () => { draw(); window.scrollTo(0, 0); };
+    if (!canTransition()) { redraw(); return; }
+    transition('question', motion === 'prev' ? 'back' : 'forward', () => {
+      smooth = true;
+      try { redraw(); } finally { smooth = false; }
+    });
   }
 
   // After answering, move to the next question still unanswered, wrapping

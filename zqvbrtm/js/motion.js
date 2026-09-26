@@ -332,8 +332,204 @@ export function animateScreen(root) {
       { duration: 300, delay: 400 + i * 50, easing: SPRING, fill: 'backwards' });
   });
   root.querySelectorAll('[data-countup], .readiness .score, .srs-n, .score-big > span:first-child').forEach((s, i) => {
+    if (s.closest('[data-no-count]')) return;   // these move another way
     const n = Number(s.dataset.countup ?? s.textContent);
     if (Number.isFinite(n)) odometer(s, n, { delay: 180 + Math.min(i, 8) * 60 });
   });
   interactiveCards(root);
+}
+
+/** What gets a press ripple: the answer choices and the buttons. */
+const RIPPLE = '.choice, .btn, .similar-btn, .verify-btn';
+
+/**
+ * A ripple that spreads from where an answer or button was pressed (from
+ * its middle for a key press). It is drawn in its own layer over the
+ * control rather than inside it, because answering redraws the quiz at once
+ * and would otherwise wipe the ripple before it could be seen.
+ */
+export function installRipples() {
+  if (installRipples.done) return;
+  installRipples.done = true;
+
+  const spawn = (host, x, y) => {
+    if (reduced() || !host.isConnected) return;
+    const r = host.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    const cs = getComputedStyle(host);
+    const layer = document.createElement('span');
+    layer.className = 'ripple-layer';
+    layer.setAttribute('aria-hidden', 'true');
+    layer.style.left = `${r.left + window.scrollX}px`;
+    layer.style.top = `${r.top + window.scrollY}px`;
+    layer.style.width = `${r.width}px`;
+    layer.style.height = `${r.height}px`;
+    layer.style.borderRadius = cs.borderRadius;
+    const solid = host.classList.contains('btn') && !host.classList.contains('secondary');
+    const size = 2 * Math.hypot(Math.max(x - r.left, r.right - x), Math.max(y - r.top, r.bottom - y));
+    const dot = document.createElement('span');
+    dot.className = `ripple${solid ? ' on-solid' : ''}`;
+    dot.style.width = `${size}px`;
+    dot.style.height = `${size}px`;
+    dot.style.left = `${x - r.left - size / 2}px`;
+    dot.style.top = `${y - r.top - size / 2}px`;
+    layer.append(dot);
+    document.body.append(layer);
+    const a = dot.animate([
+      { transform: 'scale(0)', opacity: 1 },
+      { transform: 'scale(1)', opacity: 0 },
+    ], { duration: 700, easing: 'cubic-bezier(.2, .7, .2, 1)' });
+    const done = () => layer.remove();
+    a.finished.then(done, done);
+  };
+  const hostOf = (ev) => {
+    const host = ev.target instanceof Element ? ev.target.closest(RIPPLE) : null;
+    return host && !host.disabled ? host : null;
+  };
+  // A mouse ripples on press. Touch waits for the tap, so scrolling past
+  // a button does not set it off. A key press ripples from the middle.
+  // Capture phase: this runs before the click handler redraws the screen.
+  // (Safari's click events do not say what made them, so the last
+  // pointerdown's type is remembered.)
+  let lastPointer = 'mouse';
+  document.addEventListener('pointerdown', (ev) => {
+    lastPointer = ev.pointerType || 'mouse';
+    if (lastPointer !== 'mouse' || ev.button !== 0) return;
+    const host = hostOf(ev);
+    if (host) spawn(host, ev.clientX, ev.clientY);
+  }, { capture: true, passive: true });
+  document.addEventListener('click', (ev) => {
+    const host = hostOf(ev);
+    if (!host) return;
+    if (ev.detail === 0) {
+      const r = host.getBoundingClientRect();
+      spawn(host, r.left + r.width / 2, r.top + r.height / 2);
+    } else if (lastPointer !== 'mouse') {
+      spawn(host, ev.clientX, ev.clientY);
+    }
+  }, { capture: true });
+}
+
+/** What scroll reveals apply to (the same lists as the rules in app.css). */
+const REVEAL = '#view > .card ~ .card, #view .qrow, #view .statrow, #view .lvl-road li';
+const REVEAL_TOUCH = '#view .mode-grid > .card';
+
+/**
+ * Scroll reveals for browsers that cannot drive an animation from the
+ * scroll position (app.css does it where they can). Each element eases in
+ * as it is about to scroll into view. Anything already on screen when a
+ * page draws is left alone. Web Animations rather than a class, because
+ * screens run their own entrance animations on some of these elements and
+ * a class could not override those.
+ */
+export function installReveals() {
+  if (installReveals.done || reduced()) return;
+  installReveals.done = true;
+  try { if (CSS.supports('animation-timeline: view()')) return; } catch { /* old browser: carry on */ }
+  if (typeof IntersectionObserver !== 'function' || typeof MutationObserver !== 'function') return;
+  const root = document.getElementById('app');
+  if (!root) return;
+  let fine = false;
+  try { fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } catch { /* no */ }
+  const selector = fine ? REVEAL : `${REVEAL}, ${REVEAL_TOUCH}`;
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      io.unobserve(e.target);
+      run(e.target, [
+        { opacity: 0, transform: 'translateY(26px) scale(.98)' },
+        { opacity: 1, transform: 'none' },
+      ], { duration: 620, easing: EASE });
+    }
+  }, { rootMargin: '0px 0px 8% 0px' });
+  const scan = () => {
+    for (const elm of document.querySelectorAll(selector)) {
+      if (elm.dataset.rv) continue;
+      elm.dataset.rv = '1';
+      if (elm.getBoundingClientRect().top < window.innerHeight) continue;   // already on screen
+      io.observe(elm);
+    }
+  };
+  let queued = false;
+  new MutationObserver(() => {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => { queued = false; scan(); });
+  }).observe(root, { childList: true, subtree: true });
+  scan();
+}
+
+/* ------------------------------------------------------------------ *
+ * View transitions: the browser snapshots the screen before and after a
+ * redraw and animates between the two (see "View transitions" in app.css).
+ * Screens slide past each other in the direction of the tab you moved to,
+ * the quiz's question card slides from one question to the next, and a
+ * Study card morphs into the quiz it starts. Where the browser has no view
+ * transitions, or the viewer wants reduced motion, the redraw just happens
+ * and the older per-element animations run instead.
+ * ------------------------------------------------------------------ */
+
+export function canTransition() {
+  return typeof document !== 'undefined' && typeof document.startViewTransition === 'function' && !reduced();
+}
+
+let vtSeq = 0;
+let morphFrom = null;
+let morphTo = null;
+
+function clearMorph() {
+  for (const elm of [morphFrom, morphTo]) if (elm) elm.style.viewTransitionName = '';
+  morphFrom = null;
+  morphTo = null;
+}
+
+/** Mark the element that should morph into the next screen's hero element. */
+export function armMorph(elm) {
+  clearMorph();
+  if (!elm || !canTransition()) return;
+  elm.style.viewTransitionName = 'morph';
+  morphFrom = elm;
+}
+
+/** The next screen's hero element: it takes the morph if one is armed. */
+export function takeMorph(elm) {
+  if (!elm || !morphFrom || morphTo) return false;
+  elm.style.viewTransitionName = 'morph';
+  morphTo = elm;
+  return true;
+}
+
+/**
+ * Redraw inside a view transition. kind 'page' (dir 'forward', 'back' or
+ * 'up') or 'question' (dir 'forward' or 'back'). The caller checks
+ * canTransition() first; this still redraws if the browser refuses.
+ */
+export function transition(kind, dir, update) {
+  const root = document.documentElement;
+  const token = ++vtSeq;
+  root.dataset.vt = kind;
+  root.dataset.vtDir = dir;
+  // Leaving a spot scrolled far down (the redraw scrolls to the top): what
+  // was on screen and what will be are nowhere near each other, so nothing
+  // flies across the screen between the two; the new parts just slide in.
+  if (window.scrollY > 80) root.dataset.vtFar = '1';
+  else delete root.dataset.vtFar;
+  const end = () => {
+    if (token !== vtSeq) return;
+    delete root.dataset.vt;
+    delete root.dataset.vtDir;
+    delete root.dataset.vtFar;
+    clearMorph();
+  };
+  let t;
+  try {
+    t = document.startViewTransition(update);
+  } catch {
+    end();
+    return Promise.resolve(update());
+  }
+  // A skipped transition rejects these; that is not an error worth logging.
+  t.ready.catch(() => {});
+  t.finished.then(end, end);
+  return t.updateCallbackDone.catch(() => {});
 }

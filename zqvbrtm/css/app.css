@@ -851,6 +851,26 @@ h1 { font-weight: 800; }
   .srs-ladder::before, .srs-step, .srs-moves li { animation: none; }
 }
 
+/* the Study card: questions that moved since the last visit hop from rung
+   to rung (js/smartReview.js playHops), then a line says what moved */
+.srs-hop-layer { position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: visible; pointer-events: none; z-index: 150; }
+.srs-hop {
+  --hop: var(--accent);
+  position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%;
+  offset-rotate: 0deg; will-change: transform, offset-distance, opacity;
+  background: var(--hop);
+  box-shadow: 0 0 0 2px var(--bg-card),
+              0 0 0 5px color-mix(in srgb, var(--hop) 26%, transparent),
+              0 0 20px 4px color-mix(in srgb, var(--hop) 55%, transparent);
+}
+.srs-hop.is-mastered { --hop: var(--correct-solid); }
+.srs-hop.is-back { --hop: var(--incorrect-solid); }
+.srs-hop.is-new { --hop: var(--secondary); }
+.srs-since { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem .65rem; margin: .85rem 0 0; }
+.srs-since-l { font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); }
+.srs-since .srs-moves { margin: 0; gap: .4rem; }
+.srs-since .srs-moves li { padding: .26rem .7rem; font-size: .84rem; white-space: nowrap; }
+
 /* =====================================================================
    Wider layout, the six-box Study grid, the readiness tile and search.
    ===================================================================== */
@@ -1500,3 +1520,247 @@ abbr.acro { text-decoration: none; }
 .tip-body b { font-size: .74rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em;
               color: color-mix(in srgb, var(--flag) 55%, var(--text)); }
 .tip-body span { font-weight: 650; line-height: 1.55; color: var(--text); }
+
+/* =====================================================================
+   XP and levels: the top-bar badge, the "+XP" chip that flies to it,
+   the Stats card and the level-up banner
+   ===================================================================== */
+.lvl-badge {
+  display: inline-flex; align-items: center; gap: .55rem; flex: 0 0 auto;
+  min-height: var(--tap); padding: .2rem .8rem .2rem .25rem;
+  border: 1px solid var(--border); border-radius: 999px;
+  color: var(--text); text-decoration: none; background: var(--bg-card);
+  transition: background .18s var(--ease), border-color .18s var(--ease), transform .25s var(--spring);
+}
+.lvl-badge:hover { background: var(--bg-hover); border-color: var(--border-strong); text-decoration: none; }
+.lvl-badge:active { transform: scale(.96); }
+.lvl-ring { position: relative; width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; }
+.lvl-svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+.lvl-track { fill: none; stroke: var(--bg-sunken); stroke-width: 4; }
+.lvl-arc { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.lvl-n { position: relative; font-size: .86rem; font-weight: 900; font-variant-numeric: tabular-nums; color: var(--accent); }
+.lvl-text { display: grid; line-height: 1.15; min-width: 0; }
+.lvl-title { font-size: .8rem; font-weight: 800; white-space: nowrap; }
+.lvl-xp { font-size: .7rem; font-weight: 600; color: var(--text-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 720px) {
+  .lvl-text { display: none; }
+  .lvl-badge { padding: .2rem; }
+}
+.lvl-badge.is-leveling .lvl-ring { animation: lvl-flare 1.7s var(--ease); }
+@keyframes lvl-flare {
+  0% { filter: none; }
+  18% { filter: drop-shadow(0 0 12px var(--accent)) brightness(1.5); }
+  100% { filter: none; }
+}
+
+.xp-float {
+  position: fixed; z-index: 160; left: 0; top: 0; pointer-events: none;
+  display: grid; justify-items: center; gap: .05rem;
+  padding: .38rem .8rem; border-radius: 14px;
+  background: var(--brand-grad); color: #fff;
+  box-shadow: 0 12px 28px rgba(61, 58, 216, .42), 0 0 0 1px rgba(255,255,255,.18) inset;
+  white-space: nowrap; will-change: transform, opacity;
+}
+.xp-main { display: inline-flex; align-items: center; gap: .3rem; font-size: 1rem; font-weight: 900; font-variant-numeric: tabular-nums; }
+.xp-extra { font-size: .68rem; font-weight: 800; letter-spacing: .02em; opacity: .92; }
+
+.lvl-card-head { display: flex; align-items: center; gap: .9rem; flex-wrap: wrap; }
+.lvl-card-title { flex: 1 1 12rem; min-width: 0; }
+.lvl-eyebrow { font-size: .72rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.lvl-card-title h2 { margin: .1rem 0 0; font-size: 1.45rem; }
+.lvl-card-xp { margin-left: auto; text-align: right; white-space: nowrap; }
+.lvl-total { font-size: 2.3rem; font-weight: 900; line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.lvl-unit { margin-left: .3rem; font-weight: 800; color: var(--text-faint); }
+.lvl-progress { height: 12px; margin: 1rem 0 .55rem; }
+.lvl-next { margin: 0 0 .3rem; color: var(--text-dim); }
+.lvl-next b { color: var(--text); }
+.lvl-how { margin-top: .35rem; }
+.lvl-how summary { font-weight: 800; color: var(--accent); }
+.lvl-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .4rem; }
+.lvl-table td { padding: .45rem .25rem; border-bottom: 1px solid var(--border); }
+.lvl-table tr:last-child td { border-bottom: 0; }
+.lvl-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lvl-table td.num:last-child { font-weight: 800; }
+.lvl-table tr.is-zero { color: var(--text-faint); }
+.lvl-road { list-style: none; padding: 0; margin: .3rem 0 .4rem; display: grid; gap: .35rem; }
+.lvl-road li { display: flex; align-items: center; gap: .75rem; padding: .45rem .75rem; border-radius: 12px; border: 1px solid var(--border); }
+.lvl-road-n { flex: 0 0 auto; width: 1.9rem; height: 1.9rem; border-radius: 50%; display: grid; place-items: center;
+              font-weight: 900; font-size: .82rem; background: var(--bg-raised); color: var(--text-dim); }
+.lvl-road-t { flex: 1; min-width: 0; font-weight: 700; }
+.lvl-road-x { font-size: .8rem; color: var(--text-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lvl-road .is-done .lvl-road-n { background: var(--correct-bg); color: var(--correct); }
+.lvl-road .is-here { border-color: var(--accent); background: var(--accent-soft); }
+.lvl-road .is-here .lvl-road-n { background: var(--accent); color: var(--accent-ink); }
+.lvl-road .is-locked { opacity: .62; }
+
+.xp-earned { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; margin: .1rem 0 0; font-weight: 700; }
+.xp-earned .icon { color: var(--accent); }
+.xp-got { color: var(--accent); font-size: 1.08rem; font-variant-numeric: tabular-nums; }
+
+.milestone.ms-level {
+  background: linear-gradient(135deg, #b45309 0%, #be185d 55%, #6d28d9 100%);
+  box-shadow: 0 20px 50px rgba(190, 24, 93, .42), 0 0 0 1px rgba(255,255,255,.18) inset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lvl-badge.is-leveling .lvl-ring { animation: none; }
+}
+
+/* A phone's top bar also holds the level badge and three buttons: the
+   title shortens, then gives way to the logo alone. */
+.brand-short { display: none; }
+@media (max-width: 460px) {
+  .topbar { gap: .4rem; padding-inline: .8rem; }
+  .topbar .brand { gap: .5rem; min-width: 0; }
+  .brand-long, .topbar .brand small { display: none; }
+  .brand-short { display: inline; white-space: nowrap; }
+}
+@media (max-width: 379px) {
+  .topbar .brandtext { display: none; }
+}
+
+/* Press ripple (js/motion.js installRipples): its own layer over the control. */
+.ripple-layer { position: absolute; z-index: 30; overflow: hidden; pointer-events: none; }
+.ripple {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent) 0%,
+                                      color-mix(in srgb, var(--accent) 18%, transparent) 60%, transparent 72%);
+}
+.ripple.on-solid { background: radial-gradient(circle, rgba(255,255,255,.42) 0%, rgba(255,255,255,.22) 60%, transparent 72%); }
+
+/* =====================================================================
+   Loading skeleton (index.html): the app's outline, shimmering, while
+   the question bank downloads. The app replaces it when it draws itself.
+   ===================================================================== */
+:root { --sk-shine: rgba(255, 255, 255, .78); }
+[data-theme="dark"] { --sk-shine: rgba(255, 255, 255, .07); }
+.skel { min-height: 100dvh; display: flex; background: var(--bg); }
+.skel-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skel-side { display: none; }
+.skel-col { flex: 1; min-width: 0; }
+.skel-top { display: flex; align-items: center; gap: .6rem; height: 68px; padding: 0 16px;
+            border-bottom: 1px solid var(--border); background: var(--bg); }
+.skel-grow { flex: 1; }
+.skel-main { max-width: var(--maxw); margin: 0 auto; padding: 1.2rem 16px 6rem; display: grid; gap: 1rem; }
+.skel-card { display: grid; gap: 1rem; padding: 1.15rem 1.2rem; border-radius: var(--radius);
+             background: var(--bg-card); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+.skel-row { display: flex; align-items: center; gap: .9rem; }
+.skel-lines { flex: 1; display: grid; gap: .6rem; }
+.skel-ladder { display: flex; justify-content: space-around; padding: .2rem 0; }
+.skel-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .skel-grid { grid-template-columns: 1fr 1fr; } }
+.skel-tabs { position: fixed; left: 0; right: 0; bottom: 0; height: 58px;
+             display: grid; grid-template-columns: repeat(4, 1fr); place-items: center;
+             background: var(--bg-raised); border-top: 1px solid var(--border); }
+@media (min-width: 880px) {
+  .skel-side { display: grid; align-content: start; gap: .55rem; width: 264px; flex: 0 0 264px; min-height: 100dvh;
+               padding: 1.3rem .9rem; background: var(--bg-card); border-right: 1px solid var(--border); }
+  .skel-brand { display: flex; align-items: center; gap: .7rem; padding: .1rem .5rem 1.2rem; }
+  .skel-tabs, .skel-top .sk-mob { display: none; }
+  .skel-main { padding: 1.6rem clamp(20px, 3.2vw, 60px) 4.5rem; }
+}
+
+.sk { position: relative; display: block; overflow: hidden; border-radius: 10px; background: var(--bg-sunken); }
+[data-theme="dark"] .sk { background: var(--bg-hover); }
+.sk::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 20%, var(--sk-shine) 50%, transparent 80%);
+  transform: translateX(-100%);
+  animation: sk-sweep 1.6s cubic-bezier(.4, 0, .2, 1) infinite;
+}
+@keyframes sk-sweep { to { transform: translateX(100%); } }
+.sk-logo { width: 38px; height: 38px; border-radius: 12px; flex: 0 0 auto; }
+.sk-t { height: .8rem; border-radius: 6px; }
+.w25 { width: 25%; } .w30 { width: 30%; } .w35 { width: 35%; } .w40 { width: 40%; } .w45 { width: 45%; }
+.w50 { width: 50%; } .w55 { width: 55%; } .w60 { width: 60%; } .w65 { width: 65%; } .w70 { width: 70%; }
+.w75 { width: 75%; } .w80 { width: 80%; } .w85 { width: 85%; } .w90 { width: 90%; }
+.skel-top .sk-t { width: 9rem; max-width: 30%; }
+.sk-nav { height: 44px; border-radius: 12px; }
+.sk-badge { width: 44px; height: 44px; border-radius: 999px; flex: 0 0 auto; }
+@media (min-width: 721px) { .sk-badge { width: 118px; } }
+.sk-btn { width: 44px; height: 44px; border-radius: 12px; flex: 0 0 auto; }
+.sk-h1 { width: 8rem; height: 1.9rem; border-radius: 8px; }
+.sk-art { width: 48px; height: 48px; border-radius: 14px; flex: 0 0 auto; }
+.sk-dot { width: 46px; height: 46px; border-radius: 50%; }
+.sk-cta { height: 44px; border-radius: 12px; }
+.sk-tab { width: 26px; height: 26px; border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { .sk::after { animation: none; display: none; } }
+
+/* =====================================================================
+   Scroll reveals: cards and rows below the fold rise into place as they
+   scroll into view. Driven by the scroll itself where the browser can
+   (animation-timeline: view()); elsewhere js/motion.js installReveals
+   adds .rv-in as each one comes into view. The first card of a screen
+   and anything already on screen are left alone.
+   ===================================================================== */
+@keyframes rv-in {
+  from { opacity: 0; transform: translateY(26px) scale(.98); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    #view > .card ~ .card, #view .qrow, #view .statrow, #view .lvl-road li {
+      animation: rv-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 18%;
+    }
+  }
+}
+/* The Study cards tilt toward a mouse, which needs their transform free,
+   so they only reveal this way on touch screens. */
+@media (prefers-reduced-motion: no-preference) and (not ((hover: hover) and (pointer: fine))) {
+  @supports (animation-timeline: view()) {
+    #view .mode-grid > .card {
+      animation: rv-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 18%;
+    }
+  }
+}
+
+/* =====================================================================
+   View transitions (js/motion.js transition). While one runs, <html>
+   carries data-vt (page | question) and data-vt-dir, which name the parts
+   that move and pick their direction. The rest of the screen (side bar,
+   top bar) is the same before and after, so it holds still.
+   ===================================================================== */
+html[data-vt="page"] #view { view-transition-name: page; }
+html[data-vt="question"] .qtext { view-transition-name: q-card; }
+html[data-vt="question"] .choices { view-transition-name: q-choices; }
+html[data-vt="question"] .explain { view-transition-name: q-explain; }
+html[data-vt="question"] .qnav { view-transition-name: q-nav; }
+
+html[data-vt-dir="forward"] { --vt-in-x: 56px; --vt-out-x: -32px; }
+html[data-vt-dir="back"] { --vt-in-x: -56px; --vt-out-x: 32px; }
+html[data-vt-dir="up"] { --vt-in-y: 18px; }
+
+@keyframes vt-in { from { opacity: 0; transform: translate(var(--vt-in-x, 0), var(--vt-in-y, 0)); } }
+@keyframes vt-out { to { opacity: 0; transform: translate(var(--vt-out-x, 0), var(--vt-out-y, 0)); } }
+
+html[data-vt]::view-transition-group(*) { animation-duration: .44s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+
+/* screens: the page slides in from the side of the tab it came from */
+html[data-vt="page"]::view-transition-group(page) { animation: none; }
+html[data-vt="page"]::view-transition-old(page) { animation: vt-out .2s ease-in both; }
+html[data-vt="page"]::view-transition-new(page) { animation: vt-in .44s cubic-bezier(.2, .7, .2, 1) both; }
+html[data-vt-far]::view-transition-old(page) { display: none; }
+
+/* a Study card grows into the quiz's question card */
+html[data-vt="page"]::view-transition-group(morph) { animation-duration: .52s; }
+html[data-vt="page"]::view-transition-old(morph),
+html[data-vt="page"]::view-transition-new(morph) {
+  height: 100%; object-fit: cover; object-position: top;
+  animation-duration: .52s;
+}
+
+/* quiz: the question and its answers slide on to the next question */
+html[data-vt="question"]::view-transition-old(q-card),
+html[data-vt="question"]::view-transition-old(q-choices),
+html[data-vt="question"]::view-transition-old(q-explain) { animation: vt-out .2s ease-in both; }
+html[data-vt="question"]::view-transition-new(q-card) { animation: vt-in .42s cubic-bezier(.2, .7, .2, 1) both; }
+html[data-vt="question"]::view-transition-new(q-choices) { animation: vt-in .46s cubic-bezier(.2, .7, .2, 1) .05s both; }
+html[data-vt="question"]::view-transition-new(q-explain) { animation: vt-in .46s cubic-bezier(.2, .7, .2, 1) .09s both; }
+html[data-vt="question"][data-vt-far]::view-transition-group(q-card),
+html[data-vt="question"][data-vt-far]::view-transition-group(q-choices),
+html[data-vt="question"][data-vt-far]::view-transition-group(q-nav) { animation: none; }
+html[data-vt="question"][data-vt-far]::view-transition-old(q-explain) { display: none; }

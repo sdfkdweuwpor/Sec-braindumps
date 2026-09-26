@@ -11,6 +11,7 @@
  */
 
 import * as store from './store.js';
+import { forSound } from './haptics.js';
 
 let ctx = null;
 let out = null;
@@ -43,6 +44,12 @@ function audio() {
 
 export function enabled() {
   return store.getSettings().sound !== false;
+}
+
+// Audio cannot start before the page has had a tap or key press; trying
+// only earns a console warning (the Study card's hops can run on load).
+function activated() {
+  try { return typeof navigator === 'undefined' || !navigator.userActivation || navigator.userActivation.hasBeenActive; } catch { return true; }
 }
 
 /** Call from a user gesture. Creates or wakes the audio context. */
@@ -313,6 +320,13 @@ const EFFECTS = {
   done: (c) => {
     [C5, G5].forEach((f) => note(c, { freq: f, dur: 0.75, gain: 0.2 }));
   },
+  // A new level: a rising fanfare that lands on a bright, ringing chord.
+  levelUp: (c) => {
+    [C5, E5, G5, C6, E6].forEach((f, i) => note(c, { freq: f, at: i * 0.075, dur: 0.26, gain: 0.2 }));
+    [C6, E6, G6, C7].forEach((f) => note(c, { freq: f, at: 0.4, dur: 1.3, gain: 0.14 }));
+    note(c, { freq: E7, at: 0.52, dur: 0.9, gain: 0.07, partial: 0 });
+    sparkle(c, { at: 0.45, count: 8 });
+  },
   // A milestone banner.
   milestone: (c) => {
     [C5, E5, G5, C6].forEach((f, i) => note(c, { freq: f, at: i * 0.09, dur: 0.3, gain: 0.22 }));
@@ -329,9 +343,13 @@ const EFFECTS = {
 /** The names play() accepts. */
 export const SOUNDS = Object.keys(EFFECTS);
 
-/** Play a named effect. Silent when sounds are off or audio is unavailable. */
+/**
+ * Play a named effect. Silent when sounds are off or audio is unavailable.
+ * The matching buzz (js/haptics.js) goes either way: it has its own switch.
+ */
 export function play(name) {
-  if (!enabled()) return;
+  forSound(name);
+  if (!enabled() || !activated()) return;
   const c = audio();
   const fx = EFFECTS[name];
   if (!c || !fx) return;

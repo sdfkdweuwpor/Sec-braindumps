@@ -10,6 +10,7 @@ import {
   createSession,
 } from '../quizEngine.js';
 import { art } from '../art.js';
+import { armMorph } from '../motion.js';
 
 const MOCK_COUNT = 90;
 const MOCK_MINUTES = 90;
@@ -22,7 +23,7 @@ function startSession(session, navigate) {
 const MODE_ICON = { 'Build your own': 'build', 'Missed questions': 'missed', 'Weakest subject': 'target', 'Mock exam': 'timer' };
 
 function modeCard({ title, blurb, cta, disabled, note, onStart }) {
-  return el('div', { class: 'card mode-card' }, [
+  const card = el('div', { class: 'card mode-card' }, [
     el('div', { class: 'mode-head' }, [
       el('span', { class: 'mode-ic has-art' }, [art(MODE_ICON[title] || 'study', { size: 48 })]),
       el('div', {}, [
@@ -33,10 +34,13 @@ function modeCard({ title, blurb, cta, disabled, note, onStart }) {
     note ? el('p', { class: 'faint', text: note, style: 'margin:.6rem 0 0' }) : null,
     el('div', { style: 'margin-top:.8rem' }, [
       el('button', {
-        class: 'btn block', type: 'button', disabled: disabled || false, onclick: onStart,
+        class: 'btn block', type: 'button', disabled: disabled || false,
+        // The card grows into whatever it opens (see armMorph).
+        onclick: () => { armMorph(card); onStart(); },
       }, cta),
     ]),
   ]);
+  return card;
 }
 
 export async function renderHome(view, { navigate }) {

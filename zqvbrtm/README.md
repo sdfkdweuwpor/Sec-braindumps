@@ -44,7 +44,10 @@ name is deliberately random so the URL does not name the vendor.
   then 7, and right at the 7-day check masters it. A miss anywhere sends it
   back to 1 day, and answering before a check is due changes nothing. The
   schedule is rebuilt from the answer history (`js/srs.js`), so nothing
-  extra is stored and it applies to history from before the feature.
+  extra is stored and it applies to history from before the feature. When
+  questions have moved since the card was last on screen, each move replays
+  as a dot hopping from rung to rung (new ones drop in, mastered ones land
+  with a burst), then a line of chips says what moved.
 - **Exhibits restored.** 27 questions whose logs, tables, code or command
   output the PDF printed as pictures now carry that content as text,
   transcribed from the page images (`EXHIBITS` in `tools/corrections.py`).
@@ -74,11 +77,36 @@ name is deliberately random so the URL does not name the vendor.
   flags. On by default; the speaker button in the top bar turns them off.
   The mock exam only ever plays the neutral tap, so it never gives an answer
   away.
-- **Motion.** Direction-aware question slides, answer reveal effects, count-ups
-  and a sliding nav highlight; a soft glow and border spotlight that follows
-  the pointer over cards, questions and choices; search boxes that cycle
-  through example searches (`js/motion.js`). All of it is off under
-  `prefers-reduced-motion`.
+- **XP and levels.** Every answer earns XP (10 right, 3 wrong for the
+  effort), plus 15 for every 5 in a row within a quiz, 5 for passing a Smart
+  review check, 25 for mastering a question, 20 for finishing a quiz of 10 or
+  more and 100 for finishing a mock exam. 17 levels run from Recruit through
+  Help Desk Hero, Phish Spotter, SOC Analyst, Threat Hunter and Red Teamer to
+  CISO and Security+ Legend at 28,000 XP. The badge in the top bar shows the
+  level and a ring filling toward the next one; "+10 XP" flies to it after an
+  answer, a new level brings a banner and a fanfare, results show what the
+  quiz earned, and Stats has a level card with where the XP came from. Like
+  Smart review it is worked out from the answer history (`js/xp.js`), so it
+  counts answers from before the feature and nothing extra is stored. In a
+  mock exam the XP lands only after you submit.
+- **Vibration.** On phones, a short buzz for right, a double one for wrong,
+  and patterns for streak fire, mastering a question and a level up, in step
+  with the sounds (`js/haptics.js`). Android uses the Vibration API; iPhones
+  (iOS 18 and later) get a tick from a hidden switch control, the only
+  haptic Safari offers. It has its own on/off button in the top bar, shown
+  only on touch screens; nothing buzzes before the first tap on the page.
+- **Motion.** Screens and questions move with view transitions: a tab
+  slides in from the side of the one you left, the next question slides
+  over from the side you are heading, and a Study card grows into the quiz
+  it starts. Cards and rows further down rise into place as they scroll into
+  view (driven by the scroll itself where the browser supports it). Answers
+  and buttons ripple from where you press them. Also answer reveal effects,
+  count-ups, a sliding nav highlight, a soft glow and border spotlight that
+  follows the pointer, and search boxes that cycle through example searches
+  (`js/motion.js`). All of it is off under `prefers-reduced-motion`.
+- **Loading screen.** While the question bank loads, a shimmering outline of
+  the app shows where things will appear, in the saved theme from the first
+  frame (`js/boot.js` applies it before anything paints).
 - **Icons.** Phosphor duotone icons for the interface and Microsoft Fluent
   3D emoji for the feature tiles, both MIT-licensed, embedded as inline SVG
   and small WebP images so nothing is fetched from a CDN
@@ -111,11 +139,11 @@ python3 -m http.server 8000
 
 | Screen | What it does |
 |---|---|
-| **Study** | Readiness card, plus Build Your Own, Missed, Weakest Subject and Mock Exam |
+| **Study** | Smart review, then Build Your Own, Missed, Weakest Subject, Mock Exam, search and the readiness card |
 | **Build Your Own** | Filter by domain, objective, missed or saved; set a length; choose feedback mode |
 | **Quiz** | One question at a time, immediate or end-of-quiz feedback, flag to save, resumes after a refresh |
-| **Results** | Score, per-domain breakdown, every question with its explanation, retake-missed |
-| **Stats** | Coverage and accuracy per domain and objective, trend line, weakest objectives, export/import |
+| **Results** | Score, XP earned, Smart review moves, per-domain breakdown, every question with its explanation, retake-missed |
+| **Stats** | Level and XP breakdown, coverage and accuracy per domain and objective, trend line, weakest objectives, export/import |
 | **Review** | Everything you have ever answered wrong, filterable, quizzable |
 | **Saved** | Questions you flagged |
 
@@ -126,13 +154,14 @@ CompTIA does not publish how it scales, and the real exam includes unscored
 items. The real pass mark is 750/900.
 
 Deliberately **not** built: study calendar, daily study streaks, Question of the Day,
-Quick 10, timed quizzes outside the mock exam, XP/levels/badges, anything
-social, anything with a paywall.
+Quick 10, timed quizzes outside the mock exam, badges and leaderboards,
+anything social, anything with a paywall.
 
 ## Layout
 
 ```
-index.html              entry point
+index.html              entry point, with the loading skeleton
+js/boot.js              applies the saved theme before first paint (plain script)
 css/theme.css           design tokens; light by default, dark under [data-theme="dark"]
 css/app.css             layout and components
 js/config.js            app name and storage namespace -- unique per app
@@ -141,6 +170,8 @@ js/store.js             the only module that touches localStorage
 js/quizEngine.js        pool filtering, selection, scoring
 js/stats.js             derived analytics and the readiness formula
 js/srs.js               Smart review schedule, worked out from the answer history
+js/xp.js                XP rules and level titles, worked out from the answer history
+js/levels.js            level badge, flying XP, level-up moment, Stats level card
 js/search.js            question search and match highlighting patterns
 js/acronyms.js          acronym lookup and the Show acronyms tooltips
 js/flame.js             streak flame stages and effects
@@ -148,6 +179,7 @@ js/milestones.js        milestone banners (questions answered, readiness bands)
 data/acronyms.js        acronym dictionary (generated from tools/acronyms.py)
 js/smartReview.js       Smart review card and session start
 js/sound.js             synthesized sound effects
+js/haptics.js           phone vibration patterns (Vibration API, iOS switch tick)
 js/motion.js            animation helpers (Web Animations API)
 js/icons.js             Phosphor duotone icons as inline SVG (generated)
 js/art.js               Fluent 3D emoji art as embedded WebP (generated)
@@ -174,7 +206,7 @@ tests/                  node --test suites
 npm test          # or: node --test
 ```
 
-102 tests covering pool filtering, the Smart review schedule, search, the streak fire tiers and moments, the Verify links, count clamping, no-duplicates-within-a-quiz,
+117 tests covering pool filtering, the Smart review schedule and ladder moves, XP and levels, the vibration patterns, search, the streak fire tiers and moments, the Verify links, count clamping, no-duplicates-within-a-quiz,
 all-or-nothing multi-answer scoring, the readiness maths, the localStorage
 migration path, storage-failure fallback, refusing another app's progress
 file, and the integrity of the shipped bank. The five bank tests are skipped

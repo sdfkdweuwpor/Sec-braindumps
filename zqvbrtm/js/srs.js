@@ -46,23 +46,70 @@ function byTime(attempts) {
  * question climbed off the top and has not been missed since.
  */
 export function reviewState(attempts) {
+  return reviewWalk(attempts);
+}
+
+/**
+ * reviewState, reporting each move as it happens: onMove({ kind, attempt })
+ * with kind 'added' (a miss puts it on the ladder), 'reset' (a miss while
+ * already on it), 'up' (right at a check) or 'mastered' (right at the last
+ * check). XP counts the moves; the Study card animates them.
+ */
+export function reviewWalk(attempts, onMove = null) {
   let state = null;
   let mastered = false;
   for (const a of byTime(attempts)) {
     if (!a.correct) {
+      const kind = state ? 'reset' : 'added';
       state = { step: 0, due: addDays(a.ts, STEPS[0]) };
       mastered = false;
+      if (onMove) onMove({ kind, attempt: a });
     } else if (state && a.ts >= state.due) {
       const next = state.step + 1;
       if (next >= STEPS.length) {
         state = null;
         mastered = true;
+        if (onMove) onMove({ kind: 'mastered', attempt: a });
       } else {
         state = { step: next, due: addDays(a.ts, STEPS[next]) };
+        if (onMove) onMove({ kind: 'up', attempt: a });
       }
     }
   }
   return { state, mastered };
+}
+
+/**
+ * Where a question sits on the Study card's ladder: 0-2 for the 1, 3 and
+ * 7-day checks, 3 for Mastered, -1 for not on it.
+ */
+export function ladderSlot(attempts) {
+  const { state, mastered } = reviewWalk(attempts);
+  if (state) return state.step;
+  return mastered ? STEPS.length : -1;
+}
+
+/**
+ * Questions that changed slot on the ladder since `since` (a timestamp):
+ * [{ from, to, count }], one entry per kind of move, for the Study card's
+ * hop animation. Slots as in ladderSlot.
+ */
+export function ladderMovesSince(attemptsById, since, { isKnown = () => true } = {}) {
+  const tally = new Map();
+  for (const [id, entry] of Object.entries(attemptsById || {})) {
+    if (!isKnown(id)) continue;
+    const all = (entry && entry.attempts) || [];
+    if (!all.some((a) => a.ts > since)) continue;
+    const from = ladderSlot(all.filter((a) => a.ts <= since));
+    const to = ladderSlot(all);
+    if (from === to) continue;
+    const key = `${from}>${to}`;
+    tally.set(key, (tally.get(key) || 0) + 1);
+  }
+  return [...tally].map(([key, count]) => {
+    const [from, to] = key.split('>').map(Number);
+    return { from, to, count };
+  }).sort((a, b) => a.from - b.from || a.to - b.to);
 }
 
 /**

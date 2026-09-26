@@ -4,6 +4,7 @@ import * as st from '../stats.js';
 import { ALL_QUESTIONS, DOMAINS } from '../quizEngine.js';
 import { readinessCard, accuracyBar, sparkline, confirmDialog } from '../components.js';
 import { art } from '../art.js';
+import { levelCard } from '../levels.js';
 
 function pct(v) { return v === null ? '—' : `${Math.round(v * 100)}%`; }
 
@@ -24,6 +25,9 @@ export async function renderStats(view, { navigate }) {
     ]));
     return;
   }
+
+  /* ---- level and XP ---- */
+  view.append(levelCard());
 
   /* ---- overall ---- */
   view.append(el('div', { class: 'card' }, [

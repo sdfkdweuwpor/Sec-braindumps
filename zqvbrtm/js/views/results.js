@@ -12,6 +12,7 @@ import { reviewChanges } from '../srs.js';
 import { currentSummary, startSmartReview, reviewButtonLabel } from '../smartReview.js';
 import { verifyRow } from '../verify.js';
 import { tipBox } from '../components.js';
+import { xpEarnedLine } from '../levels.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
@@ -184,6 +185,8 @@ export async function renderResults(view, { params, navigate }) {
           + 'Only the mock exam estimates the 100–900 scale.' }));
   }
   head.append(el('p', { class: 'muted', text: `Time taken: ${fmtDuration(result.durationMs)}` }));
+  const xpLine = xpEarnedLine(result.id);
+  if (xpLine) head.append(xpLine);
   view.append(head);
 
   const moves = srsCard(result, isSmart, navigate);

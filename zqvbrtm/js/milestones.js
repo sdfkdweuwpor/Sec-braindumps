@@ -74,15 +74,35 @@ export function checkMilestones() {
   if (events.length) showBanner(events[events.length - 1], events.length > 1 ? events[0] : null);
 }
 
+/** A new level (from js/levels.js): the same banner, with a fanfare. */
+export function showLevelUp(info) {
+  showBanner({
+    kind: 'level',
+    eyebrow: 'Level up',
+    title: `Level ${info.level} · ${info.title}`,
+    text: info.nextTitle
+      ? `Next up: ${info.nextTitle} at ${info.next.toLocaleString('en-US')} XP.`
+      : 'The top level. Nothing left to unlock but the exam itself.',
+    ic: 'medal',
+    sound: 'levelUp',
+  });
+}
+
 let current = null;
+// A banner that arrives while another is up waits its turn.
+const waiting = [];
 
 function showBanner(evt, also) {
-  if (current) current.remove();
+  if (current) {
+    waiting.push([evt, also]);
+    if (current.hideSoon) current.hideSoon();
+    return;
+  }
   const close = el('button', { class: 'iconbtn ms-close', type: 'button', 'aria-label': 'Dismiss' }, [icon('x', { size: 18 })]);
   const banner = el('div', { class: `milestone ms-${evt.kind}`, role: 'status', 'aria-live': 'polite' }, [
     el('span', { class: 'ms-ic' }, [art(evt.ic, { size: 40 })]),
     el('div', { class: 'ms-body' }, [
-      el('span', { class: 'ms-eyebrow', text: 'Milestone' }),
+      el('span', { class: 'ms-eyebrow', text: evt.eyebrow || 'Milestone' }),
       el('b', { class: 'ms-title', text: evt.title }),
       el('span', { class: 'ms-text', text: also ? `${evt.text} Also: ${also.title}.` : evt.text }),
     ]),
@@ -90,19 +110,26 @@ function showBanner(evt, also) {
   ]);
   document.body.append(banner);
   current = banner;
-  play('milestone');
+  play(evt.sound || 'milestone');
 
   let timer = null;
+  const next = () => {
+    if (current === banner) current = null;
+    const queued = waiting.shift();
+    if (queued) setTimeout(() => showBanner(...queued), 220);
+  };
   const hide = () => {
     clearTimeout(timer);
     if (!banner.isConnected) return;
-    if (reduced()) { banner.remove(); return; }
+    if (reduced()) { banner.remove(); next(); return; }
+    const done = () => { banner.remove(); next(); };
     banner.animate([{ transform: 'translate(-50%, 0)', opacity: 1 }, { transform: 'translate(-50%, -140%)', opacity: 0 }],
-      { duration: 380, easing: EASE, fill: 'forwards' }).finished.then(() => banner.remove(), () => banner.remove());
-    if (current === banner) current = null;
+      { duration: 380, easing: EASE, fill: 'forwards' }).finished.then(done, done);
   };
   close.addEventListener('click', hide);
   timer = setTimeout(hide, 6000);
+  // Something else is waiting to be shown: give this one a little longer.
+  banner.hideSoon = () => { clearTimeout(timer); timer = setTimeout(hide, 2400); };
   banner.addEventListener('pointerenter', () => clearTimeout(timer));
   banner.addEventListener('pointerleave', () => { timer = setTimeout(hide, 2500); });
 

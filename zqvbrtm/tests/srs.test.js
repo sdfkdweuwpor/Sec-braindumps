@@ -101,3 +101,32 @@ test('reviewChanges reports what one quiz did to the ladder', () => {
   const ids = ['added', 'up', 'done', 'reset', 'early', 'other'];
   assert.deepEqual(reviewChanges(attempts, ids, 'now'), { added: 1, up: 1, mastered: 1, reset: 1 });
 });
+
+test('ladderSlot: 0-2 for the checks, 3 for mastered, -1 when off the ladder', async () => {
+  const { ladderSlot } = await import('../js/srs.js');
+  assert.equal(ladderSlot([]), -1);
+  assert.equal(ladderSlot([right(at(1))]), -1);
+  assert.equal(ladderSlot([wrong(at(1))]), 0);
+  assert.equal(ladderSlot([wrong(at(1)), right(at(2, 9))]), 1);
+  assert.equal(ladderSlot([wrong(at(1)), right(at(2, 9)), right(at(5, 9)), right(at(12, 9))]), 3);
+});
+
+test('ladderMovesSince tallies the moves made after a moment', async () => {
+  const { ladderMovesSince } = await import('../js/srs.js');
+  const since = at(3, 0);
+  const log = {
+    a: { attempts: [wrong(at(1)), right(at(3, 9))] },            // 0 -> 1 (up)
+    b: { attempts: [wrong(at(1)), right(at(3, 10))] },           // 0 -> 1 (up)
+    c: { attempts: [wrong(at(3, 11))] },                          // -1 -> 0 (added)
+    d: { attempts: [wrong(at(1)), right(at(2, 9)), wrong(at(3, 12))] },  // 1 -> 0 (reset)
+    e: { attempts: [wrong(at(1))] },                              // untouched
+    f: { attempts: [right(at(3, 13))] },                          // answered, but never on the ladder
+  };
+  assert.deepEqual(ladderMovesSince(log, since), [
+    { from: -1, to: 0, count: 1 },
+    { from: 0, to: 1, count: 2 },
+    { from: 1, to: 0, count: 1 },
+  ]);
+  assert.deepEqual(ladderMovesSince(log, at(9)), []);
+  assert.deepEqual(ladderMovesSince(log, since, { isKnown: (id) => id !== 'c' }).map((m) => m.from), [0, 1]);
+});

@@ -58,6 +58,11 @@ UI = {
     'globe': 'globe',
     'sparkle': 'sparkle',
     'video': 'play-circle',
+    'vibrate': 'vibrate',
+    'vibrateOff': 'device-mobile-slash',
+    'xp': 'star-four',
+    'level': 'shield-star',
+    'trend': 'trend-up',
 }
 # Icons that also ship a filled version (active tab, pressed flag).
 FILLED = ['study', 'stats', 'review', 'saved', 'flag']
@@ -78,6 +83,8 @@ ART = {
     'compass': '1f9ed',        # compass
     'calendar': '1f4c5',       # calendar
     'bulb': '1f4a1',           # light bulb
+    'star': '1f31f',           # glowing star
+    'medal': '1f3c5',          # sports medal
 }
 
 
