@@ -11,6 +11,7 @@ import { play } from '../sound.js';
 import { reviewChanges } from '../srs.js';
 import { currentSummary, startSmartReview, reviewButtonLabel } from '../smartReview.js';
 import { verifyRow } from '../verify.js';
+import { tipBox } from '../components.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 
@@ -242,6 +243,7 @@ export async function renderResults(view, { params, navigate }) {
         text: `Your answer: ${shown(picked) || '(none)'} · Correct: ${shown(q.correct)}` }));
       if (q.explanation) inner.append(el('p', { text: q.explanation }));
       else inner.append(el('p', { class: 'faint', text: 'No explanation available for this question yet.' }));
+      if (q.tip) inner.append(tipBox(q.tip));
       const wrongs = Object.entries(q.incorrectExplanations || {})
         .filter(([k]) => !q.correct.includes(k) && L[k])
         .sort(([a], [b]) => L[a].localeCompare(L[b]));

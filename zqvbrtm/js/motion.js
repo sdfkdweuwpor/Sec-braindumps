@@ -188,7 +188,7 @@ export function shake(elm) {
   ], { duration: 420, easing: 'ease-out' });
 }
 
-/** Expanding ring that pulses out from an element, in its current colour. */
+/** Expanding ring that pulses out from an element, in its current color. */
 export function ring(elm, color) {
   return run(elm, [
     { boxShadow: `0 0 0 0 ${color}` },
@@ -252,7 +252,7 @@ export function countUp(elm, to, { duration = 1000, delay = 0, format = (n) => S
 }
 
 /**
- * A small burst of confetti from the centre of an element. Plain DOM nodes
+ * A small burst of confetti from the center of an element. Plain DOM nodes
  * in a fixed overlay; they remove themselves when they land.
  */
 export function burst(origin, { count = 22, colors } = {}) {

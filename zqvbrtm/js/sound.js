@@ -1,5 +1,5 @@
 /**
- * Sound effects, synthesised with the Web Audio API: no audio files, no
+ * Sound effects, synthesized with the Web Audio API: no audio files, no
  * network. Each effect is a few short sine or triangle notes with a soft
  * attack and decay, through one master gain, a compressor and a gentle
  * low-pass so they are clearly audible without being shrill. Notes stay above

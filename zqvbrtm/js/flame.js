@@ -8,10 +8,10 @@
  *   16-24   red turning toward blue
  *   25      a blue flame (full-screen blue fire)
  *   26-39   blue brightening toward gold
- *   40+     golden fire that slowly cycles through every colour
+ *   40+     golden fire that slowly cycles through every color
  *   50      full-screen rainbow fire, and again every 25 after that
  *
- * Colour is one hue, --h, passed to CSS; the tier (data-tier) sets how hard
+ * Color is one hue, --h, passed to CSS; the tier (data-tier) sets how hard
  * it glows, flickers and throws embers. The big moments also get the flame
  * sound; the small ones get a chime only.
  */
@@ -91,7 +91,7 @@ export function flameChip(n, { compact = false } = {}) {
   return chip;
 }
 
-/** Rising embers from a point, in the flame's colour. */
+/** Rising embers from a point, in the flame's color. */
 export function embers(origin, hue, { count = 16, rainbow = false } = {}) {
   if (!origin || reduced()) return;
   const r = origin.getBoundingClientRect();
@@ -182,7 +182,7 @@ export function fireStorm(n, { hue = flameHue(n), rainbow = false, power = 1, ti
   const hues = rainbow ? [0, 28, 48, 120, 180, 215, 270, 320] : [hue];
   const cool = (h) => h > 150 && h < 300;
   // Each flame is drawn from three sprites: a near-white core while it is
-  // young and hot, then its own colour, then a darker tail as it dies.
+  // young and hot, then its own color, then a darker tail as it dies.
   const sets = hues.map((h) => [sprite(h + (cool(h) ? -18 : 26), 100, 90), sprite(h, 100, 58), sprite(h - 12, 95, 40)]);
   const scale = Math.sqrt((W * H) / (1440 * 900));
   const EMIT = 0.42 + 0.22 * power;

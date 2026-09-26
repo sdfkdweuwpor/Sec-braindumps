@@ -48,7 +48,7 @@ name is deliberately random so the URL does not name the vendor.
   number like 62 or #62 jumps to that question. Matches are highlighted,
   each result shows whether you last got it right, and *Quiz me on these*
   starts a quiz from the results (up to 50).
-- **Sound effects.** Synthesised in the browser (`js/sound.js`, no audio
+- **Sound effects.** Synthesized in the browser (`js/sound.js`, no audio
   files): a chime for right, a soft low tone for wrong, an arpeggio for
   streaks and mastered questions, a finish chord on results. On by default;
   the speaker button in the top bar turns them off. The mock exam only
@@ -94,7 +94,7 @@ python3 -m http.server 8000
 
 **Mock Exam** draws 90 questions weighted to the official domain percentages
 with a 90-minute timer, and estimates a 100–900 scaled score. That estimate is
-a linear map of your raw percentage and is clearly labelled as unofficial —
+a linear map of your raw percentage and is clearly labeled as unofficial —
 CompTIA does not publish how it scales, and the real exam includes unscored
 items. The real pass mark is 750/900.
 
@@ -120,7 +120,7 @@ js/flame.js             streak flame stages and effects
 js/milestones.js        milestone banners (questions answered, readiness bands)
 data/acronyms.js        acronym dictionary (generated from tools/acronyms.py)
 js/smartReview.js       Smart review card and session start
-js/sound.js             synthesised sound effects
+js/sound.js             synthesized sound effects
 js/motion.js            animation helpers (Web Animations API)
 js/icons.js             inline SVG line icons
 js/components.js        readiness card, bars, sparkline, paginated question list
@@ -184,7 +184,7 @@ that disagreement is proof one of them is wrong.
 Every question carries an explanation written to one voice plus a note on each
 wrong choice saying what that option actually means and why it does not fit
 the stem. In the braindump app every PDF explanation was rewritten: they varied
-in voice, some only restated the answer, and a few rationalised a wrong key.
+in voice, some only restated the answer, and a few rationalized a wrong key.
 
 Authored text lives in `tools/authored/batch*.json`, keyed by question id and
 kept out of the extractor so re-extraction never loses it:
@@ -243,7 +243,7 @@ re-running it never loses them:
   incorrectExplanations: { A: "...", B: "..." },   // may be {}
   references: [],
   source: "bank.pdf#p42",       // the PDF's filename and page
-  needsReview: true,            // the domain was inferred, not labelled
+  needsReview: true,            // the domain was inferred, not labeled
   inferenceConfidence: 0.68,
   needsExplanation: false,
   keyCorrected: false

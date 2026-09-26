@@ -1,6 +1,6 @@
 import { el, clear, renderQuestionText } from '../dom.js';
 import * as store from '../store.js';
-import { confirmDialog } from '../components.js';
+import { confirmDialog, tipBox } from '../components.js';
 import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scoreQuiz, sessionQuestions, remainingMs,
   createSession, similarQuestions, letterMap,
@@ -371,7 +371,7 @@ export async function renderQuiz(view, { navigate }) {
             session.feedbackMode === 'immediate' && !drill
               ? el('button', {
                 class: 'similar-btn', type: 'button',
-                title: `Practise ${DRILL_SIZE} more questions from the bank on this topic`,
+                title: `Practice ${DRILL_SIZE} more questions from the bank on this topic`,
                 onclick: () => startSimilar(question),
               }, [icon('similar', { size: 17 }), 'Similar questions?'])
               : null,
@@ -398,6 +398,7 @@ export async function renderQuiz(view, { navigate }) {
         inner.append(el('p', { class: 'faint',
           text: 'No explanation available for this question yet.' }));
       }
+      if (question.tip) inner.append(tipBox(question.tip));
       const wrongs = Object.entries(question.incorrectExplanations || {})
         .filter(([k]) => !correctKeys.includes(k) && L[k])
         .sort(([a], [b]) => byShown(a, b));

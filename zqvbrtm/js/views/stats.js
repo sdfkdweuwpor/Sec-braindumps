@@ -100,7 +100,7 @@ export async function renderStats(view, { navigate }) {
     }
     weakCard.append(el('button', {
       class: 'btn', type: 'button', style: 'margin-top:.8rem',
-      text: 'Practise these',
+      text: 'Practice these',
       onclick: () => {
         window.sessionStorage.setItem(store.PREFILL_KEY,
           JSON.stringify({ source: 'objective', objectives: weak.map((w) => w.objective) }));

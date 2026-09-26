@@ -240,6 +240,14 @@ def main():
     noexp = [q for q in qs if q["needsExplanation"]]
     print(f"explanations: {len(qs)-len(noexp)} present / {len(noexp)} missing")
 
+    notip = [q["id"] for q in qs if not q.get("tip")]
+    print(f"exam tips: {len(qs)-len(notip)} present / {len(notip)} missing")
+    if notip:
+        warn(f"{len(notip)} question(s) have no exam tip yet (first: {notip[:5]})")
+    long_tips = [q["id"] for q in qs if q.get("tip") and len(q["tip"].split()) > 45]
+    if long_tips:
+        warn(f"{len(long_tips)} exam tip(s) run past 45 words: {long_tips[:8]}")
+
     empty_obj = [q for q in qs if q["objective"] is None]
     if empty_obj:
         err(f"{len(empty_obj)} question(s) with no objective inferred: "

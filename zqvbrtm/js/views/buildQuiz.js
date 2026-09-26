@@ -302,7 +302,7 @@ export async function renderBuildQuiz(view, { params, navigate }) {
     ]);
 
     optsCard.append(toggle('shuffleQuestions', 'Shuffle questions', 'Random order each time'));
-    optsCard.append(toggle('shuffleChoices', 'Shuffle answer choices', 'Stops you memorising letters'));
+    optsCard.append(toggle('shuffleChoices', 'Shuffle answer choices', 'Stops you memorizing letters'));
 
     optsCard.append(el('label', { class: 'optrow' }, [
       el('span', { class: 'label' }, [

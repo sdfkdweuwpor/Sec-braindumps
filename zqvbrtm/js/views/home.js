@@ -95,7 +95,7 @@ export async function renderHome(view, { navigate }) {
   grid.append(modeCard({
     title: 'Missed questions',
     blurb: 'Everything you have answered incorrectly.',
-    cta: missed.length ? `Practise ${missed.length} missed` : 'Nothing missed yet',
+    cta: missed.length ? `Practice ${missed.length} missed` : 'Nothing missed yet',
     disabled: !missed.length,
     note: missed.length ? null : 'Answer some questions first and anything you miss collects here.',
     onStart: () => navigate('#/build?source=missed'),

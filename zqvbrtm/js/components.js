@@ -7,6 +7,15 @@ import { art } from './art.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
 import { verifyRow } from './verify.js';
 
+/** The exam tip under an explanation: the clue to spot this kind of question. */
+export function tipBox(tip) {
+  if (!tip) return null;
+  return el('div', { class: 'tip' }, [
+    art('bulb', { size: 34 }),
+    el('div', { class: 'tip-body' }, [el('b', { text: 'Exam tip' }), el('span', { text: tip })]),
+  ]);
+}
+
 const BAND_CLASS = {
   'Exam ready': 'band--ready',
   Approaching: 'band--approaching',
@@ -50,7 +59,7 @@ export function readinessCard(r, { compact = false, navigate = null } = {}) {
       card.append(el('div', { style: 'margin-top:.7rem' }, [
         el('button', {
           class: 'btn secondary', type: 'button',
-          text: `Practise Domain ${worst.domain}`,
+          text: `Practice Domain ${worst.domain}`,
           onclick: () => navigate(`#/build?source=domain&d=${worst.domain}`),
         }),
       ]));
@@ -214,6 +223,7 @@ export function questionList(rows, {
       if (q.explanation) inner.append(el('p', { style: 'margin-top:.6rem', text: q.explanation }));
       else inner.append(el('p', { class: 'faint', style: 'margin-top:.6rem',
         text: 'No explanation available for this question yet.' }));
+      if (q.tip) inner.append(tipBox(q.tip));
 
       const wrongs = Object.entries(q.incorrectExplanations || {})
         .filter(([k]) => !q.correct.includes(k));

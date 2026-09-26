@@ -142,7 +142,7 @@ export function scoreQuiz(questions, answers) {
  * Raw percentage -> the 100-900 scale CompTIA reports.
  *
  * A linear map, and an estimate only: CompTIA does not publish its scaling,
- * and the real exam includes unscored items. Labelled as unofficial wherever
+ * and the real exam includes unscored items. Labeled as unofficial wherever
  * it is shown.
  */
 export function scaledScore(percent) {

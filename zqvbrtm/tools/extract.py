@@ -66,6 +66,25 @@ def load_authored():
 
 AUTHORED = None
 
+
+def load_tips():
+    """Exam tips from tools/tips/*.json: question id -> a sentence or two on
+    how to recognize what the question is testing. Kept apart from the
+    explanations so either can change without touching the other."""
+    import glob
+    out = {}
+    for path in sorted(glob.glob(os.path.join(TOOLS, "tips", "*.json"))):
+        with open(path) as f:
+            data = json.load(f)
+        for qid, tip in data.items():
+            if qid in out:
+                raise SystemExit(f"{qid} has two tips (second copy in {path})")
+            out[qid] = tip.strip()
+    return out
+
+
+TIPS = None
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE = os.path.join(ROOT, "source")
 
@@ -176,7 +195,19 @@ def unwrap(text):
 
 
 def load_lines():
-    """Return [(line, page_number)] with page furniture removed."""
+    """Return [(line, page_number)] with page furniture removed.
+
+    Parsing the PDF takes a couple of minutes. Set EXTRACT_CACHE to a file
+    path to keep the parsed lines between runs (reused only while the PDF's
+    size and modification time are unchanged).
+    """
+    cache = os.environ.get("EXTRACT_CACHE")
+    stamp = [os.path.getsize(PDF), os.path.getmtime(PDF)]
+    if cache and os.path.exists(cache):
+        with open(cache) as f:
+            saved = json.load(f)
+        if saved.get("stamp") == stamp:
+            return [tuple(x) for x in saved["lines"]]
     import pdfplumber
     out = []
     with pdfplumber.open(PDF) as pdf:
@@ -186,6 +217,9 @@ def load_lines():
                 if any(p.match(line) for p in FURNITURE):
                     continue
                 out.append((line, pageno))
+    if cache:
+        with open(cache, "w") as f:
+            json.dump({"stamp": stamp, "lines": out}, f)
     return out
 
 
@@ -366,11 +400,13 @@ def write_acronyms_js():
 
 
 def build():
-    global AUTHORED, PDF
+    global AUTHORED, TIPS, PDF
     PDF = PDF or find_pdf()
     src = os.path.basename(PDF)
     if AUTHORED is None:
         AUTHORED = load_authored()
+    if TIPS is None:
+        TIPS = load_tips()
     lines = load_lines()
     blocks = split_questions(lines)
     print(f"blocks found: {len(blocks)}")
@@ -459,6 +495,7 @@ def build():
             "explanation": rec["explanation"],
             "explanationSource": exp_source,
             "incorrectExplanations": incorrect,
+            "tip": TIPS.get(rec["id"]),
             "references": [],
             "source": f"{src}#p{rec['page']}",
             # An authored record means a human read the question, so its

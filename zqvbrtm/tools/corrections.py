@@ -391,3 +391,16 @@ EXHIBITS = {
     "q1259": [("gets the following results:", "table",
         "Vulnerability | Server location | CVSS score\n1 | Internet | 9.8\n2 | Internal | 4.0\n3 | Internet | 4.0\n4 | Internal | 9.8")],
 }
+
+
+# Fixes from the September 2026 read of every question, kept together so
+# they are easy to review. Applied after the fixes above for the same
+# question (they were written against the already-fixed text).
+TEXT_FIXES_READ = {
+    'q0706': [('to Internal resources', 'to internal resources')],
+    'q0887': [('security or a SaaS', 'security of a SaaS'), ('following documentations', 'following documentation')],
+    'q1188': [('analyst Investigates', 'analyst investigates')],
+}
+
+for _qid, _fixes in TEXT_FIXES_READ.items():
+    TEXT_FIXES[_qid] = TEXT_FIXES.get(_qid, []) + _fixes

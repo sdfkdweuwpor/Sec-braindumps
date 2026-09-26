@@ -1470,3 +1470,19 @@ abbr.acro { text-decoration: none; }
   .toast, .toast.is-out { animation: none; }
   .verify-btn, .verify-btn .icon { transition: none; }
 }
+
+/* =====================================================================
+   Exam tip under the explanation
+   ===================================================================== */
+.tip {
+  display: flex; gap: .85rem; align-items: flex-start;
+  margin: .1rem 0 1rem; padding: .85rem 1.05rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--flag) 17%, var(--bg-card)), color-mix(in srgb, var(--flag) 6%, var(--bg-card)));
+  border: 1px solid color-mix(in srgb, var(--flag) 42%, transparent);
+}
+.tip .art { width: 34px; height: 34px; flex: 0 0 auto; margin-top: .1rem; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .16)); }
+.tip-body { display: grid; gap: .1rem; min-width: 0; }
+.tip-body b { font-size: .74rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em;
+              color: color-mix(in srgb, var(--flag) 55%, var(--text)); }
+.tip-body span { font-weight: 650; line-height: 1.55; color: var(--text); }

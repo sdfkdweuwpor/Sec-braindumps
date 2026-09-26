@@ -59,7 +59,7 @@
   "incorrect": {
    "A": "Instability is an operational reliability concern, not the primary security risk of legacy systems.",
    "C": "Loss of availability may result from a legacy system failing, but it is a consequence, not the underlying security concern.",
-   "D": "Legacy systems often use insecure protocols, but those can sometimes be disabled, tunnelled or segmented. Missing patches from an unsupported vendor cannot be worked around."
+   "D": "Legacy systems often use insecure protocols, but those can sometimes be disabled, tunneled or segmented. Missing patches from an unsupported vendor cannot be worked around."
   }
  },
  "q0406": {
@@ -146,7 +146,7 @@
  },
  "q0678": {
   "objective": "5.5",
-  "explanation": "Attestation is a formal statement, usually signed by management or an auditor, that something is true -- here, that the application is out of scope. Acknowledgement and attestation is the documented confirmation the question asks for.",
+  "explanation": "Attestation is a formal statement, usually signed by management or an auditor, that something is true -- here, that the application is out of scope. Acknowledgment and attestation is the documented confirmation the question asks for.",
   "incorrect": {
    "A": "Data inventory and retention track what data exists and how long it is kept. They inform scope but do not formally confirm it.",
    "B": "The right to be forgotten is an individual's privacy right to have their personal data erased. It is unrelated to reporting scope.",
@@ -176,7 +176,7 @@
   "explanation": "The chain started with an employee clicking a malicious link, so the control that stops it recurring is user awareness training to recognize and avoid phishing. Technical controls can catch some of what follows, but the root cause is the click. Some published answers pick endpoint protection.",
   "incorrect": {
    "B": "Network monitoring may detect exfiltration after it starts, but it does not stop employees from clicking malicious links.",
-   "C": "Endpoint protection can block some malware, but it does not address the behaviour that let it in, and new malware can evade it.",
+   "C": "Endpoint protection can block some malware, but it does not address the behavior that let it in, and new malware can evade it.",
    "D": "DLP can limit data leaving the network, but it acts at the end of the chain. The breach began with the click."
   }
  },
@@ -201,7 +201,7 @@
  },
  "q0853": {
   "objective": "4.1",
-  "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighbouring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
+  "explanation": "A heat map shows how strong the Wi-Fi signal is at each location, revealing exactly where it bleeds into neighboring buildings. With that picture you can lower transmit power, move access points or use directional antennas to shrink the coverage. A site survey is the broader planning exercise that produces heat maps; some published answers pick it.",
   "incorrect": {
    "A": "MDM manages the devices the company owns. It cannot stop outside devices from seeing the network.",
    "B": "A pre-shared key controls who can join, but the network stays just as visible to outsiders.",
