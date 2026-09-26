@@ -5,7 +5,8 @@ import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scoreQuiz, sessionQuestions, remainingMs,
   createSession, similarQuestions, letterMap,
 } from '../quizEngine.js';
-import { icon } from '../icons.js';
+import { icon, iconPair } from '../icons.js';
+import { art } from '../art.js';
 import {
   slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, growBar,
 } from '../motion.js';
@@ -78,7 +79,7 @@ export async function renderQuiz(view, { navigate }) {
 
   if (!session) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic' }, [icon('study', { size: 34 })]),
+      el('span', { class: 'ic has-art' }, [art('study', { size: 60 })]),
       el('h1', { text: 'No quiz in progress' }),
       el('p', { class: 'muted', text: 'Start one from the Study screen.' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
@@ -131,7 +132,7 @@ export async function renderQuiz(view, { navigate }) {
         flagBtn.setAttribute('aria-pressed', String(on));
         if (on) { pop(flagBtn.firstChild, { scale: 1.35 }); ring(flagBtn, 'rgba(233,191,98,.55)'); play('flag'); }
       },
-    }, [icon('flag')]);
+    }, [iconPair('flag')]);
 
     const timerEl = session.durationMs ? el('span', { class: 'pill' }) : null;
 

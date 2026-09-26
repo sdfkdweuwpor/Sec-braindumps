@@ -4,7 +4,8 @@ import {
   QUESTIONS_BY_ID, DOMAINS, isCorrect, scaledScore,
   PASSING_SCALED, PRACTICE_THRESHOLD, createSession, selectQuestions, letterMap,
 } from '../quizEngine.js';
-import { icon } from '../icons.js';
+import { icon, iconPair } from '../icons.js';
+import { art } from '../art.js';
 import { countUp, reduced, EASE, burst } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewChanges } from '../srs.js';
@@ -89,7 +90,7 @@ function srsCard(result, isSmart, navigate) {
   if (!items.length && !(isSmart && due)) return null;
   return el('div', { class: 'card srs-result' }, [
     el('div', { class: 'srs-result-head' }, [
-      el('span', { class: 'mode-ic' }, [icon('smart', { size: 22 })]),
+      el('span', { class: 'mode-ic has-art' }, [art('smart', { size: 40 })]),
       el('h2', { text: 'Smart review' }),
     ]),
     items.length
@@ -111,7 +112,7 @@ export async function renderResults(view, { params, navigate }) {
 
   if (!result) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic' }, [icon('stats', { size: 34 })]),
+      el('span', { class: 'ic has-art' }, [art('stats', { size: 60 })]),
       el('h1', { text: 'No results yet' }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),
     ]));
@@ -258,7 +259,7 @@ export async function renderResults(view, { params, navigate }) {
           const on = store.toggleFlag(q.id);
           ev.currentTarget.setAttribute('aria-pressed', String(on));
         },
-      }, [icon('flag')]));
+      }, [iconPair('flag')]));
       det.append(inner);
       list.append(det);
     }

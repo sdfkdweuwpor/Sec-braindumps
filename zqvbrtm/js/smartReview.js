@@ -5,6 +5,7 @@ import * as store from './store.js';
 import { icon } from './icons.js';
 import { QUESTIONS_BY_ID, createSession, selectQuestions } from './quizEngine.js';
 import { reviewSummary, daysUntil, STEPS, SESSION_SIZE } from './srs.js';
+import { art } from './art.js';
 
 export function currentSummary(now = Date.now()) {
   return reviewSummary(store.getAttempts(), { now, isKnown: (id) => QUESTIONS_BY_ID.has(id) });
@@ -89,7 +90,7 @@ export function smartReviewCard(navigate) {
 
   return el('section', { class: 'card srs-card', 'aria-labelledby': 'srs-title' }, [
     el('div', { class: 'srs-head' }, [
-      el('span', { class: 'mode-ic' }, [icon('smart', { size: 24 })]),
+      el('span', { class: 'mode-ic has-art' }, [art('smart', { size: 48 })]),
       el('div', { class: 'srs-title' }, [
         el('h2', { id: 'srs-title', text: 'Smart review' }),
         el('p', { class: 'muted', text: s.inReview || s.mastered

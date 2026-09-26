@@ -2,7 +2,8 @@
 
 import { el, clear, renderQuestionText, fmtDate, highlightIn, plainStem } from './dom.js';
 import * as store from './store.js';
-import { icon } from './icons.js';
+import { icon, iconPair } from './icons.js';
+import { art } from './art.js';
 import { DOMAINS, COVERAGE_TARGET } from './quizEngine.js';
 import { verifyRow } from './verify.js';
 
@@ -82,7 +83,7 @@ export function readinessTile(r, { answered = 0 } = {}) {
   const drag = has && r.drags.length && r.score < 100 ? r.drags[0].text : null;
   return el('div', { class: 'card hero mode-card readiness-tile' }, [
     el('div', { class: 'mode-head' }, [
-      el('span', { class: 'mode-ic' }, [icon('shield', { size: 24 })]),
+      el('span', { class: 'mode-ic has-art' }, [art('shield', { size: 48 })]),
       el('div', { class: 'rt-title' }, [
         el('h2', { text: 'Exam readiness' }),
         el('p', { class: 'hero-sub' }, has
@@ -233,7 +234,7 @@ export function questionList(rows, {
           ev.currentTarget.setAttribute('aria-pressed', String(on));
           if (onChange) onChange();
         },
-      }, [icon('flag')]));
+      }, [iconPair('flag')]));
       if (highlight) {
         highlightIn(det.querySelector('.stem-text'), highlight);
         highlightIn(inner, highlight);

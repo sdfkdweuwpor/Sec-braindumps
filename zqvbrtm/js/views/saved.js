@@ -1,10 +1,10 @@
 import { el, clear } from '../dom.js';
-import { icon } from '../icons.js';
 import * as store from '../store.js';
 import {
   ALL_QUESTIONS, QUESTIONS_BY_ID, DOMAINS, createSession, selectQuestions,
 } from '../quizEngine.js';
 import { questionList } from '../components.js';
+import { art } from '../art.js';
 
 export async function renderSaved(view, { navigate }) {
   view.append(el('h1', { text: 'Saved' }));
@@ -31,7 +31,7 @@ export async function renderSaved(view, { navigate }) {
       clear(card);
       view.querySelectorAll('.card').forEach((n) => n.remove());
       listHost.append(el('div', { class: 'empty' }, [
-        el('span', { class: 'ic' }, [icon('saved', { size: 34 })]),
+        el('span', { class: 'ic has-art' }, [art('saved', { size: 60 })]),
         el('h2', { text: 'Nothing saved yet' }),
         el('p', { class: 'muted',
           text: 'Tap the flag on any question during a quiz and it lands here.' }),

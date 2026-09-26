@@ -3,7 +3,8 @@
 import * as store from './store.js';
 import { el, clear } from './dom.js';
 import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
-import { icon } from './icons.js';
+import { icon, iconPair } from './icons.js';
+import { art } from './art.js';
 import { themeReveal, animateScreen, pop, slideIn, installPointerGlow } from './motion.js';
 import { initMilestones } from './milestones.js';
 import * as sound from './sound.js';
@@ -76,7 +77,7 @@ function buildShell() {
     el('span', { class: 'nav-pill', 'aria-hidden': 'true' }),
     el('span', { class: 'navtitle' }, [el('span', { class: 'brandmark' }, [icon('shield', { size: 22 })]), NAV_TITLE]),
     ...NAV.map((n) => el('a', { href: n.href, 'data-nav': n.match.join(' ') }, [
-      el('span', { class: 'ic' }, [icon(n.ic, { size: 22 })]),
+      el('span', { class: 'ic' }, [iconPair(n.ic, { size: 22 })]),
       el('span', { text: n.label }),
     ])),
   ]);
@@ -181,7 +182,7 @@ async function render() {
   const fn = ROUTES[path];
   if (!fn) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic' }, [icon('empty', { size: 34 })]),
+      el('span', { class: 'ic has-art' }, [art('compass', { size: 60 })]),
       el('h1', { text: 'Page not found' }),
       el('p', { class: 'muted', text: `Nothing is routed at ${path}.` }),
       el('a', { class: 'btn', href: '#/home', text: 'Back to Study' }),

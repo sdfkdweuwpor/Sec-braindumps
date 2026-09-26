@@ -1132,31 +1132,62 @@ abbr.acro { text-decoration: none; }
 .tilt:hover { box-shadow: var(--shadow-lg); }
 
 /* =====================================================================
-   Icons that move on hover
+   Icons: Phosphor duotone for the interface (filled when current or
+   pressed), Fluent 3D art for the big feature icons
    ===================================================================== */
-.icon svg, .icon path { transform-box: fill-box; }
+.icon .duo { opacity: .24; }
+.icon-pair { display: inline-grid; place-items: center; }
+.icon-pair > .icon { grid-area: 1 / 1; transition: opacity .25s var(--ease), transform .4s var(--spring); }
+.icon-pair > .w-fill { opacity: 0; transform: scale(.55) rotate(-12deg); }
+.nav a[aria-current="page"] .icon-pair > .w-duo, [aria-pressed="true"] > .icon-pair > .w-duo { opacity: 0; transform: scale(.55); }
+.nav a[aria-current="page"] .icon-pair > .w-fill, [aria-pressed="true"] > .icon-pair > .w-fill { opacity: 1; transform: none; }
+
+/* the art tiles: a soft tinted squircle with the 3D object floating in it */
+.mode-ic.has-art {
+  width: 62px; height: 62px; border-radius: 19px;
+  background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 17%, var(--bg-card)), color-mix(in srgb, var(--accent) 5%, var(--bg-card)));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 1px 2px rgba(15, 23, 42, .06);
+}
+[data-theme="dark"] .mode-ic.has-art { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08); }
+.art { display: block; user-select: none; -webkit-user-drag: none; }
+.mode-ic .art {
+  width: 46px; height: 46px;
+  filter: drop-shadow(0 5px 7px rgba(15, 23, 42, .2));
+  transition: transform .55s var(--spring), filter .35s var(--ease);
+}
+.mode-grid .card:hover .mode-ic.has-art, .srs-card:hover .mode-ic.has-art { transform: none; }
+.card:hover .mode-ic .art { transform: translateY(-6px) rotate(-8deg) scale(1.13); filter: drop-shadow(0 13px 14px rgba(15, 23, 42, .24)); }
+/* each one moves its own way */
+.card:hover .mode-ic .art-missed { transform: translateY(-5px) rotate(-360deg) scale(1.1); transition-duration: .9s; }
+.card:hover .mode-ic .art-timer { transform: translateY(-6px) rotate(14deg) scale(1.12); }
+.card:hover .mode-ic .art-search { transform: translate(-4px, -7px) rotate(-16deg) scale(1.14); }
+.card:hover .mode-ic .art-target { transform: translateY(-6px) scale(1.2); }
+.card:hover .mode-ic .art-build { transform: translateY(-6px) rotate(10deg) scale(1.12); }
+.readiness-tile .mode-ic.has-art { background: rgba(255, 255, 255, .18); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35); }
+.readiness-tile .mode-ic .art { filter: drop-shadow(0 6px 10px rgba(20, 10, 80, .35)); }
+.srs-result .mode-ic.has-art { width: 52px; height: 52px; border-radius: 16px; }
+.srs-result .mode-ic .art { width: 38px; height: 38px; }
+.empty .ic.has-art {
+  width: 92px; height: 92px; border-radius: 28px; margin-bottom: .9rem;
+  background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 17%, var(--bg-card)), color-mix(in srgb, var(--accent) 5%, var(--bg-card)));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), var(--shadow-sm);
+}
+.empty .ic.has-art .art { width: 62px; height: 62px; filter: drop-shadow(0 9px 12px rgba(15, 23, 42, .22)); animation: art-float 4.5s ease-in-out infinite; }
+@keyframes art-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-7px) rotate(-4deg); } }
+.ms-ic .art { width: 40px; height: 40px; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .28)); }
+
+/* interface icons that move on hover */
+.icon svg { transform-box: fill-box; }
 .nav a:hover .icon-study svg { animation: ic-flip .7s var(--ease); }
-.nav a:hover .icon-stats path:nth-child(n+2) { transform-origin: 50% 100%; animation: ic-bars .6s var(--spring) both; }
-.nav a:hover .icon-stats path:nth-child(3) { animation-delay: .06s; }
-.nav a:hover .icon-stats path:nth-child(4) { animation-delay: .12s; }
-.nav a:hover .icon-review svg, .mode-card:hover .icon-missed svg { transform-origin: 50% 50%; animation: ic-spin .75s var(--ease); }
-.nav a:hover .icon-saved svg, .ms-ic .icon-trophy svg { transform-origin: 50% 10%; animation: ic-wiggle .7s ease-in-out; }
-.mode-card:hover .icon-build path:nth-child(-n+6) { animation: ic-slide .7s var(--ease); }
-.mode-card:hover .icon-target svg { animation: ic-pulse .7s var(--spring); }
-.mode-card:hover .icon-timer svg { transform-origin: 50% 58%; animation: ic-tick .8s ease-in-out; }
-.mode-card:hover .icon-search svg { animation: ic-look .8s ease-in-out; }
-.readiness-tile:hover .icon-shield svg, .srs-card:hover .icon-smart svg { animation: ic-pulse .7s var(--spring); }
-#sound-toggle:hover .icon-volume path:nth-child(n+2) { animation: ic-wave .8s ease-in-out infinite; }
+.nav a:hover .icon-stats svg { transform-origin: 50% 100%; animation: ic-bars .6s var(--spring) both; }
+.nav a:hover .icon-review svg { transform-origin: 50% 50%; animation: ic-spin .75s var(--ease); }
+.nav a:hover .icon-saved svg { transform-origin: 50% 10%; animation: ic-wiggle .7s ease-in-out; }
+#sound-toggle:hover .icon svg { transform-origin: 30% 50%; animation: ic-wiggle .7s ease-in-out; }
 #theme-toggle:hover .icon svg { transform-origin: 50% 50%; animation: ic-spin 1s var(--ease); }
 @keyframes ic-flip { 0% { transform: rotateY(0); } 100% { transform: rotateY(360deg); } }
-@keyframes ic-bars { 0% { transform: scaleY(.25); } 100% { transform: scaleY(1); } }
+@keyframes ic-bars { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1); } }
 @keyframes ic-spin { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
 @keyframes ic-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-12deg); } 50% { transform: rotate(10deg); } 75% { transform: rotate(-5deg); } }
-@keyframes ic-slide { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-3px); } 70% { transform: translateY(2px); } }
-@keyframes ic-pulse { 0% { transform: scale(1); } 45% { transform: scale(1.22); } 100% { transform: scale(1); } }
-@keyframes ic-tick { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-14deg); } 40% { transform: rotate(12deg); } 60% { transform: rotate(-8deg); } 80% { transform: rotate(4deg); } }
-@keyframes ic-look { 0%, 100% { transform: translate(0, 0); } 30% { transform: translate(-2px, -2px); } 65% { transform: translate(2px, 1px); } }
-@keyframes ic-wave { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
 
 /* =====================================================================
    Milestone banner
@@ -1191,8 +1222,9 @@ abbr.acro { text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .flame-svg, .flame-chip, .flame-embers::before, .flame-embers::after,
-  .nav a:hover .icon svg, .nav a:hover .icon path, .mode-card:hover .icon svg, .mode-card:hover .icon path,
-  #sound-toggle:hover .icon path, #theme-toggle:hover .icon svg { animation: none !important; }
+  .nav a:hover .icon svg, #sound-toggle:hover .icon svg, #theme-toggle:hover .icon svg,
+  .empty .ic.has-art .art { animation: none !important; }
+  .mode-ic .art, .icon-pair > .icon { transition: none; }
   .acro-panel, .topbar, .tilt { transition: none; }
 }
 
@@ -1350,7 +1382,7 @@ abbr.acro { text-decoration: none; }
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent),
               0 14px 30px -12px color-mix(in srgb, var(--accent) 55%, transparent);
 }
-.search-ic { transition: color .2s var(--ease), transform .25s var(--spring); }
+.search-ic { z-index: 1; transition: color .2s var(--ease), transform .25s var(--spring); }
 .search-form:focus-within .search-ic { color: var(--accent); transform: translateY(-50%) scale(1.12); }
 
 /* =====================================================================

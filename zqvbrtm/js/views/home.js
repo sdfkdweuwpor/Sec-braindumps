@@ -9,6 +9,7 @@ import {
   ALL_QUESTIONS, buildPool, selectQuestions, selectWeighted,
   createSession,
 } from '../quizEngine.js';
+import { art } from '../art.js';
 
 const MOCK_COUNT = 90;
 const MOCK_MINUTES = 90;
@@ -23,7 +24,7 @@ const MODE_ICON = { 'Build your own': 'build', 'Missed questions': 'missed', 'We
 function modeCard({ title, blurb, cta, disabled, note, onStart }) {
   return el('div', { class: 'card mode-card' }, [
     el('div', { class: 'mode-head' }, [
-      el('span', { class: 'mode-ic' }, [icon(MODE_ICON[title] || 'study', { size: 24 })]),
+      el('span', { class: 'mode-ic has-art' }, [art(MODE_ICON[title] || 'study', { size: 48 })]),
       el('div', {}, [
         el('h2', { text: title }),
         el('p', { class: 'muted', text: blurb, style: 'margin:0' }),
@@ -177,7 +178,7 @@ function searchCard(navigate) {
   rotatePlaceholder(input, SUGGESTIONS);
   return el('div', { class: 'card mode-card search-home' }, [
     el('div', { class: 'mode-head' }, [
-      el('span', { class: 'mode-ic' }, [icon('search', { size: 24 })]),
+      el('span', { class: 'mode-ic has-art' }, [art('search', { size: 48 })]),
       el('div', {}, [
         el('h2', { text: 'Search questions' }),
         el('p', { class: 'muted', style: 'margin:0',

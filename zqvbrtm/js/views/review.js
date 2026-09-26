@@ -1,11 +1,11 @@
 import { el, clear } from '../dom.js';
-import { icon } from '../icons.js';
 import * as store from '../store.js';
 import * as st from '../stats.js';
 import {
   ALL_QUESTIONS, DOMAINS, OBJECTIVES, createSession, selectQuestions,
 } from '../quizEngine.js';
 import { questionList } from '../components.js';
+import { art } from '../art.js';
 
 export async function renderReview(view, { navigate }) {
   const attempts = store.getAttempts();
@@ -15,7 +15,7 @@ export async function renderReview(view, { navigate }) {
 
   if (!all.length) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic' }, [icon('review', { size: 34 })]),
+      el('span', { class: 'ic has-art' }, [art('missed', { size: 60 })]),
       el('h2', { text: 'Nothing missed yet' }),
       el('p', { class: 'muted',
         text: 'Every question you answer incorrectly collects here, so you can come back to it.' }),

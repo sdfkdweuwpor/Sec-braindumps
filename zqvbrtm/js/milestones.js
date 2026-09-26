@@ -12,6 +12,7 @@ import { ALL_QUESTIONS } from './quizEngine.js';
 import { icon } from './icons.js';
 import { burst, reduced, SPRING, EASE } from './motion.js';
 import { play } from './sound.js';
+import { art } from './art.js';
 
 const BANDS = ['Not ready', 'Building', 'Approaching', 'Exam ready'];
 
@@ -79,7 +80,7 @@ function showBanner(evt, also) {
   if (current) current.remove();
   const close = el('button', { class: 'iconbtn ms-close', type: 'button', 'aria-label': 'Dismiss' }, [icon('x', { size: 18 })]);
   const banner = el('div', { class: `milestone ms-${evt.kind}`, role: 'status', 'aria-live': 'polite' }, [
-    el('span', { class: 'ms-ic' }, [icon(evt.ic, { size: 26 })]),
+    el('span', { class: 'ms-ic' }, [art(evt.ic, { size: 40 })]),
     el('div', { class: 'ms-body' }, [
       el('span', { class: 'ms-eyebrow', text: 'Milestone' }),
       el('b', { class: 'ms-title', text: evt.title }),

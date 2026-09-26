@@ -196,19 +196,20 @@ export function ring(elm, color) {
   ], { duration: 700, easing: 'ease-out' });
 }
 
-/** Draw the strokes of an inline SVG icon, like a pen. */
+/**
+ * Bring an icon in as if it were being drawn: a quick left-to-right wipe
+ * with a small overshoot. (The icons are filled shapes, not strokes, so
+ * there is no line to trace.)
+ */
 export function drawIcon(iconSpan, { delay = 0, duration = 420 } = {}) {
   if (!iconSpan || reduced()) return;
-  const shapes = iconSpan.querySelectorAll('path, circle, rect, line, polyline');
-  shapes.forEach((s, i) => {
-    let len = 40;
-    try { len = Math.ceil(s.getTotalLength()) + 1; } catch { /* keep default */ }
-    s.style.strokeDasharray = String(len);
-    const a = run(s, [{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
-      { duration, delay: delay + i * 120, easing: EASE, fill: 'backwards' });
-    const clean = () => { s.style.strokeDasharray = ''; };
-    if (a) a.finished.then(clean, clean); else clean();
-  });
+  const svg = iconSpan.querySelector('svg');
+  if (!svg) return;
+  run(svg, [
+    { clipPath: 'inset(0 100% 0 0)', transform: 'scale(.7)' },
+    { clipPath: 'inset(0 0% 0 0)', transform: 'scale(1.18)', offset: 0.7 },
+    { clipPath: 'inset(0 0% 0 0)', transform: 'scale(1)' },
+  ], { duration, delay, easing: EASE, fill: 'backwards' });
 }
 
 /** Grow a bar from `from` (a CSS width) to the width it already has. */

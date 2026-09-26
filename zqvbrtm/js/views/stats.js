@@ -1,9 +1,9 @@
 import { el, clear } from '../dom.js';
 import * as store from '../store.js';
-import { icon } from '../icons.js';
 import * as st from '../stats.js';
 import { ALL_QUESTIONS, DOMAINS } from '../quizEngine.js';
 import { readinessCard, accuracyBar, sparkline, confirmDialog } from '../components.js';
+import { art } from '../art.js';
 
 function pct(v) { return v === null ? '—' : `${Math.round(v * 100)}%`; }
 
@@ -16,7 +16,7 @@ export async function renderStats(view, { navigate }) {
 
   if (!o.answered) {
     view.append(el('div', { class: 'empty' }, [
-      el('span', { class: 'ic' }, [icon('stats', { size: 34 })]),
+      el('span', { class: 'ic has-art' }, [art('stats', { size: 60 })]),
       el('h2', { text: 'Nothing to measure yet' }),
       el('p', { class: 'muted',
         text: `${o.total} questions are loaded. Answer some and this fills in.` }),
