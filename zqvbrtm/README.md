@@ -95,15 +95,24 @@ name is deliberately random so the URL does not name the vendor.
   (iOS 18 and later) get a tick from a hidden switch control, the only
   haptic Safari offers. It has its own on/off button in the top bar, shown
   only on touch screens; nothing buzzes before the first tap on the page.
-- **Motion.** Screens and questions move with view transitions: a tab
-  slides in from the side of the one you left, the next question slides
-  over from the side you are heading, and a Study card grows into the quiz
-  it starts. Cards and rows further down rise into place as they scroll into
-  view (driven by the scroll itself where the browser supports it). Answers
-  and buttons ripple from where you press them. Also answer reveal effects,
-  count-ups, a sliding nav highlight, a soft glow and border spotlight that
-  follows the pointer, and search boxes that cycle through example searches
-  (`js/motion.js`). All of it is off under `prefers-reduced-motion`.
+- **Motion.** Each change moves as one piece: a tab slides in from the side
+  of the one you left, and the next question (question, answers and
+  buttons together) slides in from the side you are heading while the
+  progress bar glides along. A Study card grows into the quiz it starts.
+  Everything animates transform and opacity only, so nothing waits on a
+  screenshot of the old screen or forces a layout on every frame (the
+  browser's view transitions were tried and dropped: without graphics
+  acceleration they froze the screen for up to a quarter of a second first).
+  Cards and rows further down rise into place as they scroll into view.
+  Answers and buttons ripple from where you press them. The logo and the
+  quiz progress bar catch one sweep of light when a quiz starts, never on a
+  loop while you read. Also answer reveal effects, count-ups, a sliding nav
+  highlight, a soft glow and border spotlight that follows the pointer, and
+  search boxes that cycle through example searches (`js/motion.js`). All of
+  it is off under `prefers-reduced-motion`.
+- **Big side bar.** On a computer the tabs down the side are large (76px
+  rows with 38px icons on a wide screen, a little smaller on a narrow
+  laptop), and their icons still animate on hover.
 - **Loading screen.** While the question bank loads, a shimmering outline of
   the app shows where things will appear, in the saved theme from the first
   frame (`js/boot.js` applies it before anything paints).

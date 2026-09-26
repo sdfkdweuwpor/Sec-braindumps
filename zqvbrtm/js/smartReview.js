@@ -194,10 +194,17 @@ export function smartReviewCard(navigate) {
   // What moved on the ladder since it was last on screen (a quiz, a mock
   // exam, a review), to replay as hops. The first time, just note the time.
   const seenAt = store.getSettings().srsSeenAt;
+  const attempts = store.getAttempts();
   const moves = seenAt
-    ? ladderMovesSince(store.getAttempts(), seenAt, { isKnown }).filter((m) => m.to >= 0)
+    ? ladderMovesSince(attempts, seenAt, { isKnown }).filter((m) => m.to >= 0)
     : [];
-  store.setSettings({ srsSeenAt: Date.now() });
+  // Seen up to now, or up to the newest answer if that is later (a history
+  // imported from a device whose clock runs ahead), so nothing replays twice.
+  let newest = Date.now();
+  for (const entry of Object.values(attempts)) {
+    for (const a of (entry && entry.attempts) || []) if (a.ts > newest) newest = a.ts;
+  }
+  store.setSettings({ srsSeenAt: newest });
   const after = [...s.counts, s.mastered];
   const before = [...after];
   for (const m of moves) {

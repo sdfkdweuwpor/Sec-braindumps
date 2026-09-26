@@ -6,8 +6,8 @@ import { APP_TITLE, APP_SUBTITLE, NAV_TITLE } from './config.js';
 import { icon, iconPair } from './icons.js';
 import { art } from './art.js';
 import {
-  themeReveal, animateScreen, pop, slideIn, installPointerGlow, installRipples, installReveals,
-  canTransition, transition,
+  themeReveal, animateScreen, pop, slideIn, rise, installPointerGlow, installRipples, installReveals,
+  morphPending, dropMorph, snapToTop,
 } from './motion.js';
 import { initMilestones } from './milestones.js';
 import * as sound from './sound.js';
@@ -197,16 +197,15 @@ function tabIndex(path) {
   return NAV.findIndex((n) => n.match.includes(path));
 }
 
-// `smooth`: this draw runs inside a view transition, which moves the whole
-// screen, so the per-element entrance animations stay out of its way.
-async function render({ smooth = false } = {}) {
+// `first`: the app's first screen, whose parts rise in one after another.
+// After that a new screen moves in as one piece (see the end of render).
+async function render({ first = false } = {}) {
   const { path, params } = parseHash();
   const view = document.getElementById('view') || buildShell();
   markActiveNav(path);
   clear(view);
-  // Restart the entrance animation for the new screen.
   view.classList.remove('enter');
-  if (!smooth) {
+  if (first) {
     void view.offsetWidth;
     view.classList.add('enter');
   }
@@ -227,26 +226,25 @@ async function render({ smooth = false } = {}) {
     return;
   }
 
+  // A Study card growing into this screen (see takeMorph) is its motion.
+  const morphing = morphPending();
   await fn(view, { params, navigate });
-  // Switching tabs slides the new page in from the side of the tab it came
-  // from, like a phone app; moving within a tab keeps the gentle rise.
+  dropMorph();
+  // One motion for the whole screen: switching tabs slides it in from the
+  // side of the tab it came from, like a phone app; moving within a tab,
+  // it rises gently. A card growing into it needs only a quick fade.
   const tab = tabIndex(path);
-  if (lastTab !== null && tab !== -1 && tab !== lastTab) {
-    if (!smooth) slideIn(view, tab > lastTab ? 1 : -1, { distance: 56, duration: 460 });
-    sound.play('tab');
+  const newTab = lastTab !== null && tab !== -1 && tab !== lastTab;
+  if (!first) {
+    if (morphing) view.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 260, easing: 'ease-out' });
+    else if (newTab) slideIn(view, tab > lastTab ? 1 : -1, { distance: 48, duration: 400 });
+    else rise(view, { distance: 12, duration: 380 });
   }
+  if (newTab) sound.play('tab');
   if (tab !== -1) lastTab = tab;
   animateScreen(view);
   view.focus({ preventScroll: true });
-  window.scrollTo(0, 0);
-}
-
-// A new address: slide to it where the browser has view transitions.
-function onRoute() {
-  if (!canTransition() || !document.getElementById('view')) { render(); return; }
-  const tab = tabIndex(parseHash().path);
-  const dir = lastTab !== null && tab !== -1 && tab !== lastTab ? (tab > lastTab ? 'forward' : 'back') : 'up';
-  transition('page', dir, () => render({ smooth: true }));
+  snapToTop();
 }
 
 export function start() {
@@ -265,8 +263,8 @@ export function start() {
   installPointerGlow();
   installRipples();
   installReveals();
-  window.addEventListener('hashchange', onRoute);
-  // The top bar tightens once the page scrolls.
+  window.addEventListener('hashchange', () => render());
+  // The top bar lifts off the page (a shadow) once it scrolls.
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (ticking) return;
@@ -288,7 +286,7 @@ export function start() {
     paintBadge();
     render();
   });
-  render();
+  render({ first: true });
 }
 
 if (typeof window !== 'undefined' && !window.__SECPLUS_TEST__) start();

@@ -8,8 +8,7 @@ import {
 import { icon, iconPair } from '../icons.js';
 import { art } from '../art.js';
 import {
-  slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, growBar,
-  canTransition, transition, takeMorph,
+  slideIn, cascade, rise, pop, shake, ring, burst, drawIcon, slideBar, shineOnce, snapToTop, takeMorph,
 } from '../motion.js';
 import { play } from '../sound.js';
 import { reviewState, STEPS } from '../srs.js';
@@ -105,8 +104,6 @@ export async function renderQuiz(view, { navigate }) {
   let lastN = null;
   // XP the last answer earned, shown flying to the level badge on reveal.
   let pendingXP = null;
-  // True while a draw runs inside a view transition (see goTo).
-  let smooth = false;
 
   const draw = () => {
     const how = motion;
@@ -186,13 +183,23 @@ export async function renderQuiz(view, { navigate }) {
       ]),
     ]));
 
+    // The fill is full width and slides into place (transform only, so
+    // moving it never costs a layout while the question changes).
     const pct = (n / total) * 100;
-    const fill = el('span', { style: `width:${pct}%` });
-    body.append(el('div', { class: 'progress qprogress', role: 'progressbar',
+    const fill = el('span', { style: `--p:${pct}%;transform:translateX(${pct - 100}%)` });
+    const bar = el('div', { class: 'progress qprogress', role: 'progressbar',
       'aria-valuenow': String(n), 'aria-valuemin': '1', 'aria-valuemax': String(total),
-      style: 'margin:.6rem 0' }, [fill]));
-    if (how !== 'reveal' && pct !== lastPct) growBar(fill, { from: `${lastPct}%`, duration: 520 });
+      style: 'margin:.6rem 0' }, [fill]);
+    body.append(bar);
+    if (how !== 'reveal' && pct !== lastPct) slideBar(fill, lastPct, pct, { duration: 520 });
     lastPct = pct;
+    // Entering the quiz: one sweep of light over the logo and this bar.
+    if (how === 'first') shineOnce(bar);
+
+    // Everything below the progress bar changes with the question, and
+    // moves as one block when it does.
+    const stage = el('div', { class: 'qstage' });
+    body.append(stage);
 
     /* ---- acronyms: what the letters in this question stand for ---- */
     const acros = findAcronyms([question.question, ...question.choices.map((c) => c.text)]);
@@ -219,7 +226,7 @@ export async function renderQuiz(view, { navigate }) {
     };
     if (acros.length) setAcro(acroOpen(), false);
 
-    body.append(el('div', { class: 'qmeta' }, [
+    stage.append(el('div', { class: 'qmeta' }, [
       el('span', { class: 'pill',
         text: `Domain ${question.domain} · ${DOMAINS[question.domain]?.title || ''}` }),
       question.objective
@@ -235,13 +242,13 @@ export async function renderQuiz(view, { navigate }) {
     const qtext = el('div', { class: 'qtext' });
     qtext.append(renderQuestionText(question.question));
     wrapAcronyms(qtext);
-    body.append(qtext);
+    stage.append(qtext);
     // Started from a Study card: that card grows into this one.
-    const morphed = how === 'first' && takeMorph(qtext);
-    if (acros.length) body.append(acroPanel);
+    if (how === 'first') takeMorph(qtext);
+    if (acros.length) stage.append(acroPanel);
 
     if (multi) {
-      body.append(el('p', { class: 'faint',
+      stage.append(el('p', { class: 'faint',
         text: `Select ${NUM_WORD[question.correct.length] || question.correct.length}.` }));
     }
 
@@ -336,17 +343,17 @@ export async function renderQuiz(view, { navigate }) {
       buttons.set(key, btn);
       group.append(btn);
     }
-    body.append(group);
+    stage.append(group);
     paint();
-    if ((how === 'next' || how === 'prev' || how === 'first') && !smooth) {
-      if (how !== 'first') slideIn(body, how === 'prev' ? -1 : 1);
-      if (!morphed) rise(qtext, { delay: how === 'first' ? 80 : 40, distance: 10 });
-      cascade(group.children, { start: how === 'first' ? 160 : 110, step: 50 });
-    }
+    // A new question arrives in one motion: the question, its answers and
+    // the buttons slide in together from the side you are heading. (Moving
+    // each part on its own, staggered, looked choppy.) Opening the quiz,
+    // the whole screen moves in instead (main.js render).
+    if (how === 'next' || how === 'prev') slideIn(stage, how === 'prev' ? -1 : 1, { distance: 40, duration: 340 });
 
     /* ---- submit / next ---- */
     if (multi && !revealed) {
-      body.append(el('div', { style: 'margin-top:.9rem' }, [submitBtn]));
+      stage.append(el('div', { style: 'margin-top:.9rem' }, [submitBtn]));
     }
 
     /* ---- feedback ---- */
@@ -426,7 +433,7 @@ export async function renderQuiz(view, { navigate }) {
       wrapAcronyms(inner);
       details.append(inner);
       panel.append(details, verifyRow(question, { order }));
-      body.append(panel);
+      stage.append(panel);
 
       if (how === 'reveal') {
         const shownRight = [...buttons].filter(([k]) => correctKeys.includes(k)).map(([, b]) => b);
@@ -466,7 +473,7 @@ export async function renderQuiz(view, { navigate }) {
 
     /* ---- previous / next ---- */
     const last = session.index >= total - 1;
-    body.append(el('div', { class: 'qnav' }, [
+    stage.append(el('div', { class: 'qnav' }, [
       el('button', {
         class: 'btn secondary navbtn', type: 'button',
         disabled: session.index === 0, onclick: () => goTo(session.index - 1),
@@ -481,7 +488,7 @@ export async function renderQuiz(view, { navigate }) {
         }, [revealed || picked.length ? 'Next question' : 'Skip', icon('right', { size: 20 })]),
     ]));
 
-    body.append(el('p', { class: 'kbd-hint' }, [
+    stage.append(el('p', { class: 'kbd-hint' }, [
       icon('keyboard', { size: 18 }),
       'Keys: 1–6 pick an answer · Enter submit or next · ← → move · F flag · A acronyms · Esc end',
     ]));
@@ -539,12 +546,11 @@ export async function renderQuiz(view, { navigate }) {
     session.index = i;
     store.setActiveQuiz(session);
     play('swoosh');
-    const redraw = () => { draw(); window.scrollTo(0, 0); };
-    if (!canTransition()) { redraw(); return; }
-    transition('question', motion === 'prev' ? 'back' : 'forward', () => {
-      smooth = true;
-      try { redraw(); } finally { smooth = false; }
-    });
+    // Straight to the new question: no snapshot of the old one first (on a
+    // computer without graphics acceleration that alone held the screen
+    // still for a fifth of a second), and back to the top in one jump.
+    draw();
+    snapToTop();
   }
 
   // After answering, move to the next question still unanswered, wrapping

@@ -214,8 +214,53 @@ export function drawIcon(iconSpan, { delay = 0, duration = 420 } = {}) {
 
 /** Grow a bar from `from` (a CSS width) to the width it already has. */
 export function growBar(span, { from = '0%', delay = 0, duration = 800 } = {}) {
+  // Inside a track that clips, the fill slides out from under the track's
+  // left edge instead: it looks the same (the rounded end travels to its
+  // place) but is transform only, so a screen full of bars never forces a
+  // layout on every frame.
+  const track = span && span.parentElement;
+  if (from === '0%' && track && getComputedStyle(track).overflow === 'hidden') {
+    return run(span, [{ transform: 'translateX(-100%)' }, { transform: 'none' }],
+      { duration, delay, easing: EASE, fill: 'backwards' });
+  }
   return run(span, [{ width: from }, { width: span.style.width || getComputedStyle(span).width }],
     { duration, delay, easing: EASE, fill: 'backwards' });
+}
+
+/**
+ * The quiz progress bar: its fill is full width and slides sideways into
+ * place, so moving it is transform only and never costs a layout.
+ */
+export function slideBar(fill, fromPct, toPct, { duration = 520, delay = 0 } = {}) {
+  return run(fill, [
+    { transform: `translateX(${fromPct - 100}%)` },
+    { transform: `translateX(${toPct - 100}%)` },
+  ], { duration, delay, easing: EASE, fill: 'backwards' });
+}
+
+/**
+ * One sweep of light across the logo (and anything passed in, such as the
+ * quiz progress bar) when a quiz starts. They used to shine on a loop,
+ * which pulled the eye away from the question being read.
+ */
+export function shineOnce(...extra) {
+  if (reduced()) return;
+  const elms = [...document.querySelectorAll('.brandmark'), ...extra].filter(Boolean);
+  for (const elm of elms) elm.classList.remove('shine');
+  void document.body.offsetWidth;   // restart it if it ran before
+  for (const elm of elms) elm.classList.add('shine');
+}
+
+/**
+ * Back to the top of the page in one jump, with the top bar settling
+ * straight into its full size. Its own easing would otherwise play (a
+ * height change) while the new question slides in.
+ */
+export function snapToTop() {
+  const bar = document.querySelector('.topbar');
+  if (bar) { bar.classList.add('no-anim'); bar.classList.remove('is-compact'); }
+  window.scrollTo(0, 0);
+  if (bar) requestAnimationFrame(() => requestAnimationFrame(() => bar.classList.remove('no-anim')));
 }
 
 /** Draw an SVG line along its length. */
@@ -381,6 +426,18 @@ export function installRipples() {
     ], { duration: 700, easing: 'cubic-bezier(.2, .7, .2, 1)' });
     const done = () => layer.remove();
     a.finished.then(done, done);
+    // An answer is redrawn in the same place, so its ripple carries on over
+    // the new one. Anything else that goes away (Next question, a screen
+    // change) takes its ripple with it rather than leave it over whatever
+    // takes its place.
+    if (!host.matches('.choice')) {
+      const follow = () => {
+        if (!layer.isConnected) return;
+        if (!host.isConnected) { a.cancel(); layer.remove(); return; }
+        requestAnimationFrame(follow);
+      };
+      requestAnimationFrame(follow);
+    }
   };
   const hostOf = (ev) => {
     const host = ev.target instanceof Element ? ev.target.closest(RIPPLE) : null;
@@ -460,76 +517,71 @@ export function installReveals() {
 }
 
 /* ------------------------------------------------------------------ *
- * View transitions: the browser snapshots the screen before and after a
- * redraw and animates between the two (see "View transitions" in app.css).
- * Screens slide past each other in the direction of the tab you moved to,
- * the quiz's question card slides from one question to the next, and a
- * Study card morphs into the quiz it starts. Where the browser has no view
- * transitions, or the viewer wants reduced motion, the redraw just happens
- * and the older per-element animations run instead.
+ * Moving between screens. The new screen is drawn at once and moves in
+ * as one piece (see render in main.js): it slides in from the side of the
+ * tab you came from, or rises gently within a tab. The browser's view
+ * transitions were tried for this and dropped: they photograph the whole
+ * screen before redrawing, which on a computer without graphics
+ * acceleration held everything still for up to a quarter of a second.
+ *
+ * A Study card still grows into the screen it opens (the quiz's question
+ * card, or the builder's first card): a plain copy of the card's box flies
+ * from the card to its new place and size while the screen underneath
+ * fades in, then hands over to the real card (Material's "container
+ * transform"). Transform and opacity only.
  * ------------------------------------------------------------------ */
 
-export function canTransition() {
-  return typeof document !== 'undefined' && typeof document.startViewTransition === 'function' && !reduced();
-}
+let morph = null;
 
-let vtSeq = 0;
-let morphFrom = null;
-let morphTo = null;
-
-function clearMorph() {
-  for (const elm of [morphFrom, morphTo]) if (elm) elm.style.viewTransitionName = '';
-  morphFrom = null;
-  morphTo = null;
-}
-
-/** Mark the element that should morph into the next screen's hero element. */
+/** Remember where the card that was just pressed sits, to grow from it. */
 export function armMorph(elm) {
-  clearMorph();
-  if (!elm || !canTransition()) return;
-  elm.style.viewTransitionName = 'morph';
-  morphFrom = elm;
+  morph = null;
+  if (!elm || reduced() || typeof elm.animate !== 'function') return;
+  const rect = elm.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+  morph = { rect, at: performance.now() };
 }
 
-/** The next screen's hero element: it takes the morph if one is armed. */
-export function takeMorph(elm) {
-  if (!elm || !morphFrom || morphTo) return false;
-  elm.style.viewTransitionName = 'morph';
-  morphTo = elm;
-  return true;
+/** Whether a card is waiting to grow into the screen being drawn. */
+export function morphPending() {
+  return !!morph && performance.now() - morph.at < 1500;
+}
+
+/** Forget a morph nobody took (the card's button led nowhere). */
+export function dropMorph() {
+  morph = null;
 }
 
 /**
- * Redraw inside a view transition. kind 'page' (dir 'forward', 'back' or
- * 'up') or 'question' (dir 'forward' or 'back'). The caller checks
- * canTransition() first; this still redraws if the browser refuses.
+ * The next screen's hero element takes the morph, if one is waiting: the
+ * copy of the card grows into it, and its own content fades in as the copy
+ * arrives. True when it took one.
  */
-export function transition(kind, dir, update) {
-  const root = document.documentElement;
-  const token = ++vtSeq;
-  root.dataset.vt = kind;
-  root.dataset.vtDir = dir;
-  // Leaving a spot scrolled far down (the redraw scrolls to the top): what
-  // was on screen and what will be are nowhere near each other, so nothing
-  // flies across the screen between the two; the new parts just slide in.
-  if (window.scrollY > 80) root.dataset.vtFar = '1';
-  else delete root.dataset.vtFar;
-  const end = () => {
-    if (token !== vtSeq) return;
-    delete root.dataset.vt;
-    delete root.dataset.vtDir;
-    delete root.dataset.vtFar;
-    clearMorph();
-  };
-  let t;
-  try {
-    t = document.startViewTransition(update);
-  } catch {
-    end();
-    return Promise.resolve(update());
-  }
-  // A skipped transition rejects these; that is not an error worth logging.
-  t.ready.catch(() => {});
-  t.finished.then(end, end);
-  return t.updateCallbackDone.catch(() => {});
+export function takeMorph(elm) {
+  if (!elm || !morphPending()) { morph = null; return false; }
+  const from = morph.rect;
+  morph = null;
+  // After this frame's layout and scroll, before anything paints.
+  requestAnimationFrame(() => {
+    if (!elm.isConnected) return;
+    const to = elm.getBoundingClientRect();
+    if (!to.width || !to.height) return;
+    const ghost = document.createElement('div');
+    ghost.className = 'morph-ghost';
+    ghost.setAttribute('aria-hidden', 'true');
+    Object.assign(ghost.style, {
+      left: `${to.left}px`, top: `${to.top}px`, width: `${to.width}px`, height: `${to.height}px`,
+      borderRadius: getComputedStyle(elm).borderRadius,
+    });
+    document.body.append(ghost);
+    const a = ghost.animate([
+      { transform: `translate(${from.left - to.left}px, ${from.top - to.top}px) scale(${from.width / to.width}, ${from.height / to.height})`, opacity: 1 },
+      { transform: 'none', opacity: 1, offset: 0.82 },
+      { transform: 'none', opacity: 0 },
+    ], { duration: 560, easing: EASE });
+    elm.animate([{ opacity: 0 }, { opacity: 0, offset: 0.55 }, { opacity: 1 }], { duration: 560, easing: 'ease-out' });
+    const done = () => ghost.remove();
+    a.finished.then(done, done);
+  });
+  return true;
 }
